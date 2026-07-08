@@ -1,20 +1,14 @@
-\# UltraTech Reborn
+##### UltraTech Reborn
+
+###### 🇬🇧 English
 
 
 
-\---
+##### About
 
 
 
-\# 🇬🇧 English
-
-
-
-\## About
-
-
-
-\*\*UltraTech Reborn\*\* is a private development project focused on restoring and improving the \*\*UltraTech 1.7.10 Minecraft modpack\*\*.
+UltraTech Reborn is a private development project focused on restoring and improving the \*\*UltraTech 1.7.10 Minecraft modpack\*\*.
 
 
 
@@ -22,7 +16,7 @@ The project aims to preserve the original gameplay experience, fix compatibility
 
 
 
-\## Goals
+###### Goals
 
 
 
@@ -38,7 +32,7 @@ The project aims to preserve the original gameplay experience, fix compatibility
 
 
 
-\## Structure
+###### Structure
 
 
 
@@ -60,7 +54,7 @@ workspace/    Development environment
 
 
 
-\## Development Tools
+###### Development Tools
 
 
 
@@ -68,9 +62,13 @@ AI-assisted tools used in development:
 
 
 
-\* \*\*ChatGPT (OpenAI)\*\* — planning, documentation, code analysis, debugging assistance.
+```text
 
-\* \*\*Claude (Anthropic)\*\* — source analysis, refactoring assistance, documentation.
+ChatGPT (OpenAI) — planning, documentation, code analysis, debugging assistance.
+
+Claude (Anthropic) — source analysis, refactoring assistance, documentation.
+
+```
 
 
 
@@ -78,11 +76,11 @@ All AI-generated content is reviewed before use.
 
 
 
-\## Status
+###### Status
 
 
 
-🟢 Project initialization completed.
+\-Project initialization completed.
 
 
 
@@ -90,19 +88,15 @@ Current focus: infrastructure setup, mod analysis, and core restoration.
 
 
 
-\---
+###### 🇷🇺 Русский
 
 
 
-\# 🇷🇺 Русский
+##### О проекте
 
 
 
-\## О проекте
-
-
-
-\*\*UltraTech Reborn\*\* — приватный проект разработки, направленный на восстановление и развитие \*\*Minecraft техносборки UltraTech 1.7.10\*\*.
+UltraTech Reborn — приватный проект разработки, направленный на восстановление и развитие \*\*Minecraft техносборки UltraTech 1.7.10\*\*.
 
 
 
@@ -110,7 +104,7 @@ Current focus: infrastructure setup, mod analysis, and core restoration.
 
 
 
-\## Цели
+###### Цели
 
 
 
@@ -126,7 +120,7 @@ Current focus: infrastructure setup, mod analysis, and core restoration.
 
 
 
-\## Структура
+###### Структура
 
 
 
@@ -148,7 +142,7 @@ workspace/    Рабочее окружение
 
 
 
-\## Инструменты разработки
+###### Инструменты разработки
 
 
 
@@ -156,9 +150,13 @@ workspace/    Рабочее окружение
 
 
 
-\* \*\*ChatGPT (OpenAI)\*\* — планирование, документация, анализ кода, помощь в отладке.
+```text
 
-\* \*\*Claude (Anthropic)\*\* — анализ исходного кода, рефакторинг, документация.
+ChatGPT (OpenAI) — планирование, документация, анализ кода, помощь в отладке.
+
+Claude (Anthropic) — анализ исходного кода, рефакторинг, документация.
+
+```
 
 
 
@@ -166,11 +164,11 @@ workspace/    Рабочее окружение
 
 
 
-\## Статус
+###### Статус
 
 
 
-🟢 Инициализация проекта завершена.
+Инициализация проекта завершена.
 
 
 
@@ -178,11 +176,7 @@ workspace/    Рабочее окружение
 
 
 
-\---
-
-
-
-\## License
+###### License
 
 
 
