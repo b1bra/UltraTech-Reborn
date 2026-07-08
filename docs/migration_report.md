@@ -1,1130 +1,939 @@
-# UltraTech Migration Report
+# Migration Report
 
-Migration summary:
-
-```text
-Total mods: 91
-Hard: 45
-Normal: 20
-Easy: 26
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 2
-```
-
-## ArmorStatusHUD
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 37
-```
-
-## asielib
-
-```text
-Difficulty: Hard
-Score: 85/100
-Status: Requires rewrite
-Estimated methods: 287
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Avaritia
-
-```text
-Difficulty: Hard
-Score: 125/100
-Status: Requires rewrite
-Estimated methods: 821
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 15/100
-Status: Simple migration
-Estimated methods: 22
-```
-
-## BeeBetterAtBees
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 69
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 80/100
-Status: Requires rewrite
-Estimated methods: 1864
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## BetterSigns
-
-```text
-Difficulty: Easy
-Score: 15/100
-Status: Simple migration
-Estimated methods: 20
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 186
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 260/100
-Status: Requires rewrite
-Estimated methods: 2057
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 440/100
-Status: Requires rewrite
-Estimated methods: 271
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 55/100
-Status: Needs adaptation
-Estimated methods: 81
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## MineTweaker 3
-
-```text
-Difficulty: Hard
-Score: 120/100
-Status: Requires rewrite
-Estimated methods: 2424
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 25/100
-Status: Simple migration
-Estimated methods: 522
-```
-
-## DecorativeAPI
-
-```text
-Difficulty: Easy
-Score: 10/100
-Status: Simple migration
-Estimated methods: 100
-```
-
-## DivineRPG
-
-```text
-Difficulty: Hard
-Score: 550/100
-Status: Requires rewrite
-Estimated methods: 4174
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 265/100
-Status: Requires rewrite
-Estimated methods: 1486
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 175/100
-Status: Requires rewrite
-Estimated methods: 872
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 860/100
-Status: Requires rewrite
-Estimated methods: 4802
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 55/100
-Status: Needs adaptation
-Estimated methods: 479
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## ExtraTiC
-
-```text
-Difficulty: Hard
-Score: 95/100
-Status: Requires rewrite
-Estimated methods: 184
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 92
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 10/100
-Status: Simple migration
-Estimated methods: 19
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 135/100
-Status: Requires rewrite
-Estimated methods: 1451
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 285/100
-Status: Requires rewrite
-Estimated methods: 3444
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 315/100
-Status: Requires rewrite
-Estimated methods: 3760
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 15/100
-Status: Simple migration
-Estimated methods: 771
-```
-
-## Graviation Suite
-
-```text
-Difficulty: Normal
-Score: 50/100
-Status: Needs adaptation
-Estimated methods: 326
-```
-
-## Nuclear Control 2
-
-```text
-Difficulty: Hard
-Score: 120/100
-Status: Requires rewrite
-Estimated methods: 835
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 10
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 15/100
-Status: Simple migration
-Estimated methods: 7
-```
-
-## Inventory Tweaks
-
-```text
-Difficulty: Hard
-Score: 85/100
-Status: Requires rewrite
-Estimated methods: 283
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## ItemPhysic
-
-```text
-Difficulty: Normal
-Score: 40/100
-Status: Needs adaptation
-Estimated methods: 30
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## JourneyMap
-
-```text
-Difficulty: Hard
-Score: 115/100
-Status: Requires rewrite
-Estimated methods: 1881
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Json Model Reader
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 62
-```
-
-## LWSL
-
-```text
-Difficulty: Normal
-Score: 35/100
-Status: Needs adaptation
-Estimated methods: 172
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 50/100
-Status: Needs adaptation
-Estimated methods: 11
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 225/100
-Status: Requires rewrite
-Estimated methods: 3739
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 30/100
-Status: Needs adaptation
-Estimated methods: 201
-```
-
-## LoliDimensions
-
-```text
-Difficulty: Hard
-Score: 285/100
-Status: Requires rewrite
-Estimated methods: 4912
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 160/100
-Status: Requires rewrite
-Estimated methods: 1630
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## LoliEnergistics
-
-```text
-Difficulty: Hard
-Score: 550/100
-Status: Requires rewrite
-Estimated methods: 6979
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 25/100
-Status: Simple migration
-Estimated methods: 197
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 105/100
-Status: Requires rewrite
-Estimated methods: 752
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 160/100
-Status: Requires rewrite
-Estimated methods: 147
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Example Mod
-
-```text
-Difficulty: Hard
-Score: 125/100
-Status: Requires rewrite
-Estimated methods: 5512
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 305/100
-Status: Requires rewrite
-Estimated methods: 3142
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 15/100
-Status: Simple migration
-Estimated methods: 36
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 40/100
-Status: Needs adaptation
-Estimated methods: 65
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## MojangMathLibrary
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 2481
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 35/100
-Status: Needs adaptation
-Estimated methods: 288
-```
-
-## Matter Overdrive
-
-```text
-Difficulty: Hard
-Score: 330/100
-Status: Requires rewrite
-Estimated methods: 3781
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 40/100
-Status: Needs adaptation
-Estimated methods: 17
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 190/100
-Status: Requires rewrite
-Estimated methods: 1299
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## MineFactory Reloaded
-
-```text
-Difficulty: Hard
-Score: 115/100
-Status: Requires rewrite
-Estimated methods: 1713
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 40/100
-Status: Needs adaptation
-Estimated methods: 1294
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## Mod Tweaker 2
-
-```text
-Difficulty: Easy
-Score: 15/100
-Status: Simple migration
-Estimated methods: 880
-```
-
-## Mouse Tweaks
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 35
-```
-
-## NEI Integration
-
-```text
-Difficulty: Normal
-Score: 30/100
-Status: Needs adaptation
-Estimated methods: 226
-```
-
-## NotEnoughItems
-
-```text
-Difficulty: Hard
-Score: 190/100
-Status: Requires rewrite
-Estimated methods: 1509
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Omicron
-
-```text
-Difficulty: Normal
-Score: 60/100
-Status: Needs adaptation
-Estimated methods: 426
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 10/100
-Status: Simple migration
-Estimated methods: 40
-```
-
-## OpenComputers
-
-```text
-Difficulty: Hard
-Score: 260/100
-Status: Requires rewrite
-Estimated methods: 16101
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## PowerUtils
-
-```text
-Difficulty: Normal
-Score: 40/100
-Status: Needs adaptation
-Estimated methods: 89
-```
-
-## Realistic Terrain Generation
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 1098
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 38
-```
-
-## RedPower
-
-```text
-Difficulty: Hard
-Score: 155/100
-Status: Requires rewrite
-Estimated methods: 441
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 10/100
-Status: Simple migration
-Estimated methods: 54
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 25/100
-Status: Simple migration
-Estimated methods: 688
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 240/100
-Status: Requires rewrite
-Estimated methods: 2678
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 125/100
-Status: Requires rewrite
-Estimated methods: 936
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 600/100
-Status: Requires rewrite
-Estimated methods: 1504
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Hard
-Score: 225/100
-Status: Requires rewrite
-Estimated methods: 327
-```
-
-Problems:
-```text
-Large amount of legacy code
-```
-
-## Unknown
-
-```text
-Difficulty: Easy
-Score: 15/100
-Status: Simple migration
-Estimated methods: 174
-```
-
-## UltraTech: Elements
-
-```text
-Difficulty: Normal
-Score: 40/100
-Status: Needs adaptation
-Estimated methods: 80
-```
-
-## Unknown
-
-```text
-Difficulty: Normal
-Score: 60/100
-Status: Needs adaptation
-Estimated methods: 76
-```
-
-## Waila
-
-```text
-Difficulty: Hard
-Score: 135/100
-Status: Requires rewrite
-Estimated methods: 766
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## WanionLib
-
-```text
-Difficulty: Easy
-Score: 0/100
-Status: Simple migration
-Estimated methods: 63
-```
-
-## WorldGeneratorEngine
-
-```text
-Difficulty: Hard
-Score: 70/100
-Status: Requires rewrite
-Estimated methods: 3060
-```
-
-Problems:
 ```text
-Large amount of legacy code
-ASM/CoreMod usage
+Total mods: 93
+Hard: 89
+Normal: 2
+Easy: 2
 ```
 
 ## Airdrops
 
 ```text
-Difficulty: Normal
-Score: 50/100
-Status: Needs adaptation
-Estimated methods: 103
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.63 MB
+Dependencies: 0
+Important classes: 0
 ```
 
-Problems:
+## Unknown
+
 ```text
-ASM/CoreMod usage
+Difficulty: Easy
+Migration score: 15/100
+File size: 0.0 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## Applied Energistics 2
 
 ```text
 Difficulty: Hard
-Score: 290/100
-Status: Requires rewrite
-Estimated methods: 6965
+Migration score: 100/100
+File size: 3.6 MB
+Dependencies: 0
+Important classes: 0
 ```
 
-Problems:
+## ArmorStatusHUD
+
 ```text
-Large amount of legacy code
-ASM/CoreMod usage
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.02 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## asielib
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.14 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Avaritia
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.69 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## Unknown
 
 ```text
 Difficulty: Hard
-Score: 120/100
-Status: Requires rewrite
-Estimated methods: 3293
+Migration score: 100/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
 ```
 
-Problems:
+## Unknown
+
 ```text
-Large amount of legacy code
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.41 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## BeeBetterAtBees
+
+```text
+Difficulty: Hard
+Migration score: 70/100
+File size: 0.03 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.24 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## BetterSigns
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## Binnie Core
 
 ```text
 Difficulty: Hard
-Score: 280/100
-Status: Requires rewrite
-Estimated methods: 3673
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Extra Utilities
-
-```text
-Difficulty: Hard
-Score: 205/100
-Status: Requires rewrite
-Estimated methods: 2183
-```
-
-Problems:
-```text
-Large amount of legacy code
-ASM/CoreMod usage
-```
-
-## Forestry for Minecraft
-
-```text
-Difficulty: Hard
-Score: 310/100
-Status: Requires rewrite
-Estimated methods: 4740
-```
-
-Problems:
-```text
-Large amount of legacy code
+Migration score: 100/100
+File size: 3.1 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## Unknown
 
 ```text
 Difficulty: Hard
-Score: 105/100
-Status: Requires rewrite
-Estimated methods: 3712
+Migration score: 100/100
+File size: 0.08 MB
+Dependencies: 0
+Important classes: 0
 ```
 
-Problems:
+## Unknown
+
 ```text
-Large amount of legacy code
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.12 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.85 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.03 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## MineTweaker 3
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.01 MB
+Dependencies: 0
+Important classes: 4
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.24 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## DecorativeAPI
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.05 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## DivineRPG
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 16.99 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 7.07 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.42 MB
+Dependencies: 0
+Important classes: 2
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 3.2 MB
+Dependencies: 0
+Important classes: 2
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.22 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## ExtraTiC
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 6.89 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Extra Utilities
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.64 MB
+Dependencies: 0
+Important classes: 3
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 85/100
+File size: 0.05 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## FlatBedrock Xplosion's Edition
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Forestry for Minecraft
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 2.52 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Galacticraft Planets
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 2.0 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Galacticraft Core
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 7.31 MB
+Dependencies: 0
+Important classes: 2
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 16.88 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.39 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.77 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Graviation Suite
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.35 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Nuclear Control 2
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.73 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Easy
+Migration score: 15/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## IndustrialCraft 2
 
 ```text
 Difficulty: Hard
-Score: 275/100
-Status: Requires rewrite
-Estimated methods: 3200
+Migration score: 100/100
+File size: 3.39 MB
+Dependencies: 0
+Important classes: 1
 ```
 
-Problems:
+## Inventory Tweaks
+
 ```text
-Large amount of legacy code
-ASM/CoreMod usage
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.17 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 90/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## ItemPhysic
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.02 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## JourneyMap
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.18 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Json Model Reader
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.04 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 90/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 2.05 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.37 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## LoliDimensions
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 17.2 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.86 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## LoliDungeons
 
 ```text
-Difficulty: Normal
-Score: 50/100
-Status: Needs adaptation
-Estimated methods: 225
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.13 MB
+Dependencies: 0
+Important classes: 0
 ```
 
-Problems:
+## LoliEnergistics
+
 ```text
-ASM/CoreMod usage
+Difficulty: Hard
+Migration score: 100/100
+File size: 19.4 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.19 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.41 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.11 MB
+Dependencies: 0
+Important classes: 2
+```
+
+## Example Mod
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 21.94 MB
+Dependencies: 0
+Important classes: 3
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 3.1 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.02 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## Luminous UI
 
 ```text
 Difficulty: Hard
-Score: 75/100
-Status: Requires rewrite
-Estimated methods: 4836
+Migration score: 100/100
+File size: 3.92 MB
+Dependencies: 0
+Important classes: 0
 ```
 
-Problems:
+## LWSL
+
 ```text
-Large amount of legacy code
-ASM/CoreMod usage
-Heavy client rendering
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.08 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.17 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Matter Overdrive
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 12.76 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 70/100
+File size: 0.03 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.93 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.55 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## MineFactory Reloaded
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.07 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## MojangMathLibrary
+
+```text
+Difficulty: Normal
+Migration score: 60/100
+File size: 0.77 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Mod Tweaker 2
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.37 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Mouse Tweaks
+
+```text
+Difficulty: Hard
+Migration score: 80/100
+File size: 0.02 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## Multi Server Worlds
 
 ```text
-Difficulty: Normal
-Score: 65/100
-Status: Needs adaptation
-Estimated methods: 1486
-```
-
-Problems:
-```text
-ASM/CoreMod usage
-Heavy client rendering
+Difficulty: Hard
+Migration score: 100/100
+File size: 55.33 MB
+Dependencies: 0
+Important classes: 0
 ```
 
 ## NEI Addons
 
 ```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.09 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## NEI Integration
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.1 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## NotEnoughItems
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.7 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Omicron
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.29 MB
+Dependencies: 0
+Important classes: 2
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.02 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## OpenComputers
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 13.95 MB
+Dependencies: 0
+Important classes: 3
+```
+
+## PowerUtils
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.05 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 75/100
+File size: 0.01 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## RedPower
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.69 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Realistic Terrain Generation
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.73 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
 Difficulty: Normal
-Score: 55/100
-Status: Needs adaptation
-Estimated methods: 206
+Migration score: 55/100
+File size: 0.02 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.32 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 3.67 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.57 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.37 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.08 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.09 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## UltraTech: Elements
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.07 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.04 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Waila
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.52 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## WanionLib
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.05 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## WorldGeneratorEngine
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 1.17 MB
+Dependencies: 0
+Important classes: 1
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.28 MB
+Dependencies: 0
+Important classes: 0
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Migration score: 100/100
+File size: 0.17 MB
+Dependencies: 0
+Important classes: 0
 ```
 

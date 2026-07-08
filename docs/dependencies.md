@@ -1,550 +1,560 @@
 # Mod Dependencies
 
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## ArmorStatusHUD
-
-```text
-bspkrsCore@[6.15,)
-```
-
-## asielib
-
-```text
-No dependencies detected
-```
-
-## Avaritia
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## BeeBetterAtBees
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## BetterSigns
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## MineTweaker 3
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## DecorativeAPI
-
-```text
-No dependencies detected
-```
-
-## DivineRPG
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## ExtraTiC
-
-```text
-Forge
-TConstruct
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Graviation Suite
-
-```text
-No dependencies detected
-```
-
-## Nuclear Control 2
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Inventory Tweaks
-
-```text
-No dependencies detected
-```
-
-## ItemPhysic
-
-```text
-No dependencies detected
-```
-
-## JourneyMap
-
-```text
-Forge@[10.13.4.1558,)
-```
-
-## Json Model Reader
-
-```text
-No dependencies detected
-```
-
-## LWSL
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## LoliDimensions
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## LoliEnergistics
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Example Mod
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## MojangMathLibrary
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Matter Overdrive
-
-```text
-Forge
-CoFHLib
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## MineFactory Reloaded
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Mod Tweaker 2
-
-```text
-No dependencies detected
-```
-
-## Mouse Tweaks
-
-```text
-No dependencies detected
-```
-
-## NEI Integration
-
-```text
-No dependencies detected
-```
-
-## NotEnoughItems
-
-```text
-No dependencies detected
-```
-
-## Omicron
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## OpenComputers
-
-```text
-Forge@[10.13.0.1180,)
-```
-
-## PowerUtils
-
-```text
-No dependencies detected
-```
-
-## Realistic Terrain Generation
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## RedPower
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## UltraTech: Elements
-
-```text
-No dependencies detected
-```
-
-## Unknown
-
-```text
-No dependencies detected
-```
-
-## Waila
-
-```text
-No dependencies detected
-```
-
-## WanionLib
-
-```text
-No dependencies detected
-```
-
-## WorldGeneratorEngine
-
-```text
-No dependencies detected
-```
-
 ## Airdrops
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
 ```
 
 ## Applied Energistics 2
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## ArmorStatusHUD
+
+```text
+No dependencies
+```
+
+## asielib
+
+```text
+No dependencies
+```
+
+## Avaritia
+
+```text
+No dependencies
 ```
 
 ## Unknown
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## BeeBetterAtBees
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## BetterSigns
+
+```text
+No dependencies
 ```
 
 ## Binnie Core
 
 ```text
-Forestry
-```
-
-## Extra Utilities
-
-```text
-No dependencies detected
-```
-
-## Forestry for Minecraft
-
-```text
-No dependencies detected
+No dependencies
 ```
 
 ## Unknown
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## MineTweaker 3
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## DecorativeAPI
+
+```text
+No dependencies
+```
+
+## DivineRPG
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## ExtraTiC
+
+```text
+No dependencies
+```
+
+## Extra Utilities
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## FlatBedrock Xplosion's Edition
+
+```text
+No dependencies
+```
+
+## Forestry for Minecraft
+
+```text
+No dependencies
+```
+
+## Galacticraft Planets
+
+```text
+No dependencies
+```
+
+## Galacticraft Core
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Graviation Suite
+
+```text
+No dependencies
+```
+
+## Nuclear Control 2
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
 ```
 
 ## IndustrialCraft 2
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## Inventory Tweaks
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## ItemPhysic
+
+```text
+No dependencies
+```
+
+## JourneyMap
+
+```text
+No dependencies
+```
+
+## Json Model Reader
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## LoliDimensions
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
 ```
 
 ## LoliDungeons
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## LoliEnergistics
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Example Mod
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
 ```
 
 ## Luminous UI
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## LWSL
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Matter Overdrive
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## MineFactory Reloaded
+
+```text
+No dependencies
+```
+
+## MojangMathLibrary
+
+```text
+No dependencies
+```
+
+## Mod Tweaker 2
+
+```text
+No dependencies
+```
+
+## Mouse Tweaks
+
+```text
+No dependencies
 ```
 
 ## Multi Server Worlds
 
 ```text
-No dependencies detected
+No dependencies
 ```
 
 ## NEI Addons
 
 ```text
-No dependencies detected
+No dependencies
+```
+
+## NEI Integration
+
+```text
+No dependencies
+```
+
+## NotEnoughItems
+
+```text
+No dependencies
+```
+
+## Omicron
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## OpenComputers
+
+```text
+No dependencies
+```
+
+## PowerUtils
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## RedPower
+
+```text
+No dependencies
+```
+
+## Realistic Terrain Generation
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## UltraTech: Elements
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Waila
+
+```text
+No dependencies
+```
+
+## WanionLib
+
+```text
+No dependencies
+```
+
+## WorldGeneratorEngine
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
+```
+
+## Unknown
+
+```text
+No dependencies
 ```
 
