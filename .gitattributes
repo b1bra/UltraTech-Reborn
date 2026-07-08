@@ -1,2 +1,12 @@
-# Auto detect text files and perform LF normalization
+# Auto detect text files and normalize line endings
 * text=auto
+
+# Java
+*.java text
+*.properties text
+*.json text
+*.xml text
+*.gradle text
+
+# Markdown
+*.md text
