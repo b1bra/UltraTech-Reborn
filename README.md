@@ -1,6 +1,6 @@
-##### UltraTech Reborn
+##### UltraTech ***Reborn***
 
-###### 🇬🇧 English
+###### 🇬🇧 *English*
 
 
 
@@ -8,7 +8,7 @@
 
 
 
-UltraTech Reborn is a private development project focused on restoring and improving the \*\*UltraTech 1.7.10 Minecraft modpack\*\*.
+UltraTech Reborn is a private development project focused on restoring and improving the ***UltraTech 1.7.10 Minecraft***.
 
 
 
@@ -88,7 +88,7 @@ Current focus: infrastructure setup, mod analysis, and core restoration.
 
 
 
-###### 🇷🇺 Русский
+###### 🇷🇺 *Русский*
 
 
 
@@ -96,7 +96,7 @@ Current focus: infrastructure setup, mod analysis, and core restoration.
 
 
 
-UltraTech Reborn — приватный проект разработки, направленный на восстановление и развитие \*\*Minecraft техносборки UltraTech 1.7.10\*\*.
+UltraTech Reborn — приватный проект разработки, направленный на восстановление и развитие ***Minecraft UltraTech 1.7.10***.
 
 
 
