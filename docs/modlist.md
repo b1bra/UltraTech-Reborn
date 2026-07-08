@@ -1,6 +1,6 @@
 # UltraTech-Reborn Mod Analysis
 
-Generated: 2026-07-09 00:57:22.373285
+Generated: 2026-07-09 01:07:03.254870
 
 Total mods: 93
 
@@ -97,11 +97,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## AnvilRepairFix-master-45d157ba
 
 ```text
 File: AnvilRepairFix-master-45d157ba.jar
-Mod ID: Unknown
+Mod ID: AnvilRepairFix-master-45d157ba
 Version: Unknown
 Author: Unknown
 Size: 0.0 MB
@@ -300,7 +300,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+bspkrsCore@[6.15,)
 ```
 
 Content:
@@ -563,11 +563,11 @@ Large GUI system
 ```
 
 
-## Unknown
+## AvaritiaNEI-1.7.10-1.3.2
 
 ```text
 File: AvaritiaNEI-1.7.10-1.3.2.jar
-Mod ID: Unknown
+Mod ID: AvaritiaNEI-1.7.10-1.3.2
 Version: Unknown
 Author: Unknown
 Size: 0.01 MB
@@ -653,11 +653,11 @@ No critical problems detected
 ```
 
 
-## Unknown
+## bdlib-1.9.4.109-mc1.7.10
 
 ```text
 File: bdlib-1.9.4.109-mc1.7.10.jar
-Mod ID: Unknown
+Mod ID: bdlib-1.9.4.109-mc1.7.10
 Version: Unknown
 Author: Unknown
 Size: 1.41 MB
@@ -839,11 +839,11 @@ Heavy client rendering
 ```
 
 
-## Unknown
+## BetterQuesting-master-b2071223
 
 ```text
 File: BetterQuesting-master-b2071223.jar
-Mod ID: Unknown
+Mod ID: BetterQuesting-master-b2071223
 Version: Unknown
 Author: Unknown
 Size: 1.24 MB
@@ -1041,7 +1041,8 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+Forestry
+BinnieCore
 ```
 
 Content:
@@ -1121,11 +1122,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## BrandonsCore-1.0.0.12
 
 ```text
 File: BrandonsCore-1.0.0.12.jar
-Mod ID: Unknown
+Mod ID: BrandonsCore-1.0.0.12
 Version: Unknown
 Author: Unknown
 Size: 0.08 MB
@@ -1212,11 +1213,11 @@ Many TileEntities
 ```
 
 
-## Unknown
+## CodeChickenCore-1.7.10-1.0.7.47
 
 ```text
 File: CodeChickenCore-1.7.10-1.0.7.47.jar
-Mod ID: Unknown
+Mod ID: CodeChickenCore-1.7.10-1.0.7.47
 Version: Unknown
 Author: Unknown
 Size: 0.12 MB
@@ -1304,11 +1305,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## CoFHCore-[1.7.10]3.1.4-329
 
 ```text
 File: CoFHCore-[1.7.10]3.1.4-329.jar
-Mod ID: Unknown
+Mod ID: CoFHCore-[1.7.10]3.1.4-329
 Version: Unknown
 Author: Unknown
 Size: 0.85 MB
@@ -1401,11 +1402,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## ContainerWarden-master-a38f002f
 
 ```text
 File: ContainerWarden-master-a38f002f.jar
-Mod ID: Unknown
+Mod ID: ContainerWarden-master-a38f002f
 Version: Unknown
 Author: Unknown
 Size: 0.03 MB
@@ -1575,10 +1576,10 @@ Rendering: 2
 
 Important classes:
 ```text
+registry
 name
 for
 not
-registry
 ```
 
 Migration problems:
@@ -1589,11 +1590,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## CreativeCore-master-74e33014
 
 ```text
 File: CreativeCore-master-74e33014.jar
-Mod ID: Unknown
+Mod ID: CreativeCore-master-74e33014
 Version: Unknown
 Author: Unknown
 Size: 0.24 MB
@@ -1872,11 +1873,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## Draconic-Evolution-1.7.10-1.0.2h
 
 ```text
 File: Draconic-Evolution-1.7.10-1.0.2h.jar
-Mod ID: Unknown
+Mod ID: Draconic-Evolution-1.7.10-1.0.2h
 Version: Unknown
 Author: Unknown
 Size: 7.07 MB
@@ -1967,11 +1968,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## EnderCore-1.7.10-0.2.0.39_beta
 
 ```text
 File: EnderCore-1.7.10-0.2.0.39_beta.jar
-Mod ID: Unknown
+Mod ID: EnderCore-1.7.10-0.2.0.39_beta
 Version: Unknown
 Author: Unknown
 Size: 0.42 MB
@@ -2064,11 +2065,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## EnderIO-1.7.10-2.3.0.429_beta
 
 ```text
 File: EnderIO-1.7.10-2.3.0.429_beta.jar
-Mod ID: Unknown
+Mod ID: EnderIO-1.7.10-2.3.0.429_beta
 Version: Unknown
 Author: Unknown
 Size: 3.2 MB
@@ -2161,11 +2162,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## EventHelper-master-de330be3
 
 ```text
 File: EventHelper-master-de330be3.jar
-Mod ID: Unknown
+Mod ID: EventHelper-master-de330be3
 Version: Unknown
 Author: Unknown
 Size: 0.22 MB
@@ -2272,7 +2273,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+TConstruct
 ```
 
 Content:
@@ -2432,9 +2433,9 @@ Registry: 23
 
 Important classes:
 ```text
-code
 for
 missing
+code
 ```
 
 Migration problems:
@@ -2447,11 +2448,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## FastInventories-master-bedd4cde
 
 ```text
 File: FastInventories-master-bedd4cde.jar
-Mod ID: Unknown
+Mod ID: FastInventories-master-bedd4cde
 Version: Unknown
 Author: Unknown
 Size: 0.05 MB
@@ -2643,7 +2644,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+mod_MinecraftForge
 ```
 
 Content:
@@ -2916,11 +2917,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## GalaxySpace-1.7.10-1.2.15
 
 ```text
 File: GalaxySpace-1.7.10-1.2.15.jar
-Mod ID: Unknown
+Mod ID: GalaxySpace-1.7.10-1.2.15
 Version: Unknown
 Author: Unknown
 Size: 16.88 MB
@@ -3013,11 +3014,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## GeckoLib-1.7.10-4.3.1-shadow
 
 ```text
 File: GeckoLib-1.7.10-4.3.1-shadow.jar
-Mod ID: Unknown
+Mod ID: GeckoLib-1.7.10-4.3.1-shadow
 Version: Unknown
 Author: Unknown
 Size: 0.39 MB
@@ -3106,11 +3107,11 @@ Heavy client rendering
 ```
 
 
-## Unknown
+## gendustry-1.6.4.135-mc1.7.10
 
 ```text
 File: gendustry-1.6.4.135-mc1.7.10.jar
-Mod ID: Unknown
+Mod ID: gendustry-1.6.4.135-mc1.7.10
 Version: Unknown
 Author: Unknown
 Size: 1.77 MB
@@ -3311,7 +3312,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+IC2
 ```
 
 Content:
@@ -3388,11 +3389,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## IC2Tweaker-1.7.10-1.0.2
 
 ```text
 File: IC2Tweaker-1.7.10-1.0.2.jar
-Mod ID: Unknown
+Mod ID: IC2Tweaker-1.7.10-1.0.2
 Version: Unknown
 Author: Unknown
 Size: 0.01 MB
@@ -3669,11 +3670,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## InvTweaksHelper-master-f6d868a4
 
 ```text
 File: InvTweaksHelper-master-f6d868a4.jar
-Mod ID: Unknown
+Mod ID: InvTweaksHelper-master-f6d868a4
 Version: Unknown
 Author: Unknown
 Size: 0.01 MB
@@ -3867,7 +3868,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+Forge@[10.13.4.1558,)
 ```
 
 Content:
@@ -4035,11 +4036,11 @@ Heavy client rendering
 ```
 
 
-## Unknown
+## LanguagePatcher-master-185f579f
 
 ```text
 File: LanguagePatcher-master-185f579f.jar
-Mod ID: Unknown
+Mod ID: LanguagePatcher-master-185f579f
 Version: Unknown
 Author: Unknown
 Size: 0.01 MB
@@ -4124,11 +4125,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## LoliAE2-1.7.10-client
 
 ```text
 File: LoliAE2-1.7.10-client.jar
-Mod ID: Unknown
+Mod ID: LoliAE2-1.7.10-client
 Version: Unknown
 Author: Unknown
 Size: 2.05 MB
@@ -4220,11 +4221,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## LoliDecorative-master-bf409f4c
 
 ```text
 File: LoliDecorative-master-bf409f4c.jar
-Mod ID: Unknown
+Mod ID: LoliDecorative-master-bf409f4c
 Version: Unknown
 Author: Unknown
 Size: 0.37 MB
@@ -4408,11 +4409,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## LoliDragonMight-1.7.10-client
 
 ```text
 File: LoliDragonMight-1.7.10-client.jar
-Mod ID: Unknown
+Mod ID: LoliDragonMight-1.7.10-client
 Version: Unknown
 Author: Unknown
 Size: 1.86 MB
@@ -4695,11 +4696,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## LoliEnergyRelics-1.7.10-client
 
 ```text
 File: LoliEnergyRelics-1.7.10-client.jar
-Mod ID: Unknown
+Mod ID: LoliEnergyRelics-1.7.10-client
 Version: Unknown
 Author: Unknown
 Size: 0.19 MB
@@ -4787,11 +4788,11 @@ No critical problems detected
 ```
 
 
-## Unknown
+## LoliForestry-1.7.10-client
 
 ```text
 File: LoliForestry-1.7.10-client.jar
-Mod ID: Unknown
+Mod ID: LoliForestry-1.7.10-client
 Version: Unknown
 Author: Unknown
 Size: 0.41 MB
@@ -4881,11 +4882,11 @@ Large GUI system
 ```
 
 
-## Unknown
+## LoliHooks-master-aa342203
 
 ```text
 File: LoliHooks-master-aa342203.jar
-Mod ID: Unknown
+Mod ID: LoliHooks-master-aa342203
 Version: Unknown
 Author: Unknown
 Size: 0.11 MB
@@ -5068,11 +5069,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## LoliUtility-1.7.10-client
 
 ```text
 File: LoliUtility-1.7.10-client.jar
-Mod ID: Unknown
+Mod ID: LoliUtility-1.7.10-client
 Version: Unknown
 Author: Unknown
 Size: 3.1 MB
@@ -5163,11 +5164,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## LoliWeCUI-master-7296045c
 
 ```text
 File: LoliWeCUI-master-7296045c.jar
-Mod ID: Unknown
+Mod ID: LoliWeCUI-master-7296045c
 Version: Unknown
 Author: Unknown
 Size: 0.02 MB
@@ -5442,11 +5443,11 @@ No critical problems detected
 ```
 
 
-## Unknown
+## Mantle-1.7.10-0.3.2b
 
 ```text
 File: Mantle-1.7.10-0.3.2b.jar
-Mod ID: Unknown
+Mod ID: Mantle-1.7.10-0.3.2b
 Version: Unknown
 Author: Unknown
 Size: 0.17 MB
@@ -5632,11 +5633,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## MCTags-master-72ca4ae0
 
 ```text
 File: MCTags-master-72ca4ae0.jar
-Mod ID: Unknown
+Mod ID: MCTags-master-72ca4ae0
 Version: Unknown
 Author: Unknown
 Size: 0.03 MB
@@ -5721,11 +5722,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## MicdoodleCore-1.7-3.0.12.504
 
 ```text
 File: MicdoodleCore-1.7-3.0.12.504.jar
-Mod ID: Unknown
+Mod ID: MicdoodleCore-1.7-3.0.12.504
 Version: Unknown
 Author: Unknown
 Size: 0.01 MB
@@ -5810,11 +5811,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## MineChem-1.7.10
 
 ```text
 File: MineChem-1.7.10.jar
-Mod ID: Unknown
+Mod ID: MineChem-1.7.10
 Version: Unknown
 Author: Unknown
 Size: 0.93 MB
@@ -5906,11 +5907,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## MinecraftPerformancePrimitives-master-fd72b14e
 
 ```text
 File: MinecraftPerformancePrimitives-master-fd72b14e.jar
-Mod ID: Unknown
+Mod ID: MinecraftPerformancePrimitives-master-fd72b14e
 Version: Unknown
 Author: Unknown
 Size: 0.55 MB
@@ -6017,7 +6018,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+MineFactoryReloaded
 ```
 
 Content:
@@ -6480,7 +6481,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+NEIAddons
 ```
 
 Content:
@@ -6665,7 +6666,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+CodeChickenCore
 ```
 
 Content:
@@ -6840,11 +6841,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## OnlinePicFrame+v1.0+mc1.7.10
 
 ```text
 File: OnlinePicFrame+v1.0+mc1.7.10.jar
-Mod ID: Unknown
+Mod ID: OnlinePicFrame+v1.0+mc1.7.10
 Version: Unknown
 Author: Unknown
 Size: 0.02 MB
@@ -6949,7 +6950,17 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+BuildCraft|Core
+ComputerCraft
+EnderStorage
+ForgeMultipart
+IC2
+MineFactoryReloaded
+ProjRed|Transmission
+RedLogic
+StargateTech2
+Thaumcraft
+ThermalExpansion
 ```
 
 Content:
@@ -7016,9 +7027,9 @@ Registry: 39
 
 Important classes:
 ```text
+transformer
 for
 of
-transformer
 ```
 
 Migration problems:
@@ -7124,11 +7135,11 @@ Many TileEntities
 ```
 
 
-## Unknown
+## RealmBlockLimiter-master-34e72415
 
 ```text
 File: RealmBlockLimiter-master-34e72415.jar
-Mod ID: Unknown
+Mod ID: RealmBlockLimiter-master-34e72415
 Version: Unknown
 Author: Unknown
 Size: 0.01 MB
@@ -7230,7 +7241,7 @@ Notes: Detected automatically.
 
 Dependencies:
 ```text
-No dependencies detected
+mod_MinecraftForge
 ```
 
 Content:
@@ -7398,11 +7409,11 @@ No critical problems detected
 ```
 
 
-## Unknown
+## SpawnTrickLib-1.7.10-1.0.1
 
 ```text
 File: SpawnTrickLib-1.7.10-1.0.1.jar
-Mod ID: Unknown
+Mod ID: SpawnTrickLib-1.7.10-1.0.1
 Version: Unknown
 Author: Unknown
 Size: 0.02 MB
@@ -7488,11 +7499,11 @@ No critical problems detected
 ```
 
 
-## Unknown
+## StandardExpansion-master-b2071223
 
 ```text
 File: StandardExpansion-master-b2071223.jar
-Mod ID: Unknown
+Mod ID: StandardExpansion-master-b2071223
 Version: Unknown
 Author: Unknown
 Size: 0.32 MB
@@ -7581,11 +7592,11 @@ Large GUI system
 ```
 
 
-## Unknown
+## TConstruct-1.7.10-1.8.8
 
 ```text
 File: TConstruct-1.7.10-1.8.8.jar
-Mod ID: Unknown
+Mod ID: TConstruct-1.7.10-1.8.8
 Version: Unknown
 Author: Unknown
 Size: 3.67 MB
@@ -7677,11 +7688,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## ThermalDynamics-[1.7.10]1.2.1-172
 
 ```text
 File: ThermalDynamics-[1.7.10]1.2.1-172.jar
-Mod ID: Unknown
+Mod ID: ThermalDynamics-[1.7.10]1.2.1-172
 Version: Unknown
 Author: Unknown
 Size: 0.57 MB
@@ -7772,11 +7783,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## ThermalExpansion-[1.7.10]4.1.5-248
 
 ```text
 File: ThermalExpansion-[1.7.10]4.1.5-248.jar
-Mod ID: Unknown
+Mod ID: ThermalExpansion-[1.7.10]4.1.5-248
 Version: Unknown
 Author: Unknown
 Size: 1.37 MB
@@ -7868,11 +7879,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## ThermalFoundation-[1.7.10]1.2.6-118
 
 ```text
 File: ThermalFoundation-[1.7.10]1.2.6-118.jar
-Mod ID: Unknown
+Mod ID: ThermalFoundation-[1.7.10]1.2.6-118
 Version: Unknown
 Author: Unknown
 Size: 1.08 MB
@@ -7961,11 +7972,11 @@ Heavy network usage
 ```
 
 
-## Unknown
+## Treecapitator-master-a88b6c78
 
 ```text
 File: Treecapitator-master-a88b6c78.jar
-Mod ID: Unknown
+Mod ID: Treecapitator-master-a88b6c78
 Version: Unknown
 Author: Unknown
 Size: 0.09 MB
@@ -8145,11 +8156,11 @@ No critical problems detected
 ```
 
 
-## Unknown
+## UniversalResources-master-0585e854
 
 ```text
 File: UniversalResources-master-0585e854.jar
-Mod ID: Unknown
+Mod ID: UniversalResources-master-0585e854
 Version: Unknown
 Author: Unknown
 Size: 0.04 MB
@@ -8515,11 +8526,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## CodeChickenLib-1.7.10-1.1.3.141
 
 ```text
 File: CodeChickenLib-1.7.10-1.1.3.141.jar
-Mod ID: Unknown
+Mod ID: CodeChickenLib-1.7.10-1.1.3.141
 Version: Unknown
 Author: Unknown
 Size: 0.28 MB
@@ -8609,11 +8620,11 @@ ASM/CoreMod detected
 ```
 
 
-## Unknown
+## [1.7.10]bspkrsCore-universal-6.16
 
 ```text
 File: [1.7.10]bspkrsCore-universal-6.16.jar
-Mod ID: Unknown
+Mod ID: [1.7.10]bspkrsCore-universal-6.16
 Version: Unknown
 Author: Unknown
 Size: 0.17 MB

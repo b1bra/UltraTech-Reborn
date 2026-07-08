@@ -17,7 +17,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## AnvilRepairFix-master-45d157ba
 
 ```text
 Difficulty: Easy
@@ -43,7 +43,7 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.02 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 0
 ```
 
@@ -67,7 +67,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## AvaritiaNEI-1.7.10-1.3.2
 
 ```text
 Difficulty: Hard
@@ -77,7 +77,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## bdlib-1.9.4.109-mc1.7.10
 
 ```text
 Difficulty: Hard
@@ -97,7 +97,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## BetterQuesting-master-b2071223
 
 ```text
 Difficulty: Hard
@@ -123,11 +123,11 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.1 MB
-Dependencies: 0
+Dependencies: 2
 Important classes: 0
 ```
 
-## Unknown
+## BrandonsCore-1.0.0.12
 
 ```text
 Difficulty: Hard
@@ -137,7 +137,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## CodeChickenCore-1.7.10-1.0.7.47
 
 ```text
 Difficulty: Hard
@@ -147,7 +147,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## CoFHCore-[1.7.10]3.1.4-329
 
 ```text
 Difficulty: Hard
@@ -157,7 +157,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## ContainerWarden-master-a38f002f
 
 ```text
 Difficulty: Hard
@@ -177,7 +177,7 @@ Dependencies: 0
 Important classes: 4
 ```
 
-## Unknown
+## CreativeCore-master-74e33014
 
 ```text
 Difficulty: Hard
@@ -207,7 +207,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## Draconic-Evolution-1.7.10-1.0.2h
 
 ```text
 Difficulty: Hard
@@ -217,7 +217,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## EnderCore-1.7.10-0.2.0.39_beta
 
 ```text
 Difficulty: Hard
@@ -227,7 +227,7 @@ Dependencies: 0
 Important classes: 2
 ```
 
-## Unknown
+## EnderIO-1.7.10-2.3.0.429_beta
 
 ```text
 Difficulty: Hard
@@ -237,7 +237,7 @@ Dependencies: 0
 Important classes: 2
 ```
 
-## Unknown
+## EventHelper-master-de330be3
 
 ```text
 Difficulty: Hard
@@ -253,7 +253,7 @@ Important classes: 1
 Difficulty: Hard
 Migration score: 100/100
 File size: 6.89 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 1
 ```
 
@@ -267,7 +267,7 @@ Dependencies: 0
 Important classes: 3
 ```
 
-## Unknown
+## FastInventories-master-bedd4cde
 
 ```text
 Difficulty: Hard
@@ -293,7 +293,7 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 2.52 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 0
 ```
 
@@ -317,7 +317,7 @@ Dependencies: 0
 Important classes: 2
 ```
 
-## Unknown
+## GalaxySpace-1.7.10-1.2.15
 
 ```text
 Difficulty: Hard
@@ -327,7 +327,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## GeckoLib-1.7.10-4.3.1-shadow
 
 ```text
 Difficulty: Hard
@@ -337,7 +337,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## gendustry-1.6.4.135-mc1.7.10
 
 ```text
 Difficulty: Hard
@@ -363,11 +363,11 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.73 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 0
 ```
 
-## Unknown
+## IC2Tweaker-1.7.10-1.0.2
 
 ```text
 Difficulty: Easy
@@ -397,7 +397,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## InvTweaksHelper-master-f6d868a4
 
 ```text
 Difficulty: Hard
@@ -423,7 +423,7 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.18 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 1
 ```
 
@@ -437,7 +437,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## LanguagePatcher-master-185f579f
 
 ```text
 Difficulty: Hard
@@ -447,7 +447,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## LoliAE2-1.7.10-client
 
 ```text
 Difficulty: Hard
@@ -457,7 +457,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## LoliDecorative-master-bf409f4c
 
 ```text
 Difficulty: Hard
@@ -477,7 +477,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## LoliDragonMight-1.7.10-client
 
 ```text
 Difficulty: Hard
@@ -507,7 +507,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## LoliEnergyRelics-1.7.10-client
 
 ```text
 Difficulty: Hard
@@ -517,7 +517,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## LoliForestry-1.7.10-client
 
 ```text
 Difficulty: Hard
@@ -527,7 +527,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## LoliHooks-master-aa342203
 
 ```text
 Difficulty: Hard
@@ -547,7 +547,7 @@ Dependencies: 0
 Important classes: 3
 ```
 
-## Unknown
+## LoliUtility-1.7.10-client
 
 ```text
 Difficulty: Hard
@@ -557,7 +557,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## LoliWeCUI-master-7296045c
 
 ```text
 Difficulty: Hard
@@ -587,7 +587,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## Mantle-1.7.10-0.3.2b
 
 ```text
 Difficulty: Hard
@@ -607,7 +607,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## MCTags-master-72ca4ae0
 
 ```text
 Difficulty: Hard
@@ -617,7 +617,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## MicdoodleCore-1.7-3.0.12.504
 
 ```text
 Difficulty: Hard
@@ -627,7 +627,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## MineChem-1.7.10
 
 ```text
 Difficulty: Hard
@@ -637,7 +637,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## MinecraftPerformancePrimitives-master-fd72b14e
 
 ```text
 Difficulty: Hard
@@ -653,7 +653,7 @@ Important classes: 1
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.07 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 0
 ```
 
@@ -703,7 +703,7 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.09 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 0
 ```
 
@@ -723,7 +723,7 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.7 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 1
 ```
 
@@ -737,7 +737,7 @@ Dependencies: 0
 Important classes: 2
 ```
 
-## Unknown
+## OnlinePicFrame+v1.0+mc1.7.10
 
 ```text
 Difficulty: Hard
@@ -753,7 +753,7 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 13.95 MB
-Dependencies: 0
+Dependencies: 11
 Important classes: 3
 ```
 
@@ -767,7 +767,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## RealmBlockLimiter-master-34e72415
 
 ```text
 Difficulty: Hard
@@ -783,7 +783,7 @@ Important classes: 0
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.69 MB
-Dependencies: 0
+Dependencies: 1
 Important classes: 1
 ```
 
@@ -797,7 +797,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## SpawnTrickLib-1.7.10-1.0.1
 
 ```text
 Difficulty: Normal
@@ -807,7 +807,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## StandardExpansion-master-b2071223
 
 ```text
 Difficulty: Hard
@@ -817,7 +817,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## TConstruct-1.7.10-1.8.8
 
 ```text
 Difficulty: Hard
@@ -827,7 +827,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## ThermalDynamics-[1.7.10]1.2.1-172
 
 ```text
 Difficulty: Hard
@@ -837,7 +837,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## ThermalExpansion-[1.7.10]4.1.5-248
 
 ```text
 Difficulty: Hard
@@ -847,7 +847,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## ThermalFoundation-[1.7.10]1.2.6-118
 
 ```text
 Difficulty: Hard
@@ -857,7 +857,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## Treecapitator-master-a88b6c78
 
 ```text
 Difficulty: Hard
@@ -877,7 +877,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## UniversalResources-master-0585e854
 
 ```text
 Difficulty: Hard
@@ -917,7 +917,7 @@ Dependencies: 0
 Important classes: 1
 ```
 
-## Unknown
+## CodeChickenLib-1.7.10-1.1.3.141
 
 ```text
 Difficulty: Hard
@@ -927,7 +927,7 @@ Dependencies: 0
 Important classes: 0
 ```
 
-## Unknown
+## [1.7.10]bspkrsCore-universal-6.16
 
 ```text
 Difficulty: Hard

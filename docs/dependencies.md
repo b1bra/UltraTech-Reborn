@@ -6,7 +6,7 @@
 No dependencies
 ```
 
-## Unknown
+## AnvilRepairFix-master-45d157ba
 
 ```text
 No dependencies
@@ -21,7 +21,7 @@ No dependencies
 ## ArmorStatusHUD
 
 ```text
-No dependencies
+bspkrsCore@[6.15,)
 ```
 
 ## asielib
@@ -36,13 +36,13 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## AvaritiaNEI-1.7.10-1.3.2
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## bdlib-1.9.4.109-mc1.7.10
 
 ```text
 No dependencies
@@ -54,7 +54,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## BetterQuesting-master-b2071223
 
 ```text
 No dependencies
@@ -69,28 +69,29 @@ No dependencies
 ## Binnie Core
 
 ```text
-No dependencies
+Forestry
+BinnieCore
 ```
 
-## Unknown
+## BrandonsCore-1.0.0.12
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## CodeChickenCore-1.7.10-1.0.7.47
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## CoFHCore-[1.7.10]3.1.4-329
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## ContainerWarden-master-a38f002f
 
 ```text
 No dependencies
@@ -102,7 +103,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## CreativeCore-master-74e33014
 
 ```text
 No dependencies
@@ -120,25 +121,25 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## Draconic-Evolution-1.7.10-1.0.2h
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## EnderCore-1.7.10-0.2.0.39_beta
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## EnderIO-1.7.10-2.3.0.429_beta
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## EventHelper-master-de330be3
 
 ```text
 No dependencies
@@ -147,7 +148,7 @@ No dependencies
 ## ExtraTiC
 
 ```text
-No dependencies
+TConstruct
 ```
 
 ## Extra Utilities
@@ -156,7 +157,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## FastInventories-master-bedd4cde
 
 ```text
 No dependencies
@@ -171,7 +172,7 @@ No dependencies
 ## Forestry for Minecraft
 
 ```text
-No dependencies
+mod_MinecraftForge
 ```
 
 ## Galacticraft Planets
@@ -186,19 +187,19 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## GalaxySpace-1.7.10-1.2.15
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## GeckoLib-1.7.10-4.3.1-shadow
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## gendustry-1.6.4.135-mc1.7.10
 
 ```text
 No dependencies
@@ -213,10 +214,10 @@ No dependencies
 ## Nuclear Control 2
 
 ```text
-No dependencies
+IC2
 ```
 
-## Unknown
+## IC2Tweaker-1.7.10-1.0.2
 
 ```text
 No dependencies
@@ -234,7 +235,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## InvTweaksHelper-master-f6d868a4
 
 ```text
 No dependencies
@@ -249,7 +250,7 @@ No dependencies
 ## JourneyMap
 
 ```text
-No dependencies
+Forge@[10.13.4.1558,)
 ```
 
 ## Json Model Reader
@@ -258,19 +259,19 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## LanguagePatcher-master-185f579f
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## LoliAE2-1.7.10-client
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## LoliDecorative-master-bf409f4c
 
 ```text
 No dependencies
@@ -282,7 +283,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## LoliDragonMight-1.7.10-client
 
 ```text
 No dependencies
@@ -300,19 +301,19 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## LoliEnergyRelics-1.7.10-client
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## LoliForestry-1.7.10-client
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## LoliHooks-master-aa342203
 
 ```text
 No dependencies
@@ -324,13 +325,13 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## LoliUtility-1.7.10-client
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## LoliWeCUI-master-7296045c
 
 ```text
 No dependencies
@@ -348,7 +349,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## Mantle-1.7.10-0.3.2b
 
 ```text
 No dependencies
@@ -360,25 +361,25 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## MCTags-master-72ca4ae0
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## MicdoodleCore-1.7-3.0.12.504
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## MineChem-1.7.10
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## MinecraftPerformancePrimitives-master-fd72b14e
 
 ```text
 No dependencies
@@ -387,7 +388,7 @@ No dependencies
 ## MineFactory Reloaded
 
 ```text
-No dependencies
+MineFactoryReloaded
 ```
 
 ## MojangMathLibrary
@@ -417,7 +418,7 @@ No dependencies
 ## NEI Addons
 
 ```text
-No dependencies
+NEIAddons
 ```
 
 ## NEI Integration
@@ -429,7 +430,7 @@ No dependencies
 ## NotEnoughItems
 
 ```text
-No dependencies
+CodeChickenCore
 ```
 
 ## Omicron
@@ -438,7 +439,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## OnlinePicFrame+v1.0+mc1.7.10
 
 ```text
 No dependencies
@@ -447,7 +448,17 @@ No dependencies
 ## OpenComputers
 
 ```text
-No dependencies
+BuildCraft|Core
+ComputerCraft
+EnderStorage
+ForgeMultipart
+IC2
+MineFactoryReloaded
+ProjRed|Transmission
+RedLogic
+StargateTech2
+Thaumcraft
+ThermalExpansion
 ```
 
 ## PowerUtils
@@ -456,7 +467,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## RealmBlockLimiter-master-34e72415
 
 ```text
 No dependencies
@@ -465,7 +476,7 @@ No dependencies
 ## RedPower
 
 ```text
-No dependencies
+mod_MinecraftForge
 ```
 
 ## Realistic Terrain Generation
@@ -474,43 +485,43 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## SpawnTrickLib-1.7.10-1.0.1
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## StandardExpansion-master-b2071223
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## TConstruct-1.7.10-1.8.8
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## ThermalDynamics-[1.7.10]1.2.1-172
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## ThermalExpansion-[1.7.10]4.1.5-248
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## ThermalFoundation-[1.7.10]1.2.6-118
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## Treecapitator-master-a88b6c78
 
 ```text
 No dependencies
@@ -522,7 +533,7 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## UniversalResources-master-0585e854
 
 ```text
 No dependencies
@@ -546,13 +557,13 @@ No dependencies
 No dependencies
 ```
 
-## Unknown
+## CodeChickenLib-1.7.10-1.1.3.141
 
 ```text
 No dependencies
 ```
 
-## Unknown
+## [1.7.10]bspkrsCore-universal-6.16
 
 ```text
 No dependencies

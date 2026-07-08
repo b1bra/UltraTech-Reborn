@@ -402,31 +402,26 @@ def load_scanners():
 
 def read_mcmod_info(jar_path):
 
+    filename = os.path.splitext(
+        os.path.basename(jar_path)
+    )[0]
+
 
     result = {
 
+        "name": filename,
 
-        "name":
-        "Unknown",
+        "modid": filename,
 
+        "version": "Unknown",
 
-        "modid":
-        "Unknown",
-
-
-        "version":
-        "Unknown",
-
-
-        "author":
-        "Unknown"
+        "author": "Unknown"
 
     }
 
 
 
     try:
-
 
         with zipfile.ZipFile(
             jar_path,
@@ -458,7 +453,6 @@ def read_mcmod_info(jar_path):
                 for key in result.keys():
 
 
-
                     match = re.search(
 
                         f'"{key}"\\s*:\\s*"([^"]+)"',
@@ -471,7 +465,6 @@ def read_mcmod_info(jar_path):
 
                     if match:
 
-
                         result[key] = match.group(1)
 
 
@@ -480,15 +473,15 @@ def read_mcmod_info(jar_path):
 
 
 
-    except Exception:
+    except Exception as error:
 
-
-        pass
+        log(
+            f"mcmod.info error {jar_path}: {error}"
+        )
 
 
 
     return result
-
 
 
 
@@ -583,13 +576,10 @@ def read_manifest(jar_path):
 
 def scan_dependencies(jar_path):
 
-
     dependencies = []
 
 
-
     try:
-
 
         with zipfile.ZipFile(
             jar_path,
@@ -597,12 +587,7 @@ def scan_dependencies(jar_path):
         ) as jar:
 
 
-
-            files = jar.namelist()
-
-
-
-            for file in files:
+            for file in jar.namelist():
 
 
                 if not file.endswith(
@@ -621,6 +606,46 @@ def scan_dependencies(jar_path):
                 )
 
 
+
+                # -------------------------
+                # JSON dependencies
+                # -------------------------
+
+                matches = re.findall(
+
+                    r'"dependencies"\s*:\s*\[(.*?)\]',
+
+                    text,
+
+                    re.DOTALL
+
+                )
+
+
+
+                for block in matches:
+
+
+                    values = re.findall(
+
+                        r'"([^"]+)"',
+
+                        block
+
+                    )
+
+
+                    dependencies.extend(
+                        values
+                    )
+
+
+
+
+
+                # -------------------------
+                # Forge dependency syntax
+                # -------------------------
 
                 patterns = [
 
@@ -643,34 +668,77 @@ def scan_dependencies(jar_path):
                 for pattern in patterns:
 
 
-                    found = re.findall(
-
-                        pattern,
-
-                        text
-
-                    )
-
-
-
                     dependencies.extend(
-                        found
+
+                        re.findall(
+
+                            pattern,
+
+                            text
+
+                        )
+
                     )
 
 
 
-    except Exception:
-
-
-        pass
+                break
 
 
 
-    return list(
-        set(
-            dependencies
+
+
+    except Exception as error:
+
+
+        log(
+            f"Dependency error {jar_path}: {error}"
         )
-    )
+
+
+
+
+    # очистка
+
+    result = []
+
+
+    for dep in dependencies:
+
+
+        dep = dep.strip()
+
+
+
+        if (
+
+            dep
+
+            and
+
+            dep.lower() not in [
+
+                "forge",
+
+                "minecraft"
+
+            ]
+
+            and
+
+            dep not in result
+
+        ):
+
+
+            result.append(
+                dep
+            )
+
+
+
+    return result
+
 # =====================================
 # Surface scan
 # =====================================
