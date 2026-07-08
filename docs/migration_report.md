@@ -1,508 +1,1130 @@
-# Migration Report
+# UltraTech Migration Report
 
-## Airdrops
+Migration summary:
 
-WARNING: CoreMod detected
-
-Status: Analyzed
+```text
+Total mods: 91
+Hard: 45
+Normal: 20
+Easy: 26
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Applied Energistics 2
-
-WARNING: CoreMod detected
-
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 2
+```
 
 ## ArmorStatusHUD
 
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 37
+```
 
 ## asielib
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 85/100
+Status: Requires rewrite
+Estimated methods: 287
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
 ## Avaritia
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 125/100
+Status: Requires rewrite
+Estimated methods: 821
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 15/100
+Status: Simple migration
+Estimated methods: 22
+```
 
 ## BeeBetterAtBees
 
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 69
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Hard
+Score: 80/100
+Status: Requires rewrite
+Estimated methods: 1864
+```
 
-Status: No mcmod.info
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## BetterSigns
 
-Status: Analyzed
-
-## Binnie Core
-
-WARNING: CoreMod detected
-
-Status: Analyzed
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 15/100
+Status: Simple migration
+Estimated methods: 20
+```
 
 ## Unknown
 
-WARNING: CoreMod detected
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: CoreMod detected
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 186
+```
 
 ## Unknown
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 260/100
+Status: Requires rewrite
+Estimated methods: 2057
+```
 
-WARNING: mcmod.info missing
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
-Status: No mcmod.info
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 440/100
+Status: Requires rewrite
+Estimated methods: 271
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## Unknown
+
+```text
+Difficulty: Normal
+Score: 55/100
+Status: Needs adaptation
+Estimated methods: 81
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+```
 
 ## MineTweaker 3
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 120/100
+Status: Requires rewrite
+Estimated methods: 2424
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 25/100
+Status: Simple migration
+Estimated methods: 522
+```
 
 ## DecorativeAPI
 
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 10/100
+Status: Simple migration
+Estimated methods: 100
+```
 
 ## DivineRPG
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 550/100
+Status: Requires rewrite
+Estimated methods: 4174
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Hard
+Score: 265/100
+Status: Requires rewrite
+Estimated methods: 1486
+```
 
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: CoreMod detected
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 175/100
+Status: Requires rewrite
+Estimated methods: 872
+```
 
-WARNING: mcmod.info missing
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
-Status: No mcmod.info
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 860/100
+Status: Requires rewrite
+Estimated methods: 4802
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Normal
+Score: 55/100
+Status: Needs adaptation
+Estimated methods: 479
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+```
 
 ## ExtraTiC
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 95/100
+Status: Requires rewrite
+Estimated methods: 184
+```
 
-## Extra Utilities
-
-Status: Analyzed
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-Status: Error: Expecting value: line 14 column 20 (char 291)
-
-## Forestry for Minecraft
-
-Status: Analyzed
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 92
+```
 
 ## Unknown
 
-WARNING: CoreMod detected
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 10/100
+Status: Simple migration
+Estimated methods: 19
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Hard
+Score: 135/100
+Status: Requires rewrite
+Estimated methods: 1451
+```
 
-Status: No mcmod.info
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 285/100
+Status: Requires rewrite
+Estimated methods: 3444
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 315/100
+Status: Requires rewrite
+Estimated methods: 3760
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## Unknown
+
+```text
+Difficulty: Easy
+Score: 15/100
+Status: Simple migration
+Estimated methods: 771
+```
 
 ## Graviation Suite
 
-Status: Analyzed
+```text
+Difficulty: Normal
+Score: 50/100
+Status: Needs adaptation
+Estimated methods: 326
+```
 
 ## Nuclear Control 2
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 120/100
+Status: Requires rewrite
+Estimated methods: 835
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 10
+```
 
-Status: No mcmod.info
+## Unknown
 
-## IndustrialCraft 2
-
-WARNING: CoreMod detected
-
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 15/100
+Status: Simple migration
+Estimated methods: 7
+```
 
 ## Inventory Tweaks
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 85/100
+Status: Requires rewrite
+Estimated methods: 283
+```
 
-Status: Analyzed
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
 ## ItemPhysic
 
-WARNING: CoreMod detected
+```text
+Difficulty: Normal
+Score: 40/100
+Status: Needs adaptation
+Estimated methods: 30
+```
 
-Status: Analyzed
+Problems:
+```text
+ASM/CoreMod usage
+```
 
 ## JourneyMap
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 115/100
+Status: Requires rewrite
+Estimated methods: 1881
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Json Model Reader
 
-Status: Analyzed
-
-## Unknown
-
-WARNING: CoreMod detected
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## LoliDimensions
-
-WARNING: CoreMod detected
-
-Status: Analyzed
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## LoliDungeons
-
-WARNING: CoreMod detected
-
-Status: Analyzed
-
-## LoliEnergistics
-
-Status: Analyzed
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: CoreMod detected
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Example Mod
-
-WARNING: CoreMod detected
-
-Status: Analyzed
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Luminous UI
-
-WARNING: CoreMod detected
-
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 62
+```
 
 ## LWSL
 
-Status: Analyzed
+```text
+Difficulty: Normal
+Score: 35/100
+Status: Needs adaptation
+Estimated methods: 172
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Normal
+Score: 50/100
+Status: Needs adaptation
+Estimated methods: 11
+```
 
-Status: No mcmod.info
-
-## Matter Overdrive
-
-Status: Analyzed
-
-## Unknown
-
-WARNING: CoreMod detected
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+Problems:
+```text
+ASM/CoreMod usage
+```
 
 ## Unknown
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 225/100
+Status: Requires rewrite
+Estimated methods: 3739
+```
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Normal
+Score: 30/100
+Status: Needs adaptation
+Estimated methods: 201
+```
 
-Status: No mcmod.info
+## LoliDimensions
+
+```text
+Difficulty: Hard
+Score: 285/100
+Status: Requires rewrite
+Estimated methods: 4912
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
 ## Unknown
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 160/100
+Status: Requires rewrite
+Estimated methods: 1630
+```
 
-WARNING: mcmod.info missing
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
-Status: No mcmod.info
+## LoliEnergistics
 
-## MineFactory Reloaded
+```text
+Difficulty: Hard
+Score: 550/100
+Status: Requires rewrite
+Estimated methods: 6979
+```
 
-Status: Analyzed
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Easy
+Score: 25/100
+Status: Simple migration
+Estimated methods: 197
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 105/100
+Status: Requires rewrite
+Estimated methods: 752
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 160/100
+Status: Requires rewrite
+Estimated methods: 147
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## Example Mod
+
+```text
+Difficulty: Hard
+Score: 125/100
+Status: Requires rewrite
+Estimated methods: 5512
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 305/100
+Status: Requires rewrite
+Estimated methods: 3142
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Easy
+Score: 15/100
+Status: Simple migration
+Estimated methods: 36
+```
+
+## Unknown
+
+```text
+Difficulty: Normal
+Score: 40/100
+Status: Needs adaptation
+Estimated methods: 65
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+```
 
 ## MojangMathLibrary
 
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 2481
+```
+
+## Unknown
+
+```text
+Difficulty: Normal
+Score: 35/100
+Status: Needs adaptation
+Estimated methods: 288
+```
+
+## Matter Overdrive
+
+```text
+Difficulty: Hard
+Score: 330/100
+Status: Requires rewrite
+Estimated methods: 3781
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Normal
+Score: 40/100
+Status: Needs adaptation
+Estimated methods: 17
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 190/100
+Status: Requires rewrite
+Estimated methods: 1299
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## MineFactory Reloaded
+
+```text
+Difficulty: Hard
+Score: 115/100
+Status: Requires rewrite
+Estimated methods: 1713
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Normal
+Score: 40/100
+Status: Needs adaptation
+Estimated methods: 1294
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+```
 
 ## Mod Tweaker 2
 
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 15/100
+Status: Simple migration
+Estimated methods: 880
+```
 
 ## Mouse Tweaks
 
-Status: Analyzed
-
-## Multi Server Worlds
-
-WARNING: CoreMod detected
-
-Status: Analyzed
-
-## NEI Addons
-
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 35
+```
 
 ## NEI Integration
 
-Status: Analyzed
+```text
+Difficulty: Normal
+Score: 30/100
+Status: Needs adaptation
+Estimated methods: 226
+```
 
 ## NotEnoughItems
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 190/100
+Status: Requires rewrite
+Estimated methods: 1509
+```
 
-Status: Analyzed
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
 ## Omicron
 
-WARNING: CoreMod detected
+```text
+Difficulty: Normal
+Score: 60/100
+Status: Needs adaptation
+Estimated methods: 426
+```
 
-Status: Analyzed
+Problems:
+```text
+ASM/CoreMod usage
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 10/100
+Status: Simple migration
+Estimated methods: 40
+```
 
 ## OpenComputers
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 260/100
+Status: Requires rewrite
+Estimated methods: 16101
+```
 
-Status: Analyzed
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
 ## PowerUtils
 
-Status: Analyzed
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## RedPower
-
-Status: Analyzed
+```text
+Difficulty: Normal
+Score: 40/100
+Status: Needs adaptation
+Estimated methods: 89
+```
 
 ## Realistic Terrain Generation
 
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 1098
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 38
+```
 
-Status: No mcmod.info
+## RedPower
 
-## Unknown
+```text
+Difficulty: Hard
+Score: 155/100
+Status: Requires rewrite
+Estimated methods: 441
+```
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
-
-## Unknown
-
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+Problems:
+```text
+Large amount of legacy code
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Easy
+Score: 10/100
+Status: Simple migration
+Estimated methods: 54
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
+```text
+Difficulty: Easy
+Score: 25/100
+Status: Simple migration
+Estimated methods: 688
+```
 
-Status: No mcmod.info
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 240/100
+Status: Requires rewrite
+Estimated methods: 2678
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 125/100
+Status: Requires rewrite
+Estimated methods: 936
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 600/100
+Status: Requires rewrite
+Estimated methods: 1504
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 225/100
+Status: Requires rewrite
+Estimated methods: 327
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Easy
+Score: 15/100
+Status: Simple migration
+Estimated methods: 174
+```
 
 ## UltraTech: Elements
 
-Status: Analyzed
+```text
+Difficulty: Normal
+Score: 40/100
+Status: Needs adaptation
+Estimated methods: 80
+```
 
 ## Unknown
 
-WARNING: mcmod.info missing
-
-Status: No mcmod.info
+```text
+Difficulty: Normal
+Score: 60/100
+Status: Needs adaptation
+Estimated methods: 76
+```
 
 ## Waila
 
-Status: Analyzed
+```text
+Difficulty: Hard
+Score: 135/100
+Status: Requires rewrite
+Estimated methods: 766
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
 
 ## WanionLib
 
-Status: Analyzed
+```text
+Difficulty: Easy
+Score: 0/100
+Status: Simple migration
+Estimated methods: 63
+```
 
 ## WorldGeneratorEngine
 
-WARNING: CoreMod detected
+```text
+Difficulty: Hard
+Score: 70/100
+Status: Requires rewrite
+Estimated methods: 3060
+```
 
-Status: Analyzed
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## Airdrops
+
+```text
+Difficulty: Normal
+Score: 50/100
+Status: Needs adaptation
+Estimated methods: 103
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+```
+
+## Applied Energistics 2
+
+```text
+Difficulty: Hard
+Score: 290/100
+Status: Requires rewrite
+Estimated methods: 6965
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 120/100
+Status: Requires rewrite
+Estimated methods: 3293
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Binnie Core
+
+```text
+Difficulty: Hard
+Score: 280/100
+Status: Requires rewrite
+Estimated methods: 3673
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## Extra Utilities
+
+```text
+Difficulty: Hard
+Score: 205/100
+Status: Requires rewrite
+Estimated methods: 2183
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## Forestry for Minecraft
+
+```text
+Difficulty: Hard
+Score: 310/100
+Status: Requires rewrite
+Estimated methods: 4740
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## Unknown
+
+```text
+Difficulty: Hard
+Score: 105/100
+Status: Requires rewrite
+Estimated methods: 3712
+```
+
+Problems:
+```text
+Large amount of legacy code
+```
+
+## IndustrialCraft 2
+
+```text
+Difficulty: Hard
+Score: 275/100
+Status: Requires rewrite
+Estimated methods: 3200
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+```
+
+## LoliDungeons
+
+```text
+Difficulty: Normal
+Score: 50/100
+Status: Needs adaptation
+Estimated methods: 225
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+```
+
+## Luminous UI
+
+```text
+Difficulty: Hard
+Score: 75/100
+Status: Requires rewrite
+Estimated methods: 4836
+```
+
+Problems:
+```text
+Large amount of legacy code
+ASM/CoreMod usage
+Heavy client rendering
+```
+
+## Multi Server Worlds
+
+```text
+Difficulty: Normal
+Score: 65/100
+Status: Needs adaptation
+Estimated methods: 1486
+```
+
+Problems:
+```text
+ASM/CoreMod usage
+Heavy client rendering
+```
+
+## NEI Addons
+
+```text
+Difficulty: Normal
+Score: 55/100
+Status: Needs adaptation
+Estimated methods: 206
+```
 

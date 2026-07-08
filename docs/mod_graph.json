@@ -1,17 +1,5 @@
 [
     {
-        "file": "airdrops-1.7.10-0.1.0.jar",
-        "name": "Airdrops",
-        "modid": "airdrops",
-        "version": "0.1.0",
-        "author": "LoliLand",
-        "description": "A mod that adds airdrops with loot for players in their realm.",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
         "file": "AnvilRepairFix-master-45d157ba.jar",
         "name": "Unknown",
         "modid": "Unknown",
@@ -19,21 +7,39 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.0,
+        "files": 4,
+        "class_files": 2,
+        "packages": 1,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "appliedenergistics2-rv3-beta-6.jar",
-        "name": "Applied Energistics 2",
-        "modid": "appliedenergistics2",
-        "version": "rv3-beta-6",
-        "author": "AlgorithmX2",
-        "description": "A Mod about Matter, Energy and using them to conquer the world..",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 12
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 2
     },
     {
         "file": "ArmorStatusHUD-master-f3c7993b.jar",
@@ -45,9 +51,38 @@
         "dependencies": [
             "bspkrsCore@[6.15,)"
         ],
+        "size_mb": 0.02,
+        "files": 20,
+        "class_files": 12,
+        "packages": 3,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 21,
+            "Events": 33
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 37
     },
     {
         "file": "AsieLib-1.7.10-0.4.9.jar",
@@ -57,9 +92,47 @@
         "author": "asiekierka, Vexatos",
         "description": "Utilities for asie's mods",
         "dependencies": [],
+        "size_mb": 0.14,
+        "files": 154,
+        "class_files": 103,
+        "packages": 30,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 85,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IClassTransformer"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 50,
+            "Network": 88,
+            "Rendering": 20,
+            "World Generation": 1,
+            "Registry": 3
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 287
     },
     {
         "file": "Avaritia-1.13.jar",
@@ -69,9 +142,47 @@
         "author": "SpitefulFox, TTFTCUTS",
         "description": "A mod to see how hard people are willing to grind.",
         "dependencies": [],
+        "size_mb": 0.69,
+        "files": 386,
+        "class_files": 200,
+        "packages": 24,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 125,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 212,
+            "Registry": 21,
+            "Rendering": 455,
+            "Network": 15,
+            "World Generation": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 821
     },
     {
         "file": "AvaritiaNEI-1.7.10-1.3.2.jar",
@@ -81,21 +192,42 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.01,
+        "files": 17,
+        "class_files": 15,
+        "packages": 5,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "bdlib-1.9.4.109-mc1.7.10.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 15,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 5,
+            "Network": 3
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 22
     },
     {
         "file": "BeeBetterAtBees-0.3.jar",
@@ -105,9 +237,38 @@
         "author": "HellFirePvP",
         "description": "ClientSide NEI Addon to make bees a little less painful",
         "dependencies": [],
+        "size_mb": 0.03,
+        "files": 36,
+        "class_files": 18,
+        "packages": 4,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 13,
+            "Events": 8
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 69
     },
     {
         "file": "BetterQuesting-master-b2071223.jar",
@@ -117,9 +278,48 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 1.24,
+        "files": 524,
+        "class_files": 399,
+        "packages": 88,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 80,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Network": 204,
+            "Events": 604,
+            "Registry": 6,
+            "Rendering": 834
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1864
     },
     {
         "file": "BetterSigns-master-7c167d38.jar",
@@ -129,23 +329,41 @@
         "author": "Unknown",
         "description": "Example placeholder mod.",
         "dependencies": [],
+        "size_mb": 0.01,
+        "files": 9,
+        "class_files": 5,
+        "packages": 1,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "binnie-mods-1.7.10-2.0.22.7.jar",
-        "name": "Binnie Core",
-        "modid": "BinnieCore",
-        "version": "2.0.22.7",
-        "author": "Binnie",
-        "description": "Base mod for Binnie's Mods, with lots of common code.",
-        "dependencies": [
-            "Forestry"
+        "difficulty": "Easy",
+        "score": 15,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry"
         ],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 13,
+            "Rendering": 33,
+            "Network": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 20
     },
     {
         "file": "BrandonsCore-1.0.0.12.jar",
@@ -155,21 +373,41 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.08,
+        "files": 78,
+        "class_files": 44,
+        "packages": 15,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "CodeChickenCore-1.7.10-1.0.7.47.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 34,
+            "Rendering": 75,
+            "Network": 27
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 186
     },
     {
         "file": "CoFHCore-[1.7.10]3.1.4-329.jar",
@@ -179,9 +417,110 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.85,
+        "files": 687,
+        "class_files": 611,
+        "packages": 88,
         "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 260,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: LanguageRegistry",
+            "Old Forge: cpw.mods.fml",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "CoreMod / ASM: IClassTransformer"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 303,
+            "Registry": 57,
+            "Network": 327,
+            "Rendering": 1007,
+            "World Generation": 155,
+            "Forge": 2
+        },
+        "content": {
+            "Blocks": 2,
+            "Items": 1,
+            "TileEntities": 1,
+            "Entities": 1
+        },
+        "minecraft_usage": {
+            "Blocks": 2,
+            "Items": 1,
+            "World": 3,
+            "Client": 5,
+            "Entities": 2,
+            "TileEntities": 1
+        },
+        "client_percent": 35.7,
+        "server_percent": 64.3,
+        "estimated_methods": 2057
+    },
+    {
+        "file": "CodeChickenCore-1.7.10-1.0.7.47.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.12,
+        "files": 84,
+        "class_files": 77,
+        "packages": 11,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 440,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: CorePlugin",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "CoreMod / ASM: IClassTransformer"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 100,
+            "Events": 72,
+            "World Generation": 2,
+            "Network": 7
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 271
     },
     {
         "file": "ContainerWarden-master-a38f002f.jar",
@@ -191,9 +530,47 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.03,
+        "files": 28,
+        "class_files": 26,
+        "packages": 8,
         "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Normal",
+        "score": 55,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 56,
+            "Network": 3
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 81
     },
     {
         "file": "CraftTweaker-spring-wipe-2026-cut-6845ed1b.jar",
@@ -203,9 +580,50 @@
         "author": "Stan Hebben",
         "description": "Customize your minecraft experience!",
         "dependencies": [],
+        "size_mb": 1.01,
+        "files": 772,
+        "class_files": 768,
+        "packages": 84,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 120,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Old Forge: net.minecraftforge",
+            "Registry System: EntityRegistry",
+            "Registry System: LanguageRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 616,
+            "Network": 82,
+            "Registry": 17,
+            "Forge": 1,
+            "Rendering": 2,
+            "World Generation": 19
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 2424
     },
     {
         "file": "CreativeCore-master-74e33014.jar",
@@ -215,9 +633,46 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.24,
+        "files": 149,
+        "class_files": 144,
+        "packages": 29,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 25,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 248,
+            "Events": 219,
+            "Network": 121,
+            "Registry": 2,
+            "World Generation": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 522
     },
     {
         "file": "DecorativeAPI-1.1.1-client.jar",
@@ -227,9 +682,41 @@
         "author": "Aizistral",
         "description": "Some generic mod description.",
         "dependencies": [],
+        "size_mb": 0.05,
+        "files": 33,
+        "class_files": 26,
+        "packages": 9,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 10,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 112,
+            "Registry": 1,
+            "Events": 23
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 100
     },
     {
         "file": "DivineRPG-1.4.1.5.jar",
@@ -239,9 +726,47 @@
         "author": "Unknown",
         "description": "Adds a magic system ♦ Pets ♦ 8 new dimensions ♦ Over 100 new mobs ♦ New bosses ♦ Hundreds of new Weapons, Armor/costumes, Tools, and Materials in all sorts of different styles.",
         "dependencies": [],
+        "size_mb": 16.99,
+        "files": 2882,
+        "class_files": 957,
+        "packages": 87,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 550,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 331,
+            "World Generation": 202,
+            "Registry": 45,
+            "Rendering": 3480,
+            "Network": 24
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 4174
     },
     {
         "file": "Draconic-Evolution-1.7.10-1.0.2h.jar",
@@ -251,9 +776,49 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 7.07,
+        "files": 667,
+        "class_files": 303,
+        "packages": 44,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 265,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 297,
+            "Network": 373,
+            "Rendering": 908,
+            "World Generation": 1,
+            "Registry": 19
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1486
     },
     {
         "file": "EnderCore-1.7.10-0.2.0.39_beta.jar",
@@ -263,9 +828,56 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.42,
+        "files": 298,
+        "class_files": 240,
+        "packages": 38,
         "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 175,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Old Forge: net.minecraftforge",
+            "CoreMod / ASM: CorePlugin",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Old Forge: cpw.mods.fml"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 301,
+            "Network": 101,
+            "Rendering": 451,
+            "Registry": 14,
+            "Forge": 4,
+            "World Generation": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 872
     },
     {
         "file": "EnderIO-1.7.10-2.3.0.429_beta.jar",
@@ -275,9 +887,49 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 3.2,
+        "files": 1691,
+        "class_files": 1102,
+        "packages": 88,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 860,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 2354,
+            "Events": 527,
+            "Registry": 144,
+            "Network": 1307,
+            "World Generation": 13
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 4802
     },
     {
         "file": "EventHelper-master-de330be3.jar",
@@ -287,9 +939,49 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.22,
+        "files": 202,
+        "class_files": 200,
+        "packages": 31,
         "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Normal",
+        "score": 55,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 164,
+            "World Generation": 1,
+            "Network": 5,
+            "Rendering": 9
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 479
     },
     {
         "file": "ExtraTiC-1.7.10-1.4.6.jar",
@@ -302,21 +994,44 @@
             "Forge",
             "TConstruct"
         ],
+        "size_mb": 6.89,
+        "files": 18013,
+        "class_files": 43,
+        "packages": 15,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "extrautilities-1.2.12.jar",
-        "name": "Extra Utilities",
-        "modid": "ExtraUtilities",
-        "version": "1.2.12",
-        "author": "RWTema",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 95,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Registry": 19,
+            "Events": 37,
+            "Rendering": 24
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 184
     },
     {
         "file": "FastInventories-master-bedd4cde.jar",
@@ -326,9 +1041,37 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.05,
+        "files": 38,
+        "class_files": 36,
+        "packages": 5,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {},
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 92
     },
     {
         "file": "FlatBedrock-master-a3582c52.jar",
@@ -338,21 +1081,41 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.01,
+        "files": 14,
+        "class_files": 10,
+        "packages": 7,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Error: Expecting value: line 14 column 20 (char 291)"
-    },
-    {
-        "file": "forestry_1.7.10-4.2.16.64.jar",
-        "name": "Forestry for Minecraft",
-        "modid": "Forestry",
-        "version": "4.2.16.64",
-        "author": "SirSengir",
-        "description": "Trees, bees and more.",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 10,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "World Generation": 11,
+            "Registry": 1,
+            "Events": 13
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 19
     },
     {
         "file": "Galacticraft-Planets-1.7-3.0.12.504.jar",
@@ -362,9 +1125,50 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 2.0,
+        "files": 611,
+        "class_files": 272,
+        "packages": 47,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 135,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry",
+            "Registry System: LanguageRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 250,
+            "Rendering": 1294,
+            "Registry": 11,
+            "Network": 357,
+            "World Generation": 22
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1451
     },
     {
         "file": "GalacticraftCore-1.7-3.0.12.504.jar",
@@ -374,9 +1178,53 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 7.31,
+        "files": 1300,
+        "class_files": 724,
+        "packages": 68,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 285,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Old Forge: net.minecraftforge",
+            "Registry System: EntityRegistry",
+            "Registry System: LanguageRegistry",
+            "Old Forge: cpw.mods.fml"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 1957,
+            "Events": 700,
+            "Network": 736,
+            "World Generation": 66,
+            "Registry": 14,
+            "Forge": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3444
     },
     {
         "file": "GalaxySpace-1.7.10-1.2.15.jar",
@@ -386,9 +1234,52 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 16.88,
+        "files": 1502,
+        "class_files": 841,
+        "packages": 253,
         "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 315,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 461,
+            "Rendering": 2179,
+            "World Generation": 180,
+            "Network": 444,
+            "Registry": 29
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3760
     },
     {
         "file": "GeckoLib-1.7.10-4.3.1-shadow.jar",
@@ -398,21 +1289,43 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.39,
+        "files": 245,
+        "class_files": 241,
+        "packages": 9,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "gendustry-1.6.4.135-mc1.7.10.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 15,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 193,
+            "Events": 24,
+            "Network": 3
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 771
     },
     {
         "file": "GraviSuite-1.7.10-2.0.3.jar",
@@ -422,9 +1335,44 @@
         "author": "SeNtiMeL",
         "description": "Gravitation Suite give you ability to fly. This is addon for IndustrialCraft 2",
         "dependencies": [],
+        "size_mb": 0.35,
+        "files": 111,
+        "class_files": 65,
+        "packages": 9,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Normal",
+        "score": 50,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 104,
+            "Rendering": 79,
+            "Network": 65,
+            "Registry": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 326
     },
     {
         "file": "IC2NuclearControl-master-cd42a918.jar",
@@ -434,9 +1382,45 @@
         "author": "Shedar, xbony2, Zuxelus, DMF444",
         "description": "Nuclear Control, an Industrial Craft 2 addon that allows you to build efficient monitoring and notification system for your nuclear reactor. Also you can use Howler Alarm and Industrial Alarm in any case when you want industrial-style notification/alarming system.",
         "dependencies": [],
+        "size_mb": 0.73,
+        "files": 786,
+        "class_files": 206,
+        "packages": 27,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 120,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 203,
+            "Events": 106,
+            "Network": 151,
+            "Registry": 10
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 835
     },
     {
         "file": "IC2Tweaker-1.7.10-1.0.2.jar",
@@ -446,33 +1430,39 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.01,
+        "files": 17,
+        "class_files": 8,
+        "packages": 3,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "industrialcraft-2-2.2.827-experimental.jar",
-        "name": "IndustrialCraft 2",
-        "modid": "IC2",
-        "version": "2.2.827-experimental",
-        "author": "Alblaka, Player, RichardG, Thunderdark, GregoriusT, alexthesax, Drashian, Elementalist, Feanturi, Lurch1985, SirusKing, tahu44, Aroma1997",
-        "description": "Industrial age themed expansion for Minecraft.",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "InventoryTweaks-1.7.10-Client.jar",
-        "name": "Inventory Tweaks",
-        "modid": "inventorytweaks",
-        "version": "1.59-dev-152-cf6e263",
-        "author": "Unknown",
-        "description": "Tweaks to inventory handling for ease of use, including sorting and automatic replacement of broken tools or exhausted stacks of items.",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 9
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 10
     },
     {
         "file": "InvTweaksHelper-master-f6d868a4.jar",
@@ -482,9 +1472,94 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.01,
+        "files": 8,
+        "class_files": 6,
+        "packages": 3,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 15,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Network": 5,
+            "Events": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 7
+    },
+    {
+        "file": "InventoryTweaks-1.7.10-Client.jar",
+        "name": "Inventory Tweaks",
+        "modid": "inventorytweaks",
+        "version": "1.59-dev-152-cf6e263",
+        "author": "Unknown",
+        "description": "Tweaks to inventory handling for ease of use, including sorting and automatic replacement of broken tools or exhausted stacks of items.",
+        "dependencies": [],
+        "size_mb": 0.17,
+        "files": 88,
+        "class_files": 76,
+        "packages": 13,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 85,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Events": 78,
+            "Network": 37,
+            "Rendering": 33,
+            "Registry": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 283
     },
     {
         "file": "ItemPhysicLite-master-1bb71115.jar",
@@ -494,9 +1569,45 @@
         "author": "Unknown",
         "description": "More realistic Itemphyiscs",
         "dependencies": [],
+        "size_mb": 0.02,
+        "files": 10,
+        "class_files": 7,
+        "packages": 2,
         "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Normal",
+        "score": 40,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Rendering": 48,
+            "Events": 34
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 30
     },
     {
         "file": "JourneyMap-master-b5104403.jar",
@@ -508,9 +1619,47 @@
         "dependencies": [
             "Forge@[10.13.4.1558,)"
         ],
+        "size_mb": 1.18,
+        "files": 675,
+        "class_files": 424,
+        "packages": 54,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 115,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 277,
+            "Rendering": 1144,
+            "World Generation": 9,
+            "Registry": 26,
+            "Network": 64
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1881
     },
     {
         "file": "JsonModelReader-main-ccf9f871.jar",
@@ -520,177 +1669,38 @@
         "author": "Superiorita",
         "description": "JSON-model reader for Minecraft 1.7.10",
         "dependencies": [],
+        "size_mb": 0.04,
+        "files": 28,
+        "class_files": 25,
+        "packages": 5,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "LanguagePatcher-master-185f579f.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "LoliAE2-1.7.10-client.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "LoliDecorative-master-bf409f4c.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "LoliDimensions-1.7.10-client.jar",
-        "name": "LoliDimensions",
-        "modid": "lolidimensions",
-        "version": "v2-2.39.0",
-        "author": "Aizistral",
-        "description": "Some generic mod description",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "LoliDragonMight-1.7.10-client.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "lolidungeons-main-f88dd825.jar",
-        "name": "LoliDungeons",
-        "modid": "lolidungeons",
-        "version": "0.1.0",
-        "author": "LoliLand",
-        "description": "A mod that adds session dungeons.",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "LoliEnergistics-1.7.10-client.jar",
-        "name": "LoliEnergistics",
-        "modid": "lolienergistics",
-        "version": "1.7.10-1.0.0",
-        "author": "LoliLand",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "LoliEnergyRelics-1.7.10-client.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "LoliForestry-1.7.10-client.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "LoliHooks-master-aa342203.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "LoliMod-1.7.10-client.jar",
-        "name": "Example Mod",
-        "modid": "examplemod",
-        "version": "${version}",
-        "author": "ExampleDude",
-        "description": "Example placeholder mod.",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "LoliUtility-1.7.10-client.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "LoliWeCUI-master-7296045c.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "luminous-1.7.10.jar",
-        "name": "Luminous UI",
-        "modid": "luminous",
-        "version": "0.1.0",
-        "author": "LoliLand",
-        "description": "A minimalist reactive UI framework in Kotlin with declarative layout, animation support, and a flexible measure-layout-draw pipeline inspired by Compose and Flutter.",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 230,
+            "Events": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 62
     },
     {
         "file": "LWSL-Mod-0.11.0-client.jar",
@@ -700,9 +1710,730 @@
         "author": "Aizistral",
         "description": "Some generic mod description",
         "dependencies": [],
+        "size_mb": 0.08,
+        "files": 73,
+        "class_files": 56,
+        "packages": 17,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Normal",
+        "score": 35,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "World Generation": 5,
+            "Rendering": 33,
+            "Events": 29,
+            "Network": 9,
+            "Registry": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 172
+    },
+    {
+        "file": "LanguagePatcher-master-185f579f.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.01,
+        "files": 6,
+        "class_files": 3,
+        "packages": 1,
+        "coremod": true,
+        "difficulty": "Normal",
+        "score": 50,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Registry System: LanguageRegistry"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {},
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 11
+    },
+    {
+        "file": "LoliAE2-1.7.10-client.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 2.05,
+        "files": 1730,
+        "class_files": 1181,
+        "packages": 54,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 225,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 221,
+            "Registry": 20,
+            "World Generation": 7,
+            "Network": 99,
+            "Rendering": 770
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3739
+    },
+    {
+        "file": "LoliDecorative-master-bf409f4c.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.37,
+        "files": 543,
+        "class_files": 55,
+        "packages": 7,
+        "coremod": false,
+        "difficulty": "Normal",
+        "score": 30,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 54,
+            "Events": 45,
+            "Registry": 3
+        },
+        "content": {
+            "Blocks": 1,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 1,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0.0,
+        "server_percent": 100.0,
+        "estimated_methods": 201
+    },
+    {
+        "file": "LoliDimensions-1.7.10-client.jar",
+        "name": "LoliDimensions",
+        "modid": "lolidimensions",
+        "version": "v2-2.39.0",
+        "author": "Aizistral",
+        "description": "Some generic mod description",
+        "dependencies": [],
+        "size_mb": 17.2,
+        "files": 3911,
+        "class_files": 1282,
+        "packages": 116,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 285,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Registry System: EntityRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Events": 596,
+            "Rendering": 2749,
+            "Network": 223,
+            "World Generation": 126,
+            "Registry": 15
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 4912
+    },
+    {
+        "file": "LoliDragonMight-1.7.10-client.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 1.86,
+        "files": 747,
+        "class_files": 426,
+        "packages": 18,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 160,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 649,
+            "Registry": 7,
+            "Network": 47,
+            "Events": 149,
+            "World Generation": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1630
+    },
+    {
+        "file": "LoliEnergistics-1.7.10-client.jar",
+        "name": "LoliEnergistics",
+        "modid": "lolienergistics",
+        "version": "1.7.10-1.0.0",
+        "author": "LoliLand",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 19.4,
+        "files": 4160,
+        "class_files": 1673,
+        "packages": 34,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 550,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry",
+            "Registry System: LanguageRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 2647,
+            "Events": 511,
+            "Registry": 62,
+            "Network": 59,
+            "World Generation": 10
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 6979
+    },
+    {
+        "file": "LoliEnergyRelics-1.7.10-client.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.19,
+        "files": 144,
+        "class_files": 52,
+        "packages": 1,
+        "coremod": false,
+        "difficulty": "Easy",
+        "score": 25,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 129,
+            "Registry": 1,
+            "Rendering": 72,
+            "Network": 3
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 197
+    },
+    {
+        "file": "LoliForestry-1.7.10-client.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.41,
+        "files": 310,
+        "class_files": 205,
+        "packages": 13,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 105,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 102,
+            "Rendering": 182,
+            "Registry": 12,
+            "Network": 17
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 752
+    },
+    {
+        "file": "LoliHooks-master-aa342203.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.11,
+        "files": 56,
+        "class_files": 53,
+        "packages": 3,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 160,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "CoreMod / ASM: IClassTransformer"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {},
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 147
+    },
+    {
+        "file": "LoliMod-1.7.10-client.jar",
+        "name": "Example Mod",
+        "modid": "examplemod",
+        "version": "${version}",
+        "author": "ExampleDude",
+        "description": "Example placeholder mod.",
+        "dependencies": [],
+        "size_mb": 21.94,
+        "files": 2778,
+        "class_files": 1799,
+        "packages": 23,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 125,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Events": 314,
+            "Rendering": 385,
+            "Network": 79,
+            "Registry": 5,
+            "World Generation": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 5512
+    },
+    {
+        "file": "LoliUtility-1.7.10-client.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 3.1,
+        "files": 1372,
+        "class_files": 891,
+        "packages": 13,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 305,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 233,
+            "Network": 124,
+            "Registry": 22,
+            "Rendering": 1025
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3142
+    },
+    {
+        "file": "LoliWeCUI-master-7296045c.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.02,
+        "files": 17,
+        "class_files": 15,
+        "packages": 4,
+        "coremod": false,
+        "difficulty": "Easy",
+        "score": 15,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 53,
+            "Network": 14,
+            "Rendering": 10
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 36
+    },
+    {
+        "file": "MCTags-master-72ca4ae0.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.03,
+        "files": 22,
+        "class_files": 18,
+        "packages": 7,
+        "coremod": true,
+        "difficulty": "Normal",
+        "score": 40,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 65
+    },
+    {
+        "file": "MMLib-main-eafde0af.jar",
+        "name": "MojangMathLibrary",
+        "modid": "mml",
+        "version": "1.0.5",
+        "author": "Superiorita",
+        "description": "Codecs and other assistance math",
+        "dependencies": [],
+        "size_mb": 0.77,
+        "files": 525,
+        "class_files": 522,
+        "packages": 20,
+        "coremod": false,
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 2481
     },
     {
         "file": "Mantle-1.7.10-0.3.2b.jar",
@@ -712,9 +2443,46 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.17,
+        "files": 164,
+        "class_files": 101,
+        "packages": 34,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Normal",
+        "score": 35,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 132,
+            "Events": 52,
+            "Registry": 4,
+            "Network": 14,
+            "World Generation": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 288
     },
     {
         "file": "MatterOverdrive-1.7.10-0.4.2-hotfix1.jar",
@@ -727,21 +2495,47 @@
             "Forge",
             "CoFHLib"
         ],
+        "size_mb": 12.76,
+        "files": 1483,
+        "class_files": 888,
+        "packages": 130,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "MCTags-master-72ca4ae0.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 330,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 1022,
+            "Rendering": 2117,
+            "Network": 1121,
+            "Registry": 33,
+            "World Generation": 62
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3781
     },
     {
         "file": "MicdoodleCore-1.7-3.0.12.504.jar",
@@ -751,9 +2545,45 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.01,
+        "files": 25,
+        "class_files": 13,
+        "packages": 4,
         "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Normal",
+        "score": 40,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 19
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 17
     },
     {
         "file": "MineChem-1.7.10.jar",
@@ -763,21 +2593,48 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.93,
+        "files": 507,
+        "class_files": 368,
+        "packages": 42,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "MinecraftPerformancePrimitives-master-fd72b14e.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 190,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 805,
+            "Registry": 148,
+            "Events": 145,
+            "World Generation": 8,
+            "Network": 41
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1299
     },
     {
         "file": "MineFactoryReloaded-[1.7.10]2.8.2B1-201.jar",
@@ -787,21 +2644,97 @@
         "author": "PowerCrystals, TehKrush, AtomicStryker, Feanorith, skyboy026",
         "description": "Automate everything!",
         "dependencies": [],
+        "size_mb": 1.07,
+        "files": 744,
+        "class_files": 456,
+        "packages": 67,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 115,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 172,
+            "Registry": 28,
+            "World Generation": 22,
+            "Network": 111,
+            "Rendering": 492
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1713
     },
     {
-        "file": "MMLib-main-eafde0af.jar",
-        "name": "MojangMathLibrary",
-        "modid": "mml",
-        "version": "1.0.5",
-        "author": "Superiorita",
-        "description": "Codecs and other assistance math",
+        "file": "MinecraftPerformancePrimitives-master-fd72b14e.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
         "dependencies": [],
-        "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "size_mb": 0.55,
+        "files": 375,
+        "class_files": 372,
+        "packages": 30,
+        "coremod": true,
+        "difficulty": "Normal",
+        "score": 40,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration",
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Rendering": 12,
+            "Events": 30,
+            "World Generation": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1294
     },
     {
         "file": "ModTweaker2-master-253398ed.jar",
@@ -811,9 +2744,43 @@
         "author": "Jaredlll08",
         "description": "ModTweaker is an addon for MineTweaker 3.",
         "dependencies": [],
+        "size_mb": 0.37,
+        "files": 303,
+        "class_files": 300,
+        "packages": 38,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 15,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Old Forge: net.minecraftforge"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 43,
+            "Registry": 2,
+            "World Generation": 15,
+            "Forge": 1,
+            "Rendering": 8
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 880
     },
     {
         "file": "MouseTweaks-master-63bd8055.jar",
@@ -823,33 +2790,38 @@
         "author": "YaLTeR",
         "description": "A mod that enhances the inventory management by adding various additional functions to the usual mouse buttons.",
         "dependencies": [],
+        "size_mb": 0.02,
+        "files": 16,
+        "class_files": 12,
+        "packages": 7,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "msw-main-c0c3b103.jar",
-        "name": "Multi Server Worlds",
-        "modid": "msw",
-        "version": "0.1.0",
-        "author": "LoliLand",
-        "description": "A mod that adds support for split worlds to multiple servers.",
-        "dependencies": [],
-        "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "neiaddons-master-b446594d.jar",
-        "name": "NEI Addons",
-        "modid": "NEIAddons",
-        "version": "1.12.14.40",
-        "author": "bdew",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 19,
+            "Rendering": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 35
     },
     {
         "file": "NEIIntegration-master-25055fb3.jar",
@@ -859,9 +2831,42 @@
         "author": "tonius11",
         "description": "NEI handlers for all of the mods, one at a time.",
         "dependencies": [],
+        "size_mb": 0.1,
+        "files": 74,
+        "class_files": 60,
+        "packages": 7,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Normal",
+        "score": 30,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Registry": 33,
+            "Events": 28,
+            "Rendering": 71
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 226
     },
     {
         "file": "NotEnoughItems-2.3.83-GTNH.jar",
@@ -871,9 +2876,51 @@
         "author": "ChickenBones, mitchej123",
         "description": "Recipe Viewer, Inventory Manager, Item Spawner, Cheats and more; GTNH Version includes many enhancements.",
         "dependencies": [],
+        "size_mb": 0.7,
+        "files": 346,
+        "class_files": 325,
+        "packages": 16,
         "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 190,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Registry System: GameRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "CoreMod / ASM: CorePlugin"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Rendering": 265,
+            "Events": 137,
+            "Network": 55,
+            "World Generation": 5,
+            "Registry": 24
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1509
     },
     {
         "file": "Omicron-1.4.0-client.jar",
@@ -883,9 +2930,48 @@
         "author": "Aizistral",
         "description": "Some generic mod description",
         "dependencies": [],
+        "size_mb": 0.29,
+        "files": 162,
+        "class_files": 142,
+        "packages": 48,
         "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Normal",
+        "score": 60,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Registry System: GameRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Events": 97,
+            "Network": 285,
+            "Registry": 2,
+            "Rendering": 205
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 426
     },
     {
         "file": "OnlinePicFrame+v1.0+mc1.7.10.jar",
@@ -895,9 +2981,44 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.02,
+        "files": 20,
+        "class_files": 9,
+        "packages": 4,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 10,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Network": 6,
+            "Rendering": 36,
+            "Events": 9,
+            "Registry": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 40
     },
     {
         "file": "OpenComputers-MC1.7.10-1.7.5.1290.jar",
@@ -909,9 +3030,55 @@
         "dependencies": [
             "Forge@[10.13.0.1180,)"
         ],
+        "size_mb": 13.95,
+        "files": 6556,
+        "class_files": 4733,
+        "packages": 118,
         "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 260,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "Old Forge: net.minecraftforge",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "CoreMod / ASM: IClassTransformer"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Network": 1619,
+            "Rendering": 2638,
+            "Events": 2329,
+            "World Generation": 32,
+            "Registry": 38,
+            "Forge": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 16101
     },
     {
         "file": "PowerUtils-1.7.10-1.0.4.jar",
@@ -921,33 +3088,44 @@
         "author": "SeNtiMeL",
         "description": "This is universal powerconverter. Addon for IndustrialCraft 2 and Thermal Expansion",
         "dependencies": [],
+        "size_mb": 0.05,
+        "files": 75,
+        "class_files": 27,
+        "packages": 12,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
-    },
-    {
-        "file": "RealmBlockLimiter-master-34e72415.jar",
-        "name": "Unknown",
-        "modid": "Unknown",
-        "version": "Unknown",
-        "author": "Unknown",
-        "description": "",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
-    },
-    {
-        "file": "RedPower-1.7.10-client.jar",
-        "name": "RedPower",
-        "modid": "RedPowerCore",
-        "version": "2.0 Prerelease 6",
-        "author": "Unknown",
-        "description": "Power your world, comrade!",
-        "dependencies": [],
-        "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Normal",
+        "score": 40,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 43,
+            "Rendering": 9,
+            "World Generation": 2,
+            "Network": 39,
+            "Registry": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 89
     },
     {
         "file": "RTG-master-b55d7f0d.jar",
@@ -957,9 +3135,130 @@
         "author": "Team RTG",
         "description": "Adds a new world type which generates realistic terrain for Overworld biomes.",
         "dependencies": [],
+        "size_mb": 0.73,
+        "files": 548,
+        "class_files": 541,
+        "packages": 36,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 446,
+            "World Generation": 285,
+            "Rendering": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1098
+    },
+    {
+        "file": "RealmBlockLimiter-master-34e72415.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.01,
+        "files": 12,
+        "class_files": 10,
+        "packages": 4,
+        "coremod": false,
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 26
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 38
+    },
+    {
+        "file": "RedPower-1.7.10-client.jar",
+        "name": "RedPower",
+        "modid": "RedPowerCore",
+        "version": "2.0 Prerelease 6",
+        "author": "Unknown",
+        "description": "Power your world, comrade!",
+        "dependencies": [],
+        "size_mb": 0.69,
+        "files": 385,
+        "class_files": 143,
+        "packages": 33,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 155,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 422,
+            "Network": 53,
+            "Events": 86,
+            "Registry": 15,
+            "World Generation": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 441
     },
     {
         "file": "SpawnTrickLib-1.7.10-1.0.1.jar",
@@ -969,9 +3268,41 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.02,
+        "files": 31,
+        "class_files": 23,
+        "packages": 3,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 10,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 54
     },
     {
         "file": "StandardExpansion-master-b2071223.jar",
@@ -981,9 +3312,45 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.32,
+        "files": 189,
+        "class_files": 145,
+        "packages": 27,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 25,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Network": 50,
+            "Rendering": 110,
+            "Events": 110,
+            "Registry": 8
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 688
     },
     {
         "file": "TConstruct-1.7.10-1.8.8.jar",
@@ -993,9 +3360,49 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 3.67,
+        "files": 5051,
+        "class_files": 599,
+        "packages": 96,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 240,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 659,
+            "Registry": 58,
+            "Network": 219,
+            "World Generation": 73,
+            "Rendering": 1488
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 2678
     },
     {
         "file": "ThermalDynamics-[1.7.10]1.2.1-172.jar",
@@ -1005,9 +3412,49 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.57,
+        "files": 335,
+        "class_files": 239,
+        "packages": 34,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 125,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 155,
+            "Registry": 15,
+            "Network": 313,
+            "Rendering": 718,
+            "World Generation": 29
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 936
     },
     {
         "file": "ThermalExpansion-[1.7.10]4.1.5-248.jar",
@@ -1017,9 +3464,49 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 1.37,
+        "files": 624,
+        "class_files": 348,
+        "packages": 49,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 600,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Registry": 104,
+            "Events": 121,
+            "Network": 585,
+            "Rendering": 596,
+            "World Generation": 56
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 1504
     },
     {
         "file": "ThermalFoundation-[1.7.10]1.2.6-118.jar",
@@ -1029,9 +3516,49 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 1.08,
+        "files": 286,
+        "class_files": 82,
+        "packages": 21,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Hard",
+        "score": 225,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 41,
+            "Network": 66,
+            "Rendering": 78,
+            "Registry": 19,
+            "World Generation": 4
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 327
     },
     {
         "file": "Treecapitator-master-a88b6c78.jar",
@@ -1041,9 +3568,44 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.09,
+        "files": 51,
+        "class_files": 30,
+        "packages": 8,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Easy",
+        "score": 15,
+        "migration_status": "Simple migration",
+        "detections": [
+            "Network System: NetworkRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 76,
+            "Network": 37,
+            "World Generation": 6,
+            "Registry": 15
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 174
     },
     {
         "file": "UltraTech-Elements-1.7.10-client.jar",
@@ -1053,9 +3615,42 @@
         "author": "LoliLand, Sio",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.07,
+        "files": 65,
+        "class_files": 28,
+        "packages": 5,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Normal",
+        "score": 40,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 31,
+            "Events": 26,
+            "Network": 1,
+            "Registry": 5
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 80
     },
     {
         "file": "UniversalResources-master-0585e854.jar",
@@ -1065,9 +3660,43 @@
         "author": "Unknown",
         "description": "",
         "dependencies": [],
+        "size_mb": 0.04,
+        "files": 34,
+        "class_files": 29,
+        "packages": 11,
         "coremod": false,
-        "mcmod_found": false,
-        "status": "No mcmod.info"
+        "difficulty": "Normal",
+        "score": 60,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 60,
+            "Registry": 7,
+            "Rendering": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 76
     },
     {
         "file": "Waila-master-e5663c52.jar",
@@ -1077,9 +3706,48 @@
         "author": "Unknown",
         "description": "All your data are belong to us.",
         "dependencies": [],
+        "size_mb": 0.52,
+        "files": 219,
+        "class_files": 207,
+        "packages": 50,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 135,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "CoreMod / ASM: IClassTransformer",
+            "Registry System: LanguageRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 203,
+            "Events": 194,
+            "Network": 28,
+            "Registry": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 766
     },
     {
         "file": "WanionLib-1.7.10-1.8.jar",
@@ -1089,9 +3757,38 @@
         "author": "WanionCane",
         "description": "Shared Code Library Used by (not)all WanionCane mods!",
         "dependencies": [],
+        "size_mb": 0.05,
+        "files": 39,
+        "class_files": 26,
+        "packages": 7,
         "coremod": false,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Easy",
+        "score": 0,
+        "migration_status": "Simple migration",
+        "detections": [],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 30,
+            "Registry": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 63
     },
     {
         "file": "WorldGenEngine-main-899a9465.jar",
@@ -1101,8 +3798,678 @@
         "author": "Superiorita",
         "description": "Utils for generating world dimensions",
         "dependencies": [],
+        "size_mb": 1.17,
+        "files": 693,
+        "class_files": 686,
+        "packages": 84,
         "coremod": true,
-        "mcmod_found": true,
-        "status": "Analyzed"
+        "difficulty": "Hard",
+        "score": 70,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Registry System: GameRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "World Generation": 8,
+            "Events": 324,
+            "Registry": 5,
+            "Rendering": 24
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3060
+    },
+    {
+        "file": "airdrops-1.7.10-0.1.0.jar",
+        "name": "Airdrops",
+        "modid": "airdrops",
+        "version": "0.1.0",
+        "author": "LoliLand",
+        "description": "A mod that adds airdrops with loot for players in their realm.",
+        "dependencies": [],
+        "size_mb": 0.63,
+        "files": 59,
+        "class_files": 36,
+        "packages": 12,
+        "coremod": true,
+        "difficulty": "Normal",
+        "score": 50,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Rendering": 44,
+            "Events": 53,
+            "Network": 27
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 103
+    },
+    {
+        "file": "appliedenergistics2-rv3-beta-6.jar",
+        "name": "Applied Energistics 2",
+        "modid": "appliedenergistics2",
+        "version": "rv3-beta-6",
+        "author": "AlgorithmX2",
+        "description": "A Mod about Matter, Energy and using them to conquer the world..",
+        "dependencies": [],
+        "size_mb": 3.6,
+        "files": 2699,
+        "class_files": 2179,
+        "packages": 169,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 290,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Old Forge: net.minecraftforge",
+            "Registry System: EntityRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Events": 696,
+            "Rendering": 1722,
+            "Network": 762,
+            "Registry": 51,
+            "World Generation": 19,
+            "Forge": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 6965
+    },
+    {
+        "file": "bdlib-1.9.4.109-mc1.7.10.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 1.41,
+        "files": 1121,
+        "class_files": 1069,
+        "packages": 40,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 120,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 226,
+            "Rendering": 560,
+            "Registry": 11,
+            "World Generation": 1,
+            "Network": 67
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3293
+    },
+    {
+        "file": "binnie-mods-1.7.10-2.0.22.7.jar",
+        "name": "Binnie Core",
+        "modid": "BinnieCore",
+        "version": "2.0.22.7",
+        "author": "Binnie",
+        "description": "Base mod for Binnie's Mods, with lots of common code.",
+        "dependencies": [
+            "Forestry"
+        ],
+        "size_mb": 3.1,
+        "files": 2549,
+        "class_files": 1193,
+        "packages": 115,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 280,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Network": 196,
+            "Events": 1100,
+            "Rendering": 1290,
+            "Registry": 34,
+            "World Generation": 190
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3673
+    },
+    {
+        "file": "extrautilities-1.2.12.jar",
+        "name": "Extra Utilities",
+        "modid": "ExtraUtilities",
+        "version": "1.2.12",
+        "author": "RWTema",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 1.64,
+        "files": 965,
+        "class_files": 553,
+        "packages": 46,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 205,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Old Forge: net.minecraftforge",
+            "Registry System: GameRegistry",
+            "Registry System: LanguageRegistry",
+            "CoreMod / ASM: IClassTransformer",
+            "Old Forge: cpw.mods.fml"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 531,
+            "Rendering": 1108,
+            "Network": 302,
+            "Forge": 2,
+            "Registry": 23,
+            "World Generation": 9
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 1,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 1,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0.0,
+        "server_percent": 100.0,
+        "estimated_methods": 2183
+    },
+    {
+        "file": "forestry_1.7.10-4.2.16.64.jar",
+        "name": "Forestry for Minecraft",
+        "modid": "Forestry",
+        "version": "4.2.16.64",
+        "author": "SirSengir",
+        "description": "Trees, bees and more.",
+        "dependencies": [],
+        "size_mb": 2.52,
+        "files": 2129,
+        "class_files": 1513,
+        "packages": 140,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 310,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry",
+            "Registry System: EntityRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [],
+        "api_usage": {
+            "Rendering": 1524,
+            "Events": 337,
+            "Registry": 49,
+            "Network": 865,
+            "World Generation": 298
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 4740
+    },
+    {
+        "file": "gendustry-1.6.4.135-mc1.7.10.jar",
+        "name": "Unknown",
+        "modid": "Unknown",
+        "version": "Unknown",
+        "author": "Unknown",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 1.77,
+        "files": 1257,
+        "class_files": 1056,
+        "packages": 39,
+        "coremod": false,
+        "difficulty": "Hard",
+        "score": 105,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code"
+        ],
+        "migration_notes": [
+            "mcmod.info not found"
+        ],
+        "api_usage": {
+            "Events": 71,
+            "Registry": 13,
+            "Rendering": 563,
+            "Network": 7
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3712
+    },
+    {
+        "file": "industrialcraft-2-2.2.827-experimental.jar",
+        "name": "IndustrialCraft 2",
+        "modid": "IC2",
+        "version": "2.2.827-experimental",
+        "author": "Alblaka, Player, RichardG, Thunderdark, GregoriusT, alexthesax, Drashian, Elementalist, Feanturi, Lurch1985, SirusKing, tahu44, Aroma1997",
+        "description": "Industrial age themed expansion for Minecraft.",
+        "dependencies": [],
+        "size_mb": 3.39,
+        "files": 1727,
+        "class_files": 980,
+        "packages": 62,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 275,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Registry System: EntityRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Events": 503,
+            "Registry": 35,
+            "Rendering": 439,
+            "World Generation": 8,
+            "Network": 97
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 3200
+    },
+    {
+        "file": "lolidungeons-main-f88dd825.jar",
+        "name": "LoliDungeons",
+        "modid": "lolidungeons",
+        "version": "0.1.0",
+        "author": "LoliLand",
+        "description": "A mod that adds session dungeons.",
+        "dependencies": [],
+        "size_mb": 0.13,
+        "files": 89,
+        "class_files": 75,
+        "packages": 24,
+        "coremod": true,
+        "difficulty": "Normal",
+        "score": 50,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Registry System: GameRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Rendering": 65,
+            "Registry": 1,
+            "Network": 75,
+            "Events": 109,
+            "World Generation": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 1,
+            "TileEntities": 0,
+            "Entities": 1
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 1,
+            "World": 0,
+            "Client": 0,
+            "Entities": 2,
+            "TileEntities": 0
+        },
+        "client_percent": 0.0,
+        "server_percent": 100.0,
+        "estimated_methods": 225
+    },
+    {
+        "file": "luminous-1.7.10.jar",
+        "name": "Luminous UI",
+        "modid": "luminous",
+        "version": "0.1.0",
+        "author": "LoliLand",
+        "description": "A minimalist reactive UI framework in Kotlin with declarative layout, animation support, and a flexible measure-layout-draw pipeline inspired by Compose and Flutter.",
+        "dependencies": [],
+        "size_mb": 3.92,
+        "files": 2194,
+        "class_files": 1688,
+        "packages": 97,
+        "coremod": true,
+        "difficulty": "Hard",
+        "score": 75,
+        "migration_status": "Requires rewrite",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "Large amount of legacy code",
+            "ASM/CoreMod usage",
+            "Heavy client rendering"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Rendering": 1154,
+            "Network": 3,
+            "Events": 1372,
+            "Registry": 4,
+            "World Generation": 22
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 4,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 100.0,
+        "server_percent": 0.0,
+        "estimated_methods": 4836
+    },
+    {
+        "file": "msw-main-c0c3b103.jar",
+        "name": "Multi Server Worlds",
+        "modid": "msw",
+        "version": "0.1.0",
+        "author": "LoliLand",
+        "description": "A mod that adds support for split worlds to multiple servers.",
+        "dependencies": [],
+        "size_mb": 55.33,
+        "files": 654,
+        "class_files": 452,
+        "packages": 60,
+        "coremod": true,
+        "difficulty": "Normal",
+        "score": 65,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "CoreMod / ASM detected",
+            "Network System: NetworkRegistry",
+            "CoreMod / ASM: IFMLLoadingPlugin",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [
+            "ASM/CoreMod usage",
+            "Heavy client rendering"
+        ],
+        "migration_notes": [
+            "ASM/CoreMod requires manual migration"
+        ],
+        "api_usage": {
+            "Events": 301,
+            "Rendering": 431,
+            "Network": 331,
+            "Registry": 2
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 1,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 1,
+            "World": 0,
+            "Client": 3,
+            "Entities": 2,
+            "TileEntities": 0
+        },
+        "client_percent": 50.0,
+        "server_percent": 50.0,
+        "estimated_methods": 1486
+    },
+    {
+        "file": "neiaddons-master-b446594d.jar",
+        "name": "NEI Addons",
+        "modid": "NEIAddons",
+        "version": "1.12.14.40",
+        "author": "bdew",
+        "description": "",
+        "dependencies": [],
+        "size_mb": 0.09,
+        "files": 71,
+        "class_files": 61,
+        "packages": 17,
+        "coremod": false,
+        "difficulty": "Normal",
+        "score": 55,
+        "migration_status": "Needs adaptation",
+        "detections": [
+            "Network System: NetworkRegistry",
+            "Registry System: GameRegistry"
+        ],
+        "reasons": [],
+        "migration_notes": [],
+        "api_usage": {
+            "Events": 98,
+            "Network": 24,
+            "Rendering": 10,
+            "Registry": 1
+        },
+        "content": {
+            "Blocks": 0,
+            "Items": 0,
+            "TileEntities": 0,
+            "Entities": 0
+        },
+        "minecraft_usage": {
+            "Blocks": 0,
+            "Items": 0,
+            "World": 0,
+            "Client": 0,
+            "Entities": 0,
+            "TileEntities": 0
+        },
+        "client_percent": 0,
+        "server_percent": 0,
+        "estimated_methods": 206
     }
 ]
