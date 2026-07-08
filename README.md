@@ -1,234 +1,192 @@
-# \# UltraTech Reborn
+\# UltraTech Reborn
 
-# 
 
-# \---
 
-# 
+\---
 
-# \# 🇬🇧 English
 
-# 
 
-# \## About
+\# 🇬🇧 English
 
-# 
 
-# \*\*UltraTech Reborn\*\* is a private development project focused on restoring, maintaining, and expanding the \*\*UltraTech 1.7.10\*\* Minecraft modpack.
 
-# 
+\## About
 
-# The project aims to preserve the original gameplay experience while improving stability, fixing issues, replacing unavailable online systems with offline-compatible solutions, and creating a maintainable foundation for future development.
 
-# 
 
-# \## Project Goals
+\*\*UltraTech Reborn\*\* is a private development project focused on restoring and improving the \*\*UltraTech 1.7.10 Minecraft modpack\*\*.
 
-# 
 
-# \* Restore missing content and broken functionality.
 
-# \* Replace server-dependent systems with offline-compatible implementations.
+The project aims to preserve the original gameplay experience, fix compatibility issues, restore missing functionality, and create a stable development foundation.
 
-# \* Fix bugs and improve stability.
 
-# \* Maintain compatibility with Minecraft Forge 1.7.10.
 
-# \* Document development progress and technical changes.
+\## Goals
 
-# \* Create a structured and maintainable codebase.
 
-# 
 
-# \## Repository Structure
+\* Restore missing features and broken systems.
 
-# 
+\* Improve stability and compatibility.
 
-# ```text
+\* Replace unavailable online functionality with offline solutions.
 
-# docs/         Documentation and technical notes
+\* Maintain Minecraft Forge 1.7.10 support.
 
-# mods/         Original mods and related resources
+\* Document development progress.
 
-# patches/      Source code patches and modifications
 
-# scripts/      Automation and utility scripts
 
-# tools/        Development tools
+\## Structure
 
-# workspace/    Active development workspace
 
-# ```
 
-# 
+```text
 
-# \## Development Workflow
+docs/         Documentation
 
-# 
+mods/         Mods and resources
 
-# 1\. Prepare the development environment.
+patches/      Code patches
 
-# 2\. Analyze existing mods and systems.
+scripts/      Utility scripts
 
-# 3\. Restore missing functionality.
+tools/        Development tools
 
-# 4\. Implement required modifications.
+workspace/    Development environment
 
-# 5\. Test and verify changes.
+```
 
-# 6\. Document completed work.
 
-# 
 
-# \## Development Tools
+\## Development Tools
 
-# 
 
-# This project uses AI-assisted tools to support development, analysis, and documentation.
 
-# 
+AI-assisted tools used in development:
 
-# \* \*\*ChatGPT (OpenAI)\*\* — architecture planning, documentation, code analysis, debugging assistance, and development support.
 
-# \* \*\*Claude (Anthropic)\*\* — source code analysis, refactoring assistance, and documentation support.
 
-# 
+\* \*\*ChatGPT (OpenAI)\*\* — planning, documentation, code analysis, debugging assistance.
 
-# All AI-assisted content is reviewed and verified before integration.
+\* \*\*Claude (Anthropic)\*\* — source analysis, refactoring assistance, documentation.
 
-# 
 
-# \## Project Status
 
-# 
+All AI-generated content is reviewed before use.
 
-# 🟢 Project initialization completed.
 
-# 
 
-# Current development is focused on infrastructure preparation, mod analysis, and restoration of core functionality.
+\## Status
 
-# 
 
-# \---
 
-# 
+🟢 Project initialization completed.
 
-# \# 🇷🇺 Русский
 
-# 
 
-# \## О проекте
+Current focus: infrastructure setup, mod analysis, and core restoration.
 
-# 
 
-# \*\*UltraTech Reborn\*\* — это приватный проект разработки, направленный на восстановление, поддержку и развитие техносборки \*\*UltraTech 1.7.10\*\*.
 
-# 
+\---
 
-# Цель проекта — сохранить оригинальный игровой опыт, повысить стабильность, исправить ошибки, заменить недоступные онлайн-системы офлайн-решениями и создать удобную основу для дальнейшей разработки.
 
-# 
 
-# \## Цели проекта
+\# 🇷🇺 Русский
 
-# 
 
-# \* Восстановление отсутствующего контента и неработающих функций.
 
-# \* Замена серверных систем офлайн-реализациями.
+\## О проекте
 
-# \* Исправление ошибок и повышение стабильности.
 
-# \* Поддержка Minecraft Forge 1.7.10.
 
-# \* Документирование изменений и этапов разработки.
+\*\*UltraTech Reborn\*\* — приватный проект разработки, направленный на восстановление и развитие \*\*Minecraft техносборки UltraTech 1.7.10\*\*.
 
-# \* Создание структурированной и поддерживаемой кодовой базы.
 
-# 
 
-# \## Структура репозитория
+Цель проекта — сохранить оригинальный игровой опыт, исправить проблемы совместимости, восстановить отсутствующий функционал и создать стабильную основу для разработки.
 
-# 
 
-# ```text
 
-# docs/         Документация и технические заметки
+\## Цели
 
-# mods/         Оригинальные моды и связанные материалы
 
-# patches/      Патчи и изменения исходного кода
 
-# scripts/      Скрипты автоматизации и утилиты
+\* Восстановление функций и систем.
 
-# tools/        Инструменты разработки
+\* Повышение стабильности и совместимости.
 
-# workspace/    Рабочее окружение разработки
+\* Замена недоступных онлайн-компонентов офлайн-решениями.
 
-# ```
+\* Поддержка Minecraft Forge 1.7.10.
 
-# 
+\* Документирование процесса разработки.
 
-# \## Процесс разработки
 
-# 
 
-# 1\. Подготовка среды разработки.
+\## Структура
 
-# 2\. Анализ существующих модов и систем.
 
-# 3\. Восстановление отсутствующего функционала.
 
-# 4\. Реализация необходимых изменений.
+```text
 
-# 5\. Тестирование и проверка изменений.
+docs/         Документация
 
-# 6\. Документирование выполненной работы.
+mods/         Моды и ресурсы
 
-# 
+patches/      Патчи и изменения кода
 
-# \## Инструменты разработки
+scripts/      Скрипты
 
-# 
+tools/        Инструменты разработки
 
-# В проекте используются инструменты с поддержкой искусственного интеллекта для помощи в разработке, анализе и подготовке документации.
+workspace/    Рабочее окружение
 
-# 
+```
 
-# \* \*\*ChatGPT (OpenAI)\*\* — проектирование архитектуры, документация, анализ кода, помощь в отладке и разработке.
 
-# \* \*\*Claude (Anthropic)\*\* — анализ исходного кода, помощь в рефакторинге и подготовке документации.
 
-# 
+\## Инструменты разработки
 
-# Весь материал, созданный с помощью ИИ, проверяется и дорабатывается перед использованием.
 
-# 
 
-# \## Текущий статус проекта
+Используемые AI-инструменты:
 
-# 
 
-# 🟢 Инициализация проекта завершена.
 
-# 
+\* \*\*ChatGPT (OpenAI)\*\* — планирование, документация, анализ кода, помощь в отладке.
 
-# Текущий этап разработки: подготовка инфраструктуры, анализ модов и восстановление основных компонентов.
+\* \*\*Claude (Anthropic)\*\* — анализ исходного кода, рефакторинг, документация.
 
-# 
 
-# \---
 
-# 
+Весь материал проверяется перед использованием.
 
-# \# License
 
-# 
 
-# This project is licensed under the \*\*GNU General Public License v3.0 (GPL-3.0)\*\*.
+\## Статус
 
-# 
 
-# Данный проект распространяется под лицензией \*\*GNU General Public License v3.0 (GPL-3.0)\*\*.
+
+🟢 Инициализация проекта завершена.
+
+
+
+Текущий этап: подготовка инфраструктуры, анализ модов и восстановление основных компонентов.
+
+
+
+\---
+
+
+
+\## License
+
+
+
+Licensed under \*\*GNU General Public License v3.0 (GPL-3.0)\*\*.
+
+
 
