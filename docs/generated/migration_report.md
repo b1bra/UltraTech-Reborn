@@ -52,8 +52,8 @@ Estimated methods: 6088
 
 Problems:
 ```text
-Large amount of classes
 Heavy networking
+Large amount of classes
 Large machine system
 Heavy client code
 ```
@@ -331,8 +331,8 @@ Estimated methods: 3797
 
 Problems:
 ```text
-Large block system
 Large item system
+Large block system
 ```
 
 ## Draconic-Evolution-1.7.10-1.0.2h
@@ -382,9 +382,9 @@ Estimated methods: 4353
 
 Problems:
 ```text
+Heavy networking
 Large amount of classes
 Large block system
-Heavy networking
 ```
 
 ## EventHelper-master-de330be3
@@ -529,8 +529,8 @@ Estimated methods: 3434
 
 Problems:
 ```text
-Large block system
 Heavy networking
+Large block system
 ```
 
 ## GeckoLib-1.7.10-4.3.1-shadow
@@ -773,10 +773,10 @@ Estimated methods: 4374
 
 Problems:
 ```text
-Large amount of classes
-Large block system
 Heavy networking
+Large amount of classes
 Large machine system
+Large block system
 ```
 
 ## LoliDragonMight-1.7.10-client
