@@ -122,6 +122,9 @@ def _run_scan_inner(
     if request.test_mode:
         logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
 
+    if request.test_mode:
+        logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
+
     progress(98, "Writing session summary")
     logger.success("Unified analysis complete")
     progress(100, "Complete")
