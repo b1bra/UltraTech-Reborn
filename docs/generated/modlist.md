@@ -1,6 +1,6 @@
 # UltraTech-Reborn Mod Analysis
 
-Generated: 2026-07-09 01:07:03.254870
+Generated: 2026-07-09 12:09:22.808486
 
 Total mods: 93
 
@@ -1576,10 +1576,10 @@ Rendering: 2
 
 Important classes:
 ```text
-registry
+not
 name
 for
-not
+registry
 ```
 
 Migration problems:
@@ -2433,8 +2433,8 @@ Registry: 23
 
 Important classes:
 ```text
-for
 missing
+for
 code
 ```
 
@@ -4961,8 +4961,8 @@ Forge: 16
 
 Important classes:
 ```text
-does
 name
+does
 ```
 
 Migration problems:
@@ -5055,9 +5055,9 @@ World Generation: 5
 
 Important classes:
 ```text
-processor
-conflict
 and
+conflict
+processor
 ```
 
 Migration problems:

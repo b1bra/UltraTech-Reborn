@@ -33,7 +33,8 @@ def get_docs_path():
 
     path = os.path.join(
         get_project_root(),
-        "docs"
+        "docs",
+        "generated"
     )
 
     os.makedirs(

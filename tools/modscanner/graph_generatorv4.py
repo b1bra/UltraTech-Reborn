@@ -24,7 +24,8 @@ def find_paths():
 
     docs = os.path.join(
         root,
-        "docs"
+        "docs",
+        "generated"
     )
 
     return (
