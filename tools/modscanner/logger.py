@@ -1053,6 +1053,58 @@ class Logger:
             )
 
         }
+
+    def module(self, name, level, message):
+
+        self.log(
+            level,
+            f"[{name}] {message}"
+        )
+
+
+    def module_info(self, name, message):
+
+        self.module(
+            name,
+            self.INFO,
+            message
+        )
+
+
+    def module_debug(self, name, message):
+
+        self.module(
+            name,
+            self.DEBUG,
+            message
+        )
+
+
+    def module_success(self, name, message):
+        self.module(
+            name,
+            self.SUCCESS,
+            message
+        )
+
+
+    def module_warning(self, name, message):
+
+        self.module(
+            name,
+            self.WARNING,
+            message
+        )
+
+
+    def module_error(self, name, message):
+
+        self.module(
+            name,
+            self.ERROR,
+            message
+        )
+
     def __enter__(self):
 
         self.info(
