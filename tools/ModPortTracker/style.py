@@ -67,6 +67,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     height: 0;
     background: none;
 }
+codex/-minecraft-6f4mzt
 QDialog#confirmDialog {
     background: #17191e;
     border: none;
@@ -83,6 +84,21 @@ QPushButton#confirmButton {
     padding: 7px 22px;
 }
 QPushButton#confirmButton:hover {
+=======
+QMessageBox {
+    background: #17191e;
+}
+QMessageBox QLabel {
+    color: rgba(255, 255, 255, 220);
+}
+QMessageBox QPushButton {
+    background: rgba(255, 255, 255, 28);
+    border: 1px solid rgba(255, 255, 255, 36);
+    border-radius: 8px;
+    padding: 7px 20px;
+}
+QMessageBox QPushButton:hover {
+development
     background: rgba(255, 255, 255, 52);
 }
 """

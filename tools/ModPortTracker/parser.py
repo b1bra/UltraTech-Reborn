@@ -20,7 +20,10 @@ _SPLIT_RE = re.compile(r"[-_+.]+")
 
 FIELD_ALIASES = {
     "name": "name", "mod": "name", "title": "name", "название": "name", "мод": "name",
+    codex/-minecraft-6f4mzt
     "file": "file", "файл": "file", "mod id": "mod_id",
+=======
+    development
     "description": "description", "desc": "description", "описание": "description",
     "version": "version", "версия": "version",
     "category": "category", "категория": "category",
@@ -79,6 +82,7 @@ def parse_modlist(path: Path) -> list[ModInfo]:
 
 
 def _split_blocks(text: str) -> list[list[str]]:
+    codex/-minecraft-6f4mzt
     """Split either generated analyzer Markdown sections or a simple bullet list."""
     lines = text.splitlines()
     section_blocks: list[list[str]] = []
@@ -101,6 +105,11 @@ def _split_blocks(text: str) -> list[list[str]]:
     blocks: list[list[str]] = []
     current = []
     for line in lines:
+=======
+    blocks: list[list[str]] = []
+    current: list[str] = []
+    for line in text.splitlines():
+    development
         stripped = line.strip()
         if not stripped:
             if current:
@@ -127,6 +136,7 @@ def _split_blocks(text: str) -> list[list[str]]:
 def _mod_from_block(lines: list[str]) -> ModInfo:
     fields: dict[str, str] = {}
     loose: list[str] = []
+    codex/-minecraft-6f4mzt
     dependencies: list[str] = []
     in_dependencies = False
     for line in lines:
@@ -142,6 +152,9 @@ def _mod_from_block(lines: list[str]) -> ModInfo:
             if cleaned and cleaned.lower() != "no dependencies detected":
                 dependencies.append(cleaned)
             continue
+=======
+    for line in lines:
+        development
         match = _FIELD_RE.match(line)
         if match:
             key = FIELD_ALIASES.get(match.group("key").strip().lower())
@@ -149,10 +162,17 @@ def _mod_from_block(lines: list[str]) -> ModInfo:
                 fields[key] = match.group("value").strip()
                 continue
         loose.append(re.sub(r"^[-*+]\s+", "", line).strip())
+        codex/-minecraft-6f4mzt
     raw_name = fields.get("name") or fields.get("file") or (loose[0] if loose else "")
     description = fields.get("description") or fields.get("desc") or " ".join(loose[:2])
     version = fields.get("version") or _extract_version(fields.get("file", raw_name))
     dependencies.extend(_split_list(fields.get("dependencies", "")))
+=======
+    raw_name = fields.get("name") or (loose[0] if loose else "")
+    description = fields.get("description") or " ".join(loose[1:])
+    version = fields.get("version") or _extract_version(raw_name)
+    dependencies = _split_list(fields.get("dependencies", ""))
+    development
     detected_type = fields.get("type") or _detect_type(raw_name, description, fields.get("category", ""), dependencies, fields)
     return ModInfo(
         raw_name=raw_name,
@@ -167,6 +187,10 @@ def _mod_from_block(lines: list[str]) -> ModInfo:
         api=_truthy(fields.get("api", "")),
     )
 
+        codex/-minecraft-6f4mzt
+=======
+
+        development
 def clean_mod_name(raw_name: str) -> str:
     name = Path(raw_name.strip()).name
     name = re.sub(r"\.(?:jar|zip|disabled)$", "", name, flags=re.IGNORECASE)

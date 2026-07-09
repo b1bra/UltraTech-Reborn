@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 APP_DIR = Path(__file__).resolve().parent
+codex/-minecraft-6f4mzt
 
 
 def find_repository_root(start: Path) -> Path:
@@ -19,6 +20,9 @@ REPO_ROOT = find_repository_root(APP_DIR)
 GENERATED_MODLIST_PATH = REPO_ROOT / "docs" / "generated" / "modpack" / "modlist.md"
 LOCAL_MODLIST_PATH = APP_DIR / "modlist.md"
 MODLIST_PATH = GENERATED_MODLIST_PATH if GENERATED_MODLIST_PATH.exists() else LOCAL_MODLIST_PATH
+=======
+MODLIST_PATH = APP_DIR / "modlist.md"
+development
 PROGRESS_PATH = APP_DIR / "progress.json"
 
 TYPE_COLORS: dict[str, str] = {
