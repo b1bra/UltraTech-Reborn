@@ -94,6 +94,7 @@ class AnimatedButton(QPushButton):
         self.setStyleSheet(f"QPushButton {{ background:{bg}; border:1px solid {border}; border-radius:18px; padding:0 22px; font-weight:600; }}")
 
 
+
 class TitleIconButton(AnimatedButton):
     """Title-bar button with vector-drawn icons so glyph fonts cannot disappear."""
 
@@ -115,6 +116,8 @@ class TitleIconButton(AnimatedButton):
         else:
             painter.drawLine(center.x() - 7, center.y() - 7, center.x() + 7, center.y() + 7)
             painter.drawLine(center.x() + 7, center.y() - 7, center.x() - 7, center.y() + 7)
+=======
+
 
 
 class Background(QWidget):
@@ -136,14 +139,22 @@ class Background(QWidget):
 
 class WaveProgress(QWidget):
     def __init__(self) -> None:
+
         super().__init__(); self._value = 0.0; self.phase = 0.0; self.label = "Preparing..."; self.setMinimumHeight(250)
         self.timer = QTimer(self, interval=33, timeout=self._tick); self.timer.start()
     def setProgress(self, value: int, label: str) -> None:
         self.label = label; self.anim = QPropertyAnimation(self, b"value", self, duration=220, easingCurve=QEasingCurve.OutCubic); self.anim.setStartValue(self._value); self.anim.setEndValue(float(value)); self.anim.start(); self.update()
+=======
+        super().__init__(); self._value = 0.0; self.phase = 0.0; self.label = "Preparing..."; self.setMinimumHeight(210)
+        self.timer = QTimer(self, interval=33, timeout=self._tick); self.timer.start()
+    def setProgress(self, value: int, label: str) -> None:
+        self.label = label; self.anim = QPropertyAnimation(self, b"value", self, duration=220, easingCurve=QEasingCurve.OutCubic); self.anim.setStartValue(self._value); self.anim.setEndValue(float(value)); self.anim.start()
+
     def getValue(self): return self._value
     def setValue(self, v): self._value = v; self.update()
     value = Property(float, getValue, setValue)
     def _tick(self): self.phase += .045; self.update()
+
     def _wave_edge(self, left: float, right: float, baseline: float, offset: float) -> QPainterPath:
         wave = QPainterPath(QPointF(left, baseline)); x = left; amp = 7 + math.sin(self.phase + offset) * 2
         while x < right:
@@ -163,6 +174,24 @@ class WaveProgress(QWidget):
         p.fillPath(clip.intersected(done), done_grad); p.fillPath(clip.intersected(todo), todo_grad)
         p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 26, QFont.Bold)); p.drawText(bar, Qt.AlignCenter, f"{int(self._value)}%")
         text_rect = self.rect().adjusted(16, self.height()-48, -16, -8); p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(text_rect, Qt.AlignHCenter|Qt.AlignVCenter, self.label)
+=======
+    def paintEvent(self, _):
+        p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); r = self.rect().adjusted(16,16,-16,-16)
+        path = QPainterPath(); path.addRoundedRect(r, 28, 28); p.fillPath(path, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(path)
+        split = r.top() + r.height() * (self._value/100.0)
+        for top, bottom, c1, c2, offset in [(r.top(), split-5, QColor(125,154,255,105), QColor(80,220,190,55),0), (split+5, r.bottom(), QColor(255,255,255,30), QColor(255,255,255,12),1.7)]:
+            if bottom <= top: continue
+            wave = QPainterPath(QPointF(r.left(), top)); wave.lineTo(r.left(), bottom)
+            x = r.left(); amp = 8 + math.sin(self.phase+offset)*2
+            wave.moveTo(r.left(), bottom)
+            while x < r.right():
+                wave.cubicTo(x+35, bottom+math.sin(self.phase+x*.018+offset)*amp, x+70, bottom-math.sin(self.phase+x*.018+offset)*amp, x+105, bottom)
+                x += 105
+            wave.lineTo(r.right(), top); wave.lineTo(r.left(), top); wave.closeSubpath()
+            grad = QLinearGradient(r.topLeft(), r.bottomLeft()); grad.setColorAt(0,c1); grad.setColorAt(1,c2); p.fillPath(path.intersected(wave), grad)
+        p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 26, QFont.Bold)); p.drawText(r, Qt.AlignCenter, f"{int(self._value)}%")
+        p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(r.adjusted(0,88,0,0), Qt.AlignHCenter|Qt.AlignTop, self.label)
+
 
 
 class Toast(QLabel):
@@ -180,10 +209,17 @@ class ScannerApp(QMainWindow):
         super().__init__(); self._hide_windows_console(); self.queue: queue.Queue[tuple[str, object]] = queue.Queue(); self.running=False; self.drag_pos=None; self.logs=[]
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window); self.resize(WIDTH, HEIGHT); self.setStyleSheet(STYLE)
         root = Background(); self.setCentralWidget(root); layout=QVBoxLayout(root); layout.setContentsMargins(28,18,28,24); layout.setSpacing(18)
+
         title=QHBoxLayout(); title.addWidget(QLabel("SCAN", styleSheet="font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;")); title.addStretch(); self.min_btn=TitleIconButton("minimize"); self.close_btn=TitleIconButton("close", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
         card=QFrame(); card.setObjectName("card"); card.setStyleSheet("#card{background:rgba(23,23,27,150); border:1px solid rgba(255,255,255,30); border-radius:28px;}"); shadow=QGraphicsDropShadowEffect(card, blurRadius=38, xOffset=0, yOffset=18, color=QColor(0,0,0,130)); card.setGraphicsEffect(shadow); form=QVBoxLayout(card); form.setContentsMargins(34,30,34,30); form.setSpacing(18)
         self.entries={};
         for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path (normal mode only)")]:
+=======
+        title=QHBoxLayout(); title.addWidget(QLabel("SCAN", styleSheet="font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;")); title.addStretch(); self.min_btn=AnimatedButton("—"); self.close_btn=AnimatedButton("✕", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
+        card=QFrame(); card.setObjectName("card"); card.setStyleSheet("#card{background:rgba(23,23,27,150); border:1px solid rgba(255,255,255,30); border-radius:28px;}"); shadow=QGraphicsDropShadowEffect(card, blurRadius=38, xOffset=0, yOffset=18, color=QColor(0,0,0,130)); card.setGraphicsEffect(shadow); form=QVBoxLayout(card); form.setContentsMargins(34,30,34,30); form.setSpacing(18)
+        self.entries={};
+        for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path")]:
+
             row=QHBoxLayout(); e=QLineEdit(placeholderText=ph); e.setMinimumHeight(60); b=AnimatedButton("Browse"); b.clicked.connect(lambda _, k=key: self._choose_path(k)); row.addWidget(e,1); row.addWidget(b); form.addLayout(row); self.entries[key]=e
         self.graph=QCheckBox("Generate mod dependency graph"); self.external=QCheckBox("Open external live log console"); form.addWidget(self.graph); form.addWidget(self.external)
         actions=QHBoxLayout(); self.start=AnimatedButton("Start Analysis", accent=True); self.test=AnimatedButton("Test Mode"); self.logs_btn=AnimatedButton("Logs"); actions.addWidget(self.start); actions.addWidget(self.test); actions.addStretch(); actions.addWidget(self.logs_btn); form.addLayout(actions); layout.addWidget(card)
@@ -201,9 +237,15 @@ class ScannerApp(QMainWindow):
     def _start_scan(self,test_mode: bool):
         if self.running: return
         req=ScanRequest(self.entries["launcher"].text().strip().strip('"'), self.entries["modpack"].text().strip().strip('"'), self.entries["output"].text().strip().strip('"'), self.graph.isChecked(), test_mode)
+
         if not req.output_path and not test_mode: self.toast.show_message("Output path is required."); self._append_log("Output path is required."); return
         if test_mode: self.toast.show_message("Запущен тестовый режим. Файлы сохраняться не будут; документация лаунчера и сборки не будет создана.")
         if self.external.isChecked() and req.output_path and not test_mode: self._open_external_log_console(req.output_path)
+=======
+        if not req.output_path: self._append_log("Output path is required."); self._show_logs(); return
+        if test_mode: self.toast.show_message("Запущен тестовый режим. Документация лаунчера и сборки сохраняться не будет.")
+        if self.external.isChecked(): self._open_external_log_console(req.output_path)
+
         self.running=True; self.progress.show(); self.progress.setProgress(0,"Preparing..."); self.start.setEnabled(False); self.test.setEnabled(False)
         threading.Thread(target=self._run_worker,args=(req,),daemon=True).start()
     def _run_worker(self,req):
