@@ -94,6 +94,32 @@ class AnimatedButton(QPushButton):
         self.setStyleSheet(f"QPushButton {{ background:{bg}; border:1px solid {border}; border-radius:18px; padding:0 22px; font-weight:600; }}")
 
 
+
+class TitleIconButton(AnimatedButton):
+    """Title-bar button with vector-drawn icons so glyph fonts cannot disappear."""
+
+    def __init__(self, icon: str, danger: bool = False) -> None:
+        super().__init__("", danger=danger)
+        self.icon = icon
+
+    def paintEvent(self, event):
+        super().paintEvent(event)
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing)
+        color = QColor(255, 92, 104) if self._danger else QColor(232, 234, 240)
+        color.setAlpha(245 if self.underMouse() else 190)
+        pen = QPen(color, 2.2, Qt.SolidLine, Qt.RoundCap, Qt.RoundJoin)
+        painter.setPen(pen)
+        center = self.rect().center()
+        if self.icon == "minimize":
+            painter.drawLine(center.x() - 8, center.y() + 2, center.x() + 8, center.y() + 2)
+        else:
+            painter.drawLine(center.x() - 7, center.y() - 7, center.x() + 7, center.y() + 7)
+            painter.drawLine(center.x() + 7, center.y() - 7, center.x() - 7, center.y() + 7)
+=======
+
+
+
 class Background(QWidget):
     def __init__(self) -> None:
         super().__init__(); self.phase = 0.0; self.noise = [(random.randrange(WIDTH), random.randrange(HEIGHT), random.randrange(18, 42)) for _ in range(240)]
@@ -113,14 +139,42 @@ class Background(QWidget):
 
 class WaveProgress(QWidget):
     def __init__(self) -> None:
+
+        super().__init__(); self._value = 0.0; self.phase = 0.0; self.label = "Preparing..."; self.setMinimumHeight(250)
+        self.timer = QTimer(self, interval=33, timeout=self._tick); self.timer.start()
+    def setProgress(self, value: int, label: str) -> None:
+        self.label = label; self.anim = QPropertyAnimation(self, b"value", self, duration=220, easingCurve=QEasingCurve.OutCubic); self.anim.setStartValue(self._value); self.anim.setEndValue(float(value)); self.anim.start(); self.update()
+=======
         super().__init__(); self._value = 0.0; self.phase = 0.0; self.label = "Preparing..."; self.setMinimumHeight(210)
         self.timer = QTimer(self, interval=33, timeout=self._tick); self.timer.start()
     def setProgress(self, value: int, label: str) -> None:
         self.label = label; self.anim = QPropertyAnimation(self, b"value", self, duration=220, easingCurve=QEasingCurve.OutCubic); self.anim.setStartValue(self._value); self.anim.setEndValue(float(value)); self.anim.start()
+
     def getValue(self): return self._value
     def setValue(self, v): self._value = v; self.update()
     value = Property(float, getValue, setValue)
     def _tick(self): self.phase += .045; self.update()
+
+    def _wave_edge(self, left: float, right: float, baseline: float, offset: float) -> QPainterPath:
+        wave = QPainterPath(QPointF(left, baseline)); x = left; amp = 7 + math.sin(self.phase + offset) * 2
+        while x < right:
+            wave.cubicTo(x + 35, baseline + math.sin(self.phase + x * .018 + offset) * amp, x + 70, baseline - math.sin(self.phase + x * .018 + offset) * amp, x + 105, baseline)
+            x += 105
+        return wave
+    def paintEvent(self, _):
+        p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); bar = self.rect().adjusted(16,16,-16,-58)
+        clip = QPainterPath(); clip.addRoundedRect(bar, 28, 28); p.fillPath(clip, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(clip)
+        split = bar.top() + bar.height() * (self._value/100.0); gap = 6
+        done_edge = self._wave_edge(bar.left(), bar.right(), max(bar.top(), split - gap), 0.0)
+        done = QPainterPath(QPointF(bar.left(), bar.top())); done.lineTo(bar.right(), bar.top()); done.lineTo(bar.right(), split - gap); done.connectPath(done_edge.toReversed()); done.closeSubpath()
+        todo_edge = self._wave_edge(bar.left(), bar.right(), min(bar.bottom(), split + gap), 1.8)
+        todo = QPainterPath(todo_edge); todo.lineTo(bar.right(), bar.bottom()); todo.lineTo(bar.left(), bar.bottom()); todo.closeSubpath()
+        done_grad = QLinearGradient(bar.topLeft(), bar.bottomLeft()); done_grad.setColorAt(0,QColor(125,154,255,120)); done_grad.setColorAt(1,QColor(80,220,190,58))
+        todo_grad = QLinearGradient(bar.topLeft(), bar.bottomLeft()); todo_grad.setColorAt(0,QColor(255,255,255,34)); todo_grad.setColorAt(1,QColor(255,255,255,12))
+        p.fillPath(clip.intersected(done), done_grad); p.fillPath(clip.intersected(todo), todo_grad)
+        p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 26, QFont.Bold)); p.drawText(bar, Qt.AlignCenter, f"{int(self._value)}%")
+        text_rect = self.rect().adjusted(16, self.height()-48, -16, -8); p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(text_rect, Qt.AlignHCenter|Qt.AlignVCenter, self.label)
+=======
     def paintEvent(self, _):
         p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); r = self.rect().adjusted(16,16,-16,-16)
         path = QPainterPath(); path.addRoundedRect(r, 28, 28); p.fillPath(path, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(path)
@@ -139,6 +193,7 @@ class WaveProgress(QWidget):
         p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(r.adjusted(0,88,0,0), Qt.AlignHCenter|Qt.AlignTop, self.label)
 
 
+
 class Toast(QLabel):
     def __init__(self, parent):
         super().__init__(parent); self.setAlignment(Qt.AlignCenter); self.setStyleSheet("background:rgba(125,154,255,54); border:1px solid rgba(165,185,255,125); border-radius:16px; padding:12px 18px;"); self.hide(); self.effect = QGraphicsOpacityEffect(self); self.setGraphicsEffect(self.effect)
@@ -154,10 +209,17 @@ class ScannerApp(QMainWindow):
         super().__init__(); self._hide_windows_console(); self.queue: queue.Queue[tuple[str, object]] = queue.Queue(); self.running=False; self.drag_pos=None; self.logs=[]
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window); self.resize(WIDTH, HEIGHT); self.setStyleSheet(STYLE)
         root = Background(); self.setCentralWidget(root); layout=QVBoxLayout(root); layout.setContentsMargins(28,18,28,24); layout.setSpacing(18)
+
+        title=QHBoxLayout(); title.addWidget(QLabel("SCAN", styleSheet="font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;")); title.addStretch(); self.min_btn=TitleIconButton("minimize"); self.close_btn=TitleIconButton("close", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
+        card=QFrame(); card.setObjectName("card"); card.setStyleSheet("#card{background:rgba(23,23,27,150); border:1px solid rgba(255,255,255,30); border-radius:28px;}"); shadow=QGraphicsDropShadowEffect(card, blurRadius=38, xOffset=0, yOffset=18, color=QColor(0,0,0,130)); card.setGraphicsEffect(shadow); form=QVBoxLayout(card); form.setContentsMargins(34,30,34,30); form.setSpacing(18)
+        self.entries={};
+        for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path (normal mode only)")]:
+=======
         title=QHBoxLayout(); title.addWidget(QLabel("SCAN", styleSheet="font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;")); title.addStretch(); self.min_btn=AnimatedButton("—"); self.close_btn=AnimatedButton("✕", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
         card=QFrame(); card.setObjectName("card"); card.setStyleSheet("#card{background:rgba(23,23,27,150); border:1px solid rgba(255,255,255,30); border-radius:28px;}"); shadow=QGraphicsDropShadowEffect(card, blurRadius=38, xOffset=0, yOffset=18, color=QColor(0,0,0,130)); card.setGraphicsEffect(shadow); form=QVBoxLayout(card); form.setContentsMargins(34,30,34,30); form.setSpacing(18)
         self.entries={};
         for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path")]:
+
             row=QHBoxLayout(); e=QLineEdit(placeholderText=ph); e.setMinimumHeight(60); b=AnimatedButton("Browse"); b.clicked.connect(lambda _, k=key: self._choose_path(k)); row.addWidget(e,1); row.addWidget(b); form.addLayout(row); self.entries[key]=e
         self.graph=QCheckBox("Generate mod dependency graph"); self.external=QCheckBox("Open external live log console"); form.addWidget(self.graph); form.addWidget(self.external)
         actions=QHBoxLayout(); self.start=AnimatedButton("Start Analysis", accent=True); self.test=AnimatedButton("Test Mode"); self.logs_btn=AnimatedButton("Logs"); actions.addWidget(self.start); actions.addWidget(self.test); actions.addStretch(); actions.addWidget(self.logs_btn); form.addLayout(actions); layout.addWidget(card)
@@ -175,9 +237,15 @@ class ScannerApp(QMainWindow):
     def _start_scan(self,test_mode: bool):
         if self.running: return
         req=ScanRequest(self.entries["launcher"].text().strip().strip('"'), self.entries["modpack"].text().strip().strip('"'), self.entries["output"].text().strip().strip('"'), self.graph.isChecked(), test_mode)
+
+        if not req.output_path and not test_mode: self.toast.show_message("Output path is required."); self._append_log("Output path is required."); return
+        if test_mode: self.toast.show_message("Запущен тестовый режим. Файлы сохраняться не будут; документация лаунчера и сборки не будет создана.")
+        if self.external.isChecked() and req.output_path and not test_mode: self._open_external_log_console(req.output_path)
+=======
         if not req.output_path: self._append_log("Output path is required."); self._show_logs(); return
         if test_mode: self.toast.show_message("Запущен тестовый режим. Документация лаунчера и сборки сохраняться не будет.")
         if self.external.isChecked(): self._open_external_log_console(req.output_path)
+
         self.running=True; self.progress.show(); self.progress.setProgress(0,"Preparing..."); self.start.setEnabled(False); self.test.setEnabled(False)
         threading.Thread(target=self._run_worker,args=(req,),daemon=True).start()
     def _run_worker(self,req):
