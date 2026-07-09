@@ -183,7 +183,7 @@ class ScannerApp(QMainWindow):
         title=QHBoxLayout(); title.addWidget(QLabel("SCAN", styleSheet="font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;")); title.addStretch(); self.min_btn=TitleIconButton("minimize"); self.close_btn=TitleIconButton("close", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
         card=QFrame(); card.setObjectName("card"); card.setStyleSheet("#card{background:rgba(23,23,27,150); border:1px solid rgba(255,255,255,30); border-radius:28px;}"); shadow=QGraphicsDropShadowEffect(card, blurRadius=38, xOffset=0, yOffset=18, color=QColor(0,0,0,130)); card.setGraphicsEffect(shadow); form=QVBoxLayout(card); form.setContentsMargins(34,30,34,30); form.setSpacing(18)
         self.entries={};
-        for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path")]:
+        for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path (normal mode only)")]:
             row=QHBoxLayout(); e=QLineEdit(placeholderText=ph); e.setMinimumHeight(60); b=AnimatedButton("Browse"); b.clicked.connect(lambda _, k=key: self._choose_path(k)); row.addWidget(e,1); row.addWidget(b); form.addLayout(row); self.entries[key]=e
         self.graph=QCheckBox("Generate mod dependency graph"); self.external=QCheckBox("Open external live log console"); form.addWidget(self.graph); form.addWidget(self.external)
         actions=QHBoxLayout(); self.start=AnimatedButton("Start Analysis", accent=True); self.test=AnimatedButton("Test Mode"); self.logs_btn=AnimatedButton("Logs"); actions.addWidget(self.start); actions.addWidget(self.test); actions.addStretch(); actions.addWidget(self.logs_btn); form.addLayout(actions); layout.addWidget(card)
@@ -202,7 +202,7 @@ class ScannerApp(QMainWindow):
         if self.running: return
         req=ScanRequest(self.entries["launcher"].text().strip().strip('"'), self.entries["modpack"].text().strip().strip('"'), self.entries["output"].text().strip().strip('"'), self.graph.isChecked(), test_mode)
         if not req.output_path and not test_mode: self.toast.show_message("Output path is required."); self._append_log("Output path is required."); return
-        if test_mode: self.toast.show_message("Запущен тестовый режим. Документация лаунчера и сборки сохраняться не будет.")
+        if test_mode: self.toast.show_message("Запущен тестовый режим. Файлы сохраняться не будут; документация лаунчера и сборки не будет создана.")
         if self.external.isChecked() and req.output_path and not test_mode: self._open_external_log_console(req.output_path)
         self.running=True; self.progress.show(); self.progress.setProgress(0,"Preparing..."); self.start.setEnabled(False); self.test.setEnabled(False)
         threading.Thread(target=self._run_worker,args=(req,),daemon=True).start()

@@ -26,7 +26,7 @@ class ScanRequest:
 
 
 def run_scan(request: ScanRequest, progress: ProgressCallback | None = None) -> None:
-    """Run selected analyses and write the required output tree."""
+    """Run analysis; Test Mode uses a disposable output tree and persists nothing."""
 
     progress = progress or (lambda _percent, _message: None)
     if request.test_mode:
@@ -41,6 +41,8 @@ def run_scan(request: ScanRequest, progress: ProgressCallback | None = None) -> 
 
 
 def _run_scan_with_output(request: ScanRequest, output: Path, progress: ProgressCallback) -> None:
+    """Run the unchanged analyzers against the supplied output root."""
+
     output.mkdir(parents=True, exist_ok=True)
     modpack_output = output / "modpack"
     launcher_output = output / "launcher"
