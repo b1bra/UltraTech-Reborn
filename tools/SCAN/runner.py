@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import shutil
+import tempfile
 import traceback
 from dataclasses import dataclass
 from pathlib import Path
@@ -21,6 +23,7 @@ class ScanRequest:
     modpack_path: str = ""
     output_path: str = ""
     generate_graph: bool = False
+    test_mode: bool = False
 
 
 def run_scan(request: ScanRequest, progress: ProgressCallback | None = None) -> None:
@@ -39,6 +42,7 @@ def run_scan(request: ScanRequest, progress: ProgressCallback | None = None) -> 
         "modpack_path": request.modpack_path,
         "output_path": str(output),
         "generate_graph": request.generate_graph,
+        "test_mode": request.test_mode,
     }
     logger = configure_logger(logs_output, parameters)
     try:
@@ -80,12 +84,25 @@ def _run_scan_inner(
         )
 
     if launcher_path is not None:
-        analyze_launcher(
-            launcher_path,
-            launcher_output,
-            logger,
-            lambda percent, message: progress(_scale(percent, 76 if modpack_path else 3, 94), message),
-        )
+        if request.test_mode:
+            logger.info("Test mode: launcher documentation will be generated in a temporary directory and discarded")
+            with tempfile.TemporaryDirectory(prefix="scan_launcher_test_") as temp_dir:
+                analyze_launcher(
+                    launcher_path,
+                    Path(temp_dir),
+                    logger,
+                    lambda percent, message: progress(_scale(percent, 76 if modpack_path else 3, 94), message),
+                )
+        else:
+            analyze_launcher(
+                launcher_path,
+                launcher_output,
+                logger,
+                lambda percent, message: progress(_scale(percent, 76 if modpack_path else 3, 94), message),
+            )
+
+    if request.test_mode:
+        _discard_test_mode_documentation(modpack_output, launcher_output, logger)
 
     progress(98, "Writing session summary")
     logger.success("Unified analysis complete")
@@ -100,3 +117,18 @@ def format_traceback(error: BaseException) -> str:
     """Return full traceback text for GUI console display."""
 
     return "".join(traceback.format_exception(type(error), error, error.__traceback__))
+
+
+def _discard_test_mode_documentation(modpack_output: Path, launcher_output: Path, logger: ScannerSessionLogger) -> None:
+    """Remove only the documentation artifacts disabled by Test Mode."""
+
+    launcher_removed = False
+    if launcher_output.exists():
+        shutil.rmtree(launcher_output)
+        launcher_removed = True
+    assembly_doc = modpack_output / "modpack_technical_overview.md"
+    if assembly_doc.exists():
+        assembly_doc.unlink()
+        logger.info(f"Test mode: discarded assembly documentation {assembly_doc}")
+    if launcher_removed:
+        logger.info(f"Test mode: discarded launcher documentation {launcher_output}")
