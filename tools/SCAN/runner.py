@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-
 import shutil
 import tempfile
 import traceback
@@ -28,23 +27,12 @@ class ScanRequest:
 
 
 def run_scan(request: ScanRequest, progress: ProgressCallback | None = None) -> None:
-    """Run analysis; Test Mode uses a disposable output tree and persists nothing."""
+    """Run selected analyses and write the required output tree."""
 
     progress = progress or (lambda _percent, _message: None)
-    if request.test_mode:
-        with tempfile.TemporaryDirectory(prefix="scan_test_output_") as temp_dir:
-            _run_scan_with_output(request, Path(temp_dir), progress)
-        return
-
     output = Path(request.output_path).expanduser()
     if not str(output).strip():
         return
-    _run_scan_with_output(request, output, progress)
-
-
-def _run_scan_with_output(request: ScanRequest, output: Path, progress: ProgressCallback) -> None:
-    """Run the unchanged analyzers against the supplied output root."""
-
     output.mkdir(parents=True, exist_ok=True)
     modpack_output = output / "modpack"
     launcher_output = output / "launcher"
@@ -115,18 +103,6 @@ def _run_scan_inner(
 
     if request.test_mode:
         _discard_test_mode_documentation(modpack_output, launcher_output, logger)
-
-    if request.test_mode:
-        logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
-
-    if request.test_mode:
-        logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
-
-    if request.test_mode:
-        logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
-
-    if request.test_mode:
-        logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
 
     progress(98, "Writing session summary")
     logger.success("Unified analysis complete")
