@@ -1,0 +1,4963 @@
+# ModPacketLogger Lite Network Log
+
+Generated: 2026-07-09 16:16:15.165697
+
+Mods folder: `C:\Users\Vasya\AppData\Roaming\.loliland\game-resources\clients\ultra_tech\main\mods`
+
+Total mods: 93
+
+## [1.7.10]bspkrsCore-universal-6.16
+
+```text
+- File: [1.7.10]bspkrsCore-universal-6.16.jar
+- Mod ID: [1.7.10]bspkrsCore-universal-6.16
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 98
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=3, packetbuffer=3, spacket=2, fmlnetworkevent=1, bytebuf=1, channel=1, netty=1
+- Client packet evidence:
+  - bspkrs/bspkrscore/fml/NetworkHandler.class: fmlnetworkevent
+- Network evidence:
+  - bspkrs/bspkrscore/fml/NetworkHandler.class: fmlnetworkevent
+  - bspkrs/helpers/network/PacketBufferHelper.class: packet
+  - bspkrs/helpers/network/PacketBufferHelper.class: packetbuffer
+  - bspkrs/network/BSMessageToMessageCodec.class: bytebuf
+  - bspkrs/network/BSMessageToMessageCodec.class: channel
+  - bspkrs/network/BSMessageToMessageCodec.class: netty
+  - bspkrs/network/BSMessageToMessageCodec.class: packet
+  - bspkrs/network/BSMessageToMessageCodec.class: packetbuffer
+  - bspkrs/network/BSMessageToMessageCodec.class: spacket
+  - bspkrs/network/BSPacket.class: packet
+  - bspkrs/network/BSPacket.class: packetbuffer
+  - bspkrs/network/BSPacket.class: spacket
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## CodeChickenLib-1.7.10-1.1.3.141
+
+```text
+- File: CodeChickenLib-1.7.10-1.1.3.141.jar
+- Mod ID: CodeChickenLib-1.7.10-1.1.3.141
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 176
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=18, channel=6, bytebuf=4, handshake=3, netty=3, sendtoplayer=3, networkregistry=2, payload=2, sendtoall=2, sendtoallaround=1, sendtoserver=1, simplechannel=1
+- Client packet evidence:
+  - codechicken/lib/inventory/ContainerExtended.class: channel
+  - codechicken/lib/inventory/ContainerExtended.class: packet
+  - codechicken/lib/inventory/ContainerExtended.class: sendtoplayer
+  - codechicken/lib/inventory/ContainerSynchronised.class: cpacket
+  - codechicken/lib/inventory/ContainerSynchronised.class: packet
+  - codechicken/lib/inventory/ContainerSynchronised.class: sendtoplayer
+  - codechicken/lib/packet/PacketCustom$ClientInboundHandler.class: channel
+  - codechicken/lib/packet/PacketCustom$ClientInboundHandler.class: packet
+  - codechicken/lib/packet/PacketCustom$IClientPacketHandler.class: packet
+  - codechicken/lib/packet/PacketCustom.class: bytebuf
+  - codechicken/lib/packet/PacketCustom.class: channel
+  - codechicken/lib/packet/PacketCustom.class: handshake
+  - codechicken/lib/packet/PacketCustom.class: netty
+  - codechicken/lib/packet/PacketCustom.class: networkregistry
+  - codechicken/lib/packet/PacketCustom.class: packet
+  - codechicken/lib/packet/PacketCustom.class: payload
+  - codechicken/lib/packet/PacketCustom.class: sendtoall
+  - codechicken/lib/packet/PacketCustom.class: sendtoallaround
+  - codechicken/lib/packet/PacketCustom.class: sendtoplayer
+  - codechicken/lib/vec/Matrix4.class: bytebuf
+- Network evidence:
+  - META-INF/ccl_at.cfg: packet
+  - META-INF/ccl_at.cfg: sendtoall
+  - codechicken/lib/data/MCDataOutputWrapper.class: bytebuf
+  - codechicken/lib/inventory/ContainerExtended.class: channel
+  - codechicken/lib/inventory/ContainerExtended.class: packet
+  - codechicken/lib/inventory/ContainerExtended.class: sendtoplayer
+  - codechicken/lib/inventory/ContainerSynchronised.class: cpacket
+  - codechicken/lib/inventory/ContainerSynchronised.class: packet
+  - codechicken/lib/inventory/ContainerSynchronised.class: sendtoplayer
+  - codechicken/lib/inventory/IContainerSyncVar.class: packet
+  - codechicken/lib/inventory/IntegerSync.class: packet
+  - codechicken/lib/packet/ICustomPacketTile.class: packet
+  - codechicken/lib/packet/PacketCustom$ClientInboundHandler.class: channel
+  - codechicken/lib/packet/PacketCustom$ClientInboundHandler.class: packet
+  - codechicken/lib/packet/PacketCustom$CustomHandler.class: packet
+  - codechicken/lib/packet/PacketCustom$CustomInboundHandler.class: bytebuf
+  - codechicken/lib/packet/PacketCustom$CustomInboundHandler.class: channel
+  - codechicken/lib/packet/PacketCustom$CustomInboundHandler.class: netty
+  - codechicken/lib/packet/PacketCustom$CustomInboundHandler.class: networkregistry
+  - codechicken/lib/packet/PacketCustom$CustomInboundHandler.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Airdrops
+
+```text
+- File: airdrops-1.7.10-0.1.0.jar
+- Mod ID: airdrops
+- Version: 0.1.0
+- Authors: LoliLand
+- Scanned entries: 45
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: yes
+- Contains Loli prefix: yes
+- Packet marker summary: packet=6, imessage=3, simpleimpl=3, imessagehandler=2, registermessage=2, bytebuf=2, netty=2, cpacket=1, channel=1, messagecontext=1
+- Client packet evidence:
+  - net/loliland/airdrops/Airdrops.class: packet
+  - net/loliland/airdrops/entity/EntityAirdrop.class: bytebuf
+  - net/loliland/airdrops/entity/EntityAirdrop.class: netty
+  - net/loliland/airdrops/network/AirdropsNetwork.class: packet
+  - net/loliland/airdrops/network/AirdropsNetwork.class: registermessage
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: imessage
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: imessagehandler
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: messagecontext
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: packet
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: simpleimpl
+- Network evidence:
+  - net/loliland/airdrops/Airdrops.class: packet
+  - net/loliland/airdrops/entity/EntityAirdrop.class: bytebuf
+  - net/loliland/airdrops/entity/EntityAirdrop.class: netty
+  - net/loliland/airdrops/network/AirdropsNetwork.class: packet
+  - net/loliland/airdrops/network/AirdropsNetwork.class: registermessage
+  - net/loliland/airdrops/network/SimpleNetwork.class: channel
+  - net/loliland/airdrops/network/SimpleNetwork.class: imessage
+  - net/loliland/airdrops/network/SimpleNetwork.class: imessagehandler
+  - net/loliland/airdrops/network/SimpleNetwork.class: packet
+  - net/loliland/airdrops/network/SimpleNetwork.class: registermessage
+  - net/loliland/airdrops/network/SimpleNetwork.class: simpleimpl
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: imessage
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: imessagehandler
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: messagecontext
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: packet
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class: simpleimpl
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData.class: bytebuf
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData.class: imessage
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData.class: netty
+  - net/loliland/airdrops/network/packet/PacketSyncWorldData.class: packet
+- Loliland server evidence:
+  - mcmod.info: loliland
+  - mixin.airdrops.forge.json: loliland
+  - mixin.airdrops.json: loliland
+  - mixin.airdrops.ultramine.json: loliland
+  - net/loliland/airdrops/Airdrops$configDir$2.class: loliland
+  - net/loliland/airdrops/Airdrops$preInit$$inlined$load$default$1.class: loliland
+  - net/loliland/airdrops/Airdrops$preInit$$inlined$load$default$2.class: loliland
+  - net/loliland/airdrops/Airdrops.class: loliland
+  - net/loliland/airdrops/AirdropsConstants.class: loliland
+  - net/loliland/airdrops/EventListener$onWorldTickServer$changed$1.class: loliland
+  - net/loliland/airdrops/EventListener.class: loliland
+  - net/loliland/airdrops/asm/CoremodPlugin.class: loliland
+  - net/loliland/airdrops/client/renderer/entity/airdrop/ModelAirdrop$Companion.class: loliland
+  - net/loliland/airdrops/client/renderer/entity/airdrop/ModelAirdrop.class: loliland
+  - net/loliland/airdrops/client/renderer/entity/airdrop/RenderAirdrop.class: loliland
+  - net/loliland/airdrops/client/renderer/world/AirdropBeamsRenderer$renderAll$$inlined$sortedBy$1.class: loliland
+  - net/loliland/airdrops/client/renderer/world/AirdropBeamsRenderer.class: loliland
+  - net/loliland/airdrops/config/AirdropsConfig$Item.class: loliland
+  - net/loliland/airdrops/config/AirdropsConfig.class: loliland
+  - net/loliland/airdrops/entity/AirdropPlayer$Companion.class: loliland
+- Loliland site evidence:
+  - mcmod.info: https://loliland
+- Loli prefix evidence:
+  - mcmod.info
+  - net/loliland/airdrops/util/ChatExtensionsKt.class
+  - pack.mcmeta
+```
+
+## AnvilRepairFix-master-45d157ba
+
+```text
+- File: AnvilRepairFix-master-45d157ba.jar
+- Mod ID: AnvilRepairFix-master-45d157ba
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 2
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Applied Energistics 2
+
+```text
+- File: appliedenergistics2-rv3-beta-6.jar
+- Mod ID: appliedenergistics2
+- Version: rv3-beta-6
+- Authors: AlgorithmX2
+- Scanned entries: 2216
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: channel=239, packet=182, bytebuf=90, netty=88, sendtoserver=81, sendtoall=6, networkregistry=3, payload=3, sendtoallaround=2, fmlnetworkevent=1
+- Client packet evidence:
+  - appeng/api/parts/IPart.class: bytebuf
+  - appeng/api/parts/IPart.class: netty
+  - appeng/api/storage/ICellHandler.class: channel
+  - appeng/api/storage/data/IAEStack.class: bytebuf
+  - appeng/api/storage/data/IAEStack.class: channel
+  - appeng/api/storage/data/IAEStack.class: netty
+  - appeng/api/storage/data/IAEStack.class: packet
+  - appeng/block/networking/BlockController.class: channel
+  - appeng/client/ClientHelper.class: packet
+  - appeng/client/ClientHelper.class: sendtoserver
+  - appeng/client/gui/AEBaseGui.class: channel
+  - appeng/client/gui/AEBaseGui.class: packet
+  - appeng/client/gui/AEBaseGui.class: sendtoserver
+  - appeng/client/gui/NumberEntryType.class: channel
+  - appeng/client/gui/implementations/GuiAdjustSlot.class: packet
+  - appeng/client/gui/implementations/GuiAdjustSlot.class: sendtoserver
+  - appeng/client/gui/implementations/GuiCellWorkbench.class: packet
+  - appeng/client/gui/implementations/GuiCellWorkbench.class: sendtoserver
+  - appeng/client/gui/implementations/GuiChest.class: packet
+  - appeng/client/gui/implementations/GuiChest.class: sendtoserver
+- Network evidence:
+  - appeng/api/config/ContentType.class: channel
+  - appeng/api/config/NetworkEmitterMode.class: channel
+  - appeng/api/implementations/IPowerChannelState.class: channel
+  - appeng/api/networking/GridFlags.class: channel
+  - appeng/api/networking/IGridConnection.class: channel
+  - appeng/api/networking/IGridNode.class: channel
+  - appeng/api/networking/crafting/CraftingItems$Storage.class: channel
+  - appeng/api/networking/crafting/CraftingItems.class: channel
+  - appeng/api/networking/crafting/ICraftingCPU.class: channel
+  - appeng/api/networking/events/MENetworkChannelChanged.class: channel
+  - appeng/api/networking/events/MENetworkChannelsChanged.class: channel
+  - appeng/api/networking/events/MENetworkStorageEvent.class: channel
+  - appeng/api/networking/storage/IStackWatcherHost.class: channel
+  - appeng/api/networking/storage/IStorageGrid.class: channel
+  - appeng/api/parts/IFacadeContainer.class: bytebuf
+  - appeng/api/parts/IFacadeContainer.class: netty
+  - appeng/api/parts/IPart.class: bytebuf
+  - appeng/api/parts/IPart.class: netty
+  - appeng/api/storage/ICellHandler.class: channel
+  - appeng/api/storage/ICellProvider.class: channel
+- Loliland server evidence:
+  - appeng/api/implementations/tiles/IColorableTile.class: loliland
+  - appeng/api/storage/ITerminalHost.class: loliland
+  - appeng/block/crafting/BlockMolecularAssembler.class: loliland
+  - appeng/client/render/AppEngRenderItem.class: loliland
+  - appeng/client/render/blocks/RenderBlockGeo.class: loliland
+  - appeng/client/render/blocks/geo/AssemblerRenderer$1.class: loliland
+  - appeng/client/render/blocks/geo/AssemblerRenderer.class: loliland
+  - appeng/client/render/blocks/geo/EmissiveBlockRenderer$1.class: loliland
+  - appeng/client/render/blocks/geo/EmissiveBlockRenderer.class: loliland
+  - appeng/client/render/items/EmissiveItemRenderer$1.class: loliland
+  - appeng/client/render/items/EmissiveItemRenderer.class: loliland
+  - appeng/client/render/items/ItemCrystalSeedRenderer$1.class: loliland
+  - appeng/client/render/items/ItemCrystalSeedRenderer.class: loliland
+  - appeng/client/render/items/ItemMultiMaterialRenderer$1.class: loliland
+  - appeng/client/render/items/ItemMultiMaterialRenderer.class: loliland
+  - appeng/client/render/items/ToolWirelessTerminalRender$1.class: loliland
+  - appeng/client/render/items/ToolWirelessTerminalRender.class: loliland
+  - appeng/client/texture/TexturePalette$LoliUtilityPalette.class: loliland
+  - appeng/container/implementations/ContainerCraftingTerm.class: loliland
+  - appeng/container/implementations/ContainerMEMonitorable.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - appeng/client/texture/TexturePalette$LoliUtilityPalette.class
+  - appeng/client/texture/TexturePalette.class
+  - appeng/integration/IntegrationType.class
+  - appeng/integration/modules/LoliEnergistics.class
+  - appeng/items/materials/MaterialType.class
+```
+
+## ArmorStatusHUD-master-f3c7993b
+
+```text
+- File: ArmorStatusHUD-master-f3c7993b.jar
+- Mod ID: ArmorStatusHUD-master-f3c7993b
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 16
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## asielib
+
+```text
+- File: AsieLib-1.7.10-0.4.9.jar
+- Mod ID: asielib
+- Version: 1.7.10-0.4.9
+- Authors: asiekierka, Vexatos
+- Scanned entries: 105
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=13, bytebuf=4, netty=3, networkregistry=3, channel=2, sendtoall=2, sendtoallaround=2, imessage=1, simpleimpl=1, sendtoserver=1, payload=1
+- Client packet evidence:
+  - pl/asie/lib/AsieLibMod.class: packet
+  - pl/asie/lib/ClientProxy.class: packet
+  - pl/asie/lib/CommonProxy.class: packet
+  - pl/asie/lib/NetworkHandlerClient.class: packet
+  - pl/asie/lib/audio/StreamingAudioPlayer.class: bytebuf
+  - pl/asie/lib/audio/StreamingAudioPlayer.class: packet
+  - pl/asie/lib/network/PacketChannelHandler.class: bytebuf
+  - pl/asie/lib/network/PacketChannelHandler.class: channel
+  - pl/asie/lib/network/PacketChannelHandler.class: netty
+  - pl/asie/lib/network/PacketChannelHandler.class: networkregistry
+  - pl/asie/lib/network/PacketChannelHandler.class: packet
+  - pl/asie/lib/network/PacketChannelHandler.class: payload
+  - pl/asie/lib/network/PacketHandler.class: channel
+  - pl/asie/lib/network/PacketHandler.class: netty
+  - pl/asie/lib/network/PacketHandler.class: networkregistry
+  - pl/asie/lib/network/PacketHandler.class: packet
+  - pl/asie/lib/network/PacketHandler.class: sendtoall
+  - pl/asie/lib/network/PacketHandler.class: sendtoallaround
+  - pl/asie/lib/network/PacketHandler.class: sendtoserver
+  - pl/asie/lib/util/WorldUtils.class: networkregistry
+- Network evidence:
+  - pl/asie/lib/AsieLibMod.class: packet
+  - pl/asie/lib/ClientProxy.class: packet
+  - pl/asie/lib/CommonProxy.class: packet
+  - pl/asie/lib/NetworkHandlerClient.class: packet
+  - pl/asie/lib/Packets.class: packet
+  - pl/asie/lib/audio/StreamingAudioPlayer$SourceEntry.class: packet
+  - pl/asie/lib/audio/StreamingAudioPlayer.class: bytebuf
+  - pl/asie/lib/audio/StreamingAudioPlayer.class: packet
+  - pl/asie/lib/block/TileEntityBase.class: packet
+  - pl/asie/lib/network/MessageHandlerBase.class: packet
+  - pl/asie/lib/network/Packet.class: bytebuf
+  - pl/asie/lib/network/Packet.class: imessage
+  - pl/asie/lib/network/Packet.class: netty
+  - pl/asie/lib/network/Packet.class: packet
+  - pl/asie/lib/network/Packet.class: simpleimpl
+  - pl/asie/lib/network/PacketChannelHandler.class: bytebuf
+  - pl/asie/lib/network/PacketChannelHandler.class: channel
+  - pl/asie/lib/network/PacketChannelHandler.class: netty
+  - pl/asie/lib/network/PacketChannelHandler.class: networkregistry
+  - pl/asie/lib/network/PacketChannelHandler.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Avaritia
+
+```text
+- File: Avaritia-1.13.jar
+- Mod ID: Avaritia
+- Version: 1.13
+- Authors: SpitefulFox, TTFTCUTS
+- Scanned entries: 254
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: packet=4, channel=1, imessage=1, simpleimpl=1, networkregistry=1
+- Client packet evidence:
+  - fox/spiteful/avaritia/Avaritia.class: networkregistry
+  - fox/spiteful/avaritia/compat/thaumcraft/ItemAkashicRecord.class: imessage
+  - fox/spiteful/avaritia/compat/thaumcraft/ItemAkashicRecord.class: packet
+  - fox/spiteful/avaritia/compat/thaumcraft/ItemAkashicRecord.class: simpleimpl
+- Network evidence:
+  - fox/spiteful/avaritia/Avaritia.class: networkregistry
+  - fox/spiteful/avaritia/compat/Compat.class: channel
+  - fox/spiteful/avaritia/compat/thaumcraft/ItemAkashicRecord.class: imessage
+  - fox/spiteful/avaritia/compat/thaumcraft/ItemAkashicRecord.class: packet
+  - fox/spiteful/avaritia/compat/thaumcraft/ItemAkashicRecord.class: simpleimpl
+  - fox/spiteful/avaritia/tile/TileEntityCompressor.class: packet
+  - fox/spiteful/avaritia/tile/TileLudicrous.class: packet
+  - fox/spiteful/avaritia/tile/VanillaPacketDispatcher.class: packet
+- Loliland server evidence:
+  - fox/spiteful/avaritia/LudicrousEvents.class: loliland
+  - fox/spiteful/avaritia/crafting/Grinder.class: loliland
+  - fox/spiteful/avaritia/gui/ContainerExtremeCrafting.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$Companion$arrowImage$2.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$Companion$elementsAtlas$2.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$Companion.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1$1.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1$2.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1$3.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1$4$1.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1$4.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1$5.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$2.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$2.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$wikiData$1.class: loliland
+  - fox/spiteful/avaritia/gui/GUICompressorScreen.class: loliland
+  - fox/spiteful/avaritia/gui/GUIExtremeCraftingScreen$Companion$elementsAtlas$2.class: loliland
+  - fox/spiteful/avaritia/gui/GUIExtremeCraftingScreen$Companion.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - fox/spiteful/avaritia/gui/GUICompressorScreen$buildMachineContent$1$1.class
+  - fox/spiteful/avaritia/recipe/AvaritiaRecipeRegistration.class
+```
+
+## AvaritiaNEI-1.7.10-1.3.2
+
+```text
+- File: AvaritiaNEI-1.7.10-1.3.2.jar
+- Mod ID: AvaritiaNEI-1.7.10-1.3.2
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 15
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: imessage=4, simpleimpl=4, sendtoserver=2, channel=2, networkregistry=1, registermessage=1, simplechannel=1, imessagehandler=1, messagecontext=1, bytebuf=1, netty=1
+- Client packet evidence:
+  - com/gamerforea/avaritianei/client/handlers/ExtremeFakeOverlayHandler.class: imessage
+  - com/gamerforea/avaritianei/client/handlers/ExtremeFakeOverlayHandler.class: sendtoserver
+  - com/gamerforea/avaritianei/client/handlers/ExtremeFakeOverlayHandler.class: simpleimpl
+  - com/gamerforea/avaritianei/network/NetworkManager.class: channel
+  - com/gamerforea/avaritianei/network/NetworkManager.class: imessage
+  - com/gamerforea/avaritianei/network/NetworkManager.class: networkregistry
+  - com/gamerforea/avaritianei/network/NetworkManager.class: registermessage
+  - com/gamerforea/avaritianei/network/NetworkManager.class: sendtoserver
+  - com/gamerforea/avaritianei/network/NetworkManager.class: simplechannel
+  - com/gamerforea/avaritianei/network/NetworkManager.class: simpleimpl
+- Network evidence:
+  - com/gamerforea/avaritianei/ModConstants.class: channel
+  - com/gamerforea/avaritianei/client/handlers/ExtremeFakeOverlayHandler.class: imessage
+  - com/gamerforea/avaritianei/client/handlers/ExtremeFakeOverlayHandler.class: sendtoserver
+  - com/gamerforea/avaritianei/client/handlers/ExtremeFakeOverlayHandler.class: simpleimpl
+  - com/gamerforea/avaritianei/network/NetworkManager.class: channel
+  - com/gamerforea/avaritianei/network/NetworkManager.class: imessage
+  - com/gamerforea/avaritianei/network/NetworkManager.class: networkregistry
+  - com/gamerforea/avaritianei/network/NetworkManager.class: registermessage
+  - com/gamerforea/avaritianei/network/NetworkManager.class: sendtoserver
+  - com/gamerforea/avaritianei/network/NetworkManager.class: simplechannel
+  - com/gamerforea/avaritianei/network/NetworkManager.class: simpleimpl
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage$Handler.class: imessage
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage$Handler.class: imessagehandler
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage$Handler.class: messagecontext
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage$Handler.class: simpleimpl
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage.class: bytebuf
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage.class: imessage
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage.class: netty
+  - com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## bdlib-1.9.4.109-mc1.7.10
+
+```text
+- File: bdlib-1.9.4.109-mc1.7.10.jar
+- Mod ID: bdlib-1.9.4.109-mc1.7.10
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 1069
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=21, channel=7, networkregistry=4, netty=4, sendtoserver=3, sendtoall=2, sendtoallaround=2, simplechannel=2, bytebuf=1, payload=1
+- Client packet evidence:
+  - net/bdew/lib/data/base/TileDataSlots$class.class: packet
+  - net/bdew/lib/multiblock/gui/WidgetRSConfig.class: sendtoserver
+  - net/bdew/lib/multiblock/network/NetHandler.class: channel
+  - net/bdew/lib/multiblock/network/NetHandler.class: networkregistry
+  - net/bdew/lib/multiblock/network/NetHandler.class: sendtoall
+  - net/bdew/lib/multiblock/network/NetHandler.class: sendtoallaround
+  - net/bdew/lib/multiblock/network/NetHandler.class: sendtoserver
+  - net/bdew/lib/network/NetChannel$ClientHandler$.class: channel
+  - net/bdew/lib/network/NetChannel$ClientHandler$.class: netty
+  - net/bdew/lib/network/NetChannel$ClientHandler$.class: packet
+  - net/bdew/lib/network/NetChannel$ClientHandler$.class: simplechannel
+  - net/bdew/lib/network/NetChannel.class: channel
+  - net/bdew/lib/network/NetChannel.class: netty
+  - net/bdew/lib/network/NetChannel.class: networkregistry
+  - net/bdew/lib/network/NetChannel.class: sendtoall
+  - net/bdew/lib/network/NetChannel.class: sendtoallaround
+  - net/bdew/lib/network/NetChannel.class: sendtoserver
+  - net/bdew/lib/tile/TileExtended.class: packet
+- Network evidence:
+  - net/bdew/lib/data/base/ContainerDataSlots$$anonfun$detectAndSendChanges$1.class: packet
+  - net/bdew/lib/data/base/ContainerDataSlots$class.class: packet
+  - net/bdew/lib/data/base/DataSlotContainer$class.class: packet
+  - net/bdew/lib/data/base/DataSlotContainer.class: packet
+  - net/bdew/lib/data/base/TileDataSlots$class.class: packet
+  - net/bdew/lib/data/base/TileDataSlots.class: packet
+  - net/bdew/lib/multiblock/data/OutputConfig.class: packet
+  - net/bdew/lib/multiblock/data/OutputConfigFluid.class: packet
+  - net/bdew/lib/multiblock/data/OutputConfigFluidSlots.class: packet
+  - net/bdew/lib/multiblock/data/OutputConfigInvalid.class: packet
+  - net/bdew/lib/multiblock/data/OutputConfigItems.class: packet
+  - net/bdew/lib/multiblock/data/OutputConfigPower.class: packet
+  - net/bdew/lib/multiblock/gui/WidgetRSConfig.class: sendtoserver
+  - net/bdew/lib/multiblock/network/NetHandler$$anonfun$1.class: packet
+  - net/bdew/lib/multiblock/network/NetHandler$.class: channel
+  - net/bdew/lib/multiblock/network/NetHandler.class: channel
+  - net/bdew/lib/multiblock/network/NetHandler.class: networkregistry
+  - net/bdew/lib/multiblock/network/NetHandler.class: sendtoall
+  - net/bdew/lib/multiblock/network/NetHandler.class: sendtoallaround
+  - net/bdew/lib/multiblock/network/NetHandler.class: sendtoserver
+- Loliland server evidence:
+  - net/bdew/lib/recipes/RecipeLoader.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## BeeBetterAtBees
+
+```text
+- File: BeeBetterAtBees-0.3.jar
+- Mod ID: beebetteratbees
+- Version: 0.3
+- Authors: HellFirePvP
+- Scanned entries: 20
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## BetterQuesting-master-b2071223
+
+```text
+- File: BetterQuesting-master-b2071223.jar
+- Mod ID: BetterQuesting-master-b2071223
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 400
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: payload=39, packet=35, bytebuf=31, netty=31, sendtoserver=14, sendtoall=13, sendtoplayer=13, simpleimpl=5, networkregistry=4, imessage=4, imessagehandler=2, messagecontext=2
+- Client packet evidence:
+  - betterquesting/api/api/ApiReference.class: packet
+  - betterquesting/api/network/IPacketRegistry.class: packet
+  - betterquesting/api/network/IPacketSender.class: networkregistry
+  - betterquesting/api/network/IPacketSender.class: packet
+  - betterquesting/api/network/IPacketSender.class: sendtoall
+  - betterquesting/api/network/IPacketSender.class: sendtoplayer
+  - betterquesting/api/network/IPacketSender.class: sendtoserver
+  - betterquesting/api/placeholders/rewards/RewardPlaceholder.class: bytebuf
+  - betterquesting/api/placeholders/rewards/RewardPlaceholder.class: netty
+  - betterquesting/api/placeholders/tasks/TaskPlaceholder.class: bytebuf
+  - betterquesting/api/placeholders/tasks/TaskPlaceholder.class: netty
+  - betterquesting/api/questing/rewards/IReward.class: bytebuf
+  - betterquesting/api/questing/rewards/IReward.class: netty
+  - betterquesting/api/questing/tasks/ITask.class: bytebuf
+  - betterquesting/api/questing/tasks/ITask.class: netty
+  - betterquesting/client/gui2/editors/GuiPrerequisiteEditor.class: payload
+  - betterquesting/client/gui2/editors/GuiQuestEditor.class: payload
+  - betterquesting/client/gui2/editors/GuiQuestLineAddRemove.class: payload
+  - betterquesting/client/gui2/editors/GuiQuestLinesEditor.class: payload
+  - betterquesting/client/gui2/editors/GuiRewardEditor.class: payload
+- Network evidence:
+  - betterquesting/api/api/ApiReference.class: packet
+  - betterquesting/api/network/IPacketRegistry.class: packet
+  - betterquesting/api/network/IPacketSender.class: networkregistry
+  - betterquesting/api/network/IPacketSender.class: packet
+  - betterquesting/api/network/IPacketSender.class: sendtoall
+  - betterquesting/api/network/IPacketSender.class: sendtoplayer
+  - betterquesting/api/network/IPacketSender.class: sendtoserver
+  - betterquesting/api/network/QuestingPacket.class: packet
+  - betterquesting/api/network/QuestingPacket.class: payload
+  - betterquesting/api/placeholders/rewards/RewardPlaceholder.class: bytebuf
+  - betterquesting/api/placeholders/rewards/RewardPlaceholder.class: netty
+  - betterquesting/api/placeholders/tasks/TaskPlaceholder.class: bytebuf
+  - betterquesting/api/placeholders/tasks/TaskPlaceholder.class: netty
+  - betterquesting/api/properties/IPropertyType.class: bytebuf
+  - betterquesting/api/properties/IPropertyType.class: netty
+  - betterquesting/api/properties/basic/PropertyTypeBoolean.class: bytebuf
+  - betterquesting/api/properties/basic/PropertyTypeBoolean.class: netty
+  - betterquesting/api/properties/basic/PropertyTypeByte.class: bytebuf
+  - betterquesting/api/properties/basic/PropertyTypeByte.class: netty
+  - betterquesting/api/properties/basic/PropertyTypeDouble.class: bytebuf
+- Loliland server evidence:
+  - betterquesting/core/BetterQuesting.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## BetterSigns
+
+```text
+- File: BetterSigns-master-7c167d38.jar
+- Mod ID: BetterSigns
+- Version: 1.6.4.B ported
+- Authors: limito, Poersch
+- Scanned entries: 6
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=1, networkregistry=1
+- Client packet evidence:
+  - me/limito/bettersigns/BetterSigns.class: networkregistry
+  - me/limito/bettersigns/MGuiEditSign.class: packet
+- Network evidence:
+  - me/limito/bettersigns/BetterSigns.class: networkregistry
+  - me/limito/bettersigns/MGuiEditSign.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Binnie Core
+
+```text
+- File: binnie-mods-1.7.10-2.0.22.7.jar
+- Mod ID: BinnieCore
+- Version: 2.0.22.7
+- Authors: Binnie
+- Scanned entries: 1272
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: packet=53, simpleimpl=11, payload=9, bytebuf=8, netty=8, channel=7, imessage=6, sendtoplayer=5, messagecontext=5, spacket=3, sendtoserver=3, sendtoall=3
+- Client packet evidence:
+  - binnie/botany/Botany.class: channel
+  - binnie/botany/Botany.class: packet
+  - binnie/botany/network/PacketID.class: messagecontext
+  - binnie/botany/network/PacketID.class: packet
+  - binnie/botany/network/PacketID.class: simpleimpl
+  - binnie/core/AbstractMod.class: channel
+  - binnie/core/AbstractMod.class: networkregistry
+  - binnie/core/AbstractMod.class: packet
+  - binnie/core/AbstractMod.class: registermessage
+  - binnie/core/AbstractMod.class: simplechannel
+  - binnie/core/AbstractMod.class: simpleimpl
+  - binnie/core/BinnieCore.class: channel
+  - binnie/core/BinnieCore.class: networkregistry
+  - binnie/core/BinnieCore.class: packet
+  - binnie/core/craftgui/minecraft/ContainerCraftGUI.class: packet
+  - binnie/core/craftgui/minecraft/ContainerCraftGUI.class: sendtoplayer
+  - binnie/core/craftgui/minecraft/Window.class: packet
+  - binnie/core/craftgui/minecraft/Window.class: sendtoserver
+  - binnie/core/machines/Machine.class: imessage
+  - binnie/core/machines/Machine.class: packet
+- Network evidence:
+  - binnie/botany/Botany$PacketHandler.class: packet
+  - binnie/botany/Botany.class: channel
+  - binnie/botany/Botany.class: packet
+  - binnie/botany/flower/TileEntityFlower.class: imessage
+  - binnie/botany/flower/TileEntityFlower.class: packet
+  - binnie/botany/flower/TileEntityFlower.class: simpleimpl
+  - binnie/botany/network/MessageFlowerUpdate.class: bytebuf
+  - binnie/botany/network/MessageFlowerUpdate.class: netty
+  - binnie/botany/network/MessageFlowerUpdate.class: packet
+  - binnie/botany/network/PacketID.class: messagecontext
+  - binnie/botany/network/PacketID.class: packet
+  - binnie/botany/network/PacketID.class: simpleimpl
+  - binnie/core/AbstractMod.class: channel
+  - binnie/core/AbstractMod.class: networkregistry
+  - binnie/core/AbstractMod.class: packet
+  - binnie/core/AbstractMod.class: registermessage
+  - binnie/core/AbstractMod.class: simplechannel
+  - binnie/core/AbstractMod.class: simpleimpl
+  - binnie/core/BinnieCore$PacketHandler.class: packet
+  - binnie/core/BinnieCore.class: channel
+- Loliland server evidence:
+  - binnie/extrabees/apiary/EnumHiveFrame.class: loliland
+  - binnie/extrabees/apiary/ModuleApiary.class: loliland
+  - binnie/extrabees/products/ItemHoneyComb.class: loliland
+  - binnie/extrabees/worldgen/WorldGenHiveNether.class: loliland
+  - binnie/genetics/item/ModuleItem.class: loliland
+  - binnie/genetics/machine/ModuleMachine.class: loliland
+  - binnie/genetics/machine/acclimatiser/Acclimatiser.class: loliland
+  - binnie/genetics/machine/incubator/Incubator$8.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - binnie/extrabees/worldgen/WorldGenHiveNether.class
+```
+
+## BrandonsCore-1.0.0.12
+
+```text
+- File: BrandonsCore-1.0.0.12.jar
+- Mod ID: BrandonsCore-1.0.0.12
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 44
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=4, bytebuf=2, netty=2, imessage=2, simpleimpl=2, imessagehandler=1, messagecontext=1
+- Client packet evidence:
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: imessage
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: imessagehandler
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: messagecontext
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: packet
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: simpleimpl
+- Network evidence:
+  - com/brandon3055/brandonscore/common/utills/DataUtills.class: bytebuf
+  - com/brandon3055/brandonscore/common/utills/DataUtills.class: netty
+  - com/brandon3055/brandonscore/common/utills/Teleporter.class: packet
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: imessage
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: imessagehandler
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: messagecontext
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: packet
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class: simpleimpl
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Record.class: packet
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket.class: bytebuf
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket.class: imessage
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket.class: netty
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket.class: packet
+  - com/gamerforea/draconicevolution/network/TileMultiObjectPacket.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## CodeChickenCore-1.7.10-1.0.7.47
+
+```text
+- File: CodeChickenCore-1.7.10-1.0.7.47.jar
+- Mod ID: CodeChickenCore-1.7.10-1.0.7.47
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 79
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=2, bytebuf=1
+- Client packet evidence:
+  - codechicken/core/GuiModListScroll.class: bytebuf
+- Network evidence:
+  - codechicken/core/GuiModListScroll.class: bytebuf
+  - codechicken/core/IGuiPacketSender.class: packet
+  - codechicken/core/ServerUtils.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## CoFHCore-[1.7.10]3.1.4-329
+
+```text
+- File: CoFHCore-[1.7.10]3.1.4-329.jar
+- Mod ID: CoFHCore-[1.7.10]3.1.4-329
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 613
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: packet=44, channel=15, bytebuf=11, netty=10, sendtoserver=7, cpacket=5, payload=3, networkregistry=2, sendtoall=2, sendtoallaround=2, custompayload=1, packetbuffer=1
+- Client packet evidence:
+  - cofh/CoFHCore.class: networkregistry
+  - cofh/CoFHCore.class: packet
+  - cofh/core/Proxy.class: packet
+  - cofh/core/RegistryEnderAttuned$1.class: channel
+  - cofh/core/RegistryEnderAttuned$1.class: packet
+  - cofh/core/RegistryEnderAttuned$1.class: sendtoserver
+  - cofh/core/RegistryEnderAttuned$Packet.class: bytebuf
+  - cofh/core/RegistryEnderAttuned$Packet.class: channel
+  - cofh/core/RegistryEnderAttuned$Packet.class: netty
+  - cofh/core/RegistryEnderAttuned$Packet.class: packet
+  - cofh/core/RegistryEnderAttuned.class: channel
+  - cofh/core/RegistryEnderAttuned.class: packet
+  - cofh/core/RegistryEnderAttuned.class: sendtoserver
+  - cofh/core/RegistrySocial.class: packet
+  - cofh/core/block/TileCoFHBase.class: cpacket
+  - cofh/core/block/TileCoFHBase.class: packet
+  - cofh/core/block/TileCoFHBase.class: sendtoall
+  - cofh/core/block/TileCoFHBase.class: sendtoallaround
+  - cofh/core/block/TileCoFHBase.class: sendtoserver
+  - cofh/core/chat/ChatHelper.class: packet
+- Network evidence:
+  - cofh/CoFHCore.class: networkregistry
+  - cofh/CoFHCore.class: packet
+  - cofh/api/transport/IEnderAttuned.class: channel
+  - cofh/asm/CoFHAccessTransformer$LineReader.class: bytebuf
+  - cofh/core/Proxy.class: packet
+  - cofh/core/RegistryEnderAttuned$1.class: channel
+  - cofh/core/RegistryEnderAttuned$1.class: packet
+  - cofh/core/RegistryEnderAttuned$1.class: sendtoserver
+  - cofh/core/RegistryEnderAttuned$Packet.class: bytebuf
+  - cofh/core/RegistryEnderAttuned$Packet.class: channel
+  - cofh/core/RegistryEnderAttuned$Packet.class: netty
+  - cofh/core/RegistryEnderAttuned$Packet.class: packet
+  - cofh/core/RegistryEnderAttuned.class: channel
+  - cofh/core/RegistryEnderAttuned.class: packet
+  - cofh/core/RegistryEnderAttuned.class: sendtoserver
+  - cofh/core/RegistrySocial.class: packet
+  - cofh/core/block/TileCoFHBase.class: cpacket
+  - cofh/core/block/TileCoFHBase.class: packet
+  - cofh/core/block/TileCoFHBase.class: sendtoall
+  - cofh/core/block/TileCoFHBase.class: sendtoallaround
+- Loliland server evidence:
+  - cofh/asmhooks/block/BlockWater$LoliDimensionsProxy.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - cofh/asmhooks/block/BlockWater$LoliDimensionsProxy.class
+  - cofh/asmhooks/block/BlockWater.class
+```
+
+## ContainerWarden-master-a38f002f
+
+```text
+- File: ContainerWarden-master-a38f002f.jar
+- Mod ID: ContainerWarden-master-a38f002f
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 26
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: bytebuf=9, netty=9, imessage=4, simpleimpl=4, sendtoall=2, channel=2, fmlnetworkevent=1, imessagehandler=1, messagecontext=1, networkregistry=1, registermessage=1, simplechannel=1
+- Client packet evidence:
+  - com/gamerforea/containerwarden/client/ClientEventHandler.class: fmlnetworkevent
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: channel
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: imessage
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: networkregistry
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: registermessage
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: sendtoall
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: simplechannel
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: simpleimpl
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: imessage
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: imessagehandler
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: messagecontext
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: simpleimpl
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: bytebuf
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: imessage
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: netty
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: simpleimpl
+- Network evidence:
+  - com/gamerforea/containerwarden/ModConstants.class: channel
+  - com/gamerforea/containerwarden/client/ClientEventHandler.class: fmlnetworkevent
+  - com/gamerforea/containerwarden/command/CommandReload.class: imessage
+  - com/gamerforea/containerwarden/command/CommandReload.class: sendtoall
+  - com/gamerforea/containerwarden/command/CommandReload.class: simpleimpl
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: channel
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: imessage
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: networkregistry
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: registermessage
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: sendtoall
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: simplechannel
+  - com/gamerforea/containerwarden/network/NetworkUtils.class: simpleimpl
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: imessage
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: imessagehandler
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: messagecontext
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class: simpleimpl
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: bytebuf
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: imessage
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: netty
+  - com/gamerforea/containerwarden/network/RegistrySyncMessage.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## MineTweaker 3
+
+```text
+- File: CraftTweaker-spring-wipe-2026-cut-6845ed1b.jar
+- Mod ID: MineTweaker3
+- Version: ${version}
+- Authors: Stan Hebben
+- Scanned entries: 769
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=16, simpleimpl=15, imessage=14, spacket=8, bytebuf=7, netty=6, imessagehandler=6, messagecontext=6, channel=1, networkregistry=1, registermessage=1, simplechannel=1
+- Client packet evidence:
+  - minetweaker/mc1710/MineTweakerConfig.class: packet
+  - minetweaker/mc1710/MineTweakerMod.class: channel
+  - minetweaker/mc1710/MineTweakerMod.class: networkregistry
+  - minetweaker/mc1710/MineTweakerMod.class: packet
+  - minetweaker/mc1710/MineTweakerMod.class: registermessage
+  - minetweaker/mc1710/MineTweakerMod.class: simplechannel
+  - minetweaker/mc1710/MineTweakerMod.class: simpleimpl
+  - minetweaker/mc1710/MineTweakerMod.class: spacket
+  - minetweaker/mc1710/network/MTFastScriptsPacket.class: bytebuf
+  - minetweaker/mc1710/network/MTFastScriptsPacket.class: imessage
+  - minetweaker/mc1710/network/MTFastScriptsPacket.class: netty
+  - minetweaker/mc1710/network/MTFastScriptsPacket.class: packet
+  - minetweaker/mc1710/network/MTFastScriptsPacket.class: simpleimpl
+  - minetweaker/mc1710/network/MTFastScriptsPacket.class: spacket
+  - minetweaker/mc1710/network/MTFastScriptsRequestPacket$CHandler.class: imessage
+  - minetweaker/mc1710/network/MTFastScriptsRequestPacket$CHandler.class: imessagehandler
+  - minetweaker/mc1710/network/MTFastScriptsRequestPacket$CHandler.class: messagecontext
+  - minetweaker/mc1710/network/MTFastScriptsRequestPacket$CHandler.class: packet
+  - minetweaker/mc1710/network/MTFastScriptsRequestPacket$CHandler.class: simpleimpl
+  - minetweaker/mc1710/network/MTFastScriptsRequestPacket.class: bytebuf
+- Network evidence:
+  - minetweaker/mc1710/FMLEventHandler.class: imessage
+  - minetweaker/mc1710/FMLEventHandler.class: packet
+  - minetweaker/mc1710/FMLEventHandler.class: simpleimpl
+  - minetweaker/mc1710/FMLEventHandler.class: spacket
+  - minetweaker/mc1710/MCPlatformFunctions.class: imessage
+  - minetweaker/mc1710/MCPlatformFunctions.class: packet
+  - minetweaker/mc1710/MCPlatformFunctions.class: sendtoall
+  - minetweaker/mc1710/MCPlatformFunctions.class: simpleimpl
+  - minetweaker/mc1710/MCPlatformFunctions.class: spacket
+  - minetweaker/mc1710/MineTweakerConfig.class: packet
+  - minetweaker/mc1710/MineTweakerMod.class: channel
+  - minetweaker/mc1710/MineTweakerMod.class: networkregistry
+  - minetweaker/mc1710/MineTweakerMod.class: packet
+  - minetweaker/mc1710/MineTweakerMod.class: registermessage
+  - minetweaker/mc1710/MineTweakerMod.class: simplechannel
+  - minetweaker/mc1710/MineTweakerMod.class: simpleimpl
+  - minetweaker/mc1710/MineTweakerMod.class: spacket
+  - minetweaker/mc1710/network/MTFastScriptsPacket$CHandler.class: imessage
+  - minetweaker/mc1710/network/MTFastScriptsPacket$CHandler.class: imessagehandler
+  - minetweaker/mc1710/network/MTFastScriptsPacket$CHandler.class: messagecontext
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## CreativeCore-master-74e33014
+
+```text
+- File: CreativeCore-master-74e33014.jar
+- Mod ID: CreativeCore-master-74e33014
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 144
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=21, bytebuf=9, netty=9, simpleimpl=4, spacket=3, imessage=3, sendtoall=1, sendtoserver=1, imessagehandler=1, messagecontext=1, channel=1, networkregistry=1
+- Client packet evidence:
+  - com/creativemd/creativecore/common/container/slot/ContainerControl.class: packet
+  - com/creativemd/creativecore/common/gui/GuiHandler.class: packet
+  - com/creativemd/creativecore/common/gui/SubGui.class: packet
+  - com/creativemd/creativecore/common/gui/SubGui.class: spacket
+  - com/creativemd/creativecore/common/gui/controls/container/GuiSlotControl.class: packet
+  - com/creativemd/creativecore/common/gui/premade/SubGuiDialog.class: packet
+  - com/creativemd/creativecore/common/gui/premade/SubGuiDialog.class: spacket
+  - com/creativemd/creativecore/common/packet/BlockUpdatePacket.class: bytebuf
+  - com/creativemd/creativecore/common/packet/BlockUpdatePacket.class: netty
+  - com/creativemd/creativecore/common/packet/BlockUpdatePacket.class: packet
+  - com/creativemd/creativecore/common/packet/ContainerControlUpdatePacket.class: bytebuf
+  - com/creativemd/creativecore/common/packet/ContainerControlUpdatePacket.class: netty
+  - com/creativemd/creativecore/common/packet/ContainerControlUpdatePacket.class: packet
+  - com/creativemd/creativecore/common/packet/CreativeCorePacket.class: bytebuf
+  - com/creativemd/creativecore/common/packet/CreativeCorePacket.class: netty
+  - com/creativemd/creativecore/common/packet/CreativeCorePacket.class: packet
+  - com/creativemd/creativecore/common/packet/GuiControlPacket.class: bytebuf
+  - com/creativemd/creativecore/common/packet/GuiControlPacket.class: netty
+  - com/creativemd/creativecore/common/packet/GuiControlPacket.class: packet
+  - com/creativemd/creativecore/common/packet/GuiLayerPacket.class: bytebuf
+- Network evidence:
+  - com/creativemd/creativecore/common/container/SubContainer.class: packet
+  - com/creativemd/creativecore/common/container/SubContainer.class: spacket
+  - com/creativemd/creativecore/common/container/slot/ContainerControl.class: packet
+  - com/creativemd/creativecore/common/gui/GuiHandler.class: packet
+  - com/creativemd/creativecore/common/gui/SubGui.class: packet
+  - com/creativemd/creativecore/common/gui/SubGui.class: spacket
+  - com/creativemd/creativecore/common/gui/controls/container/GuiSlotControl.class: packet
+  - com/creativemd/creativecore/common/gui/premade/SubContainerControl.class: packet
+  - com/creativemd/creativecore/common/gui/premade/SubContainerDialog.class: packet
+  - com/creativemd/creativecore/common/gui/premade/SubGuiDialog.class: packet
+  - com/creativemd/creativecore/common/gui/premade/SubGuiDialog.class: spacket
+  - com/creativemd/creativecore/common/packet/BlockUpdatePacket.class: bytebuf
+  - com/creativemd/creativecore/common/packet/BlockUpdatePacket.class: netty
+  - com/creativemd/creativecore/common/packet/BlockUpdatePacket.class: packet
+  - com/creativemd/creativecore/common/packet/ContainerControlUpdatePacket.class: bytebuf
+  - com/creativemd/creativecore/common/packet/ContainerControlUpdatePacket.class: netty
+  - com/creativemd/creativecore/common/packet/ContainerControlUpdatePacket.class: packet
+  - com/creativemd/creativecore/common/packet/CreativeCorePacket.class: bytebuf
+  - com/creativemd/creativecore/common/packet/CreativeCorePacket.class: netty
+  - com/creativemd/creativecore/common/packet/CreativeCorePacket.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## DecorativeAPI
+
+```text
+- File: DecorativeAPI-1.1.1-client.jar
+- Mod ID: decorativeapi
+- Version: 1.1.1
+- Authors: Aizistral
+- Scanned entries: 28
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## DivineRPG
+
+```text
+- File: DivineRPG-1.4.1.5.jar
+- Mod ID: divinerpg
+- Version: 1.4.1.4
+- Authors: Eternaldoom, RadioactiveStud, XolovA
+- Scanned entries: 985
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: simpleimpl=7, imessage=7, packet=6, networkregistry=2, imessagehandler=2, messagecontext=2, bytebuf=2, netty=2, custompayload=1, payload=1, channel=1, registermessage=1
+- Client packet evidence:
+  - net/divinerpg/DivineRPG.class: channel
+  - net/divinerpg/DivineRPG.class: networkregistry
+  - net/divinerpg/DivineRPG.class: registermessage
+  - net/divinerpg/DivineRPG.class: simplechannel
+  - net/divinerpg/DivineRPG.class: simpleimpl
+  - net/divinerpg/blocks/vanilla/container/tileentity/TileEntityAyeracoBeam.class: packet
+  - net/divinerpg/client/render/gui/GuiDivineMerchant.class: custompayload
+  - net/divinerpg/client/render/gui/GuiDivineMerchant.class: packet
+  - net/divinerpg/client/render/gui/GuiDivineMerchant.class: payload
+  - net/divinerpg/entities/base/EntityDivineArrow.class: packet
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: imessage
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: imessagehandler
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: messagecontext
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: simpleimpl
+  - net/divinerpg/utils/proxies/CommonProxy.class: networkregistry
+- Network evidence:
+  - net/divinerpg/DivineRPG.class: channel
+  - net/divinerpg/DivineRPG.class: networkregistry
+  - net/divinerpg/DivineRPG.class: registermessage
+  - net/divinerpg/DivineRPG.class: simplechannel
+  - net/divinerpg/DivineRPG.class: simpleimpl
+  - net/divinerpg/blocks/vanilla/container/tileentity/TileEntityAyeracoBeam.class: packet
+  - net/divinerpg/blocks/vethea/container/tileentity/TileEntityDreamLamp.class: packet
+  - net/divinerpg/client/render/gui/GuiDivineMerchant.class: custompayload
+  - net/divinerpg/client/render/gui/GuiDivineMerchant.class: packet
+  - net/divinerpg/client/render/gui/GuiDivineMerchant.class: payload
+  - net/divinerpg/entities/base/EntityDivineArrow.class: packet
+  - net/divinerpg/entities/twilight/projectile/EntityEternalArcherArrow.class: packet
+  - net/divinerpg/items/arcana/ItemDivineAccumulator.class: imessage
+  - net/divinerpg/items/arcana/ItemDivineAccumulator.class: simpleimpl
+  - net/divinerpg/items/vanilla/ItemTeleportationCrystal.class: packet
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: imessage
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: imessagehandler
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: messagecontext
+  - net/divinerpg/network/MessageArcanaBar$Handler.class: simpleimpl
+  - net/divinerpg/network/MessageArcanaBar.class: bytebuf
+- Loliland server evidence:
+  - com/gamerforea/divinerpg/util/LoliDimensionsIntegration.class: loliland
+  - net/divinerpg/blocks/base/tileentity/TileEntityModFurnace.class: loliland
+  - net/divinerpg/dimensions/vanilla/DivineWorldgen.class: loliland
+  - net/divinerpg/dimensions/vanilla/WorldGenHut.class: loliland
+  - net/divinerpg/dimensions/vanilla/WorldGenOres.class: loliland
+  - net/divinerpg/entities/vanilla/EntityHellPig.class: loliland
+  - net/divinerpg/entities/vanilla/EntityHellSpider.class: loliland
+  - net/divinerpg/entities/vanilla/EntityJackOMan.class: loliland
+  - net/divinerpg/entities/vanilla/EntityLivestockMerchant.class: loliland
+  - net/divinerpg/items/base/ItemShickaxe.class: loliland
+  - net/divinerpg/utils/recipes/VanillaRecipeHelper.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - com/gamerforea/divinerpg/util/LoliDimensionsIntegration.class
+  - net/divinerpg/utils/DimensionHelper.class
+```
+
+## Draconic-Evolution-1.7.10-1.0.2h
+
+```text
+- File: Draconic-Evolution-1.7.10-1.0.2h.jar
+- Mod ID: Draconic-Evolution-1.7.10-1.0.2h
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 316
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=67, simpleimpl=48, imessage=46, imessagehandler=15, messagecontext=15, bytebuf=15, netty=15, sendtoserver=14, networkregistry=7, sendtoall=3, sendtoallaround=3, channel=2
+- Client packet evidence:
+  - com/brandon3055/draconicevolution/DraconicEvolution.class: channel
+  - com/brandon3055/draconicevolution/DraconicEvolution.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GuiHandler.class: networkregistry
+  - com/brandon3055/draconicevolution/client/gui/componentguis/GUIToolConfig.class: imessage
+- Network evidence:
+  - com/brandon3055/draconicevolution/DraconicEvolution.class: channel
+  - com/brandon3055/draconicevolution/DraconicEvolution.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUIDissEnchanter.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUIParticleGenerator.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUIPlayerDetector.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: imessage
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: packet
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: sendtoserver
+  - com/brandon3055/draconicevolution/client/gui/GUITeleporter.class: simpleimpl
+  - com/brandon3055/draconicevolution/client/gui/GuiHandler.class: networkregistry
+  - com/brandon3055/draconicevolution/client/gui/componentguis/GUIToolConfig.class: imessage
+- Loliland server evidence:
+  - com/brandon3055/draconicevolution/api/DraconicEvolutionTags$Blocks.class: loliland
+  - com/brandon3055/draconicevolution/api/DraconicEvolutionTags$Items.class: loliland
+  - com/brandon3055/draconicevolution/common/blocks/CustomSpawner.class: loliland
+  - com/brandon3055/draconicevolution/common/blocks/multiblock/InvisibleMultiblock.class: loliland
+  - com/brandon3055/draconicevolution/common/handler/CraftingHandler.class: loliland
+  - com/brandon3055/draconicevolution/common/inventory/SlotItemValid.class: loliland
+  - com/brandon3055/draconicevolution/common/items/tools/baseclasses/ToolHandler.class: loliland
+  - com/brandon3055/draconicevolution/common/tileentities/TileGrinder.class: loliland
+  - com/brandon3055/draconicevolution/common/tileentities/multiblocktiles/TileEnergyStorageCore.class: loliland
+  - com/brandon3055/draconicevolution/common/tileentities/multiblocktiles/TileInvisibleMultiblock.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## EnderCore-1.7.10-0.2.0.39_beta
+
+```text
+- File: EnderCore-1.7.10-0.2.0.39_beta.jar
+- Mod ID: EnderCore-1.7.10-0.2.0.39_beta
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 241
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=16, imessage=13, simpleimpl=13, bytebuf=8, netty=8, messagecontext=6, imessagehandler=5, sendtoserver=2, sendtoall=2, sendtoallaround=2, spacket=1, fmlnetworkevent=1
+- Client packet evidence:
+  - com/enderio/core/EnderCore.class: packet
+  - com/enderio/core/client/gui/widget/GhostSlot.class: imessage
+  - com/enderio/core/client/gui/widget/GhostSlot.class: packet
+  - com/enderio/core/client/gui/widget/GhostSlot.class: sendtoserver
+  - com/enderio/core/client/gui/widget/GhostSlot.class: simpleimpl
+  - com/enderio/core/common/config/ConfigProcessor.class: fmlnetworkevent
+  - com/enderio/core/common/config/ConfigProcessor.class: imessage
+  - com/enderio/core/common/config/ConfigProcessor.class: packet
+  - com/enderio/core/common/config/ConfigProcessor.class: simpleimpl
+  - com/enderio/core/common/network/EnderPacketHandler.class: imessage
+  - com/enderio/core/common/network/EnderPacketHandler.class: networkregistry
+  - com/enderio/core/common/network/EnderPacketHandler.class: packet
+  - com/enderio/core/common/network/EnderPacketHandler.class: registermessage
+  - com/enderio/core/common/network/EnderPacketHandler.class: sendtoall
+  - com/enderio/core/common/network/EnderPacketHandler.class: sendtoallaround
+  - com/enderio/core/common/network/EnderPacketHandler.class: sendtoserver
+  - com/enderio/core/common/network/EnderPacketHandler.class: simpleimpl
+  - com/enderio/core/common/network/PacketProgress$Handler.class: imessage
+  - com/enderio/core/common/network/PacketProgress$Handler.class: imessagehandler
+  - com/enderio/core/common/network/PacketProgress$Handler.class: messagecontext
+- Network evidence:
+  - com/enderio/core/EnderCore.class: packet
+  - com/enderio/core/client/gui/widget/GhostSlot.class: imessage
+  - com/enderio/core/client/gui/widget/GhostSlot.class: packet
+  - com/enderio/core/client/gui/widget/GhostSlot.class: sendtoserver
+  - com/enderio/core/client/gui/widget/GhostSlot.class: simpleimpl
+  - com/enderio/core/common/TileEntityEnder.class: imessage
+  - com/enderio/core/common/TileEntityEnder.class: packet
+  - com/enderio/core/common/TileEntityEnder.class: sendtoall
+  - com/enderio/core/common/TileEntityEnder.class: sendtoallaround
+  - com/enderio/core/common/TileEntityEnder.class: simpleimpl
+  - com/enderio/core/common/TileEntityEnder.class: spacket
+  - com/enderio/core/common/config/ConfigProcessor.class: fmlnetworkevent
+  - com/enderio/core/common/config/ConfigProcessor.class: imessage
+  - com/enderio/core/common/config/ConfigProcessor.class: packet
+  - com/enderio/core/common/config/ConfigProcessor.class: simpleimpl
+  - com/enderio/core/common/config/PacketConfigSync$Handler.class: imessage
+  - com/enderio/core/common/config/PacketConfigSync$Handler.class: imessagehandler
+  - com/enderio/core/common/config/PacketConfigSync$Handler.class: messagecontext
+  - com/enderio/core/common/config/PacketConfigSync$Handler.class: packet
+  - com/enderio/core/common/config/PacketConfigSync$Handler.class: simpleimpl
+- Loliland server evidence:
+  - com/enderio/core/common/tweaks/SlabRecipes.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## EnderIO-1.7.10-2.3.0.429_beta
+
+```text
+- File: EnderIO-1.7.10-2.3.0.429_beta.jar
+- Mod ID: EnderIO-1.7.10-2.3.0.429_beta
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 1151
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=225, simpleimpl=206, imessage=178, bytebuf=96, netty=96, messagecontext=93, imessagehandler=87, sendtoserver=61, channel=42, registermessage=35, sendtoall=25, sendtoallaround=22
+- Client packet evidence:
+  - crazypants/enderio/EnderIO.class: channel
+  - crazypants/enderio/EnderIO.class: networkregistry
+  - crazypants/enderio/EnderIO.class: packet
+  - crazypants/enderio/EnderIO.class: registermessage
+  - crazypants/enderio/EnderIO.class: simpleimpl
+  - crazypants/enderio/conduit/BlockConduitBundle.class: packet
+  - crazypants/enderio/conduit/BlockConduitBundle.class: registermessage
+  - crazypants/enderio/conduit/BlockConduitBundle.class: simpleimpl
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: bytebuf
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: imessage
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: imessagehandler
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: messagecontext
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: netty
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: packet
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: simpleimpl
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: imessage
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: packet
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: sendtoserver
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: simpleimpl
+  - crazypants/enderio/conduit/gui/ExternalConnectionContainer.class: imessage
+- Network evidence:
+  - crazypants/enderio/EnderIO.class: channel
+  - crazypants/enderio/EnderIO.class: networkregistry
+  - crazypants/enderio/EnderIO.class: packet
+  - crazypants/enderio/EnderIO.class: registermessage
+  - crazypants/enderio/EnderIO.class: simpleimpl
+  - crazypants/enderio/conduit/BlockConduitBundle.class: packet
+  - crazypants/enderio/conduit/BlockConduitBundle.class: registermessage
+  - crazypants/enderio/conduit/BlockConduitBundle.class: simpleimpl
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: bytebuf
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: imessage
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: imessagehandler
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: messagecontext
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: netty
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: packet
+  - crazypants/enderio/conduit/gas/PacketGasLevel.class: simpleimpl
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: imessage
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: packet
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: sendtoserver
+  - crazypants/enderio/conduit/gui/BaseSettingsPanel.class: simpleimpl
+  - crazypants/enderio/conduit/gui/ExternalConnectionContainer.class: imessage
+- Loliland server evidence:
+  - crazypants/enderio/ClientProxy.class: loliland
+  - crazypants/enderio/EnderIO.class: loliland
+  - crazypants/enderio/entity/EntityWitherSkeleton.class: loliland
+  - crazypants/enderio/item/darksteel/ItemDarkSteelSword.class: loliland
+  - crazypants/enderio/machine/MachineRecipes.class: loliland
+  - crazypants/enderio/machine/farm/FarmersRegistry.class: loliland
+  - crazypants/enderio/machine/farm/farmers/NetherWartFarmer.class: loliland
+  - crazypants/enderio/machine/farm/farmers/PlantableFarmer.class: loliland
+  - crazypants/enderio/machine/painter/BasicPainterTemplate.class: loliland
+  - crazypants/enderio/machine/painter/BlockPaintedFence$PainterTemplate.class: loliland
+  - crazypants/enderio/machine/painter/BlockPaintedGlowstone$PainterTemplate.class: loliland
+  - crazypants/enderio/machine/painter/BlockPaintedSlab$PainterTemplate.class: loliland
+  - crazypants/enderio/machine/recipe/RecipeConfigParser.class: loliland
+  - crazypants/enderio/material/MaterialRecipes.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## EventHelper-master-de330be3
+
+```text
+- File: EventHelper-master-de330be3.jar
+- Mod ID: EventHelper-master-de330be3
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 200
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: netty=19, bytebuf=17, channel=6, imessage=4, simpleimpl=4, sendtoall=2, packet=1, fmlnetworkevent=1, networkregistry=1, registermessage=1, simplechannel=1, imessagehandler=1
+- Client packet evidence:
+  - com/gamerforea/eventhelper/client/ClientEventHandler.class: fmlnetworkevent
+  - com/gamerforea/eventhelper/config/ConfigInstance$OptionInstance.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigInstance$OptionInstance.class: netty
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: imessage
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: netty
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: sendtoall
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: simpleimpl
+  - com/gamerforea/eventhelper/config/ConfigManager.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigManager.class: netty
+  - com/gamerforea/eventhelper/config/ConfigUtils.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigUtils.class: netty
+  - com/gamerforea/eventhelper/config/NetworkListener.class: bytebuf
+  - com/gamerforea/eventhelper/config/NetworkListener.class: netty
+  - com/gamerforea/eventhelper/config/OptionSerializer$SimpleOptionSerializer.class: bytebuf
+  - com/gamerforea/eventhelper/config/OptionSerializer$SimpleOptionSerializer.class: netty
+  - com/gamerforea/eventhelper/config/OptionSerializer.class: bytebuf
+  - com/gamerforea/eventhelper/config/OptionSerializer.class: netty
+  - com/gamerforea/eventhelper/config/OptionSerializers$ArraySerializer.class: bytebuf
+  - com/gamerforea/eventhelper/config/OptionSerializers$ArraySerializer.class: netty
+- Network evidence:
+  - com/gamerforea/corehooks/ChannelLockProvider$DummyChannelLockProvider.class: channel
+  - com/gamerforea/corehooks/ChannelLockProvider$DummyChannelLockProvider.class: netty
+  - com/gamerforea/corehooks/ChannelLockProvider$DummyLock.class: channel
+  - com/gamerforea/corehooks/ChannelLockProvider.class: channel
+  - com/gamerforea/corehooks/service/IChannelLockProvider.class: channel
+  - com/gamerforea/corehooks/service/IChannelLockProvider.class: netty
+  - com/gamerforea/eventhelper/ModConstants.class: channel
+  - com/gamerforea/eventhelper/client/ClientEventHandler.class: fmlnetworkevent
+  - com/gamerforea/eventhelper/config/ConfigInstance$OptionInstance.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigInstance$OptionInstance.class: netty
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: imessage
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: netty
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: sendtoall
+  - com/gamerforea/eventhelper/config/ConfigInstance.class: simpleimpl
+  - com/gamerforea/eventhelper/config/ConfigManager.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigManager.class: netty
+  - com/gamerforea/eventhelper/config/ConfigUtils.class: bytebuf
+  - com/gamerforea/eventhelper/config/ConfigUtils.class: netty
+  - com/gamerforea/eventhelper/config/NetworkListener.class: bytebuf
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## ExtraTiC
+
+```text
+- File: ExtraTiC-1.7.10-1.4.6.jar
+- Mod ID: ExtraTiC
+- Version: 1.4.6
+- Authors: Glassmaker
+- Scanned entries: 176
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: networkregistry=1
+- Client packet evidence:
+  - glassmaker/extratic/ExtraTiC.class: networkregistry
+- Network evidence:
+  - glassmaker/extratic/ExtraTiC.class: networkregistry
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Extra Utilities
+
+```text
+- File: extrautilities-1.2.12.jar
+- Mod ID: ExtraUtilities
+- Version: 1.2.12
+- Authors: RWTema
+- Scanned entries: 555
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=69, netty=27, bytebuf=25, channel=24, networkregistry=5, sendtoall=3, sendtoallaround=2, cpacket=2, simplechannel=2, payload=1, packetbuffer=1
+- Client packet evidence:
+  - com/rwtema/extrautils/CommandTPSTimer.class: packet
+  - com/rwtema/extrautils/ExtraUtils.class: networkregistry
+  - com/rwtema/extrautils/ExtraUtils.class: packet
+  - com/rwtema/extrautils/ExtraUtilsClient.class: packet
+  - com/rwtema/extrautils/ExtraUtilsProxy.class: packet
+  - com/rwtema/extrautils/block/BlockColor.class: packet
+  - com/rwtema/extrautils/block/BlockDrum.class: packet
+  - com/rwtema/extrautils/block/BlockSoundMuffler.class: packet
+  - com/rwtema/extrautils/block/BlockTradingPost.class: packet
+  - com/rwtema/extrautils/command/CommandDumpTextureSheet.class: bytebuf
+  - com/rwtema/extrautils/dynamicgui/DynamicContainer.class: packet
+  - com/rwtema/extrautils/dynamicgui/IWidget.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetDescPacket.class: cpacket
+  - com/rwtema/extrautils/dynamicgui/WidgetDescPacket.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetEnergy.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetProgressArrow.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetSlot.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetSlotDisablable.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetTank.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetText.class: packet
+- Network evidence:
+  - com/rwtema/extrautils/CommandTPSTimer.class: packet
+  - com/rwtema/extrautils/EventHandlerServer.class: packet
+  - com/rwtema/extrautils/EventHandlerSiege.class: packet
+  - com/rwtema/extrautils/ExtraUtils.class: networkregistry
+  - com/rwtema/extrautils/ExtraUtils.class: packet
+  - com/rwtema/extrautils/ExtraUtilsClient.class: packet
+  - com/rwtema/extrautils/ExtraUtilsProxy.class: packet
+  - com/rwtema/extrautils/block/BlockColor.class: packet
+  - com/rwtema/extrautils/block/BlockDrum.class: packet
+  - com/rwtema/extrautils/block/BlockSoundMuffler.class: packet
+  - com/rwtema/extrautils/block/BlockTradingPost.class: packet
+  - com/rwtema/extrautils/command/CommandDumpTextureSheet.class: bytebuf
+  - com/rwtema/extrautils/command/Texture.class: bytebuf
+  - com/rwtema/extrautils/dynamicgui/DynamicContainer.class: packet
+  - com/rwtema/extrautils/dynamicgui/IWidget.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetBase.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetDescPacket.class: cpacket
+  - com/rwtema/extrautils/dynamicgui/WidgetDescPacket.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetEnergy.class: packet
+  - com/rwtema/extrautils/dynamicgui/WidgetProgressArrow.class: packet
+- Loliland server evidence:
+  - com/rwtema/extrautils/EventHandlerServer.class: loliland
+  - com/rwtema/extrautils/EventHandlerSiege.class: loliland
+  - com/rwtema/extrautils/ExtraUtils.class: loliland
+  - com/rwtema/extrautils/block/BlockChandelier.class: loliland
+  - com/rwtema/extrautils/block/BlockColor.class: loliland
+  - com/rwtema/extrautils/block/BlockEnderLily.class: loliland
+  - com/rwtema/extrautils/modintegration/TE4IMC.class: loliland
+  - com/rwtema/extrautils/tileentity/enderquarry/TileEntityEnderQuarry.class: loliland
+  - com/rwtema/extrautils/tileentity/generators/BlockGenerator.class: loliland
+  - com/rwtema/extrautils/tileentity/generators/TileEntityGeneratorNether.class: loliland
+  - com/rwtema/extrautils/tileentity/transfernodes/TileEntityTransferNodeUpgradeInventory.class: loliland
+  - com/rwtema/extrautils/worldgen/WorldGenEnderLillies.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## FastInventories-master-bedd4cde
+
+```text
+- File: FastInventories-master-bedd4cde.jar
+- Mod ID: FastInventories-master-bedd4cde
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 36
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## FlatBedrock-master-a3582c52
+
+```text
+- File: FlatBedrock-master-a3582c52.jar
+- Mod ID: FlatBedrock-master-a3582c52
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 12
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Forestry for Minecraft
+
+```text
+- File: forestry_1.7.10-4.2.16.64.jar
+- Mod ID: Forestry
+- Version: 4.2.16.64
+- Authors: SirSengir
+- Scanned entries: 1541
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=114, sendtoserver=12, sendtoplayer=9, netty=3, bytebuf=2, networkregistry=2, channel=1, fmlnetworkevent=1, payload=1
+- Client packet evidence:
+  - com/gamerforea/forestry/network/packets/PacketBeeLogicTileEntityRequest.class: packet
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActive.class: packet
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActive.class: sendtoserver
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActiveEntity.class: packet
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActiveEntity.class: sendtoserver
+  - com/gamerforea/forestry/network/packets/PacketLightGuiUpdate.class: packet
+  - forestry/apiculture/BeekeepingLogic.class: packet
+  - forestry/apiculture/BeekeepingLogic.class: sendtoplayer
+  - forestry/apiculture/entities/EntityMinecartBeeHousingBase.class: packet
+  - forestry/apiculture/entities/EntityMinecartBeeHousingBase.class: sendtoserver
+  - forestry/apiculture/gui/ContainerAlveary.class: packet
+  - forestry/apiculture/gui/ContainerBeeHousing.class: packet
+  - forestry/apiculture/gui/ContainerMinecartBeehouse.class: packet
+  - forestry/apiculture/items/HabitatLocatorLogic.class: packet
+  - forestry/apiculture/items/HabitatLocatorLogic.class: sendtoplayer
+  - forestry/apiculture/multiblock/AlvearyController.class: packet
+  - forestry/apiculture/multiblock/TileAlvearyClimatiser.class: packet
+  - forestry/apiculture/multiblock/TileAlvearySwarmer.class: packet
+  - forestry/apiculture/network/PacketRegistryApiculture.class: packet
+  - forestry/apiculture/network/packets/PacketActiveUpdate.class: packet
+- Network evidence:
+  - com/gamerforea/forestry/network/packets/PacketBeeLogicTileEntityRequest.class: packet
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActive.class: packet
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActive.class: sendtoserver
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActiveEntity.class: packet
+  - com/gamerforea/forestry/network/packets/PacketLightBeeLogicActiveEntity.class: sendtoserver
+  - com/gamerforea/forestry/network/packets/PacketLightGuiUpdate.class: packet
+  - forestry/Forestry.class: networkregistry
+  - forestry/Forestry.class: packet
+  - forestry/api/multiblock/IMultiblockLogic.class: packet
+  - forestry/api/multiblock/MultiblockTileEntityBase.class: packet
+  - forestry/apiculture/BeekeepingLogic.class: packet
+  - forestry/apiculture/BeekeepingLogic.class: sendtoplayer
+  - forestry/apiculture/entities/EntityMinecartBeeHousingBase.class: packet
+  - forestry/apiculture/entities/EntityMinecartBeeHousingBase.class: sendtoserver
+  - forestry/apiculture/gui/ContainerAlveary.class: packet
+  - forestry/apiculture/gui/ContainerBeeHousing.class: packet
+  - forestry/apiculture/gui/ContainerMinecartBeehouse.class: packet
+  - forestry/apiculture/items/HabitatLocatorLogic.class: packet
+  - forestry/apiculture/items/HabitatLocatorLogic.class: sendtoplayer
+  - forestry/apiculture/multiblock/AlvearyController.class: packet
+- Loliland server evidence:
+  - forestry/apiculture/genetics/BeeDefinition$16.class: loliland
+  - forestry/farming/FarmHelper.class: loliland
+  - forestry/farming/logic/FarmLogicEnder.class: loliland
+  - forestry/farming/logic/FarmLogicInfernal.class: loliland
+  - forestry/plugins/PluginApiculture.class: loliland
+  - forestry/plugins/PluginArboriculture.class: loliland
+  - forestry/plugins/PluginFactory.class: loliland
+  - forestry/plugins/PluginFarming.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Galacticraft Planets
+
+```text
+- File: Galacticraft-Planets-1.7-3.0.12.504.jar
+- Mod ID: GalacticraftMars
+- Version: 3.0.12
+- Authors: micdoodle8, radfast, fishtaco
+- Scanned entries: 287
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=41, channel=28, sendtoserver=15, bytebuf=7, netty=7, networkregistry=3, sendtoall=2, sendtoallaround=2
+- Client packet evidence:
+  - micdoodle8/mods/galacticraft/planets/GalacticraftPlanets.class: networkregistry
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiAstroMinerDock.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiAstroMinerDock.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiAstroMinerDock.class: sendtoserver
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiShortRangeTelepad.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiShortRangeTelepad.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiShortRangeTelepad.class: sendtoserver
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: bytebuf
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: netty
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: sendtoserver
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: networkregistry
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: sendtoall
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: sendtoallaround
+  - micdoodle8/mods/galacticraft/planets/asteroids/network/PacketSimpleAsteroids$EnumSimplePacketAsteroids.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/network/PacketSimpleAsteroids.class: bytebuf
+  - micdoodle8/mods/galacticraft/planets/asteroids/network/PacketSimpleAsteroids.class: channel
+- Network evidence:
+  - micdoodle8/mods/galacticraft/planets/GalacticraftPlanets.class: networkregistry
+  - micdoodle8/mods/galacticraft/planets/asteroids/AsteroidsModule.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/AsteroidsModule.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiAstroMinerDock.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiAstroMinerDock.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiAstroMinerDock.class: sendtoserver
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiShortRangeTelepad.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiShortRangeTelepad.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/client/gui/GuiShortRangeTelepad.class: sendtoserver
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: bytebuf
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: netty
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityAstroMiner.class: sendtoserver
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: channel
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: networkregistry
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: packet
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: sendtoall
+  - micdoodle8/mods/galacticraft/planets/asteroids/entities/EntityGrapple.class: sendtoallaround
+  - micdoodle8/mods/galacticraft/planets/asteroids/inventory/SlotSchematicAstroMiner.class: channel
+- Loliland server evidence:
+  - micdoodle8/mods/galacticraft/planets/asteroids/items/ItemCanisterLiquidNitrogen.class: loliland
+  - micdoodle8/mods/galacticraft/planets/asteroids/recipe/RecipeManagerAsteroids.class: loliland
+  - micdoodle8/mods/galacticraft/planets/asteroids/world/gen/ChunkProviderAsteroids.class: loliland
+  - micdoodle8/mods/galacticraft/planets/mars/world/gen/dungeon/RoomBossMars.class: loliland
+  - micdoodle8/mods/galacticraft/planets/mars/world/gen/dungeon/RoomTreasureMars.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Galacticraft Core
+
+```text
+- File: GalacticraftCore-1.7-3.0.12.504.jar
+- Mod ID: GalacticraftCore
+- Version: 3.0.12
+- Authors: micdoodle8, radfast, fishtaco
+- Scanned entries: 733
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=86, channel=68, sendtoserver=39, netty=25, bytebuf=23, sendtoall=14, networkregistry=13, sendtoallaround=11, handshake=3, fmlnetworkevent=2, spacket=2, payload=1
+- Client packet evidence:
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: bytebuf
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: channel
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: netty
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: packet
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: sendtoserver
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: bytebuf
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: channel
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: netty
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: packet
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: bytebuf
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: channel
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: netty
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: packet
+  - micdoodle8/mods/galacticraft/core/GalacticraftCore.class: channel
+  - micdoodle8/mods/galacticraft/core/GalacticraftCore.class: networkregistry
+  - micdoodle8/mods/galacticraft/core/GalacticraftCore.class: packet
+  - micdoodle8/mods/galacticraft/core/blocks/BlockScreen.class: channel
+  - micdoodle8/mods/galacticraft/core/client/SkyProviderMoon.class: channel
+  - micdoodle8/mods/galacticraft/core/client/SkyProviderMoon.class: packet
+  - micdoodle8/mods/galacticraft/core/client/SkyProviderMoon.class: sendtoserver
+- Network evidence:
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: bytebuf
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: channel
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: netty
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: packet
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityAutoRocket.class: sendtoserver
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: bytebuf
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: channel
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: netty
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntitySpaceshipBase.class: packet
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: bytebuf
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: channel
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: netty
+  - micdoodle8/mods/galacticraft/api/prefab/entity/EntityTieredRocket.class: packet
+  - micdoodle8/mods/galacticraft/core/GalacticraftCore.class: channel
+  - micdoodle8/mods/galacticraft/core/GalacticraftCore.class: networkregistry
+  - micdoodle8/mods/galacticraft/core/GalacticraftCore.class: packet
+  - micdoodle8/mods/galacticraft/core/blocks/BlockScreen.class: channel
+  - micdoodle8/mods/galacticraft/core/blocks/BlockTransmitter.class: channel
+  - micdoodle8/mods/galacticraft/core/blocks/BlockTransmitter.class: networkregistry
+  - micdoodle8/mods/galacticraft/core/blocks/BlockTransmitter.class: packet
+- Loliland server evidence:
+  - micdoodle8/mods/galacticraft/core/entities/EntityEvolvedCreeper.class: loliland
+  - micdoodle8/mods/galacticraft/core/entities/EntityEvolvedSkeleton.class: loliland
+  - micdoodle8/mods/galacticraft/core/entities/EntityEvolvedSpider.class: loliland
+  - micdoodle8/mods/galacticraft/core/recipe/RecipeManagerGC.class: loliland
+  - micdoodle8/mods/galacticraft/core/world/gen/dungeon/RoomTreasureMoon.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## GalaxySpace-1.7.10-1.2.15
+
+```text
+- File: GalaxySpace-1.7.10-1.2.15.jar
+- Mod ID: GalaxySpace-1.7.10-1.2.15
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 853
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=60, channel=38, sendtoserver=20, spacket=11, bytebuf=8, netty=7, networkregistry=5, sendtoall=3, sendtoallaround=3, packetbuffer=1, simplechannel=1
+- Client packet evidence:
+  - galaxyspace/GalaxySpace.class: channel
+  - galaxyspace/GalaxySpace.class: networkregistry
+  - galaxyspace/GalaxySpace.class: packet
+  - galaxyspace/core/client/GSKeyHandlerClient.class: channel
+  - galaxyspace/core/client/GSKeyHandlerClient.class: packet
+  - galaxyspace/core/client/GSKeyHandlerClient.class: sendtoserver
+  - galaxyspace/core/client/GSKeyHandlerClient.class: spacket
+  - galaxyspace/core/client/animations/MCACommonLibrary/Utils.class: bytebuf
+  - galaxyspace/core/client/animations/MCACommonLibrary/animation/AnimationHandler.class: channel
+  - galaxyspace/core/client/animations/MCACommonLibrary/animation/Channel.class: channel
+  - galaxyspace/core/client/animations/MCACommonLibrary/animation/CustomChannel.class: channel
+  - galaxyspace/core/client/gui/GSGuiSchematicInput.class: channel
+  - galaxyspace/core/client/gui/GSGuiSchematicInput.class: packet
+  - galaxyspace/core/client/gui/GSGuiSchematicInput.class: sendtoserver
+  - galaxyspace/core/client/gui/GuiGif.class: bytebuf
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: channel
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: packet
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: sendtoserver
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: spacket
+  - galaxyspace/core/client/models/ModelOBJArmor.class: channel
+- Network evidence:
+  - galaxyspace/GalaxySpace.class: channel
+  - galaxyspace/GalaxySpace.class: networkregistry
+  - galaxyspace/GalaxySpace.class: packet
+  - galaxyspace/core/client/GSKeyHandlerClient.class: channel
+  - galaxyspace/core/client/GSKeyHandlerClient.class: packet
+  - galaxyspace/core/client/GSKeyHandlerClient.class: sendtoserver
+  - galaxyspace/core/client/GSKeyHandlerClient.class: spacket
+  - galaxyspace/core/client/animations/MCACommonLibrary/Utils.class: bytebuf
+  - galaxyspace/core/client/animations/MCACommonLibrary/animation/AnimationHandler.class: channel
+  - galaxyspace/core/client/animations/MCACommonLibrary/animation/Channel.class: channel
+  - galaxyspace/core/client/animations/MCACommonLibrary/animation/CustomChannel.class: channel
+  - galaxyspace/core/client/gui/GSGuiSchematicInput.class: channel
+  - galaxyspace/core/client/gui/GSGuiSchematicInput.class: packet
+  - galaxyspace/core/client/gui/GSGuiSchematicInput.class: sendtoserver
+  - galaxyspace/core/client/gui/GuiGif.class: bytebuf
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: channel
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: packet
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: sendtoserver
+  - galaxyspace/core/client/gui/screen/GSGuiCelestialSelection.class: spacket
+  - galaxyspace/core/client/models/ModelOBJArmor.class: channel
+- Loliland server evidence:
+  - galaxyspace/systems/BarnardsSystem/planets/barnardaC/blocks/Barnarda_C_Ores.class: loliland
+  - galaxyspace/systems/SolarSystem/planets/kuiperbelt/dimension/ChunkProviderKuiper.class: loliland
+  - galaxyspace/systems/SolarSystem/planets/overworld/recipe/CraftingRecipesOverworld.class: loliland
+  - galaxyspace/systems/SolarSystem/planets/venus/entities/EntityEvolvedFireBlaze.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## GeckoLib-1.7.10-4.3.1-shadow
+
+```text
+- File: GeckoLib-1.7.10-4.3.1-shadow.jar
+- Mod ID: GeckoLib-1.7.10-4.3.1-shadow
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 242
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: bytebuf=15, netty=13, imessage=10, simpleimpl=10, imessagehandler=7, messagecontext=6, channel=2, networkregistry=1, registermessage=1, sendtoall=1, sendtoallaround=1, simplechannel=1
+- Client packet evidence:
+  - loliland/geckolib/obf/iOO1IiI1lAnD.class: bytebuf
+  - loliland/geckolib/obf/iOO1IiI1lAnD.class: channel
+  - loliland/geckolib/obf/iiO0ilaNd.class: bytebuf
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: channel
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: imessage
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: imessagehandler
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: networkregistry
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: registermessage
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: sendtoall
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: sendtoallaround
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: simplechannel
+  - loliland/geckolib/obf/lOIOlOIIlAnd.class: simpleimpl
+- Network evidence:
+  - loliland/geckolib/obf/I100I0lLand.class: bytebuf
+  - loliland/geckolib/obf/I100I0lLand.class: netty
+  - loliland/geckolib/obf/OIl0IilanD.class: imessage
+  - loliland/geckolib/obf/OIl0IilanD.class: simpleimpl
+  - loliland/geckolib/obf/OlO11Land.class: bytebuf
+  - loliland/geckolib/obf/OlO11Land.class: netty
+  - loliland/geckolib/obf/iOO1IiI1lAnD.class: bytebuf
+  - loliland/geckolib/obf/iOO1IiI1lAnD.class: channel
+  - loliland/geckolib/obf/iiO0ilaNd.class: bytebuf
+  - loliland/geckolib/obf/l0O1OIlaND.class: bytebuf
+  - loliland/geckolib/obf/l0O1OIlaND.class: netty
+  - loliland/geckolib/obf/l0lllAND.class: imessage
+  - loliland/geckolib/obf/l0lllAND.class: simpleimpl
+  - loliland/geckolib/obf/l10OilanD.class: bytebuf
+  - loliland/geckolib/obf/l10OilanD.class: imessage
+  - loliland/geckolib/obf/l10OilanD.class: imessagehandler
+  - loliland/geckolib/obf/l10OilanD.class: messagecontext
+  - loliland/geckolib/obf/l10OilanD.class: netty
+  - loliland/geckolib/obf/l10OilanD.class: simpleimpl
+  - loliland/geckolib/obf/l1l0lAnd.class: bytebuf
+- Loliland server evidence:
+  - loliland/geckolib/obf/I0Oi1O0OlaND.class: loliland
+  - loliland/geckolib/obf/I100I0lLand.class: loliland
+  - loliland/geckolib/obf/I111i0OILaNd.class: loliland
+  - loliland/geckolib/obf/I11llANd.class: loliland
+  - loliland/geckolib/obf/I1IiilLAnD.class: loliland
+  - loliland/geckolib/obf/I1IllaND.class: loliland
+  - loliland/geckolib/obf/I1O1I1LaNd.class: loliland
+  - loliland/geckolib/obf/II1II0laND.class: loliland
+  - loliland/geckolib/obf/II1Iland.class: loliland
+  - loliland/geckolib/obf/II1i1l0laND.class: loliland
+  - loliland/geckolib/obf/IIOlO0ilAnD.class: loliland
+  - loliland/geckolib/obf/IO11O0LANd.class: loliland
+  - loliland/geckolib/obf/IOI1LaNd.class: loliland
+  - loliland/geckolib/obf/IOi0I0LAnD.class: loliland
+  - loliland/geckolib/obf/IOilIl10LanD.class: loliland
+  - loliland/geckolib/obf/IOlli01lAnd.class: loliland
+  - loliland/geckolib/obf/IiiilAnD.class: loliland
+  - loliland/geckolib/obf/Iil0IOlAND.class: loliland
+  - loliland/geckolib/obf/Il0IllIOLAnd.class: loliland
+  - loliland/geckolib/obf/Il0O0LANd.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## gendustry-1.6.4.135-mc1.7.10
+
+```text
+- File: gendustry-1.6.4.135-mc1.7.10.jar
+- Mod ID: gendustry-1.6.4.135-mc1.7.10
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 1067
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: channel=2, networkregistry=1, packet=1
+- Client packet evidence:
+  - net/bdew/gendustry/Gendustry$.class: channel
+  - net/bdew/gendustry/Gendustry$.class: networkregistry
+  - net/bdew/gendustry/machines/apiary/TileApiary.class: packet
+- Network evidence:
+  - net/bdew/gendustry/Gendustry$.class: channel
+  - net/bdew/gendustry/Gendustry$.class: networkregistry
+  - net/bdew/gendustry/Gendustry.class: channel
+  - net/bdew/gendustry/machines/apiary/TileApiary.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Graviation Suite
+
+```text
+- File: GraviSuite-1.7.10-2.0.3.jar
+- Mod ID: GraviSuite
+- Version: 1.7.10-2.0.3
+- Authors: SeNtiMeL
+- Scanned entries: 67
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=13, networkregistry=2, channel=2, bytebuf=1, fmlnetworkevent=1, netty=1, payload=1, sendtoall=1, sendtoserver=1
+- Client packet evidence:
+  - gravisuite/GraviSuite.class: networkregistry
+  - gravisuite/GraviSuite.class: packet
+  - gravisuite/Helpers.class: packet
+  - gravisuite/ItemAdvancedLappack.class: packet
+  - gravisuite/audio/AudioManagerClient.class: channel
+  - gravisuite/client/ClientTickHandler.class: packet
+  - gravisuite/client/GuiRelocatorAdd.class: packet
+  - gravisuite/client/GuiRelocatorDisplay.class: packet
+  - gravisuite/keyboard/KeyboardClient.class: packet
+  - gravisuite/network/PacketHandler.class: bytebuf
+  - gravisuite/network/PacketHandler.class: channel
+  - gravisuite/network/PacketHandler.class: fmlnetworkevent
+  - gravisuite/network/PacketHandler.class: netty
+  - gravisuite/network/PacketHandler.class: networkregistry
+  - gravisuite/network/PacketHandler.class: packet
+  - gravisuite/network/PacketHandler.class: payload
+  - gravisuite/network/PacketHandler.class: sendtoall
+  - gravisuite/network/PacketHandler.class: sendtoserver
+- Network evidence:
+  - gravisuite/GraviSuite.class: networkregistry
+  - gravisuite/GraviSuite.class: packet
+  - gravisuite/Helpers.class: packet
+  - gravisuite/ItemAdvancedLappack.class: packet
+  - gravisuite/audio/AudioManagerClient.class: channel
+  - gravisuite/client/ClientTickHandler.class: packet
+  - gravisuite/client/GuiRelocatorAdd.class: packet
+  - gravisuite/client/GuiRelocatorDisplay.class: packet
+  - gravisuite/keyboard/KeyboardClient.class: packet
+  - gravisuite/network/IPacket.class: packet
+  - gravisuite/network/PacketHandler.class: bytebuf
+  - gravisuite/network/PacketHandler.class: channel
+  - gravisuite/network/PacketHandler.class: fmlnetworkevent
+  - gravisuite/network/PacketHandler.class: netty
+  - gravisuite/network/PacketHandler.class: networkregistry
+  - gravisuite/network/PacketHandler.class: packet
+  - gravisuite/network/PacketHandler.class: payload
+  - gravisuite/network/PacketHandler.class: sendtoall
+  - gravisuite/network/PacketHandler.class: sendtoserver
+  - gravisuite/network/PacketKeyPress.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Nuclear Control 2
+
+```text
+- File: IC2NuclearControl-master-cd42a918.jar
+- Mod ID: IC2NuclearControl
+- Version: @VERSION@
+- Authors: Shedar, xbony2, Zuxelus, DMF444
+- Scanned entries: 209
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=27, simpleimpl=22, imessage=21, bytebuf=16, imessagehandler=16, messagecontext=16, netty=16, channel=7, sendtoserver=2, networkregistry=2, registermessage=1, simplechannel=1
+- Client packet evidence:
+  - shedar/mods/ic2/nuclearcontrol/IC2NuclearControl.class: channel
+  - shedar/mods/ic2/nuclearcontrol/IC2NuclearControl.class: networkregistry
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: channel
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: imessage
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: packet
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: sendtoserver
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: simpleimpl
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: channel
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: networkregistry
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: packet
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: registermessage
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: simplechannel
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: simpleimpl
+  - shedar/mods/ic2/nuclearcontrol/network/message/PacketAcounter.class: bytebuf
+  - shedar/mods/ic2/nuclearcontrol/network/message/PacketAcounter.class: imessage
+  - shedar/mods/ic2/nuclearcontrol/network/message/PacketAcounter.class: imessagehandler
+  - shedar/mods/ic2/nuclearcontrol/network/message/PacketAcounter.class: messagecontext
+  - shedar/mods/ic2/nuclearcontrol/network/message/PacketAcounter.class: netty
+  - shedar/mods/ic2/nuclearcontrol/network/message/PacketAcounter.class: packet
+  - shedar/mods/ic2/nuclearcontrol/network/message/PacketAcounter.class: simpleimpl
+- Network evidence:
+  - shedar/mods/ic2/nuclearcontrol/IC2NuclearControl.class: channel
+  - shedar/mods/ic2/nuclearcontrol/IC2NuclearControl.class: networkregistry
+  - shedar/mods/ic2/nuclearcontrol/ServerTickHandler.class: channel
+  - shedar/mods/ic2/nuclearcontrol/ServerTickHandler.class: imessage
+  - shedar/mods/ic2/nuclearcontrol/ServerTickHandler.class: packet
+  - shedar/mods/ic2/nuclearcontrol/ServerTickHandler.class: simpleimpl
+  - shedar/mods/ic2/nuclearcontrol/crossmod/appeng/ItemCardAppeng.class: channel
+  - shedar/mods/ic2/nuclearcontrol/crossmod/appeng/TileEntityNetworkLink.class: channel
+  - shedar/mods/ic2/nuclearcontrol/crossmod/appeng/TileEntityNetworkLink.class: packet
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: channel
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: imessage
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: packet
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: sendtoserver
+  - shedar/mods/ic2/nuclearcontrol/gui/GuiRemoteMonitor.class: simpleimpl
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: channel
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: networkregistry
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: packet
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: registermessage
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: simplechannel
+  - shedar/mods/ic2/nuclearcontrol/network/ChannelHandler.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## IC2Tweaker-1.7.10-1.0.2
+
+```text
+- File: IC2Tweaker-1.7.10-1.0.2.jar
+- Mod ID: IC2Tweaker-1.7.10-1.0.2
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 8
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## IndustrialCraft 2
+
+```text
+- File: industrialcraft-2-2.2.827-experimental.jar
+- Mod ID: IC2
+- Version: 2.2.827-experimental
+- Authors: Alblaka, Player, RichardG, Thunderdark, GregoriusT, alexthesax, Drashian, Elementalist, Feanturi, Lurch1985, SirusKing, tahu44, Aroma1997
+- Scanned entries: 1024
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: packet=21, imessage=11, simpleimpl=11, bytebuf=7, netty=6, channel=4, imessagehandler=4, messagecontext=4, sendtoserver=3, fmlnetworkevent=2, payload=2, packetbuffer=1
+- Client packet evidence:
+  - ic2/core/ContainerBase.class: imessage
+  - ic2/core/ContainerBase.class: packet
+  - ic2/core/ContainerBase.class: sendtoserver
+  - ic2/core/ContainerBase.class: simpleimpl
+  - ic2/core/GuiIC2.class: imessage
+  - ic2/core/GuiIC2.class: sendtoserver
+  - ic2/core/GuiIC2.class: simpleimpl
+  - ic2/core/audio/AudioManagerClient.class: channel
+  - ic2/core/network/NetworkManager.class: bytebuf
+  - ic2/core/network/NetworkManager.class: channel
+  - ic2/core/network/NetworkManager.class: fmlnetworkevent
+  - ic2/core/network/NetworkManager.class: imessage
+  - ic2/core/network/NetworkManager.class: netty
+  - ic2/core/network/NetworkManager.class: networkregistry
+  - ic2/core/network/NetworkManager.class: packet
+  - ic2/core/network/NetworkManager.class: payload
+  - ic2/core/network/NetworkManager.class: registermessage
+  - ic2/core/network/NetworkManager.class: sendtoall
+  - ic2/core/network/NetworkManagerClient.class: bytebuf
+  - ic2/core/network/NetworkManagerClient.class: fmlnetworkevent
+- Network evidence:
+  - com/gamerforea/ic2/recipe/RecipeData$AppEngRecipeData.class: channel
+  - com/gamerforea/ic2/util/AppEngUtils.class: channel
+  - ic2/core/ContainerBase.class: imessage
+  - ic2/core/ContainerBase.class: packet
+  - ic2/core/ContainerBase.class: sendtoserver
+  - ic2/core/ContainerBase.class: simpleimpl
+  - ic2/core/GuiIC2.class: imessage
+  - ic2/core/GuiIC2.class: sendtoserver
+  - ic2/core/GuiIC2.class: simpleimpl
+  - ic2/core/audio/AudioManagerClient.class: channel
+  - ic2/core/block/InteractableFluidTank.class: packet
+  - ic2/core/network/NetworkManager.class: bytebuf
+  - ic2/core/network/NetworkManager.class: channel
+  - ic2/core/network/NetworkManager.class: fmlnetworkevent
+  - ic2/core/network/NetworkManager.class: imessage
+  - ic2/core/network/NetworkManager.class: netty
+  - ic2/core/network/NetworkManager.class: networkregistry
+  - ic2/core/network/NetworkManager.class: packet
+  - ic2/core/network/NetworkManager.class: payload
+  - ic2/core/network/NetworkManager.class: registermessage
+- Loliland server evidence:
+  - ic2/core/PlatformClient.class: loliland
+  - ic2/core/block/generator/tileentity/TileEntityGenerator.class: loliland
+  - ic2/core/block/generator/tileentity/TileEntityGeoGenerator.class: loliland
+  - ic2/core/block/machine/container/ContainerIronFurnace.class: loliland
+  - ic2/core/block/machine/container/ContainerSolidCanner.class: loliland
+  - ic2/core/block/machine/container/ContainerStandardMachine.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityBlockCutter.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityCanner.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityCentrifuge.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityCompressor.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityCondenser.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityElectricFurnace.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityExtractor.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityFluidBottler.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityIronFurnace.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityMacerator.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityMetalFormer.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityOreWashing.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityPump.class: loliland
+  - ic2/core/block/machine/tileentity/TileEntityRecycler.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - loliland/common/obf/IiO1iILaNd.class
+  - loliland/common/obf/Il0iIland.class
+  - loliland/common/obf/OIOiiOlAnD.class
+  - loliland/common/obf/i110lanD.class
+  - loliland/common/obf/iI0i1I1Land.class
+  - loliland/common/obf/ilOIlAND.class
+  - loliland/common/obf/l1IlIllaND.class
+  - loliland/common/obf/lII0lanD.class
+  - loliland/common/obf/lIlI1lanD.class
+  - loliland/common/obf/liI0O1laNd.class
+  - loliland/common/obf/liIiO1liLAnd.class
+  - loliland/common/obf/liO0iO10laNd.class
+  - loliland/common/obf/llOIlIilAND.class
+  - loliland/luminous/ui/recipe/l0illAND.class
+  - loliland/luminous/ui/widgets/IOi0I0LAnD.class
+  - loliland/luminous/ui/widgets/IOlli01lAnd.class
+  - loliland/luminous/ui/widgets/l0lOiOlAnd.class
+```
+
+## Inventory Tweaks
+
+```text
+- File: InventoryTweaks-1.7.10-Client.jar
+- Mod ID: inventorytweaks
+- Version: 1.59-dev-152-cf6e263
+- Authors: Jimeo Wan, Kobata
+- Scanned entries: 81
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=11, netty=9, channel=7, bytebuf=5, networkregistry=3, simplechannel=3, fmlnetworkevent=1
+- Client packet evidence:
+  - invtweaks/InvTweaksConst.class: channel
+  - invtweaks/InvTweaksConst.class: packet
+  - invtweaks/forge/ClientProxy.class: channel
+  - invtweaks/forge/ClientProxy.class: fmlnetworkevent
+  - invtweaks/forge/ClientProxy.class: packet
+  - invtweaks/forge/CommonProxy.class: channel
+  - invtweaks/forge/CommonProxy.class: netty
+  - invtweaks/forge/CommonProxy.class: networkregistry
+  - invtweaks/forge/CommonProxy.class: packet
+- Network evidence:
+  - invtweaks/InvTweaksConst.class: channel
+  - invtweaks/InvTweaksConst.class: packet
+  - invtweaks/forge/ClientProxy.class: channel
+  - invtweaks/forge/ClientProxy.class: fmlnetworkevent
+  - invtweaks/forge/ClientProxy.class: packet
+  - invtweaks/forge/CommonProxy.class: channel
+  - invtweaks/forge/CommonProxy.class: netty
+  - invtweaks/forge/CommonProxy.class: networkregistry
+  - invtweaks/forge/CommonProxy.class: packet
+  - invtweaks/network/ITMessageToMessageCodec.class: bytebuf
+  - invtweaks/network/ITMessageToMessageCodec.class: channel
+  - invtweaks/network/ITMessageToMessageCodec.class: netty
+  - invtweaks/network/ITMessageToMessageCodec.class: packet
+  - invtweaks/network/handlers/ClickMessageHandler.class: channel
+  - invtweaks/network/handlers/ClickMessageHandler.class: netty
+  - invtweaks/network/handlers/ClickMessageHandler.class: networkregistry
+  - invtweaks/network/handlers/ClickMessageHandler.class: packet
+  - invtweaks/network/handlers/ClickMessageHandler.class: simplechannel
+  - invtweaks/network/handlers/LoginMessageHandler.class: channel
+  - invtweaks/network/handlers/LoginMessageHandler.class: netty
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## InvTweaksHelper-master-f6d868a4
+
+```text
+- File: InvTweaksHelper-master-f6d868a4.jar
+- Mod ID: InvTweaksHelper-master-f6d868a4
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 6
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: imessage=4, simpleimpl=4, sendtoserver=2, packet=1, bytebuf=1, netty=1, channel=1, networkregistry=1, registermessage=1, simplechannel=1, imessagehandler=1, messagecontext=1
+- Client packet evidence:
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: channel
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: imessage
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: networkregistry
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: registermessage
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: sendtoserver
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: simplechannel
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: simpleimpl
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: imessage
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: packet
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: sendtoserver
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: simpleimpl
+- Network evidence:
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots$Handler.class: imessage
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots$Handler.class: imessagehandler
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots$Handler.class: messagecontext
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots$Handler.class: simpleimpl
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots.class: bytebuf
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots.class: imessage
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots.class: netty
+  - com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots.class: simpleimpl
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: channel
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: imessage
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: networkregistry
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: registermessage
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: sendtoserver
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: simplechannel
+  - com/gamerforea/invtweakshelper/network/NetworkManager.class: simpleimpl
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: imessage
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: packet
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: sendtoserver
+  - com/gamerforea/invtweakshelper/util/InvTweaksUtils.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## ItemPhysic
+
+```text
+- File: ItemPhysicLite-master-1bb71115.jar
+- Mod ID: itemphysic
+- Version: 0.8
+- Authors: CreativeMD
+- Scanned entries: 8
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## JourneyMap-master-b5104403
+
+```text
+- File: JourneyMap-master-b5104403.jar
+- Mod ID: JourneyMap-master-b5104403
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 430
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=13, channel=10, imessage=8, simpleimpl=8, bytebuf=3, imessagehandler=3, messagecontext=3, networkregistry=3, registermessage=3, simplechannel=3, sendtoall=2, netty=2
+- Client packet evidence:
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: imessage
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: imessagehandler
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: messagecontext
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: packet
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: simpleimpl
+  - journeymap/client/network/WorldInfoHandler.class: channel
+  - journeymap/client/network/WorldInfoHandler.class: fmlnetworkevent
+  - journeymap/client/network/WorldInfoHandler.class: imessage
+  - journeymap/client/network/WorldInfoHandler.class: networkregistry
+  - journeymap/client/network/WorldInfoHandler.class: packet
+  - journeymap/client/network/WorldInfoHandler.class: registermessage
+  - journeymap/client/network/WorldInfoHandler.class: sendtoserver
+  - journeymap/client/network/WorldInfoHandler.class: simplechannel
+  - journeymap/client/network/WorldInfoHandler.class: simpleimpl
+  - journeymap/client/render/texture/TextureImpl.class: bytebuf
+  - journeymap/server/oldservercode/command/CommandJourneyMapServer.class: packet
+- Network evidence:
+  - ar/com/hjg/pngj/ImageInfo.class: channel
+  - ar/com/hjg/pngj/ImageLine.class: channel
+  - ar/com/hjg/pngj/ImageLineHelper$ImageLineStats.class: channel
+  - ar/com/hjg/pngj/ImageLineHelper.class: channel
+  - ar/com/hjg/pngj/ImageLines.class: channel
+  - ar/com/hjg/pngj/PngDeinterlacer.class: channel
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: imessage
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: imessagehandler
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: messagecontext
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: packet
+  - journeymap/client/network/WorldInfoHandler$WorldIdListener.class: simpleimpl
+  - journeymap/client/network/WorldInfoHandler.class: channel
+  - journeymap/client/network/WorldInfoHandler.class: fmlnetworkevent
+  - journeymap/client/network/WorldInfoHandler.class: imessage
+  - journeymap/client/network/WorldInfoHandler.class: networkregistry
+  - journeymap/client/network/WorldInfoHandler.class: packet
+  - journeymap/client/network/WorldInfoHandler.class: registermessage
+  - journeymap/client/network/WorldInfoHandler.class: sendtoserver
+  - journeymap/client/network/WorldInfoHandler.class: simplechannel
+  - journeymap/client/network/WorldInfoHandler.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Json Model Reader
+
+```text
+- File: JsonModelReader-main-ccf9f871.jar
+- Mod ID: jmr
+- Version: 0.5.0
+- Authors: Superiorita
+- Scanned entries: 26
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## LanguagePatcher-master-185f579f
+
+```text
+- File: LanguagePatcher-master-185f579f.jar
+- Mod ID: LanguagePatcher-master-185f579f
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 4
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## LoliAE2-1.7.10-client
+
+```text
+- File: LoliAE2-1.7.10-client.jar
+- Mod ID: LoliAE2-1.7.10-client
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 1274
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: channel=74, bytebuf=49, netty=49, packet=34, sendtoserver=16, networkregistry=11, sendtoall=10, sendtoallaround=10, payload=3, fmlnetworkevent=1
+- Client packet evidence:
+  - loliland/technologies/ae2/LoliTechnologies.class: networkregistry
+  - loliland/technologies/ae2/client/gui/basic/ModGuiUpgradeable.class: packet
+  - loliland/technologies/ae2/client/gui/basic/ModGuiUpgradeable.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/crafting/GuiCraftingInterface.class: packet
+  - loliland/technologies/ae2/client/gui/crafting/GuiCraftingInterface.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCondenser$buildMachineInventory$1$1$8.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCondenser$buildMachineInventory$1$1$8.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiBuffer$buildMachineInventory$1$1.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiBuffer$buildMachineInventory$1$1.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$buildMachineInventory$1$1.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$buildMachineInventory$1$1.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$3.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$3.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$5.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$5.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$8.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$8.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiExtremePatternTerminal$buildMachineContent$1$1$3.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiExtremePatternTerminal$buildMachineContent$1$1$3.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiLargeDrive$buildMachineInventory$1$1.class: packet
+- Network evidence:
+  - loliland/technologies/ae2/LoliTechnologies.class: networkregistry
+  - loliland/technologies/ae2/client/gui/basic/ModGuiUpgradeable.class: packet
+  - loliland/technologies/ae2/client/gui/basic/ModGuiUpgradeable.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/crafting/GuiCraftingInterface.class: packet
+  - loliland/technologies/ae2/client/gui/crafting/GuiCraftingInterface.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCondenser$buildMachineInventory$1$1$8.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCondenser$buildMachineInventory$1$1$8.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiBuffer$buildMachineInventory$1$1.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiBuffer$buildMachineInventory$1$1.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$buildMachineInventory$1$1.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$buildMachineInventory$1$1.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$3.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$3.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$5.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$5.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$8.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface$setupSideBarButtons$8.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiExtremePatternTerminal$buildMachineContent$1$1$3.class: packet
+  - loliland/technologies/ae2/client/gui/luminous/GuiExtremePatternTerminal$buildMachineContent$1$1$3.class: sendtoserver
+  - loliland/technologies/ae2/client/gui/luminous/GuiLargeDrive$buildMachineInventory$1$1.class: packet
+- Loliland server evidence:
+  - loliland/technologies/ae2/CompileFlag.class: loliland
+  - loliland/technologies/ae2/LoliTechnologies.class: loliland
+  - loliland/technologies/ae2/client/ClientSide.class: loliland
+  - loliland/technologies/ae2/client/I1O1I1LaNd.class: loliland
+  - loliland/technologies/ae2/client/gui/GuiUtil.class: loliland
+  - loliland/technologies/ae2/client/gui/basic/BasicGui.class: loliland
+  - loliland/technologies/ae2/client/gui/basic/ModAEBaseGui.class: loliland
+  - loliland/technologies/ae2/client/gui/basic/ModGuiUpgradeable.class: loliland
+  - loliland/technologies/ae2/client/gui/crafting/GuiCraftingCombiner.class: loliland
+  - loliland/technologies/ae2/client/gui/crafting/GuiCraftingInterface.class: loliland
+  - loliland/technologies/ae2/client/gui/crafting/GuiKnowledgeDuplicationStation$GuiButtonCopy.class: loliland
+  - loliland/technologies/ae2/client/gui/crafting/GuiKnowledgeDuplicationStation.class: loliland
+  - loliland/technologies/ae2/client/gui/crafting/GuiNASAAssembler.class: loliland
+  - loliland/technologies/ae2/client/gui/crafting/GuiNASAEncoding$GuiButtonSwipe.class: loliland
+  - loliland/technologies/ae2/client/gui/crafting/GuiNASAEncoding.class: loliland
+  - loliland/technologies/ae2/client/gui/icon/GuiStateIconsEnum.class: loliland
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCellWorkbench$buildMachineInventory$1.class: loliland
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCellWorkbench$buildMachineInventory$content$1$1$1$1.class: loliland
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCellWorkbench$buildMachineInventory$content$1$1$1.class: loliland
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCellWorkbench$buildMachineInventory$content$1$1$2$1$1$1.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - loliland/technologies/ae2/LoliTechnologies.class
+  - loliland/technologies/ae2/client/I1O1I1LaNd.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCellWorkbench.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiAdvancedCondenser.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiBuffer.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingCombiner.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiCraftingInterface.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiDeleteLinkConfirm.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiExtremePatternTerminal$ContainerLogic.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiExtremePatternTerminal.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiLargeDrive.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiLogist.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiSupplier.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiWirelessHub$ContentLayout.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiWirelessHub$WidgetStationLink.class
+  - loliland/technologies/ae2/client/gui/luminous/GuiWirelessHub.class
+  - loliland/technologies/ae2/client/gui/luminous/assembler/GuiAdvancedAssembler.class
+  - loliland/technologies/ae2/client/gui/luminous/assembler/GuiBloodAssembler.class
+  - loliland/technologies/ae2/client/gui/luminous/assembler/GuiCelestialAssembler.class
+  - loliland/technologies/ae2/client/gui/luminous/assembler/GuiExoticAssembler.class
+```
+
+## LoliDecorative-master-bf409f4c
+
+```text
+- File: LoliDecorative-master-bf409f4c.jar
+- Mod ID: LoliDecorative-master-bf409f4c
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 71
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence:
+  - loliland/lolidecorative/LoliCreativeTabForest.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabGothic.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabIce.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabJapan.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabLight.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabMain.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabMarble.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabNeon.class: loliland
+  - loliland/lolidecorative/LoliCreativeTabs.class: loliland
+  - loliland/lolidecorative/LoliDecorationsConstants.class: loliland
+  - loliland/lolidecorative/LoliDecorative.class: loliland
+  - loliland/lolidecorative/block/BlockColor$Companion.class: loliland
+  - loliland/lolidecorative/block/BlockColor.class: loliland
+  - loliland/lolidecorative/block/LoliBlock.class: loliland
+  - loliland/lolidecorative/block/LoliBlockBase.class: loliland
+  - loliland/lolidecorative/block/LoliBlockColored.class: loliland
+  - loliland/lolidecorative/block/LoliBlockDoubleSlab.class: loliland
+  - loliland/lolidecorative/block/LoliBlockFence.class: loliland
+  - loliland/lolidecorative/block/LoliBlockGothicWindow.class: loliland
+  - loliland/lolidecorative/block/LoliBlockGrass.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - loliland/lolidecorative/LoliCreativeTabForest.class
+  - loliland/lolidecorative/LoliCreativeTabGothic.class
+  - loliland/lolidecorative/LoliCreativeTabIce.class
+  - loliland/lolidecorative/LoliCreativeTabJapan.class
+  - loliland/lolidecorative/LoliCreativeTabLight.class
+  - loliland/lolidecorative/LoliCreativeTabMain.class
+  - loliland/lolidecorative/LoliCreativeTabMarble.class
+  - loliland/lolidecorative/LoliCreativeTabNeon.class
+  - loliland/lolidecorative/LoliCreativeTabs.class
+  - loliland/lolidecorative/LoliDecorationsConstants.class
+  - loliland/lolidecorative/LoliDecorative.class
+  - loliland/lolidecorative/block/BlockColor$Companion.class
+  - loliland/lolidecorative/block/BlockColor.class
+  - loliland/lolidecorative/block/LoliBlock.class
+  - loliland/lolidecorative/block/LoliBlockBase.class
+  - loliland/lolidecorative/block/LoliBlockColored.class
+  - loliland/lolidecorative/block/LoliBlockDoubleSlab.class
+  - loliland/lolidecorative/block/LoliBlockFence.class
+  - loliland/lolidecorative/block/LoliBlockGothicWindow.class
+  - loliland/lolidecorative/block/LoliBlockGrass.class
+```
+
+## LoliDimensions
+
+```text
+- File: LoliDimensions-1.7.10-client.jar
+- Mod ID: lolidimensions
+- Version: v2-2.39.0
+- Authors: Aizistral
+- Scanned entries: 1950
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: packet=50, simpleimpl=44, imessage=43, bytebuf=38, netty=38, imessagehandler=31, messagecontext=31, networkregistry=9, sendtoall=7, sendtoallaround=7, sendtoserver=5, channel=2
+- Client packet evidence:
+  - net/loliland/lolidimensions/LoliDimensions.class: channel
+  - net/loliland/lolidimensions/LoliDimensions.class: networkregistry
+  - net/loliland/lolidimensions/LoliDimensions.class: packet
+  - net/loliland/lolidimensions/LoliDimensions.class: registermessage
+  - net/loliland/lolidimensions/LoliDimensions.class: simplechannel
+  - net/loliland/lolidimensions/LoliDimensions.class: simpleimpl
+  - net/loliland/lolidimensions/entities/ArchangelBeamEntity.class: bytebuf
+  - net/loliland/lolidimensions/entities/ArchangelBeamEntity.class: netty
+  - net/loliland/lolidimensions/entities/boss/ArchangelBossEntity.class: packet
+  - net/loliland/lolidimensions/entities/boss/TelekinesisBossAction.class: packet
+  - net/loliland/lolidimensions/gui/DimensionChangerGUI.class: imessage
+  - net/loliland/lolidimensions/gui/DimensionChangerGUI.class: packet
+  - net/loliland/lolidimensions/gui/DimensionChangerGUI.class: sendtoserver
+  - net/loliland/lolidimensions/gui/DimensionChangerGUI.class: simpleimpl
+  - net/loliland/lolidimensions/items/PottableItemBlock.class: imessage
+  - net/loliland/lolidimensions/items/PottableItemBlock.class: packet
+  - net/loliland/lolidimensions/items/PottableItemBlock.class: sendtoserver
+  - net/loliland/lolidimensions/items/PottableItemBlock.class: simpleimpl
+  - net/loliland/lolidimensions/legacy/LegacyLoliDimensions.class: networkregistry
+  - net/loliland/lolidimensions/legacy/blocks/tiles/CustomSpawnerBaseLogic.class: imessage
+- Network evidence:
+  - net/loliland/lolidimensions/LoliDimensions.class: channel
+  - net/loliland/lolidimensions/LoliDimensions.class: networkregistry
+  - net/loliland/lolidimensions/LoliDimensions.class: packet
+  - net/loliland/lolidimensions/LoliDimensions.class: registermessage
+  - net/loliland/lolidimensions/LoliDimensions.class: simplechannel
+  - net/loliland/lolidimensions/LoliDimensions.class: simpleimpl
+  - net/loliland/lolidimensions/blocks/tiles/SynchronizedTile.class: packet
+  - net/loliland/lolidimensions/dungeon/DungeonHandler.class: imessage
+  - net/loliland/lolidimensions/dungeon/DungeonHandler.class: networkregistry
+  - net/loliland/lolidimensions/dungeon/DungeonHandler.class: packet
+  - net/loliland/lolidimensions/dungeon/DungeonHandler.class: sendtoall
+  - net/loliland/lolidimensions/dungeon/DungeonHandler.class: sendtoallaround
+  - net/loliland/lolidimensions/dungeon/DungeonHandler.class: simpleimpl
+  - net/loliland/lolidimensions/entities/ArchangelBeamEntity.class: bytebuf
+  - net/loliland/lolidimensions/entities/ArchangelBeamEntity.class: netty
+  - net/loliland/lolidimensions/entities/boss/ArchangelBossEntity.class: packet
+  - net/loliland/lolidimensions/entities/boss/SummonBossAction.class: imessage
+  - net/loliland/lolidimensions/entities/boss/SummonBossAction.class: networkregistry
+  - net/loliland/lolidimensions/entities/boss/SummonBossAction.class: packet
+  - net/loliland/lolidimensions/entities/boss/SummonBossAction.class: sendtoall
+- Loliland server evidence:
+  - loliland/common/obf/I1O1I1LaNd.class: loliland
+  - loliland/common/obf/OOOIilanD.class: loliland
+  - loliland/common/obf/lI00OlAND.class: loliland
+  - mixins.lolidimensions.json: loliland
+  - mixins.lolidimensions.refmap.json: loliland
+  - net/loliland/lolidimensions/LoliDimensions$1.class: loliland
+  - net/loliland/lolidimensions/LoliDimensions$2.class: loliland
+  - net/loliland/lolidimensions/LoliDimensions$3.class: loliland
+  - net/loliland/lolidimensions/LoliDimensions$4.class: loliland
+  - net/loliland/lolidimensions/LoliDimensions.class: loliland
+  - net/loliland/lolidimensions/TheSentinel.class: loliland
+  - net/loliland/lolidimensions/animation/AnimationFrame.class: loliland
+  - net/loliland/lolidimensions/animation/AnimationGroup.class: loliland
+  - net/loliland/lolidimensions/animation/AnimationRegistry.class: loliland
+  - net/loliland/lolidimensions/animation/AnimationReloadListener.class: loliland
+  - net/loliland/lolidimensions/animation/IAnimatedTexture.class: loliland
+  - net/loliland/lolidimensions/animation/LoopType.class: loliland
+  - net/loliland/lolidimensions/animation/TextureAnimation.class: loliland
+  - net/loliland/lolidimensions/animation/TextureAnimationCache.class: loliland
+  - net/loliland/lolidimensions/animation/TextureAnimationInstance$1.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - mcmod.info
+  - net/loliland/lolidimensions/LoliDimensions$1.class
+  - net/loliland/lolidimensions/LoliDimensions$2.class
+  - net/loliland/lolidimensions/LoliDimensions$3.class
+  - net/loliland/lolidimensions/LoliDimensions$4.class
+  - net/loliland/lolidimensions/LoliDimensions.class
+  - net/loliland/lolidimensions/animation/AnimationRegistry.class
+  - net/loliland/lolidimensions/animation/AnimationReloadListener.class
+  - net/loliland/lolidimensions/api/APIManager.class
+  - net/loliland/lolidimensions/api/DummyAPI.class
+  - net/loliland/lolidimensions/api/LoliDimensionsAPI.class
+  - net/loliland/lolidimensions/api/package-info.class
+  - net/loliland/lolidimensions/asm/LoliDimensionsCoremod.class
+  - net/loliland/lolidimensions/asm/LoliDimensionsHooks.class
+  - net/loliland/lolidimensions/blocks/AbstractBushBlock.class
+  - net/loliland/lolidimensions/blocks/AbstractContainerBlock.class
+  - net/loliland/lolidimensions/blocks/AbstractFallingBlock.class
+  - net/loliland/lolidimensions/blocks/AbstractFireBlock.class
+  - net/loliland/lolidimensions/blocks/AbstractFluidBlock.class
+  - net/loliland/lolidimensions/blocks/AbstractLeavesBlock.class
+```
+
+## LoliDragonMight-1.7.10-client
+
+```text
+- File: LoliDragonMight-1.7.10-client.jar
+- Mod ID: LoliDragonMight-1.7.10-client
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 492
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: bytebuf=24, netty=24, packet=12, networkregistry=6, payload=2, channel=1, fmlnetworkevent=1, sendtoall=1, sendtoallaround=1, sendtoserver=1
+- Client packet evidence:
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: channel
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: fmlnetworkevent
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: networkregistry
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: packet
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: sendtoall
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: sendtoallaround
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: sendtoserver
+  - loliland/dragonmight/obf/OOOIilanD.class: networkregistry
+  - loliland/dragonmight/obf/OOOO1OLAND.class: networkregistry
+  - loliland/dragonmight/obf/OOOO1OLAND.class: packet
+  - loliland/dragonmight/obf/OlIlIlaND.class: packet
+  - loliland/dragonmight/obf/l1IlIllaND.class: bytebuf
+  - loliland/dragonmight/obf/l1IlIllaND.class: netty
+  - loliland/dragonmight/obf/l1IlIllaND.class: packet
+  - loliland/dragonmight/obf/l1IlIllaND.class: payload
+  - loliland/dragonmight/obf/lIIi1I1lAnd.class: networkregistry
+  - loliland/dragonmight/obf/lIIi1I1lAnd.class: packet
+  - loliland/dragonmight/obf/lIl0laND.class: packet
+  - loliland/dragonmight/obf/lOO1ILAnd.class: bytebuf
+  - loliland/dragonmight/obf/lOO1ILAnd.class: netty
+- Network evidence:
+  - loliland/draconicevo/coremod/DraconicEVOCore.class: networkregistry
+  - loliland/dragonmight/obf/I1O000ilAND.class: packet
+  - loliland/dragonmight/obf/I1i0laND.class: bytebuf
+  - loliland/dragonmight/obf/I1i0laND.class: netty
+  - loliland/dragonmight/obf/IOOIlOlAnD.class: bytebuf
+  - loliland/dragonmight/obf/IOOIlOlAnD.class: netty
+  - loliland/dragonmight/obf/IOOOLaND.class: bytebuf
+  - loliland/dragonmight/obf/IOOOLaND.class: netty
+  - loliland/dragonmight/obf/Ii0l0OlLaND.class: bytebuf
+  - loliland/dragonmight/obf/Ii0l0OlLaND.class: netty
+  - loliland/dragonmight/obf/Iii1OilaNd.class: bytebuf
+  - loliland/dragonmight/obf/Iii1OilaNd.class: netty
+  - loliland/dragonmight/obf/Il0iO1iIlanD.class: bytebuf
+  - loliland/dragonmight/obf/Il0iO1iIlanD.class: netty
+  - loliland/dragonmight/obf/Il0iO1iIlanD.class: packet
+  - loliland/dragonmight/obf/O0OIIOlAnD.class: bytebuf
+  - loliland/dragonmight/obf/O0OIIOlAnD.class: netty
+  - loliland/dragonmight/obf/O0OILAnd.class: bytebuf
+  - loliland/dragonmight/obf/O0OILAnd.class: netty
+  - loliland/dragonmight/obf/O1O1i10LaNd.class: channel
+- Loliland server evidence:
+  - loliland/draconicevo/api/fusion/IFusionCraftingCharger.class: loliland
+  - loliland/draconicevo/api/fusion/IFusionCraftingInjector.class: loliland
+  - loliland/draconicevo/api/fusion/IFusionCraftingInventory.class: loliland
+  - loliland/draconicevo/api/fusion/IFusionRecipe.class: loliland
+  - loliland/draconicevo/api/fusion/IMagicCraftingCharger.class: loliland
+  - loliland/draconicevo/api/fusion/IMagicCraftingInjector.class: loliland
+  - loliland/draconicevo/api/fusion/IMagicCraftingInventory.class: loliland
+  - loliland/draconicevo/api/fusion/OreDictHelper.class: loliland
+  - loliland/draconicevo/api/fusion/SimpleFusionRecipe.class: loliland
+  - loliland/draconicevo/api/fusion/WTFException.class: loliland
+  - loliland/draconicevo/client/ClientSide.class: loliland
+  - loliland/draconicevo/client/I1O1I1LaNd.class: loliland
+  - loliland/draconicevo/common/CommonSide.class: loliland
+  - loliland/draconicevo/common/I1O1I1LaNd.class: loliland
+  - loliland/draconicevo/common/O1il1llOLANd.class: loliland
+  - loliland/draconicevo/common/OOOIilanD.class: loliland
+  - loliland/draconicevo/common/lI00OlAND.class: loliland
+  - loliland/draconicevo/common/li0iOILAND.class: loliland
+  - loliland/draconicevo/common/lli0OiIlAND.class: loliland
+  - loliland/draconicevo/coremod/DraconicEVOCore.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - loliland/draconicevo/integration/nei/I1O1I1LaNd.class
+  - loliland/draconicevo/integration/nei/NEIConfig.class
+  - loliland/dragonmight/obf/O0I00ll1laND.class
+  - loliland/dragonmight/obf/OOOIilanD.class
+  - loliland/dragonmight/obf/ll1OLAnd.class
+  - loliland/luminous/ui/l1O0i1IlanD$I1O1I1LaNd.class
+  - loliland/luminous/ui/l1O0i1IlanD.class
+  - net/minecraft/client/gui/inventory/LoliDragonMightGuiContainerAccessor.class
+```
+
+## LoliDungeons
+
+```text
+- File: lolidungeons-main-f88dd825.jar
+- Mod ID: lolidungeons
+- Version: 0.1.0
+- Authors: LoliLand
+- Scanned entries: 83
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: yes
+- Contains Loli prefix: yes
+- Packet marker summary: packet=13, imessage=5, simpleimpl=5, bytebuf=4, netty=4, imessagehandler=2, messagecontext=2, sendtoserver=1, registermessage=1
+- Client packet evidence:
+  - net/loliland/lolidungeons/LoliDungeons.class: packet
+  - net/loliland/lolidungeons/block/spawner/BlockDungeonSpawner.class: packet
+  - net/loliland/lolidungeons/client/gui/block/GuiDungeonSpawner.class: packet
+  - net/loliland/lolidungeons/network/LoliDungeonsNetwork.class: packet
+  - net/loliland/lolidungeons/network/LoliDungeonsNetwork.class: registermessage
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: imessage
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: packet
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: sendtoserver
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: simpleimpl
+  - net/loliland/lolidungeons/network/packet/PacketGuiDungeonSpawner$Handler.class: imessage
+  - net/loliland/lolidungeons/network/packet/PacketGuiDungeonSpawner$Handler.class: imessagehandler
+  - net/loliland/lolidungeons/network/packet/PacketGuiDungeonSpawner$Handler.class: messagecontext
+  - net/loliland/lolidungeons/network/packet/PacketGuiDungeonSpawner$Handler.class: packet
+  - net/loliland/lolidungeons/network/packet/PacketGuiDungeonSpawner$Handler.class: simpleimpl
+- Network evidence:
+  - net/loliland/lolidungeons/LoliDungeons.class: packet
+  - net/loliland/lolidungeons/block/spawner/BlockDungeonSpawner.class: packet
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner$Settings$Companion.class: bytebuf
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner$Settings$Companion.class: netty
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner$Settings$Companion.class: packet
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner$Settings.class: bytebuf
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner$Settings.class: netty
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner$Settings.class: packet
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner.class: packet
+  - net/loliland/lolidungeons/client/gui/block/GuiDungeonSpawner.class: packet
+  - net/loliland/lolidungeons/network/LoliDungeonsNetwork.class: packet
+  - net/loliland/lolidungeons/network/LoliDungeonsNetwork.class: registermessage
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: imessage
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: packet
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: sendtoserver
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class: simpleimpl
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Handler.class: imessage
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Handler.class: imessagehandler
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Handler.class: messagecontext
+  - net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Handler.class: packet
+- Loliland server evidence:
+  - mcmod.info: loliland
+  - mixin.lolidungeons.forge.json: loliland
+  - mixin.lolidungeons.json: loliland
+  - mixin.lolidungeons.ultramine.json: loliland
+  - net/loliland/lolidungeons/EventListener.class: loliland
+  - net/loliland/lolidungeons/LoliDungeons$configDir$2.class: loliland
+  - net/loliland/lolidungeons/LoliDungeons$lolimodLoaded$2.class: loliland
+  - net/loliland/lolidungeons/LoliDungeons$mswLoaded$2.class: loliland
+  - net/loliland/lolidungeons/LoliDungeons$preInit$$inlined$load$default$1.class: loliland
+  - net/loliland/lolidungeons/LoliDungeons$preInit$$inlined$load$default$2.class: loliland
+  - net/loliland/lolidungeons/LoliDungeons.class: loliland
+  - net/loliland/lolidungeons/LoliDungeonsConstants.class: loliland
+  - net/loliland/lolidungeons/api/DungeonThreadExecutor.class: loliland
+  - net/loliland/lolidungeons/api/LoliDungeonsAPI$Companion$invokeOnDungeonThread$1.class: loliland
+  - net/loliland/lolidungeons/api/LoliDungeonsAPI$Companion.class: loliland
+  - net/loliland/lolidungeons/api/LoliDungeonsAPI.class: loliland
+  - net/loliland/lolidungeons/api/LoliDungeonsAPIKt.class: loliland
+  - net/loliland/lolidungeons/api/dungeon/AbstractDungeon.class: loliland
+  - net/loliland/lolidungeons/api/dungeon/Dungeon$Companion.class: loliland
+  - net/loliland/lolidungeons/api/dungeon/Dungeon.class: loliland
+- Loliland site evidence:
+  - mcmod.info: https://loliland
+- Loli prefix evidence:
+  - mcmod.info
+  - net/loliland/lolidungeons/EventListener.class
+  - net/loliland/lolidungeons/LoliDungeons$configDir$2.class
+  - net/loliland/lolidungeons/LoliDungeons$lolimodLoaded$2.class
+  - net/loliland/lolidungeons/LoliDungeons$mswLoaded$2.class
+  - net/loliland/lolidungeons/LoliDungeons$preInit$$inlined$load$default$1.class
+  - net/loliland/lolidungeons/LoliDungeons$preInit$$inlined$load$default$2.class
+  - net/loliland/lolidungeons/LoliDungeons.class
+  - net/loliland/lolidungeons/LoliDungeonsConstants.class
+  - net/loliland/lolidungeons/api/LoliDungeonsAPI$Companion$invokeOnDungeonThread$1.class
+  - net/loliland/lolidungeons/api/LoliDungeonsAPI$Companion.class
+  - net/loliland/lolidungeons/api/LoliDungeonsAPI.class
+  - net/loliland/lolidungeons/api/LoliDungeonsAPIKt.class
+  - net/loliland/lolidungeons/asm/CoremodPlugin.class
+  - net/loliland/lolidungeons/block/LoliDungeonsBlocks.class
+  - net/loliland/lolidungeons/block/spawner/TileEntityDungeonSpawner.class
+  - net/loliland/lolidungeons/client/renderer/texture/TextureDungeonSpawner.class
+  - net/loliland/lolidungeons/config/LoliDungeonsConfig.class
+  - net/loliland/lolidungeons/entity/LoliDungeonsPlayer$Companion.class
+  - net/loliland/lolidungeons/entity/LoliDungeonsPlayer$CurrentDungeonData.class
+```
+
+## LoliEnergistics
+
+```text
+- File: LoliEnergistics-1.7.10-client.jar
+- Mod ID: lolienergistics
+- Version: 1.7.10-1.0.0
+- Authors: LoliLand
+- Scanned entries: 2343
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: bytebuf=31, netty=30, simpleimpl=24, imessage=22, packet=12, sendtoserver=8, imessagehandler=7, messagecontext=7, channel=7, networkregistry=6, sendtoall=3, registermessage=2
+- Client packet evidence:
+  - loliland/common/obf/i10OLAnd.class: imessage
+  - loliland/common/obf/i10OLAnd.class: sendtoserver
+  - loliland/common/obf/i10OLAnd.class: simpleimpl
+  - loliland/luminous/ui/il1iILaNd.class: imessage
+  - loliland/luminous/ui/il1iILaNd.class: sendtoserver
+  - loliland/luminous/ui/il1iILaNd.class: simpleimpl
+  - ru/lolienergistics/O0OIIOlAnD$I1O1I1LaNd.class: imessage
+  - ru/lolienergistics/O0OIIOlAnD$I1O1I1LaNd.class: sendtoserver
+  - ru/lolienergistics/O0OIIOlAnD$I1O1I1LaNd.class: simpleimpl
+  - ru/lolienergistics/O0OIIOlAnD.class: imessage
+  - ru/lolienergistics/O0OIIOlAnD.class: sendtoserver
+  - ru/lolienergistics/O0OIIOlAnD.class: simpleimpl
+  - ru/lolienergistics/O0ll11LAnD.class: imessage
+  - ru/lolienergistics/O0ll11LAnD.class: sendtoserver
+  - ru/lolienergistics/O0ll11LAnD.class: simpleimpl
+  - ru/lolienergistics/Ol0I0OlAnD.class: packet
+  - ru/lolienergistics/l0OI0lAnd.class: imessage
+  - ru/lolienergistics/l0OI0lAnd.class: sendtoall
+  - ru/lolienergistics/l0OI0lAnd.class: sendtoserver
+  - ru/lolienergistics/l0OI0lAnd.class: simpleimpl
+- Network evidence:
+  - loliland/common/obf/i10OLAnd.class: imessage
+  - loliland/common/obf/i10OLAnd.class: sendtoserver
+  - loliland/common/obf/i10OLAnd.class: simpleimpl
+  - loliland/common/obf/l0liOiiLAnD.class: bytebuf
+  - loliland/common/obf/l0liOiiLAnD.class: netty
+  - loliland/luminous/ui/iI0IlIlLAnD.class: bytebuf
+  - loliland/luminous/ui/iI0IlIlLAnD.class: netty
+  - loliland/luminous/ui/il1iILaNd.class: imessage
+  - loliland/luminous/ui/il1iILaNd.class: sendtoserver
+  - loliland/luminous/ui/il1iILaNd.class: simpleimpl
+  - ru/lolienergistics/I11llANd$I1O1I1LaNd.class: imessage
+  - ru/lolienergistics/I11llANd$I1O1I1LaNd.class: imessagehandler
+  - ru/lolienergistics/I11llANd$I1O1I1LaNd.class: messagecontext
+  - ru/lolienergistics/I11llANd$I1O1I1LaNd.class: packet
+  - ru/lolienergistics/I11llANd$I1O1I1LaNd.class: simpleimpl
+  - ru/lolienergistics/I11llANd.class: bytebuf
+  - ru/lolienergistics/I11llANd.class: imessage
+  - ru/lolienergistics/I11llANd.class: netty
+  - ru/lolienergistics/I11llANd.class: simpleimpl
+  - ru/lolienergistics/I1O1iiI1LAND$I1O1I1LaNd.class: imessage
+- Loliland server evidence:
+  - loliland/common/obf/I0l11lIOlAnd.class: loliland
+  - loliland/common/obf/I11llANd$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/I11llANd.class: loliland
+  - loliland/common/obf/I1IiilLAnD.class: loliland
+  - loliland/common/obf/I1O000ilAND$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/I1O000ilAND$OOOIilanD.class: loliland
+  - loliland/common/obf/I1O000ilAND.class: loliland
+  - loliland/common/obf/II1II0laND.class: loliland
+  - loliland/common/obf/II1Iland.class: loliland
+  - loliland/common/obf/II1OiILanD$I1O1I1LaNd$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/II1OiILanD$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/II1OiILanD.class: loliland
+  - loliland/common/obf/II1i1l0laND$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/II1i1l0laND.class: loliland
+  - loliland/common/obf/IOOIlOlAnD$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/IOOIlOlAnD$OOOIilanD$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/IOOIlOlAnD$OOOIilanD$OOOIilanD.class: loliland
+  - loliland/common/obf/IOOIlOlAnD$OOOIilanD.class: loliland
+  - loliland/common/obf/IOOIlOlAnD$lI00OlAND.class: loliland
+  - loliland/common/obf/IOOIlOlAnD$li0iOILAND.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - com/gamerforea/ic2/lolienergistics/EventConfig.class
+  - loliland/common/obf/I0l11lIOlAnd.class
+  - loliland/common/obf/I11llANd$I1O1I1LaNd.class
+  - loliland/common/obf/I11llANd.class
+  - loliland/common/obf/I1IiilLAnD.class
+  - loliland/common/obf/I1O000ilAND$I1O1I1LaNd.class
+  - loliland/common/obf/I1O000ilAND$OOOIilanD.class
+  - loliland/common/obf/I1O000ilAND.class
+  - loliland/common/obf/II1II0laND.class
+  - loliland/common/obf/II1Iland.class
+  - loliland/common/obf/II1OiILanD$I1O1I1LaNd$I1O1I1LaNd.class
+  - loliland/common/obf/II1OiILanD$I1O1I1LaNd.class
+  - loliland/common/obf/II1OiILanD.class
+  - loliland/common/obf/II1i1l0laND$I1O1I1LaNd.class
+  - loliland/common/obf/II1i1l0laND.class
+  - loliland/common/obf/IOOIlOlAnD$I1O1I1LaNd.class
+  - loliland/common/obf/IOOIlOlAnD$OOOIilanD$I1O1I1LaNd.class
+  - loliland/common/obf/IOOIlOlAnD$OOOIilanD$OOOIilanD.class
+  - loliland/common/obf/IOOIlOlAnD$OOOIilanD.class
+  - loliland/common/obf/IOOIlOlAnD$lI00OlAND.class
+```
+
+## LoliEnergyRelics-1.7.10-client
+
+```text
+- File: LoliEnergyRelics-1.7.10-client.jar
+- Mod ID: LoliEnergyRelics-1.7.10-client
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 65
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: imessage=1, networkregistry=1, packet=1, sendtoall=1, sendtoallaround=1, simpleimpl=1
+- Client packet evidence:
+  - ru/lolienergyrelics/ll1ILAnd.class: imessage
+  - ru/lolienergyrelics/ll1ILAnd.class: networkregistry
+  - ru/lolienergyrelics/ll1ILAnd.class: packet
+  - ru/lolienergyrelics/ll1ILAnd.class: sendtoall
+  - ru/lolienergyrelics/ll1ILAnd.class: sendtoallaround
+  - ru/lolienergyrelics/ll1ILAnd.class: simpleimpl
+- Network evidence:
+  - ru/lolienergyrelics/ll1ILAnd.class: imessage
+  - ru/lolienergyrelics/ll1ILAnd.class: networkregistry
+  - ru/lolienergyrelics/ll1ILAnd.class: packet
+  - ru/lolienergyrelics/ll1ILAnd.class: sendtoall
+  - ru/lolienergyrelics/ll1ILAnd.class: sendtoallaround
+  - ru/lolienergyrelics/ll1ILAnd.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - ru/lolienergyrelics/OOOIilanD.class
+```
+
+## LoliForestry-1.7.10-client
+
+```text
+- File: LoliForestry-1.7.10-client.jar
+- Mod ID: LoliForestry-1.7.10-client
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 233
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: simpleimpl=12, imessage=11, sendtoserver=5, imessagehandler=3, messagecontext=3, bytebuf=3, netty=3, packet=1, channel=1, networkregistry=1, registermessage=1, simplechannel=1
+- Client packet evidence:
+  - loliland/forestry/obf/OIl0IilanD.class: imessage
+  - loliland/forestry/obf/OIl0IilanD.class: sendtoserver
+  - loliland/forestry/obf/OIl0IilanD.class: simpleimpl
+  - loliland/forestry/obf/OOOIilanD.class: channel
+  - loliland/forestry/obf/OOOIilanD.class: networkregistry
+  - loliland/forestry/obf/OOOIilanD.class: registermessage
+  - loliland/forestry/obf/OOOIilanD.class: simplechannel
+  - loliland/forestry/obf/OOOIilanD.class: simpleimpl
+  - loliland/forestry/obf/Oill1LAnD$I1O1I1LaNd.class: imessage
+  - loliland/forestry/obf/Oill1LAnD$I1O1I1LaNd.class: sendtoserver
+  - loliland/forestry/obf/Oill1LAnD$I1O1I1LaNd.class: simpleimpl
+  - loliland/forestry/obf/Oill1LAnD$OOOIilanD.class: imessage
+  - loliland/forestry/obf/Oill1LAnD$OOOIilanD.class: sendtoserver
+  - loliland/forestry/obf/Oill1LAnD$OOOIilanD.class: simpleimpl
+  - loliland/forestry/obf/lIOILand$I1O1I1LaNd.class: imessage
+  - loliland/forestry/obf/lIOILand$I1O1I1LaNd.class: sendtoserver
+  - loliland/forestry/obf/lIOILand$I1O1I1LaNd.class: simpleimpl
+  - loliland/forestry/obf/lIOILand$OOOIilanD.class: imessage
+  - loliland/forestry/obf/lIOILand$OOOIilanD.class: sendtoserver
+  - loliland/forestry/obf/lIOILand$OOOIilanD.class: simpleimpl
+- Network evidence:
+  - loliland/forestry/obf/OIl0IilanD.class: imessage
+  - loliland/forestry/obf/OIl0IilanD.class: sendtoserver
+  - loliland/forestry/obf/OIl0IilanD.class: simpleimpl
+  - loliland/forestry/obf/OOOIilanD.class: channel
+  - loliland/forestry/obf/OOOIilanD.class: networkregistry
+  - loliland/forestry/obf/OOOIilanD.class: registermessage
+  - loliland/forestry/obf/OOOIilanD.class: simplechannel
+  - loliland/forestry/obf/OOOIilanD.class: simpleimpl
+  - loliland/forestry/obf/Oill1LAnD$I1O1I1LaNd.class: imessage
+  - loliland/forestry/obf/Oill1LAnD$I1O1I1LaNd.class: sendtoserver
+  - loliland/forestry/obf/Oill1LAnD$I1O1I1LaNd.class: simpleimpl
+  - loliland/forestry/obf/Oill1LAnD$OOOIilanD.class: imessage
+  - loliland/forestry/obf/Oill1LAnD$OOOIilanD.class: sendtoserver
+  - loliland/forestry/obf/Oill1LAnD$OOOIilanD.class: simpleimpl
+  - loliland/forestry/obf/i1i1OilanD$I1O1I1LaNd.class: imessage
+  - loliland/forestry/obf/i1i1OilanD$I1O1I1LaNd.class: imessagehandler
+  - loliland/forestry/obf/i1i1OilanD$I1O1I1LaNd.class: messagecontext
+  - loliland/forestry/obf/i1i1OilanD$I1O1I1LaNd.class: simpleimpl
+  - loliland/forestry/obf/i1i1OilanD.class: bytebuf
+  - loliland/forestry/obf/i1i1OilanD.class: imessage
+- Loliland server evidence:
+  - loliland/forestry/client/ClientSide.class: loliland
+  - loliland/forestry/integration/I1O1I1LaNd.class: loliland
+  - loliland/forestry/integration/NEIModConfig.class: loliland
+  - loliland/forestry/integration/OOOIilanD.class: loliland
+  - loliland/forestry/integration/lI00OlAND.class: loliland
+  - loliland/forestry/integration/minetweaker/recipe/MTBeeFactory$I1O1I1LaNd.class: loliland
+  - loliland/forestry/integration/minetweaker/recipe/MTBeeFactory.class: loliland
+  - loliland/forestry/obf/I0Oi1O0OlaND.class: loliland
+  - loliland/forestry/obf/I100I0lLand.class: loliland
+  - loliland/forestry/obf/I111i0OILaNd.class: loliland
+  - loliland/forestry/obf/I11llANd.class: loliland
+  - loliland/forestry/obf/I1IiilLAnD.class: loliland
+  - loliland/forestry/obf/I1IllaND.class: loliland
+  - loliland/forestry/obf/I1O1I1LaNd.class: loliland
+  - loliland/forestry/obf/II1II0laND.class: loliland
+  - loliland/forestry/obf/II1Iland.class: loliland
+  - loliland/forestry/obf/II1i1l0laND.class: loliland
+  - loliland/forestry/obf/IIOlO0ilAnD.class: loliland
+  - loliland/forestry/obf/IO11O0LANd.class: loliland
+  - loliland/forestry/obf/IOI1LaNd.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - loliland/forestry/integration/NEIModConfig.class
+  - loliland/forestry/integration/OOOIilanD.class
+  - loliland/forestry/obf/OOOIilanD.class
+  - loliland/forestry/obf/lilILAND.class
+  - net/minecraft/client/gui/inventory/LoliForestryGuiContainerAccessor.class
+```
+
+## LoliHooks-master-aa342203
+
+```text
+- File: LoliHooks-master-aa342203.jar
+- Mod ID: LoliHooks-master-aa342203
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 53
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence:
+  - loliland/forge/hookslib/asm/AsmHook$1.class: loliland
+  - loliland/forge/hookslib/asm/AsmHook$Builder.class: loliland
+  - loliland/forge/hookslib/asm/AsmHook.class: loliland
+  - loliland/forge/hookslib/asm/At.class: loliland
+  - loliland/forge/hookslib/asm/ClassMetadataReader$CheckSuperClassVisitor.class: loliland
+  - loliland/forge/hookslib/asm/ClassMetadataReader$FindMethodClassVisitor.class: loliland
+  - loliland/forge/hookslib/asm/ClassMetadataReader$MethodReference.class: loliland
+  - loliland/forge/hookslib/asm/ClassMetadataReader.class: loliland
+  - loliland/forge/hookslib/asm/Hook$LocalVariable.class: loliland
+  - loliland/forge/hookslib/asm/Hook$ReturnValue.class: loliland
+  - loliland/forge/hookslib/asm/Hook.class: loliland
+  - loliland/forge/hookslib/asm/HookClassTransformer.class: loliland
+  - loliland/forge/hookslib/asm/HookContainerParser$HookAnnotationVisitor$1.class: loliland
+  - loliland/forge/hookslib/asm/HookContainerParser$HookAnnotationVisitor.class: loliland
+  - loliland/forge/hookslib/asm/HookContainerParser$HookClassVisitor.class: loliland
+  - loliland/forge/hookslib/asm/HookContainerParser$HookMethodVisitor$1.class: loliland
+  - loliland/forge/hookslib/asm/HookContainerParser$HookMethodVisitor.class: loliland
+  - loliland/forge/hookslib/asm/HookContainerParser.class: loliland
+  - loliland/forge/hookslib/asm/HookInjectorClassVisitor.class: loliland
+  - loliland/forge/hookslib/asm/HookInjectorFactory$ByAnchor.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Example Mod
+
+```text
+- File: LoliMod-1.7.10-client.jar
+- Mod ID: examplemod
+- Version: ${version}
+- Authors: ExampleDude
+- Scanned entries: 1804
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: yes
+- Contains Loli prefix: yes
+- Packet marker summary: packet=142, bytebuf=17, simpleimpl=6, networkregistry=5, imessage=5, netty=4, cpacket=4, packetbuffer=3, channel=3, fmlnetworkevent=2, sendtoall=2, sendtoallaround=2
+- Client packet evidence:
+  - loliland/forge/events/listeners/ForgeClientListener.class: fmlnetworkevent
+  - loliland/forge/hooks/HooksClient.class: packet
+  - loliland/forge/hooks/HooksClient.class: packetbuffer
+  - loliland/forge/hooks/HooksServer.class: packet
+  - loliland/forge/hooks/HooksServer.class: packetbuffer
+  - loliland/lolimod/I0IO0l1OLanD.class: channel
+  - loliland/lolimod/I0IO0l1OLanD.class: netty
+  - loliland/lolimod/I0IO0l1OLanD.class: networkregistry
+  - loliland/lolimod/I0IO0l1OLanD.class: packet
+  - loliland/lolimod/I0IO0l1OLanD.class: sendtoall
+  - loliland/lolimod/I0IO0l1OLanD.class: sendtoallaround
+  - loliland/lolimod/I0IO0l1OLanD.class: sendtoserver
+  - loliland/lolimod/I100I0lLand.class: bytebuf
+  - loliland/lolimod/I1iiOILAnd.class: packet
+  - loliland/lolimod/O0l11liLAnd.class: packet
+  - loliland/lolimod/OIi0i1OLAND.class: cpacket
+  - loliland/lolimod/OIi0i1OLAND.class: packet
+  - loliland/lolimod/OO0Ii101land.class: packet
+  - loliland/lolimod/Ol001OO1LANd.class: packet
+  - loliland/lolimod/OlOlI11lLAnD.class: packet
+- Network evidence:
+  - loliland/forge/XForge.class: networkregistry
+  - loliland/forge/events/listeners/ForgeClientListener.class: fmlnetworkevent
+  - loliland/forge/hooks/HooksClient.class: packet
+  - loliland/forge/hooks/HooksClient.class: packetbuffer
+  - loliland/forge/hooks/HooksServer.class: packet
+  - loliland/forge/hooks/HooksServer.class: packetbuffer
+  - loliland/lolimod/I0IO0l1OLanD.class: channel
+  - loliland/lolimod/I0IO0l1OLanD.class: netty
+  - loliland/lolimod/I0IO0l1OLanD.class: networkregistry
+  - loliland/lolimod/I0IO0l1OLanD.class: packet
+  - loliland/lolimod/I0IO0l1OLanD.class: sendtoall
+  - loliland/lolimod/I0IO0l1OLanD.class: sendtoallaround
+  - loliland/lolimod/I0IO0l1OLanD.class: sendtoserver
+  - loliland/lolimod/I0IiiLaND.class: packet
+  - loliland/lolimod/I0OIOOOlaNd.class: packet
+  - loliland/lolimod/I0il1lAND.class: packet
+  - loliland/lolimod/I0l00OlanD.class: packet
+  - loliland/lolimod/I100I010lAND.class: cpacket
+  - loliland/lolimod/I100I010lAND.class: packet
+  - loliland/lolimod/I100I0lLand.class: bytebuf
+- Loliland server evidence:
+  - assets/loliland/sounds.json: loliland
+  - loliland/core/CompileFlag.class: loliland
+  - loliland/core/I1O1I1LaNd.class: loliland
+  - loliland/core/IProguard.class: loliland
+  - loliland/core/OOOIilanD.class: loliland
+  - loliland/core/api/client/event/GetWorldBorderEvent.class: loliland
+  - loliland/core/api/client/event/ServerDataEvent$GetOnline.class: loliland
+  - loliland/core/api/client/event/ServerDataEvent$GetServers.class: loliland
+  - loliland/core/api/client/event/ServerDataEvent.class: loliland
+  - loliland/core/api/client/gui/IBlurredGui.class: loliland
+  - loliland/core/api/client/gui/IGuiMainMenu.class: loliland
+  - loliland/core/api/client/util/SkinUtils.class: loliland
+  - loliland/forge/I1O1I1LaNd.class: loliland
+  - loliland/forge/OOOIilanD.class: loliland
+  - loliland/forge/XForge.class: loliland
+  - loliland/forge/events/listeners/ForgeClientListener.class: loliland
+  - loliland/forge/hooks/HooksClient.class: loliland
+  - loliland/forge/hooks/HooksServer.class: loliland
+  - loliland/forge/hooks/XHookLoader.class: loliland
+  - loliland/lolimod/I0001llaND.class: loliland
+- Loliland site evidence:
+  - loliland/core/OOOIilanD.class: https://loliland
+  - loliland/core/OOOIilanD.class: loliland.ru
+  - loliland/core/OOOIilanD.class: vk.com/loliland
+  - loliland/lolimod/Il00lAnd.class: https://loliland
+  - loliland/lolimod/Il00lAnd.class: loliland.ru
+  - loliland/lolimod/Oi11ILAnD.class: https://loliland
+  - loliland/lolimod/Oi11ILAnD.class: loliland.ru
+  - loliland/lolimod/iI0i0lOLand.class: https://loliland
+  - loliland/lolimod/iI0i0lOLand.class: loliland.ru
+  - loliland/lolimod/iOIlLAnd.class: https://loliland
+  - loliland/lolimod/iOIlLAnd.class: loliland.ru
+  - loliland/lolimod/ilO1O0iland.class: https://loliland
+  - loliland/lolimod/ilO1O0iland.class: loliland.ru
+  - loliland/lolimod/iliOI11laND.class: https://loliland
+  - loliland/lolimod/iliOI11laND.class: loliland.ru
+  - loliland/lolimod/iliOI11laND.class: vk.com/loliland
+  - loliland/lolimod/lI1Ii0LAnD.class: https://loliland
+  - loliland/lolimod/lI1Ii0LAnD.class: loliland.ru
+  - loliland/lolimod/lIi10Oland.class: https://loliland
+  - loliland/lolimod/lIi10Oland.class: loliland.ru
+- Loli prefix evidence:
+  - loliland/core/OOOIilanD.class
+  - loliland/forge/XForge.class
+  - loliland/forge/hooks/HooksClient.class
+  - loliland/lolimod/I0liIiLaND.class
+  - loliland/lolimod/IO1I1OLAnd.class
+  - loliland/lolimod/IOOil0llAnd.class
+  - loliland/lolimod/IliliLaNd.class
+  - loliland/lolimod/O1Il0lANd.class
+  - loliland/lolimod/O1OOl1lland.class
+  - loliland/lolimod/O1l1010LAND.class
+  - loliland/lolimod/OI01ilAND.class
+  - loliland/lolimod/OlO1LanD.class
+  - loliland/lolimod/i00OlLANd.class
+  - loliland/lolimod/i11il1ILanD.class
+  - loliland/lolimod/iIi1Oi1iLand.class
+  - loliland/lolimod/iO1O1OlaND.class
+  - loliland/lolimod/ii11I0lAND.class
+  - loliland/lolimod/iliOI11laND.class
+  - loliland/lolimod/l0IlIO1LAND.class
+  - loliland/lolimod/l110OI0iLANd.class
+```
+
+## LoliUtility-1.7.10-client
+
+```text
+- File: LoliUtility-1.7.10-client.jar
+- Mod ID: LoliUtility-1.7.10-client
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 990
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: imessage=105, simpleimpl=105, bytebuf=60, netty=51, messagecontext=43, imessagehandler=40, sendtoserver=29, packet=12, networkregistry=7, sendtoall=4, sendtoallaround=4, channel=2
+- Client packet evidence:
+  - loliland/utility/client/ClientSide.class: imessage
+  - loliland/utility/client/ClientSide.class: messagecontext
+  - loliland/utility/client/ClientSide.class: packet
+  - loliland/utility/client/ClientSide.class: sendtoserver
+  - loliland/utility/client/ClientSide.class: simpleimpl
+  - loliland/utility/obf/I100I0lLand.class: imessage
+  - loliland/utility/obf/I100I0lLand.class: sendtoserver
+  - loliland/utility/obf/I100I0lLand.class: simpleimpl
+  - loliland/utility/obf/II0101Iland.class: bytebuf
+  - loliland/utility/obf/II0101Iland.class: imessage
+  - loliland/utility/obf/II0101Iland.class: imessagehandler
+  - loliland/utility/obf/II0101Iland.class: messagecontext
+  - loliland/utility/obf/II0101Iland.class: netty
+  - loliland/utility/obf/II0101Iland.class: simpleimpl
+  - loliland/utility/obf/II1i1l0laND.class: imessage
+  - loliland/utility/obf/II1i1l0laND.class: sendtoserver
+  - loliland/utility/obf/II1i1l0laND.class: simpleimpl
+  - loliland/utility/obf/IIOlO0ilAnD.class: imessage
+  - loliland/utility/obf/IIOlO0ilAnD.class: sendtoserver
+  - loliland/utility/obf/IIOlO0ilAnD.class: simpleimpl
+- Network evidence:
+  - loliland/utility/client/ClientSide.class: imessage
+  - loliland/utility/client/ClientSide.class: messagecontext
+  - loliland/utility/client/ClientSide.class: packet
+  - loliland/utility/client/ClientSide.class: sendtoserver
+  - loliland/utility/client/ClientSide.class: simpleimpl
+  - loliland/utility/obf/I0l0Land$I1O1I1LaNd.class: imessage
+  - loliland/utility/obf/I0l0Land$I1O1I1LaNd.class: imessagehandler
+  - loliland/utility/obf/I0l0Land$I1O1I1LaNd.class: messagecontext
+  - loliland/utility/obf/I0l0Land$I1O1I1LaNd.class: simpleimpl
+  - loliland/utility/obf/I0l0Land.class: bytebuf
+  - loliland/utility/obf/I0l0Land.class: imessage
+  - loliland/utility/obf/I0l0Land.class: netty
+  - loliland/utility/obf/I0l0Land.class: simpleimpl
+  - loliland/utility/obf/I100I0lLand.class: imessage
+  - loliland/utility/obf/I100I0lLand.class: sendtoserver
+  - loliland/utility/obf/I100I0lLand.class: simpleimpl
+  - loliland/utility/obf/I1O000ilAND$I1O1I1LaNd.class: bytebuf
+  - loliland/utility/obf/I1O000ilAND.class: bytebuf
+  - loliland/utility/obf/II0101Iland.class: bytebuf
+  - loliland/utility/obf/II0101Iland.class: imessage
+- Loliland server evidence:
+  - loliland/luminous/ui/I1O1I1LaNd$I1O1I1LaNd.class: loliland
+  - loliland/luminous/ui/I1O1I1LaNd.class: loliland
+  - loliland/luminous/ui/II1II0laND.class: loliland
+  - loliland/luminous/ui/II1Iland.class: loliland
+  - loliland/luminous/ui/II1i1l0laND.class: loliland
+  - loliland/luminous/ui/IO11O0LANd.class: loliland
+  - loliland/luminous/ui/IOI1LaNd.class: loliland
+  - loliland/luminous/ui/IiiilAnD.class: loliland
+  - loliland/luminous/ui/Iil0IOlAND.class: loliland
+  - loliland/luminous/ui/O1il1llOLANd.class: loliland
+  - loliland/luminous/ui/OI1II1OIlanD.class: loliland
+  - loliland/luminous/ui/OO10lO1LANd.class: loliland
+  - loliland/luminous/ui/OO1Oi0LAnD.class: loliland
+  - loliland/luminous/ui/OOOIilanD.class: loliland
+  - loliland/luminous/ui/OOOliOOllANd.class: loliland
+  - loliland/luminous/ui/Oill1LAnD.class: loliland
+  - loliland/luminous/ui/i0IIlOLANd.class: loliland
+  - loliland/luminous/ui/iIiO00OLaNd.class: loliland
+  - loliland/luminous/ui/iOIOOilanD.class: loliland
+  - loliland/luminous/ui/iOIl0LAnD.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - loliland/luminous/ui/I1O1I1LaNd$I1O1I1LaNd.class
+  - loliland/luminous/ui/I1O1I1LaNd.class
+  - loliland/luminous/ui/IOI1LaNd.class
+  - loliland/luminous/ui/iilIi1laND.class
+  - loliland/luminous/ui/l0lllAND.class
+  - loliland/luminous/ui/lI00ilAND.class
+  - loliland/luminous/ui/lil0liLand.class
+  - loliland/utility/obf/I0I0lilANd.class
+  - loliland/utility/obf/Ili0OlOLaNd.class
+  - loliland/utility/obf/OOOIilanD.class
+  - loliland/utility/obf/lO011O1IlAnD.class
+  - net/loliland/installer/ClientUtils.class
+  - net/loliland/installer/GuiInstaller$Companion.class
+  - net/loliland/installer/GuiInstaller.class
+  - net/loliland/installer/GuiPanelBuild$Companion.class
+  - net/loliland/installer/GuiPanelBuild$GuiBuildTooltip.class
+  - net/loliland/installer/GuiPanelBuild$GuiStructureComponents$Companion.class
+  - net/loliland/installer/GuiPanelBuild$GuiStructureComponents.class
+  - net/loliland/installer/GuiPanelBuild.class
+  - net/loliland/installer/GuiPanelStructures$Companion.class
+```
+
+## LoliWeCUI-master-7296045c
+
+```text
+- File: LoliWeCUI-master-7296045c.jar
+- Mod ID: LoliWeCUI-master-7296045c
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 15
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=3, channel=2, bytebuf=1, fmlnetworkevent=1, netty=1, networkregistry=1, payload=1, sendtoserver=1, handshake=1
+- Client packet evidence:
+  - me/heldplayer/mods/wecui/ModWECUI.class: packet
+  - me/heldplayer/mods/wecui/Objects.class: channel
+  - me/heldplayer/mods/wecui/PacketHandler.class: bytebuf
+  - me/heldplayer/mods/wecui/PacketHandler.class: channel
+  - me/heldplayer/mods/wecui/PacketHandler.class: fmlnetworkevent
+  - me/heldplayer/mods/wecui/PacketHandler.class: netty
+  - me/heldplayer/mods/wecui/PacketHandler.class: networkregistry
+  - me/heldplayer/mods/wecui/PacketHandler.class: packet
+  - me/heldplayer/mods/wecui/PacketHandler.class: payload
+  - me/heldplayer/mods/wecui/PacketHandler.class: sendtoserver
+  - me/heldplayer/mods/wecui/client/ClientProxy.class: handshake
+  - me/heldplayer/mods/wecui/client/ClientProxy.class: packet
+- Network evidence:
+  - me/heldplayer/mods/wecui/ModWECUI.class: packet
+  - me/heldplayer/mods/wecui/Objects.class: channel
+  - me/heldplayer/mods/wecui/PacketHandler.class: bytebuf
+  - me/heldplayer/mods/wecui/PacketHandler.class: channel
+  - me/heldplayer/mods/wecui/PacketHandler.class: fmlnetworkevent
+  - me/heldplayer/mods/wecui/PacketHandler.class: netty
+  - me/heldplayer/mods/wecui/PacketHandler.class: networkregistry
+  - me/heldplayer/mods/wecui/PacketHandler.class: packet
+  - me/heldplayer/mods/wecui/PacketHandler.class: payload
+  - me/heldplayer/mods/wecui/PacketHandler.class: sendtoserver
+  - me/heldplayer/mods/wecui/client/ClientProxy.class: handshake
+  - me/heldplayer/mods/wecui/client/ClientProxy.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Luminous UI
+
+```text
+- File: luminous-1.7.10.jar
+- Mod ID: luminous
+- Version: 0.1.0
+- Authors: LoliLand
+- Scanned entries: 1697
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: yes
+- Contains Loli prefix: yes
+- Packet marker summary: bytebuf=5, imessage=3, simpleimpl=3, netty=1, payload=1, imessagehandler=1, messagecontext=1, channel=1, networkregistry=1, registermessage=1, sendtoserver=1, simplechannel=1
+- Client packet evidence:
+  - loliland/luminous/impl/graphics/MinecraftOffscreenRenderer.class: bytebuf
+  - loliland/luminous/network/LuminousNetworkManager.class: channel
+  - loliland/luminous/network/LuminousNetworkManager.class: imessage
+  - loliland/luminous/network/LuminousNetworkManager.class: networkregistry
+  - loliland/luminous/network/LuminousNetworkManager.class: registermessage
+  - loliland/luminous/network/LuminousNetworkManager.class: sendtoserver
+  - loliland/luminous/network/LuminousNetworkManager.class: simplechannel
+  - loliland/luminous/network/LuminousNetworkManager.class: simpleimpl
+- Network evidence:
+  - loliland/luminous/core/cursor/CursorFactory.class: bytebuf
+  - loliland/luminous/core/cursor/impl/glfw/GlfwCursorFactory.class: bytebuf
+  - loliland/luminous/core/cursor/impl/lwjgl2/Lwjgl2CursorFactory.class: bytebuf
+  - loliland/luminous/impl/graphics/MinecraftOffscreenRenderer.class: bytebuf
+  - loliland/luminous/network/LuminousNetworkManager.class: channel
+  - loliland/luminous/network/LuminousNetworkManager.class: imessage
+  - loliland/luminous/network/LuminousNetworkManager.class: networkregistry
+  - loliland/luminous/network/LuminousNetworkManager.class: registermessage
+  - loliland/luminous/network/LuminousNetworkManager.class: sendtoserver
+  - loliland/luminous/network/LuminousNetworkManager.class: simplechannel
+  - loliland/luminous/network/LuminousNetworkManager.class: simpleimpl
+  - loliland/luminous/network/RecipeTransferMessage$Handler.class: imessage
+  - loliland/luminous/network/RecipeTransferMessage$Handler.class: imessagehandler
+  - loliland/luminous/network/RecipeTransferMessage$Handler.class: messagecontext
+  - loliland/luminous/network/RecipeTransferMessage$Handler.class: simpleimpl
+  - loliland/luminous/network/RecipeTransferMessage.class: bytebuf
+  - loliland/luminous/network/RecipeTransferMessage.class: imessage
+  - loliland/luminous/network/RecipeTransferMessage.class: netty
+  - loliland/luminous/network/RecipeTransferMessage.class: payload
+  - loliland/luminous/network/RecipeTransferMessage.class: simpleimpl
+- Loliland server evidence:
+  - loliland/luminous/EventListener.class: loliland
+  - loliland/luminous/EventListenerCommon.class: loliland
+  - loliland/luminous/Luminous$loadComplete$1.class: loliland
+  - loliland/luminous/Luminous.class: loliland
+  - loliland/luminous/LuminousConstants.class: loliland
+  - loliland/luminous/api/LuminousAPI.class: loliland
+  - loliland/luminous/api/gui/LuminousScreen.class: loliland
+  - loliland/luminous/api/gui/LuminousScreenKt.class: loliland
+  - loliland/luminous/api/gui/ScreenTheme.class: loliland
+  - loliland/luminous/api/gui/ScreenThemeRegistry.class: loliland
+  - loliland/luminous/api/item/SpecialUnitItem.class: loliland
+  - loliland/luminous/api/recipe/ItemStackUtil.class: loliland
+  - loliland/luminous/api/recipe/LoliRecipeRegistry.class: loliland
+  - loliland/luminous/api/recipe/MachineInfo.class: loliland
+  - loliland/luminous/api/recipe/MachineRegistry$getMachines$$inlined$sortedBy$1.class: loliland
+  - loliland/luminous/api/recipe/MachineRegistry.class: loliland
+  - loliland/luminous/api/recipe/MissingInputsHolder.class: loliland
+  - loliland/luminous/api/recipe/RecipeDeduplicator$RecipeFingerprint.class: loliland
+  - loliland/luminous/api/recipe/RecipeDeduplicator$computeFingerprint$$inlined$sortedBy$1.class: loliland
+  - loliland/luminous/api/recipe/RecipeDeduplicator$computeFingerprint$inputKeys$2.class: loliland
+- Loliland site evidence:
+  - mcmod.info: https://loliland
+- Loli prefix evidence:
+  - loliland/luminous/EventListener.class
+  - loliland/luminous/Luminous$loadComplete$1.class
+  - loliland/luminous/Luminous.class
+  - loliland/luminous/api/recipe/LoliRecipeRegistry.class
+  - loliland/luminous/impl/text/MinecraftFont.class
+  - loliland/luminous/refactor/root/BaseContainerLogic.class
+  - loliland/luminous/refactor/root/nei/left/ItemPanel$ItemSlot.class
+  - loliland/luminous/refactor/root/nei/right/ItemPanel$ItemSlot.class
+  - loliland/luminous/ui/mod/GuiCraftingTable.class
+  - loliland/luminous/ui/mod/GuiFurnaceScreen$buildMachineContent$1$1.class
+  - loliland/luminous/ui/mod/GuiFurnaceScreen$buildMachineContent$1.class
+  - loliland/luminous/ui/mod/GuiFurnaceScreen.class
+  - loliland/luminous/ui/mod/LoliUtilityContainerScreen.class
+  - loliland/luminous/ui/mod/ModContainerScreen.class
+  - loliland/luminous/ui/mod/VanillaMachineWidgetsKt$vanillaRecipeArrow$1$1.class
+  - loliland/luminous/ui/recipe/LoliRecipeViewer$WhenMappings.class
+  - loliland/luminous/ui/recipe/LoliRecipeViewer.class
+  - loliland/luminous/ui/recipe/LoliRecipeViewerScreen$BridgeState.class
+  - loliland/luminous/ui/recipe/LoliRecipeViewerScreen$Companion$COMPACT_TEXT_CONFIG$1.class
+  - loliland/luminous/ui/recipe/LoliRecipeViewerScreen$Companion$READ_ONLY_CONTAINER$1.class
+```
+
+## LWSL
+
+```text
+- File: LWSL-Mod-0.11.0-client.jar
+- Mod ID: lwsl
+- Version: 0.11.0
+- Authors: Aizistral
+- Scanned entries: 57
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=2, simpleimpl=2, channel=1, networkregistry=1, registermessage=1, simplechannel=1, bytebuf=1, imessage=1, imessagehandler=1, messagecontext=1, netty=1
+- Client packet evidence:
+  - com/aizistral/lwsl/LWSLMod.class: channel
+  - com/aizistral/lwsl/LWSLMod.class: networkregistry
+  - com/aizistral/lwsl/LWSLMod.class: packet
+  - com/aizistral/lwsl/LWSLMod.class: registermessage
+  - com/aizistral/lwsl/LWSLMod.class: simplechannel
+  - com/aizistral/lwsl/LWSLMod.class: simpleimpl
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: bytebuf
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: imessage
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: imessagehandler
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: messagecontext
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: netty
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: packet
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: simpleimpl
+- Network evidence:
+  - com/aizistral/lwsl/LWSLMod.class: channel
+  - com/aizistral/lwsl/LWSLMod.class: networkregistry
+  - com/aizistral/lwsl/LWSLMod.class: packet
+  - com/aizistral/lwsl/LWSLMod.class: registermessage
+  - com/aizistral/lwsl/LWSLMod.class: simplechannel
+  - com/aizistral/lwsl/LWSLMod.class: simpleimpl
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: bytebuf
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: imessage
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: imessagehandler
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: messagecontext
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: netty
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: packet
+  - com/aizistral/lwsl/packets/StructureOutlinePacket.class: simpleimpl
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Mantle-1.7.10-0.3.2b
+
+```text
+- File: Mantle-1.7.10-0.3.2b.jar
+- Mod ID: Mantle-1.7.10-0.3.2b
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 102
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=3, bytebuf=2, channel=2, netty=2, networkregistry=1, packetbuffer=1
+- Client packet evidence:
+  - mantle/Mantle.class: networkregistry
+  - mantle/common/network/AbstractPacket.class: bytebuf
+  - mantle/common/network/AbstractPacket.class: channel
+  - mantle/common/network/AbstractPacket.class: netty
+  - mantle/common/network/AbstractPacket.class: packet
+  - mantle/common/network/PacketUpdateTE.class: bytebuf
+  - mantle/common/network/PacketUpdateTE.class: channel
+  - mantle/common/network/PacketUpdateTE.class: netty
+  - mantle/common/network/PacketUpdateTE.class: packet
+  - mantle/common/network/PacketUpdateTE.class: packetbuffer
+- Network evidence:
+  - mantle/Mantle.class: networkregistry
+  - mantle/blocks/abstracts/MultiServantLogic.class: packet
+  - mantle/common/network/AbstractPacket.class: bytebuf
+  - mantle/common/network/AbstractPacket.class: channel
+  - mantle/common/network/AbstractPacket.class: netty
+  - mantle/common/network/AbstractPacket.class: packet
+  - mantle/common/network/PacketUpdateTE.class: bytebuf
+  - mantle/common/network/PacketUpdateTE.class: channel
+  - mantle/common/network/PacketUpdateTE.class: netty
+  - mantle/common/network/PacketUpdateTE.class: packet
+  - mantle/common/network/PacketUpdateTE.class: packetbuffer
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Matter Overdrive
+
+```text
+- File: MatterOverdrive-1.7.10-0.4.2-hotfix1.jar
+- Mod ID: mo
+- Version: 0.4.1
+- Authors: Simeon Radivoev
+- Scanned entries: 978
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=163, simpleimpl=88, imessage=86, netty=60, bytebuf=59, messagecontext=43, sendtoserver=25, sendtoall=13, sendtoallaround=13, networkregistry=6, registermessage=6, channel=3
+- Client packet evidence:
+  - matteroverdrive/MatterOverdrive.class: networkregistry
+  - matteroverdrive/MatterOverdrive.class: packet
+  - matteroverdrive/Reference.class: channel
+  - matteroverdrive/Reference.class: packet
+  - matteroverdrive/api/network/IMatterNetworkClient.class: packet
+  - matteroverdrive/client/RenderHandler.class: packet
+  - matteroverdrive/client/render/tileentity/TileEntityRendererPacketQueue.class: packet
+  - matteroverdrive/container/ContainerPatternMonitor.class: imessage
+  - matteroverdrive/container/ContainerPatternMonitor.class: packet
+  - matteroverdrive/container/ContainerPatternMonitor.class: simpleimpl
+  - matteroverdrive/data/biostats/BioticStatShockwave.class: imessage
+  - matteroverdrive/data/biostats/BioticStatShockwave.class: packet
+  - matteroverdrive/data/biostats/BioticStatShockwave.class: sendtoall
+  - matteroverdrive/data/biostats/BioticStatShockwave.class: sendtoallaround
+  - matteroverdrive/data/biostats/BioticStatShockwave.class: simpleimpl
+  - matteroverdrive/data/biostats/BioticStatTeleport.class: imessage
+  - matteroverdrive/data/biostats/BioticStatTeleport.class: packet
+  - matteroverdrive/data/biostats/BioticStatTeleport.class: sendtoserver
+  - matteroverdrive/data/biostats/BioticStatTeleport.class: simpleimpl
+  - matteroverdrive/data/quest/PlayerQuestData.class: imessage
+- Network evidence:
+  - matteroverdrive/MatterOverdrive.class: networkregistry
+  - matteroverdrive/MatterOverdrive.class: packet
+  - matteroverdrive/Reference.class: channel
+  - matteroverdrive/Reference.class: packet
+  - matteroverdrive/api/dialog/IDialogRegistry.class: registermessage
+  - matteroverdrive/api/network/IMatterNetworkCable.class: packet
+  - matteroverdrive/api/network/IMatterNetworkClient.class: packet
+  - matteroverdrive/api/starmap/GalacticPosition.class: bytebuf
+  - matteroverdrive/api/starmap/GalacticPosition.class: netty
+  - matteroverdrive/api/transport/TransportLocation.class: bytebuf
+  - matteroverdrive/api/transport/TransportLocation.class: netty
+  - matteroverdrive/api/weapon/WeaponShot.class: bytebuf
+  - matteroverdrive/api/weapon/WeaponShot.class: netty
+  - matteroverdrive/client/RenderHandler.class: packet
+  - matteroverdrive/client/render/tileentity/TileEntityRendererPacketQueue.class: packet
+  - matteroverdrive/container/ContainerPatternMonitor.class: imessage
+  - matteroverdrive/container/ContainerPatternMonitor.class: packet
+  - matteroverdrive/container/ContainerPatternMonitor.class: simpleimpl
+  - matteroverdrive/data/EntityPosition.class: bytebuf
+  - matteroverdrive/data/EntityPosition.class: netty
+- Loliland server evidence:
+  - matteroverdrive/guide/GuideElementAbstract.class: loliland
+  - matteroverdrive/init/MatterOverdriveMatter.class: loliland
+  - matteroverdrive/init/MatterOverdriveRecipes.class: loliland
+  - matteroverdrive/items/ItemUpgrade.class: loliland
+  - matteroverdrive/items/weapon/module/WeaponModuleBarrel.class: loliland
+  - matteroverdrive/tile/TileEntityGravitationalAnomaly.class: loliland
+  - matteroverdrive/world/MOSandPit.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## MCTags-master-72ca4ae0
+
+```text
+- File: MCTags-master-72ca4ae0.jar
+- Mod ID: MCTags-master-72ca4ae0
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 20
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence:
+  - mixins.mctags.json: loliland
+  - mixins.mctags.refmap.json: loliland
+  - net/loliland/mctags/MCTagsMod.class: loliland
+  - net/loliland/mctags/api/TagId.class: loliland
+  - net/loliland/mctags/api/TagMappings.class: loliland
+  - net/loliland/mctags/api/Tags$Blocks.class: loliland
+  - net/loliland/mctags/api/Tags$Entities.class: loliland
+  - net/loliland/mctags/api/Tags$Items.class: loliland
+  - net/loliland/mctags/api/Tags.class: loliland
+  - net/loliland/mctags/api/block/BlockEntry.class: loliland
+  - net/loliland/mctags/api/block/BlockTagImpl.class: loliland
+  - net/loliland/mctags/api/block/IBlockTag.class: loliland
+  - net/loliland/mctags/api/entity/EntityEntry.class: loliland
+  - net/loliland/mctags/api/entity/EntityTagImpl.class: loliland
+  - net/loliland/mctags/api/entity/IEntityTag.class: loliland
+  - net/loliland/mctags/api/item/IItemTag.class: loliland
+  - net/loliland/mctags/api/item/ItemEntry.class: loliland
+  - net/loliland/mctags/api/item/ItemTagImpl.class: loliland
+  - net/loliland/mctags/coremod/MCTagsCoreMod.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## MicdoodleCore-1.7-3.0.12.504
+
+```text
+- File: MicdoodleCore-1.7-3.0.12.504.jar
+- Mod ID: MicdoodleCore-1.7-3.0.12.504
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 14
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## MineChem-1.7.10
+
+```text
+- File: MineChem-1.7.10.jar
+- Mod ID: MineChem-1.7.10
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 374
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: simpleimpl=20, imessage=18, messagecontext=11, imessagehandler=9, networkregistry=8, packet=8, bytebuf=8, netty=8, sendtoall=7, sendtoallaround=7, sendtoserver=2, registermessage=1
+- Client packet evidence:
+  - minechem/Minechem.class: networkregistry
+  - minechem/Minechem.class: packet
+  - minechem/Settings.class: packet
+  - minechem/item/chemistjournal/ChemistJournalGui.class: imessage
+  - minechem/item/chemistjournal/ChemistJournalGui.class: sendtoserver
+  - minechem/item/chemistjournal/ChemistJournalGui.class: simpleimpl
+  - minechem/network/MessageHandler.class: imessage
+  - minechem/network/MessageHandler.class: imessagehandler
+  - minechem/network/MessageHandler.class: messagecontext
+  - minechem/network/MessageHandler.class: registermessage
+  - minechem/network/MessageHandler.class: simpleimpl
+  - minechem/network/message/DecomposerUpdateMessage.class: bytebuf
+  - minechem/network/message/DecomposerUpdateMessage.class: imessage
+  - minechem/network/message/DecomposerUpdateMessage.class: imessagehandler
+  - minechem/network/message/DecomposerUpdateMessage.class: messagecontext
+  - minechem/network/message/DecomposerUpdateMessage.class: netty
+  - minechem/network/message/DecomposerUpdateMessage.class: simpleimpl
+  - minechem/network/message/FissionUpdateMessage.class: bytebuf
+  - minechem/network/message/FissionUpdateMessage.class: imessage
+  - minechem/network/message/FissionUpdateMessage.class: imessagehandler
+- Network evidence:
+  - minechem/Minechem.class: networkregistry
+  - minechem/Minechem.class: packet
+  - minechem/Settings.class: packet
+  - minechem/item/chemistjournal/ChemistJournalGui.class: imessage
+  - minechem/item/chemistjournal/ChemistJournalGui.class: sendtoserver
+  - minechem/item/chemistjournal/ChemistJournalGui.class: simpleimpl
+  - minechem/item/polytool/PolytoolInventory.class: imessage
+  - minechem/item/polytool/PolytoolInventory.class: simpleimpl
+  - minechem/item/polytool/types/PolytoolTypeIron.class: packet
+  - minechem/network/MessageHandler.class: imessage
+  - minechem/network/MessageHandler.class: imessagehandler
+  - minechem/network/MessageHandler.class: messagecontext
+  - minechem/network/MessageHandler.class: registermessage
+  - minechem/network/MessageHandler.class: simpleimpl
+  - minechem/network/message/ChemistJournalActiveItemMessage.class: bytebuf
+  - minechem/network/message/ChemistJournalActiveItemMessage.class: imessage
+  - minechem/network/message/ChemistJournalActiveItemMessage.class: imessagehandler
+  - minechem/network/message/ChemistJournalActiveItemMessage.class: messagecontext
+  - minechem/network/message/ChemistJournalActiveItemMessage.class: netty
+  - minechem/network/message/ChemistJournalActiveItemMessage.class: simpleimpl
+- Loliland server evidence:
+  - minechem/MinechemRecipes.class: loliland
+  - minechem/item/polytool/PolytoolEventHandler.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## MinecraftPerformancePrimitives-master-fd72b14e
+
+```text
+- File: MinecraftPerformancePrimitives-master-fd72b14e.jar
+- Mod ID: MinecraftPerformancePrimitives-master-fd72b14e
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 373
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: bytebuf=17, channel=9
+- Client packet evidence:
+  - com/gamerforea/mpp/api/client/NativeImageUtils.class: bytebuf
+  - com/gamerforea/mpp/api/client/NativeImageUtils.class: channel
+- Network evidence:
+  - com/gamerforea/mpp/api/client/NativeImageUtils.class: bytebuf
+  - com/gamerforea/mpp/api/client/NativeImageUtils.class: channel
+  - com/gamerforea/mpp/common/util/NBTOutputStream$Writer.class: bytebuf
+  - com/gamerforea/mpp/common/util/NBTOutputStream.class: bytebuf
+  - org/agrona/BufferUtil.class: bytebuf
+  - org/agrona/DirectBuffer.class: bytebuf
+  - org/agrona/ExpandableArrayBuffer.class: bytebuf
+  - org/agrona/ExpandableDirectByteBuffer.class: bytebuf
+  - org/agrona/ExpandableRingBuffer.class: bytebuf
+  - org/agrona/IoUtil$MappingMethods.class: channel
+  - org/agrona/IoUtil.class: bytebuf
+  - org/agrona/IoUtil.class: channel
+  - org/agrona/MarkFile.class: bytebuf
+  - org/agrona/MarkFile.class: channel
+  - org/agrona/MutableDirectBuffer.class: bytebuf
+  - org/agrona/concurrent/AgentInvoker.class: channel
+  - org/agrona/concurrent/AgentRunner.class: channel
+  - org/agrona/concurrent/MappedResizeableBuffer.class: bytebuf
+  - org/agrona/concurrent/MappedResizeableBuffer.class: channel
+  - org/agrona/concurrent/UnsafeBuffer.class: bytebuf
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## MineFactory Reloaded
+
+```text
+- File: MineFactoryReloaded-[1.7.10]2.8.2B1-201.jar
+- Mod ID: MineFactoryReloaded
+- Version: 2.8.2B1
+- Authors: PowerCrystals, TehKrush, AtomicStryker, Feanorith, skyboy026
+- Scanned entries: 483
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=29, sendtoserver=13, sendtoall=8, channel=5, simpleimpl=4, imessage=3, bytebuf=2, netty=2, networkregistry=1, registermessage=1, imessagehandler=1, messagecontext=1
+- Client packet evidence:
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: channel
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: networkregistry
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: packet
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: registermessage
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: simpleimpl
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoDisenchanter.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoDisenchanter.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoEnchanter.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoEnchanter.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoJukebox.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoJukebox.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoSpawner.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoSpawner.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiFactoryInventory.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiFactoryInventory.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiHarvester.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiHarvester.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiItemRouter.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiItemRouter.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiPlanter.class: packet
+- Network evidence:
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: channel
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: networkregistry
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: packet
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: registermessage
+  - powercrystals/minefactoryreloaded/MineFactoryReloadedCore.class: simpleimpl
+  - powercrystals/minefactoryreloaded/circuits/digital/DeMux16Analog.class: channel
+  - powercrystals/minefactoryreloaded/circuits/digital/DeMux4.class: channel
+  - powercrystals/minefactoryreloaded/circuits/digital/Mux16Analog.class: channel
+  - powercrystals/minefactoryreloaded/circuits/digital/Mux4.class: channel
+  - powercrystals/minefactoryreloaded/core/HarvestAreaManager.class: packet
+  - powercrystals/minefactoryreloaded/core/TreeHarvestManager$1.class: packet
+  - powercrystals/minefactoryreloaded/core/TreeHarvestManager.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoDisenchanter.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoDisenchanter.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoEnchanter.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoEnchanter.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoJukebox.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoJukebox.class: sendtoserver
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoSpawner.class: packet
+  - powercrystals/minefactoryreloaded/gui/client/GuiAutoSpawner.class: sendtoserver
+- Loliland server evidence:
+  - powercrystals/minefactoryreloaded/block/transport/BlockConveyor.class: loliland
+  - powercrystals/minefactoryreloaded/farmables/drinkhandlers/DrinkHandlerWater.class: loliland
+  - powercrystals/minefactoryreloaded/farmables/fertilizables/FertilizableNetherWart.class: loliland
+  - powercrystals/minefactoryreloaded/farmables/plantables/PlantableNetherWart.class: loliland
+  - powercrystals/minefactoryreloaded/modhelpers/vanilla/Vanilla.class: loliland
+  - powercrystals/minefactoryreloaded/modhelpers/vanilla/VanillaMobProvider.class: loliland
+  - powercrystals/minefactoryreloaded/setup/recipe/EnderIO.class: loliland
+  - powercrystals/minefactoryreloaded/setup/recipe/ThermalExpansion.class: loliland
+  - powercrystals/minefactoryreloaded/setup/recipe/Vanilla.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## MojangMathLibrary
+
+```text
+- File: MMLib-main-eafde0af.jar
+- Mod ID: mml
+- Version: 1.0.5
+- Authors: Superiorita
+- Scanned entries: 523
+- Client network packet markers: no
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: bytebuf=7
+- Client packet evidence: none
+- Network evidence:
+  - remap/com/mojang/datafixers/DataFixUtils.class: bytebuf
+  - remap/com/mojang/serialization/Codec$17.class: bytebuf
+  - remap/com/mojang/serialization/Codec.class: bytebuf
+  - remap/com/mojang/serialization/Dynamic.class: bytebuf
+  - remap/com/mojang/serialization/DynamicLike.class: bytebuf
+  - remap/com/mojang/serialization/DynamicOps.class: bytebuf
+  - remap/com/mojang/serialization/OptionalDynamic.class: bytebuf
+- Loliland server evidence:
+  - ru/loliland/math/FastUtilMinimizeKeep.class: loliland
+  - ru/loliland/math/GsonMinimizeKeep.class: loliland
+  - ru/loliland/math/MojangMathLibrary.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Mod Tweaker 2
+
+```text
+- File: ModTweaker2-master-253398ed.jar
+- Mod ID: modtweaker2
+- Version: 0.9.6
+- Authors: Jaredlll08
+- Scanned entries: 301
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Mouse Tweaks
+
+```text
+- File: MouseTweaks-master-63bd8055.jar
+- Mod ID: MouseTweaks
+- Version: 2.4.4
+- Authors: YaLTeR
+- Scanned entries: 14
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Multi Server Worlds
+
+```text
+- File: msw-main-c0c3b103.jar
+- Mod ID: msw
+- Version: 0.1.0
+- Authors: LoliLand
+- Scanned entries: 541
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: yes
+- Contains Loli prefix: yes
+- Packet marker summary: packet=37, simpleimpl=18, imessage=17, bytebuf=15, netty=14, imessagehandler=8, messagecontext=8, cpacket=6, sendtoplayer=4, sendtoserver=3, registermessage=2, channel=2
+- Client packet evidence:
+  - net/loliland/msw/client/gui/connecting/GuiLoliConnecting$connectToServer$1.class: handshake
+  - net/loliland/msw/client/gui/connecting/GuiLoliConnecting$connectToServer$1.class: netty
+  - net/loliland/msw/client/gui/connecting/GuiLoliConnecting$connectToServer$1.class: packet
+  - net/loliland/msw/client/gui/connecting/GuiLoliDisconnected.class: channel
+  - net/loliland/msw/client/gui/connecting/GuiLoliDisconnected.class: netty
+  - net/loliland/msw/client/gui/dimensions/home/GuiDimensionsHome.class: imessage
+  - net/loliland/msw/client/gui/dimensions/home/GuiDimensionsHome.class: packet
+  - net/loliland/msw/client/gui/dimensions/home/GuiDimensionsHome.class: sendtoserver
+  - net/loliland/msw/client/gui/dimensions/home/GuiDimensionsHome.class: simpleimpl
+  - net/loliland/msw/client/gui/dimensions/realm/GuiDimensionsRealm.class: imessage
+  - net/loliland/msw/client/gui/dimensions/realm/GuiDimensionsRealm.class: packet
+  - net/loliland/msw/client/gui/dimensions/realm/GuiDimensionsRealm.class: sendtoserver
+  - net/loliland/msw/client/gui/dimensions/realm/GuiDimensionsRealm.class: simpleimpl
+  - net/loliland/msw/client/renderer/glut/GLTexture$Builder.class: bytebuf
+  - net/loliland/msw/client/renderer/glut/GLTexture.class: bytebuf
+  - net/loliland/msw/client/renderer/glut/GLUTFramebuffer.class: bytebuf
+  - net/loliland/msw/network/SimpleNetwork.class: channel
+  - net/loliland/msw/network/SimpleNetwork.class: imessage
+  - net/loliland/msw/network/SimpleNetwork.class: imessagehandler
+  - net/loliland/msw/network/SimpleNetwork.class: networkregistry
+- Network evidence:
+  - net/loliland/msw/api/integration/ServerRequest.class: sendtoplayer
+  - net/loliland/msw/api/integration/ServerRequestPacket.class: packet
+  - net/loliland/msw/api/integration/ServerRequestToDimensionPacket.class: packet
+  - net/loliland/msw/api/integration/ServerRequestToPlayerPacket.class: packet
+  - net/loliland/msw/api/integration/ServerRequestToRealmPacket.class: packet
+  - net/loliland/msw/api/integration/ServersRequests$RequestImpl.class: packet
+  - net/loliland/msw/api/integration/ServersRequests$RequestImpl.class: sendtoplayer
+  - net/loliland/msw/api/integration/ServersRequests.class: packet
+  - net/loliland/msw/api/integration/ServersRequests.class: payload
+  - net/loliland/msw/api/sync/ServerSync.class: sendtoplayer
+  - net/loliland/msw/api/sync/ServersSync$SyncImpl.class: cpacket
+  - net/loliland/msw/api/sync/ServersSync$SyncImpl.class: packet
+  - net/loliland/msw/api/sync/ServersSync$SyncImpl.class: sendtoplayer
+  - net/loliland/msw/api/sync/ServersSync.class: cpacket
+  - net/loliland/msw/api/sync/ServersSync.class: packet
+  - net/loliland/msw/api/sync/ServersSyncPacket.class: cpacket
+  - net/loliland/msw/api/sync/ServersSyncPacket.class: packet
+  - net/loliland/msw/api/sync/ServersSyncToDimensionPacket.class: cpacket
+  - net/loliland/msw/api/sync/ServersSyncToDimensionPacket.class: packet
+  - net/loliland/msw/api/sync/ServersSyncToPlayerPacket.class: cpacket
+- Loliland server evidence:
+  - loliland/core/IProguard.class: loliland
+  - loliland/core/api/client/event/ServerDataEvent$GetOnline.class: loliland
+  - loliland/core/api/client/event/ServerDataEvent$GetServers.class: loliland
+  - loliland/core/api/client/event/ServerDataEvent.class: loliland
+  - loliland/core/api/client/gui/IGuiMainMenu.class: loliland
+  - loliland/core/api/server/TabCompletePlayersEvent.class: loliland
+  - mcmod.info: loliland
+  - mixin.msw.forge.json: loliland
+  - mixin.msw.json: loliland
+  - mixin.msw.refmap.json: loliland
+  - mixin.msw.ultramine.json: loliland
+  - net/loliland/islands/service/IslandsService.class: loliland
+  - net/loliland/msw/MSWConstants.class: loliland
+  - net/loliland/msw/MultiServerWorlds$WhenMappings.class: loliland
+  - net/loliland/msw/MultiServerWorlds$configDir$2.class: loliland
+  - net/loliland/msw/MultiServerWorlds$lolimodLoaded$2.class: loliland
+  - net/loliland/msw/MultiServerWorlds$preInit$$inlined$load$default$1.class: loliland
+  - net/loliland/msw/MultiServerWorlds$preInit$$inlined$load$default$2.class: loliland
+  - net/loliland/msw/MultiServerWorlds.class: loliland
+  - net/loliland/msw/api/SerializableTeleporter$Companion.class: loliland
+- Loliland site evidence:
+  - mcmod.info: https://loliland
+  - net/loliland/msw/client/gui/ingamemenu/GuiLoliIngameMenu.class: https://loliland
+  - net/loliland/msw/client/gui/ingamemenu/GuiLoliIngameMenu.class: loliland.ru
+  - net/loliland/msw/client/gui/ingamemenu/GuiLoliIngameMenu.class: vk.com/loliland
+  - net/loliland/msw/configuration/MSWConfiguration.class: https://loliland
+  - net/loliland/msw/configuration/MSWConfiguration.class: loliland.ru
+  - net/loliland/msw/configuration/MSWConfiguration.class: vk.com/loliland
+- Loli prefix evidence:
+  - mcmod.info
+  - net/loliland/msw/client/MSWMusicPlayer.class
+  - net/loliland/msw/util/game/MessageUtils.class
+  - net/loliland/realms/Realms.class
+  - net/loliland/realms/world/moon/WorldProviderMoonRealm$Companion$FILLER$1.class
+  - net/loliland/realms/world/sunny/WorldProviderSunnyRealm$Companion$FILLER$1.class
+  - pack.mcmeta
+```
+
+## NEI Addons
+
+```text
+- File: neiaddons-master-b446594d.jar
+- Mod ID: NEIAddons
+- Version: 1.12.14.40
+- Authors: bdew
+- Scanned entries: 62
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=10, channel=6, netty=5, sendtoserver=4, networkregistry=3, simplechannel=2, sendtoall=1, sendtoallaround=1, fmlnetworkevent=1, handshake=1, bytebuf=1, payload=1
+- Client packet evidence:
+  - net/bdew/neiaddons/NEIAddons.class: channel
+  - net/bdew/neiaddons/NEIAddons.class: netty
+  - net/bdew/neiaddons/appeng/AddonAppeng.class: packet
+  - net/bdew/neiaddons/appeng/AppEngGuiHandler.class: packet
+  - net/bdew/neiaddons/appeng/AppEngGuiHandler.class: sendtoserver
+  - net/bdew/neiaddons/network/ClientHandler.class: channel
+  - net/bdew/neiaddons/network/ClientHandler.class: fmlnetworkevent
+  - net/bdew/neiaddons/network/ClientHandler.class: handshake
+  - net/bdew/neiaddons/network/ClientHandler.class: netty
+  - net/bdew/neiaddons/network/ClientHandler.class: packet
+  - net/bdew/neiaddons/network/ClientHandler.class: simplechannel
+  - net/bdew/neiaddons/network/NetChannel.class: channel
+  - net/bdew/neiaddons/network/NetChannel.class: netty
+  - net/bdew/neiaddons/network/NetChannel.class: networkregistry
+  - net/bdew/neiaddons/network/NetChannel.class: sendtoall
+  - net/bdew/neiaddons/network/NetChannel.class: sendtoallaround
+  - net/bdew/neiaddons/network/NetChannel.class: sendtoserver
+  - net/bdew/neiaddons/network/PacketHelper.class: channel
+  - net/bdew/neiaddons/network/PacketHelper.class: packet
+  - net/bdew/neiaddons/network/PacketHelper.class: sendtoserver
+- Network evidence:
+  - net/bdew/neiaddons/NEIAddons.class: channel
+  - net/bdew/neiaddons/NEIAddons.class: netty
+  - net/bdew/neiaddons/api/SubPacketHandler.class: packet
+  - net/bdew/neiaddons/appeng/AddonAppeng.class: packet
+  - net/bdew/neiaddons/appeng/AppEngGuiHandler.class: packet
+  - net/bdew/neiaddons/appeng/AppEngGuiHandler.class: sendtoserver
+  - net/bdew/neiaddons/appeng/SetFakeSlotCommandHandler.class: packet
+  - net/bdew/neiaddons/network/ClientHandler.class: channel
+  - net/bdew/neiaddons/network/ClientHandler.class: fmlnetworkevent
+  - net/bdew/neiaddons/network/ClientHandler.class: handshake
+  - net/bdew/neiaddons/network/ClientHandler.class: netty
+  - net/bdew/neiaddons/network/ClientHandler.class: packet
+  - net/bdew/neiaddons/network/ClientHandler.class: simplechannel
+  - net/bdew/neiaddons/network/NBTMessageCodec.class: bytebuf
+  - net/bdew/neiaddons/network/NBTMessageCodec.class: channel
+  - net/bdew/neiaddons/network/NBTMessageCodec.class: netty
+  - net/bdew/neiaddons/network/NBTMessageCodec.class: networkregistry
+  - net/bdew/neiaddons/network/NBTMessageCodec.class: packet
+  - net/bdew/neiaddons/network/NBTMessageCodec.class: payload
+  - net/bdew/neiaddons/network/NetChannel.class: channel
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## NEI Integration
+
+```text
+- File: NEIIntegration-master-25055fb3.jar
+- Mod ID: neiintegration
+- Version: 1.1.2
+- Authors: tonius11
+- Scanned entries: 62
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## NotEnoughItems
+
+```text
+- File: NotEnoughItems-2.3.83-GTNH.jar
+- Mod ID: NotEnoughItems
+- Version: 2.3.83-GTNH
+- Authors: ChickenBones, mitchej123
+- Scanned entries: 332
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=7, channel=4, sendtoplayer=2, sendtoserver=2
+- Client packet evidence:
+  - codechicken/nei/ClientHandler.class: packet
+  - codechicken/nei/ContainerPotionCreator.class: packet
+  - codechicken/nei/ContainerPotionCreator.class: sendtoserver
+  - codechicken/nei/NEICPH.class: channel
+  - codechicken/nei/NEICPH.class: packet
+  - codechicken/nei/NEICPH.class: sendtoserver
+  - codechicken/nei/NEIServerUtils.class: packet
+  - codechicken/nei/NEIServerUtils.class: sendtoplayer
+  - codechicken/nei/recipe/GuiRecipeTab.class: channel
+  - codechicken/nei/recipe/RecipeCatalysts.class: channel
+- Network evidence:
+  - codechicken/nei/ClientHandler.class: packet
+  - codechicken/nei/ContainerPotionCreator.class: packet
+  - codechicken/nei/ContainerPotionCreator.class: sendtoserver
+  - codechicken/nei/NEICPH.class: channel
+  - codechicken/nei/NEICPH.class: packet
+  - codechicken/nei/NEICPH.class: sendtoserver
+  - codechicken/nei/NEISPH.class: channel
+  - codechicken/nei/NEISPH.class: packet
+  - codechicken/nei/NEISPH.class: sendtoplayer
+  - codechicken/nei/NEIServerConfig.class: packet
+  - codechicken/nei/NEIServerUtils.class: packet
+  - codechicken/nei/NEIServerUtils.class: sendtoplayer
+  - codechicken/nei/ServerHandler.class: packet
+  - codechicken/nei/recipe/GuiRecipeTab.class: channel
+  - codechicken/nei/recipe/RecipeCatalysts.class: channel
+- Loliland server evidence:
+  - codechicken/nei/BookmarkPanel$BookmarkGrid.class: loliland
+  - codechicken/nei/BookmarkPanel.class: loliland
+  - codechicken/nei/FastTransferManager.class: loliland
+  - codechicken/nei/ItemPanel.class: loliland
+  - codechicken/nei/guihook/GuiContainerManager.class: loliland
+  - com/gamerforea/nei/ClientConfigClassDiscoverer.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Omicron
+
+```text
+- File: Omicron-1.4.0-client.jar
+- Mod ID: omicron
+- Version: 1.4.0
+- Authors: Aizistral
+- Scanned entries: 147
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=28, channel=13, netty=13, handshake=5, bytebuf=2, simplechannel=1
+- Client packet evidence:
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine$1.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine$1.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine$1.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$WrappedClientPacketHandler.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$WrappedClientPacketHandler.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$WrappedClientPacketHandler.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronPacketHandler$Builder.class: handshake
+  - com/aizistral/omicron/api/network/stdpacket/OmicronPacketHandler$Builder.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronPacketHandler$Role.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronPacketHandler.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronPacketHandler.class: handshake
+  - com/aizistral/omicron/api/network/stdpacket/OmicronPacketHandler.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronPacketHandler.class: packet
+  - com/aizistral/omicron/debug/PacketClient.class: packet
+- Network evidence:
+  - com/aizistral/omicron/api/network/stdpacket/EmptyResponse.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/HandshakeRequestPacket.class: handshake
+  - com/aizistral/omicron/api/network/stdpacket/HandshakeRequestPacket.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/HandshakeResponsePacket.class: handshake
+  - com/aizistral/omicron/api/network/stdpacket/HandshakeResponsePacket.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/NettyConnectionLimiter.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/NettyConnectionLimiter.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/NettyConnectionLimiter.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine$1.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine$1.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine$1.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$NettyClientEngine.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$WrappedClientPacketHandler.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$WrappedClientPacketHandler.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient$WrappedClientPacketHandler.class: packet
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient.class: channel
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient.class: netty
+  - com/aizistral/omicron/api/network/stdpacket/OmicronNettyClient.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## OnlinePicFrame+v1.0+mc1.7.10
+
+```text
+- File: OnlinePicFrame+v1.0+mc1.7.10.jar
+- Mod ID: OnlinePicFrame+v1.0+mc1.7.10
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 9
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=3, bytebuf=1
+- Client packet evidence:
+  - com/creativemd/opf/block/TileEntityPicFrame.class: packet
+  - com/creativemd/opf/client/DownloadThread.class: bytebuf
+  - com/creativemd/opf/gui/SubGuiPic.class: packet
+- Network evidence:
+  - com/creativemd/opf/block/TileEntityPicFrame.class: packet
+  - com/creativemd/opf/client/DownloadThread.class: bytebuf
+  - com/creativemd/opf/gui/SubContainerPic.class: packet
+  - com/creativemd/opf/gui/SubGuiPic.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## OpenComputers
+
+```text
+- File: OpenComputers-MC1.7.10-1.7.5.1290.jar
+- Mod ID: OpenComputers
+- Version: 1.7.5.1290
+- Authors: Florian 'Sangar' Nuecke, Johannes 'Lord Joda' Lohrer, Everyone who contributed to the mod on Github - thank you!
+- Scanned entries: 4805
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=213, channel=52, spacket=22, bytebuf=22, fmlnetworkevent=7, netty=7, sendtoplayer=6, payload=5, sendtoserver=4, networkregistry=3, sendtoall=2
+- Client packet evidence:
+  - li/cil/oc/OpenComputers$.class: channel
+  - li/cil/oc/Settings.class: packet
+  - li/cil/oc/Settings.class: spacket
+  - li/cil/oc/client/PacketHandler$$anonfun$onComputerUserList$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramArea$1$$anonfun$apply$mcVI$sp$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramArea$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramClear$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramValues$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onNanomachinesInputs$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onNanomachinesInputs$2.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onNanomachinesInputs$3.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onParticleEffect$1$$anonfun$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onParticleEffect$1$$anonfun$2.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onParticleEffect$1$$anonfun$3.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onParticleEffect$1$$anonfun$4.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onParticleEffect$1$$anonfun$5.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onParticleEffect$1$$anonfun$6.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onParticleEffect$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onPetVisibility$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onRackInventory$1.class: packet
+- Network evidence:
+  - li/cil/oc/Localization$Switch$.class: packet
+  - li/cil/oc/OpenComputers$.class: channel
+  - li/cil/oc/OpenComputers.class: channel
+  - li/cil/oc/Settings.class: packet
+  - li/cil/oc/Settings.class: spacket
+  - li/cil/oc/api/Network.class: packet
+  - li/cil/oc/api/Network.class: spacket
+  - li/cil/oc/api/component/RackBusConnectable.class: packet
+  - li/cil/oc/api/detail/NetworkAPI.class: packet
+  - li/cil/oc/api/detail/NetworkAPI.class: spacket
+  - li/cil/oc/api/network/Packet.class: packet
+  - li/cil/oc/api/network/WirelessEndpoint.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onComputerUserList$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramArea$1$$anonfun$apply$mcVI$sp$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramArea$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramClear$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onHologramValues$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onNanomachinesInputs$1.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onNanomachinesInputs$2.class: packet
+  - li/cil/oc/client/PacketHandler$$anonfun$onNanomachinesInputs$3.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## PowerUtils
+
+```text
+- File: PowerUtils-1.7.10-1.0.4.jar
+- Mod ID: PowerUtils
+- Version: 1.7.10-1.0.4
+- Authors: SeNtiMeL
+- Scanned entries: 29
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=6, networkregistry=2, bytebuf=1, channel=1, fmlnetworkevent=1, netty=1, payload=1, sendtoall=1, sendtoserver=1
+- Client packet evidence:
+  - putils/client/gui/GuiPowerConverter.class: packet
+  - putils/common/PowerUtils.class: networkregistry
+  - putils/common/PowerUtils.class: packet
+  - putils/network/PacketHandler.class: bytebuf
+  - putils/network/PacketHandler.class: channel
+  - putils/network/PacketHandler.class: fmlnetworkevent
+  - putils/network/PacketHandler.class: netty
+  - putils/network/PacketHandler.class: networkregistry
+  - putils/network/PacketHandler.class: packet
+  - putils/network/PacketHandler.class: payload
+  - putils/network/PacketHandler.class: sendtoall
+  - putils/network/PacketHandler.class: sendtoserver
+- Network evidence:
+  - putils/client/gui/GuiPowerConverter.class: packet
+  - putils/common/PowerUtils.class: networkregistry
+  - putils/common/PowerUtils.class: packet
+  - putils/network/IPacket.class: packet
+  - putils/network/PacketChangeState.class: packet
+  - putils/network/PacketHandler.class: bytebuf
+  - putils/network/PacketHandler.class: channel
+  - putils/network/PacketHandler.class: fmlnetworkevent
+  - putils/network/PacketHandler.class: netty
+  - putils/network/PacketHandler.class: networkregistry
+  - putils/network/PacketHandler.class: packet
+  - putils/network/PacketHandler.class: payload
+  - putils/network/PacketHandler.class: sendtoall
+  - putils/network/PacketHandler.class: sendtoserver
+  - putils/network/PacketsName.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## RealmBlockLimiter-master-34e72415
+
+```text
+- File: RealmBlockLimiter-master-34e72415.jar
+- Mod ID: RealmBlockLimiter-master-34e72415
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 10
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence:
+  - com/gamerforea/rbl/util/ChatUtils.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - com/gamerforea/rbl/util/ChatUtils.class
+```
+
+## RedPower
+
+```text
+- File: RedPower-1.7.10-client.jar
+- Mod ID: RedPowerCore
+- Version: 2.0 Prerelease 6
+- Authors: Eloraam
+- Scanned entries: 146
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=10, simpleimpl=4, imessage=3, sendtoserver=1, imessagehandler=1, messagecontext=1, bytebuf=1, netty=1, channel=1, networkregistry=1, registermessage=1, simplechannel=1
+- Client packet evidence:
+  - loliland/redpower/RedPower.class: channel
+  - loliland/redpower/RedPower.class: networkregistry
+  - loliland/redpower/RedPower.class: packet
+  - loliland/redpower/RedPower.class: registermessage
+  - loliland/redpower/RedPower.class: simplechannel
+  - loliland/redpower/RedPower.class: simpleimpl
+  - loliland/redpower/common/MultipartSystem.class: imessage
+  - loliland/redpower/common/MultipartSystem.class: packet
+  - loliland/redpower/common/MultipartSystem.class: sendtoserver
+  - loliland/redpower/common/MultipartSystem.class: simpleimpl
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: imessage
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: imessagehandler
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: messagecontext
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: packet
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: simpleimpl
+  - loliland/redpower/common/tile/gates/TileGate.class: packet
+  - loliland/redpower/common/tile/wires/TileRedAlloy.class: packet
+  - loliland/redpower/common/tile/wires/TileWire.class: packet
+- Network evidence:
+  - loliland/redpower/RedPower.class: channel
+  - loliland/redpower/RedPower.class: networkregistry
+  - loliland/redpower/RedPower.class: packet
+  - loliland/redpower/RedPower.class: registermessage
+  - loliland/redpower/RedPower.class: simplechannel
+  - loliland/redpower/RedPower.class: simpleimpl
+  - loliland/redpower/api/multipart/IMicroblockCoverSystem.class: packet
+  - loliland/redpower/common/MultipartSystem.class: imessage
+  - loliland/redpower/common/MultipartSystem.class: packet
+  - loliland/redpower/common/MultipartSystem.class: sendtoserver
+  - loliland/redpower/common/MultipartSystem.class: simpleimpl
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: imessage
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: imessagehandler
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: messagecontext
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: packet
+  - loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class: simpleimpl
+  - loliland/redpower/common/network/packet/MultipartDigPacket.class: bytebuf
+  - loliland/redpower/common/network/packet/MultipartDigPacket.class: imessage
+  - loliland/redpower/common/network/packet/MultipartDigPacket.class: netty
+  - loliland/redpower/common/network/packet/MultipartDigPacket.class: packet
+- Loliland server evidence:
+  - assets/redpower/textures/blocks/wire/wire-bundled.png.mcmeta: loliland
+  - assets/redpower/textures/blocks/wire/wire-insulated.png.mcmeta: loliland
+  - com/gamerforea/loliland/redpower/antiproguard/ITextureAtlasSprite.class: loliland
+  - loliland/redpower/CompileFlag.class: loliland
+  - loliland/redpower/RedPower.class: loliland
+  - loliland/redpower/api/misc/ILampBlock.class: loliland
+  - loliland/redpower/api/multipart/EnumAxisPosition.class: loliland
+  - loliland/redpower/api/multipart/EnumPartClass.class: loliland
+  - loliland/redpower/api/multipart/EnumPosition.class: loliland
+  - loliland/redpower/api/multipart/EnumPositionClass.class: loliland
+  - loliland/redpower/api/multipart/ICoverSystem.class: loliland
+  - loliland/redpower/api/multipart/IMicroblockCoverSystem.class: loliland
+  - loliland/redpower/api/multipart/IMicroblockSupporterTile.class: loliland
+  - loliland/redpower/api/multipart/IMultipartSystem.class: loliland
+  - loliland/redpower/api/multipart/IMultipartTile.class: loliland
+  - loliland/redpower/api/multipart/IPartContainer.class: loliland
+  - loliland/redpower/api/multipart/IPartContainer2.class: loliland
+  - loliland/redpower/api/multipart/IPartContainer3.class: loliland
+  - loliland/redpower/api/multipart/Part$1.class: loliland
+  - loliland/redpower/api/multipart/Part.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Realistic Terrain Generation
+
+```text
+- File: RTG-master-b55d7f0d.jar
+- Mod ID: RTG
+- Version: 1.1.1.7
+- Authors: Team RTG
+- Scanned entries: 542
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## SpawnTrickLib-1.7.10-1.0.1
+
+```text
+- File: SpawnTrickLib-1.7.10-1.0.1.jar
+- Mod ID: SpawnTrickLib-1.7.10-1.0.1
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 23
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## StandardExpansion-master-b2071223
+
+```text
+- File: StandardExpansion-master-b2071223.jar
+- Mod ID: StandardExpansion-master-b2071223
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 146
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: bytebuf=19, netty=19, packet=17, payload=10, sendtoserver=8, sendtoplayer=4, sendtoall=2, channel=1, networkregistry=1, simplechannel=1, simpleimpl=1
+- Client packet evidence:
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskHunt.class: packet
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskHunt.class: payload
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskHunt.class: sendtoserver
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskMeeting.class: packet
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskMeeting.class: payload
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskMeeting.class: sendtoserver
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskScoreboard.class: packet
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskScoreboard.class: payload
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskScoreboard.class: sendtoserver
+  - bq_standard/core/BQ_Standard.class: channel
+  - bq_standard/core/BQ_Standard.class: networkregistry
+  - bq_standard/core/BQ_Standard.class: simplechannel
+  - bq_standard/core/BQ_Standard.class: simpleimpl
+  - bq_standard/network/handlers/NetLootClaim.class: packet
+  - bq_standard/network/handlers/NetLootClaim.class: payload
+  - bq_standard/network/handlers/NetLootClaim.class: sendtoplayer
+  - bq_standard/network/handlers/NetLootImport.class: packet
+  - bq_standard/network/handlers/NetLootImport.class: payload
+  - bq_standard/network/handlers/NetLootImport.class: sendtoserver
+  - bq_standard/network/handlers/NetLootSync.class: packet
+- Network evidence:
+  - bq_standard/NbtBlockType.class: bytebuf
+  - bq_standard/NbtBlockType.class: netty
+  - bq_standard/XPHelper.class: packet
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskHunt.class: packet
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskHunt.class: payload
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskHunt.class: sendtoserver
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskMeeting.class: packet
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskMeeting.class: payload
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskMeeting.class: sendtoserver
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskScoreboard.class: packet
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskScoreboard.class: payload
+  - bq_standard/client/gui/editors/tasks/GuiEditTaskScoreboard.class: sendtoserver
+  - bq_standard/core/BQ_Standard.class: channel
+  - bq_standard/core/BQ_Standard.class: networkregistry
+  - bq_standard/core/BQ_Standard.class: simplechannel
+  - bq_standard/core/BQ_Standard.class: simpleimpl
+  - bq_standard/network/handlers/NetLootClaim.class: packet
+  - bq_standard/network/handlers/NetLootClaim.class: payload
+  - bq_standard/network/handlers/NetLootClaim.class: sendtoplayer
+  - bq_standard/network/handlers/NetLootImport.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## TConstruct-1.7.10-1.8.8
+
+```text
+- File: TConstruct-1.7.10-1.8.8.jar
+- Mod ID: TConstruct-1.7.10-1.8.8
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 687
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: yes
+- Packet marker summary: packet=40, channel=33, bytebuf=20, netty=20, sendtoserver=6, cpacket=3, networkregistry=2, sendtoall=2, payload=1, sendtoallaround=1
+- Client packet evidence:
+  - tconstruct/TConstruct.class: networkregistry
+  - tconstruct/TConstruct.class: packet
+  - tconstruct/armor/TinkerArmorEvents.class: cpacket
+  - tconstruct/armor/TinkerArmorEvents.class: packet
+  - tconstruct/blocks/logic/DryingRackLogic.class: packet
+  - tconstruct/client/ArmorControls.class: packet
+  - tconstruct/client/ArmorControls.class: sendtoserver
+  - tconstruct/client/tabs/TabRegistry.class: packet
+  - tconstruct/items/tools/Scythe.class: packet
+  - tconstruct/library/tools/HarvestTool.class: packet
+  - tconstruct/smeltery/SmelteryProxyClient.class: channel
+  - tconstruct/smeltery/TinkerSmeltery.class: channel
+  - tconstruct/smeltery/blocks/CastingChannelBlock.class: channel
+  - tconstruct/smeltery/gui/SmelteryGui.class: packet
+  - tconstruct/smeltery/gui/SmelteryGui.class: sendtoserver
+  - tconstruct/smeltery/logic/CastingChannelLogic.class: channel
+  - tconstruct/smeltery/logic/CastingChannelLogic.class: packet
+  - tconstruct/smeltery/logic/SmelteryLogic.class: packet
+  - tconstruct/smeltery/model/BlockRenderCastingChannel.class: channel
+  - tconstruct/smeltery/model/CastingBlockRender.class: channel
+- Network evidence:
+  - assets/tinker/manuals/en_US/firstday.xml: channel
+  - assets/tinker/manuals/en_US/smeltery.xml: channel
+  - assets/tinker/manuals/ru_RU/firstday.xml: channel
+  - assets/tinker/manuals/ru_RU/smeltery.xml: channel
+  - tconstruct/TConstruct.class: networkregistry
+  - tconstruct/TConstruct.class: packet
+  - tconstruct/armor/ArmorAbilities.class: packet
+  - tconstruct/armor/TinkerArmorEvents.class: cpacket
+  - tconstruct/armor/TinkerArmorEvents.class: packet
+  - tconstruct/armor/player/ArmorExtended.class: bytebuf
+  - tconstruct/armor/player/ArmorExtended.class: netty
+  - tconstruct/armor/player/KnapsackInventory.class: bytebuf
+  - tconstruct/armor/player/KnapsackInventory.class: netty
+  - tconstruct/blocks/logic/DryingRackLogic.class: packet
+  - tconstruct/client/ArmorControls.class: packet
+  - tconstruct/client/ArmorControls.class: sendtoserver
+  - tconstruct/client/tabs/TabRegistry.class: packet
+  - tconstruct/items/tools/Scythe.class: packet
+  - tconstruct/library/entity/ProjectileBase.class: bytebuf
+  - tconstruct/library/entity/ProjectileBase.class: netty
+- Loliland server evidence:
+  - tconstruct/armor/ArmorProxyClient.class: loliland
+  - tconstruct/armor/TinkerArmor.class: loliland
+  - tconstruct/client/TProxyClient.class: loliland
+  - tconstruct/mechworks/TinkerMechworks.class: loliland
+  - tconstruct/plugins/te4/TinkerTE4.class: loliland
+  - tconstruct/smeltery/TinkerSmeltery.class: loliland
+  - tconstruct/tools/TinkerTools.class: loliland
+  - tconstruct/tools/ToolProxyClient.class: loliland
+  - tconstruct/weaponry/TinkerWeaponry.class: loliland
+  - tconstruct/world/TinkerWorld.class: loliland
+  - tconstruct/world/gen/TBaseWorldGenerator.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence:
+  - tconstruct/world/gen/TBaseWorldGenerator.class
+```
+
+## ThermalDynamics-[1.7.10]1.2.1-172
+
+```text
+- File: ThermalDynamics-[1.7.10]1.2.1-172.jar
+- Mod ID: ThermalDynamics-[1.7.10]1.2.1-172
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 241
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=41, sendtoall=5, sendtoallaround=5, bytebuf=4, channel=4, netty=4, sendtoserver=4, spacket=4, networkregistry=1
+- Client packet evidence:
+  - cofh/thermaldynamics/ThermalDynamics.class: networkregistry
+  - cofh/thermaldynamics/ThermalDynamics.class: packet
+  - cofh/thermaldynamics/block/Attachment.class: packet
+  - cofh/thermaldynamics/block/TileTDBase.class: packet
+  - cofh/thermaldynamics/debughelper/DebugTickHandler.class: packet
+  - cofh/thermaldynamics/debughelper/PacketDebug.class: packet
+  - cofh/thermaldynamics/duct/BlockDuct.class: packet
+  - cofh/thermaldynamics/duct/attachments/ConnectionBase.class: packet
+  - cofh/thermaldynamics/duct/attachments/ConnectionBase.class: sendtoserver
+  - cofh/thermaldynamics/duct/attachments/cover/Cover.class: packet
+  - cofh/thermaldynamics/duct/attachments/relay/Relay.class: packet
+  - cofh/thermaldynamics/duct/attachments/relay/Relay.class: sendtoserver
+  - cofh/thermaldynamics/duct/attachments/servo/ServoBase.class: packet
+  - cofh/thermaldynamics/duct/entity/TileTransportDuct.class: packet
+  - cofh/thermaldynamics/duct/entity/TileTransportDuct.class: sendtoserver
+  - cofh/thermaldynamics/duct/entity/TileTransportDuctCrossover.class: packet
+  - cofh/thermaldynamics/duct/entity/TileTransportDuctLongRange.class: packet
+  - cofh/thermaldynamics/duct/fluid/TileFluidDuct.class: packet
+  - cofh/thermaldynamics/duct/fluid/TileFluidDuct.class: sendtoall
+  - cofh/thermaldynamics/duct/fluid/TileFluidDuct.class: sendtoallaround
+- Network evidence:
+  - cofh/thermaldynamics/ThermalDynamics.class: networkregistry
+  - cofh/thermaldynamics/ThermalDynamics.class: packet
+  - cofh/thermaldynamics/block/Attachment.class: packet
+  - cofh/thermaldynamics/block/TileTDBase.class: packet
+  - cofh/thermaldynamics/debughelper/DebugTickHandler$DebugEvent.class: packet
+  - cofh/thermaldynamics/debughelper/DebugTickHandler.class: packet
+  - cofh/thermaldynamics/debughelper/PacketDebug.class: packet
+  - cofh/thermaldynamics/debughelper/PacketMultiTileInfo.class: bytebuf
+  - cofh/thermaldynamics/debughelper/PacketMultiTileInfo.class: channel
+  - cofh/thermaldynamics/debughelper/PacketMultiTileInfo.class: netty
+  - cofh/thermaldynamics/debughelper/PacketMultiTileInfo.class: packet
+  - cofh/thermaldynamics/duct/BlockDuct.class: packet
+  - cofh/thermaldynamics/duct/attachments/ConnectionBase.class: packet
+  - cofh/thermaldynamics/duct/attachments/ConnectionBase.class: sendtoserver
+  - cofh/thermaldynamics/duct/attachments/cover/Cover.class: packet
+  - cofh/thermaldynamics/duct/attachments/filter/FilterLogic.class: packet
+  - cofh/thermaldynamics/duct/attachments/filter/FilterLogicBase.class: packet
+  - cofh/thermaldynamics/duct/attachments/relay/Relay.class: packet
+  - cofh/thermaldynamics/duct/attachments/relay/Relay.class: sendtoserver
+  - cofh/thermaldynamics/duct/attachments/servo/ServoBase.class: packet
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## ThermalExpansion-[1.7.10]4.1.5-248
+
+```text
+- File: ThermalExpansion-[1.7.10]4.1.5-248.jar
+- Mod ID: ThermalExpansion-[1.7.10]4.1.5-248
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 359
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=70, channel=17, sendtoserver=12, cpacket=8, networkregistry=2, sendtoall=2, sendtoallaround=2, bytebuf=1, netty=1, payload=1
+- Client packet evidence:
+  - cofh/thermalexpansion/ThermalExpansion.class: channel
+  - cofh/thermalexpansion/ThermalExpansion.class: networkregistry
+  - cofh/thermalexpansion/ThermalExpansion.class: packet
+  - cofh/thermalexpansion/block/TileAugmentable.class: packet
+  - cofh/thermalexpansion/block/TileRSControl.class: packet
+  - cofh/thermalexpansion/block/TileReconfigurable.class: packet
+  - cofh/thermalexpansion/block/TileTEBase.class: packet
+  - cofh/thermalexpansion/block/TileTEBase.class: sendtoserver
+  - cofh/thermalexpansion/block/cell/TileCell.class: packet
+  - cofh/thermalexpansion/block/device/TileActivator.class: packet
+  - cofh/thermalexpansion/block/device/TileDeviceBase.class: packet
+  - cofh/thermalexpansion/block/device/TileNullifier.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoBase.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoCompression.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoEnervation.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoMagmatic.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoReactant.class: packet
+  - cofh/thermalexpansion/block/ender/BlockEnder.class: cpacket
+  - cofh/thermalexpansion/block/ender/BlockEnder.class: packet
+  - cofh/thermalexpansion/block/ender/TileTesseract.class: channel
+- Network evidence:
+  - cofh/thermalexpansion/ThermalExpansion.class: channel
+  - cofh/thermalexpansion/ThermalExpansion.class: networkregistry
+  - cofh/thermalexpansion/ThermalExpansion.class: packet
+  - cofh/thermalexpansion/block/TileAugmentable.class: packet
+  - cofh/thermalexpansion/block/TileInventory.class: packet
+  - cofh/thermalexpansion/block/TilePowered.class: packet
+  - cofh/thermalexpansion/block/TileRSControl.class: packet
+  - cofh/thermalexpansion/block/TileReconfigurable.class: packet
+  - cofh/thermalexpansion/block/TileTEBase$1.class: packet
+  - cofh/thermalexpansion/block/TileTEBase.class: packet
+  - cofh/thermalexpansion/block/TileTEBase.class: sendtoserver
+  - cofh/thermalexpansion/block/cell/TileCell.class: packet
+  - cofh/thermalexpansion/block/device/TileActivator.class: packet
+  - cofh/thermalexpansion/block/device/TileDeviceBase.class: packet
+  - cofh/thermalexpansion/block/device/TileNullifier.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoBase.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoCompression.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoEnervation.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoMagmatic.class: packet
+  - cofh/thermalexpansion/block/dynamo/TileDynamoReactant.class: packet
+- Loliland server evidence:
+  - cofh/thermalexpansion/block/dynamo/TileDynamoReactant.class: loliland
+  - cofh/thermalexpansion/block/machine/BlockMachine.class: loliland
+  - cofh/thermalexpansion/block/machine/TileExtruder.class: loliland
+  - cofh/thermalexpansion/block/sponge/BlockSponge.class: loliland
+  - cofh/thermalexpansion/item/ItemAugment.class: loliland
+  - cofh/thermalexpansion/item/TEAugments.class: loliland
+  - cofh/thermalexpansion/item/TEFlorbs.class: loliland
+  - cofh/thermalexpansion/item/tool/ItemChiller.class: loliland
+  - cofh/thermalexpansion/plugins/eio/EIOPlugin.class: loliland
+  - cofh/thermalexpansion/util/crafting/CrucibleManager.class: loliland
+  - cofh/thermalexpansion/util/crafting/FurnaceManager.class: loliland
+  - cofh/thermalexpansion/util/crafting/PulverizerManager.class: loliland
+  - cofh/thermalexpansion/util/crafting/SmelterManager.class: loliland
+  - cofh/thermalexpansion/util/crafting/TransposerManager.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## ThermalFoundation-[1.7.10]1.2.6-118
+
+```text
+- File: ThermalFoundation-[1.7.10]1.2.6-118.jar
+- Mod ID: ThermalFoundation-[1.7.10]1.2.6-118
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 120
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=8, networkregistry=1, payload=1, sendtoserver=1
+- Client packet evidence:
+  - cofh/thermalfoundation/ThermalFoundation.class: networkregistry
+  - cofh/thermalfoundation/ThermalFoundation.class: packet
+  - cofh/thermalfoundation/gui/client/GuiLexiconStudy.class: packet
+  - cofh/thermalfoundation/gui/client/GuiLexiconTransmute.class: packet
+  - cofh/thermalfoundation/gui/container/ContainerLexiconStudy.class: packet
+  - cofh/thermalfoundation/gui/container/ContainerLexiconTransmute.class: packet
+  - cofh/thermalfoundation/network/PacketTFBase.class: packet
+  - cofh/thermalfoundation/network/PacketTFBase.class: payload
+  - cofh/thermalfoundation/network/PacketTFBase.class: sendtoserver
+- Network evidence:
+  - cofh/thermalfoundation/ThermalFoundation.class: networkregistry
+  - cofh/thermalfoundation/ThermalFoundation.class: packet
+  - cofh/thermalfoundation/gui/client/GuiLexiconStudy.class: packet
+  - cofh/thermalfoundation/gui/client/GuiLexiconTransmute.class: packet
+  - cofh/thermalfoundation/gui/container/ContainerLexiconStudy.class: packet
+  - cofh/thermalfoundation/gui/container/ContainerLexiconTransmute.class: packet
+  - cofh/thermalfoundation/network/PacketTFBase$1.class: packet
+  - cofh/thermalfoundation/network/PacketTFBase$PacketTypes.class: packet
+  - cofh/thermalfoundation/network/PacketTFBase.class: packet
+  - cofh/thermalfoundation/network/PacketTFBase.class: payload
+  - cofh/thermalfoundation/network/PacketTFBase.class: sendtoserver
+- Loliland server evidence:
+  - cofh/thermalfoundation/fluid/BlockFluidCryotheum.class: loliland
+  - cofh/thermalfoundation/fluid/BlockFluidGlowstone.class: loliland
+  - cofh/thermalfoundation/item/TFItems.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Treecapitator-master-a88b6c78
+
+```text
+- File: Treecapitator-master-a88b6c78.jar
+- Mod ID: Treecapitator-master-a88b6c78
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 32
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=8, cpacket=6, netty=4, channel=3, simplechannel=2, packetbuffer=2, spacket=2, networkregistry=1, bytebuf=1
+- Client packet evidence:
+  - bspkrs/treecapitator/util/Reference.class: packet
+- Network evidence:
+  - bspkrs/treecapitator/CommonProxy.class: channel
+  - bspkrs/treecapitator/CommonProxy.class: cpacket
+  - bspkrs/treecapitator/CommonProxy.class: netty
+  - bspkrs/treecapitator/CommonProxy.class: networkregistry
+  - bspkrs/treecapitator/CommonProxy.class: packet
+  - bspkrs/treecapitator/network/ConfigPacketHandler.class: channel
+  - bspkrs/treecapitator/network/ConfigPacketHandler.class: cpacket
+  - bspkrs/treecapitator/network/ConfigPacketHandler.class: netty
+  - bspkrs/treecapitator/network/ConfigPacketHandler.class: packet
+  - bspkrs/treecapitator/network/ConfigPacketHandler.class: simplechannel
+  - bspkrs/treecapitator/network/LoginPacketHandler.class: channel
+  - bspkrs/treecapitator/network/LoginPacketHandler.class: cpacket
+  - bspkrs/treecapitator/network/LoginPacketHandler.class: netty
+  - bspkrs/treecapitator/network/LoginPacketHandler.class: packet
+  - bspkrs/treecapitator/network/LoginPacketHandler.class: simplechannel
+  - bspkrs/treecapitator/network/TCMessageToMessageCodec.class: cpacket
+  - bspkrs/treecapitator/network/TCMessageToMessageCodec.class: packet
+  - bspkrs/treecapitator/network/TCPacketConfig.class: cpacket
+  - bspkrs/treecapitator/network/TCPacketConfig.class: packet
+  - bspkrs/treecapitator/network/TCPacketConfig.class: packetbuffer
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## UltraTech: Elements
+
+```text
+- File: UltraTech-Elements-1.7.10-client.jar
+- Mod ID: loli_elements_ultratech
+- Version: 1.7.10-1.0.0
+- Authors: LoliLand, Sio
+- Scanned entries: 38
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: yes
+- Contains Loli prefix: yes
+- Packet marker summary: simpleimpl=1
+- Client packet evidence:
+  - loliland/common/obf/li0iOILAND.class: simpleimpl
+- Network evidence:
+  - loliland/common/obf/li0iOILAND.class: simpleimpl
+- Loliland server evidence:
+  - loliland/common/obf/IO11O0LANd.class: loliland
+  - loliland/common/obf/IOI1LaNd.class: loliland
+  - loliland/common/obf/O1il1llOLANd.class: loliland
+  - loliland/common/obf/Oill1LAnD.class: loliland
+  - loliland/common/obf/iIiO00OLaNd.class: loliland
+  - loliland/common/obf/iOIl0LAnD$I1O1I1LaNd.class: loliland
+  - loliland/common/obf/iOIl0LAnD$OOOIilanD.class: loliland
+  - loliland/common/obf/iOIl0LAnD.class: loliland
+  - loliland/common/obf/ii1li00Land.class: loliland
+  - loliland/common/obf/iilIi1laND.class: loliland
+  - loliland/common/obf/l0iIlIO1laNd.class: loliland
+  - loliland/common/obf/l0illAND.class: loliland
+  - loliland/common/obf/l11lLANd.class: loliland
+  - loliland/common/obf/lI00ilAND.class: loliland
+  - loliland/common/obf/lIOILand.class: loliland
+  - loliland/common/obf/lO110l1LANd.class: loliland
+  - loliland/common/obf/li0iOILAND.class: loliland
+  - loliland/common/obf/lil0liLand.class: loliland
+  - loliland/common/obf/lli011lLANd.class: loliland
+  - loliland/common/obf/lli0OiIlAND.class: loliland
+- Loliland site evidence:
+  - mcmod.info: https://loliland
+  - mcmod.info: loliland.ru
+- Loli prefix evidence:
+  - loliland/common/obf/lIOILand.class
+  - mcmod.info
+```
+
+## UniversalResources-master-0585e854
+
+```text
+- File: UniversalResources-master-0585e854.jar
+- Mod ID: UniversalResources-master-0585e854
+- Version: Unknown
+- Authors: Unknown
+- Scanned entries: 30
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## Waila
+
+```text
+- File: Waila-master-e5663c52.jar
+- Mod ID: waila
+- Version: 1.5.10_1.7.10
+- Authors: ProfMobius
+- Scanned entries: 209
+- Client network packet markers: yes
+- Network packet/API markers: yes
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: packet=10, channel=10, bytebuf=9, netty=8, simplechannel=5, networkregistry=3, sendtoserver=2
+- Client packet evidence:
+  - mcp/mobius/waila/Waila.class: packet
+  - mcp/mobius/waila/api/impl/MetaDataProvider.class: packet
+  - mcp/mobius/waila/api/impl/MetaDataProvider.class: sendtoserver
+  - mcp/mobius/waila/gui/truetyper/TrueTypeFont.class: bytebuf
+  - mcp/mobius/waila/network/WailaPacketHandler.class: bytebuf
+  - mcp/mobius/waila/network/WailaPacketHandler.class: channel
+  - mcp/mobius/waila/network/WailaPacketHandler.class: netty
+  - mcp/mobius/waila/network/WailaPacketHandler.class: networkregistry
+  - mcp/mobius/waila/network/WailaPacketHandler.class: packet
+  - mcp/mobius/waila/network/WailaPacketHandler.class: sendtoserver
+- Network evidence:
+  - mcp/mobius/waila/Waila.class: packet
+  - mcp/mobius/waila/addons/enderio/EnderIOModule.class: channel
+  - mcp/mobius/waila/addons/enderio/HUDHandlerTesseract.class: channel
+  - mcp/mobius/waila/api/impl/MetaDataProvider.class: packet
+  - mcp/mobius/waila/api/impl/MetaDataProvider.class: sendtoserver
+  - mcp/mobius/waila/gui/truetyper/TrueTypeFont.class: bytebuf
+  - mcp/mobius/waila/network/IWailaMessage.class: bytebuf
+  - mcp/mobius/waila/network/IWailaMessage.class: channel
+  - mcp/mobius/waila/network/IWailaMessage.class: netty
+  - mcp/mobius/waila/network/Message0x00ServerPing.class: bytebuf
+  - mcp/mobius/waila/network/Message0x00ServerPing.class: channel
+  - mcp/mobius/waila/network/Message0x00ServerPing.class: netty
+  - mcp/mobius/waila/network/Message0x00ServerPing.class: packet
+  - mcp/mobius/waila/network/Message0x00ServerPing.class: simplechannel
+  - mcp/mobius/waila/network/Message0x01TERequest.class: bytebuf
+  - mcp/mobius/waila/network/Message0x01TERequest.class: channel
+  - mcp/mobius/waila/network/Message0x01TERequest.class: netty
+  - mcp/mobius/waila/network/Message0x01TERequest.class: networkregistry
+  - mcp/mobius/waila/network/Message0x01TERequest.class: packet
+  - mcp/mobius/waila/network/Message0x01TERequest.class: simplechannel
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## WanionLib
+
+```text
+- File: WanionLib-1.7.10-1.8.jar
+- Mod ID: wanionlib
+- Version: 1.7.10-1.8
+- Authors: WanionCane
+- Scanned entries: 27
+- Client network packet markers: no
+- Network packet/API markers: no
+- Uses Loliland server data: no
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Client packet evidence: none
+- Network evidence: none
+- Loliland server evidence: none
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+
+## WorldGeneratorEngine
+
+```text
+- File: WorldGenEngine-main-899a9465.jar
+- Mod ID: worldgen
+- Version: 0.7.6
+- Authors: Superiorita
+- Scanned entries: 687
+- Client network packet markers: no
+- Network packet/API markers: yes
+- Uses Loliland server data: yes
+- Uses Loliland site data: no
+- Contains Loli prefix: no
+- Packet marker summary: bytebuf=1
+- Client packet evidence: none
+- Network evidence:
+  - remap/net/minecraft/resources/DelegatingOps.class: bytebuf
+- Loliland server evidence:
+  - remap/net/fabricmc/fabric/impl/biome/TheEndBiomeData.class: loliland
+  - remap/net/minecraft/data/worldgen/SurfaceRuleData.class: loliland
+  - remap/net/minecraft/data/worldgen/placement/PlacementUtils.class: loliland
+  - remap/net/minecraft/server/level/ServerLevel.class: loliland
+  - remap/net/minecraft/server/level/WorldGenRegion.class: loliland
+  - remap/net/minecraft/world/level/block/state/BlockState.class: loliland
+  - remap/net/minecraft/world/level/chunk/TempChunk.class: loliland
+  - remap/net/minecraft/world/level/levelgen/Aquifer$NoiseBasedAquifer.class: loliland
+  - remap/net/minecraft/world/level/levelgen/BelowZeroRetrogen.class: loliland
+  - remap/net/minecraft/world/level/levelgen/Heightmap.class: loliland
+  - remap/net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator.class: loliland
+  - remap/net/minecraft/world/level/levelgen/NoiseGeneratorSettings.class: loliland
+  - remap/net/minecraft/world/level/levelgen/blending/BlendingData.class: loliland
+  - remap/net/minecraft/world/level/levelgen/blockpredicates/BlockPredicate.class: loliland
+  - remap/net/minecraft/world/level/levelgen/carver/WorldCarver.class: loliland
+  - remap/net/minecraft/world/level/levelgen/feature/ChorusPlantFeature.class: loliland
+  - remap/net/minecraft/world/level/levelgen/feature/EndIslandFeature.class: loliland
+  - remap/net/minecraft/world/level/levelgen/feature/Feature.class: loliland
+  - remap/net/minecraft/world/level/levelgen/placement/CountOnEveryLayerPlacement.class: loliland
+  - remap/net/minecraft/world/phys/shapes/VoxelShape.class: loliland
+- Loliland site evidence: none
+- Loli prefix evidence: none
+```
+

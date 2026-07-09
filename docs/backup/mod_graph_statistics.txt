@@ -1,0 +1,8 @@
+Mod Graph Statistics
+
+Total mods: 93
+Hard: 89
+Medium: 2
+Easy: 2
+
+Largest mod: Multi Server Worlds
