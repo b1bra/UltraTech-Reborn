@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 
-=======
 import shutil
 import tempfile
 import traceback
@@ -116,6 +115,9 @@ def _run_scan_inner(
 
     if request.test_mode:
         _discard_test_mode_documentation(modpack_output, launcher_output, logger)
+
+    if request.test_mode:
+        logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
 
     if request.test_mode:
         logger.info("Test mode: all generated output was written to a temporary directory and will be discarded")
