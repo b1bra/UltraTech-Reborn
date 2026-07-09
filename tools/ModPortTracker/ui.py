@@ -5,7 +5,11 @@ from __future__ import annotations
 from PySide6.QtCore import QEasingCurve, QPoint, QPropertyAnimation, QRectF, Qt, Property, Signal
 from PySide6.QtGui import QColor, QFont, QPainter, QPen
 from PySide6.QtWidgets import (
+codex/-minecraft-6f4mzt
+    QDialog, QFrame, QHBoxLayout, QLabel, QMainWindow, QPushButton,
+=======
     QFrame, QHBoxLayout, QLabel, QMainWindow, QMessageBox, QPushButton,
+development
     QScrollArea, QSizePolicy, QVBoxLayout, QWidget,
 )
 
@@ -98,6 +102,38 @@ class DotButton(QPushButton):
         self.anim.start()
 
 
+codex/-minecraft-6f4mzt
+class ConfirmationDialog(QDialog):
+    """Frameless confirmation dialog with custom buttons."""
+
+    def __init__(self, parent: QWidget, text: str) -> None:
+        super().__init__(parent)
+        self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.Dialog)
+        self.setModal(True)
+        self.setObjectName("confirmDialog")
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(24, 22, 24, 20)
+        layout.setSpacing(18)
+        label = QLabel(text)
+        label.setWordWrap(True)
+        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        label.setObjectName("confirmText")
+        buttons = QHBoxLayout()
+        buttons.addStretch(1)
+        yes = QPushButton("Да")
+        no = QPushButton("Нет")
+        yes.setObjectName("confirmButton")
+        no.setObjectName("confirmButton")
+        yes.clicked.connect(self.accept)
+        no.clicked.connect(self.reject)
+        buttons.addWidget(yes)
+        buttons.addWidget(no)
+        layout.addWidget(label)
+        layout.addLayout(buttons)
+
+
+=======
+development
 class ModCard(QFrame):
     def __init__(self, mod: ModInfo, store: ProgressStore) -> None:
         super().__init__()
@@ -156,8 +192,12 @@ class ModCard(QFrame):
             text = "Вы действительно хотите продолжить работу над данным модом?"
         else:
             text = "Вы действительно закончили перенос данного мода?"
+codex/-minecraft-6f4mzt
+        if ConfirmationDialog(self, text).exec() == QDialog.DialogCode.Accepted:
+=======
         answer = QMessageBox.question(self, "Подтверждение", text, QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
         if answer == QMessageBox.StandardButton.Yes:
+development
             self.store.set_completed(self.mod, not self.mod.completed)
             self._apply_state(animated=True)
 
