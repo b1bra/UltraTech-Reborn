@@ -1,321 +1,255 @@
-"""Borderless GUI for the unified scanner."""
+"""Modern PySide6 GUI for the unified scanner."""
 
 from __future__ import annotations
 
+import math
 import queue
+import random
 import subprocess
+import sys
 import threading
-import tkinter as tk
-from tkinter import filedialog
+from pathlib import Path
 
-from runner import ScanRequest, format_traceback, run_scan
+try:
+    from PySide6.QtCore import QEasingCurve, QPoint, QPointF, QParallelAnimationGroup, QPropertyAnimation, Qt, QTimer, Property
+    from PySide6.QtGui import QColor, QFont, QLinearGradient, QPainter, QPainterPath, QPen, QRadialGradient
+    from PySide6.QtWidgets import (
+        QApplication,
+        QCheckBox,
+        QDialog,
+        QFileDialog,
+        QFrame,
+        QGraphicsDropShadowEffect,
+        QGraphicsOpacityEffect,
+        QHBoxLayout,
+        QLabel,
+        QLineEdit,
+        QMainWindow,
+        QPushButton,
+        QPlainTextEdit,
+        QVBoxLayout,
+        QWidget,
+    )
+except ModuleNotFoundError as error:
+    if error.name != "PySide6":
+        raise
+    message = "PySide6 is required to start SCAN. Install it with: python -m pip install -r tools/SCAN/requirements.txt"
+    try:
+        import ctypes
+
+        ctypes.windll.user32.MessageBoxW(None, message, "SCAN startup error", 0x10)
+    except Exception:
+        print(message, file=sys.stderr)
+    raise SystemExit(1) from error
+
+try:
+    from runner import ScanRequest, format_traceback, run_scan
+except ModuleNotFoundError:
+    from .runner import ScanRequest, format_traceback, run_scan
 
 
 WIDTH = 1280
 HEIGHT = 720
-GREEN = "#74f0a0"
-WHITE = "#d9e0dc"
-BG = "#07120f"
 
 
-class ScannerApp:
-    """Custom drawn scanner window."""
+STYLE = """
+* { color: #E8EAF0; font-family: 'Segoe UI', 'Inter', Arial, sans-serif; }
+QLineEdit {
+    background: rgba(30, 30, 34, 185); border: 1px solid rgba(255,255,255,42);
+    border-radius: 18px; padding: 0 20px; font-size: 18px; selection-background-color: #536DFE;
+}
+QLineEdit:focus { border: 1px solid rgba(125, 154, 255, 165); background: rgba(36,36,42,215); }
+QCheckBox { spacing: 12px; color: #B8BBC6; font-size: 15px; }
+QCheckBox::indicator { width: 22px; height: 22px; border-radius: 7px; border: 1px solid rgba(255,255,255,55); background: rgba(255,255,255,18); }
+QCheckBox::indicator:checked { background: #7D9AFF; border: 1px solid #A9BAFF; }
+QPlainTextEdit {
+    background: rgba(14,14,16,230); border: 1px solid rgba(255,255,255,35); border-radius: 18px;
+    padding: 14px; color: #D7DAE5; font-family: 'Cascadia Mono', Consolas, monospace; font-size: 12px;
+}
+QScrollBar:vertical { background: transparent; width: 10px; margin: 8px 2px 8px 2px; }
+QScrollBar::handle:vertical { background: rgba(255,255,255,55); border-radius: 4px; min-height: 36px; }
+QScrollBar::handle:vertical:hover { background: rgba(255,255,255,95); }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0px; }
+"""
 
+
+class AnimatedButton(QPushButton):
+    def __init__(self, text: str, accent: bool = False, danger: bool = False) -> None:
+        super().__init__(text)
+        self._scale = 1.0
+        self._accent = accent
+        self._danger = danger
+        self.setCursor(Qt.PointingHandCursor)
+        self.setMinimumHeight(46)
+        self._anim = QPropertyAnimation(self, b"scale", self)
+        self._anim.setDuration(180)
+        self._anim.setEasingCurve(QEasingCurve.OutCubic)
+        self._apply_style(False)
+
+    def get_scale(self) -> float: return self._scale
+    def set_scale(self, value: float) -> None:
+        self._scale = value; self.updateGeometry(); self.update()
+    scale = Property(float, get_scale, set_scale)
+
+    def enterEvent(self, event):
+        self._apply_style(True); self._animate(1.035); super().enterEvent(event)
+    def leaveEvent(self, event):
+        self._apply_style(False); self._animate(1.0); super().leaveEvent(event)
+    def mousePressEvent(self, event):
+        self._animate(0.975); super().mousePressEvent(event)
+    def mouseReleaseEvent(self, event):
+        self._animate(1.035 if self.underMouse() else 1.0); super().mouseReleaseEvent(event)
+    def _animate(self, target: float) -> None:
+        self._anim.stop(); self._anim.setStartValue(self._scale); self._anim.setEndValue(target); self._anim.start()
+    def _apply_style(self, hover: bool) -> None:
+        if self._danger:
+            bg = "rgba(255, 72, 84, 70)" if hover else "rgba(255, 72, 84, 42)"; border = "rgba(255, 98, 110, 140)"
+        elif self._accent:
+            bg = "rgba(125,154,255,130)" if hover else "rgba(125,154,255,92)"; border = "rgba(165,185,255,170)"
+        else:
+            bg = "rgba(255,255,255,35)" if hover else "rgba(255,255,255,22)"; border = "rgba(255,255,255,55)"
+        self.setStyleSheet(f"QPushButton {{ background:{bg}; border:1px solid {border}; border-radius:18px; padding:0 22px; font-weight:600; }}")
+
+
+class TitleIconButton(AnimatedButton):
+    """Title-bar button with vector-drawn icons so glyph fonts cannot disappear."""
+
+    def __init__(self, icon: str, danger: bool = False) -> None:
+        super().__init__("", danger=danger)
+        self.icon = icon
+
+    def paintEvent(self, event):
+        super().paintEvent(event)
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing)
+        color = QColor(255, 92, 104) if self._danger else QColor(232, 234, 240)
+        color.setAlpha(245 if self.underMouse() else 190)
+        pen = QPen(color, 2.2, Qt.SolidLine, Qt.RoundCap, Qt.RoundJoin)
+        painter.setPen(pen)
+        center = self.rect().center()
+        if self.icon == "minimize":
+            painter.drawLine(center.x() - 8, center.y() + 2, center.x() + 8, center.y() + 2)
+        else:
+            painter.drawLine(center.x() - 7, center.y() - 7, center.x() + 7, center.y() + 7)
+            painter.drawLine(center.x() + 7, center.y() - 7, center.x() - 7, center.y() + 7)
+
+
+class Background(QWidget):
     def __init__(self) -> None:
-        self._hide_windows_console()
-        self.root = tk.Tk()
-        self.root.overrideredirect(True)
-        self.root.geometry(f"{WIDTH}x{HEIGHT}+120+80")
-        self.root.configure(bg=BG)
-        self.root.resizable(False, False)
-        self.canvas = tk.Canvas(self.root, width=WIDTH, height=HEIGHT, highlightthickness=0, bg=BG)
-        self.canvas.pack(fill="both", expand=True)
-        self.queue: queue.Queue[tuple[str, object]] = queue.Queue()
-        self.progress = 0
-        self.progress_phase = 0
-        self.console_open = False
-        self.external_console_enabled = False
-        self.console_items: list[int] = []
-        self.log_lines: list[str] = []
-        self.entries: dict[str, tk.Entry] = {}
-        self.entry_windows: list[int] = []
-        self.running = False
-        self.drag_start: tuple[int, int] | None = None
-        self._build_static()
-        self._build_form()
-        self._bind_events()
-        self._animate_background()
-        self._poll_queue()
+        super().__init__(); self.phase = 0.0; self.noise = [(random.randrange(WIDTH), random.randrange(HEIGHT), random.randrange(18, 42)) for _ in range(240)]
+        self.timer = QTimer(self); self.timer.setInterval(80); self.timer.timeout.connect(self._tick); self.timer.start()
+    def _tick(self): self.phase += .015; self.update()
+    def paintEvent(self, _event):
+        p = QPainter(self); p.setRenderHint(QPainter.Antialiasing)
+        p.fillRect(self.rect(), QColor("#0E0E10"))
+        rg = QRadialGradient(QPointF(self.width()*0.54, self.height()*0.32), self.width()*0.75)
+        rg.setColorAt(0, QColor(36,36,42,230)); rg.setColorAt(.55, QColor(18,18,20,245)); rg.setColorAt(1, QColor(8,8,10,255)); p.fillRect(self.rect(), rg)
+        p.setPen(QPen(QColor(255,255,255,10), 1))
+        for x in range(-self.height(), self.width(), 34): p.drawLine(x, self.height(), x+self.height(), 0)
+        for x,y,a in self.noise: p.fillRect(x,y,1,1,QColor(255,255,255,a))
+        vignette = QRadialGradient(QPointF(self.width()/2, self.height()/2), self.width()*.72)
+        vignette.setColorAt(.55, QColor(0,0,0,0)); vignette.setColorAt(1, QColor(0,0,0,150)); p.fillRect(self.rect(), vignette)
 
-    def run(self) -> None:
-        self.root.mainloop()
 
-    def _build_static(self) -> None:
-        self.canvas.create_rectangle(0, 0, WIDTH, HEIGHT, fill=BG, outline="")
-        self._draw_background()
-        self.logo = self._rounded_rect(40, 28, 240, 82, 28, fill="#4f5655", outline="")
-        self.canvas.create_text(140, 55, text="SCANNER", fill=GREEN, font=("Segoe UI Light", 28), tags=("chrome",))
-        self.close_button = self._rounded_rect(WIDTH - 54, 16, WIDTH - 12, 58, 18, fill="#979b9a", outline="")
-        self.canvas.create_text(WIDTH - 33, 37, text="X", fill="#ff2020", font=("Segoe UI", 28, "bold"), tags=("close", "chrome"))
-        self.console_button = self._rounded_rect(WIDTH - 72, HEIGHT - 72, WIDTH - 26, HEIGHT - 26, 14, fill="#8e9492", outline="")
-        self.canvas.create_text(WIDTH - 49, HEIGHT - 49, text=">_", fill="#202827", font=("Consolas", 18, "bold"), tags=("console_btn", "chrome"))
-        self.external_console_checkbox = self._rounded_rect(WIDTH - 126, HEIGHT - 65, WIDTH - 96, HEIGHT - 35, 13, fill="#a9afad", outline="", tags=("external_console", "chrome"))
-        self.canvas.tag_bind("close", "<Button-1>", lambda _event: self.root.destroy())
-        self.canvas.tag_bind("console_btn", "<Button-1>", lambda _event: self._toggle_console())
-        self.canvas.tag_bind("external_console", "<Button-1>", lambda _event: self._toggle_external_console())
+class WaveProgress(QWidget):
+    def __init__(self) -> None:
+        super().__init__(); self._value = 0.0; self.phase = 0.0; self.label = "Preparing..."; self.setMinimumHeight(250)
+        self.timer = QTimer(self); self.timer.setInterval(33); self.timer.timeout.connect(self._tick); self.timer.start()
+    def setProgress(self, value: int, label: str) -> None:
+        self.label = label; self.anim = QPropertyAnimation(self, b"value", self); self.anim.setDuration(220); self.anim.setEasingCurve(QEasingCurve.OutCubic); self.anim.setStartValue(self._value); self.anim.setEndValue(float(value)); self.anim.start(); self.update()
+    def getValue(self): return self._value
+    def setValue(self, v): self._value = v; self.update()
+    value = Property(float, getValue, setValue)
+    def _tick(self): self.phase += .045; self.update()
+    def _wave_edge(self, left: float, right: float, baseline: float, offset: float) -> QPainterPath:
+        wave = QPainterPath(QPointF(left, baseline)); x = left; amp = 7 + math.sin(self.phase + offset) * 2
+        while x < right:
+            wave.cubicTo(x + 35, baseline + math.sin(self.phase + x * .018 + offset) * amp, x + 70, baseline - math.sin(self.phase + x * .018 + offset) * amp, x + 105, baseline)
+            x += 105
+        return wave
+    def paintEvent(self, _):
+        p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); bar = self.rect().adjusted(16,16,-16,-58)
+        clip = QPainterPath(); clip.addRoundedRect(bar, 28, 28); p.fillPath(clip, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(clip)
+        split = bar.top() + bar.height() * (self._value/100.0); gap = 6
+        done_edge = self._wave_edge(bar.left(), bar.right(), max(bar.top(), split - gap), 0.0)
+        done = QPainterPath(QPointF(bar.left(), bar.top())); done.lineTo(bar.right(), bar.top()); done.lineTo(bar.right(), split - gap); done.connectPath(done_edge.toReversed()); done.closeSubpath()
+        todo_edge = self._wave_edge(bar.left(), bar.right(), min(bar.bottom(), split + gap), 1.8)
+        todo = QPainterPath(todo_edge); todo.lineTo(bar.right(), bar.bottom()); todo.lineTo(bar.left(), bar.bottom()); todo.closeSubpath()
+        done_grad = QLinearGradient(bar.topLeft(), bar.bottomLeft()); done_grad.setColorAt(0,QColor(125,154,255,120)); done_grad.setColorAt(1,QColor(80,220,190,58))
+        todo_grad = QLinearGradient(bar.topLeft(), bar.bottomLeft()); todo_grad.setColorAt(0,QColor(255,255,255,34)); todo_grad.setColorAt(1,QColor(255,255,255,12))
+        p.fillPath(clip.intersected(done), done_grad); p.fillPath(clip.intersected(todo), todo_grad)
+        p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 26, QFont.Bold)); p.drawText(bar, Qt.AlignCenter, f"{int(self._value)}%")
+        text_rect = self.rect().adjusted(16, self.height()-48, -16, -8); p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(text_rect, Qt.AlignHCenter|Qt.AlignVCenter, self.label)
 
-    def _draw_background(self) -> None:
-        self.canvas.create_polygon(0, 0, 950, 0, 820, HEIGHT, 0, HEIGHT, fill="#091814", outline="")
-        for x in range(0, WIDTH, 9):
-            for y in range(0, HEIGHT, 9):
-                if x < 190 or x > 700 or y > 530:
-                    color = "#d7e2dc" if (x + y) % 27 == 0 else "#71817b"
-                    self.canvas.create_oval(x, y, x + 2, y + 2, fill=color, outline="", stipple="gray50")
-        self.canvas.create_text(225, 360, text="SC", fill="#003d2b", font=("Segoe UI Black", 300), anchor="center")
-        self.canvas.create_text(890, 345, text="AN", fill="#00412e", font=("Segoe UI Black", 300), anchor="center")
-        for points, color in (
-            ((70, 90, 240, 270, 70, 450), "#03492f"),
-            ((360, 75, 560, 240, 420, 500, 250, 250), "#07573a"),
-            ((870, 80, 1180, 150, 1100, 620, 760, 610), "#075c3d"),
-        ):
-            self.canvas.create_polygon(*points, fill=color, outline="")
 
-    def _build_form(self) -> None:
-        specs = [
-            ("launcher", "Launcher path", 172),
-            ("modpack", "Modpack path", 286),
-            ("output", "Output path", 400),
-        ]
-        for key, placeholder, y in specs:
-            self._rounded_rect(228, y, 1088, y + 76, 38, fill="#35413d", outline="#ccd5d0", width=2, tags=("form",))
-            entry = tk.Entry(
-                self.root,
-                borderwidth=0,
-                highlightthickness=0,
-                bg="#202927",
-                fg=WHITE,
-                insertbackground=WHITE,
-                font=("Segoe UI", 21, "italic"),
-            )
-            entry.insert(0, placeholder)
-            entry.placeholder = placeholder  # type: ignore[attr-defined]
-            entry.bind("<FocusIn>", self._entry_focus_in)
-            entry.bind("<FocusOut>", self._entry_focus_out)
-            entry.bind("<Double-Button-1>", lambda _event, item=key: self._choose_path(item))
-            window = self.canvas.create_window(275, y + 38, window=entry, anchor="w", width=760, height=42, tags=("form",))
-            self.entries[key] = entry
-            self.entry_windows.append(window)
-        self.check_value = tk.BooleanVar(value=False)
-        self.checkbox = self._rounded_rect(585, 525, 618, 558, 15, fill="#a9afad", outline="", tags=("form", "checkbox"))
-        self.canvas.create_text(640, 541, text="Generate mod dependency graph", fill="#a6aaa8", font=("Segoe UI", 22, "italic"), anchor="w", tags=("form", "checkbox"))
-        self.canvas.tag_bind("checkbox", "<Button-1>", lambda _event: self._toggle_checkbox())
-        self.start_button = self._rounded_rect(42, HEIGHT - 84, 132, HEIGHT - 28, 18, fill="#5b6360", outline="#b4bdb8", tags=("form", "start"))
-        self.canvas.create_text(87, HEIGHT - 56, text="Enter", fill=GREEN, font=("Segoe UI", 17, "bold"), tags=("form", "start"))
-        self.canvas.tag_bind("start", "<Button-1>", lambda _event: self._start_scan())
+class Toast(QLabel):
+    def __init__(self, parent):
+        super().__init__(parent); self.setAlignment(Qt.AlignCenter); self.setStyleSheet("background:rgba(125,154,255,54); border:1px solid rgba(165,185,255,125); border-radius:16px; padding:12px 18px;"); self.hide(); self.effect = QGraphicsOpacityEffect(self); self.setGraphicsEffect(self.effect)
+    def show_message(self, text: str):
+        self.setText(text); self.adjustSize(); self.move((self.parent().width()-self.width())//2, 58); self.show();
+        self.fade = QPropertyAnimation(self.effect, b"opacity", self); self.fade.setDuration(220); self.fade.setStartValue(0); self.fade.setEndValue(1)
+        self.lift = QPropertyAnimation(self, b"pos", self); self.lift.setDuration(220); self.lift.setEasingCurve(QEasingCurve.OutCubic); self.lift.setStartValue(self.pos() + QPoint(0, -8)); self.lift.setEndValue(self.pos())
+        self.group = QParallelAnimationGroup(self); self.group.addAnimation(self.fade); self.group.addAnimation(self.lift); self.group.start(); QTimer.singleShot(4200, self.hide)
 
-    def _bind_events(self) -> None:
-        self.canvas.bind("<ButtonPress-1>", self._start_drag)
-        self.canvas.bind("<B1-Motion>", self._drag)
 
-    def _start_drag(self, event: tk.Event) -> None:
-        self.drag_start = (event.x_root - self.root.winfo_x(), event.y_root - self.root.winfo_y())
-
-    def _drag(self, event: tk.Event) -> None:
-        if self.drag_start:
-            dx, dy = self.drag_start
-            self.root.geometry(f"+{event.x_root - dx}+{event.y_root - dy}")
-
-    def _entry_focus_in(self, event: tk.Event) -> None:
-        entry = event.widget
-        if entry.get() == getattr(entry, "placeholder", ""):
-            entry.delete(0, "end")
-            entry.config(fg=WHITE, font=("Segoe UI", 21, "italic"))
-
-    def _entry_focus_out(self, event: tk.Event) -> None:
-        entry = event.widget
-        if not entry.get().strip():
-            entry.insert(0, getattr(entry, "placeholder", ""))
-            entry.config(fg="#a6aaa8")
-
-    def _choose_path(self, key: str) -> None:
-        selected = filedialog.askdirectory()
-        if selected:
-            entry = self.entries[key]
-            entry.delete(0, "end")
-            entry.insert(0, selected)
-
-    def _toggle_checkbox(self) -> None:
-        self.check_value.set(not self.check_value.get())
-        fill = GREEN if self.check_value.get() else "#a9afad"
-        self.canvas.itemconfig(self.checkbox, fill=fill)
-
-    def _toggle_external_console(self) -> None:
-        self.external_console_enabled = not self.external_console_enabled
-        fill = GREEN if self.external_console_enabled else "#a9afad"
-        self.canvas.itemconfig(self.external_console_checkbox, fill=fill)
-
-    def _start_scan(self) -> None:
-        if self.running:
-            return
-        request = ScanRequest(
-            launcher_path=self._entry_value("launcher"),
-            modpack_path=self._entry_value("modpack"),
-            output_path=self._entry_value("output"),
-            generate_graph=self.check_value.get(),
-        )
-        if not request.output_path:
-            self._append_console("Output path is required.")
-            self._toggle_console(force=True)
-            return
-        if self.external_console_enabled:
-            self._open_external_log_console(request.output_path)
-        self.running = True
-        for item in self.canvas.find_withtag("form"):
-            self.canvas.itemconfig(item, state="hidden")
-        for window in self.entry_windows:
-            self.canvas.itemconfig(window, state="hidden")
-        self._show_progress()
-        thread = threading.Thread(target=self._run_worker, args=(request,), daemon=True)
-        thread.start()
-
-    def _entry_value(self, key: str) -> str:
-        value = self.entries[key].get().strip().strip('"')
-        return "" if value == self.entries[key].placeholder else value  # type: ignore[attr-defined]
-
-    def _run_worker(self, request: ScanRequest) -> None:
-        try:
-            run_scan(request, lambda percent, message: self.queue.put(("progress", (percent, message))))
-            self.queue.put(("done", None))
-        except Exception as error:
-            self.queue.put(("error", format_traceback(error)))
-
-    def _show_progress(self) -> None:
-        self.progress_items = []
-        self.progress_items.append(self._rounded_rect(350, 330, 930, 380, 25, fill="#3d4542", outline="#d0d8d0", width=2, tags=("progress",)))
-        self.progress_text = self.canvas.create_text(640, 420, text="0%", fill=WHITE, font=("Segoe UI", 28, "bold"), tags=("progress",))
-        self.progress_message = self.canvas.create_text(640, 465, text="Preparing...", fill="#a9b1ad", font=("Segoe UI", 14), tags=("progress",))
-        self._animate_progress()
-
-    def _animate_progress(self) -> None:
-        self.canvas.delete("progress_fill")
-        x1, y1, x2, y2 = 360, 340, 920, 370
-        width = (x2 - x1) * (self.progress / 100)
-        end = x1 + width
-        if width > 4:
-            points = [x1, y1, max(x1, end - 16), y1]
-            for offset in range(0, 34, 6):
-                wave_y = y1 + offset
-                wave_x = end + (6 if (offset // 6 + self.progress_phase) % 2 == 0 else -5)
-                points.extend([wave_x, wave_y])
-            points.extend([max(x1, end - 16), y2, x1, y2])
-            self.canvas.create_polygon(points, fill="#73f0a0", outline="", tags=("progress", "progress_fill"))
-            self.canvas.create_polygon(points, fill="#9dffc0", outline="", tags=("progress", "progress_fill"))
-        self.progress_phase = (self.progress_phase + 1) % 8
-        if self.running:
-            self.root.after(90, self._animate_progress)
-
-    def _poll_queue(self) -> None:
+class ScannerApp(QMainWindow):
+    def __init__(self) -> None:
+        super().__init__(); self._hide_windows_console(); self.queue: queue.Queue[tuple[str, object]] = queue.Queue(); self.running=False; self.drag_pos=None; self.logs=[]
+        self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window); self.resize(WIDTH, HEIGHT); self.setStyleSheet(STYLE)
+        root = Background(); self.setCentralWidget(root); layout=QVBoxLayout(root); layout.setContentsMargins(28,18,28,24); layout.setSpacing(18)
+        title=QHBoxLayout(); title_label = QLabel("SCAN"); title_label.setStyleSheet("font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;"); title.addWidget(title_label); title.addStretch(); self.min_btn=TitleIconButton("minimize"); self.close_btn=TitleIconButton("close", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
+        card=QFrame(); card.setObjectName("card"); card.setStyleSheet("#card{background:rgba(23,23,27,150); border:1px solid rgba(255,255,255,30); border-radius:28px;}"); shadow=QGraphicsDropShadowEffect(card); shadow.setBlurRadius(38); shadow.setXOffset(0); shadow.setYOffset(18); shadow.setColor(QColor(0,0,0,130)); card.setGraphicsEffect(shadow); form=QVBoxLayout(card); form.setContentsMargins(34,30,34,30); form.setSpacing(18)
+        self.entries={};
+        for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path (normal mode only)")]:
+            row=QHBoxLayout(); e=QLineEdit(); e.setPlaceholderText(ph); e.setMinimumHeight(60); b=AnimatedButton("Browse"); b.clicked.connect(lambda _, k=key: self._choose_path(k)); row.addWidget(e,1); row.addWidget(b); form.addLayout(row); self.entries[key]=e
+        self.graph=QCheckBox("Generate mod dependency graph"); self.external=QCheckBox("Open external live log console"); form.addWidget(self.graph); form.addWidget(self.external)
+        actions=QHBoxLayout(); self.start=AnimatedButton("Start Analysis", accent=True); self.test=AnimatedButton("Test Mode"); self.logs_btn=AnimatedButton("Logs"); actions.addWidget(self.start); actions.addWidget(self.test); actions.addStretch(); actions.addWidget(self.logs_btn); form.addLayout(actions); layout.addWidget(card)
+        self.progress=WaveProgress(); self.progress.hide(); layout.addWidget(self.progress); self.toast=Toast(root)
+        self.min_btn.clicked.connect(self.showMinimized); self.close_btn.clicked.connect(self.close); self.start.clicked.connect(lambda: self._start_scan(False)); self.test.clicked.connect(lambda: self._start_scan(True)); self.logs_btn.clicked.connect(self._show_logs)
+        self.poll=QTimer(self); self.poll.setInterval(80); self.poll.timeout.connect(self._poll_queue); self.poll.start()
+    def mousePressEvent(self,e):
+        if e.button()==Qt.LeftButton and e.position().y()<70: self.drag_pos=e.globalPosition().toPoint()-self.frameGeometry().topLeft()
+    def mouseMoveEvent(self,e):
+        if self.drag_pos and e.buttons() & Qt.LeftButton: self.move(e.globalPosition().toPoint()-self.drag_pos)
+    def mouseReleaseEvent(self,e): self.drag_pos=None
+    def _choose_path(self,key):
+        path=QFileDialog.getExistingDirectory(self,"Select folder");
+        if path: self.entries[key].setText(path)
+    def _start_scan(self,test_mode: bool):
+        if self.running: return
+        req=ScanRequest(self.entries["launcher"].text().strip().strip('"'), self.entries["modpack"].text().strip().strip('"'), self.entries["output"].text().strip().strip('"'), self.graph.isChecked(), test_mode)
+        if not req.output_path and not test_mode: self.toast.show_message("Output path is required."); self._append_log("Output path is required."); return
+        if test_mode: self.toast.show_message("Запущен тестовый режим. Файлы сохраняться не будут; документация лаунчера и сборки не будет создана.")
+        if self.external.isChecked() and req.output_path and not test_mode: self._open_external_log_console(req.output_path)
+        self.running=True; self.progress.show(); self.progress.setProgress(0,"Preparing..."); self.start.setEnabled(False); self.test.setEnabled(False)
+        threading.Thread(target=self._run_worker,args=(req,),daemon=True).start()
+    def _run_worker(self,req):
+        try: run_scan(req, lambda p,m: self.queue.put(("progress",(p,m)))); self.queue.put(("done",None))
+        except Exception as err: self.queue.put(("error",format_traceback(err)))
+    def _poll_queue(self):
         try:
             while True:
-                event, payload = self.queue.get_nowait()
-                if event == "progress":
-                    percent, message = payload  # type: ignore[misc]
-                    self.progress = int(percent)
-                    self.canvas.itemconfig(self.progress_text, text=f"{self.progress}%")
-                    self.canvas.itemconfig(self.progress_message, text=str(message))
-                    self._append_console(f"{self.progress}% {message}")
-                elif event == "done":
-                    self.root.destroy()
-                elif event == "error":
-                    self.running = False
-                    self._append_console(str(payload))
-                    self._toggle_console(force=True)
-        except queue.Empty:
-            pass
-        self.root.after(100, self._poll_queue)
-
-    def _toggle_console(self, force: bool | None = None) -> None:
-        state = (not self.console_open) if force is None else force
-        if state == self.console_open:
-            return
-        self.console_open = state
-        if state:
-            self.console_items.append(self._rounded_rect(160, 96, 1120, 650, 18, fill="#020806", outline="#86f0aa", width=2, tags=("console",)))
-            text = "\n".join(self.log_lines[-28:])
-            self.console_text = self.canvas.create_text(185, 122, text=text, fill="#d9e0dc", font=("Consolas", 12), anchor="nw", width=900, tags=("console",))
-        else:
-            self.canvas.delete("console")
-            self.console_items.clear()
-
-    def _append_console(self, text: str) -> None:
-        self.log_lines.extend(str(text).splitlines())
-        if self.console_open:
-            self.canvas.itemconfig(self.console_text, text="\n".join(self.log_lines[-28:]))
-
+                ev,payload=self.queue.get_nowait()
+                if ev=="progress": p,m=payload; self.progress.setProgress(int(p),str(m)); self._append_log(f"{int(p)}% {m}")
+                elif ev=="done": self.close()
+                elif ev=="error": self.running=False; self.start.setEnabled(True); self.test.setEnabled(True); self._append_log(str(payload)); self._show_logs()
+        except queue.Empty: pass
+    def _show_logs(self):
+        d=QDialog(self); d.setWindowTitle("SCAN Logs"); d.setWindowFlags(Qt.FramelessWindowHint | Qt.Dialog); d.resize(820,520); d.setStyleSheet(STYLE+"QDialog{background:#0E0E10;}"); lay=QVBoxLayout(d); edit=QPlainTextEdit(); edit.setReadOnly(True); edit.setPlainText("\n".join(self.logs)); lay.addWidget(edit); close_btn=AnimatedButton("Close"); close_btn.clicked.connect(d.accept); lay.addWidget(close_btn); d.exec()
+    def _append_log(self,text): self.logs.extend(str(text).splitlines())
     def _open_external_log_console(self, output_path: str) -> None:
-        logs_dir = output_path.rstrip("\\/") + "\\logs"
-        command = (
-            "$logs = '" + logs_dir.replace("'", "''") + "'; "
-            "Write-Host 'SCAN live logs:' $logs; "
-            "while (!(Test-Path (Join-Path $logs 'scanner.md'))) { Start-Sleep -Milliseconds 250 }; "
-            "Get-Content -Path (Join-Path $logs 'scanner.md'), (Join-Path $logs 'errors.md') -Wait"
-        )
-        try:
-            subprocess.Popen(
-                ["cmd.exe", "/k", "powershell", "-NoLogo", "-NoExit", "-Command", command],
-                creationflags=getattr(subprocess, "CREATE_NEW_CONSOLE", 0),
-            )
-        except Exception as error:
-            self._append_console(f"Cannot open external cmd: {error}")
-            self._toggle_console(force=True)
-
+        logs_dir = str(Path(output_path) / "logs")
+        command = "$logs = '" + logs_dir.replace("'", "''") + "'; Write-Host 'SCAN live logs:' $logs; while (!(Test-Path (Join-Path $logs 'scanner.md'))) { Start-Sleep -Milliseconds 250 }; Get-Content -Path (Join-Path $logs 'scanner.md'), (Join-Path $logs 'errors.md') -Wait"
+        try: subprocess.Popen(["cmd.exe","/k","powershell","-NoLogo","-NoExit","-Command",command], creationflags=getattr(subprocess,"CREATE_NEW_CONSOLE",0))
+        except Exception as error: self._append_log(f"Cannot open external cmd: {error}")
     def _hide_windows_console(self) -> None:
         try:
-            import ctypes
-
-            window = ctypes.windll.kernel32.GetConsoleWindow()
-            if window:
-                ctypes.windll.user32.ShowWindow(window, 0)
-        except Exception:
-            pass
-
-    def _animate_background(self) -> None:
-        self.canvas.move("glow", 2, 0)
-        self.root.after(120, self._animate_background)
-
-    def _rounded_rect(self, x1: int, y1: int, x2: int, y2: int, radius: int, **kwargs) -> int:
-        points = [
-            x1 + radius,
-            y1,
-            x2 - radius,
-            y1,
-            x2,
-            y1,
-            x2,
-            y1 + radius,
-            x2,
-            y2 - radius,
-            x2,
-            y2,
-            x2 - radius,
-            y2,
-            x1 + radius,
-            y2,
-            x1,
-            y2,
-            x1,
-            y2 - radius,
-            x1,
-            y1 + radius,
-            x1,
-            y1,
-        ]
-        return self.canvas.create_polygon(points, smooth=True, **kwargs)
+            import ctypes; window=ctypes.windll.kernel32.GetConsoleWindow();
+            if window: ctypes.windll.user32.ShowWindow(window,0)
+        except Exception: pass
 
 
 def main() -> None:
-    ScannerApp().run()
+    app = QApplication(sys.argv); app.setApplicationName("SCAN"); window=ScannerApp(); window.show(); sys.exit(app.exec())
 
-
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
