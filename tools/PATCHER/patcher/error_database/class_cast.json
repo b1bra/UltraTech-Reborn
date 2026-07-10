@@ -1,0 +1,16 @@
+{
+  "id": "class_cast",
+  "title": "Class Cast",
+  "category": "class_cast",
+  "description": "Detailed diagnostic template for Minecraft mod startup incompatibilities involving class_cast.",
+  "why_it_happens": "Usually caused by loader, Minecraft version, dependency, bytecode, access, or transformer mismatch.",
+  "signals": [
+    "stacktrace frames",
+    "class references",
+    "metadata",
+    "bytecode constants",
+    "related scripts"
+  ],
+  "auto_fix_strategy": "Registered patch modules may create bridges, stubs, manifest updates, access-transformer corrections, or bytecode rewrites when safe.",
+  "preservation_policy": "Do not remove recipes, assets, blocks, items, configs, models, localization, or gameplay mechanics."
+}
