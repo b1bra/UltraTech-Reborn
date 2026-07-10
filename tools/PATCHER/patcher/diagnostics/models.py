@@ -39,4 +39,6 @@ class JarAnalysis:
     access_transformers: list[str] = field(default_factory=list)
     embedded_jars: list[str] = field(default_factory=list)
     api_references: list[str] = field(default_factory=list)
+    dependency_map: dict[str, list[str]] = field(default_factory=dict)
+    missing_classes: list[str] = field(default_factory=list)
     diagnostics: list[Diagnostic] = field(default_factory=list)

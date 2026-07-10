@@ -8,6 +8,7 @@ from patcher.constants import LAYOUT
 from patcher.diagnostics.models import JarAnalysis
 from patcher.ui.animations.factory import AnimationFactory
 from patcher.ui.widgets.progress import SegmentedProgress
+from patcher.styles.theme import add_soft_shadow
 
 class ModCard(QFrame):
     saveRequested = Signal(Path)
@@ -15,9 +16,8 @@ class ModCard(QFrame):
 
     def __init__(self, jar_path: Path) -> None:
         super().__init__(); self.jar_path = jar_path; self.analysis: JarAnalysis | None = None
-        self.setObjectName("ModCard"); self.setFixedHeight(LAYOUT.card_height)
-        self.setStyleSheet("QFrame#ModCard{background:#20242e;border:1px solid #2b303b;border-radius:18px;} QFrame#ModCard:hover{background:#252a35;}")
-        layout = QVBoxLayout(self); top = QHBoxLayout(); self.title = QLabel(jar_path.stem); self.title.setStyleSheet("font-size:16px;font-weight:700;")
+        self.setObjectName("ModCard"); self.setFixedHeight(92); add_soft_shadow(self, 22, 6, 70)
+        layout = QVBoxLayout(self); layout.setContentsMargins(14, 10, 14, 10); layout.setSpacing(8); top = QHBoxLayout(); self.title = QLabel(jar_path.stem); self.title.setStyleSheet("font-size:15px;font-weight:700;")
         save = QPushButton("↓"); save.setToolTip("Save patched JAR"); mini = QPushButton("_"); mini.setToolTip("Minimize info")
         save.clicked.connect(lambda: self.saveRequested.emit(self.jar_path)); mini.clicked.connect(self.minimized.emit)
         top.addWidget(self.title); top.addStretch(); top.addWidget(save); top.addWidget(mini)
@@ -32,6 +32,6 @@ class ModCard(QFrame):
     def complete(self, success: bool) -> None:
         self.progress.mark_done(True)
         if success:
-            self.setStyleSheet("QFrame#ModCard{background:#191c23;border:1px solid #2b303b;border-radius:18px;}"); self.title.setText(f"<s>{self.jar_path.stem}</s>")
+            self.setObjectName("ModCard"); self.title.setText(f"<s>{self.jar_path.stem}</s>")
         else:
-            self.setStyleSheet("QFrame#ModCard{background:#2a1d22;border:1px solid #4a3038;border-radius:18px;}")
+            self.setStyleSheet("QFrame#ModCard{background:#332129;border:1px solid #5a3844;border-radius:22px;}")

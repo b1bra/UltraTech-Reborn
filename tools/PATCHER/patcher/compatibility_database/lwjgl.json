@@ -1,0 +1,12 @@
+{
+  "entries": [
+    {
+      "old_class": "org.lwjglx.BufferUtils",
+      "new_class": "org.lwjgl.BufferUtils",
+      "old_method": null,
+      "new_method": null,
+      "compatibility_level": "high",
+      "fix_type": "bytecode_replace"
+    }
+  ]
+}
