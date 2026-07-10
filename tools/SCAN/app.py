@@ -157,15 +157,19 @@ class WaveProgress(QWidget):
         p = QPainter(self); p.setRenderHint(QPainter.Antialiasing)
         r = self.rect().adjusted(16,16,-16,-58)
         path = QPainterPath(); path.addRoundedRect(r, 24, 24); p.fillPath(path, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(path)
-        split = r.top() + r.height() * (self._value/100.0)
-        segments = [
-            (r.top(), split, QColor(125,154,255,112), QColor(80,220,190,60), 0.0),
-            (split, r.bottom(), QColor(255,255,255,32), QColor(255,255,255,12), 0.0),
-        ]
-        for top, bottom, c1, c2, offset in segments:
-            if bottom <= top: continue
-            grad = QLinearGradient(r.topLeft(), r.bottomLeft()); grad.setColorAt(0,c1); grad.setColorAt(1,c2)
-            p.fillPath(path.intersected(self._wave_fill(r, top, bottom, offset)), grad)
+        # Fill from the bottom and clip the animated wave inside the rounded bar.
+        # The old top-growing split could place the cyan segment under the idle
+        # segment around the middle of the animation on some Qt paint engines.
+        fill_top = r.bottom() - r.height() * (self._value/100.0)
+        p.save()
+        p.setClipPath(path)
+        idle = QPainterPath(); idle.addRoundedRect(r, 24, 24)
+        p.fillPath(idle, QColor(255,255,255,24))
+        if fill_top < r.bottom():
+            fill_rect = r.adjusted(0, fill_top - r.top(), 0, 0)
+            grad = QLinearGradient(fill_rect.topLeft(), fill_rect.bottomLeft()); grad.setColorAt(0,QColor(125,154,255,132)); grad.setColorAt(1,QColor(80,220,220,96))
+            p.fillPath(self._wave_fill(r, fill_top, r.bottom(), 0.0), grad)
+        p.restore()
         p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 24, QFont.Bold)); p.drawText(r, Qt.AlignCenter, f"{int(self._value)}%")
         label_rect = self.rect().adjusted(16, r.bottom()+12, -16, -8)
         p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(label_rect, Qt.AlignHCenter|Qt.AlignTop|Qt.TextWordWrap, self.label)
@@ -191,7 +195,7 @@ class ScannerApp(QMainWindow):
         self.entries={};
         for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path")]:
             row=QHBoxLayout(); e=QLineEdit(placeholderText=ph); e.setMinimumHeight(60); b=AnimatedButton("Browse"); b.clicked.connect(lambda _, k=key: self._choose_path(k)); row.addWidget(e,1); row.addWidget(b); form.addLayout(row); self.entries[key]=e
-        self.graph=QCheckBox("Generate mod dependency graph"); self.external=QCheckBox("Open external live log console"); form.addWidget(self.graph); form.addWidget(self.external)
+        self.graph=QCheckBox("Generate mod dependency graph"); self.migration_plan=QCheckBox("Create Migration Plan"); self.viewer_plan=QCheckBox("Generate Viewer Plan"); self.external=QCheckBox("Open external live log console"); form.addWidget(self.graph); form.addWidget(self.migration_plan); form.addWidget(self.viewer_plan); form.addWidget(self.external)
         actions=QHBoxLayout(); self.start=AnimatedButton("Start Analysis", accent=True); self.test=AnimatedButton("Test Mode"); self.logs_btn=AnimatedButton("Logs"); actions.addWidget(self.start); actions.addWidget(self.test); actions.addStretch(); actions.addWidget(self.logs_btn); form.addLayout(actions); layout.addWidget(card)
         self.progress=WaveProgress(); self.progress.hide(); layout.addWidget(self.progress); self.toast=Toast(root)
         self.min_btn.clicked.connect(self.showMinimized); self.close_btn.clicked.connect(self.close); self.start.clicked.connect(lambda: self._start_scan(False)); self.test.clicked.connect(lambda: self._start_scan(True)); self.logs_btn.clicked.connect(self._show_logs)
@@ -206,7 +210,7 @@ class ScannerApp(QMainWindow):
         if path: self.entries[key].setText(path)
     def _start_scan(self,test_mode: bool):
         if self.running: return
-        req=ScanRequest(self.entries["launcher"].text().strip().strip('"'), self.entries["modpack"].text().strip().strip('"'), self.entries["output"].text().strip().strip('"'), self.graph.isChecked(), test_mode)
+        req=ScanRequest(launcher_path=self.entries["launcher"].text().strip().strip('"'), modpack_path=self.entries["modpack"].text().strip().strip('"'), output_path=self.entries["output"].text().strip().strip('"'), generate_graph=self.graph.isChecked(), create_migration_plan=self.migration_plan.isChecked(), generate_viewer_plan=self.viewer_plan.isChecked(), test_mode=test_mode)
         if not req.output_path and not test_mode:
             self._append_log("Output path is required."); self.toast.show_message("Output path is required"); return
         if test_mode: self.toast.show_message("Запущен тестовый режим. Документация лаунчера и сборки сохраняться не будет.")
