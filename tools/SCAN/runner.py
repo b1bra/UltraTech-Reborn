@@ -30,9 +30,17 @@ def run_scan(request: ScanRequest, progress: ProgressCallback | None = None) -> 
     """Run selected analyses and write the required output tree."""
 
     progress = progress or (lambda _percent, _message: None)
+    if request.test_mode:
+        with tempfile.TemporaryDirectory(prefix="scan_test_") as temp_dir:
+            _run_scan_with_output(request, Path(temp_dir), progress)
+        return
     output = Path(request.output_path).expanduser()
     if not str(output).strip():
         return
+    _run_scan_with_output(request, output, progress)
+
+
+def _run_scan_with_output(request: ScanRequest, output: Path, progress: ProgressCallback) -> None:
     output.mkdir(parents=True, exist_ok=True)
     modpack_output = output / "modpack"
     launcher_output = output / "launcher"
