@@ -23,6 +23,8 @@ class ScanRequest:
     modpack_path: str = ""
     output_path: str = ""
     generate_graph: bool = False
+    create_migration_plan: bool = False
+    generate_viewer_plan: bool = False
     test_mode: bool = False
 
 
@@ -50,6 +52,8 @@ def _run_scan_with_output(request: ScanRequest, output: Path, progress: Progress
         "modpack_path": request.modpack_path,
         "output_path": str(output),
         "generate_graph": request.generate_graph,
+        "create_migration_plan": request.create_migration_plan,
+        "generate_viewer_plan": request.generate_viewer_plan,
         "test_mode": request.test_mode,
     }
     logger = configure_logger(logs_output, parameters)
@@ -87,6 +91,8 @@ def _run_scan_inner(
             modpack_path,
             modpack_output,
             request.generate_graph,
+            request.create_migration_plan,
+            request.generate_viewer_plan,
             logger,
             lambda percent, message: progress(_scale(percent, 3, 74 if launcher_path else 94), message),
         )

@@ -70,6 +70,8 @@ def analyze_modpack(
     modpack_path: Path,
     output_dir: Path,
     generate_graph: bool,
+    create_migration_plan: bool,
+    generate_viewer_plan: bool,
     logger: ScannerSessionLogger,
     progress: Callable[[int, str], None] | None = None,
 ) -> None:
@@ -105,12 +107,16 @@ def analyze_modpack(
     progress(58, "Merging mod data")
     mods = modscanner.merge_scans(surface, scan_results["class"], scan_results["resource"], scan_results["recipe"])
 
+    progress(62, "Running extended dependency scanner")
+    dependency_module, dependency_result = _run_extended_dependency_scan(jars, surface, mods, output_dir, logger)
+
     progress(66, "Writing ModScanner documentation")
     modscanner.create_modlist(mods)
     modscanner.create_migration_report(mods)
     modscanner.create_dependencies_report(mods)
     modscanner.create_graph_json(mods)
     _write_unified_mod_docs(output_dir, mods, scan_results, surface, logger)
+    dependency_module.write_outputs(output_dir, dependency_result, mods, logger)
 
     progress(72, "Running network packet documentation")
     packet_logger = _load_module(MODSCANNER_DIR / "modpacketlogger_lite.py", "scan_modpacketlogger_lite")
@@ -118,6 +124,20 @@ def analyze_modpack(
     packet_logger.logger = logger
     packet_results = [packet_logger.analyze_jar(jar_path) for jar_path in jars]
     packet_logger.create_networklog(packet_results, str(mods_folder))
+
+    if create_migration_plan:
+        progress(76, "Creating migration plan")
+        _create_migration_plan(output_dir, logger)
+    else:
+        logger.info("Migration planner skipped by option")
+
+    if generate_viewer_plan:
+        progress(78, "Generating viewer plan")
+        if not (output_dir / "PLANER" / "migration_plan.json").exists():
+            _create_migration_plan(output_dir, logger)
+        _generate_viewer_plan(output_dir, logger)
+    else:
+        logger.info("Viewer plan generation skipped by option")
 
     if generate_graph:
         progress(80, "Generating dependency graph")
@@ -135,6 +155,36 @@ def analyze_modpack(
     progress(94, "Finalizing modpack documentation")
     logger.success("Modpack analysis complete")
 
+
+
+def _run_extended_dependency_scan(jars: list[str], surface: dict[str, dict], mods: list[dict], output_dir: Path, logger: ScannerSessionLogger) -> tuple[ModuleType, dict]:
+    """Run the modular hidden dependency scanner and merge de-duplicated results."""
+
+    module = _load_module(ROOT_DIR / "tools" / "SCAN" / "dependencyscanner.py", "scan_dependencyscanner")
+    declared = {file_name: data.get("dependencies", []) for file_name, data in surface.items()}
+    result = module.scan_modpack(jars, declared, logger)
+    by_file = {item["file"]: item.get("dependencies", []) for item in result.get("mods", [])}
+    for mod in mods:
+        file_name = mod.get("file")
+        current = [{"name": dep, "categories": ["Declared"], "confidence": 100, "sources": ["legacy dependency metadata"], "evidence": []} for dep in mod.get("dependencies", [])]
+        merged = module.merge_dependency_records(current + by_file.get(file_name, []))
+        mod["dependency_records"] = merged
+        mod["dependencies"] = [item["name"] for item in merged if item.get("confidence", 0) >= 45]
+    return module, result
+
+
+def _create_migration_plan(output_dir: Path, logger: ScannerSessionLogger) -> None:
+    """Create PLANER migration JSON from generated scan data."""
+
+    module = _load_module(ROOT_DIR / "tools" / "PLANER" / "migrationplanner.py", "scan_migrationplanner")
+    module.create_migration_plan(output_dir, logger)
+
+
+def _generate_viewer_plan(output_dir: Path, logger: ScannerSessionLogger) -> None:
+    """Create custom viewer JSON for the PLANER PySide6 application."""
+
+    module = _load_module(ROOT_DIR / "tools" / "PLANER" / "graphgeneratorplan.py", "scan_graphgeneratorplan")
+    module.create_viewer_plan(output_dir, None, logger)
 
 def analyze_saves(saves_path: Path, output_dir: Path, logger: ScannerSessionLogger) -> Path:
     """Run UltraSaveInspector without console prompts."""
