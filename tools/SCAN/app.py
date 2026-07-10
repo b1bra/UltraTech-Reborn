@@ -94,6 +94,29 @@ class AnimatedButton(QPushButton):
         self.setStyleSheet(f"QPushButton {{ background:{bg}; border:1px solid {border}; border-radius:18px; padding:0 22px; font-weight:600; }}")
 
 
+
+class WindowButton(AnimatedButton):
+    """Frameless-window button with a painted glyph that is always visible."""
+
+    def __init__(self, kind: str, danger: bool = False) -> None:
+        super().__init__("", danger=danger)
+        self.kind = kind
+        self.setAccessibleName("Close" if kind == "close" else "Minimize")
+
+    def paintEvent(self, event):
+        super().paintEvent(event)
+        p = QPainter(self)
+        p.setRenderHint(QPainter.Antialiasing)
+        p.setPen(QPen(QColor("#F4F6FC"), 2.4, Qt.SolidLine, Qt.RoundCap, Qt.RoundJoin))
+        cx = self.width() / 2
+        cy = self.height() / 2
+        if self.kind == "close":
+            size = 7.0
+            p.drawLine(QPointF(cx - size, cy - size), QPointF(cx + size, cy + size))
+            p.drawLine(QPointF(cx + size, cy - size), QPointF(cx - size, cy + size))
+        else:
+            p.drawLine(QPointF(cx - 8.0, cy + 4.0), QPointF(cx + 8.0, cy + 4.0))
+
 class Background(QWidget):
     def __init__(self) -> None:
         super().__init__(); self.phase = 0.0; self.noise = [(random.randrange(WIDTH), random.randrange(HEIGHT), random.randrange(18, 42)) for _ in range(240)]
@@ -113,35 +136,44 @@ class Background(QWidget):
 
 class WaveProgress(QWidget):
     def __init__(self) -> None:
-        super().__init__(); self._value = 0.0; self.phase = 0.0; self.label = "Preparing..."; self.setMinimumHeight(210)
+        super().__init__(); self._value = 0.0; self.phase = 0.0; self.label = "Preparing..."; self.setMinimumHeight(170)
         self.timer = QTimer(self, interval=33, timeout=self._tick); self.timer.start()
     def setProgress(self, value: int, label: str) -> None:
-        self.label = label; self.anim = QPropertyAnimation(self, b"value", self, duration=220, easingCurve=QEasingCurve.OutCubic); self.anim.setStartValue(self._value); self.anim.setEndValue(float(value)); self.anim.start()
+        self.label = label; self.anim = QPropertyAnimation(self, b"value", self, duration=260, easingCurve=QEasingCurve.OutCubic); self.anim.setStartValue(self._value); self.anim.setEndValue(float(value)); self.anim.start(); self.update()
     def getValue(self): return self._value
     def setValue(self, v): self._value = v; self.update()
     value = Property(float, getValue, setValue)
     def _tick(self): self.phase += .045; self.update()
+    def _wave_fill(self, rect, top: float, bottom: float, offset: float) -> QPainterPath:
+        wave = QPainterPath(QPointF(rect.left(), top)); wave.lineTo(rect.left(), bottom)
+        x = rect.left(); amp = 8 + math.sin(self.phase + offset) * 2
+        wave.moveTo(rect.left(), bottom)
+        while x < rect.right():
+            wave.cubicTo(x+35, bottom+math.sin(self.phase+x*.018+offset)*amp, x+70, bottom-math.sin(self.phase+x*.018+offset)*amp, x+105, bottom)
+            x += 105
+        wave.lineTo(rect.right(), top); wave.lineTo(rect.left(), top); wave.closeSubpath()
+        return wave
     def paintEvent(self, _):
-        p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); r = self.rect().adjusted(16,16,-16,-16)
-        path = QPainterPath(); path.addRoundedRect(r, 28, 28); p.fillPath(path, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(path)
+        p = QPainter(self); p.setRenderHint(QPainter.Antialiasing)
+        r = self.rect().adjusted(16,16,-16,-58)
+        path = QPainterPath(); path.addRoundedRect(r, 24, 24); p.fillPath(path, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(path)
         split = r.top() + r.height() * (self._value/100.0)
-        for top, bottom, c1, c2, offset in [(r.top(), split-5, QColor(125,154,255,105), QColor(80,220,190,55),0), (split+5, r.bottom(), QColor(255,255,255,30), QColor(255,255,255,12),1.7)]:
+        segments = [
+            (r.top(), split, QColor(125,154,255,112), QColor(80,220,190,60), 0.0),
+            (split, r.bottom(), QColor(255,255,255,32), QColor(255,255,255,12), 0.0),
+        ]
+        for top, bottom, c1, c2, offset in segments:
             if bottom <= top: continue
-            wave = QPainterPath(QPointF(r.left(), top)); wave.lineTo(r.left(), bottom)
-            x = r.left(); amp = 8 + math.sin(self.phase+offset)*2
-            wave.moveTo(r.left(), bottom)
-            while x < r.right():
-                wave.cubicTo(x+35, bottom+math.sin(self.phase+x*.018+offset)*amp, x+70, bottom-math.sin(self.phase+x*.018+offset)*amp, x+105, bottom)
-                x += 105
-            wave.lineTo(r.right(), top); wave.lineTo(r.left(), top); wave.closeSubpath()
-            grad = QLinearGradient(r.topLeft(), r.bottomLeft()); grad.setColorAt(0,c1); grad.setColorAt(1,c2); p.fillPath(path.intersected(wave), grad)
-        p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 26, QFont.Bold)); p.drawText(r, Qt.AlignCenter, f"{int(self._value)}%")
-        p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(r.adjusted(0,88,0,0), Qt.AlignHCenter|Qt.AlignTop, self.label)
+            grad = QLinearGradient(r.topLeft(), r.bottomLeft()); grad.setColorAt(0,c1); grad.setColorAt(1,c2)
+            p.fillPath(path.intersected(self._wave_fill(r, top, bottom, offset)), grad)
+        p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 24, QFont.Bold)); p.drawText(r, Qt.AlignCenter, f"{int(self._value)}%")
+        label_rect = self.rect().adjusted(16, r.bottom()+12, -16, -8)
+        p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(label_rect, Qt.AlignHCenter|Qt.AlignTop|Qt.TextWordWrap, self.label)
 
 
 class Toast(QLabel):
     def __init__(self, parent):
-        super().__init__(parent); self.setAlignment(Qt.AlignCenter); self.setStyleSheet("background:rgba(125,154,255,54); border:1px solid rgba(165,185,255,125); border-radius:16px; padding:12px 18px;"); self.hide(); self.effect = QGraphicsOpacityEffect(self); self.setGraphicsEffect(self.effect)
+        super().__init__(parent); self.setAlignment(Qt.AlignCenter); self.setStyleSheet("background:rgba(125,154,255,72); border:none; border-radius:12px; padding:8px 14px;"); self.hide(); self.effect = QGraphicsOpacityEffect(self); self.setGraphicsEffect(self.effect)
     def show_message(self, text: str):
         self.setText(text); self.adjustSize(); self.move((self.parent().width()-self.width())//2, 58); self.show();
         self.fade = QPropertyAnimation(self.effect, b"opacity", self, duration=220); self.fade.setStartValue(0); self.fade.setEndValue(1)
@@ -154,7 +186,7 @@ class ScannerApp(QMainWindow):
         super().__init__(); self._hide_windows_console(); self.queue: queue.Queue[tuple[str, object]] = queue.Queue(); self.running=False; self.drag_pos=None; self.logs=[]
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.Window); self.resize(WIDTH, HEIGHT); self.setStyleSheet(STYLE)
         root = Background(); self.setCentralWidget(root); layout=QVBoxLayout(root); layout.setContentsMargins(28,18,28,24); layout.setSpacing(18)
-        title=QHBoxLayout(); title.addWidget(QLabel("SCAN", styleSheet="font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;")); title.addStretch(); self.min_btn=AnimatedButton("—"); self.close_btn=AnimatedButton("✕", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
+        title=QHBoxLayout(); title.addWidget(QLabel("SCAN", styleSheet="font-size:28px; font-weight:700; letter-spacing:2px; color:#F2F4FA;")); title.addStretch(); self.min_btn=WindowButton("minimize"); self.close_btn=WindowButton("close", danger=True); self.min_btn.setFixedSize(46,38); self.close_btn.setFixedSize(46,38); title.addWidget(self.min_btn); title.addWidget(self.close_btn); layout.addLayout(title)
         card=QFrame(); card.setObjectName("card"); card.setStyleSheet("#card{background:rgba(23,23,27,150); border:1px solid rgba(255,255,255,30); border-radius:28px;}"); shadow=QGraphicsDropShadowEffect(card, blurRadius=38, xOffset=0, yOffset=18, color=QColor(0,0,0,130)); card.setGraphicsEffect(shadow); form=QVBoxLayout(card); form.setContentsMargins(34,30,34,30); form.setSpacing(18)
         self.entries={};
         for key, ph in [("launcher","Launcher path"),("modpack","Modpack path"),("output","Output path")]:
@@ -175,9 +207,10 @@ class ScannerApp(QMainWindow):
     def _start_scan(self,test_mode: bool):
         if self.running: return
         req=ScanRequest(self.entries["launcher"].text().strip().strip('"'), self.entries["modpack"].text().strip().strip('"'), self.entries["output"].text().strip().strip('"'), self.graph.isChecked(), test_mode)
-        if not req.output_path: self._append_log("Output path is required."); self._show_logs(); return
+        if not req.output_path and not test_mode:
+            self._append_log("Output path is required."); self.toast.show_message("Output path is required"); return
         if test_mode: self.toast.show_message("Запущен тестовый режим. Документация лаунчера и сборки сохраняться не будет.")
-        if self.external.isChecked(): self._open_external_log_console(req.output_path)
+        if self.external.isChecked() and req.output_path: self._open_external_log_console(req.output_path)
         self.running=True; self.progress.show(); self.progress.setProgress(0,"Preparing..."); self.start.setEnabled(False); self.test.setEnabled(False)
         threading.Thread(target=self._run_worker,args=(req,),daemon=True).start()
     def _run_worker(self,req):
