@@ -13,11 +13,12 @@ from patcher.ui.animations.factory import AnimationFactory
 from patcher.ui.dialogs.log_viewer import LogViewer
 from patcher.ui.dialogs.tool_picker import ToolPicker
 from patcher.ui.widgets.cards import ModCard
+from patcher.analyzers.registry import AnalyzerRegistry
 
 class DropArea(QWidget):
     def __init__(self, on_file) -> None:
         super().__init__(); self.on_file = on_file; self.setAcceptDrops(True); self.setObjectName("Panel")
-        layout = QVBoxLayout(self); title = QLabel("Drop Minecraft .jar mod here"); title.setStyleSheet("font-size:28px;font-weight:800;")
+        layout = QVBoxLayout(self); layout.setContentsMargins(26, 24, 26, 24); title = QLabel("Drop Minecraft .jar mod here"); title.setStyleSheet("font-size:28px;font-weight:800;")
         subtitle = QLabel("or choose a JAR. PATCHER keeps the original archive untouched."); subtitle.setObjectName("Muted")
         choose = QPushButton("Choose JAR"); choose.setObjectName("Accent"); choose.clicked.connect(self._choose)
         layout.addStretch(); layout.addWidget(title, alignment=Qt.AlignmentFlag.AlignCenter); layout.addWidget(subtitle, alignment=Qt.AlignmentFlag.AlignCenter); layout.addWidget(choose, alignment=Qt.AlignmentFlag.AlignCenter); layout.addStretch()
@@ -31,12 +32,12 @@ class DropArea(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__(); self.setWindowFlags(Qt.WindowType.FramelessWindowHint); self.resize(LAYOUT.window_width, LAYOUT.window_height)
-        self.pipeline = PatchPipeline(JarScanner(), [MetadataAnalyzer()]); self.logs: list[str] = []
+        self.pipeline = PatchPipeline(JarScanner(), AnalyzerRegistry().create_all([MetadataAnalyzer()])); self.logs: list[str] = []
         root = QWidget(objectName="Root"); self.setCentralWidget(root); outer = QVBoxLayout(root)
         title = QHBoxLayout(); settings = QPushButton("⚙"); settings.clicked.connect(self._settings); title.addWidget(settings); title.addStretch(); minb = QPushButton("—"); close = QPushButton("×"); close.setObjectName("Danger"); minb.clicked.connect(self.showMinimized); close.clicked.connect(self.close); title.addWidget(minb); title.addWidget(close); outer.addLayout(title)
-        body = QHBoxLayout(); self.drop = DropArea(self.add_jar); body.addWidget(self.drop, 65)
+        body = QHBoxLayout(); body.setSpacing(18); self.drop = DropArea(self.add_jar); body.addWidget(self.drop, 62)
         right = QVBoxLayout(); self.list_widget = QWidget(); self.cards = QVBoxLayout(self.list_widget); self.cards.addStretch()
-        scroll = QScrollArea(); scroll.setWidgetResizable(True); scroll.setWidget(self.list_widget); right.addWidget(scroll)
+        scroll = QScrollArea(); scroll.setWidgetResizable(True); scroll.setWidget(self.list_widget); scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded); right.addWidget(scroll)
         buttons = QHBoxLayout(); logs = QPushButton("Просмотр логов"); errors = QPushButton("Просмотр ошибок"); logs.clicked.connect(lambda: self._viewer("Logs", "\n".join(self.logs))); errors.clicked.connect(lambda: self._viewer("Errors", "\n".join(l for l in self.logs if "ERROR" in l or "WARNING" in l))); buttons.addWidget(logs); buttons.addWidget(errors); right.addLayout(buttons); body.addLayout(right, 35); outer.addLayout(body)
         self._drag_pos = None
     def mousePressEvent(self, event):
@@ -54,4 +55,4 @@ class MainWindow(QMainWindow):
         dest, _ = QFileDialog.getSaveFileName(self, "Save patched JAR", str(source.with_name(source.stem + "-patched.jar")), "Minecraft mods (*.jar)")
         if dest: self.pipeline.save_patched_copy(source, Path(dest))
     def _viewer(self, title: str, text: str) -> None: LogViewer(title, text or "No entries yet.").exec()
-    def _settings(self) -> None: ToolPicker(ToolLocator().discover()).exec()
+    def _settings(self) -> None: ToolPicker(ToolLocator().discover(), "Settings", show_java=True).exec()

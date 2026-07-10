@@ -40,7 +40,7 @@ sys.excepthook = _explain_startup_error
 
 from PySide6.QtWidgets import QApplication
 
-from patcher.external.tools import ExternalTool
+from patcher.external.tools import LauncherLocator
 from patcher.logs.logger import configure_logging
 from patcher.styles.theme import app_stylesheet
 from patcher.ui.dialogs.tool_picker import ToolPicker
@@ -52,15 +52,13 @@ def main() -> int:
     app = QApplication(sys.argv)
     app.setStyleSheet(app_stylesheet())
 
+    launchers = LauncherLocator().discover()
+    picker = ToolPicker(launchers, "Select launcher context")
+    if picker.exec() != 1:
+        return 0
+
     window = MainWindow()
     window.show()
-
-    launchers = [
-        ExternalTool("Prism Launcher", None, "◈"),
-        ExternalTool("Minecraft Launcher", None, "▣"),
-        ExternalTool("Offline / no launcher", None, "◇"),
-    ]
-    ToolPicker(launchers, "Select launcher context").exec()
     return app.exec()
 
 
