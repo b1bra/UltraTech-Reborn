@@ -151,13 +151,13 @@ class WaveProgress(QWidget):
         y = rect.top()
         while y < rect.bottom():
             wave.cubicTo(
-                x_pos + math.sin(self.phase + y * .035) * amp, y + 18,
-                x_pos - math.sin(self.phase + y * .035) * amp, y + 36,
+                x_pos - math.sin(self.phase + y * .035) * amp, y + 18,
+                x_pos + math.sin(self.phase + y * .035) * amp, y + 36,
                 x_pos, y + 54,
             )
             y += 54
-        wave.lineTo(min(rect.right(), x_pos + 14), rect.bottom())
-        wave.lineTo(min(rect.right(), x_pos + 14), rect.top())
+        wave.lineTo(max(rect.left(), x_pos - 14), rect.bottom())
+        wave.lineTo(max(rect.left(), x_pos - 14), rect.top())
         wave.closeSubpath()
         return wave
     def paintEvent(self, _):
