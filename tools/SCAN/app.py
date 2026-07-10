@@ -10,7 +10,7 @@ import sys
 import threading
 from pathlib import Path
 
-from PySide6.QtCore import QEasingCurve, QPoint, QPointF, QParallelAnimationGroup, QPropertyAnimation, Qt, QTimer, Property
+from PySide6.QtCore import QEasingCurve, QPoint, QPointF, QRectF, QParallelAnimationGroup, QPropertyAnimation, Qt, QTimer, Property
 from PySide6.QtGui import QColor, QFont, QLinearGradient, QPainter, QPainterPath, QPen, QRadialGradient
 from PySide6.QtWidgets import (
     QApplication,
@@ -144,32 +144,42 @@ class WaveProgress(QWidget):
     def setValue(self, v): self._value = v; self.update()
     value = Property(float, getValue, setValue)
     def _tick(self): self.phase += .045; self.update()
-    def _wave_fill(self, rect, top: float, bottom: float, offset: float) -> QPainterPath:
-        wave = QPainterPath(QPointF(rect.left(), top)); wave.lineTo(rect.left(), bottom)
-        x = rect.left(); amp = 8 + math.sin(self.phase + offset) * 2
-        wave.moveTo(rect.left(), bottom)
-        while x < rect.right():
-            wave.cubicTo(x+35, bottom+math.sin(self.phase+x*.018+offset)*amp, x+70, bottom-math.sin(self.phase+x*.018+offset)*amp, x+105, bottom)
-            x += 105
-        wave.lineTo(rect.right(), top); wave.lineTo(rect.left(), top); wave.closeSubpath()
+    def _frontier_wave(self, rect, x_pos: float) -> QPainterPath:
+        """Return a narrow vertical wave at the loaded/remaining boundary."""
+        amp = 7 + math.sin(self.phase) * 1.6
+        wave = QPainterPath(QPointF(x_pos, rect.top()))
+        y = rect.top()
+        while y < rect.bottom():
+            wave.cubicTo(
+                x_pos + math.sin(self.phase + y * .035) * amp, y + 18,
+                x_pos - math.sin(self.phase + y * .035) * amp, y + 36,
+                x_pos, y + 54,
+            )
+            y += 54
+        wave.lineTo(min(rect.right(), x_pos + 14), rect.bottom())
+        wave.lineTo(min(rect.right(), x_pos + 14), rect.top())
+        wave.closeSubpath()
         return wave
     def paintEvent(self, _):
         p = QPainter(self); p.setRenderHint(QPainter.Antialiasing)
         r = self.rect().adjusted(16,16,-16,-58)
-        path = QPainterPath(); path.addRoundedRect(r, 24, 24); p.fillPath(path, QColor(255,255,255,16)); p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(path)
-        # Fill from the bottom and clip the animated wave inside the rounded bar.
-        # The old top-growing split could place the cyan segment under the idle
-        # segment around the middle of the animation on some Qt paint engines.
-        fill_top = r.bottom() - r.height() * (self._value/100.0)
+        path = QPainterPath(); path.addRoundedRect(r, 24, 24)
+        # Rendering order is fixed: background, filled region, animated frontier wave, border.
+        p.fillPath(path, QColor(255,255,255,16))
+        progress_x = r.left() + r.width() * (max(0.0, min(100.0, self._value)) / 100.0)
         p.save()
         p.setClipPath(path)
-        idle = QPainterPath(); idle.addRoundedRect(r, 24, 24)
-        p.fillPath(idle, QColor(255,255,255,24))
-        if fill_top < r.bottom():
-            fill_rect = r.adjusted(0, fill_top - r.top(), 0, 0)
-            grad = QLinearGradient(fill_rect.topLeft(), fill_rect.bottomLeft()); grad.setColorAt(0,QColor(125,154,255,132)); grad.setColorAt(1,QColor(80,220,220,96))
-            p.fillPath(self._wave_fill(r, fill_top, r.bottom(), 0.0), grad)
+        if progress_x > r.left():
+            fill_rect = QRectF(r.left(), r.top(), progress_x - r.left(), r.height())
+            fill = QPainterPath(); fill.addRect(fill_rect)
+            grad = QLinearGradient(fill_rect.topLeft(), fill_rect.topRight()); grad.setColorAt(0,QColor(90,120,255,145)); grad.setColorAt(1,QColor(80,220,220,112))
+            p.fillPath(fill, grad)
+        wave_x = min(max(progress_x, r.left() + 2), r.right() - 14)
+        wave_grad = QLinearGradient(QPointF(wave_x - 10, r.top()), QPointF(wave_x + 18, r.top()))
+        wave_grad.setColorAt(0, QColor(80,220,220,20)); wave_grad.setColorAt(.48, QColor(100,245,255,220)); wave_grad.setColorAt(1, QColor(255,255,255,25))
+        p.fillPath(self._frontier_wave(r, wave_x), wave_grad)
         p.restore()
+        p.setPen(QPen(QColor(255,255,255,40),1)); p.drawPath(path)
         p.setPen(QColor("#F0F2F8")); p.setFont(QFont("Segoe UI", 24, QFont.Bold)); p.drawText(r, Qt.AlignCenter, f"{int(self._value)}%")
         label_rect = self.rect().adjusted(16, r.bottom()+12, -16, -8)
         p.setPen(QColor("#B9BDC9")); p.setFont(QFont("Segoe UI", 11)); p.drawText(label_rect, Qt.AlignHCenter|Qt.AlignTop|Qt.TextWordWrap, self.label)

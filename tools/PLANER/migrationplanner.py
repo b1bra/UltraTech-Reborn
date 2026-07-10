@@ -8,6 +8,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+COLORS={"Libraries":"#7D9AFF","API":"#55D6BE","Technology":"#FFB86C","Magic":"#C792EA","Content":"#8BE9FD","Integrations":"#FF79C6"}
+
 STAGE_RULES = [
     ("Libraries", ("lib", "core", "baubles", "codechicken", "cofh", "brandon", "mantle")),
     ("API", ("api", "jei", "waila")),
@@ -33,11 +35,24 @@ def create_migration_plan(output_dir: Path, logger: Any | None = None) -> dict[s
     for edge in hidden.get("edges", []):
         edges.append({"from": edge.get("from", ""), "to": edge.get("to", ""), "type": ",".join(edge.get("categories", [])), "confidence": edge.get("confidence", 0)})
     edges = _dedupe_edges(edges)
+    stages = _build_stages(mods)
+    roadmap = _snake_roadmap(stages)
     plan = {
-        "format": "ultratech-migration-plan-v1",
-        "stages": _build_stages(mods),
-        "nodes": nodes,
-        "edges": edges,
+        "format": "ultratech-migration-roadmap-v1",
+        "purpose": "migration_order",
+        "stages": stages,
+        "migration_order": [node["id"] for node in roadmap["nodes"]],
+        "nodes": roadmap["nodes"],
+        "edges": roadmap["edges"],
+        "dependency_edges": edges,
+        "groups": roadmap["groups"],
+        "colors": {"background":"#D7D9DE","grid":"#C4C8D0","selection":"#7D9AFF"},
+        "status": {},
+        "category": {"layout":"snake-roadmap","stages":[s["name"] for s in stages]},
+        "position": {"layout":"snake","columns":3,"compact":True,"allow_manual_overlap":False},
+        "animation": {"zoom_ms":180,"pan_inertia":True,"node_hover_ms":160,"path_flow_ms":1200},
+        "collapsed": {"default":False,"groups":{}},
+        "viewport": {"x":0,"y":0,"zoom":1.0,"min_zoom":0.2,"max_zoom":3.5},
         "cycles": _find_cycles(nodes, edges),
         "dead_dependencies": [e for e in edges if e["to"].lower() not in node_set and e.get("confidence", 0) >= 80],
         "missing_dependencies": [e for e in edges if e["to"].lower() not in node_set and e.get("type") == "declared"],
@@ -47,7 +62,7 @@ def create_migration_plan(output_dir: Path, logger: Any | None = None) -> dict[s
         "longest_dependency_chain": _longest_chain(nodes, edges),
         "parallel_migration_groups": [],
     }
-    plan["parallel_migration_groups"] = _parallel_groups(plan["stages"], edges)
+    plan["parallel_migration_groups"] = _parallel_groups(stages, edges)
     out_dir = output_dir / "PLANER"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / "migration_plan.json"
@@ -66,6 +81,23 @@ def _build_stages(mods: list[dict[str, Any]]) -> list[dict[str, Any]]:
             if any(n in hay for n in needles): buckets[stage].append(node); break
         else: buckets["Content"].append(node)
     return [{"index": i, "name": name, "mods": sorted(set(items))} for i, (name, _) in enumerate(STAGE_RULES, 1) for items in [buckets[name]]]
+
+def _snake_roadmap(stages: list[dict[str, Any]]) -> dict[str, Any]:
+    """Build one continuous non-overlapping snake path for migration order."""
+    ordered=[]
+    for stage in stages:
+        for mod in stage.get("mods", []):
+            ordered.append((mod, stage["name"]))
+    cols=3; x_gap=270; y_gap=118; start_x=80; start_y=70; nodes=[]; edges=[]
+    groups=[{"id":f"stage-{i+1}","title":stage["name"],"collapsed":False,"color":COLORS.get(stage["name"],"#AAAAAA")} for i, stage in enumerate(stages)]
+    for index, (mod, stage) in enumerate(ordered):
+        row=index//cols; col=index%cols
+        if row % 2 == 1: col=cols-1-col
+        group_id=f"stage-{next((i for i,s in enumerate(stages,1) if s['name']==stage), 1)}"
+        nodes.append({"id":mod,"label":mod,"group":group_id,"status":"queued","category":stage,"position":{"x":start_x+col*x_gap,"y":start_y+row*y_gap},"size":{"w":220,"h":76},"colors":{"fill":"#20242C","accent":COLORS.get(stage,"#AAAAAA"),"text":"#F3F5FA"},"animation":{"hover_ms":160,"select_ms":180,"move_ms":120},"collapsed":False})
+    for a,b in zip(nodes,nodes[1:]):
+        edges.append({"from":a["id"],"to":b["id"],"status":"migration_next","confidence":100,"color":"#7D9AFF","animation":{"flow":True,"duration_ms":1200}})
+    return {"nodes":nodes,"edges":edges,"groups":groups}
 
 def _dedupe_edges(edges):
     data = {}
