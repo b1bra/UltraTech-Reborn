@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-import sys
-import traceback
+import sys, traceback
 from pathlib import Path
-
 
 def _bootstrap_package_path() -> None:
     package_root = Path(__file__).resolve().parents[1]
@@ -17,8 +15,7 @@ def _explain_startup_error(exc_type, exc_value, exc_traceback) -> None:
     traceback.print_exception(exc_type, exc_value, exc_traceback)
 
 
-_bootstrap_package_path()
-sys.excepthook = _explain_startup_error
+_bootstrap_package_path(); sys.excepthook = _explain_startup_error
 
 from PySide6.QtWidgets import QApplication
 from patcher.core.config.manager import ConfigManager
