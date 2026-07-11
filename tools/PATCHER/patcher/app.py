@@ -6,60 +6,66 @@ from pathlib import Path
 
 
 def _bootstrap_package_path() -> None:
-    """Allow launching this file directly, not only via `python -m patcher.app`."""
     package_root = Path(__file__).resolve().parents[1]
     package_root_text = str(package_root)
     if package_root_text not in sys.path:
         sys.path.insert(0, package_root_text)
 
 
-def _pause_after_error() -> None:
-    if sys.stdin is not None and sys.stdin.isatty():
-        try:
-            input("\nPress Enter to close PATCHER...")
-        except EOFError:
-            pass
-
-
 def _explain_startup_error(exc_type, exc_value, exc_traceback) -> None:
     print("PATCHER failed to start.", file=sys.stderr)
-    print(file=sys.stderr)
-    print("Install dependencies first:", file=sys.stderr)
-    print("  pip install -r tools/PATCHER/requirements.txt", file=sys.stderr)
-    print(file=sys.stderr)
-    print("If you are on Linux and see libGL/Qt errors, install the Qt runtime libraries", file=sys.stderr)
-    print("for your distribution, for example: sudo apt install libgl1 libegl1", file=sys.stderr)
-    print(file=sys.stderr)
-    print("Technical details:", file=sys.stderr)
     traceback.print_exception(exc_type, exc_value, exc_traceback)
-    _pause_after_error()
 
 
 _bootstrap_package_path()
 sys.excepthook = _explain_startup_error
 
 from PySide6.QtWidgets import QApplication
-
-from patcher.external.tools import LauncherLocator
-from patcher.logs.logger import configure_logging
-from patcher.styles.theme import app_stylesheet
-from patcher.ui.dialogs.tool_picker import ToolPicker
+from patcher.core.config.manager import ConfigManager
+from patcher.core.event_bus import EventBus, MessageBus
+from patcher.core.logger.logger import LoggerManager
+from patcher.core.registry.services import ServiceRegistry
+from patcher.core.resources.manager import ResourceManager
+from patcher.core.scheduler.tasks import TaskScheduler
+from patcher.core.services.environment import EnvironmentDetector
 from patcher.ui.main_window import MainWindow
+from patcher.ui.styles.theme_manager import ThemeManager
+from patcher.ui.windows.launcher_dialog import LauncherDialog
 
 
 def main() -> int:
-    configure_logging()
     app = QApplication(sys.argv)
-    app.setStyleSheet(app_stylesheet())
+    app.setStyleSheet(ThemeManager().stylesheet())
 
-    launchers = LauncherLocator().discover()
-    picker = ToolPicker(launchers, "Select launcher context")
-    if picker.exec() != 1:
-        return 0
+    data_dir = Path.home() / ".ultratech-patcher"
+    services = ServiceRegistry()
+    scheduler = TaskScheduler()
+    config = ConfigManager(data_dir / "config.json")
+    environment = EnvironmentDetector()
+    java = environment.detect_java()
+    minecraft = environment.detect_minecraft()
 
-    window = MainWindow()
+    services.register("Logger", LoggerManager(data_dir / "logs"))
+    services.register("ThemeManager", ThemeManager())
+    services.register("ConfigManager", config)
+    services.register("ResourceManager", ResourceManager(Path(__file__).resolve().parents[1] / "resources"))
+    services.register("TaskScheduler", scheduler)
+    services.register("EventBus", EventBus())
+    services.register("MessageBus", MessageBus())
+    services.register("JavaRuntime", java)
+    services.register("Minecraft", minecraft)
+
+    if not config.config.selected_launcher:
+        dialog = LauncherDialog(config)
+        if dialog.exec() != 1:
+            return 0
+
+    window = MainWindow(config, scheduler, java, minecraft)
     window.show()
-    return app.exec()
+    try:
+        return app.exec()
+    finally:
+        scheduler.shutdown()
 
 
 if __name__ == "__main__":
