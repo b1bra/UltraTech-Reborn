@@ -11,7 +11,9 @@ version: Unknown
 author: Unknown
 size_mb: 0.55
 forge: FMLCorePlugin: com.gamerforea.mpp.coremod.CoreMod
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: CraftTweaker
+dependencies[2]: Forge
 files: 375
 class_files: 372
 packages: 30
@@ -103,6 +105,37 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/mpp_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: CraftTweaker
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: com/gamerforea/mpp/common/recipe/StaticRecipeCache$KeySet.class
+dependency_records[1].evidence[0]: minetweaker
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: CoreMod
+dependency_records[2].categories[1]: Hidden
+dependency_records[2].confidence: 92
+dependency_records[2].sources[0]: com/gamerforea/mpp/common/PerformancePrimitivesMod.class
+dependency_records[2].sources[1]: com/gamerforea/mpp/common/recipe/StaticRecipeCache$KeySet.class
+dependency_records[2].sources[2]: com/gamerforea/mpp/common/util/GuiAccessors.class
+dependency_records[2].sources[3]: com/gamerforea/mpp/common/util/NBTHeapOutputStream.class
+dependency_records[2].sources[4]: com/gamerforea/mpp/common/util/NBTOutputStream$Writer.class
+dependency_records[2].sources[5]: com/gamerforea/mpp/common/util/NBTOutputStream.class
+dependency_records[2].sources[6]: com/gamerforea/mpp/common/util/NeighborBlockCache.class
+dependency_records[2].sources[7]: com/gamerforea/mpp/common/util/NeighborNullableTileEntityCache.class
+dependency_records[2].sources[8]: com/gamerforea/mpp/common/util/NeighborTileEntityCache.class
+dependency_records[2].sources[9]: com/gamerforea/mpp/common/util/SingleChunkCache.class
+dependency_records[2].sources[10]: com/gamerforea/mpp/common/util/TileCache$InternalEventHandler.class
+dependency_records[2].sources[11]: com/gamerforea/mpp/common/util/WorldUtils.class
+dependency_records[2].sources[12]: com/gamerforea/mpp/coremod/CoreMod.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
+dependency_records[2].evidence[1]: net/minecraftforge/
+dependency_records[2].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

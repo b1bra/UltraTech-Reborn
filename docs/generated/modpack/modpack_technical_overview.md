@@ -114,81 +114,442 @@ CodeChickenLib-1.7.10-1.1.3.141.jar | modid=CodeChickenLib-1.7.10-1.1.3.141 | ve
 ## Dependency Edges
 
 ```text
-airdrops -> No dependencies detected
-AnvilRepairFix-master-45d157ba -> No dependencies detected
-appliedenergistics2 -> No dependencies detected
+airdrops -> AccessTransformer
+airdrops -> airdrops
+airdrops -> CraftTweaker
+airdrops -> Forge
+airdrops -> LaunchWrapper
+AnvilRepairFix-master-45d157ba -> Forge
+appliedenergistics2 -> AccessTransformer
+appliedenergistics2 -> AE2 API
+appliedenergistics2 -> appliedenergistics2
+appliedenergistics2 -> ASM
+appliedenergistics2 -> BuildCraft
+appliedenergistics2 -> CodeChickenLib
+appliedenergistics2 -> Forge
+appliedenergistics2 -> IC2 API
+appliedenergistics2 -> LaunchWrapper
+appliedenergistics2 -> luminous
+appliedenergistics2 -> OpenComputers
+appliedenergistics2 -> Thaumcraft
+appliedenergistics2 -> Thermal Foundation
+appliedenergistics2 -> WAILA
 ArmorStatusHUD -> bspkrsCore@[6.15,)
-asielib -> No dependencies detected
-Avaritia -> No dependencies detected
-AvaritiaNEI-1.7.10-1.3.2 -> No dependencies detected
-bdlib-1.9.4.109-mc1.7.10 -> No dependencies detected
-beebetteratbees -> No dependencies detected
-BetterQuesting-master-b2071223 -> No dependencies detected
-BetterSigns -> No dependencies detected
+ArmorStatusHUD -> armorstatushud
+ArmorStatusHUD -> Forge
+asielib -> AE2 API
+asielib -> asielib
+asielib -> ASM
+asielib -> BuildCraft
+asielib -> EnderIO
+asielib -> Forge
+asielib -> IC2 API
+asielib -> LaunchWrapper
+asielib -> OpenComputers
+asielib -> Thermal Foundation
+Avaritia -> AE2 API
+Avaritia -> avaritia
+Avaritia -> Botania
+Avaritia -> CodeChickenLib
+Avaritia -> CraftTweaker
+Avaritia -> EnderIO
+Avaritia -> Forestry
+Avaritia -> Forge
+Avaritia -> LaunchWrapper
+Avaritia -> TConstruct
+Avaritia -> Thaumcraft
+AvaritiaNEI-1.7.10-1.3.2 -> Forge
+bdlib-1.9.4.109-mc1.7.10 -> bdlib
+bdlib-1.9.4.109-mc1.7.10 -> Forestry
+bdlib-1.9.4.109-mc1.7.10 -> Forge
+beebetteratbees -> AccessTransformer
+beebetteratbees -> beebetteratbees
+beebetteratbees -> CodeChickenLib
+beebetteratbees -> Forestry
+beebetteratbees -> Forge
+BetterQuesting-master-b2071223 -> betterquesting
+BetterQuesting-master-b2071223 -> CoFHCore
+BetterQuesting-master-b2071223 -> Forge
+BetterQuesting-master-b2071223 -> LaunchWrapper
+BetterSigns -> bettersigns
+BetterSigns -> Forge
 BinnieCore -> Forestry
 BinnieCore -> BinnieCore
-BrandonsCore-1.0.0.12 -> No dependencies detected
-CodeChickenCore-1.7.10-1.0.7.47 -> No dependencies detected
-CoFHCore-[1.7.10]3.1.4-329 -> No dependencies detected
-ContainerWarden-master-a38f002f -> No dependencies detected
-MineTweaker3 -> No dependencies detected
-CreativeCore-master-74e33014 -> No dependencies detected
-decorativeapi -> No dependencies detected
-divinerpg -> No dependencies detected
-Draconic-Evolution-1.7.10-1.0.2h -> No dependencies detected
-EnderCore-1.7.10-0.2.0.39_beta -> No dependencies detected
-EnderIO-1.7.10-2.3.0.429_beta -> No dependencies detected
-EventHelper-master-de330be3 -> No dependencies detected
+BinnieCore -> Botania
+BinnieCore -> botany
+BinnieCore -> BuildCraft
+BinnieCore -> extrabees
+BinnieCore -> extratrees
+BinnieCore -> Forge
+BinnieCore -> genetics
+BinnieCore -> IC2 API
+BinnieCore -> Thermal Foundation
+BrandonsCore-1.0.0.12 -> Botania
+BrandonsCore-1.0.0.12 -> brandonscore
+BrandonsCore-1.0.0.12 -> CraftTweaker
+BrandonsCore-1.0.0.12 -> Forge
+BrandonsCore-1.0.0.12 -> LaunchWrapper
+BrandonsCore-1.0.0.12 -> Thermal Foundation
+CodeChickenCore-1.7.10-1.0.7.47 -> ASM
+CodeChickenCore-1.7.10-1.0.7.47 -> codechickencore
+CodeChickenCore-1.7.10-1.0.7.47 -> CodeChickenLib
+CodeChickenCore-1.7.10-1.0.7.47 -> Forge
+CodeChickenCore-1.7.10-1.0.7.47 -> LaunchWrapper
+CoFHCore-[1.7.10]3.1.4-329 -> AccessTransformer
+CoFHCore-[1.7.10]3.1.4-329 -> ASM
+CoFHCore-[1.7.10]3.1.4-329 -> CodeChickenLib
+CoFHCore-[1.7.10]3.1.4-329 -> cofh
+CoFHCore-[1.7.10]3.1.4-329 -> CoFHCore
+CoFHCore-[1.7.10]3.1.4-329 -> Forge
+CoFHCore-[1.7.10]3.1.4-329 -> LaunchWrapper
+CoFHCore-[1.7.10]3.1.4-329 -> TConstruct
+CoFHCore-[1.7.10]3.1.4-329 -> Thaumcraft
+CoFHCore-[1.7.10]3.1.4-329 -> Thermal Foundation
+ContainerWarden-master-a38f002f -> Forge
+MineTweaker3 -> AE2 API
+MineTweaker3 -> ASM
+MineTweaker3 -> CraftTweaker
+MineTweaker3 -> Forge
+MineTweaker3 -> IC2 API
+MineTweaker3 -> JEI
+MineTweaker3 -> LaunchWrapper
+MineTweaker3 -> minetweaker
+CreativeCore-master-74e33014 -> creativecore
+CreativeCore-master-74e33014 -> Forge
+decorativeapi -> AccessTransformer
+decorativeapi -> decorativeapi
+decorativeapi -> Forge
+divinerpg -> divinerpg
+divinerpg -> Forge
+Draconic-Evolution-1.7.10-1.0.2h -> AE2 API
+Draconic-Evolution-1.7.10-1.0.2h -> CraftTweaker
+Draconic-Evolution-1.7.10-1.0.2h -> draconicevolution
+Draconic-Evolution-1.7.10-1.0.2h -> Forge
+Draconic-Evolution-1.7.10-1.0.2h -> LaunchWrapper
+Draconic-Evolution-1.7.10-1.0.2h -> OpenComputers
+Draconic-Evolution-1.7.10-1.0.2h -> Thaumcraft
+Draconic-Evolution-1.7.10-1.0.2h -> Thermal Foundation
+EnderCore-1.7.10-0.2.0.39_beta -> BuildCraft
+EnderCore-1.7.10-0.2.0.39_beta -> endercore
+EnderCore-1.7.10-0.2.0.39_beta -> EnderIO
+EnderCore-1.7.10-0.2.0.39_beta -> Forge
+EnderCore-1.7.10-0.2.0.39_beta -> Thermal Foundation
+EnderIO-1.7.10-2.3.0.429_beta -> AE2 API
+EnderIO-1.7.10-2.3.0.429_beta -> Baubles
+EnderIO-1.7.10-2.3.0.429_beta -> Botania
+EnderIO-1.7.10-2.3.0.429_beta -> BuildCraft
+EnderIO-1.7.10-2.3.0.429_beta -> CodeChickenLib
+EnderIO-1.7.10-2.3.0.429_beta -> ComputerCraft
+EnderIO-1.7.10-2.3.0.429_beta -> enderio
+EnderIO-1.7.10-2.3.0.429_beta -> Forestry
+EnderIO-1.7.10-2.3.0.429_beta -> Forge
+EnderIO-1.7.10-2.3.0.429_beta -> OpenComputers
+EnderIO-1.7.10-2.3.0.429_beta -> TConstruct
+EnderIO-1.7.10-2.3.0.429_beta -> Thaumcraft
+EnderIO-1.7.10-2.3.0.429_beta -> Thermal Foundation
+EnderIO-1.7.10-2.3.0.429_beta -> WAILA
+EventHelper-master-de330be3 -> Forge
+EventHelper-master-de330be3 -> LaunchWrapper
 ExtraTiC -> TConstruct
-ExtraUtilities -> No dependencies detected
-FastInventories-master-bedd4cde -> No dependencies detected
-FlatBedrockx -> No dependencies detected
+ExtraTiC -> AE2 API
+ExtraTiC -> Botania
+ExtraTiC -> extratic
+ExtraTiC -> Forge
+ExtraTiC -> Thaumcraft
+ExtraTiC -> tinker
+ExtraUtilities -> AE2 API
+ExtraUtilities -> ASM
+ExtraUtilities -> Baubles
+ExtraUtilities -> BuildCraft
+ExtraUtilities -> CodeChickenLib
+ExtraUtilities -> EnderIO
+ExtraUtilities -> extrautils
+ExtraUtilities -> Forestry
+ExtraUtilities -> Forge
+ExtraUtilities -> IC2 API
+ExtraUtilities -> LaunchWrapper
+ExtraUtilities -> TConstruct
+ExtraUtilities -> Thaumcraft
+ExtraUtilities -> Thermal Foundation
+FastInventories-master-bedd4cde -> Forge
+FlatBedrockx -> Forge
 Forestry -> mod_MinecraftForge
-GalacticraftMars -> No dependencies detected
-GalacticraftCore -> No dependencies detected
-GalaxySpace-1.7.10-1.2.15 -> No dependencies detected
-GeckoLib-1.7.10-4.3.1-shadow -> No dependencies detected
-gendustry-1.6.4.135-mc1.7.10 -> No dependencies detected
-GraviSuite -> No dependencies detected
+Forestry -> BuildCraft
+Forestry -> CodeChickenLib
+Forestry -> Forestry
+Forestry -> Forge
+Forestry -> IC2 API
+Forestry -> Thermal Foundation
+GalacticraftMars -> CodeChickenLib
+GalacticraftMars -> Forge
+GalacticraftMars -> galacticraftasteroids
+GalacticraftMars -> galacticraftmars
+GalacticraftCore -> AE2 API
+GalacticraftCore -> BuildCraft
+GalacticraftCore -> CodeChickenLib
+GalacticraftCore -> CoFHCore
+GalacticraftCore -> EnderIO
+GalacticraftCore -> Forge
+GalacticraftCore -> galacticraftcore
+GalacticraftCore -> galacticraftmoon
+GalacticraftCore -> IC2 API
+GalacticraftCore -> LaunchWrapper
+GalacticraftCore -> TConstruct
+GalacticraftCore -> Thaumcraft
+GalacticraftCore -> Thermal Foundation
+GalaxySpace-1.7.10-1.2.15 -> AccessTransformer
+GalaxySpace-1.7.10-1.2.15 -> CodeChickenLib
+GalaxySpace-1.7.10-1.2.15 -> CraftTweaker
+GalaxySpace-1.7.10-1.2.15 -> Forge
+GalaxySpace-1.7.10-1.2.15 -> galaxyspace
+GalaxySpace-1.7.10-1.2.15 -> IC2 API
+GalaxySpace-1.7.10-1.2.15 -> LaunchWrapper
+GalaxySpace-1.7.10-1.2.15 -> Thaumcraft
+GalaxySpace-1.7.10-1.2.15 -> Thermal Foundation
+GeckoLib-1.7.10-4.3.1-shadow -> AccessTransformer
+GeckoLib-1.7.10-4.3.1-shadow -> Forge
+gendustry-1.6.4.135-mc1.7.10 -> BuildCraft
+gendustry-1.6.4.135-mc1.7.10 -> CodeChickenLib
+gendustry-1.6.4.135-mc1.7.10 -> CoFHCore
+gendustry-1.6.4.135-mc1.7.10 -> Forestry
+gendustry-1.6.4.135-mc1.7.10 -> Forge
+gendustry-1.6.4.135-mc1.7.10 -> gendustry
+gendustry-1.6.4.135-mc1.7.10 -> IC2 API
+gendustry-1.6.4.135-mc1.7.10 -> TConstruct
+gendustry-1.6.4.135-mc1.7.10 -> Thermal Foundation
+gendustry-1.6.4.135-mc1.7.10 -> WAILA
+GraviSuite -> BuildCraft
+GraviSuite -> Forge
+GraviSuite -> gravisuite
+GraviSuite -> IC2 API
 IC2NuclearControl -> IC2
-IC2Tweaker-1.7.10-1.0.2 -> No dependencies detected
-IC2 -> No dependencies detected
-inventorytweaks -> No dependencies detected
-InvTweaksHelper-master-f6d868a4 -> No dependencies detected
-itemphysic -> No dependencies detected
+IC2NuclearControl -> AE2 API
+IC2NuclearControl -> BuildCraft
+IC2NuclearControl -> Forge
+IC2NuclearControl -> IC2 API
+IC2NuclearControl -> nuclearcontrol
+IC2NuclearControl -> OpenComputers
+IC2NuclearControl -> Thermal Foundation
+IC2NuclearControl -> WAILA
+IC2Tweaker-1.7.10-1.0.2 -> CraftTweaker
+IC2Tweaker-1.7.10-1.0.2 -> Forge
+IC2Tweaker-1.7.10-1.0.2 -> LaunchWrapper
+IC2 -> AccessTransformer
+IC2 -> AE2 API
+IC2 -> CodeChickenLib
+IC2 -> CraftTweaker
+IC2 -> Forge
+IC2 -> ic2
+IC2 -> IC2 API
+IC2 -> LaunchWrapper
+IC2 -> luminous
+inventorytweaks -> AccessTransformer
+inventorytweaks -> Forge
+inventorytweaks -> inventorytweaks
+InvTweaksHelper-master-f6d868a4 -> Forge
+itemphysic -> Forge
 journeymap -> Forge@[10.13.4.1558,)
-jmr -> No dependencies detected
-LanguagePatcher-master-185f579f -> No dependencies detected
-LoliAE2-1.7.10-client -> No dependencies detected
-LoliDecorative-master-bf409f4c -> No dependencies detected
-lolidimensions -> No dependencies detected
-LoliDragonMight-1.7.10-client -> No dependencies detected
-lolidungeons -> No dependencies detected
-lolienergistics -> No dependencies detected
-LoliEnergyRelics-1.7.10-client -> No dependencies detected
-LoliForestry-1.7.10-client -> No dependencies detected
-LoliHooks-master-aa342203 -> No dependencies detected
-examplemod -> No dependencies detected
-LoliUtility-1.7.10-client -> No dependencies detected
-LoliWeCUI-master-7296045c -> No dependencies detected
-luminous -> No dependencies detected
-lwsl -> No dependencies detected
-Mantle-1.7.10-0.3.2b -> No dependencies detected
-mo -> No dependencies detected
-MCTags-master-72ca4ae0 -> No dependencies detected
-MicdoodleCore-1.7-3.0.12.504 -> No dependencies detected
-MineChem-1.7.10 -> No dependencies detected
-MinecraftPerformancePrimitives-master-fd72b14e -> No dependencies detected
+journeymap -> AE2 API
+journeymap -> Forge
+journeymap -> journeymap
+journeymap -> Thaumcraft
+jmr -> Forge
+LanguagePatcher-master-185f579f -> AccessTransformer
+LanguagePatcher-master-185f579f -> Forge
+LoliAE2-1.7.10-client -> AE2 API
+LoliAE2-1.7.10-client -> Botania
+LoliAE2-1.7.10-client -> CraftTweaker
+LoliAE2-1.7.10-client -> Forge
+LoliAE2-1.7.10-client -> LaunchWrapper
+LoliAE2-1.7.10-client -> loli_technologies
+LoliAE2-1.7.10-client -> luminous
+LoliAE2-1.7.10-client -> Thaumcraft
+LoliAE2-1.7.10-client -> Thermal Foundation
+LoliDecorative-master-bf409f4c -> AccessTransformer
+LoliDecorative-master-bf409f4c -> Forge
+LoliDecorative-master-bf409f4c -> lolidecorative
+lolidimensions -> AccessTransformer
+lolidimensions -> AE2 API
+lolidimensions -> Forestry
+lolidimensions -> Forge
+lolidimensions -> IC2 API
+lolidimensions -> LaunchWrapper
+lolidimensions -> lolidimensions
+lolidimensions -> TConstruct
+lolidimensions -> Thaumcraft
+lolidimensions -> Thermal Foundation
+LoliDragonMight-1.7.10-client -> AE2 API
+LoliDragonMight-1.7.10-client -> Botania
+LoliDragonMight-1.7.10-client -> BuildCraft
+LoliDragonMight-1.7.10-client -> CodeChickenLib
+LoliDragonMight-1.7.10-client -> CraftTweaker
+LoliDragonMight-1.7.10-client -> Forge
+LoliDragonMight-1.7.10-client -> IC2 API
+LoliDragonMight-1.7.10-client -> LaunchWrapper
+LoliDragonMight-1.7.10-client -> loli_dragon_might
+LoliDragonMight-1.7.10-client -> luminous
+LoliDragonMight-1.7.10-client -> TConstruct
+LoliDragonMight-1.7.10-client -> Thaumcraft
+LoliDragonMight-1.7.10-client -> Thermal Foundation
+lolidungeons -> AccessTransformer
+lolidungeons -> Forge
+lolidungeons -> LaunchWrapper
+lolidungeons -> lolidungeons
+lolienergistics -> AE2 API
+lolienergistics -> Botania
+lolienergistics -> CodeChickenLib
+lolienergistics -> CoFHCore
+lolienergistics -> CraftTweaker
+lolienergistics -> EnderIO
+lolienergistics -> Forestry
+lolienergistics -> Forge
+lolienergistics -> IC2 API
+lolienergistics -> LaunchWrapper
+lolienergistics -> lolienergistics
+lolienergistics -> luminous
+lolienergistics -> Thaumcraft
+lolienergistics -> Thermal Foundation
+LoliEnergyRelics-1.7.10-client -> Botania
+LoliEnergyRelics-1.7.10-client -> energyrelics
+LoliEnergyRelics-1.7.10-client -> Forge
+LoliEnergyRelics-1.7.10-client -> IC2 API
+LoliEnergyRelics-1.7.10-client -> Thaumcraft
+LoliEnergyRelics-1.7.10-client -> Thermal Foundation
+LoliForestry-1.7.10-client -> AE2 API
+LoliForestry-1.7.10-client -> Botania
+LoliForestry-1.7.10-client -> CodeChickenLib
+LoliForestry-1.7.10-client -> CraftTweaker
+LoliForestry-1.7.10-client -> Forestry
+LoliForestry-1.7.10-client -> Forge
+LoliForestry-1.7.10-client -> IC2 API
+LoliForestry-1.7.10-client -> LaunchWrapper
+LoliForestry-1.7.10-client -> loli_forestry
+LoliForestry-1.7.10-client -> Thaumcraft
+LoliForestry-1.7.10-client -> Thermal Foundation
+LoliHooks-master-aa342203 -> ASM
+LoliHooks-master-aa342203 -> Forge
+LoliHooks-master-aa342203 -> LaunchWrapper
+examplemod -> Baubles
+examplemod -> CodeChickenLib
+examplemod -> CraftTweaker
+examplemod -> Forge
+examplemod -> LaunchWrapper
+examplemod -> loliland
+examplemod -> mcef
+examplemod -> TConstruct
+examplemod -> virtual_chest
+LoliUtility-1.7.10-client -> AE2 API
+LoliUtility-1.7.10-client -> Botania
+LoliUtility-1.7.10-client -> CodeChickenLib
+LoliUtility-1.7.10-client -> CoFHCore
+LoliUtility-1.7.10-client -> CraftTweaker
+LoliUtility-1.7.10-client -> EnderIO
+LoliUtility-1.7.10-client -> Forestry
+LoliUtility-1.7.10-client -> Forge
+LoliUtility-1.7.10-client -> IC2 API
+LoliUtility-1.7.10-client -> installer
+LoliUtility-1.7.10-client -> LaunchWrapper
+LoliUtility-1.7.10-client -> loli_utility
+LoliUtility-1.7.10-client -> Thaumcraft
+LoliUtility-1.7.10-client -> Thermal Foundation
+LoliWeCUI-master-7296045c -> Forge
+luminous -> AccessTransformer
+luminous -> AE2 API
+luminous -> Botania
+luminous -> Forestry
+luminous -> Forge
+luminous -> LaunchWrapper
+luminous -> luminous
+luminous -> Thaumcraft
+luminous -> Thermal Foundation
+lwsl -> Forge
+lwsl -> lwsl
+Mantle-1.7.10-0.3.2b -> Forge
+Mantle-1.7.10-0.3.2b -> mantle
+Mantle-1.7.10-0.3.2b -> TConstruct
+mo -> CodeChickenLib
+mo -> ComputerCraft
+mo -> EnderIO
+mo -> Forge
+mo -> mo
+mo -> OpenComputers
+mo -> TConstruct
+mo -> Thermal Foundation
+mo -> WAILA
+MCTags-master-72ca4ae0 -> Forge
+MicdoodleCore-1.7-3.0.12.504 -> AccessTransformer
+MicdoodleCore-1.7-3.0.12.504 -> Forge
+MicdoodleCore-1.7-3.0.12.504 -> LaunchWrapper
+MineChem-1.7.10 -> AccessTransformer
+MineChem-1.7.10 -> AE2 API
+MineChem-1.7.10 -> CodeChickenLib
+MineChem-1.7.10 -> ComputerCraft
+MineChem-1.7.10 -> CraftTweaker
+MineChem-1.7.10 -> Forge
+MineChem-1.7.10 -> LaunchWrapper
+MineChem-1.7.10 -> minechem
+MineChem-1.7.10 -> Thermal Foundation
+MinecraftPerformancePrimitives-master-fd72b14e -> AccessTransformer
+MinecraftPerformancePrimitives-master-fd72b14e -> CraftTweaker
+MinecraftPerformancePrimitives-master-fd72b14e -> Forge
 MineFactoryReloaded -> MineFactoryReloaded
-mml -> No dependencies detected
-modtweaker2 -> No dependencies detected
-MouseTweaks -> No dependencies detected
-msw -> No dependencies detected
+MineFactoryReloaded -> AE2 API
+MineFactoryReloaded -> BuildCraft
+MineFactoryReloaded -> CodeChickenLib
+MineFactoryReloaded -> CoFHCore
+MineFactoryReloaded -> EnderIO
+MineFactoryReloaded -> Forestry
+MineFactoryReloaded -> Forge
+MineFactoryReloaded -> IC2 API
+MineFactoryReloaded -> TConstruct
+MineFactoryReloaded -> Thaumcraft
+MineFactoryReloaded -> Thermal Foundation
+mml -> Forge
+modtweaker2 -> AE2 API
+modtweaker2 -> Botania
+modtweaker2 -> CraftTweaker
+modtweaker2 -> Forestry
+modtweaker2 -> Forge
+modtweaker2 -> IC2 API
+modtweaker2 -> LaunchWrapper
+modtweaker2 -> TConstruct
+modtweaker2 -> Thaumcraft
+MouseTweaks -> AccessTransformer
+MouseTweaks -> Forestry
+MouseTweaks -> Forge
+msw -> AccessTransformer
+msw -> Forge
+msw -> LaunchWrapper
+msw -> msw
 NEIAddons -> NEIAddons
-neiintegration -> No dependencies detected
+NEIAddons -> AE2 API
+NEIAddons -> BuildCraft
+NEIAddons -> CodeChickenLib
+NEIAddons -> Forestry
+NEIAddons -> Forge
+NEIAddons -> WAILA
+neiintegration -> CodeChickenLib
+neiintegration -> Forge
+neiintegration -> neiintegration
 NotEnoughItems -> CodeChickenCore
-omicron -> No dependencies detected
-OnlinePicFrame+v1.0+mc1.7.10 -> No dependencies detected
+NotEnoughItems -> AccessTransformer
+NotEnoughItems -> AE2 API
+NotEnoughItems -> ASM
+NotEnoughItems -> BuildCraft
+NotEnoughItems -> CodeChickenLib
+NotEnoughItems -> EnderIO
+NotEnoughItems -> Forestry
+NotEnoughItems -> Forge
+NotEnoughItems -> JEI
+NotEnoughItems -> LaunchWrapper
+NotEnoughItems -> nei
+NotEnoughItems -> TConstruct
+NotEnoughItems -> Thermal Foundation
+omicron -> AccessTransformer
+omicron -> Forge
+omicron -> omicron
+OnlinePicFrame+v1.0+mc1.7.10 -> Forge
+OnlinePicFrame+v1.0+mc1.7.10 -> opframe
 OpenComputers -> BuildCraft|Core
 OpenComputers -> ComputerCraft
 OpenComputers -> EnderStorage
@@ -200,22 +561,107 @@ OpenComputers -> RedLogic
 OpenComputers -> StargateTech2
 OpenComputers -> Thaumcraft
 OpenComputers -> ThermalExpansion
-PowerUtils -> No dependencies detected
-RealmBlockLimiter-master-34e72415 -> No dependencies detected
+OpenComputers -> AccessTransformer
+OpenComputers -> AE2 API
+OpenComputers -> ASM
+OpenComputers -> BuildCraft
+OpenComputers -> CodeChickenLib
+OpenComputers -> EnderIO
+OpenComputers -> Forestry
+OpenComputers -> Forge
+OpenComputers -> IC2 API
+OpenComputers -> LaunchWrapper
+OpenComputers -> OpenComputers
+OpenComputers -> TConstruct
+OpenComputers -> Thermal Foundation
+OpenComputers -> WAILA
+PowerUtils -> Forge
+PowerUtils -> IC2 API
+PowerUtils -> putils
+PowerUtils -> Thermal Foundation
+RealmBlockLimiter-master-34e72415 -> CraftTweaker
+RealmBlockLimiter-master-34e72415 -> Forge
+RealmBlockLimiter-master-34e72415 -> LaunchWrapper
 RedPowerCore -> mod_MinecraftForge
-RTG -> No dependencies detected
-SpawnTrickLib-1.7.10-1.0.1 -> No dependencies detected
-StandardExpansion-master-b2071223 -> No dependencies detected
-TConstruct-1.7.10-1.8.8 -> No dependencies detected
-ThermalDynamics-[1.7.10]1.2.1-172 -> No dependencies detected
-ThermalExpansion-[1.7.10]4.1.5-248 -> No dependencies detected
-ThermalFoundation-[1.7.10]1.2.6-118 -> No dependencies detected
-Treecapitator-master-a88b6c78 -> No dependencies detected
-loli_elements_ultratech -> No dependencies detected
-UniversalResources-master-0585e854 -> No dependencies detected
-waila -> No dependencies detected
-wanionlib -> No dependencies detected
-worldgen -> No dependencies detected
-CodeChickenLib-1.7.10-1.1.3.141 -> No dependencies detected
-[1.7.10]bspkrsCore-universal-6.16 -> No dependencies detected
+RedPowerCore -> CodeChickenLib
+RedPowerCore -> Forge
+RedPowerCore -> LaunchWrapper
+RedPowerCore -> redpower
+RTG -> BuildCraft
+RTG -> Forge
+RTG -> rtg
+RTG -> Thaumcraft
+SpawnTrickLib-1.7.10-1.0.1 -> CraftTweaker
+SpawnTrickLib-1.7.10-1.0.1 -> Forge
+SpawnTrickLib-1.7.10-1.0.1 -> LaunchWrapper
+StandardExpansion-master-b2071223 -> bq_standard
+StandardExpansion-master-b2071223 -> Forge
+TConstruct-1.7.10-1.8.8 -> AccessTransformer
+TConstruct-1.7.10-1.8.8 -> AE2 API
+TConstruct-1.7.10-1.8.8 -> BuildCraft
+TConstruct-1.7.10-1.8.8 -> CodeChickenLib
+TConstruct-1.7.10-1.8.8 -> CoFHCore
+TConstruct-1.7.10-1.8.8 -> Forge
+TConstruct-1.7.10-1.8.8 -> IC2 API
+TConstruct-1.7.10-1.8.8 -> TConstruct
+TConstruct-1.7.10-1.8.8 -> Thaumcraft
+TConstruct-1.7.10-1.8.8 -> Thermal Foundation
+TConstruct-1.7.10-1.8.8 -> tinker
+TConstruct-1.7.10-1.8.8 -> WAILA
+ThermalDynamics-[1.7.10]1.2.1-172 -> AccessTransformer
+ThermalDynamics-[1.7.10]1.2.1-172 -> BuildCraft
+ThermalDynamics-[1.7.10]1.2.1-172 -> CodeChickenLib
+ThermalDynamics-[1.7.10]1.2.1-172 -> CoFHCore
+ThermalDynamics-[1.7.10]1.2.1-172 -> Forge
+ThermalDynamics-[1.7.10]1.2.1-172 -> TConstruct
+ThermalDynamics-[1.7.10]1.2.1-172 -> Thaumcraft
+ThermalDynamics-[1.7.10]1.2.1-172 -> Thermal Foundation
+ThermalDynamics-[1.7.10]1.2.1-172 -> thermaldynamics
+ThermalExpansion-[1.7.10]4.1.5-248 -> BuildCraft
+ThermalExpansion-[1.7.10]4.1.5-248 -> CodeChickenLib
+ThermalExpansion-[1.7.10]4.1.5-248 -> CoFHCore
+ThermalExpansion-[1.7.10]4.1.5-248 -> Forestry
+ThermalExpansion-[1.7.10]4.1.5-248 -> Forge
+ThermalExpansion-[1.7.10]4.1.5-248 -> TConstruct
+ThermalExpansion-[1.7.10]4.1.5-248 -> Thaumcraft
+ThermalExpansion-[1.7.10]4.1.5-248 -> Thermal Foundation
+ThermalExpansion-[1.7.10]4.1.5-248 -> thermalexpansion
+ThermalFoundation-[1.7.10]1.2.6-118 -> Baubles
+ThermalFoundation-[1.7.10]1.2.6-118 -> CoFHCore
+ThermalFoundation-[1.7.10]1.2.6-118 -> Forge
+ThermalFoundation-[1.7.10]1.2.6-118 -> TConstruct
+ThermalFoundation-[1.7.10]1.2.6-118 -> Thaumcraft
+ThermalFoundation-[1.7.10]1.2.6-118 -> Thermal Foundation
+ThermalFoundation-[1.7.10]1.2.6-118 -> thermalfoundation
+Treecapitator-master-a88b6c78 -> Forge
+Treecapitator-master-a88b6c78 -> treecapitator
+loli_elements_ultratech -> Forge
+loli_elements_ultratech -> LaunchWrapper
+loli_elements_ultratech -> loli_elements_ultratech
+UniversalResources-master-0585e854 -> Forge
+UniversalResources-master-0585e854 -> LaunchWrapper
+UniversalResources-master-0585e854 -> uniresources
+waila -> AccessTransformer
+waila -> ASM
+waila -> CodeChickenLib
+waila -> EnderIO
+waila -> Forge
+waila -> IC2 API
+waila -> LaunchWrapper
+waila -> Thaumcraft
+waila -> WAILA
+wanionlib -> CraftTweaker
+wanionlib -> Forge
+wanionlib -> LaunchWrapper
+worldgen -> ASM
+worldgen -> Forge
+worldgen -> worldgen
+CodeChickenLib-1.7.10-1.1.3.141 -> AccessTransformer
+CodeChickenLib-1.7.10-1.1.3.141 -> ASM
+CodeChickenLib-1.7.10-1.1.3.141 -> ccl
+CodeChickenLib-1.7.10-1.1.3.141 -> CodeChickenLib
+CodeChickenLib-1.7.10-1.1.3.141 -> Forge
+CodeChickenLib-1.7.10-1.1.3.141 -> LaunchWrapper
+[1.7.10]bspkrsCore-universal-6.16 -> bspkrscore
+[1.7.10]bspkrsCore-universal-6.16 -> Forge
 ```

@@ -11,15 +11,20 @@ version: Unknown
 author: Unknown
 size_mb: 0.19
 forge: Unknown
-dependencies: []
+dependencies[0]: Botania
+dependencies[1]: energyrelics
+dependencies[2]: Forge
+dependencies[3]: IC2 API
+dependencies[4]: Thaumcraft
+dependencies[5]: Thermal Foundation
 files: 144
 class_files: 52
 packages: 1
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 1
 content.Items: 49
 content.TileEntities: 0
@@ -234,6 +239,181 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Botania
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: ru/lolienergyrelics/lO110l1LANd.class
+dependency_records[0].evidence[0]: botania
+dependency_records[1].name: energyrelics
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/energyrelics/lang/ru_RU.lang
+dependency_records[1].sources[1]: assets/energyrelics/textures/blocks/demonic_infinity_block.png
+dependency_records[1].sources[2]: assets/energyrelics/textures/blocks/demonic_infinity_block.png.mcmeta
+dependency_records[1].sources[3]: assets/energyrelics/textures/items/ItemAmplifierRF.png
+dependency_records[1].sources[4]: assets/energyrelics/textures/items/ItemAntiInvisible.png
+dependency_records[1].sources[5]: assets/energyrelics/textures/items/ItemArchersInfinityQuiver.png
+dependency_records[1].sources[6]: assets/energyrelics/textures/items/ItemArmorBoosterBase1.png
+dependency_records[1].sources[7]: assets/energyrelics/textures/items/ItemArmorBoosterBase2.png
+dependency_records[1].sources[8]: assets/energyrelics/textures/items/ItemBerserkersCirclet.png
+dependency_records[1].sources[9]: assets/energyrelics/textures/items/ItemBuffAnnuler.png
+dependency_records[1].sources[10]: assets/energyrelics/textures/items/ItemBuffsGenerator.png
+dependency_records[1].sources[11]: assets/energyrelics/textures/items/ItemCoreofStealingPower.png
+dependency_records[1].sources[12]: assets/energyrelics/textures/items/ItemDamageAmplifier1.png
+dependency_records[1].sources[13]: assets/energyrelics/textures/items/ItemDamageAmplifier2.png
+dependency_records[1].sources[14]: assets/energyrelics/textures/items/ItemDamageAmplifier3.png
+dependency_records[1].sources[15]: assets/energyrelics/textures/items/ItemDamageAmplifier4.png
+dependency_records[1].sources[16]: assets/energyrelics/textures/items/ItemDamageAmplifier5.png
+dependency_records[1].sources[17]: assets/energyrelics/textures/items/ItemDamageConverter.png
+dependency_records[1].sources[18]: assets/energyrelics/textures/items/ItemDragonAnnihilator.png
+dependency_records[1].sources[19]: assets/energyrelics/textures/items/ItemDragonShield1LVL.png
+dependency_records[1].sources[20]: assets/energyrelics/textures/items/ItemDragonShield2LVL.png
+dependency_records[1].sources[21]: assets/energyrelics/textures/items/ItemDragonShield3LVL.png
+dependency_records[1].sources[22]: assets/energyrelics/textures/items/ItemEnergyMirror.png
+dependency_records[1].sources[23]: assets/energyrelics/textures/items/ItemEuGenerator1.png
+dependency_records[1].sources[24]: assets/energyrelics/textures/items/ItemEuGenerator2.png
+dependency_records[1].sources[25]: assets/energyrelics/textures/items/ItemEuGenerator3.png
+dependency_records[1].sources[26]: assets/energyrelics/textures/items/ItemEuGenerator4.png
+dependency_records[1].sources[27]: assets/energyrelics/textures/items/ItemEuGenerator5.png
+dependency_records[1].sources[28]: assets/energyrelics/textures/items/ItemHiraishin.png
+dependency_records[1].sources[29]: assets/energyrelics/textures/items/ItemHiraishinBack.png
+dependency_records[1].sources[30]: assets/energyrelics/textures/items/ItemKillerPowerKeeper.png
+dependency_records[1].sources[31]: assets/energyrelics/textures/items/ItemMiningCharm.png
+dependency_records[1].sources[32]: assets/energyrelics/textures/items/ItemNewChaosCore.png
+dependency_records[1].sources[33]: assets/energyrelics/textures/items/ItemParadox.png
+dependency_records[1].sources[34]: assets/energyrelics/textures/items/ItemParticleAccelerator.png
+dependency_records[1].sources[35]: assets/energyrelics/textures/items/ItemProjectileAnnihilator.png
+dependency_records[1].sources[36]: assets/energyrelics/textures/items/ItemProtectionAmplifier1.png
+dependency_records[1].sources[37]: assets/energyrelics/textures/items/ItemProtectionAmplifier2.png
+dependency_records[1].sources[38]: assets/energyrelics/textures/items/ItemProtectionAmplifier3.png
+dependency_records[1].sources[39]: assets/energyrelics/textures/items/ItemProtectionAmplifier4.png
+dependency_records[1].sources[40]: assets/energyrelics/textures/items/ItemProtectionAmplifier5.png
+dependency_records[1].sources[41]: assets/energyrelics/textures/items/ItemRegenerationBooster1.png
+dependency_records[1].sources[42]: assets/energyrelics/textures/items/ItemRegenerationBooster2.png
+dependency_records[1].sources[43]: assets/energyrelics/textures/items/ItemRegenerationBooster3.png
+dependency_records[1].sources[44]: assets/energyrelics/textures/items/ItemRegenerationBooster4.png
+dependency_records[1].sources[45]: assets/energyrelics/textures/items/ItemRegenerationBooster5.png
+dependency_records[1].sources[46]: assets/energyrelics/textures/items/ItemSpeedBlitzGenerator.png
+dependency_records[1].sources[47]: assets/energyrelics/textures/items/ItemStealerRF.png
+dependency_records[1].sources[48]: assets/energyrelics/textures/items/ItemTimeCatalyst.png
+dependency_records[1].sources[49]: assets/energyrelics/textures/items/ItemTomeLawlessness.png
+dependency_records[1].sources[50]: assets/energyrelics/textures/items/ItemXPTome.png
+dependency_records[1].sources[51]: assets/energyrelics/textures/items/consumable/demonic_infinity_catalyst.png
+dependency_records[1].sources[52]: assets/energyrelics/textures/items/consumable/demonic_infinity_catalyst.png.mcmeta
+dependency_records[1].sources[53]: assets/energyrelics/textures/items/consumable/demonic_infinity_dust.png
+dependency_records[1].sources[54]: assets/energyrelics/textures/items/consumable/demonic_infinity_dust.png.mcmeta
+dependency_records[1].sources[55]: assets/energyrelics/textures/items/consumable/demonic_infinity_ingot.png
+dependency_records[1].sources[56]: assets/energyrelics/textures/items/consumable/demonic_infinity_ingot.png.mcmeta
+dependency_records[1].sources[57]: assets/energyrelics/textures/items/consumable/demonic_infinity_nugget.png
+dependency_records[1].sources[58]: assets/energyrelics/textures/items/consumable/demonic_infinity_nugget.png.mcmeta
+dependency_records[1].sources[59]: assets/energyrelics/textures/items/gateWeapon0.png
+dependency_records[1].sources[60]: assets/energyrelics/textures/items/gateWeapon1.png
+dependency_records[1].sources[61]: assets/energyrelics/textures/items/infinity_armor_0.png
+dependency_records[1].sources[62]: assets/energyrelics/textures/items/infinity_armor_0_mask.png
+dependency_records[1].sources[63]: assets/energyrelics/textures/items/infinity_armor_1.png
+dependency_records[1].sources[64]: assets/energyrelics/textures/items/infinity_armor_1.png.mcmeta
+dependency_records[1].sources[65]: assets/energyrelics/textures/items/infinity_armor_1_mask.png
+dependency_records[1].sources[66]: assets/energyrelics/textures/items/infinity_armor_1_mask.png.mcmeta
+dependency_records[1].sources[67]: assets/energyrelics/textures/items/infinity_armor_2.png
+dependency_records[1].sources[68]: assets/energyrelics/textures/items/infinity_armor_2.png.mcmeta
+dependency_records[1].sources[69]: assets/energyrelics/textures/items/infinity_armor_2_mask.png
+dependency_records[1].sources[70]: assets/energyrelics/textures/items/infinity_armor_2_mask.png.mcmeta
+dependency_records[1].sources[71]: assets/energyrelics/textures/items/infinity_armor_3.png
+dependency_records[1].sources[72]: assets/energyrelics/textures/items/infinity_armor_3_mask.png
+dependency_records[1].sources[73]: assets/energyrelics/textures/items/infinity_armor_mask.png
+dependency_records[1].sources[74]: assets/energyrelics/textures/items/infinity_armor_mask2.png
+dependency_records[1].sources[75]: assets/energyrelics/textures/items/infinity_armor_wingmask.png
+dependency_records[1].sources[76]: assets/energyrelics/textures/items/infinity_armor_wingmask.png.mcmeta
+dependency_records[1].sources[77]: assets/energyrelics/textures/items/infinity_sword.png
+dependency_records[1].sources[78]: assets/energyrelics/textures/items/infinity_sword.png.mcmeta
+dependency_records[1].sources[79]: assets/energyrelics/textures/items/infinity_sword_mask.png
+dependency_records[1].sources[80]: assets/energyrelics/textures/items/infinity_sword_mask.png.mcmeta
+dependency_records[1].sources[81]: assets/energyrelics/textures/items/infinity_sword_pommel.png
+dependency_records[1].sources[82]: assets/energyrelics/textures/items/infinity_sword_pommel.png.mcmeta
+dependency_records[1].sources[83]: assets/energyrelics/textures/misc/babylon.png
+dependency_records[1].sources[84]: assets/energyrelics/textures/models/infinity_armor.png
+dependency_records[1].sources[85]: assets/energyrelics/textures/models/infinity_armor_eyes.png
+dependency_records[1].sources[86]: assets/energyrelics/textures/models/infinity_armor_old.png
+dependency_records[1].sources[87]: assets/energyrelics/textures/models/infinity_armor_wing.png
+dependency_records[1].sources[88]: assets/energyrelics/textures/models/infinity_armor_wingglow.png
+dependency_records[1].sources[89]: assets/energyrelics/textures/models/infinity_pants.png
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: ru/lolienergyrelics/II1II0laND.class
+dependency_records[2].sources[1]: ru/lolienergyrelics/II1Iland.class
+dependency_records[2].sources[2]: ru/lolienergyrelics/II1i1l0laND.class
+dependency_records[2].sources[3]: ru/lolienergyrelics/IOI1LaNd.class
+dependency_records[2].sources[4]: ru/lolienergyrelics/IiiilAnD.class
+dependency_records[2].sources[5]: ru/lolienergyrelics/Iil0IOlAND.class
+dependency_records[2].sources[6]: ru/lolienergyrelics/OI1II1OIlanD.class
+dependency_records[2].sources[7]: ru/lolienergyrelics/OO10lO1LANd.class
+dependency_records[2].sources[8]: ru/lolienergyrelics/OO1Oi0LAnD.class
+dependency_records[2].sources[9]: ru/lolienergyrelics/OOOIilanD.class
+dependency_records[2].sources[10]: ru/lolienergyrelics/OOOliOOllANd.class
+dependency_records[2].sources[11]: ru/lolienergyrelics/Oill1LAnD.class
+dependency_records[2].sources[12]: ru/lolienergyrelics/i0IIlOLANd.class
+dependency_records[2].sources[13]: ru/lolienergyrelics/iIiO00OLaNd.class
+dependency_records[2].sources[14]: ru/lolienergyrelics/iOIOOilanD.class
+dependency_records[2].sources[15]: ru/lolienergyrelics/iOIl0LAnD.class
+dependency_records[2].sources[16]: ru/lolienergyrelics/iOl10IlLAnd.class
+dependency_records[2].sources[17]: ru/lolienergyrelics/ii1li00Land.class
+dependency_records[2].sources[18]: ru/lolienergyrelics/iilIi1laND.class
+dependency_records[2].sources[19]: ru/lolienergyrelics/illiLanD.class
+dependency_records[2].sources[20]: ru/lolienergyrelics/l00OlIlAnd.class
+dependency_records[2].sources[21]: ru/lolienergyrelics/l01l0OilANd.class
+dependency_records[2].sources[22]: ru/lolienergyrelics/l0IO0LAnd.class
+dependency_records[2].sources[23]: ru/lolienergyrelics/l0Oil0IILAnd.class
+dependency_records[2].sources[24]: ru/lolienergyrelics/l0iIlIO1laNd.class
+dependency_records[2].sources[25]: ru/lolienergyrelics/l0l00lAND.class
+dependency_records[2].sources[26]: ru/lolienergyrelics/l11lLANd.class
+dependency_records[2].sources[27]: ru/lolienergyrelics/l1i00lLAnD.class
+dependency_records[2].sources[28]: ru/lolienergyrelics/lI00OlAND.class
+dependency_records[2].sources[29]: ru/lolienergyrelics/lI00ilAND.class
+dependency_records[2].sources[30]: ru/lolienergyrelics/lIOILand.class
+dependency_records[2].sources[31]: ru/lolienergyrelics/lIiIii1LAnD.class
+dependency_records[2].sources[32]: ru/lolienergyrelics/lO110l1LANd.class
+dependency_records[2].sources[33]: ru/lolienergyrelics/lOOllANd.class
+dependency_records[2].sources[34]: ru/lolienergyrelics/li0iOILAND.class
+dependency_records[2].sources[35]: ru/lolienergyrelics/liIIllIland.class
+dependency_records[2].sources[36]: ru/lolienergyrelics/liO1Oli1lanD.class
+dependency_records[2].sources[37]: ru/lolienergyrelics/liOIOOLANd.class
+dependency_records[2].sources[38]: ru/lolienergyrelics/lili0l0laNd.class
+dependency_records[2].sources[39]: ru/lolienergyrelics/ll1ILAnd.class
+dependency_records[2].sources[40]: ru/lolienergyrelics/lliliilanD.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
+dependency_records[2].evidence[1]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[3].name: IC2 API
+dependency_records[3].categories[0]: Hidden
+dependency_records[3].confidence: 78
+dependency_records[3].sources[0]: ru/lolienergyrelics/IOI1LaNd.class
+dependency_records[3].sources[1]: ru/lolienergyrelics/IiiilAnD.class
+dependency_records[3].sources[2]: ru/lolienergyrelics/Iil0IOlAND.class
+dependency_records[3].sources[3]: ru/lolienergyrelics/iIiO00OLaNd.class
+dependency_records[3].sources[4]: ru/lolienergyrelics/iOIl0LAnD.class
+dependency_records[3].sources[5]: ru/lolienergyrelics/iOl10IlLAnd.class
+dependency_records[3].sources[6]: ru/lolienergyrelics/ii1li00Land.class
+dependency_records[3].sources[7]: ru/lolienergyrelics/illiLanD.class
+dependency_records[3].sources[8]: ru/lolienergyrelics/l00OlIlAnd.class
+dependency_records[3].sources[9]: ru/lolienergyrelics/l0Oil0IILAnd.class
+dependency_records[3].sources[10]: ru/lolienergyrelics/l1i00lLAnD.class
+dependency_records[3].sources[11]: ru/lolienergyrelics/lIOILand.class
+dependency_records[3].sources[12]: ru/lolienergyrelics/lOOllANd.class
+dependency_records[3].evidence[0]: ic2/api/
+dependency_records[4].name: Thaumcraft
+dependency_records[4].categories[0]: Hidden
+dependency_records[4].confidence: 78
+dependency_records[4].sources[0]: ru/lolienergyrelics/II1II0laND.class
+dependency_records[4].evidence[0]: thaumcraft
+dependency_records[5].name: Thermal Foundation
+dependency_records[5].categories[0]: Hidden
+dependency_records[5].confidence: 78
+dependency_records[5].sources[0]: ru/lolienergyrelics/lIOILand.class
+dependency_records[5].sources[1]: ru/lolienergyrelics/lO110l1LANd.class
+dependency_records[5].sources[2]: ru/lolienergyrelics/ll1ILAnd.class
+dependency_records[5].sources[3]: ru/lolienergyrelics/lliliilanD.class
+dependency_records[5].evidence[0]: cofh/api/
 ```
 
 
@@ -247,9 +427,9 @@ class_files: 52
 packages: 1
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 1
 content.Items: 49
 content.TileEntities: 0

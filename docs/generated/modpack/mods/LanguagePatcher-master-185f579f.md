@@ -11,15 +11,16 @@ version: Unknown
 author: Unknown
 size_mb: 0.01
 forge: FMLCorePlugin: com.gamerforea.langpatcher.CoreMod
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: Forge
 files: 6
 class_files: 3
 packages: 1
 score: 80
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
-detections[2]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -90,6 +91,19 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/langpatcher_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].categories[1]: Hidden
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: com/gamerforea/langpatcher/AsmHooks.class
+dependency_records[1].sources[1]: com/gamerforea/langpatcher/CoreMod.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
 ```
 
 
@@ -103,9 +117,9 @@ class_files: 3
 packages: 1
 score: 80
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
-detections[2]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0

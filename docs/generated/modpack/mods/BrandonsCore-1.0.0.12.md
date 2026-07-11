@@ -11,7 +11,12 @@ version: Unknown
 author: Unknown
 size_mb: 0.08
 forge: Unknown
-dependencies: []
+dependencies[0]: Botania
+dependencies[1]: brandonscore
+dependencies[2]: CraftTweaker
+dependencies[3]: Forge
+dependencies[4]: LaunchWrapper
+dependencies[5]: Thermal Foundation
 files: 78
 class_files: 44
 packages: 15
@@ -101,6 +106,56 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Botania
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: vazkii/botania/client/core/handler/DEBossBarHandlerAccessor.class
+dependency_records[0].evidence[0]: botania
+dependency_records[1].name: brandonscore
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/brandonscore/
+dependency_records[1].sources[1]: assets/brandonscore/textures/
+dependency_records[1].sources[2]: assets/brandonscore/textures/gui/
+dependency_records[1].sources[3]: assets/brandonscore/textures/gui/Widgets.png
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: CraftTweaker
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: com/gamerforea/draconicevolution/minetweaker/MineTweakerIntegration.class
+dependency_records[2].sources[1]: com/gamerforea/draconicevolution/minetweaker/MobSouls.class
+dependency_records[2].evidence[0]: MineTweakerAPI, minetweaker
+dependency_records[2].evidence[1]: minetweaker
+dependency_records[3].name: Forge
+dependency_records[3].categories[0]: Hidden
+dependency_records[3].confidence: 78
+dependency_records[3].sources[0]: com/brandon3055/brandonscore/BrandonsCore.class
+dependency_records[3].sources[1]: com/brandon3055/brandonscore/common/CommonProxy.class
+dependency_records[3].sources[2]: com/brandon3055/brandonscore/common/handlers/FileHandler.class
+dependency_records[3].sources[3]: com/brandon3055/brandonscore/common/handlers/ProcessHandler.class
+dependency_records[3].sources[4]: com/brandon3055/brandonscore/common/utills/DataUtills.class
+dependency_records[3].sources[5]: com/brandon3055/brandonscore/common/utills/InventoryUtils.class
+dependency_records[3].sources[6]: com/brandon3055/brandonscore/common/utills/LogHelper.class
+dependency_records[3].sources[7]: com/brandon3055/brandonscore/common/utills/Teleporter.class
+dependency_records[3].sources[8]: com/brandon3055/brandonscore/common/utills/Utills.class
+dependency_records[3].sources[9]: com/gamerforea/draconicevolution/minetweaker/MineTweakerIntegration.class
+dependency_records[3].sources[10]: com/gamerforea/draconicevolution/network/TileMultiObjectPacket$Handler.class
+dependency_records[3].sources[11]: com/gamerforea/draconicevolution/network/TileMultiObjectPacket.class
+dependency_records[3].sources[12]: com/gamerforea/draconicevolution/util/RenderUtils.class
+dependency_records[3].sources[13]: vazkii/botania/client/core/handler/DEBossBarHandlerAccessor.class
+dependency_records[3].evidence[0]: cpw/mods/fml/
+dependency_records[3].evidence[1]: net/minecraftforge/
+dependency_records[3].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[4].name: LaunchWrapper
+dependency_records[4].categories[0]: Runtime
+dependency_records[4].confidence: 90
+dependency_records[4].sources[0]: com/gamerforea/draconicevolution/minetweaker/MineTweakerIntegration.class
+dependency_records[4].evidence[0]: tweaker marker
+dependency_records[5].name: Thermal Foundation
+dependency_records[5].categories[0]: Hidden
+dependency_records[5].confidence: 78
+dependency_records[5].sources[0]: com/brandon3055/brandonscore/common/utills/InfoHelper.class
+dependency_records[5].evidence[0]: cofh/api/
 ```
 
 

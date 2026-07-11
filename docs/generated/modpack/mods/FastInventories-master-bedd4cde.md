@@ -11,7 +11,7 @@ version: Unknown
 author: Unknown
 size_mb: 0.05
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
 files: 38
 class_files: 36
 packages: 5
@@ -90,6 +90,16 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/gamerforea/fastinv/api/InfiniteItemStack.class
+dependency_records[0].sources[1]: com/gamerforea/fastinv/api/InfiniteItemStackBuffer.class
+dependency_records[0].sources[2]: com/gamerforea/fastinv/api/InfiniteItemStackHashList.class
+dependency_records[0].sources[3]: com/gamerforea/fastinv/api/ejection/TileStackEjector.class
+dependency_records[0].sources[4]: com/gamerforea/fastinv/common/FastInventoriesMod.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/
 ```
 
 

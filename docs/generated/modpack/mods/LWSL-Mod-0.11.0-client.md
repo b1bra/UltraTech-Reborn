@@ -11,7 +11,8 @@ version: 0.11.0
 author: Unknown
 size_mb: 0.08
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
+dependencies[1]: lwsl
 files: 73
 class_files: 56
 packages: 17
@@ -112,6 +113,43 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/aizistral/lwsl/LWSLMod$1.class
+dependency_records[0].sources[1]: com/aizistral/lwsl/LWSLMod.class
+dependency_records[0].sources[2]: com/aizistral/lwsl/api/util/BlockState.class
+dependency_records[0].sources[3]: com/aizistral/lwsl/blocks/HypotheticalSnowBlock.class
+dependency_records[0].sources[4]: com/aizistral/lwsl/blocks/TranslucentBlock.class
+dependency_records[0].sources[5]: com/aizistral/lwsl/client/StructureOutlineModel.class
+dependency_records[0].sources[6]: com/aizistral/lwsl/client/StructureOutlineRenderer.class
+dependency_records[0].sources[7]: com/aizistral/lwsl/packets/StructureOutlinePacket.class
+dependency_records[0].sources[8]: com/aizistral/lwsl/proxy/ClientProxy.class
+dependency_records[0].sources[9]: com/aizistral/lwsl/registries/LWSLBlocks.class
+dependency_records[0].sources[10]: com/aizistral/lwsl/registries/LWSLItems.class
+dependency_records[0].sources[11]: com/aizistral/lwsl/structure/StructureLoader$LazyHandler.class
+dependency_records[0].sources[12]: com/aizistral/lwsl/structure/storage/schematic/StructureSchematicReader.class
+dependency_records[0].sources[13]: com/aizistral/lwsl/structure/storage/schematic/StructureSchematicWriter.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[1].name: lwsl
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/lwsl/lang/en_US.lang
+dependency_records[1].sources[1]: assets/lwsl/lang/ru_RU.lang
+dependency_records[1].sources[2]: assets/lwsl/textures/blocks/cold_structure_air.png
+dependency_records[1].sources[3]: assets/lwsl/textures/blocks/hypothetical_snow.png
+dependency_records[1].sources[4]: assets/lwsl/textures/blocks/structure_air.png
+dependency_records[1].sources[5]: assets/lwsl/textures/blocks/structure_blue.png
+dependency_records[1].sources[6]: assets/lwsl/textures/blocks/structure_green.png
+dependency_records[1].sources[7]: assets/lwsl/textures/blocks/structure_red.png
+dependency_records[1].sources[8]: assets/lwsl/textures/blocks/structure_transience.png
+dependency_records[1].sources[9]: assets/lwsl/textures/items/structure_selector.png
+dependency_records[1].sources[10]: assets/lwsl/textures/models/structure_outline.png
+dependency_records[1].sources[11]: assets/lwsl/textures/models/structure_outline_blue.png
+dependency_records[1].sources[12]: assets/lwsl/textures/models/structure_outline_green.png
+dependency_records[1].sources[13]: assets/lwsl/textures/models/structure_outline_red.png
+dependency_records[1].evidence[0]: resource namespace
 ```
 
 

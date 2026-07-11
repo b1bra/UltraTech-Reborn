@@ -11,7 +11,9 @@ version: Unknown
 author: Unknown
 size_mb: 0.01
 forge: FMLCorePlugin: micdoodle8.mods.miccore.MicdoodlePlugin
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: Forge
+dependencies[2]: LaunchWrapper
 files: 25
 class_files: 13
 packages: 4
@@ -89,6 +91,30 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: micdoodlecore_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].categories[1]: Hidden
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: com/gamerforea/galacticraft/Directions.class
+dependency_records[1].sources[1]: com/gamerforea/galacticraft/MicdoodleEventHooks.class
+dependency_records[1].sources[2]: com/gamerforea/galacticraft/network/NetworkFields.class
+dependency_records[1].sources[3]: micdoodle8/mods/miccore/Annotations$NetworkedField.class
+dependency_records[1].sources[4]: micdoodle8/mods/miccore/MicdoodleModContainer.class
+dependency_records[1].sources[5]: micdoodle8/mods/miccore/MicdoodlePlugin.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: LaunchWrapper
+dependency_records[2].categories[0]: CoreMod
+dependency_records[2].confidence: 92
+dependency_records[2].sources[0]: com/gamerforea/galacticraft/core/RuntimeHelper.class
+dependency_records[2].evidence[0]: net/minecraft/launchwrapper/, LaunchClassLoader
 ```
 
 

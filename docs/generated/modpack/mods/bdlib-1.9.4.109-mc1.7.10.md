@@ -11,16 +11,18 @@ version: Unknown
 author: Unknown
 size_mb: 1.41
 forge: Unknown
-dependencies: []
+dependencies[0]: bdlib
+dependencies[1]: Forestry
+dependencies[2]: Forge
 files: 1121
 class_files: 1069
 packages: 40
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Network
+detections[1]: Old Rendering
 detections[2]: Old Forge API
-detections[3]: Old Network
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 16
@@ -75,8 +77,8 @@ client_hits: 147
 server_hits: 391
 client_percent: 27.3
 server_percent: 72.7
-reasons[0]: Heavy networking
-reasons[1]: Large amount of classes
+reasons[0]: Large amount of classes
+reasons[1]: Heavy networking
 lang_entries: 41
 models: 0
 blockstates: 0
@@ -111,14 +113,223 @@ recipe_data.special: 0
 recipe_data.json_files: 0
 recipe_data.class_files_scanned: 1069
 recipe_data.recipe_classes[0]: net/bdew/lib/recipes/RecipeLoader.class
-recipe_data.recipe_classes[1]: net/bdew/lib/Misc.class
-recipe_data.recipe_classes[2]: net/bdew/lib/recipes/RecipeLoader$$anonfun$processRecipeStatement$1.class
+recipe_data.recipe_classes[1]: net/bdew/lib/recipes/RecipeLoader$$anonfun$processRecipeStatement$1.class
+recipe_data.recipe_classes[2]: net/bdew/lib/Misc.class
 recipe_data.recipe_classes[3]: net/bdew/lib/Misc$.class
 No data
 No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: bdlib
+dependency_records[0].categories[0]: Optional
+dependency_records[0].confidence: 45
+dependency_records[0].sources[0]: assets/bdlib/
+dependency_records[0].sources[1]: assets/bdlib/lang/
+dependency_records[0].sources[2]: assets/bdlib/lang/en_US.lang
+dependency_records[0].sources[3]: assets/bdlib/lang/ru_RU.lang
+dependency_records[0].evidence[0]: resource namespace
+dependency_records[1].name: Forestry
+dependency_records[1].categories[0]: Reflection
+dependency_records[1].confidence: 62
+dependency_records[1].sources[0]: com/gamerforea/bdlib/ModUtils.class
+dependency_records[1].evidence[0]: forestry/api/, forestry
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].categories[1]: Reflection
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: com/gamerforea/bdlib/ModUtils.class
+dependency_records[2].sources[1]: com/gamerforea/bdlib/resources/UniResources.class
+dependency_records[2].sources[2]: net/bdew/lib/ApiReporter$$anonfun$APIs$1.class
+dependency_records[2].sources[3]: net/bdew/lib/ApiReporter$$anonfun$APIs$2.class
+dependency_records[2].sources[4]: net/bdew/lib/ApiReporter$.class
+dependency_records[2].sources[5]: net/bdew/lib/BdLib$.class
+dependency_records[2].sources[6]: net/bdew/lib/BdLib.class
+dependency_records[2].sources[7]: net/bdew/lib/CommandDumpRegistry$$anonfun$processCommand$1.class
+dependency_records[2].sources[8]: net/bdew/lib/CommandDumpRegistry$$anonfun$processCommand$2.class
+dependency_records[2].sources[9]: net/bdew/lib/CommandDumpRegistry$$anonfun$processCommand$4.class
+dependency_records[2].sources[10]: net/bdew/lib/CommandDumpRegistry$$anonfun$processCommand$5.class
+dependency_records[2].sources[11]: net/bdew/lib/CommandDumpRegistry$.class
+dependency_records[2].sources[12]: net/bdew/lib/CommandOreDistribution$$anonfun$3.class
+dependency_records[2].sources[13]: net/bdew/lib/CommandOreDistribution$$anonfun$processCommand$11$$anonfun$apply$5.class
+dependency_records[2].sources[14]: net/bdew/lib/CommandOreDistribution$$anonfun$processCommand$4$$anonfun$apply$3.class
+dependency_records[2].sources[15]: net/bdew/lib/CommandOreDistribution$.class
+dependency_records[2].sources[16]: net/bdew/lib/Misc$$anonfun$getModVersion$1.class
+dependency_records[2].sources[17]: net/bdew/lib/Misc$$anonfun$getNeighbourTile$1.class
+dependency_records[2].sources[18]: net/bdew/lib/Misc$.class
+dependency_records[2].sources[19]: net/bdew/lib/Misc.class
+dependency_records[2].sources[20]: net/bdew/lib/async/ServerTickExecutionContext$.class
+dependency_records[2].sources[21]: net/bdew/lib/async/ServerTickExecutionContext.class
+dependency_records[2].sources[22]: net/bdew/lib/block/BlockFace$.class
+dependency_records[2].sources[23]: net/bdew/lib/block/BlockFace.class
+dependency_records[2].sources[24]: net/bdew/lib/block/BlockRef$$anonfun$neighbours$1.class
+dependency_records[2].sources[25]: net/bdew/lib/block/BlockRef.class
+dependency_records[2].sources[26]: net/bdew/lib/block/SimpleBlock.class
+dependency_records[2].sources[27]: net/bdew/lib/config/BlockManager.class
+dependency_records[2].sources[28]: net/bdew/lib/config/FluidManager.class
+dependency_records[2].sources[29]: net/bdew/lib/config/ItemManager.class
+dependency_records[2].sources[30]: net/bdew/lib/covers/BlockCoverable$$anonfun$breakBlock$1.class
+dependency_records[2].sources[31]: net/bdew/lib/covers/BlockCoverable$$anonfun$breakBlock$2$$anonfun$apply$9$$anonfun$apply$10.class
+dependency_records[2].sources[32]: net/bdew/lib/covers/BlockCoverable$$anonfun$breakBlock$2$$anonfun$apply$9.class
+dependency_records[2].sources[33]: net/bdew/lib/covers/BlockCoverable$$anonfun$breakBlock$2.class
+dependency_records[2].sources[34]: net/bdew/lib/covers/BlockCoverable$$anonfun$getCoverIcon$1.class
+dependency_records[2].sources[35]: net/bdew/lib/covers/BlockCoverable$$anonfun$getCoverIcon$2.class
+dependency_records[2].sources[36]: net/bdew/lib/covers/BlockCoverable$$anonfun$getCoverItem$1.class
+dependency_records[2].sources[37]: net/bdew/lib/covers/BlockCoverable$$anonfun$isProvidingWeakPower$2.class
+dependency_records[2].sources[38]: net/bdew/lib/covers/BlockCoverable$$anonfun$onBlockActivated$1$$anonfun$apply$3.class
+dependency_records[2].sources[39]: net/bdew/lib/covers/BlockCoverable$$anonfun$onBlockActivated$1.class
+dependency_records[2].sources[40]: net/bdew/lib/covers/BlockCoverable$$anonfun$onBlockActivated$2$$anonfun$apply$4$$anonfun$apply$5.class
+dependency_records[2].sources[41]: net/bdew/lib/covers/BlockCoverable$$anonfun$onBlockActivated$2$$anonfun$apply$4$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8.class
+dependency_records[2].sources[42]: net/bdew/lib/covers/BlockCoverable$$anonfun$onBlockActivated$2$$anonfun$apply$4$$anonfun$apply$6.class
+dependency_records[2].sources[43]: net/bdew/lib/covers/BlockCoverable$$anonfun$onBlockActivated$2.class
+dependency_records[2].sources[44]: net/bdew/lib/covers/BlockCoverable$$anonfun$onBlockActivated$4.class
+dependency_records[2].sources[45]: net/bdew/lib/covers/BlockCoverable$class.class
+dependency_records[2].sources[46]: net/bdew/lib/covers/BlockCoverable.class
+dependency_records[2].sources[47]: net/bdew/lib/covers/CoverRenderer$$anonfun$renderWorldBlock$1$$anonfun$apply$1$$anonfun$apply$2.class
+dependency_records[2].sources[48]: net/bdew/lib/covers/CoverRenderer$$anonfun$renderWorldBlock$1$$anonfun$apply$1$$anonfun$apply$3.class
+dependency_records[2].sources[49]: net/bdew/lib/covers/CoverRenderer$$anonfun$renderWorldBlock$1$$anonfun$apply$1.class
+dependency_records[2].sources[50]: net/bdew/lib/covers/CoverRenderer$$anonfun$renderWorldBlock$1.class
+dependency_records[2].sources[51]: net/bdew/lib/covers/ItemCover$class.class
+dependency_records[2].sources[52]: net/bdew/lib/covers/ItemCover.class
+dependency_records[2].sources[53]: net/bdew/lib/covers/TileCoverable$$anonfun$2.class
+dependency_records[2].sources[54]: net/bdew/lib/covers/TileCoverable$$anonfun$tickCovers$1.class
+dependency_records[2].sources[55]: net/bdew/lib/covers/TileCoverable$$anonfun$tickCovers$2$$anonfun$apply$1$$anonfun$apply$3.class
+dependency_records[2].sources[56]: net/bdew/lib/covers/TileCoverable$$anonfun$tickCovers$2$$anonfun$apply$1.class
+dependency_records[2].sources[57]: net/bdew/lib/covers/TileCoverable$$anonfun$tickCovers$2.class
+dependency_records[2].sources[58]: net/bdew/lib/covers/TileCoverable$class.class
+dependency_records[2].sources[59]: net/bdew/lib/covers/TileCoverable.class
+dependency_records[2].sources[60]: net/bdew/lib/data/DataSlotDirection.class
+dependency_records[2].sources[61]: net/bdew/lib/data/DataSlotFluidOption$$anonfun$save$1.class
+dependency_records[2].sources[62]: net/bdew/lib/data/DataSlotFluidOption.class
+dependency_records[2].sources[63]: net/bdew/lib/data/DataSlotTankBase$$anonfun$drain$1.class
+dependency_records[2].sources[64]: net/bdew/lib/data/DataSlotTankBase$$anonfun$drain$2.class
+dependency_records[2].sources[65]: net/bdew/lib/data/DataSlotTankBase$$anonfun$fill$1.class
+dependency_records[2].sources[66]: net/bdew/lib/data/DataSlotTankBase$$anonfun$fill$2.class
+dependency_records[2].sources[67]: net/bdew/lib/data/DataSlotTankBase$$anonfun$setFluid$1.class
+dependency_records[2].sources[68]: net/bdew/lib/data/DataSlotTankBase.class
+dependency_records[2].sources[69]: net/bdew/lib/data/DataSlotTankRestricted$.class
+dependency_records[2].sources[70]: net/bdew/lib/data/DataSlotTankRestricted.class
+dependency_records[2].sources[71]: net/bdew/lib/gui/GuiHandler.class
+dependency_records[2].sources[72]: net/bdew/lib/gui/GuiProvider$class.class
+dependency_records[2].sources[73]: net/bdew/lib/gui/GuiProvider.class
+dependency_records[2].sources[74]: net/bdew/lib/gui/widgets/WidgetFluidGauge.class
+dependency_records[2].sources[75]: net/bdew/lib/items/ItemUtils$$anonfun$getAccessibleSlotsFromSide$1.class
+dependency_records[2].sources[76]: net/bdew/lib/items/ItemUtils$$anonfun$getAccessibleSlotsFromSide$2.class
+dependency_records[2].sources[77]: net/bdew/lib/items/ItemUtils$.class
+dependency_records[2].sources[78]: net/bdew/lib/items/ItemUtils.class
+dependency_records[2].sources[79]: net/bdew/lib/items/SimpleItem.class
+dependency_records[2].sources[80]: net/bdew/lib/items/inventory/ItemInventory$class.class
+dependency_records[2].sources[81]: net/bdew/lib/items/inventory/ItemInventory.class
+dependency_records[2].sources[82]: net/bdew/lib/machine/Machine.class
+dependency_records[2].sources[83]: net/bdew/lib/multiblock/block/BlockOutput$$anonfun$getFaceOverlays$1.class
+dependency_records[2].sources[84]: net/bdew/lib/multiblock/block/BlockOutput$$anonfun$getFaceOverlays$2.class
+dependency_records[2].sources[85]: net/bdew/lib/multiblock/block/BlockOutput$class.class
+dependency_records[2].sources[86]: net/bdew/lib/multiblock/block/BlockOutput.class
+dependency_records[2].sources[87]: net/bdew/lib/multiblock/data/DataSlotBlockFaceMap.class
+dependency_records[2].sources[88]: net/bdew/lib/multiblock/data/SlotSet$Slot.class
+dependency_records[2].sources[89]: net/bdew/lib/multiblock/data/SlotSet.class
+dependency_records[2].sources[90]: net/bdew/lib/multiblock/gui/WidgetOutputIcon$$anonfun$draw$1.class
+dependency_records[2].sources[91]: net/bdew/lib/multiblock/gui/WidgetOutputIcon$$anonfun$handleTooltip$1.class
+dependency_records[2].sources[92]: net/bdew/lib/multiblock/interact/CIFluidInput.class
+dependency_records[2].sources[93]: net/bdew/lib/multiblock/interact/CIFluidOutput.class
+dependency_records[2].sources[94]: net/bdew/lib/multiblock/interact/CIFluidOutputSelect.class
+dependency_records[2].sources[95]: net/bdew/lib/multiblock/interact/CIOutputFaces$$anonfun$doOutputs$2$$anonfun$apply$1.class
+dependency_records[2].sources[96]: net/bdew/lib/multiblock/interact/CIOutputFaces$$anonfun$newOutput$1.class
+dependency_records[2].sources[97]: net/bdew/lib/multiblock/interact/CIOutputFaces$$anonfun$newOutput$2.class
+dependency_records[2].sources[98]: net/bdew/lib/multiblock/interact/CIOutputFaces$class.class
+dependency_records[2].sources[99]: net/bdew/lib/multiblock/interact/CIOutputFaces.class
+dependency_records[2].sources[100]: net/bdew/lib/multiblock/interact/MIOutput.class
+dependency_records[2].sources[101]: net/bdew/lib/multiblock/network/NetHandler.class
+dependency_records[2].sources[102]: net/bdew/lib/multiblock/tile/TileOutput$$anonfun$doRescanFaces$1$$anonfun$2.class
+dependency_records[2].sources[103]: net/bdew/lib/multiblock/tile/TileOutput$$anonfun$doRescanFaces$1$$anonfun$3.class
+dependency_records[2].sources[104]: net/bdew/lib/multiblock/tile/TileOutput$$anonfun$doRescanFaces$1$$anonfun$5.class
+dependency_records[2].sources[105]: net/bdew/lib/multiblock/tile/TileOutput$$anonfun$doRescanFaces$1$$anonfun$apply$4.class
+dependency_records[2].sources[106]: net/bdew/lib/multiblock/tile/TileOutput$$anonfun$doRescanFaces$1$$anonfun$apply$5.class
+dependency_records[2].sources[107]: net/bdew/lib/multiblock/tile/TileOutput$$anonfun$doRescanFaces$1.class
+dependency_records[2].sources[108]: net/bdew/lib/multiblock/tile/TileOutput$$anonfun$getCfg$1.class
+dependency_records[2].sources[109]: net/bdew/lib/multiblock/tile/TileOutput.class
+dependency_records[2].sources[110]: net/bdew/lib/network/NetChannel$ServerHandler$.class
+dependency_records[2].sources[111]: net/bdew/lib/network/NetChannel.class
+dependency_records[2].sources[112]: net/bdew/lib/network/SerializedMessageCodec.class
+dependency_records[2].sources[113]: net/bdew/lib/player/PlayerCache$$anonfun$1.class
+dependency_records[2].sources[114]: net/bdew/lib/player/PlayerCache$$anonfun$2.class
+dependency_records[2].sources[115]: net/bdew/lib/player/PlayerCache.class
+dependency_records[2].sources[116]: net/bdew/lib/recipes/RecipeLoader$$anonfun$processRecipeStatement$1.class
+dependency_records[2].sources[117]: net/bdew/lib/recipes/RecipeLoader.class
+dependency_records[2].sources[118]: net/bdew/lib/recipes/RecipesHelper$.class
+dependency_records[2].sources[119]: net/bdew/lib/render/BaseBlockRenderHandler.class
+dependency_records[2].sources[120]: net/bdew/lib/render/IconPreloader$$anonfun$preTextureStitch$1.class
+dependency_records[2].sources[121]: net/bdew/lib/render/IconPreloader.class
+dependency_records[2].sources[122]: net/bdew/lib/render/RenderUtils$$anonfun$renderSimpleBlockItem$1.class
+dependency_records[2].sources[123]: net/bdew/lib/render/RenderUtils$.class
+dependency_records[2].sources[124]: net/bdew/lib/render/RenderUtils.class
+dependency_records[2].sources[125]: net/bdew/lib/render/RotatedBlockRenderer$$anonfun$1.class
+dependency_records[2].sources[126]: net/bdew/lib/render/RotatedBlockRenderer$.class
+dependency_records[2].sources[127]: net/bdew/lib/render/RotatedBlockRenderer.class
+dependency_records[2].sources[128]: net/bdew/lib/render/connected/BlockAdditionalRender.class
+dependency_records[2].sources[129]: net/bdew/lib/render/connected/ConnectedHelper$$anonfun$1.class
+dependency_records[2].sources[130]: net/bdew/lib/render/connected/ConnectedHelper$$anonfun$3$$anonfun$apply$1.class
+dependency_records[2].sources[131]: net/bdew/lib/render/connected/ConnectedHelper$$anonfun$3.class
+dependency_records[2].sources[132]: net/bdew/lib/render/connected/ConnectedHelper$.class
+dependency_records[2].sources[133]: net/bdew/lib/render/connected/ConnectedHelper$EdgeDraw$$anonfun$4.class
+dependency_records[2].sources[134]: net/bdew/lib/render/connected/ConnectedHelper$EdgeDraw.class
+dependency_records[2].sources[135]: net/bdew/lib/render/connected/ConnectedHelper$Vec3F.class
+dependency_records[2].sources[136]: net/bdew/lib/render/connected/ConnectedHelper$neighbourFaces.class
+dependency_records[2].sources[137]: net/bdew/lib/render/connected/ConnectedHelper.class
+dependency_records[2].sources[138]: net/bdew/lib/render/connected/ConnectedRenderer$$anonfun$1.class
+dependency_records[2].sources[139]: net/bdew/lib/render/connected/ConnectedRenderer$$anonfun$drawFaceEdges$1.class
+dependency_records[2].sources[140]: net/bdew/lib/render/connected/ConnectedRenderer$$anonfun$renderInventoryBlock$1.class
+dependency_records[2].sources[141]: net/bdew/lib/render/connected/ConnectedRenderer$$anonfun$renderWorldBlock$1.class
+dependency_records[2].sources[142]: net/bdew/lib/render/connected/ConnectedRenderer$.class
+dependency_records[2].sources[143]: net/bdew/lib/render/connected/ConnectedRenderer.class
+dependency_records[2].sources[144]: net/bdew/lib/resource/DataSlotResource$$anonfun$drainFluid$1$$anonfun$apply$2.class
+dependency_records[2].sources[145]: net/bdew/lib/resource/DataSlotResource$$anonfun$drainFluid$1.class
+dependency_records[2].sources[146]: net/bdew/lib/resource/DataSlotResource$$anonfun$getTankInfo$1$$anonfun$apply$3.class
+dependency_records[2].sources[147]: net/bdew/lib/resource/DataSlotResource$$anonfun$getTankInfo$1.class
+dependency_records[2].sources[148]: net/bdew/lib/resource/DataSlotResource$$anonfun$getTankInfo$2.class
+dependency_records[2].sources[149]: net/bdew/lib/resource/DataSlotResource.class
+dependency_records[2].sources[150]: net/bdew/lib/resource/FluidResource$.class
+dependency_records[2].sources[151]: net/bdew/lib/resource/FluidResource.class
+dependency_records[2].sources[152]: net/bdew/lib/resource/FluidResourceHelper$.class
+dependency_records[2].sources[153]: net/bdew/lib/resource/Resource$.class
+dependency_records[2].sources[154]: net/bdew/lib/resource/Resource.class
+dependency_records[2].sources[155]: net/bdew/lib/rotate/BaseRotatableBlock$class.class
+dependency_records[2].sources[156]: net/bdew/lib/rotate/BaseRotatableBlock.class
+dependency_records[2].sources[157]: net/bdew/lib/rotate/IconType$.class
+dependency_records[2].sources[158]: net/bdew/lib/rotate/IconType.class
+dependency_records[2].sources[159]: net/bdew/lib/rotate/RotatableTileBlock$class.class
+dependency_records[2].sources[160]: net/bdew/lib/rotate/RotatableTileBlock.class
+dependency_records[2].sources[161]: net/bdew/lib/rotate/RotatedHelper$.class
+dependency_records[2].sources[162]: net/bdew/lib/rotate/RotatedHelper.class
+dependency_records[2].sources[163]: net/bdew/lib/sensors/GenericSensorType.class
+dependency_records[2].sources[164]: net/bdew/lib/sensors/RedstoneSensors.class
+dependency_records[2].sources[165]: net/bdew/lib/sensors/SensorSystem$DisabledParameter$.class
+dependency_records[2].sources[166]: net/bdew/lib/sensors/SensorSystem$DisabledSensor$.class
+dependency_records[2].sources[167]: net/bdew/lib/sensors/SensorSystem.class
+dependency_records[2].sources[168]: net/bdew/lib/sensors/SimpleGenericParameter.class
+dependency_records[2].sources[169]: net/bdew/lib/sensors/SimpleGenericSensor.class
+dependency_records[2].sources[170]: net/bdew/lib/sensors/multiblock/BlockRedstoneSensorModule$class.class
+dependency_records[2].sources[171]: net/bdew/lib/sensors/multiblock/BlockRedstoneSensorModule.class
+dependency_records[2].sources[172]: net/bdew/lib/sensors/multiblock/SensorOutput$$anonfun$drawParameter$1.class
+dependency_records[2].sources[173]: net/bdew/lib/sensors/multiblock/SensorOutput$$anonfun$getParamTooltip$1.class
+dependency_records[2].sources[174]: net/bdew/lib/sensors/multiblock/SensorOutput$class.class
+dependency_records[2].sources[175]: net/bdew/lib/sensors/multiblock/SensorOutput.class
+dependency_records[2].sources[176]: net/bdew/lib/tile/ExposeTank$class.class
+dependency_records[2].sources[177]: net/bdew/lib/tile/ExposeTank.class
+dependency_records[2].sources[178]: net/bdew/lib/tile/TankEmulator$.class
+dependency_records[2].sources[179]: net/bdew/lib/tile/TankEmulator.class
+dependency_records[2].sources[180]: net/bdew/lib/tooltip/FluidTooltipProvider$$anonfun$handleTooltip$1.class
+dependency_records[2].sources[181]: net/bdew/lib/tooltip/FluidTooltipProvider$$anonfun$shouldHandleTooltip$1.class
+dependency_records[2].sources[182]: net/bdew/lib/tooltip/FluidTooltipProvider$class.class
+dependency_records[2].sources[183]: net/bdew/lib/tooltip/FluidTooltipProvider.class
+dependency_records[2].sources[184]: net/bdew/lib/tooltip/TooltipHandler$$anonfun$1.class
+dependency_records[2].sources[185]: net/bdew/lib/tooltip/TooltipHandler$$anonfun$handleTooltipEvent$1.class
+dependency_records[2].sources[186]: net/bdew/lib/tooltip/TooltipHandler$.class
+dependency_records[2].sources[187]: net/bdew/lib/tooltip/TooltipHandler.class
+dependency_records[2].sources[188]: net/bdew/lib/world/BlockAccessProxy.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
+dependency_records[2].evidence[1]: net/minecraftforge/
+dependency_records[2].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 
@@ -132,10 +343,10 @@ class_files: 1069
 packages: 40
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Network
+detections[1]: Old Rendering
 detections[2]: Old Forge API
-detections[3]: Old Network
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 16
@@ -190,8 +401,8 @@ client_hits: 147
 server_hits: 391
 client_percent: 27.3
 server_percent: 72.7
-reasons[0]: Heavy networking
-reasons[1]: Large amount of classes
+reasons[0]: Large amount of classes
+reasons[1]: Heavy networking
 lang_entries: 41
 models: 0
 blockstates: 0
@@ -238,8 +449,8 @@ special: 0
 json_files: 0
 class_files_scanned: 1069
 recipe_classes[0]: net/bdew/lib/recipes/RecipeLoader.class
-recipe_classes[1]: net/bdew/lib/Misc.class
-recipe_classes[2]: net/bdew/lib/recipes/RecipeLoader$$anonfun$processRecipeStatement$1.class
+recipe_classes[1]: net/bdew/lib/recipes/RecipeLoader$$anonfun$processRecipeStatement$1.class
+recipe_classes[2]: net/bdew/lib/Misc.class
 recipe_classes[3]: net/bdew/lib/Misc$.class
 No data
 No data

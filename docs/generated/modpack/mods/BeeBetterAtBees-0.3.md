@@ -11,7 +11,11 @@ version: 0.3
 author: Unknown
 size_mb: 0.03
 forge: FMLAT: beebetteratbees_at.cfg
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: beebetteratbees
+dependencies[2]: CodeChickenLib
+dependencies[3]: Forestry
+dependencies[4]: Forge
 files: 36
 class_files: 18
 packages: 4
@@ -93,6 +97,47 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/beebetteratbees_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: beebetteratbees
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/beebetteratbees/
+dependency_records[1].sources[1]: assets/beebetteratbees/lang/
+dependency_records[1].sources[2]: assets/beebetteratbees/lang/en_US.lang
+dependency_records[1].sources[3]: assets/beebetteratbees/textures/
+dependency_records[1].sources[4]: assets/beebetteratbees/textures/gui/
+dependency_records[1].sources[5]: assets/beebetteratbees/textures/gui/neiBlank.png
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: CodeChickenLib
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].categories[1]: Reflection
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: hellfirepvp/beebetteratbees/client/gui/AbstractTreeGUIHandler.class
+dependency_records[2].sources[1]: hellfirepvp/beebetteratbees/client/gui/BBABGuiRecipeTreeHandler.class
+dependency_records[2].evidence[0]: codechicken/lib/
+dependency_records[3].name: Forestry
+dependency_records[3].categories[0]: Hidden
+dependency_records[3].categories[1]: Reflection
+dependency_records[3].confidence: 78
+dependency_records[3].sources[0]: hellfirepvp/beebetteratbees/client/gui/BBABGuiRecipeTreeHandler.class
+dependency_records[3].sources[1]: hellfirepvp/beebetteratbees/client/gui/CachedBeeMutationTree$1.class
+dependency_records[3].sources[2]: hellfirepvp/beebetteratbees/client/gui/CachedBeeMutationTree.class
+dependency_records[3].evidence[0]: forestry/api/, forestry
+dependency_records[4].name: Forge
+dependency_records[4].categories[0]: Hidden
+dependency_records[4].categories[1]: Reflection
+dependency_records[4].confidence: 78
+dependency_records[4].sources[0]: hellfirepvp/beebetteratbees/client/ClientProxy.class
+dependency_records[4].sources[1]: hellfirepvp/beebetteratbees/client/gui/BBABGuiRecipeTreeHandler.class
+dependency_records[4].sources[2]: hellfirepvp/beebetteratbees/common/BeeBetterAtBees.class
+dependency_records[4].sources[3]: hellfirepvp/beebetteratbees/common/ModConfig.class
+dependency_records[4].evidence[0]: cpw/mods/fml/
+dependency_records[4].evidence[1]: net/minecraftforge/
 ```
 
 

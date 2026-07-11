@@ -11,15 +11,16 @@ version: Unknown
 author: Unknown
 size_mb: 0.32
 forge: Unknown
-dependencies: []
+dependencies[0]: bq_standard
+dependencies[1]: Forge
 files: 189
 class_files: 145
 packages: 27
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 1
 content.TileEntities: 1
@@ -118,6 +119,63 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: bq_standard
+dependency_records[0].categories[0]: Optional
+dependency_records[0].confidence: 45
+dependency_records[0].sources[0]: assets/bq_standard/
+dependency_records[0].sources[1]: assets/bq_standard/bq_themes.json
+dependency_records[0].sources[2]: assets/bq_standard/lang/
+dependency_records[0].sources[3]: assets/bq_standard/lang/en_US.lang
+dependency_records[0].sources[4]: assets/bq_standard/textures/
+dependency_records[0].sources[5]: assets/bq_standard/textures/gui/
+dependency_records[0].sources[6]: assets/bq_standard/textures/gui/gui_elements.png
+dependency_records[0].sources[7]: assets/bq_standard/textures/gui/gui_themes.png
+dependency_records[0].sources[8]: assets/bq_standard/textures/items/
+dependency_records[0].sources[9]: assets/bq_standard/textures/items/loot_chest.png
+dependency_records[0].evidence[0]: resource namespace
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: bq_standard/NbtBlockType.class
+dependency_records[1].sources[1]: bq_standard/client/gui/GuiBQSConfig.class
+dependency_records[1].sources[2]: bq_standard/client/gui/tasks/PanelTaskCrafting.class
+dependency_records[1].sources[3]: bq_standard/client/gui/tasks/PanelTaskFluid.class
+dependency_records[1].sources[4]: bq_standard/client/gui/tasks/PanelTaskRetrieval.class
+dependency_records[1].sources[5]: bq_standard/core/BQ_Standard.class
+dependency_records[1].sources[6]: bq_standard/core/proxies/CommonProxy.class
+dependency_records[1].sources[7]: bq_standard/handlers/ConfigGuiFactory.class
+dependency_records[1].sources[8]: bq_standard/handlers/ConfigHandler.class
+dependency_records[1].sources[9]: bq_standard/handlers/EventHandler.class
+dependency_records[1].sources[10]: bq_standard/handlers/GuiHandler.class
+dependency_records[1].sources[11]: bq_standard/importers/ftbq/converters/tasks/FtbqTaskFluid.class
+dependency_records[1].sources[12]: bq_standard/importers/hqm/HQMUtilities.class
+dependency_records[1].sources[13]: bq_standard/importers/hqm/converters/tasks/HQMTaskDetect.class
+dependency_records[1].sources[14]: bq_standard/items/ItemLootChest.class
+dependency_records[1].sources[15]: bq_standard/network/handlers/NetLootClaim.class
+dependency_records[1].sources[16]: bq_standard/network/handlers/NetLootImport.class
+dependency_records[1].sources[17]: bq_standard/network/handlers/NetLootSync.class
+dependency_records[1].sources[18]: bq_standard/network/handlers/NetRewardChoice.class
+dependency_records[1].sources[19]: bq_standard/network/handlers/NetTaskCheckbox.class
+dependency_records[1].sources[20]: bq_standard/network/handlers/NetTaskInteract.class
+dependency_records[1].sources[21]: bq_standard/rewards/RewardChoice.class
+dependency_records[1].sources[22]: bq_standard/rewards/RewardCommand.class
+dependency_records[1].sources[23]: bq_standard/rewards/RewardScoreboard.class
+dependency_records[1].sources[24]: bq_standard/rewards/RewardXP.class
+dependency_records[1].sources[25]: bq_standard/tasks/TaskBlockBreak.class
+dependency_records[1].sources[26]: bq_standard/tasks/TaskCheckbox.class
+dependency_records[1].sources[27]: bq_standard/tasks/TaskCrafting.class
+dependency_records[1].sources[28]: bq_standard/tasks/TaskFluid.class
+dependency_records[1].sources[29]: bq_standard/tasks/TaskHunt.class
+dependency_records[1].sources[30]: bq_standard/tasks/TaskInteractEntity.class
+dependency_records[1].sources[31]: bq_standard/tasks/TaskInteractItem.class
+dependency_records[1].sources[32]: bq_standard/tasks/TaskLocation.class
+dependency_records[1].sources[33]: bq_standard/tasks/TaskMeeting.class
+dependency_records[1].sources[34]: bq_standard/tasks/TaskRetrieval.class
+dependency_records[1].sources[35]: bq_standard/tasks/TaskScoreboard.class
+dependency_records[1].sources[36]: bq_standard/tasks/TaskXP.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 
@@ -131,9 +189,9 @@ class_files: 145
 packages: 27
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 1
 content.TileEntities: 1

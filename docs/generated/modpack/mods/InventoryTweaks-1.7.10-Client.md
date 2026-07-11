@@ -11,7 +11,9 @@ version: 1.59-dev-152-cf6e263
 author: Unknown
 size_mb: 0.17
 forge: FMLCorePlugin: invtweaks.forge.asm.FMLPlugin
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: Forge
+dependencies[2]: inventorytweaks
 files: 88
 class_files: 76
 packages: 13
@@ -95,6 +97,44 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/invtweaks_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].categories[1]: Hidden
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: com/gamerforea/invtweaks/InvTweaksHelper.class
+dependency_records[1].sources[1]: com/gamerforea/invtweaks/api/IInfiniteContainer.class
+dependency_records[1].sources[2]: invtweaks/InvTweaks.class
+dependency_records[1].sources[3]: invtweaks/InvTweaksConfig.class
+dependency_records[1].sources[4]: invtweaks/InvTweaksContainerManager.class
+dependency_records[1].sources[5]: invtweaks/InvTweaksItemTree.class
+dependency_records[1].sources[6]: invtweaks/InvTweaksItemTreeLoader.class
+dependency_records[1].sources[7]: invtweaks/InvTweaksObfuscation.class
+dependency_records[1].sources[8]: invtweaks/forge/ClientProxy.class
+dependency_records[1].sources[9]: invtweaks/forge/CommonProxy.class
+dependency_records[1].sources[10]: invtweaks/forge/ForgeClientTick.class
+dependency_records[1].sources[11]: invtweaks/forge/InvTweaksMod.class
+dependency_records[1].sources[12]: invtweaks/forge/ModGuiFactory.class
+dependency_records[1].sources[13]: invtweaks/forge/asm/FMLPlugin.class
+dependency_records[1].sources[14]: invtweaks/network/ITMessageToMessageCodec.class
+dependency_records[1].sources[15]: invtweaks/network/handlers/ClickMessageHandler.class
+dependency_records[1].sources[16]: invtweaks/network/handlers/SortingCompleteMessageHandler.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: inventorytweaks
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/inventorytweaks/DefaultConfig.dat
+dependency_records[2].sources[1]: assets/inventorytweaks/ItemTree.xml
+dependency_records[2].sources[2]: assets/inventorytweaks/lang/en_US.lang
+dependency_records[2].sources[3]: assets/inventorytweaks/lang/ru_RU.lang
+dependency_records[2].sources[4]: assets/inventorytweaks/lang/uk_UA.lang
+dependency_records[2].evidence[0]: resource namespace
 ```
 
 

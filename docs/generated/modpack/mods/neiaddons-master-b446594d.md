@@ -12,14 +12,20 @@ author: Unknown
 size_mb: 0.09
 forge: Unknown
 dependencies[0]: NEIAddons
+dependencies[1]: AE2 API
+dependencies[2]: BuildCraft
+dependencies[3]: CodeChickenLib
+dependencies[4]: Forestry
+dependencies[5]: Forge
+dependencies[6]: WAILA
 files: 71
 class_files: 61
 packages: 17
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -102,6 +108,93 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: NEIAddons
+dependency_records[0].categories[0]: Declared
+dependency_records[0].categories[1]: Optional
+dependency_records[0].confidence: 100
+dependency_records[0].sources[0]: assets/neiaddons/lang/en_US.lang
+dependency_records[0].sources[1]: assets/neiaddons/lang/ru_RU.lang
+dependency_records[0].sources[2]: assets/neiaddons/textures/gui/breeding.png
+dependency_records[0].sources[3]: assets/neiaddons/textures/gui/exnihilo.png
+dependency_records[0].sources[4]: assets/neiaddons/textures/gui/isolator.png
+dependency_records[0].sources[5]: assets/neiaddons/textures/gui/products.png
+dependency_records[0].sources[6]: assets/neiaddons/textures/items/invalid.png
+dependency_records[0].sources[7]: legacy dependency metadata
+dependency_records[0].evidence[0]: mcmod.info dependency
+dependency_records[0].evidence[1]: resource namespace
+dependency_records[1].name: AE2 API
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: net/bdew/neiaddons/appeng/AddonAppeng.class
+dependency_records[1].evidence[0]: appliedenergistics2
+dependency_records[2].name: BuildCraft
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: net/bdew/neiaddons/crafting/AddonCraftingTables.class
+dependency_records[2].evidence[0]: BuildCraft
+dependency_records[3].name: CodeChickenLib
+dependency_records[3].categories[0]: Hidden
+dependency_records[3].confidence: 78
+dependency_records[3].sources[0]: net/bdew/neiaddons/forestry/BaseBreedingRecipeHandler.class
+dependency_records[3].evidence[0]: codechicken/lib/
+dependency_records[4].name: Forestry
+dependency_records[4].categories[0]: Hidden
+dependency_records[4].confidence: 78
+dependency_records[4].sources[0]: net/bdew/neiaddons/botany/flowers/FlowerBreedingHandler.class
+dependency_records[4].sources[1]: net/bdew/neiaddons/botany/flowers/FlowerColorBreedingHandler.class
+dependency_records[4].sources[2]: net/bdew/neiaddons/botany/flowers/FlowerHelper.class
+dependency_records[4].sources[3]: net/bdew/neiaddons/forestry/AddonForestry.class
+dependency_records[4].sources[4]: net/bdew/neiaddons/forestry/BaseBreedingRecipeHandler$CachedBreedingRecipe.class
+dependency_records[4].sources[5]: net/bdew/neiaddons/forestry/BaseBreedingRecipeHandler.class
+dependency_records[4].sources[6]: net/bdew/neiaddons/forestry/BaseProduceRecipeHandler$CachedProduceRecipe.class
+dependency_records[4].sources[7]: net/bdew/neiaddons/forestry/BaseProduceRecipeHandler.class
+dependency_records[4].sources[8]: net/bdew/neiaddons/forestry/ForestryOtherFilter.class
+dependency_records[4].sources[9]: net/bdew/neiaddons/forestry/GeneticItemFilter.class
+dependency_records[4].sources[10]: net/bdew/neiaddons/forestry/GeneticsUtils$RecipePosition.class
+dependency_records[4].sources[11]: net/bdew/neiaddons/forestry/GeneticsUtils.class
+dependency_records[4].sources[12]: net/bdew/neiaddons/forestry/MutationDumper.class
+dependency_records[4].sources[13]: net/bdew/neiaddons/forestry/bees/BeeBreedingHandler.class
+dependency_records[4].sources[14]: net/bdew/neiaddons/forestry/bees/BeeHelper.class
+dependency_records[4].sources[15]: net/bdew/neiaddons/forestry/bees/BeeProduceHandler.class
+dependency_records[4].sources[16]: net/bdew/neiaddons/forestry/butterflies/ButterflyBreedingHandler.class
+dependency_records[4].sources[17]: net/bdew/neiaddons/forestry/butterflies/ButterflyHelper.class
+dependency_records[4].sources[18]: net/bdew/neiaddons/forestry/trees/TreeBreedingHandler.class
+dependency_records[4].sources[19]: net/bdew/neiaddons/forestry/trees/TreeHelper.class
+dependency_records[4].sources[20]: net/bdew/neiaddons/forestry/trees/TreeProduceHandler.class
+dependency_records[4].evidence[0]: forestry
+dependency_records[4].evidence[1]: forestry/api/, forestry
+dependency_records[5].name: Forge
+dependency_records[5].categories[0]: Hidden
+dependency_records[5].confidence: 78
+dependency_records[5].sources[0]: com/gamerforea/neiaddons/ClientEventHandler.class
+dependency_records[5].sources[1]: net/bdew/neiaddons/BaseAddon.class
+dependency_records[5].sources[2]: net/bdew/neiaddons/NEIAddons.class
+dependency_records[5].sources[3]: net/bdew/neiaddons/api/NEIAddon.class
+dependency_records[5].sources[4]: net/bdew/neiaddons/appeng/AddonAppeng.class
+dependency_records[5].sources[5]: net/bdew/neiaddons/botany/AddonBotany.class
+dependency_records[5].sources[6]: net/bdew/neiaddons/crafting/AddonCraftingTables.class
+dependency_records[5].sources[7]: net/bdew/neiaddons/developer/AddonDeveloper.class
+dependency_records[5].sources[8]: net/bdew/neiaddons/exnihilo/AddonExnihilo.class
+dependency_records[5].sources[9]: net/bdew/neiaddons/exnihilo/waila/BarrelHandler.class
+dependency_records[5].sources[10]: net/bdew/neiaddons/exnihilo/waila/CrucibleHandler.class
+dependency_records[5].sources[11]: net/bdew/neiaddons/forestry/AddonForestry.class
+dependency_records[5].sources[12]: net/bdew/neiaddons/forestry/bees/BeeHelper.class
+dependency_records[5].sources[13]: net/bdew/neiaddons/network/ClientHandler.class
+dependency_records[5].sources[14]: net/bdew/neiaddons/network/NBTMessageCodec.class
+dependency_records[5].sources[15]: net/bdew/neiaddons/network/NetChannel.class
+dependency_records[5].sources[16]: net/bdew/neiaddons/network/ServerHandler.class
+dependency_records[5].sources[17]: net/minecraft/client/gui/inventory/NEIAddonsGuiContainerAccessor.class
+dependency_records[5].evidence[0]: cpw/mods/fml/
+dependency_records[5].evidence[1]: net/minecraftforge/
+dependency_records[5].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[6].name: WAILA
+dependency_records[6].categories[0]: Hidden
+dependency_records[6].confidence: 78
+dependency_records[6].sources[0]: net/bdew/neiaddons/exnihilo/WailaHandler.class
+dependency_records[6].sources[1]: net/bdew/neiaddons/exnihilo/waila/BarrelHandler.class
+dependency_records[6].sources[2]: net/bdew/neiaddons/exnihilo/waila/BeeTrapHandler.class
+dependency_records[6].sources[3]: net/bdew/neiaddons/exnihilo/waila/CrucibleHandler.class
+dependency_records[6].evidence[0]: mcp/mobius/waila/api/, waila
 ```
 
 
@@ -115,9 +208,9 @@ class_files: 61
 packages: 17
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0

@@ -11,7 +11,7 @@ version: Unknown
 author: Unknown
 size_mb: 0.01
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
 files: 8
 class_files: 6
 packages: 3
@@ -91,6 +91,15 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/gamerforea/invtweakshelper/InvTweaksHelperMod.class
+dependency_records[0].sources[1]: com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots$Handler.class
+dependency_records[0].sources[2]: com/gamerforea/invtweakshelper/network/MessageSwapPlayerSlots.class
+dependency_records[0].sources[3]: com/gamerforea/invtweakshelper/network/NetworkManager.class
+dependency_records[0].sources[4]: com/gamerforea/invtweakshelper/util/InvTweaksUtils.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
 ```
 
 

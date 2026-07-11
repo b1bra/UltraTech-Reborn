@@ -11,14 +11,14 @@ version: 0.8
 author: Unknown
 size_mb: 0.02
 forge: FMLCorePlugin: com.creativemd.itemphysic.ItemPatchingLoader
-dependencies: []
+dependencies[0]: Forge
 files: 10
 class_files: 7
 packages: 2
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 content.Blocks: 0
 content.Items: 0
@@ -93,6 +93,19 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].categories[1]: Hidden
+dependency_records[0].confidence: 92
+dependency_records[0].sources[0]: com/creativemd/itemphysic/ClientHelper.class
+dependency_records[0].sources[1]: com/creativemd/itemphysic/EventHandlerLite.class
+dependency_records[0].sources[2]: com/creativemd/itemphysic/ItemDummyContainer.class
+dependency_records[0].sources[3]: com/creativemd/itemphysic/ItemPatchingLoader.class
+dependency_records[0].sources[4]: com/creativemd/itemphysic/physics/ClientPhysic.class
+dependency_records[0].sources[5]: com/creativemd/itemphysic/physics/ServerPhysic.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/
+dependency_records[0].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 
@@ -106,8 +119,8 @@ class_files: 7
 packages: 2
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 content.Blocks: 0
 content.Items: 0

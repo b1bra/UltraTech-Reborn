@@ -12,6 +12,8 @@ author: Unknown
 size_mb: 0.02
 forge: Unknown
 dependencies[0]: bspkrsCore@[6.15,)
+dependencies[1]: armorstatushud
+dependencies[2]: Forge
 files: 20
 class_files: 12
 packages: 3
@@ -89,6 +91,32 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: bspkrsCore@[6.15,)
+dependency_records[0].categories[0]: Declared
+dependency_records[0].confidence: 100
+dependency_records[0].sources[0]: legacy dependency metadata
+dependency_records[0].evidence[0]: mcmod.info dependency
+dependency_records[1].name: armorstatushud
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/armorstatushud/lang/en_US.lang
+dependency_records[1].sources[1]: assets/armorstatushud/pack.mcmeta
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: bspkrs/armorstatushud/ArmorStatusHUD.class
+dependency_records[2].sources[1]: bspkrs/armorstatushud/ConfigElement.class
+dependency_records[2].sources[2]: bspkrs/armorstatushud/fml/ASHRenderTicker.class
+dependency_records[2].sources[3]: bspkrs/armorstatushud/fml/ArmorStatusHUDMod.class
+dependency_records[2].sources[4]: bspkrs/armorstatushud/fml/ClientProxy.class
+dependency_records[2].sources[5]: bspkrs/armorstatushud/fml/CommonProxy.class
+dependency_records[2].sources[6]: bspkrs/armorstatushud/fml/Reference.class
+dependency_records[2].sources[7]: bspkrs/armorstatushud/fml/gui/GuiASHConfig.class
+dependency_records[2].sources[8]: bspkrs/armorstatushud/fml/gui/ModGuiFactoryHandler.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
+dependency_records[2].evidence[1]: net/minecraftforge/
+dependency_records[2].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

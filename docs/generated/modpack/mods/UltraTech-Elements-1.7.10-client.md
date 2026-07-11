@@ -11,7 +11,9 @@ version: 1.7.10-1.0.0
 author: Unknown
 size_mb: 0.07
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
+dependencies[1]: LaunchWrapper
+dependencies[2]: loli_elements_ultratech
 files: 65
 class_files: 28
 packages: 5
@@ -125,6 +127,70 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: loliland/common/obf/IO11O0LANd.class
+dependency_records[0].sources[1]: loliland/common/obf/O1il1llOLANd.class
+dependency_records[0].sources[2]: loliland/common/obf/Oill1LAnD.class
+dependency_records[0].sources[3]: loliland/common/obf/l0iIlIO1laNd.class
+dependency_records[0].sources[4]: loliland/common/obf/l0illAND.class
+dependency_records[0].sources[5]: loliland/common/obf/lO110l1LANd.class
+dependency_records[0].sources[6]: loliland/common/obf/li0iOILAND.class
+dependency_records[0].sources[7]: loliland/common/obf/lil0liLand.class
+dependency_records[0].sources[8]: loliland/common/obf/lli011lLANd.class
+dependency_records[0].sources[9]: loliland/elements/ultratech/client/ClientSide.class
+dependency_records[0].sources[10]: loliland/elements/ultratech/common/CommonSide.class
+dependency_records[0].sources[11]: loliland/elements/ultratech/integration/I1O1I1LaNd.class
+dependency_records[0].sources[12]: loliland/elements/ultratech/integration/OOOIilanD.class
+dependency_records[0].sources[13]: loliland/elements/ultratech/integration/lI00OlAND.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/
+dependency_records[0].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[1].name: LaunchWrapper
+dependency_records[1].categories[0]: Runtime
+dependency_records[1].confidence: 90
+dependency_records[1].sources[0]: loliland/elements/ultratech/integration/lI00OlAND.class
+dependency_records[1].sources[1]: loliland/elements/ultratech/integration/lli0OiIlAND.class
+dependency_records[1].evidence[0]: tweaker marker
+dependency_records[2].name: loli_elements_ultratech
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/loli_elements_ultratech/lang/en_US.lang
+dependency_records[2].sources[1]: assets/loli_elements_ultratech/lang/ru_RU.lang
+dependency_records[2].sources[2]: assets/loli_elements_ultratech/textures/blocks/chemical_equilibrium.png
+dependency_records[2].sources[3]: assets/loli_elements_ultratech/textures/items/chemists_snack.png
+dependency_records[2].sources[4]: assets/loli_elements_ultratech/textures/items/genetic_heart.png
+dependency_records[2].sources[5]: assets/loli_elements_ultratech/textures/items/genetic_heart.png.mcmeta
+dependency_records[2].sources[6]: assets/loli_elements_ultratech/textures/items/halo.png
+dependency_records[2].sources[7]: assets/loli_elements_ultratech/textures/items/ingots/ingot_actinides.png
+dependency_records[2].sources[8]: assets/loli_elements_ultratech/textures/items/ingots/ingot_alkali.png
+dependency_records[2].sources[9]: assets/loli_elements_ultratech/textures/items/ingots/ingot_alkaline_earth.png
+dependency_records[2].sources[10]: assets/loli_elements_ultratech/textures/items/ingots/ingot_halogens.png
+dependency_records[2].sources[11]: assets/loli_elements_ultratech/textures/items/ingots/ingot_lanthanides.png
+dependency_records[2].sources[12]: assets/loli_elements_ultratech/textures/items/ingots/ingot_metalloids.png
+dependency_records[2].sources[13]: assets/loli_elements_ultratech/textures/items/ingots/ingot_noble_gases.png
+dependency_records[2].sources[14]: assets/loli_elements_ultratech/textures/items/ingots/ingot_nonmetals.png
+dependency_records[2].sources[15]: assets/loli_elements_ultratech/textures/items/ingots/ingot_post_transition.png
+dependency_records[2].sources[16]: assets/loli_elements_ultratech/textures/items/ingots/ingot_superactinides.png
+dependency_records[2].sources[17]: assets/loli_elements_ultratech/textures/items/ingots/ingot_transition.png
+dependency_records[2].sources[18]: assets/loli_elements_ultratech/textures/items/singularity_chemical_overlay.png
+dependency_records[2].sources[19]: assets/loli_elements_ultratech/textures/items/singularity_chemical_overlay.png.mcmeta
+dependency_records[2].sources[20]: assets/loli_elements_ultratech/textures/items/singularity_chemical_underlay.png
+dependency_records[2].sources[21]: assets/loli_elements_ultratech/textures/items/singularity_chemical_underlay.png.mcmeta
+dependency_records[2].sources[22]: assets/loli_elements_ultratech/textures/items/singularity_overlay.png
+dependency_records[2].sources[23]: assets/loli_elements_ultratech/textures/items/singularity_overlay.png.mcmeta
+dependency_records[2].sources[24]: assets/loli_elements_ultratech/textures/items/singularity_spiral_overlay.png
+dependency_records[2].sources[25]: assets/loli_elements_ultratech/textures/items/singularity_spiral_overlay.png.mcmeta
+dependency_records[2].sources[26]: assets/loli_elements_ultratech/textures/items/singularity_spiral_underlay.png
+dependency_records[2].sources[27]: assets/loli_elements_ultratech/textures/items/singularity_spiral_underlay.png.mcmeta
+dependency_records[2].sources[28]: assets/loli_elements_ultratech/textures/items/singularity_underlay.png
+dependency_records[2].sources[29]: assets/loli_elements_ultratech/textures/items/singularity_underlay.png.mcmeta
+dependency_records[2].sources[30]: assets/loli_elements_ultratech/textures/items/singularity_vortex_overlay.png
+dependency_records[2].sources[31]: assets/loli_elements_ultratech/textures/items/singularity_vortex_overlay.png.mcmeta
+dependency_records[2].sources[32]: assets/loli_elements_ultratech/textures/items/singularity_vortex_underlay.png
+dependency_records[2].sources[33]: assets/loli_elements_ultratech/textures/items/singularity_vortex_underlay.png.mcmeta
+dependency_records[2].evidence[0]: resource namespace
 ```
 
 

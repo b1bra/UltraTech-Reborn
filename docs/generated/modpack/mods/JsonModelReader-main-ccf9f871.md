@@ -11,7 +11,7 @@ version: 0.5.0
 author: Unknown
 size_mb: 0.04
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
 files: 28
 class_files: 25
 packages: 5
@@ -89,6 +89,28 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: ru/aod/json/JsonModelReaderMod.class
+dependency_records[0].sources[1]: ru/aod/json/api/IIconRegistrator.class
+dependency_records[0].sources[2]: ru/aod/json/api/IJsonBlockModel.class
+dependency_records[0].sources[3]: ru/aod/json/api/JsonModelAPI.class
+dependency_records[0].sources[4]: ru/aod/json/core/JsonBlockModel.class
+dependency_records[0].sources[5]: ru/aod/json/core/JsonModelBox.class
+dependency_records[0].sources[6]: ru/aod/json/core/JsonModelFace.class
+dependency_records[0].sources[7]: ru/aod/json/core/JsonModelManager.class
+dependency_records[0].sources[8]: ru/aod/json/core/JsonModelPart.class
+dependency_records[0].sources[9]: ru/aod/json/core/JsonModelRotation.class
+dependency_records[0].sources[10]: ru/aod/json/core/JsonQuadFactory.class
+dependency_records[0].sources[11]: ru/aod/json/core/JsonTexturedQuad.class
+dependency_records[0].sources[12]: ru/aod/json/core/RawLoadedModel.class
+dependency_records[0].sources[13]: ru/aod/json/core/RotationUtil.class
+dependency_records[0].sources[14]: ru/aod/json/proxy/ClientProxy.class
+dependency_records[0].sources[15]: ru/aod/json/render/JsonFullModelRenderer.class
+dependency_records[0].sources[16]: ru/aod/json/render/JsonWorldModelRenderer.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

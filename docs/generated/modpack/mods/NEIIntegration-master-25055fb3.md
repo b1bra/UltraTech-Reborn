@@ -11,14 +11,16 @@ version: 1.1.2
 author: Unknown
 size_mb: 0.1
 forge: Unknown
-dependencies: []
+dependencies[0]: CodeChickenLib
+dependencies[1]: Forge
+dependencies[2]: neiintegration
 files: 74
 class_files: 60
 packages: 7
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -114,6 +116,81 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: CodeChickenLib
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: tonius/neiintegration/PositionedFluidTank.class
+dependency_records[0].sources[1]: tonius/neiintegration/RecipeHandlerBase.class
+dependency_records[0].sources[2]: tonius/neiintegration/mods/harvestcraft/RecipeHandlerApiary.class
+dependency_records[0].sources[3]: tonius/neiintegration/mods/harvestcraft/RecipeHandlerHCBase.class
+dependency_records[0].sources[4]: tonius/neiintegration/mods/harvestcraft/RecipeHandlerPresser.class
+dependency_records[0].sources[5]: tonius/neiintegration/mods/mcforge/RecipeHandlerFluidRegistry.class
+dependency_records[0].sources[6]: tonius/neiintegration/mods/mcforge/RecipeHandlerOreDictionary.class
+dependency_records[0].sources[7]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerBioReactor.class
+dependency_records[0].sources[8]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerGrinder.class
+dependency_records[0].sources[9]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerHarvester.class
+dependency_records[0].sources[10]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerLaserDrill.class
+dependency_records[0].sources[11]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerMeatPacker.class
+dependency_records[0].sources[12]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSewer.class
+dependency_records[0].sources[13]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSlaughterhouse.class
+dependency_records[0].sources[14]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSludgeBoiler.class
+dependency_records[0].evidence[0]: codechicken/lib/
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].categories[1]: Reflection
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: tonius/neiintegration/NEIIntegration.class
+dependency_records[1].sources[1]: tonius/neiintegration/PositionedFluidTank.class
+dependency_records[1].sources[2]: tonius/neiintegration/RecipeHandlerBase.class
+dependency_records[1].sources[3]: tonius/neiintegration/Utils.class
+dependency_records[1].sources[4]: tonius/neiintegration/config/Config.class
+dependency_records[1].sources[5]: tonius/neiintegration/config/ConfigGui.class
+dependency_records[1].sources[6]: tonius/neiintegration/config/ConfigGuiFactory.class
+dependency_records[1].sources[7]: tonius/neiintegration/mods/mcforge/MCForgeIntegration.class
+dependency_records[1].sources[8]: tonius/neiintegration/mods/mcforge/MCForgeTooltipHandler.class
+dependency_records[1].sources[9]: tonius/neiintegration/mods/mcforge/RecipeHandlerFluidRegistry$CachedFluidRegistryRecipe.class
+dependency_records[1].sources[10]: tonius/neiintegration/mods/mcforge/RecipeHandlerFluidRegistry.class
+dependency_records[1].sources[11]: tonius/neiintegration/mods/mcforge/RecipeHandlerOreDictionary.class
+dependency_records[1].sources[12]: tonius/neiintegration/mods/mcforge/dumpers/ChestLootDumper.class
+dependency_records[1].sources[13]: tonius/neiintegration/mods/mcforge/dumpers/DimensionDumper.class
+dependency_records[1].sources[14]: tonius/neiintegration/mods/mcforge/dumpers/EntityDumper.class
+dependency_records[1].sources[15]: tonius/neiintegration/mods/mcforge/dumpers/FluidContainerDumper.class
+dependency_records[1].sources[16]: tonius/neiintegration/mods/mcforge/dumpers/FluidDumper.class
+dependency_records[1].sources[17]: tonius/neiintegration/mods/mcforge/dumpers/LoadedModDumper.class
+dependency_records[1].sources[18]: tonius/neiintegration/mods/mcforge/dumpers/OreDictionaryDumper.class
+dependency_records[1].sources[19]: tonius/neiintegration/mods/mcforge/dumpers/TileEntityDumper.class
+dependency_records[1].sources[20]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerBioReactor$CachedBioReactorRecipe.class
+dependency_records[1].sources[21]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerBioReactor.class
+dependency_records[1].sources[22]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerGrinder$CachedGrinderRecipe.class
+dependency_records[1].sources[23]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerGrinder.class
+dependency_records[1].sources[24]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerHarvester$CachedHarvesterRecipe.class
+dependency_records[1].sources[25]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerHarvester.class
+dependency_records[1].sources[26]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerLaserDrill.class
+dependency_records[1].sources[27]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerMeatPacker$CachedMeatPackerRecipe.class
+dependency_records[1].sources[28]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerMeatPacker.class
+dependency_records[1].sources[29]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSewer$CachedSewerRecipe.class
+dependency_records[1].sources[30]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSewer.class
+dependency_records[1].sources[31]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSlaughterhouse$CachedSlaughterhouseRecipe.class
+dependency_records[1].sources[32]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSlaughterhouse.class
+dependency_records[1].sources[33]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSludgeBoiler$CachedSludgeBoilerRecipe.class
+dependency_records[1].sources[34]: tonius/neiintegration/mods/minefactoryreloaded/RecipeHandlerSludgeBoiler.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: neiintegration
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/neiintegration/lang/en_US.lang
+dependency_records[2].sources[1]: assets/neiintegration/lang/ru_RU.lang
+dependency_records[2].sources[2]: assets/neiintegration/textures/basicProcessing.png
+dependency_records[2].sources[3]: assets/neiintegration/textures/fluidRegistry.png
+dependency_records[2].sources[4]: assets/neiintegration/textures/harvestcraft/churn.png
+dependency_records[2].sources[5]: assets/neiintegration/textures/harvestcraft/oven.png
+dependency_records[2].sources[6]: assets/neiintegration/textures/harvestcraft/presser.png
+dependency_records[2].sources[7]: assets/neiintegration/textures/harvestcraft/presserOld.png
+dependency_records[2].sources[8]: assets/neiintegration/textures/harvestcraft/quern.png
+dependency_records[2].sources[9]: assets/neiintegration/textures/overlays.png
+dependency_records[2].evidence[0]: resource namespace
 ```
 
 
@@ -127,8 +204,8 @@ class_files: 60
 packages: 7
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0

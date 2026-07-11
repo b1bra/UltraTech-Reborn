@@ -11,14 +11,23 @@ version: 1.7.10-0.4.9
 author: Unknown
 size_mb: 0.14
 forge: Unknown
-dependencies: []
+dependencies[0]: AE2 API
+dependencies[1]: asielib
+dependencies[2]: ASM
+dependencies[3]: BuildCraft
+dependencies[4]: EnderIO
+dependencies[5]: Forge
+dependencies[6]: IC2 API
+dependencies[7]: LaunchWrapper
+dependencies[8]: OpenComputers
+dependencies[9]: Thermal Foundation
 files: 154
 class_files: 103
 packages: 30
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0
@@ -124,6 +133,124 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AE2 API
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: pl/asie/lib/integration/tool/ToolProviders.class
+dependency_records[0].sources[1]: pl/asie/lib/integration/tool/appeng/ToolProviderAE2.class
+dependency_records[0].sources[2]: pl/asie/lib/reference/Mods.class
+dependency_records[0].evidence[0]: appeng/api/
+dependency_records[0].evidence[1]: appliedenergistics2
+dependency_records[1].name: asielib
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/asielib/
+dependency_records[1].sources[1]: assets/asielib/lang/
+dependency_records[1].sources[2]: assets/asielib/lang/cs_CZ.lang
+dependency_records[1].sources[3]: assets/asielib/lang/de_DE.lang
+dependency_records[1].sources[4]: assets/asielib/lang/en_US.lang
+dependency_records[1].sources[5]: assets/asielib/lang/fr_FR.lang
+dependency_records[1].sources[6]: assets/asielib/lang/pl_PL.lang
+dependency_records[1].sources[7]: assets/asielib/lang/ru_RU.lang
+dependency_records[1].sources[8]: assets/asielib/textures/
+dependency_records[1].sources[9]: assets/asielib/textures/items/
+dependency_records[1].sources[10]: assets/asielib/textures/items/shark.png
+dependency_records[1].sources[11]: assets/asielib/textures/models/
+dependency_records[1].sources[12]: assets/asielib/textures/models/key.png
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: ASM
+dependency_records[2].categories[0]: ASM
+dependency_records[2].confidence: 92
+dependency_records[2].sources[0]: pl/asie/lib/util/ClassTransformer.class
+dependency_records[2].evidence[0]: org/objectweb/asm/, IClassTransformer, ClassVisitor
+dependency_records[3].name: BuildCraft
+dependency_records[3].categories[0]: Hidden
+dependency_records[3].confidence: 78
+dependency_records[3].sources[0]: pl/asie/lib/integration/buildcraft/SchematicBlockBase.class
+dependency_records[3].sources[1]: pl/asie/lib/integration/tool/ToolProviders.class
+dependency_records[3].sources[2]: pl/asie/lib/integration/tool/buildcraft/ToolProviderBuildCraft.class
+dependency_records[3].sources[3]: pl/asie/lib/reference/Mods$API.class
+dependency_records[3].evidence[0]: BuildCraft
+dependency_records[3].evidence[1]: buildcraft/api/
+dependency_records[3].evidence[2]: buildcraft/api/, BuildCraft
+dependency_records[4].name: EnderIO
+dependency_records[4].categories[0]: Hidden
+dependency_records[4].confidence: 78
+dependency_records[4].sources[0]: pl/asie/lib/integration/tool/ToolProviders.class
+dependency_records[4].sources[1]: pl/asie/lib/integration/tool/enderio/ToolProviderEnderIO.class
+dependency_records[4].evidence[0]: crazypants/enderio/, enderio
+dependency_records[4].evidence[1]: enderio
+dependency_records[5].name: Forge
+dependency_records[5].categories[0]: Hidden
+dependency_records[5].categories[1]: Reflection
+dependency_records[5].confidence: 78
+dependency_records[5].sources[0]: pl/asie/lib/AnvilDyeTweak.class
+dependency_records[5].sources[1]: pl/asie/lib/AsieLibMod.class
+dependency_records[5].sources[2]: pl/asie/lib/ClientProxy$1.class
+dependency_records[5].sources[3]: pl/asie/lib/ClientProxy.class
+dependency_records[5].sources[4]: pl/asie/lib/api/chat/package-info.class
+dependency_records[5].sources[5]: pl/asie/lib/api/package-info.class
+dependency_records[5].sources[6]: pl/asie/lib/api/tile/IBatteryProvider.class
+dependency_records[5].sources[7]: pl/asie/lib/api/tile/IBundledRedstoneProvider.class
+dependency_records[5].sources[8]: pl/asie/lib/api/tile/IInformationProvider.class
+dependency_records[5].sources[9]: pl/asie/lib/api/tile/IRedstoneProvider.class
+dependency_records[5].sources[10]: pl/asie/lib/api/tile/package-info.class
+dependency_records[5].sources[11]: pl/asie/lib/api/tool/package-info.class
+dependency_records[5].sources[12]: pl/asie/lib/audio/StreamingAudioPlayer.class
+dependency_records[5].sources[13]: pl/asie/lib/block/BlockBase.class
+dependency_records[5].sources[14]: pl/asie/lib/chat/ChatHandler.class
+dependency_records[5].sources[15]: pl/asie/lib/chat/ChatHandlerEiraIRC.class
+dependency_records[5].sources[16]: pl/asie/lib/client/BlockBaseRender.class
+dependency_records[5].sources[17]: pl/asie/lib/gui/GuiHandler.class
+dependency_records[5].sources[18]: pl/asie/lib/gui/managed/IGuiProvider.class
+dependency_records[5].sources[19]: pl/asie/lib/gui/managed/LegacyGuiProvider.class
+dependency_records[5].sources[20]: pl/asie/lib/gui/managed/ManagedGuiHandler.class
+dependency_records[5].sources[21]: pl/asie/lib/item/ItemMultiple.class
+dependency_records[5].sources[22]: pl/asie/lib/lib/EntityCoord.class
+dependency_records[5].sources[23]: pl/asie/lib/network/Packet.class
+dependency_records[5].sources[24]: pl/asie/lib/network/PacketChannelHandler.class
+dependency_records[5].sources[25]: pl/asie/lib/network/PacketHandler.class
+dependency_records[5].sources[26]: pl/asie/lib/reference/Mods$API.class
+dependency_records[5].sources[27]: pl/asie/lib/reference/Mods.class
+dependency_records[5].sources[28]: pl/asie/lib/tile/TileMachine.class
+dependency_records[5].sources[29]: pl/asie/lib/tweak/CraftingTweaker.class
+dependency_records[5].sources[30]: pl/asie/lib/tweak/enchantment/EnchantmentTweak.class
+dependency_records[5].sources[31]: pl/asie/lib/util/BlockCoord.class
+dependency_records[5].sources[32]: pl/asie/lib/util/ColorUtils.class
+dependency_records[5].sources[33]: pl/asie/lib/util/FluidUtils.class
+dependency_records[5].sources[34]: pl/asie/lib/util/SlotTyped.class
+dependency_records[5].sources[35]: pl/asie/lib/util/WorldUtils.class
+dependency_records[5].sources[36]: pl/asie/lib/util/color/RecipeDecolorizer.class
+dependency_records[5].evidence[0]: cpw/mods/fml/
+dependency_records[5].evidence[1]: net/minecraftforge/
+dependency_records[5].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[6].name: IC2 API
+dependency_records[6].categories[0]: Hidden
+dependency_records[6].confidence: 78
+dependency_records[6].sources[0]: pl/asie/lib/api/tile/IBatteryProvider.class
+dependency_records[6].sources[1]: pl/asie/lib/tile/TileMachine.class
+dependency_records[6].evidence[0]: ic2/api/
+dependency_records[7].name: LaunchWrapper
+dependency_records[7].categories[0]: CoreMod
+dependency_records[7].categories[1]: Runtime
+dependency_records[7].confidence: 92
+dependency_records[7].sources[0]: pl/asie/lib/tweak/CraftingTweaker.class
+dependency_records[7].sources[1]: pl/asie/lib/util/ClassTransformer.class
+dependency_records[7].evidence[0]: net/minecraft/launchwrapper/
+dependency_records[7].evidence[1]: tweaker marker
+dependency_records[8].name: OpenComputers
+dependency_records[8].categories[0]: Hidden
+dependency_records[8].confidence: 78
+dependency_records[8].sources[0]: pl/asie/lib/integration/tool/oc/ToolProviderOC.class
+dependency_records[8].evidence[0]: li/cil/oc/api/
+dependency_records[9].name: Thermal Foundation
+dependency_records[9].categories[0]: Hidden
+dependency_records[9].confidence: 78
+dependency_records[9].sources[0]: pl/asie/lib/api/tile/IBatteryProvider.class
+dependency_records[9].sources[1]: pl/asie/lib/api/tile/IInformationProvider.class
+dependency_records[9].sources[2]: pl/asie/lib/block/BlockBase.class
+dependency_records[9].sources[3]: pl/asie/lib/integration/tool/cofh/ToolProviderCoFH.class
+dependency_records[9].evidence[0]: cofh/api/
 ```
 
 
@@ -137,8 +264,8 @@ class_files: 103
 packages: 30
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0

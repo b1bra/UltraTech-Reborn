@@ -11,15 +11,17 @@ version: 1.1.1
 author: Unknown
 size_mb: 0.05
 forge: FMLAT: decorativeapi_at.cfg
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: decorativeapi
+dependencies[2]: Forge
 files: 33
 class_files: 26
 packages: 9
 score: 100
 difficulty: Hard
 detections[0]: Old Rendering
-detections[1]: Old Registry
-detections[2]: Old Forge API
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -94,6 +96,39 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/decorativeapi_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: decorativeapi
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/decorativeapi/lang/en_US.lang
+dependency_records[1].sources[1]: assets/decorativeapi/lang/ru_RU.lang
+dependency_records[1].sources[2]: assets/decorativeapi/textures/blocks/debug_brick.png
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: com/aizistral/decorations/DecorationsMod.class
+dependency_records[2].sources[1]: com/aizistral/decorations/blocks/DecorativeFenceBlock.class
+dependency_records[2].sources[2]: com/aizistral/decorations/blocks/DecorativeGateBlock.class
+dependency_records[2].sources[3]: com/aizistral/decorations/blocks/DecorativeSlabBlock.class
+dependency_records[2].sources[4]: com/aizistral/decorations/blocks/DecorativeStairsBlock.class
+dependency_records[2].sources[5]: com/aizistral/decorations/blocks/DecorativeWallBlock.class
+dependency_records[2].sources[6]: com/aizistral/decorations/core/BlockGroupImpl.class
+dependency_records[2].sources[7]: com/aizistral/decorations/core/DecorativeUtils.class
+dependency_records[2].sources[8]: com/aizistral/decorations/items/DecorativeItemBlock.class
+dependency_records[2].sources[9]: com/aizistral/decorations/proxy/ClientProxy.class
+dependency_records[2].sources[10]: com/aizistral/decorations/renderer/DecorativeGateBlockRenderer.class
+dependency_records[2].sources[11]: com/aizistral/decorations/renderer/DecorativeSlabBlockRenderer$1.class
+dependency_records[2].sources[12]: com/aizistral/decorations/renderer/DecorativeSlabBlockRenderer.class
+dependency_records[2].sources[13]: com/aizistral/decorations/renderer/SlabPlacementPreviewRenderer.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
+dependency_records[2].evidence[1]: net/minecraftforge/
+dependency_records[2].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 
@@ -108,8 +143,8 @@ packages: 9
 score: 100
 difficulty: Hard
 detections[0]: Old Rendering
-detections[1]: Old Registry
-detections[2]: Old Forge API
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0

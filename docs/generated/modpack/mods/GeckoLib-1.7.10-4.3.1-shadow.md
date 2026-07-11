@@ -11,7 +11,8 @@ version: Unknown
 author: Unknown
 size_mb: 0.39
 forge: FMLAT: gecko_at.cfg
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: Forge
 files: 245
 class_files: 241
 packages: 9
@@ -98,6 +99,49 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/gecko_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].categories[1]: Reflection
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: loliland/geckolib/obf/I11llANd.class
+dependency_records[1].sources[1]: loliland/geckolib/obf/II1II0laND.class
+dependency_records[1].sources[2]: loliland/geckolib/obf/OIi00l0LaND.class
+dependency_records[1].sources[3]: loliland/geckolib/obf/OIl0IilanD.class
+dependency_records[1].sources[4]: loliland/geckolib/obf/OO10lO1LANd.class
+dependency_records[1].sources[5]: loliland/geckolib/obf/OOiO1lAnd$I1O1I1LaNd.class
+dependency_records[1].sources[6]: loliland/geckolib/obf/OOiO1lAnd.class
+dependency_records[1].sources[7]: loliland/geckolib/obf/OlO11Land.class
+dependency_records[1].sources[8]: loliland/geckolib/obf/iIlI0LAND$I1O1I1LaNd.class
+dependency_records[1].sources[9]: loliland/geckolib/obf/iIlI0LAND.class
+dependency_records[1].sources[10]: loliland/geckolib/obf/iOO1IiI1lAnD.class
+dependency_records[1].sources[11]: loliland/geckolib/obf/iiO0ilaNd$I1O1I1LaNd.class
+dependency_records[1].sources[12]: loliland/geckolib/obf/iiO0ilaNd$OOOIilanD.class
+dependency_records[1].sources[13]: loliland/geckolib/obf/iiO0ilaNd.class
+dependency_records[1].sources[14]: loliland/geckolib/obf/il10laNd$I1O1I1LaNd.class
+dependency_records[1].sources[15]: loliland/geckolib/obf/il10laNd.class
+dependency_records[1].sources[16]: loliland/geckolib/obf/ilIlllanD.class
+dependency_records[1].sources[17]: loliland/geckolib/obf/l0lOiOlAnd.class
+dependency_records[1].sources[18]: loliland/geckolib/obf/l0lllAND.class
+dependency_records[1].sources[19]: loliland/geckolib/obf/l10OilanD.class
+dependency_records[1].sources[20]: loliland/geckolib/obf/lIOl0lAND.class
+dependency_records[1].sources[21]: loliland/geckolib/obf/lO011O1IlAnD.class
+dependency_records[1].sources[22]: loliland/geckolib/obf/lOIOlOIIlAnd.class
+dependency_records[1].sources[23]: loliland/geckolib/obf/lOOl0LaNd.class
+dependency_records[1].sources[24]: loliland/geckolib/obf/lOi1OOI1lanD.class
+dependency_records[1].sources[25]: loliland/geckolib/obf/lOlO0I0land.class
+dependency_records[1].sources[26]: loliland/geckolib/obf/li0ii01laND.class
+dependency_records[1].sources[27]: loliland/geckolib/obf/lii1IlAND.class
+dependency_records[1].sources[28]: loliland/geckolib/obf/lilOIlANd.class
+dependency_records[1].sources[29]: loliland/geckolib/obf/llii0LAnD.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

@@ -134,30 +134,30 @@ Class files scanned: 200
 Recipe classes:
 
 ```text
-fox/spiteful/avaritia/compat/forestry/Ranger.class
-fox/spiteful/avaritia/compat/nei/ExtremeShapedRecipeHandler$CachedExtremeRecipe.class
 fox/spiteful/avaritia/items/ItemFracturedOre.class
-fox/spiteful/avaritia/compat/nei/ExtremeShapelessRecipeHandler.class
-fox/spiteful/avaritia/crafting/ExtremeShapedOreRecipe.class
-fox/spiteful/avaritia/compat/botania/PageLudicrousRecipe.class
-fox/spiteful/avaritia/crafting/ExtremeShapedRecipe.class
-fox/spiteful/avaritia/compat/nei/ExtremeShapedRecipeHandler.class
-fox/spiteful/avaritia/compat/nei/NotEnough.class
-fox/spiteful/avaritia/compat/botania/Tsundere.class
-fox/spiteful/avaritia/crafting/Mincer.class
-fox/spiteful/avaritia/crafting/CompressorManager.class
-fox/spiteful/avaritia/crafting/Grinder.class
-fox/spiteful/avaritia/compat/bloodmagic/Bloody.class
-fox/spiteful/avaritia/compat/Compat.class
-fox/spiteful/avaritia/compat/minetweaker/ExtremeCrafting$AddCatalyst.class
-fox/spiteful/avaritia/compat/ticon/Tonkers.class
-fox/spiteful/avaritia/compat/nei/ExtremeShapelessRecipeHandler$CachedExtremeShapelessRecipe.class
-fox/spiteful/avaritia/compat/thaumcraft/Lucrum.class
-fox/spiteful/avaritia/compat/minetweaker/ExtremeCrafting$RemoveCatalyst.class
-fox/spiteful/avaritia/recipe/AvaritiaRecipeRegistration.class
 fox/spiteful/avaritia/crafting/ExtremeShapelessRecipe.class
+fox/spiteful/avaritia/crafting/ExtremeShapedRecipe.class
+fox/spiteful/avaritia/compat/thaumcraft/Lucrum.class
+fox/spiteful/avaritia/compat/nei/NotEnough.class
+fox/spiteful/avaritia/compat/forestry/Ranger.class
+fox/spiteful/avaritia/compat/nei/ExtremeShapelessRecipeHandler.class
+fox/spiteful/avaritia/compat/nei/ExtremeShapelessRecipeHandler$CachedExtremeShapelessRecipe.class
+fox/spiteful/avaritia/crafting/Grinder.class
+fox/spiteful/avaritia/recipe/AvaritiaRecipeRegistration.class
+fox/spiteful/avaritia/compat/botania/PageLudicrousRecipe.class
+fox/spiteful/avaritia/compat/nei/ExtremeShapedRecipeHandler$CachedExtremeRecipe.class
+fox/spiteful/avaritia/crafting/Mincer.class
+fox/spiteful/avaritia/compat/nei/ExtremeShapedRecipeHandler.class
+fox/spiteful/avaritia/crafting/ExtremeShapedOreRecipe.class
+fox/spiteful/avaritia/crafting/CompressorManager.class
 fox/spiteful/avaritia/compat/minetweaker/ExtremeCrafting.class
+fox/spiteful/avaritia/compat/botania/Tsundere.class
 fox/spiteful/avaritia/crafting/ExtremeCraftingManager.class
+fox/spiteful/avaritia/compat/Compat.class
+fox/spiteful/avaritia/compat/minetweaker/ExtremeCrafting$RemoveCatalyst.class
+fox/spiteful/avaritia/compat/minetweaker/ExtremeCrafting$AddCatalyst.class
+fox/spiteful/avaritia/compat/bloodmagic/Bloody.class
+fox/spiteful/avaritia/compat/ticon/Tonkers.class
 ```
 
 Recipe paths:
@@ -391,13 +391,13 @@ Class files scanned: 611
 Recipe classes:
 
 ```text
-cofh/api/modhelpers/EE3Helper.class
-cofh/lib/util/helpers/ItemHelper.class
-cofh/core/util/crafting/RecipeReset.class
-cofh/core/util/crafting/RecipeUpgrade.class
-cofh/core/util/crafting/RecipeSecureRemove.class
 cofh/core/util/crafting/RecipeAugmentable.class
 cofh/core/util/crafting/RecipeSecure.class
+cofh/core/util/crafting/RecipeReset.class
+cofh/core/util/crafting/RecipeSecureRemove.class
+cofh/core/util/crafting/RecipeUpgrade.class
+cofh/lib/util/helpers/ItemHelper.class
+cofh/api/modhelpers/EE3Helper.class
 ```
 
 Recipe paths:
@@ -553,38 +553,38 @@ Class files scanned: 768
 Recipe classes:
 
 ```text
-minetweaker/mods/ic2/machines/Compressor.class
-minetweaker/mc1710/util/MineTweakerHacks.class
-minetweaker/mc1710/recipes/ShapelessRecipeAdvanced.class
-minetweaker/mc1710/recipes/MCRecipeManager$ActionBaseAddRecipe.class
-minetweaker/api/compat/DummyJEIRecipeRegistry.class
-minetweaker/api/compat/IJEIRecipeRegistry.class
-minetweaker/MineTweakerImplementationAPI.class
-minetweaker/mc1710/recipes/ShapedRecipeAdvanced.class
-minetweaker/mc1710/recipes/MCRecipeManager$ActionRemoveRecipesNoIngredients.class
-minetweaker/mc1710/recipes/ShapelessRecipeBasic.class
-minetweaker/mc1710/recipes/MCRecipeManager$ActionAddShapedRecipe.class
-minetweaker/mc1710/recipes/ShapedRecipeBasic.class
-minetweaker/mods/ic2/machines/OreWasher.class
-minetweaker/mc1710/recipes/MCRecipeManager$ActionAddShapelessRecipe.class
-minetweaker/api/recipes/ShapedRecipe.class
-minetweaker/mc1710/furnace/MCFurnaceManager$AddRecipeAction.class
-minetweaker/mc1710/recipes/MCRecipeManager.class
-minetweaker/mc1710/furnace/MCFurnaceManager.class
-minetweaker/api/recipes/ShapelessRecipe.class
-minetweaker/mc1710/recipes/MCRecipeManager$ActionRemoveShapedRecipes.class
-minetweaker/mc1710/recipes/ShapelessRecipeOre.class
-minetweaker/api/recipes/FurnaceRecipe.class
-minetweaker/mc1710/recipes/MCRecipeManager$ActionRemoveShapelessRecipes.class
-minetweaker/mods/ic2/machines/ThermalCentrifuge.class
-minetweaker/mc1710/recipes/RecipeConverter.class
-minetweaker/api/recipes/ShapelessRecipe$RecipeMatching.class
-minetweaker/mods/ic2/machines/Extractor.class
-minetweaker/api/recipes/IFurnaceManager.class
-minetweaker/mc1710/recipes/ShapedRecipeOre.class
 minetweaker/mods/ic2/machines/BlockCutter.class
-minetweaker/mc1710/furnace/MCFurnaceManager$RemoveAction.class
+minetweaker/api/recipes/ShapelessRecipe.class
+minetweaker/api/recipes/FurnaceRecipe.class
+minetweaker/api/recipes/ShapedRecipe.class
 minetweaker/mods/ic2/machines/Macerator.class
+minetweaker/api/compat/DummyJEIRecipeRegistry.class
+minetweaker/mods/ic2/machines/OreWasher.class
+minetweaker/mods/ic2/machines/ThermalCentrifuge.class
+minetweaker/mc1710/recipes/ShapelessRecipeOre.class
+minetweaker/mods/ic2/machines/Extractor.class
+minetweaker/mc1710/recipes/ShapedRecipeBasic.class
+minetweaker/api/recipes/ShapelessRecipe$RecipeMatching.class
+minetweaker/mc1710/recipes/ShapelessRecipeAdvanced.class
+minetweaker/mc1710/recipes/MCRecipeManager$ActionRemoveShapedRecipes.class
+minetweaker/mods/ic2/machines/Compressor.class
+minetweaker/mc1710/furnace/MCFurnaceManager$AddRecipeAction.class
+minetweaker/mc1710/recipes/MCRecipeManager$ActionRemoveShapelessRecipes.class
+minetweaker/mc1710/furnace/MCFurnaceManager$RemoveAction.class
+minetweaker/mc1710/recipes/ShapelessRecipeBasic.class
+minetweaker/mc1710/recipes/MCRecipeManager.class
+minetweaker/mc1710/recipes/MCRecipeManager$ActionAddShapedRecipe.class
+minetweaker/mc1710/recipes/MCRecipeManager$ActionBaseAddRecipe.class
+minetweaker/mc1710/recipes/ShapedRecipeOre.class
+minetweaker/mc1710/recipes/ShapedRecipeAdvanced.class
+minetweaker/api/compat/IJEIRecipeRegistry.class
+minetweaker/mc1710/furnace/MCFurnaceManager.class
+minetweaker/mc1710/recipes/MCRecipeManager$ActionRemoveRecipesNoIngredients.class
+minetweaker/mc1710/recipes/MCRecipeManager$ActionAddShapelessRecipe.class
+minetweaker/mc1710/recipes/RecipeConverter.class
+minetweaker/mc1710/util/MineTweakerHacks.class
+minetweaker/MineTweakerImplementationAPI.class
+minetweaker/api/recipes/IFurnaceManager.class
 ```
 
 Recipe paths:
@@ -623,12 +623,12 @@ Class files scanned: 144
 Recipe classes:
 
 ```text
-com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler.class
+com/creativemd/creativecore/common/recipe/entry/BetterShapelessRecipe.class
 com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler$CachedInfoShapedRecipe.class
 com/creativemd/creativecore/common/recipe/CreativeShapelessRecipe.class
-com/creativemd/creativecore/common/recipe/entry/BetterShapelessRecipe.class
 com/creativemd/creativecore/common/recipe/RecipeLoader.class
 com/creativemd/creativecore/common/recipe/BetterShapedRecipe.class
+com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler.class
 ```
 
 Recipe paths:
@@ -706,20 +706,20 @@ Class files scanned: 957
 Recipe classes:
 
 ```text
-net/divinerpg/blocks/base/tileentity/container/ContainerModFurnace.class
-net/divinerpg/utils/recipes/RecipeUtil.class
-net/divinerpg/utils/recipes/ExtractorRecipes.class
-net/divinerpg/blocks/vethea/container/tileentity/TileEntityInfusionTable.class
-net/divinerpg/blocks/base/tileentity/TileEntityInfiniteFurnace.class
-net/divinerpg/utils/Util.class
-net/divinerpg/utils/recipes/TwilightRecipeHelper.class
-net/divinerpg/blocks/vethea/container/SlotInfusion.class
-net/divinerpg/utils/recipes/VanillaRecipeHelper.class
-net/divinerpg/blocks/base/tileentity/container/ContainerInfiniteFurnace.class
-net/divinerpg/utils/recipes/DivineShapelessRecipes.class
-net/divinerpg/utils/recipes/DivineShapedRecipes.class
 net/divinerpg/blocks/base/tileentity/TileEntityModFurnace.class
+net/divinerpg/utils/recipes/VanillaRecipeHelper.class
+net/divinerpg/utils/Util.class
+net/divinerpg/blocks/base/tileentity/container/ContainerModFurnace.class
+net/divinerpg/blocks/base/tileentity/container/ContainerInfiniteFurnace.class
+net/divinerpg/blocks/base/tileentity/TileEntityInfiniteFurnace.class
 net/divinerpg/utils/recipes/RecipesInfusionTable.class
+net/divinerpg/utils/recipes/RecipeUtil.class
+net/divinerpg/blocks/vethea/container/tileentity/TileEntityInfusionTable.class
+net/divinerpg/utils/recipes/DivineShapedRecipes.class
+net/divinerpg/utils/recipes/DivineShapelessRecipes.class
+net/divinerpg/blocks/vethea/container/SlotInfusion.class
+net/divinerpg/utils/recipes/TwilightRecipeHelper.class
+net/divinerpg/utils/recipes/ExtractorRecipes.class
 ```
 
 Recipe paths:
@@ -758,9 +758,9 @@ Class files scanned: 303
 Recipe classes:
 
 ```text
-com/brandon3055/draconicevolution/common/handler/CraftingHandler.class
 com/brandon3055/draconicevolution/common/utills/ShapedOreEnergyRecipe.class
 com/brandon3055/draconicevolution/client/gui/guicomponents/ComponentManualPage$ContentComponent.class
+com/brandon3055/draconicevolution/common/handler/CraftingHandler.class
 ```
 
 Recipe paths:
@@ -799,10 +799,10 @@ Class files scanned: 240
 Recipe classes:
 
 ```text
-com/enderio/core/common/tweaks/SlabRecipes.class
 com/enderio/core/common/transform/EnderCoreMethods.class
-com/enderio/core/common/handlers/AutoSmeltHandler.class
 com/enderio/core/common/tweaks/Tweaks$4.class
+com/enderio/core/common/handlers/AutoSmeltHandler.class
+com/enderio/core/common/tweaks/SlabRecipes.class
 com/enderio/core/common/tweaks/Tweaks$5.class
 ```
 
@@ -842,25 +842,25 @@ Class files scanned: 1102
 Recipe classes:
 
 ```text
-crazypants/enderio/teleport/TeleportRecipes.class
-crazypants/enderio/machine/alloy/AlloyRecipeManager.class
-crazypants/enderio/machine/MachineRecipes.class
-crazypants/util/EE3Util.class
-crazypants/enderio/machine/crusher/CrusherRecipeManager.class
+crazypants/enderio/EnderIO.class
 crazypants/enderio/machine/alloy/VanillaSmeltingRecipe.class
-crazypants/enderio/machine/alloy/AlloyRecipeManager$VanillaFurnaceTagHandler.class
-crazypants/enderio/enderface/EnderfaceRecipes.class
-crazypants/enderio/machine/recipe/RecipeConfig.class
+crazypants/enderio/machine/alloy/AlloyRecipeManager.class
+crazypants/enderio/machine/recipe/RecipeConfigParser.class
+crazypants/enderio/machine/recipe/ManyToOneRecipeManager.class
+crazypants/enderio/machine/UpgradeCapBankRecipe.class
 crazypants/enderio/machine/recipe/RecipeConfig$RecipeGroup.class
 crazypants/enderio/machine/vat/VatRecipeManager.class
-crazypants/util/RecipeUtil.class
+crazypants/util/EE3Util.class
 crazypants/enderio/conduit/ConduitRecipes.class
-crazypants/enderio/machine/UpgradeCapBankRecipe.class
-crazypants/enderio/machine/recipe/ManyToOneRecipeManager.class
-crazypants/enderio/item/ItemRecipes.class
-crazypants/enderio/EnderIO.class
+crazypants/enderio/machine/alloy/AlloyRecipeManager$VanillaFurnaceTagHandler.class
+crazypants/enderio/machine/crusher/CrusherRecipeManager.class
 crazypants/enderio/material/MaterialRecipes.class
-crazypants/enderio/machine/recipe/RecipeConfigParser.class
+crazypants/util/RecipeUtil.class
+crazypants/enderio/teleport/TeleportRecipes.class
+crazypants/enderio/item/ItemRecipes.class
+crazypants/enderio/machine/MachineRecipes.class
+crazypants/enderio/enderface/EnderfaceRecipes.class
+crazypants/enderio/machine/recipe/RecipeConfig.class
 ```
 
 Recipe paths:
@@ -1056,10 +1056,10 @@ Class files scanned: 272
 Recipe classes:
 
 ```text
-micdoodle8/mods/galacticraft/planets/mars/recipe/RecipeManagerMars.class
-micdoodle8/mods/galacticraft/planets/asteroids/recipe/RecipeManagerAsteroids.class
-micdoodle8/mods/galacticraft/planets/asteroids/recipe/CanisterRecipes.class
 micdoodle8/mods/galacticraft/planets/mars/MarsModule.class
+micdoodle8/mods/galacticraft/planets/asteroids/recipe/RecipeManagerAsteroids.class
+micdoodle8/mods/galacticraft/planets/mars/recipe/RecipeManagerMars.class
+micdoodle8/mods/galacticraft/planets/asteroids/recipe/CanisterRecipes.class
 ```
 
 Recipe paths:
@@ -1098,15 +1098,15 @@ Class files scanned: 724
 Recipe classes:
 
 ```text
-micdoodle8/mods/galacticraft/core/recipe/RecipeManagerGC.class
-micdoodle8/mods/galacticraft/api/recipe/CircuitFabricatorRecipes.class
 micdoodle8/mods/galacticraft/core/inventory/ContainerElectricFurnace.class
-micdoodle8/mods/galacticraft/api/recipe/CompressorRecipes.class
 micdoodle8/mods/galacticraft/core/nei/NEIGalacticraftConfig.class
 micdoodle8/mods/galacticraft/core/tile/TileEntityElectricFurnace.class
-micdoodle8/mods/galacticraft/core/tile/TileEntityIngotCompressor.class
 micdoodle8/mods/galacticraft/core/tile/TileEntityElectricIngotCompressor.class
 micdoodle8/mods/galacticraft/core/util/RecipeUtil.class
+micdoodle8/mods/galacticraft/core/recipe/RecipeManagerGC.class
+micdoodle8/mods/galacticraft/api/recipe/CircuitFabricatorRecipes.class
+micdoodle8/mods/galacticraft/core/tile/TileEntityIngotCompressor.class
+micdoodle8/mods/galacticraft/api/recipe/CompressorRecipes.class
 ```
 
 Recipe paths:
@@ -1145,24 +1145,24 @@ Class files scanned: 841
 Recipe classes:
 
 ```text
-galaxyspace/systems/SolarSystem/moons/europa/recipe/CraftingRecipesEuropa.class
-galaxyspace/systems/SolarSystem/planets/overworld/tile/TileEntityAssemblyMachine.class
-galaxyspace/systems/SolarSystem/planets/mars/recipes/CraftingRecipesMars.class
 galaxyspace/systems/SolarSystem/planets/overworld/recipe/AssemberRecipes.class
-galaxyspace/systems/SolarSystem/moons/ganymede/recipe/CraftingRecipesGanymede.class
-galaxyspace/systems/SolarSystem/planets/overworld/recipe/RocketAssemblyRecipes.class
-galaxyspace/systems/SolarSystem/planets/overworld/tile/TileEntityRocketAssemblyMachine.class
+galaxyspace/systems/SolarSystem/planets/mercury/recipe/CraftingRecipesMercury.class
 galaxyspace/systems/SolarSystem/planets/overworld/recipe/CraftingRecipesOverworld.class
 galaxyspace/systems/SolarSystem/moons/miranda/recipe/CraftingRecipesMiranda.class
-galaxyspace/systems/ACentauriSystem/planets/proximaB/recipes/CraftingRecipesProximaB.class
+galaxyspace/systems/SolarSystem/moons/europa/recipe/CraftingRecipesEuropa.class
 galaxyspace/core/client/nei/NEIGalaxySpaceConfig.class
-galaxyspace/systems/SolarSystem/moons/io/recipe/CraftingRecipesIo.class
+galaxyspace/systems/ACentauriSystem/planets/proximaB/recipes/CraftingRecipesProximaB.class
 galaxyspace/systems/BarnardsSystem/planets/barnardaC/recipes/CraftingRecipesBarnardaC.class
-galaxyspace/systems/SolarSystem/planets/mercury/recipe/CraftingRecipesMercury.class
+galaxyspace/core/integration/minetweaker/handlers/MTHandler_Recycler.class
+galaxyspace/systems/SolarSystem/moons/io/recipe/CraftingRecipesIo.class
+galaxyspace/systems/SolarSystem/planets/overworld/tile/TileEntityAssemblyMachine.class
 galaxyspace/systems/SolarSystem/moons/moon/recipe/AlienRecipes.class
+galaxyspace/systems/SolarSystem/planets/overworld/recipe/RocketAssemblyRecipes.class
+galaxyspace/systems/SolarSystem/planets/overworld/tile/TileEntityRocketAssemblyMachine.class
+galaxyspace/systems/SolarSystem/planets/mars/recipes/CraftingRecipesMars.class
 galaxyspace/core/integration/minetweaker/handlers/MTHandler_Assembler.class
 galaxyspace/core/integration/minetweaker/handlers/MTHandler_Assembler$Add.class
-galaxyspace/core/integration/minetweaker/handlers/MTHandler_Recycler.class
+galaxyspace/systems/SolarSystem/moons/ganymede/recipe/CraftingRecipesGanymede.class
 ```
 
 Recipe paths:
@@ -1279,13 +1279,13 @@ Class files scanned: 206
 Recipe classes:
 
 ```text
-shedar/mods/ic2/nuclearcontrol/crossmod/appeng/AppengRecipes.class
-shedar/mods/ic2/nuclearcontrol/crossmod/appeng/CrossAppeng.class
-shedar/mods/ic2/nuclearcontrol/recipes/RecipesOld.class
-shedar/mods/ic2/nuclearcontrol/crossmod/vanilla/Vanilla.class
-shedar/mods/ic2/nuclearcontrol/crossmod/gregtech/GregtechRecipes.class
-shedar/mods/ic2/nuclearcontrol/recipes/RecipesNew.class
 shedar/mods/ic2/nuclearcontrol/IC2NuclearControl.class
+shedar/mods/ic2/nuclearcontrol/crossmod/vanilla/Vanilla.class
+shedar/mods/ic2/nuclearcontrol/crossmod/appeng/CrossAppeng.class
+shedar/mods/ic2/nuclearcontrol/recipes/RecipesNew.class
+shedar/mods/ic2/nuclearcontrol/recipes/RecipesOld.class
+shedar/mods/ic2/nuclearcontrol/crossmod/appeng/AppengRecipes.class
+shedar/mods/ic2/nuclearcontrol/crossmod/gregtech/GregtechRecipes.class
 ```
 
 Recipe paths:
@@ -1636,8 +1636,8 @@ Class files scanned: 1181
 Recipe classes:
 
 ```text
-loliland/technologies/ae2/obf/ilO10iOlLand.class
 thaumcraft/api/ThaumcraftApi.class
+loliland/technologies/ae2/obf/ilO10iOlLand.class
 thaumcraft/api/research/ResearchPage.class
 ```
 
@@ -1795,41 +1795,41 @@ Class files scanned: 1673
 Recipe classes:
 
 ```text
-ru/loliland/le/integration/minetweaker/MTIntegration.class
-ru/loliland/le/common/tile/TileCrystalGrowthChamber.class
-ru/loliland/le/integration/minetweaker/MTCapillaryFiller.class
-ru/loliland/le/integration/minetweaker/MTCauldron.class
-ru/loliland/le/common/tile/TileDoubleMolecular.class
-ru/loliland/le/integration/minetweaker/MTBlastFurnace.class
 ru/loliland/le/integration/notenoughitems/AdvancedQEDHandler.class
-ru/loliland/le/integration/minetweaker/MTElectrolyticSeparator.class
-ru/loliland/le/integration/minetweaker/MTAssemblyTable$I1O1I1LaNd.class
-ru/loliland/le/common/tile/TileMolecular.class
-ru/loliland/le/integration/minetweaker/MTBlender.class
-ru/loliland/le/integration/minetweaker/MTCokeOven.class
-ru/loliland/le/common/tile/TileEnrichmentChamber.class
-ru/loliland/le/integration/notenoughitems/QEDRecipeHandler.class
-ru/loliland/le/common/tile/minechem/TileChemicalSynthesizer.class
-ru/loliland/le/common/tile/TileCrystalChargingChamber.class
-ru/loliland/le/integration/minetweaker/MTHemontransmutator.class
-ru/loliland/le/integration/minetweaker/MTSteamBoiler.class
-ru/loliland/le/integration/minetweaker/MTMatterSolid.class
-ru/loliland/le/integration/minetweaker/MTAdvancedQED.class
-ru/loliland/le/integration/minetweaker/MTMolecularFarm.class
-ru/loliland/le/common/tile/TileMatter.class
-ru/loliland/le/integration/minetweaker/I1O1I1LaNd.class
-ru/loliland/le/integration/OOOIilanD.class
-ru/loliland/le/integration/minetweaker/MTAssemblyTable.class
-ru/loliland/le/integration/minetweaker/MTHardeningBath.class
-ru/loliland/le/common/tile/TileMacerator.class
-ru/loliland/le/common/tile/TileCoolantFactory.class
-ru/loliland/le/common/tile/TileMolecularFarm.class
-ru/lolienergistics/I1iiOLanD.class
-ru/loliland/le/common/recipe/assembly/AssemblyRecipeManager.class
-ru/loliland/le/integration/minetweaker/MTDoubleMolecular.class
+ru/loliland/le/common/tile/TileDoubleMolecular.class
 ru/loliland/le/integration/minetweaker/MTMolecular.class
-ru/loliland/le/integration/minetweaker/MTReactionChamber.class
+ru/lolienergistics/I1iiOLanD.class
+ru/loliland/le/common/tile/TileEnrichmentChamber.class
+ru/loliland/le/common/recipe/assembly/AssemblyRecipeManager.class
+ru/loliland/le/integration/minetweaker/MTMolecularFarm.class
+ru/loliland/le/integration/minetweaker/MTSteamBoiler.class
+ru/loliland/le/integration/minetweaker/MTDoubleMolecular.class
+ru/loliland/le/integration/minetweaker/MTAssemblyTable$I1O1I1LaNd.class
 ru/loliland/le/common/tile/TileMatterSolid.class
+ru/loliland/le/integration/minetweaker/MTMatterSolid.class
+ru/loliland/le/common/tile/TileMatter.class
+ru/loliland/le/integration/minetweaker/MTBlender.class
+ru/loliland/le/integration/minetweaker/I1O1I1LaNd.class
+ru/loliland/le/integration/minetweaker/MTCapillaryFiller.class
+ru/loliland/le/integration/minetweaker/MTAssemblyTable.class
+ru/loliland/le/common/tile/TileMolecular.class
+ru/loliland/le/integration/OOOIilanD.class
+ru/loliland/le/integration/minetweaker/MTBlastFurnace.class
+ru/loliland/le/integration/minetweaker/MTReactionChamber.class
+ru/loliland/le/common/tile/TileCrystalGrowthChamber.class
+ru/loliland/le/integration/minetweaker/MTAdvancedQED.class
+ru/loliland/le/common/tile/minechem/TileChemicalSynthesizer.class
+ru/loliland/le/integration/notenoughitems/QEDRecipeHandler.class
+ru/loliland/le/integration/minetweaker/MTIntegration.class
+ru/loliland/le/common/tile/TileMacerator.class
+ru/loliland/le/integration/minetweaker/MTCokeOven.class
+ru/loliland/le/integration/minetweaker/MTHemontransmutator.class
+ru/loliland/le/common/tile/TileCoolantFactory.class
+ru/loliland/le/integration/minetweaker/MTCauldron.class
+ru/loliland/le/common/tile/TileMolecularFarm.class
+ru/loliland/le/common/tile/TileCrystalChargingChamber.class
+ru/loliland/le/integration/minetweaker/MTElectrolyticSeparator.class
+ru/loliland/le/integration/minetweaker/MTHardeningBath.class
 ```
 
 Recipe paths:
@@ -2220,15 +2220,15 @@ Class files scanned: 888
 Recipe classes:
 
 ```text
-matteroverdrive/blocks/BlockTritaniumCrate.class
-matteroverdrive/init/MatterOverdriveItems.class
-matteroverdrive/guide/GuideElementRecipe.class
-matteroverdrive/data/recipes/EnergyPackRecipe.class
-matteroverdrive/items/weapon/module/WeaponModuleBarrel.class
-matteroverdrive/handler/MatterRegistry.class
-matteroverdrive/handler/thread/RegisterItemsFromRecipes.class
-matteroverdrive/init/MatterOverdriveRecipes.class
 matteroverdrive/items/ItemUpgrade.class
+matteroverdrive/handler/thread/RegisterItemsFromRecipes.class
+matteroverdrive/data/recipes/EnergyPackRecipe.class
+matteroverdrive/handler/MatterRegistry.class
+matteroverdrive/guide/GuideElementRecipe.class
+matteroverdrive/init/MatterOverdriveRecipes.class
+matteroverdrive/init/MatterOverdriveItems.class
+matteroverdrive/items/weapon/module/WeaponModuleBarrel.class
+matteroverdrive/blocks/BlockTritaniumCrate.class
 ```
 
 Recipe paths:
@@ -2306,21 +2306,21 @@ Class files scanned: 368
 Recipe classes:
 
 ```text
-minechem/minetweaker/Synthesiser.class
 minechem/nei/SynthesisNEIRecipeHandler$CachedSynthesisRecipe.class
+minechem/nei/ChemicalBucketNEIRecipeHandler$CachedChemicalBucketRecipe.class
+minechem/minetweaker/Synthesiser.class
 minechem/utils/Recipe.class
 minechem/tileentity/synthesis/SynthesisRecipe.class
-minechem/nei/ChemicalBucketNEIRecipeHandler.class
 minechem/item/chemistjournal/ChemistJournalGui.class
-minechem/item/bucket/MinechemBucketHandler.class
-minechem/nei/ChemicalBucketNEIRecipeHandler$CachedChemicalBucketRecipe.class
-minechem/tileentity/synthesis/SynthesisTileEntity.class
-minechem/computercraft/ChemicalTurtlePeripheral.class
-minechem/nei/SynthesisNEIRecipeHandler.class
-minechem/tileentity/microscope/MicroscopeGui.class
 minechem/tileentity/synthesis/SynthesisRecipeHandler.class
+minechem/nei/SynthesisNEIRecipeHandler.class
+minechem/computercraft/ChemicalTurtlePeripheral.class
+minechem/tileentity/microscope/MicroscopeGui.class
+minechem/item/bucket/MinechemBucketHandler.class
 minechem/minetweaker/Decomposer.class
 minechem/MinechemRecipes.class
+minechem/tileentity/synthesis/SynthesisTileEntity.class
+minechem/nei/ChemicalBucketNEIRecipeHandler.class
 ```
 
 Recipe paths:
@@ -2359,10 +2359,10 @@ Class files scanned: 456
 Recipe classes:
 
 ```text
+powercrystals/minefactoryreloaded/setup/recipe/handler/ShapelessMachineTinker.class
+powercrystals/minefactoryreloaded/setup/recipe/EnderIO.class
 powercrystals/minefactoryreloaded/setup/recipe/Vanilla.class
 powercrystals/minefactoryreloaded/setup/recipe/ThermalExpansion.class
-powercrystals/minefactoryreloaded/setup/recipe/EnderIO.class
-powercrystals/minefactoryreloaded/setup/recipe/handler/ShapelessMachineTinker.class
 powercrystals/minefactoryreloaded/entity/EntityFishingRod.class
 ```
 
@@ -2441,65 +2441,65 @@ Class files scanned: 300
 Recipe classes:
 
 ```text
-modtweaker2/mods/thermalexpansion/handlers/Insolator.class
-modtweaker2/mods/thermalexpansion/handlers/Crucible$Add.class
-modtweaker2/mods/thermalexpansion/handlers/Crucible$Remove.class
-modtweaker2/mods/botania/handlers/RuneAltar.class
-modtweaker2/mods/exnihilo/commands/ExNihiloLogger.class
-modtweaker2/helpers/LogHelper.class
-modtweaker2/mods/thermalexpansion/handlers/Crucible.class
-modtweaker2/mods/tconstruct/commands/TConstructLogger.class
-modtweaker2/mods/thermalexpansion/handlers/Smelter$Remove.class
-modtweaker2/mods/forestry/recipes/DescriptiveRecipe.class
-modtweaker2/mods/thermalexpansion/handlers/Furnace$Remove.class
-modtweaker2/mods/forestry/handlers/Still.class
-modtweaker2/mods/thermalexpansion/handlers/Sawmill.class
-modtweaker2/mods/ic2c/mods/Macerator.class
-modtweaker2/mods/botania/commands/BotaniaLogger.class
-modtweaker2/mods/ic2c/mods/Centrifuge.class
-modtweaker2/mods/botania/handlers/Apothecary.class
-modtweaker2/mods/botania/handlers/Brew.class
-modtweaker2/mods/thermalexpansion/handlers/Smelter.class
-modtweaker2/mods/appeng/handlers/Grind.class
-modtweaker2/mods/thermalexpansion/handlers/Smelter$Add.class
-modtweaker2/mods/thermalexpansion/handlers/Furnace$Add.class
-modtweaker2/mods/forestry/handlers/Carpenter.class
-modtweaker2/mods/botania/handlers/PureDaisy.class
 modtweaker2/mods/exnihilo/handlers/Compost.class
-modtweaker2/mods/forestry/handlers/Centrifuge.class
-modtweaker2/mods/thermalexpansion/handlers/Pulverizer$Add.class
-modtweaker2/mods/botania/handlers/Lexicon.class
-modtweaker2/mods/thermalexpansion/handlers/Sawmill$Remove.class
-modtweaker2/mods/exnihilo/handlers/Crucible.class
-modtweaker2/mods/thermalexpansion/commands/ThermalExpansionLogger.class
-modtweaker2/mods/ic2c/mods/Compressor.class
-modtweaker2/mods/ic2c/mods/MetalFormerRolling.class
-modtweaker2/mods/exnihilo/handlers/Hammer.class
-modtweaker2/mods/thermalexpansion/handlers/Pulverizer$Remove.class
-modtweaker2/mods/forestry/handlers/Fermenter.class
-modtweaker2/mods/thermalexpansion/handlers/Furnace.class
-modtweaker2/mods/ic2c/mods/OreWashing.class
-modtweaker2/mods/extraUtils/handlers/QED.class
-modtweaker2/mods/tconstruct/handlers/Drying.class
-modtweaker2/mods/forestry/handlers/ThermionicFabricator.class
-modtweaker2/mods/thermalexpansion/handlers/Insolator$Add.class
-modtweaker2/mods/ic2c/mods/BlockCutter.class
-modtweaker2/mods/ic2c/mods/MetalFormerCutting.class
-modtweaker2/mods/thaumcraft/handlers/Infusion.class
-modtweaker2/mods/forestry/ForestryListRemoval.class
-modtweaker2/mods/thermalexpansion/handlers/Pulverizer.class
-modtweaker2/mods/forestry/handlers/Moistener.class
-modtweaker2/mods/forestry/handlers/Squeezer.class
-modtweaker2/mods/thermalexpansion/handlers/Insolator$Remove.class
-modtweaker2/mods/forestry/ForestryListAddition.class
-modtweaker2/mods/botania/handlers/ElvenTrade.class
 modtweaker2/mods/ic2c/mods/MetalFormerExtruding.class
-modtweaker2/mods/thermalexpansion/handlers/Sawmill$Add.class
+modtweaker2/mods/thermalexpansion/handlers/Furnace$Remove.class
+modtweaker2/mods/thaumcraft/handlers/Infusion.class
+modtweaker2/mods/thermalexpansion/handlers/Furnace.class
+modtweaker2/mods/tconstruct/commands/TConstructLogger.class
+modtweaker2/mods/ic2c/mods/MetalFormerRolling.class
+modtweaker2/mods/thermalexpansion/handlers/Insolator$Remove.class
+modtweaker2/mods/ic2c/mods/Extractor.class
+modtweaker2/mods/botania/handlers/PureDaisy.class
 modtweaker2/mods/appeng/commands/AppliedEnergisticsLogger.class
-modtweaker2/mods/thaumcraft/handlers/Crucible.class
+modtweaker2/mods/thermalexpansion/handlers/Smelter.class
+modtweaker2/mods/thermalexpansion/handlers/Sawmill$Add.class
 modtweaker2/mods/ic2c/mods/Recycler.class
 modtweaker2/mods/exnihilo/handlers/Sieve.class
-modtweaker2/mods/ic2c/mods/Extractor.class
+modtweaker2/mods/botania/handlers/RuneAltar.class
+modtweaker2/mods/thermalexpansion/handlers/Furnace$Add.class
+modtweaker2/mods/appeng/handlers/Grind.class
+modtweaker2/mods/thermalexpansion/handlers/Sawmill.class
+modtweaker2/mods/thermalexpansion/handlers/Pulverizer.class
+modtweaker2/mods/exnihilo/handlers/Hammer.class
+modtweaker2/mods/botania/handlers/Brew.class
+modtweaker2/mods/thermalexpansion/handlers/Crucible.class
+modtweaker2/mods/forestry/handlers/ThermionicFabricator.class
+modtweaker2/mods/thermalexpansion/handlers/Crucible$Remove.class
+modtweaker2/mods/forestry/handlers/Carpenter.class
+modtweaker2/mods/forestry/handlers/Fermenter.class
+modtweaker2/mods/thermalexpansion/handlers/Insolator$Add.class
+modtweaker2/mods/thermalexpansion/handlers/Insolator.class
+modtweaker2/mods/exnihilo/commands/ExNihiloLogger.class
+modtweaker2/mods/tconstruct/handlers/Drying.class
+modtweaker2/mods/extraUtils/handlers/QED.class
+modtweaker2/mods/thermalexpansion/handlers/Crucible$Add.class
+modtweaker2/mods/ic2c/mods/BlockCutter.class
+modtweaker2/mods/botania/handlers/Lexicon.class
+modtweaker2/mods/thermalexpansion/handlers/Pulverizer$Add.class
+modtweaker2/mods/thermalexpansion/commands/ThermalExpansionLogger.class
+modtweaker2/mods/botania/commands/BotaniaLogger.class
+modtweaker2/mods/botania/handlers/Apothecary.class
+modtweaker2/mods/botania/handlers/ElvenTrade.class
+modtweaker2/mods/ic2c/mods/MetalFormerCutting.class
+modtweaker2/mods/thermalexpansion/handlers/Smelter$Remove.class
+modtweaker2/mods/exnihilo/handlers/Crucible.class
+modtweaker2/mods/forestry/ForestryListRemoval.class
+modtweaker2/mods/forestry/handlers/Still.class
+modtweaker2/mods/forestry/handlers/Squeezer.class
+modtweaker2/mods/thermalexpansion/handlers/Pulverizer$Remove.class
+modtweaker2/mods/forestry/handlers/Centrifuge.class
+modtweaker2/mods/thermalexpansion/handlers/Smelter$Add.class
+modtweaker2/mods/thaumcraft/handlers/Crucible.class
+modtweaker2/mods/ic2c/mods/Centrifuge.class
+modtweaker2/mods/forestry/handlers/Moistener.class
+modtweaker2/mods/ic2c/mods/Macerator.class
+modtweaker2/mods/ic2c/mods/OreWashing.class
+modtweaker2/mods/forestry/recipes/DescriptiveRecipe.class
+modtweaker2/mods/forestry/ForestryListAddition.class
+modtweaker2/mods/thermalexpansion/handlers/Sawmill$Remove.class
+modtweaker2/mods/ic2c/mods/Compressor.class
+modtweaker2/helpers/LogHelper.class
 ```
 
 Recipe paths:
@@ -2616,17 +2616,17 @@ Class files scanned: 325
 Recipe classes:
 
 ```text
-codechicken/nei/api/API.class
-codechicken/nei/recipe/RecipeInfo.class
-codechicken/nei/recipe/FireworkRecipeHandler$CachedFireworkRecipe.class
-codechicken/nei/recipe/FireworkRecipeHandler.class
-codechicken/nei/recipe/RecipeCatalysts.class
-codechicken/nei/recipe/ShapelessRecipeHandler$CachedShapelessRecipe.class
-codechicken/nei/recipe/ShapedRecipeHandler$CachedShapedRecipe.class
-codechicken/nei/recipe/ShapelessRecipeHandler.class
-codechicken/nei/recipe/ShapedRecipeHandler.class
 codechicken/nei/recipe/FurnaceRecipeHandler.class
 codechicken/nei/recipe/FuelRecipeHandler.class
+codechicken/nei/recipe/ShapelessRecipeHandler$CachedShapelessRecipe.class
+codechicken/nei/recipe/FireworkRecipeHandler$CachedFireworkRecipe.class
+codechicken/nei/recipe/RecipeCatalysts.class
+codechicken/nei/recipe/ShapedRecipeHandler$CachedShapedRecipe.class
+codechicken/nei/api/API.class
+codechicken/nei/recipe/ShapedRecipeHandler.class
+codechicken/nei/recipe/FireworkRecipeHandler.class
+codechicken/nei/recipe/RecipeInfo.class
+codechicken/nei/recipe/ShapelessRecipeHandler.class
 ```
 
 Recipe paths:
@@ -2743,30 +2743,30 @@ Class files scanned: 4733
 Recipe classes:
 
 ```text
-li/cil/oc/common/recipe/Recipes$$anonfun$init$10.class
-li/cil/oc/common/recipe/Recipes$$anonfun$init$6.class
-li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$3.class
-li/cil/oc/integration/vanilla/RecipeHandler$.class
-li/cil/oc/common/recipe/ExtendedShapelessOreRecipe.class
-li/cil/oc/integration/vanilla/RecipeHandler.class
-li/cil/oc/common/recipe/Recipes$$anonfun$init$8.class
-li/cil/oc/util/ItemUtils$$anonfun$1.class
-li/cil/oc/common/recipe/ExtendedRecipe$.class
-li/cil/oc/common/recipe/Recipes$$anonfun$init$7.class
-li/cil/oc/common/recipe/Recipes$.class
-li/cil/oc/common/recipe/Recipes$$anonfun$init$5.class
-li/cil/oc/common/recipe/Recipes.class
-li/cil/oc/common/recipe/Recipes$$anonfun$init$11.class
-li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$addShapedRecipe$1.class
-li/cil/oc/util/ItemCosts$.class
-li/cil/oc/integration/buildcraft/recipes/LootDiskProgrammableRecipe$.class
-li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$addFurnaceRecipe$1.class
-li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$init$2.class
-li/cil/oc/common/recipe/ExtendedShapedOreRecipe.class
-li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$addShapedRecipe$1$$anonfun$2.class
-li/cil/oc/common/recipe/Recipes$$anonfun$init$12.class
-li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$init$1.class
 li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$1.class
+li/cil/oc/common/recipe/Recipes.class
+li/cil/oc/integration/buildcraft/recipes/LootDiskProgrammableRecipe$.class
+li/cil/oc/common/recipe/Recipes$$anonfun$init$10.class
+li/cil/oc/common/recipe/Recipes$$anonfun$init$8.class
+li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$3.class
+li/cil/oc/integration/vanilla/RecipeHandler.class
+li/cil/oc/common/recipe/Recipes$.class
+li/cil/oc/common/recipe/ExtendedShapedOreRecipe.class
+li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$init$2.class
+li/cil/oc/common/recipe/ExtendedShapelessOreRecipe.class
+li/cil/oc/common/recipe/Recipes$$anonfun$init$6.class
+li/cil/oc/common/recipe/Recipes$$anonfun$init$7.class
+li/cil/oc/common/recipe/Recipes$$anonfun$init$12.class
+li/cil/oc/integration/vanilla/RecipeHandler$.class
+li/cil/oc/util/ItemUtils$$anonfun$1.class
+li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$addShapedRecipe$1$$anonfun$2.class
+li/cil/oc/common/recipe/ExtendedRecipe$.class
+li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$addShapedRecipe$1.class
+li/cil/oc/common/recipe/Recipes$$anonfun$init$11.class
+li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$addFurnaceRecipe$1.class
+li/cil/oc/common/recipe/Recipes$$anonfun$init$5.class
+li/cil/oc/util/ItemCosts$.class
+li/cil/oc/integration/vanilla/RecipeHandler$$anonfun$init$1.class
 ```
 
 Recipe paths:
@@ -3039,21 +3039,21 @@ Class files scanned: 599
 Recipe classes:
 
 ```text
-tconstruct/util/CraftingRecipeHelper.class
 tconstruct/tools/TActiveOmniMod.class
-tconstruct/armor/TinkerArmor.class
-tconstruct/library/crafting/Detailing.class
-tconstruct/mechworks/TinkerMechworks.class
-tconstruct/plugins/te4/TinkerTE4.class
 tconstruct/weaponry/TinkerWeaponry.class
-tconstruct/tools/logic/FrypanLogic.class
-tconstruct/world/TinkerWorld.class
+tconstruct/achievements/AchievementEvents.class
 tconstruct/library/crafting/ShapelessToolRecipe.class
+tconstruct/util/CraftingRecipeHelper.class
+tconstruct/world/TinkerWorld.class
 tconstruct/tools/logic/FurnaceLogic.class
+tconstruct/library/crafting/Detailing.class
 tconstruct/tools/inventory/FurnaceContainer.class
+tconstruct/tools/logic/FrypanLogic.class
 tconstruct/smeltery/TinkerSmeltery.class
 tconstruct/tools/TinkerTools.class
-tconstruct/achievements/AchievementEvents.class
+tconstruct/plugins/te4/TinkerTE4.class
+tconstruct/armor/TinkerArmor.class
+tconstruct/mechworks/TinkerMechworks.class
 ```
 
 Recipe paths:
@@ -3093,9 +3093,9 @@ Recipe classes:
 
 ```text
 cofh/thermaldynamics/plugins/nei/RecipeHandlerCover$CachedCoverRecipeAll.class
-cofh/thermaldynamics/util/crafting/TDCrafting.class
 cofh/thermaldynamics/plugins/nei/RecipeHandlerCover$CachedCoverRecipeSimple.class
 cofh/thermaldynamics/plugins/nei/RecipeHandlerCover.class
+cofh/thermaldynamics/util/crafting/TDCrafting.class
 ```
 
 Recipe paths:
@@ -3134,50 +3134,50 @@ Class files scanned: 348
 Recipe classes:
 
 ```text
-cofh/thermalexpansion/api/crafting/IInsolatorHandler.class
-cofh/thermalexpansion/api/crafting/ISawmillHandler.class
 cofh/thermalexpansion/util/crafting/FurnaceManager.class
-cofh/thermalexpansion/api/crafting/IFurnaceHandler.class
-cofh/thermalexpansion/util/crafting/RecipeMachine.class
-cofh/thermalexpansion/api/crafting/IChargerHandler.class
-cofh/thermalexpansion/util/APIWarden$FurnaceHandler.class
-cofh/thermalexpansion/util/crafting/PulverizerManager.class
-cofh/thermalexpansion/block/ender/BlockEnder.class
-cofh/thermalexpansion/util/IMCHandler.class
-cofh/thermalexpansion/block/cell/BlockCell.class
-cofh/thermalexpansion/plugins/ee3/EE3Plugin.class
-cofh/thermalexpansion/plugins/nei/handlers/NEIRecipeWrapper.class
-cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingUpgrade.class
-cofh/thermalexpansion/util/APIWarden$CrucibleHandler.class
-cofh/thermalexpansion/util/crafting/TECraftingParser.class
-cofh/thermalexpansion/util/APIWarden$ChargerHandler.class
-cofh/thermalexpansion/util/crafting/SawmillManager.class
-cofh/thermalexpansion/util/crafting/InsolatorManager.class
-cofh/thermalexpansion/util/crafting/TECraftingHandler.class
-cofh/thermalexpansion/api/crafting/ISmelterHandler.class
-cofh/thermalexpansion/block/simple/BlockFrame.class
-cofh/thermalexpansion/util/crafting/SmelterManager.class
-cofh/thermalexpansion/util/crafting/RecipeMachineUpgrade.class
-cofh/thermalexpansion/block/workbench/BlockWorkbench.class
-cofh/thermalexpansion/item/TEAugments.class
-cofh/thermalexpansion/item/TEItems.class
-cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingSecure.class
-cofh/thermalexpansion/block/sponge/BlockSponge.class
-cofh/thermalexpansion/util/crafting/CrucibleManager.class
-cofh/thermalexpansion/util/APIWarden$SmelterHandler.class
-cofh/thermalexpansion/util/APIWarden$SawmillHandler.class
-cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingMachine.class
-cofh/thermalexpansion/block/device/BlockDevice.class
-cofh/thermalexpansion/util/APIWarden$PulverizerHandler.class
-cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingMachine$CachedMachineRecipe.class
-cofh/thermalexpansion/block/tank/BlockTank.class
-cofh/thermalexpansion/api/crafting/IPulverizerHandler.class
-cofh/thermalexpansion/util/crafting/ChargerManager.class
 cofh/thermalexpansion/item/TEFlorbs.class
-cofh/thermalexpansion/block/plate/BlockPlate.class
-cofh/thermalexpansion/api/crafting/ICrucibleHandler.class
+cofh/thermalexpansion/api/crafting/ISawmillHandler.class
+cofh/thermalexpansion/util/APIWarden$SmelterHandler.class
+cofh/thermalexpansion/util/crafting/ChargerManager.class
+cofh/thermalexpansion/block/simple/BlockFrame.class
 cofh/thermalexpansion/block/dynamo/BlockDynamo.class
+cofh/thermalexpansion/util/APIWarden$PulverizerHandler.class
+cofh/thermalexpansion/util/crafting/SmelterManager.class
+cofh/thermalexpansion/api/crafting/IPulverizerHandler.class
+cofh/thermalexpansion/block/plate/BlockPlate.class
+cofh/thermalexpansion/plugins/ee3/EE3Plugin.class
+cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingSecure.class
+cofh/thermalexpansion/util/crafting/InsolatorManager.class
+cofh/thermalexpansion/api/crafting/ISmelterHandler.class
+cofh/thermalexpansion/util/crafting/SawmillManager.class
+cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingMachine$CachedMachineRecipe.class
+cofh/thermalexpansion/util/crafting/RecipeMachineUpgrade.class
+cofh/thermalexpansion/util/crafting/TECraftingHandler.class
+cofh/thermalexpansion/item/TEAugments.class
+cofh/thermalexpansion/block/tank/BlockTank.class
+cofh/thermalexpansion/util/IMCHandler.class
+cofh/thermalexpansion/util/crafting/RecipeMachine.class
+cofh/thermalexpansion/api/crafting/IInsolatorHandler.class
 cofh/thermalexpansion/util/APIWarden$InsolatorHandler.class
+cofh/thermalexpansion/block/workbench/BlockWorkbench.class
+cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingUpgrade.class
+cofh/thermalexpansion/block/device/BlockDevice.class
+cofh/thermalexpansion/util/APIWarden$FurnaceHandler.class
+cofh/thermalexpansion/util/APIWarden$ChargerHandler.class
+cofh/thermalexpansion/util/APIWarden$SawmillHandler.class
+cofh/thermalexpansion/util/APIWarden$CrucibleHandler.class
+cofh/thermalexpansion/block/ender/BlockEnder.class
+cofh/thermalexpansion/plugins/nei/handlers/RecipeHandlerCraftingMachine.class
+cofh/thermalexpansion/util/crafting/CrucibleManager.class
+cofh/thermalexpansion/util/crafting/TECraftingParser.class
+cofh/thermalexpansion/api/crafting/ICrucibleHandler.class
+cofh/thermalexpansion/util/crafting/PulverizerManager.class
+cofh/thermalexpansion/item/TEItems.class
+cofh/thermalexpansion/plugins/nei/handlers/NEIRecipeWrapper.class
+cofh/thermalexpansion/block/cell/BlockCell.class
+cofh/thermalexpansion/block/sponge/BlockSponge.class
+cofh/thermalexpansion/api/crafting/IFurnaceHandler.class
+cofh/thermalexpansion/api/crafting/IChargerHandler.class
 ```
 
 Recipe paths:
@@ -3216,9 +3216,9 @@ Class files scanned: 82
 Recipe classes:
 
 ```text
-cofh/thermalfoundation/item/VanillaEquipment.class
-cofh/thermalfoundation/item/TFItems.class
 cofh/thermalfoundation/item/Equipment.class
+cofh/thermalfoundation/item/TFItems.class
+cofh/thermalfoundation/item/VanillaEquipment.class
 cofh/thermalfoundation/block/BlockOre.class
 ```
 
@@ -3336,10 +3336,10 @@ Class files scanned: 29
 Recipe classes:
 
 ```text
-com/gamerforea/uniresources/recipe/BlockToIngotRecipe.class
-com/gamerforea/uniresources/recipe/IngotToNuggetRecipe.class
-com/gamerforea/uniresources/recipe/IngotToBlockRecipe.class
 com/gamerforea/uniresources/recipe/NuggetToIngotRecipe.class
+com/gamerforea/uniresources/recipe/IngotToBlockRecipe.class
+com/gamerforea/uniresources/recipe/IngotToNuggetRecipe.class
+com/gamerforea/uniresources/recipe/BlockToIngotRecipe.class
 com/gamerforea/uniresources/recipe/SmeltRecipe.class
 ```
 
@@ -3574,23 +3574,23 @@ Class files scanned: 2179
 Recipe classes:
 
 ```text
+appeng/integration/modules/IC2.class
+appeng/recipes/handlers/Shapeless.class
+appeng/recipes/handlers/Grind.class
+appeng/api/features/IGrinderRegistry.class
+appeng/integration/modules/NEI.class
 appeng/integration/modules/NEIHelpers/NEIAEShapedRecipeHandler.class
-appeng/core/features/registries/GrinderRecipeManager.class
+appeng/recipes/game/ShapedRecipe.class
+appeng/integration/modules/NEIHelpers/NEIAEShapelessRecipeHandler$CachedShapelessRecipe.class
+appeng/recipes/handlers/Smelt.class
+appeng/core/Registration.class
+appeng/core/api/imc/IMCGrinder.class
+appeng/integration/modules/NEIHelpers/NEIAEShapelessRecipeHandler.class
 appeng/integration/modules/NEIHelpers/NEIAEShapedRecipeHandler$CachedShapedRecipe.class
 appeng/integration/modules/NEIHelpers/NEIWorldCraftingHandler.class
-appeng/recipes/handlers/Shaped.class
-appeng/core/Registration.class
-appeng/api/features/IGrinderRegistry.class
-appeng/recipes/handlers/Smelt.class
-appeng/integration/modules/NEIHelpers/NEIAEShapelessRecipeHandler$CachedShapelessRecipe.class
-appeng/recipes/game/ShapedRecipe.class
-appeng/recipes/handlers/Grind.class
-appeng/integration/modules/IC2.class
-appeng/integration/modules/NEI.class
-appeng/integration/modules/NEIHelpers/NEIAEShapelessRecipeHandler.class
-appeng/core/api/imc/IMCGrinder.class
-appeng/recipes/handlers/Shapeless.class
+appeng/core/features/registries/GrinderRecipeManager.class
 appeng/recipes/game/ShapelessRecipe.class
+appeng/recipes/handlers/Shaped.class
 ```
 
 Recipe paths:
@@ -3630,8 +3630,8 @@ Recipe classes:
 
 ```text
 net/bdew/lib/recipes/RecipeLoader.class
-net/bdew/lib/Misc.class
 net/bdew/lib/recipes/RecipeLoader$$anonfun$processRecipeStatement$1.class
+net/bdew/lib/Misc.class
 net/bdew/lib/Misc$.class
 ```
 
@@ -3671,38 +3671,38 @@ Class files scanned: 1193
 Recipe classes:
 
 ```text
-binnie/genetics/machine/incubator/Incubator$5.class
-binnie/genetics/machine/incubator/Incubator$8.class
-binnie/genetics/machine/incubator/Incubator$9.class
-binnie/extrabees/core/ExtraBeeItems.class
-binnie/genetics/machine/incubator/Incubator.class
-binnie/extrabees/products/EnumPropolis.class
-binnie/core/circuits/BinnieCircuit.class
-binnie/genetics/machine/incubator/Incubator$1.class
 binnie/botany/gardening/ModuleGardening.class
-binnie/extrabees/products/EnumHoneyComb.class
+binnie/genetics/machine/incubator/Incubator.class
+binnie/genetics/machine/incubator/Incubator$5.class
+binnie/extrabees/core/ExtraBeeItems.class
+binnie/genetics/machine/incubator/Incubator$3.class
+binnie/genetics/machine/incubator/Incubator$4.class
 binnie/core/item/ModuleItems.class
-binnie/extrabees/apiary/EnumHiveFrame.class
-binnie/extrabees/products/EnumHoneyDrop.class
-binnie/genetics/machine/incubator/Incubator$6.class
 binnie/genetics/item/ModuleItem.class
+binnie/extrabees/apiary/EnumHiveFrame.class
+binnie/genetics/machine/incubator/Incubator$8.class
+binnie/extrabees/products/EnumHoneyComb.class
+binnie/genetics/machine/incubator/Incubator$9.class
+binnie/extratrees/block/ILogType$ExtraTreeLog.class
+binnie/genetics/gui/AnalystPageProduce.class
+binnie/extratrees/item/ModuleItems.class
 binnie/extratrees/machines/lumbermill/Lumbermill.class
 binnie/extrabees/products/ModuleProducts.class
-binnie/extratrees/item/ModuleItems.class
-binnie/genetics/machine/incubator/Incubator$3.class
-binnie/extrabees/genetics/ModuleGenetics.class
-binnie/genetics/machine/incubator/Incubator$2.class
-binnie/extratrees/item/Food.class
 binnie/genetics/machine/incubator/Incubator$7.class
-binnie/botany/genetics/ModuleGenetics.class
-binnie/extratrees/block/ILogType$ExtraTreeLog.class
+binnie/genetics/machine/incubator/Incubator$6.class
+binnie/core/circuits/BinnieCircuit.class
+binnie/extrabees/products/EnumHoneyDrop.class
+binnie/genetics/machine/incubator/Incubator$2.class
 binnie/genetics/machine/ModuleMachine.class
-binnie/genetics/gui/AnalystPageProduce.class
-binnie/extrabees/apiary/ModuleApiary.class
 binnie/extratrees/block/ModuleBlocks.class
-binnie/genetics/machine/incubator/Incubator$4.class
-binnie/extratrees/machines/ModuleMachine.class
+binnie/extrabees/apiary/ModuleApiary.class
+binnie/botany/genetics/ModuleGenetics.class
+binnie/extrabees/genetics/ModuleGenetics.class
 binnie/core/machines/storage/ModuleStorage.class
+binnie/extratrees/machines/ModuleMachine.class
+binnie/extrabees/products/EnumPropolis.class
+binnie/extratrees/item/Food.class
+binnie/genetics/machine/incubator/Incubator$1.class
 ```
 
 Recipe paths:
@@ -3741,29 +3741,29 @@ Class files scanned: 553
 Recipe classes:
 
 ```text
-com/rwtema/extrautils/crafting/RecipeGBEnchanting.class
-com/rwtema/extrautils/crafting/RecipeUnstableNuggetCrafting.class
-com/rwtema/extrautils/ExtraUtils.class
-com/rwtema/extrautils/crafting/ShapedOreRecipeAlwaysLast.class
-com/rwtema/extrautils/tileentity/generators/TileEntityGeneratorPink.class
-com/rwtema/extrautils/crafting/RecipeEnchantedItems.class
-com/rwtema/extrautils/crafting/RecipeGlove.class
-com/rwtema/extrautils/crafting/RecipeFourByFourShapeless.class
-com/rwtema/extrautils/crafting/RecipeUnstableIngotCrafting.class
-com/rwtema/extrautils/crafting/RecipeDifficultySpecific.class
-com/rwtema/extrautils/nei/EnderConstructorHandler.class
-com/rwtema/extrautils/modintegration/EE3Integration.class
-com/rwtema/extrautils/tileentity/generators/BlockGenerator.class
-com/rwtema/extrautils/tileentity/enderquarry/TileEntityEnderQuarry.class
-com/rwtema/extrautils/item/filters/AdvancedNodeUpgrades$11.class
 com/rwtema/extrautils/crafting/RecipeUnstableCrafting.class
-com/rwtema/extrautils/crafting/RecipeMagicalWood.class
-com/rwtema/extrautils/crafting/RecipeCustomOres.class
-com/rwtema/extrautils/crafting/RecipeEnchantCrafting.class
-com/rwtema/extrautils/tileentity/enderconstructor/EnderConstructorRecipesHandler.class
-com/rwtema/extrautils/crafting/RecipeSmasher.class
 com/rwtema/extrautils/crafting/ShapelessOreRecipeAlwaysLast.class
+com/rwtema/extrautils/crafting/RecipeEnchantedItems.class
+com/rwtema/extrautils/crafting/RecipeDifficultySpecific.class
+com/rwtema/extrautils/tileentity/generators/TileEntityGeneratorPink.class
+com/rwtema/extrautils/tileentity/generators/BlockGenerator.class
+com/rwtema/extrautils/crafting/RecipeFourByFourShapeless.class
+com/rwtema/extrautils/crafting/RecipeGBEnchanting.class
+com/rwtema/extrautils/nei/EnderConstructorHandler.class
+com/rwtema/extrautils/crafting/RecipeUnstableIngotCrafting.class
+com/rwtema/extrautils/modintegration/EE3Integration.class
+com/rwtema/extrautils/crafting/RecipeEnchantCrafting.class
+com/rwtema/extrautils/crafting/ShapedOreRecipeAlwaysLast.class
+com/rwtema/extrautils/crafting/RecipeSmasher.class
+com/rwtema/extrautils/crafting/RecipeCustomOres.class
+com/rwtema/extrautils/crafting/RecipeMagicalWood.class
+com/rwtema/extrautils/crafting/RecipeUnstableNuggetCrafting.class
+com/rwtema/extrautils/item/filters/AdvancedNodeUpgrades$11.class
 com/rwtema/extrautils/crafting/RecipeFilterInvert.class
+com/rwtema/extrautils/tileentity/enderquarry/TileEntityEnderQuarry.class
+com/rwtema/extrautils/ExtraUtils.class
+com/rwtema/extrautils/tileentity/enderconstructor/EnderConstructorRecipesHandler.class
+com/rwtema/extrautils/crafting/RecipeGlove.class
 ```
 
 Recipe paths:
@@ -3802,61 +3802,61 @@ Class files scanned: 1513
 Recipe classes:
 
 ```text
-forestry/plugins/PluginFactory.class
-forestry/factory/DummyManagers$DummyFabricatorManager.class
-forestry/factory/recipes/CarpenterRecipe.class
-forestry/factory/recipes/MoistenerRecipeManager.class
-forestry/plugins/compat/PluginExtraUtilities.class
-forestry/api/recipes/ICraftingProvider.class
-forestry/plugins/compat/PluginMineFactoryReloaded.class
 forestry/plugins/compat/PluginIC2.class
-forestry/factory/recipes/CentrifugeRecipeManager.class
+forestry/factory/DummyManagers$DummyCraftingProvider.class
 forestry/plugins/PluginCore.class
 forestry/api/recipes/IFabricatorSmeltingManager.class
-forestry/factory/DummyManagers$DummyMoistenerManager.class
-forestry/plugins/PluginArboriculture.class
-forestry/plugins/compat/PluginImmersiveEngineering.class
-forestry/plugins/PluginLepidopterology.class
-forestry/core/recipes/RecipeUtil.class
-forestry/plugins/compat/PluginBuildCraftTransport.class
-forestry/plugins/compat/PluginAgriCraft.class
-forestry/factory/DummyManagers$DummyCentrifugeManager.class
-forestry/api/recipes/ICarpenterManager.class
-forestry/plugins/PluginFood.class
-forestry/plugins/compat/PluginHarvestCraft.class
-forestry/factory/DummyManagers$DummyCraftingProvider.class
+forestry/factory/DummyManagers$DummyFabricatorManager.class
 forestry/plugins/compat/PluginNatura.class
+forestry/api/recipes/IMoistenerManager.class
+forestry/factory/DummyManagers$DummyFabricatorSmeltingManager.class
+forestry/plugins/PluginEnergy.class
+forestry/plugins/compat/PluginMineFactoryReloaded.class
+forestry/plugins/PluginApiculture.class
+forestry/api/recipes/IFabricatorManager.class
+forestry/plugins/compat/PluginRotaryCraft.class
+forestry/factory/DummyManagers$DummyMoistenerManager.class
+forestry/factory/DummyManagers$DummySqueezerManager.class
+forestry/plugins/compat/PluginAgriCraft.class
+forestry/factory/recipes/FabricatorRecipe.class
+forestry/factory/recipes/FabricatorSmeltingRecipeManager.class
 forestry/plugins/compat/PluginPlantMegaPack.class
-forestry/api/circuits/ISolderManager.class
-forestry/plugins/compat/PluginGrowthCraft.class
-forestry/factory/recipes/FermenterRecipeManager.class
+forestry/api/recipes/ICraftingProvider.class
+forestry/factory/recipes/StillRecipeManager.class
+forestry/factory/recipes/CarpenterRecipe.class
+forestry/plugins/compat/PluginErebus.class
+forestry/plugins/compat/PluginBuildCraftTransport.class
+forestry/factory/recipes/CarpenterRecipeManager.class
+forestry/plugins/PluginFood.class
+forestry/plugins/PluginLepidopterology.class
+forestry/plugins/PluginArboriculture.class
+forestry/plugins/compat/PluginMagicalCrops.class
+forestry/core/recipes/RecipeUtil.class
 forestry/api/recipes/IFermenterManager.class
 forestry/factory/recipes/SqueezerRecipeManager.class
-forestry/plugins/compat/PluginBiomesOPlenty.class
-forestry/api/recipes/IFabricatorManager.class
-forestry/plugins/compat/PluginWitchery.class
-forestry/factory/DummyManagers$DummyFermenterManager.class
-forestry/plugins/compat/PluginRotaryCraft.class
-forestry/factory/recipes/FabricatorSmeltingRecipeManager.class
+forestry/api/circuits/ISolderManager.class
+forestry/plugins/PluginFactory.class
 forestry/api/recipes/ICentrifugeManager.class
-forestry/plugins/PluginApiculture.class
-forestry/plugins/compat/PluginMagicalCrops.class
-forestry/core/recipes/ShapedRecipeCustom.class
-forestry/factory/DummyManagers$DummyFabricatorSmeltingManager.class
-forestry/factory/recipes/FabricatorRecipe.class
-forestry/api/recipes/ISqueezerManager.class
-forestry/factory/recipes/FabricatorRecipeManager.class
-forestry/factory/recipes/CarpenterRecipeManager.class
-forestry/api/recipes/IMoistenerManager.class
-forestry/plugins/compat/PluginErebus.class
-forestry/plugins/PluginFarming.class
+forestry/factory/recipes/MoistenerRecipeManager.class
 forestry/api/recipes/IStillManager.class
-forestry/plugins/PluginEnergy.class
-forestry/core/circuits/SolderManager.class
-forestry/factory/DummyManagers$DummySqueezerManager.class
-forestry/factory/recipes/StillRecipeManager.class
-forestry/factory/DummyManagers$DummyCarpenterManager.class
+forestry/factory/recipes/FabricatorRecipeManager.class
+forestry/factory/DummyManagers$DummyCentrifugeManager.class
+forestry/plugins/compat/PluginHarvestCraft.class
 forestry/factory/DummyManagers$DummyStillManager.class
+forestry/api/recipes/ICarpenterManager.class
+forestry/core/recipes/ShapedRecipeCustom.class
+forestry/plugins/PluginFarming.class
+forestry/factory/DummyManagers$DummyCarpenterManager.class
+forestry/factory/recipes/CentrifugeRecipeManager.class
+forestry/plugins/compat/PluginExtraUtilities.class
+forestry/plugins/compat/PluginWitchery.class
+forestry/plugins/compat/PluginBiomesOPlenty.class
+forestry/factory/recipes/FermenterRecipeManager.class
+forestry/core/circuits/SolderManager.class
+forestry/api/recipes/ISqueezerManager.class
+forestry/factory/DummyManagers$DummyFermenterManager.class
+forestry/plugins/compat/PluginGrowthCraft.class
+forestry/plugins/compat/PluginImmersiveEngineering.class
 ```
 
 Recipe paths:
@@ -3895,17 +3895,17 @@ Class files scanned: 1056
 Recipe classes:
 
 ```text
+net/bdew/gendustry/nei/TransposerHandler$$anonfun$addSampleRecipe$2.class
+net/bdew/gendustry/nei/NEIGendustryConfig.class
+net/bdew/gendustry/nei/ReplicatorHandler$$anonfun$loadUsageRecipes$1.class
+net/bdew/gendustry/nei/ReplicatorHandler.class
+net/bdew/gendustry/nei/TransposerHandler$$anonfun$loadUsageRecipes$1.class
 net/bdew/gendustry/nei/TransposerHandler$$anonfun$addTemplateRecipe$2.class
 net/bdew/gendustry/nei/TransposerHandler.class
 net/bdew/gendustry/nei/TransposerHandler$$anonfun$loadCraftingRecipes$1.class
+net/bdew/gendustry/Gendustry$.class
 net/bdew/gendustry/config/loader/Loader.class
 net/bdew/gendustry/nei/TemplateCraftingHandler.class
-net/bdew/gendustry/nei/TransposerHandler$$anonfun$loadUsageRecipes$1.class
-net/bdew/gendustry/nei/ReplicatorHandler$$anonfun$loadUsageRecipes$1.class
-net/bdew/gendustry/Gendustry$.class
-net/bdew/gendustry/nei/NEIGendustryConfig.class
-net/bdew/gendustry/nei/TransposerHandler$$anonfun$addSampleRecipe$2.class
-net/bdew/gendustry/nei/ReplicatorHandler.class
 ```
 
 Recipe paths:
@@ -3944,37 +3944,37 @@ Class files scanned: 980
 Recipe classes:
 
 ```text
-ic2/api/recipe/ICannerEnrichRecipeManager.class
-ic2/core/item/tool/EntityMiningLaser.class
-ic2/api/recipe/ICraftingRecipeManager.class
-ic2/core/IC2.class
-ic2/neiIntegration/core/recipehandler/AdvShapelessRecipeHandler$CachedShapelessRecipeIc2.class
-ic2/neiIntegration/core/NEIIC2Config.class
-ic2/core/AdvCraftingRecipeManager.class
-ic2/neiIntegration/core/recipehandler/AdvShapelessRecipeHandler.class
-ic2/core/uu/ForgeCraftingResolver.class
-ic2/core/uu/VanillaCraftingResolver.class
-ic2/core/init/Rezepte.class
-ic2/core/uu/VanillaSmeltingResolver.class
-ic2/api/recipe/IMachineRecipeManagerExt.class
+ic2/core/block/machine/tileentity/TileEntityRecycler$RecyclerRecipeManager.class
+ic2/core/block/machine/tileentity/TileEntityIronFurnace.class
 ic2/api/recipe/ICannerBottleRecipeManager.class
 ic2/core/block/machine/tileentity/TileEntityCanner.class
 ic2/core/AdvShapelessRecipe.class
-ic2/core/block/machine/tileentity/TileEntityMatter.class
-ic2/core/block/machine/CondenserRecipeManager.class
-ic2/neiIntegration/core/recipehandler/AdvRecipeHandler.class
-ic2/neiIntegration/core/recipehandler/AdvRecipeHandler$CachedShapedRecipeIc2.class
-ic2/core/BasicMachineRecipeManager.class
-ic2/core/uu/Ic2CraftingResolver.class
 com/gamerforea/ic2/util/AppEngUtils.class
-ic2/core/block/machine/CannerBottleRecipeManager.class
-ic2/core/block/machine/tileentity/TileEntityMetalFormer.class
+ic2/core/block/machine/tileentity/TileEntityMatter.class
+ic2/api/recipe/ICraftingRecipeManager.class
+ic2/core/item/tool/EntityMiningLaser.class
+ic2/neiIntegration/core/recipehandler/AdvRecipeHandler$CachedShapedRecipeIc2.class
 ic2/core/block/invslot/InvSlotProcessableSmelting.class
-ic2/core/block/machine/CannerEnrichRecipeManager.class
+ic2/neiIntegration/core/recipehandler/AdvRecipeHandler.class
+ic2/api/recipe/ICannerEnrichRecipeManager.class
 ic2/api/recipe/IMachineRecipeManager.class
 ic2/core/minetweaker/MTCondenser$Add.class
-ic2/core/block/machine/tileentity/TileEntityIronFurnace.class
-ic2/core/block/machine/tileentity/TileEntityRecycler$RecyclerRecipeManager.class
+ic2/core/block/machine/CondenserRecipeManager.class
+ic2/core/block/machine/CannerBottleRecipeManager.class
+ic2/core/uu/Ic2CraftingResolver.class
+ic2/core/AdvCraftingRecipeManager.class
+ic2/core/uu/VanillaSmeltingResolver.class
+ic2/core/IC2.class
+ic2/core/block/machine/tileentity/TileEntityMetalFormer.class
+ic2/core/BasicMachineRecipeManager.class
+ic2/neiIntegration/core/recipehandler/AdvShapelessRecipeHandler$CachedShapelessRecipeIc2.class
+ic2/core/uu/ForgeCraftingResolver.class
+ic2/api/recipe/IMachineRecipeManagerExt.class
+ic2/core/init/Rezepte.class
+ic2/core/block/machine/CannerEnrichRecipeManager.class
+ic2/neiIntegration/core/NEIIC2Config.class
+ic2/neiIntegration/core/recipehandler/AdvShapelessRecipeHandler.class
+ic2/core/uu/VanillaCraftingResolver.class
 ```
 
 Recipe paths:

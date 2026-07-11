@@ -11,7 +11,7 @@ version: 1.0.5
 author: Unknown
 size_mb: 0.77
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
 files: 525
 class_files: 522
 packages: 20
@@ -88,6 +88,15 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: remap/com/mojang/datafixers/DataFixerBuilder.class
+dependency_records[0].sources[1]: remap/net/minecraft/core/Direction$1.class
+dependency_records[0].sources[2]: remap/net/minecraft/core/Direction.class
+dependency_records[0].sources[3]: ru/loliland/math/MojangMathLibrary.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/
 ```
 
 

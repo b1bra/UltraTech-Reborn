@@ -13,7 +13,7 @@ Easy: 2
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.63 MB
-Dependencies: 0
+Dependencies: 5
 Classes: 0
 Estimated methods: 91
 ```
@@ -29,7 +29,7 @@ No problems detected
 Difficulty: Easy
 Migration score: 10/100
 File size: 0.0 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 2
 ```
@@ -45,17 +45,17 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.6 MB
-Dependencies: 0
+Dependencies: 14
 Classes: 0
 Estimated methods: 6088
 ```
 
 Problems:
 ```text
-Heavy client code
-Heavy networking
 Large amount of classes
 Large machine system
+Heavy networking
+Heavy client code
 ```
 
 ## ArmorStatusHUD
@@ -64,7 +64,7 @@ Large machine system
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.02 MB
-Dependencies: 1
+Dependencies: 3
 Classes: 0
 Estimated methods: 33
 ```
@@ -80,7 +80,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.14 MB
-Dependencies: 0
+Dependencies: 10
 Classes: 0
 Estimated methods: 247
 ```
@@ -96,7 +96,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.69 MB
-Dependencies: 0
+Dependencies: 11
 Classes: 0
 Estimated methods: 745
 ```
@@ -112,7 +112,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 18
 ```
@@ -128,15 +128,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.41 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 1
 Estimated methods: 2833
 ```
 
 Problems:
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 ## BeeBetterAtBees
@@ -145,7 +145,7 @@ Large amount of classes
 Difficulty: Normal
 Migration score: 50/100
 File size: 0.03 MB
-Dependencies: 0
+Dependencies: 5
 Classes: 0
 Estimated methods: 63
 ```
@@ -161,15 +161,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.24 MB
-Dependencies: 0
+Dependencies: 4
 Classes: 0
 Estimated methods: 1711
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## BetterSigns
@@ -178,7 +178,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 90/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 18
 ```
@@ -194,15 +194,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.1 MB
-Dependencies: 2
+Dependencies: 11
 Classes: 0
 Estimated methods: 3214
 ```
 
 Problems:
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 ## BrandonsCore-1.0.0.12
@@ -211,7 +211,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.08 MB
-Dependencies: 0
+Dependencies: 6
 Classes: 0
 Estimated methods: 169
 ```
@@ -227,7 +227,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.12 MB
-Dependencies: 0
+Dependencies: 5
 Classes: 0
 Estimated methods: 238
 ```
@@ -243,7 +243,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.85 MB
-Dependencies: 0
+Dependencies: 10
 Classes: 0
 Estimated methods: 1821
 ```
@@ -259,7 +259,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.03 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 74
 ```
@@ -275,7 +275,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.01 MB
-Dependencies: 0
+Dependencies: 8
 Classes: 4
 Estimated methods: 2130
 ```
@@ -291,15 +291,15 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.24 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 470
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## DecorativeAPI
@@ -308,7 +308,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.05 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 1
 Estimated methods: 90
 ```
@@ -324,7 +324,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 16.99 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 3797
 ```
@@ -341,15 +341,15 @@ Large item system
 Difficulty: Hard
 Migration score: 100/100
 File size: 7.07 MB
-Dependencies: 0
+Dependencies: 8
 Classes: 0
 Estimated methods: 1366
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## EnderCore-1.7.10-0.2.0.39_beta
@@ -358,15 +358,15 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.42 MB
-Dependencies: 0
+Dependencies: 5
 Classes: 2
 Estimated methods: 788
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## EnderIO-1.7.10-2.3.0.429_beta
@@ -375,16 +375,16 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.2 MB
-Dependencies: 0
+Dependencies: 14
 Classes: 2
 Estimated methods: 4353
 ```
 
 Problems:
 ```text
-Heavy networking
-Large block system
 Large amount of classes
+Large block system
+Heavy networking
 ```
 
 ## EventHelper-master-de330be3
@@ -393,7 +393,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.22 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 1
 Estimated methods: 414
 ```
@@ -409,7 +409,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 6.89 MB
-Dependencies: 1
+Dependencies: 7
 Classes: 1
 Estimated methods: 167
 ```
@@ -425,7 +425,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.64 MB
-Dependencies: 0
+Dependencies: 14
 Classes: 3
 Estimated methods: 1968
 ```
@@ -441,7 +441,7 @@ Heavy networking
 Difficulty: Normal
 Migration score: 50/100
 File size: 0.05 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 80
 ```
@@ -457,7 +457,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 70/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 16
 ```
@@ -473,15 +473,15 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 2.52 MB
-Dependencies: 1
+Dependencies: 7
 Classes: 0
 Estimated methods: 4130
 ```
 
 Problems:
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 ## Galacticraft Planets
@@ -490,7 +490,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 2.0 MB
-Dependencies: 0
+Dependencies: 4
 Classes: 0
 Estimated methods: 1342
 ```
@@ -506,7 +506,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 7.31 MB
-Dependencies: 0
+Dependencies: 13
 Classes: 2
 Estimated methods: 3165
 ```
@@ -522,15 +522,15 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 16.88 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 0
 Estimated methods: 3434
 ```
 
 Problems:
 ```text
-Heavy networking
 Large block system
+Heavy networking
 ```
 
 ## GeckoLib-1.7.10-4.3.1-shadow
@@ -539,7 +539,7 @@ Large block system
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.39 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 679
 ```
@@ -555,7 +555,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.77 MB
-Dependencies: 0
+Dependencies: 10
 Classes: 0
 Estimated methods: 3272
 ```
@@ -571,7 +571,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.35 MB
-Dependencies: 0
+Dependencies: 4
 Classes: 0
 Estimated methods: 302
 ```
@@ -587,15 +587,15 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.73 MB
-Dependencies: 1
+Dependencies: 9
 Classes: 0
 Estimated methods: 757
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## IC2Tweaker-1.7.10-1.0.2
@@ -604,7 +604,7 @@ Heavy networking
 Difficulty: Easy
 Migration score: 10/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 7
 ```
@@ -620,7 +620,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.39 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 1
 Estimated methods: 2814
 ```
@@ -636,7 +636,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.17 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 252
 ```
@@ -652,7 +652,7 @@ Heavy client code
 Difficulty: Normal
 Migration score: 65/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 5
 ```
@@ -668,7 +668,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.02 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 27
 ```
@@ -684,15 +684,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.18 MB
-Dependencies: 1
+Dependencies: 5
 Classes: 1
 Estimated methods: 1715
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## Json Model Reader
@@ -701,7 +701,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.04 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 1
 Estimated methods: 52
 ```
@@ -717,7 +717,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 80/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 10
 ```
@@ -733,15 +733,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 2.05 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 0
 Estimated methods: 3260
 ```
 
 Problems:
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 ## LoliDecorative-master-bf409f4c
@@ -750,7 +750,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.37 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 181
 ```
@@ -766,17 +766,17 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 17.2 MB
-Dependencies: 0
+Dependencies: 10
 Classes: 1
 Estimated methods: 4374
 ```
 
 Problems:
 ```text
-Heavy networking
-Large block system
 Large amount of classes
 Large machine system
+Large block system
+Heavy networking
 ```
 
 ## LoliDragonMight-1.7.10-client
@@ -785,7 +785,7 @@ Large machine system
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.86 MB
-Dependencies: 0
+Dependencies: 13
 Classes: 0
 Estimated methods: 1458
 ```
@@ -801,15 +801,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.13 MB
-Dependencies: 0
+Dependencies: 4
 Classes: 0
 Estimated methods: 197
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## LoliEnergistics
@@ -818,16 +818,16 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 19.4 MB
-Dependencies: 0
+Dependencies: 14
 Classes: 1
 Estimated methods: 6326
 ```
 
 Problems:
 ```text
-Heavy client code
-Heavy networking
 Large amount of classes
+Heavy networking
+Heavy client code
 ```
 
 ## LoliEnergyRelics-1.7.10-client
@@ -836,7 +836,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.19 MB
-Dependencies: 0
+Dependencies: 6
 Classes: 0
 Estimated methods: 181
 ```
@@ -852,7 +852,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.41 MB
-Dependencies: 0
+Dependencies: 11
 Classes: 0
 Estimated methods: 667
 ```
@@ -868,7 +868,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.11 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 2
 Estimated methods: 126
 ```
@@ -884,16 +884,16 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 21.94 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 3
 Estimated methods: 4835
 ```
 
 Problems:
 ```text
-Heavy client code
-Heavy networking
 Large amount of classes
+Heavy networking
+Heavy client code
 ```
 
 ## LoliUtility-1.7.10-client
@@ -902,15 +902,15 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.1 MB
-Dependencies: 0
+Dependencies: 14
 Classes: 1
 Estimated methods: 2774
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## LoliWeCUI-master-7296045c
@@ -919,7 +919,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 85/100
 File size: 0.02 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 31
 ```
@@ -935,15 +935,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.92 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 0
 Estimated methods: 4157
 ```
 
 Problems:
 ```text
-Heavy client code
 Large amount of classes
+Heavy client code
 ```
 
 ## LWSL
@@ -952,7 +952,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.08 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 1
 Estimated methods: 151
 ```
@@ -968,7 +968,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.17 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 1
 Estimated methods: 250
 ```
@@ -984,7 +984,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 12.76 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 1
 Estimated methods: 3416
 ```
@@ -1000,7 +1000,7 @@ Heavy networking
 Difficulty: Normal
 Migration score: 60/100
 File size: 0.03 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 0
 Estimated methods: 58
 ```
@@ -1016,7 +1016,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 13
 ```
@@ -1032,7 +1032,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.93 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 0
 Estimated methods: 1156
 ```
@@ -1048,7 +1048,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.55 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 1
 Estimated methods: 1153
 ```
@@ -1064,7 +1064,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.07 MB
-Dependencies: 1
+Dependencies: 12
 Classes: 0
 Estimated methods: 1527
 ```
@@ -1080,7 +1080,7 @@ Heavy networking
 Difficulty: Normal
 Migration score: 40/100
 File size: 0.77 MB
-Dependencies: 0
+Dependencies: 1
 Classes: 1
 Estimated methods: 2292
 ```
@@ -1096,7 +1096,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.37 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 1
 Estimated methods: 777
 ```
@@ -1112,7 +1112,7 @@ No problems detected
 Difficulty: Normal
 Migration score: 50/100
 File size: 0.02 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 31
 ```
@@ -1128,15 +1128,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 55.33 MB
-Dependencies: 0
+Dependencies: 4
 Classes: 0
 Estimated methods: 1302
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## NEI Addons
@@ -1145,7 +1145,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.09 MB
-Dependencies: 1
+Dependencies: 7
 Classes: 0
 Estimated methods: 175
 ```
@@ -1161,7 +1161,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.1 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 202
 ```
@@ -1177,15 +1177,15 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.7 MB
-Dependencies: 1
+Dependencies: 14
 Classes: 1
 Estimated methods: 1383
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## Omicron
@@ -1194,15 +1194,15 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.29 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 2
 Estimated methods: 377
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## OnlinePicFrame+v1.0+mc1.7.10
@@ -1211,7 +1211,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.02 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 37
 ```
@@ -1227,15 +1227,15 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 13.95 MB
-Dependencies: 11
+Dependencies: 25
 Classes: 3
 Estimated methods: 14129
 ```
 
 Problems:
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 ## PowerUtils
@@ -1244,7 +1244,7 @@ Large amount of classes
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.05 MB
-Dependencies: 0
+Dependencies: 4
 Classes: 0
 Estimated methods: 81
 ```
@@ -1260,7 +1260,7 @@ No problems detected
 Difficulty: Normal
 Migration score: 50/100
 File size: 0.01 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 34
 ```
@@ -1276,15 +1276,15 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.69 MB
-Dependencies: 1
+Dependencies: 5
 Classes: 1
 Estimated methods: 388
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## Realistic Terrain Generation
@@ -1293,7 +1293,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.73 MB
-Dependencies: 0
+Dependencies: 4
 Classes: 0
 Estimated methods: 874
 ```
@@ -1309,7 +1309,7 @@ No problems detected
 Difficulty: Normal
 Migration score: 40/100
 File size: 0.02 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 44
 ```
@@ -1325,7 +1325,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.32 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 629
 ```
@@ -1341,7 +1341,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 3.67 MB
-Dependencies: 0
+Dependencies: 12
 Classes: 1
 Estimated methods: 2442
 ```
@@ -1357,7 +1357,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.57 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 0
 Estimated methods: 846
 ```
@@ -1373,7 +1373,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.37 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 0
 Estimated methods: 1345
 ```
@@ -1389,7 +1389,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.08 MB
-Dependencies: 0
+Dependencies: 7
 Classes: 0
 Estimated methods: 299
 ```
@@ -1405,7 +1405,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.09 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 162
 ```
@@ -1421,7 +1421,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.07 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 72
 ```
@@ -1437,7 +1437,7 @@ Heavy client code
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.04 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 65
 ```
@@ -1453,15 +1453,15 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.52 MB
-Dependencies: 0
+Dependencies: 9
 Classes: 0
 Estimated methods: 684
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## WanionLib
@@ -1470,7 +1470,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.05 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 0
 Estimated methods: 55
 ```
@@ -1486,7 +1486,7 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 1.17 MB
-Dependencies: 0
+Dependencies: 3
 Classes: 1
 Estimated methods: 2790
 ```
@@ -1502,15 +1502,15 @@ No problems detected
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.28 MB
-Dependencies: 0
+Dependencies: 6
 Classes: 0
 Estimated methods: 649
 ```
 
 Problems:
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 ## [1.7.10]bspkrsCore-universal-6.16
@@ -1519,7 +1519,7 @@ Heavy networking
 Difficulty: Hard
 Migration score: 100/100
 File size: 0.17 MB
-Dependencies: 0
+Dependencies: 2
 Classes: 0
 Estimated methods: 348
 ```

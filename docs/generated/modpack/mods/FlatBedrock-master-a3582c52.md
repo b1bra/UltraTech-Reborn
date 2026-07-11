@@ -11,14 +11,14 @@ version: $version
 author: Unknown
 size_mb: 0.01
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
 files: 14
 class_files: 10
 packages: 7
 score: 70
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -89,6 +89,16 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: universalteam/flatbedrock/FlatBedrock.class
+dependency_records[0].sources[1]: universalteam/flatbedrock/config/Config.class
+dependency_records[0].sources[2]: universalteam/flatbedrock/custom/CustomDimensionManager.class
+dependency_records[0].sources[3]: universalteam/flatbedrock/handler/IMCHandler.class
+dependency_records[0].sources[4]: universalteam/flatbedrock/proxies/CommonProxy.class
+dependency_records[0].sources[5]: universalteam/flatbedrock/world/WorldGenFlatBedrock.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
 ```
 
 
@@ -102,8 +112,8 @@ class_files: 10
 packages: 7
 score: 70
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0

@@ -12,15 +12,19 @@ author: Unknown
 size_mb: 0.69
 forge: Unknown
 dependencies[0]: mod_MinecraftForge
+dependencies[1]: CodeChickenLib
+dependencies[2]: Forge
+dependencies[3]: LaunchWrapper
+dependencies[4]: redpower
 files: 385
 class_files: 143
 packages: 33
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Network
+detections[1]: Old Rendering
 detections[2]: Old Forge API
-detections[3]: Old Network
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 19
@@ -82,8 +86,8 @@ client_hits: 244
 server_hits: 228
 client_percent: 51.7
 server_percent: 48.3
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 282
 models: 0
 blockstates: 0
@@ -221,6 +225,294 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: mod_MinecraftForge
+dependency_records[0].categories[0]: Declared
+dependency_records[0].confidence: 100
+dependency_records[0].sources[0]: legacy dependency metadata
+dependency_records[0].evidence[0]: mcmod.info dependency
+dependency_records[1].name: CodeChickenLib
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: loliland/redpower/common/block/BlockShapedLamp.class
+dependency_records[1].sources[1]: loliland/redpower/common/item/block/ItemBlockShapedLamp.class
+dependency_records[1].sources[2]: loliland/redpower/common/tile/TileShapedLamp.class
+dependency_records[1].evidence[0]: codechicken/lib/
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].categories[1]: Reflection
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: com/gamerforea/loliland/redpower/antiproguard/ITextureAtlasSprite.class
+dependency_records[2].sources[1]: loliland/redpower/RedPower.class
+dependency_records[2].sources[2]: loliland/redpower/api/multipart/IMultipartSystem.class
+dependency_records[2].sources[3]: loliland/redpower/api/multipart/IPartContainer.class
+dependency_records[2].sources[4]: loliland/redpower/api/multipart/IPartContainer2.class
+dependency_records[2].sources[5]: loliland/redpower/api/multipart/IPartContainer3.class
+dependency_records[2].sources[6]: loliland/redpower/api/multipart/Part.class
+dependency_records[2].sources[7]: loliland/redpower/api/multipart/PartBreakEvent.class
+dependency_records[2].sources[8]: loliland/redpower/api/multipart/PartType.class
+dependency_records[2].sources[9]: loliland/redpower/client/ClientSide$1.class
+dependency_records[2].sources[10]: loliland/redpower/client/ClientSide.class
+dependency_records[2].sources[11]: loliland/redpower/client/gui/GuiTimer.class
+dependency_records[2].sources[12]: loliland/redpower/client/handler/MultipartHighlightHandler.class
+dependency_records[2].sources[13]: loliland/redpower/client/render/GateStaticRenderer.class
+dependency_records[2].sources[14]: loliland/redpower/client/render/LampRenderHalo.class
+dependency_records[2].sources[15]: loliland/redpower/client/render/ModelWrapperDisplayList.class
+dependency_records[2].sources[16]: loliland/redpower/client/render/RenderShapedLamp.class
+dependency_records[2].sources[17]: loliland/redpower/client/render/WireRenderer.class
+dependency_records[2].sources[18]: loliland/redpower/client/render/block/RenderBlockTile.class
+dependency_records[2].sources[19]: loliland/redpower/common/CommonSide.class
+dependency_records[2].sources[20]: loliland/redpower/common/MultipartSystem$EventHandler.class
+dependency_records[2].sources[21]: loliland/redpower/common/MultipartSystem.class
+dependency_records[2].sources[22]: loliland/redpower/common/WorldGenHandler.class
+dependency_records[2].sources[23]: loliland/redpower/common/block/BlockCustomOre.class
+dependency_records[2].sources[24]: loliland/redpower/common/block/BlockCustomStone.class
+dependency_records[2].sources[25]: loliland/redpower/common/block/BlockCustomWall.class
+dependency_records[2].sources[26]: loliland/redpower/common/block/BlockGate.class
+dependency_records[2].sources[27]: loliland/redpower/common/block/BlockLampCube.class
+dependency_records[2].sources[28]: loliland/redpower/common/block/BlockShapedLamp.class
+dependency_records[2].sources[29]: loliland/redpower/common/block/BlockWire.class
+dependency_records[2].sources[30]: loliland/redpower/common/block/EnumGates.class
+dependency_records[2].sources[31]: loliland/redpower/common/block/EnumWireType.class
+dependency_records[2].sources[32]: loliland/redpower/common/block/basic/BlockMultipartBase.class
+dependency_records[2].sources[33]: loliland/redpower/common/block/basic/ModBlock.class
+dependency_records[2].sources[34]: loliland/redpower/common/core/ModBlock.class
+dependency_records[2].sources[35]: loliland/redpower/common/core/ModGui.class
+dependency_records[2].sources[36]: loliland/redpower/common/core/ModItem.class
+dependency_records[2].sources[37]: loliland/redpower/common/core/ModRender$1.class
+dependency_records[2].sources[38]: loliland/redpower/common/core/ModRender.class
+dependency_records[2].sources[39]: loliland/redpower/common/item/ItemCustomAxe.class
+dependency_records[2].sources[40]: loliland/redpower/common/item/ItemCustomHoe.class
+dependency_records[2].sources[41]: loliland/redpower/common/item/ItemCustomPickaxe.class
+dependency_records[2].sources[42]: loliland/redpower/common/item/ItemCustomShovel.class
+dependency_records[2].sources[43]: loliland/redpower/common/item/ItemCustomSword.class
+dependency_records[2].sources[44]: loliland/redpower/common/item/ItemParts.class
+dependency_records[2].sources[45]: loliland/redpower/common/item/ItemSickle.class
+dependency_records[2].sources[46]: loliland/redpower/common/item/basic/ModItem.class
+dependency_records[2].sources[47]: loliland/redpower/common/item/block/ItemBlockGate.class
+dependency_records[2].sources[48]: loliland/redpower/common/item/block/ItemBlockWire.class
+dependency_records[2].sources[49]: loliland/redpower/common/network/packet/MultipartDigPacket$Handler.class
+dependency_records[2].sources[50]: loliland/redpower/common/network/packet/MultipartDigPacket.class
+dependency_records[2].sources[51]: loliland/redpower/common/tile/gates/TileGate.class
+dependency_records[2].sources[52]: loliland/redpower/common/tile/wires/TileRedAlloy.class
+dependency_records[2].sources[53]: loliland/redpower/common/tile/wires/TileWire.class
+dependency_records[2].sources[54]: loliland/redpower/integration/IntegrationModule.class
+dependency_records[2].sources[55]: loliland/redpower/integration/IntegrationRegistry.class
+dependency_records[2].sources[56]: loliland/redpower/util/ModUtil.class
+dependency_records[2].sources[57]: loliland/redpower/util/RotatedTessellator.class
+dependency_records[2].sources[58]: loliland/redpower/util/SideGateway.class
+dependency_records[2].sources[59]: loliland/redpower/util/texslice/TextureNonSquare.class
+dependency_records[2].sources[60]: loliland/redpower/util/texslice/TextureSlice$TextureStitchListener.class
+dependency_records[2].sources[61]: loliland/redpower/util/texslice/TextureSlice.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
+dependency_records[2].evidence[1]: net/minecraftforge/
+dependency_records[2].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[3].name: LaunchWrapper
+dependency_records[3].categories[0]: Runtime
+dependency_records[3].confidence: 90
+dependency_records[3].sources[0]: loliland/redpower/integration/IntegrationRegistry.class
+dependency_records[3].sources[1]: loliland/redpower/integration/MineTweaker.class
+dependency_records[3].evidence[0]: tweaker marker
+dependency_records[4].name: redpower
+dependency_records[4].categories[0]: Optional
+dependency_records[4].confidence: 45
+dependency_records[4].sources[0]: assets/redpower/
+dependency_records[4].sources[1]: assets/redpower/lang/
+dependency_records[4].sources[2]: assets/redpower/lang/en_US.lang
+dependency_records[4].sources[3]: assets/redpower/models/
+dependency_records[4].sources[4]: assets/redpower/models/lighting/
+dependency_records[4].sources[5]: assets/redpower/models/lighting/cagelamp.blend
+dependency_records[4].sources[6]: assets/redpower/models/lighting/cagelamp.obj
+dependency_records[4].sources[7]: assets/redpower/models/lighting/fallout.blend
+dependency_records[4].sources[8]: assets/redpower/models/lighting/fallout.obj
+dependency_records[4].sources[9]: assets/redpower/models/lighting/fixture.blend
+dependency_records[4].sources[10]: assets/redpower/models/lighting/fixture.obj
+dependency_records[4].sources[11]: assets/redpower/models/lighting/lantern.blend
+dependency_records[4].sources[12]: assets/redpower/models/lighting/lantern.obj
+dependency_records[4].sources[13]: assets/redpower/textures/
+dependency_records[4].sources[14]: assets/redpower/textures/blocks/
+dependency_records[4].sources[15]: assets/redpower/textures/blocks/gate/
+dependency_records[4].sources[16]: assets/redpower/textures/blocks/gate/base.png
+dependency_records[4].sources[17]: assets/redpower/textures/blocks/gate/timer-back.png
+dependency_records[4].sources[18]: assets/redpower/textures/blocks/gate/timer-base.png
+dependency_records[4].sources[19]: assets/redpower/textures/blocks/gate/timer-left.png
+dependency_records[4].sources[20]: assets/redpower/textures/blocks/gate/timer-right.png
+dependency_records[4].sources[21]: assets/redpower/textures/blocks/lamp.png
+dependency_records[4].sources[22]: assets/redpower/textures/blocks/lamp/
+dependency_records[4].sources[23]: assets/redpower/textures/blocks/lamp/cube-coloured.png
+dependency_records[4].sources[24]: assets/redpower/textures/blocks/lamp/cube-uncoloured.png
+dependency_records[4].sources[25]: assets/redpower/textures/blocks/lamp1.png
+dependency_records[4].sources[26]: assets/redpower/textures/blocks/lamp2.png
+dependency_records[4].sources[27]: assets/redpower/textures/blocks/lamp3.png
+dependency_records[4].sources[28]: assets/redpower/textures/blocks/lumar-button.png
+dependency_records[4].sources[29]: assets/redpower/textures/blocks/lumar-plate.png
+dependency_records[4].sources[30]: assets/redpower/textures/blocks/transparent.png
+dependency_records[4].sources[31]: assets/redpower/textures/blocks/white.png
+dependency_records[4].sources[32]: assets/redpower/textures/blocks/wire/
+dependency_records[4].sources[33]: assets/redpower/textures/blocks/wire/wire-bundled.png
+dependency_records[4].sources[34]: assets/redpower/textures/blocks/wire/wire-bundled.png.mcmeta
+dependency_records[4].sources[35]: assets/redpower/textures/blocks/wire/wire-insulated.png
+dependency_records[4].sources[36]: assets/redpower/textures/blocks/wire/wire-insulated.png.mcmeta
+dependency_records[4].sources[37]: assets/redpower/textures/blocks/wire/wire-red-alloy-j-cross.png
+dependency_records[4].sources[38]: assets/redpower/textures/blocks/wire/wire-red-alloy-j-end.png
+dependency_records[4].sources[39]: assets/redpower/textures/blocks/wire/wire-red-alloy-j.png
+dependency_records[4].sources[40]: assets/redpower/textures/blocks/wire/wire-red-alloy.png
+dependency_records[4].sources[41]: assets/redpower/textures/blocks/world/
+dependency_records[4].sources[42]: assets/redpower/textures/blocks/world/basalt.png
+dependency_records[4].sources[43]: assets/redpower/textures/blocks/world/basalt_brick.png
+dependency_records[4].sources[44]: assets/redpower/textures/blocks/world/basalt_cobble.png
+dependency_records[4].sources[45]: assets/redpower/textures/blocks/world/marble.png
+dependency_records[4].sources[46]: assets/redpower/textures/blocks/world/marble_brick.png
+dependency_records[4].sources[47]: assets/redpower/textures/blocks/world/peridot_block.png
+dependency_records[4].sources[48]: assets/redpower/textures/blocks/world/peridot_ore.png
+dependency_records[4].sources[49]: assets/redpower/textures/blocks/world/ruby_block.png
+dependency_records[4].sources[50]: assets/redpower/textures/blocks/world/ruby_ore.png
+dependency_records[4].sources[51]: assets/redpower/textures/blocks/world/sapphire_block.png
+dependency_records[4].sources[52]: assets/redpower/textures/blocks/world/sapphire_ore.png
+dependency_records[4].sources[53]: assets/redpower/textures/guis/
+dependency_records[4].sources[54]: assets/redpower/textures/guis/timer.png
+dependency_records[4].sources[55]: assets/redpower/textures/items/
+dependency_records[4].sources[56]: assets/redpower/textures/items/base/
+dependency_records[4].sources[57]: assets/redpower/textures/items/base/anode.png
+dependency_records[4].sources[58]: assets/redpower/textures/items/base/boule.png
+dependency_records[4].sources[59]: assets/redpower/textures/items/base/bundled_plate.png
+dependency_records[4].sources[60]: assets/redpower/textures/items/base/cathode.png
+dependency_records[4].sources[61]: assets/redpower/textures/items/base/cloth.png
+dependency_records[4].sources[62]: assets/redpower/textures/items/base/conductive_plate.png
+dependency_records[4].sources[63]: assets/redpower/textures/items/base/copper_coil.png
+dependency_records[4].sources[64]: assets/redpower/textures/items/base/draw_plate.png
+dependency_records[4].sources[65]: assets/redpower/textures/items/base/electro_silicon.png
+dependency_records[4].sources[66]: assets/redpower/textures/items/base/electrotine_dust.png
+dependency_records[4].sources[67]: assets/redpower/textures/items/base/electrotine_ingot.png
+dependency_records[4].sources[68]: assets/redpower/textures/items/base/electrotine_iron_comp.png
+dependency_records[4].sources[69]: assets/redpower/textures/items/base/electrotine_silicon_comp.png
+dependency_records[4].sources[70]: assets/redpower/textures/items/base/energized_silicon.png
+dependency_records[4].sources[71]: assets/redpower/textures/items/base/energized_silicon_chip.png
+dependency_records[4].sources[72]: assets/redpower/textures/items/base/gemperidot.png
+dependency_records[4].sources[73]: assets/redpower/textures/items/base/gemruby.png
+dependency_records[4].sources[74]: assets/redpower/textures/items/base/gemsapphire.png
+dependency_records[4].sources[75]: assets/redpower/textures/items/base/gold_coil.png
+dependency_records[4].sources[76]: assets/redpower/textures/items/base/illumar0.png
+dependency_records[4].sources[77]: assets/redpower/textures/items/base/illumar1.png
+dependency_records[4].sources[78]: assets/redpower/textures/items/base/illumar10.png
+dependency_records[4].sources[79]: assets/redpower/textures/items/base/illumar11.png
+dependency_records[4].sources[80]: assets/redpower/textures/items/base/illumar12.png
+dependency_records[4].sources[81]: assets/redpower/textures/items/base/illumar13.png
+dependency_records[4].sources[82]: assets/redpower/textures/items/base/illumar14.png
+dependency_records[4].sources[83]: assets/redpower/textures/items/base/illumar15.png
+dependency_records[4].sources[84]: assets/redpower/textures/items/base/illumar2.png
+dependency_records[4].sources[85]: assets/redpower/textures/items/base/illumar3.png
+dependency_records[4].sources[86]: assets/redpower/textures/items/base/illumar4.png
+dependency_records[4].sources[87]: assets/redpower/textures/items/base/illumar5.png
+dependency_records[4].sources[88]: assets/redpower/textures/items/base/illumar6.png
+dependency_records[4].sources[89]: assets/redpower/textures/items/base/illumar7.png
+dependency_records[4].sources[90]: assets/redpower/textures/items/base/illumar8.png
+dependency_records[4].sources[91]: assets/redpower/textures/items/base/illumar9.png
+dependency_records[4].sources[92]: assets/redpower/textures/items/base/infused_silicon.png
+dependency_records[4].sources[93]: assets/redpower/textures/items/base/iron_coil.png
+dependency_records[4].sources[94]: assets/redpower/textures/items/base/motor.png
+dependency_records[4].sources[95]: assets/redpower/textures/items/base/multimeter.png
+dependency_records[4].sources[96]: assets/redpower/textures/items/base/null_chip.png
+dependency_records[4].sources[97]: assets/redpower/textures/items/base/null_upgrd.png
+dependency_records[4].sources[98]: assets/redpower/textures/items/base/partglowsiliconcomp.png
+dependency_records[4].sources[99]: assets/redpower/textures/items/base/partredironcomp.png
+dependency_records[4].sources[100]: assets/redpower/textures/items/base/partredsiliconcomp.png
+dependency_records[4].sources[101]: assets/redpower/textures/items/base/partsandcoalcomp.png
+dependency_records[4].sources[102]: assets/redpower/textures/items/base/plate.png
+dependency_records[4].sources[103]: assets/redpower/textures/items/base/platformed_plate.png
+dependency_records[4].sources[104]: assets/redpower/textures/items/base/pointer.png
+dependency_records[4].sources[105]: assets/redpower/textures/items/base/red_ingot.png
+dependency_records[4].sources[106]: assets/redpower/textures/items/base/sail.png
+dependency_records[4].sources[107]: assets/redpower/textures/items/base/silicon.png
+dependency_records[4].sources[108]: assets/redpower/textures/items/base/silicon_chip.png
+dependency_records[4].sources[109]: assets/redpower/textures/items/base/wired_plate.png
+dependency_records[4].sources[110]: assets/redpower/textures/items/screwdriver.png
+dependency_records[4].sources[111]: assets/redpower/textures/items/world/
+dependency_records[4].sources[112]: assets/redpower/textures/items/world/athame.png
+dependency_records[4].sources[113]: assets/redpower/textures/items/world/axeperidot.png
+dependency_records[4].sources[114]: assets/redpower/textures/items/world/axeruby.png
+dependency_records[4].sources[115]: assets/redpower/textures/items/world/axesapphire.png
+dependency_records[4].sources[116]: assets/redpower/textures/items/world/hoeperidot.png
+dependency_records[4].sources[117]: assets/redpower/textures/items/world/hoeruby.png
+dependency_records[4].sources[118]: assets/redpower/textures/items/world/hoesapphire.png
+dependency_records[4].sources[119]: assets/redpower/textures/items/world/lily_seed.png
+dependency_records[4].sources[120]: assets/redpower/textures/items/world/peridot_1.png
+dependency_records[4].sources[121]: assets/redpower/textures/items/world/peridot_2.png
+dependency_records[4].sources[122]: assets/redpower/textures/items/world/peridotboots.png
+dependency_records[4].sources[123]: assets/redpower/textures/items/world/peridotchestplate.png
+dependency_records[4].sources[124]: assets/redpower/textures/items/world/peridothelmet.png
+dependency_records[4].sources[125]: assets/redpower/textures/items/world/peridotleggings.png
+dependency_records[4].sources[126]: assets/redpower/textures/items/world/pickaxeperidot.png
+dependency_records[4].sources[127]: assets/redpower/textures/items/world/pickaxeruby.png
+dependency_records[4].sources[128]: assets/redpower/textures/items/world/pickaxesapphire.png
+dependency_records[4].sources[129]: assets/redpower/textures/items/world/ruby_1.png
+dependency_records[4].sources[130]: assets/redpower/textures/items/world/ruby_2.png
+dependency_records[4].sources[131]: assets/redpower/textures/items/world/rubyboots.png
+dependency_records[4].sources[132]: assets/redpower/textures/items/world/rubychestplate.png
+dependency_records[4].sources[133]: assets/redpower/textures/items/world/rubyhelmet.png
+dependency_records[4].sources[134]: assets/redpower/textures/items/world/rubyleggings.png
+dependency_records[4].sources[135]: assets/redpower/textures/items/world/sapphire_1.png
+dependency_records[4].sources[136]: assets/redpower/textures/items/world/sapphire_2.png
+dependency_records[4].sources[137]: assets/redpower/textures/items/world/sapphireboots.png
+dependency_records[4].sources[138]: assets/redpower/textures/items/world/sapphirechestplate.png
+dependency_records[4].sources[139]: assets/redpower/textures/items/world/sapphirehelmet.png
+dependency_records[4].sources[140]: assets/redpower/textures/items/world/sapphireleggings.png
+dependency_records[4].sources[141]: assets/redpower/textures/items/world/shovelperidot.png
+dependency_records[4].sources[142]: assets/redpower/textures/items/world/shovelruby.png
+dependency_records[4].sources[143]: assets/redpower/textures/items/world/shovelsapphire.png
+dependency_records[4].sources[144]: assets/redpower/textures/items/world/sicklediamond.png
+dependency_records[4].sources[145]: assets/redpower/textures/items/world/sicklegold.png
+dependency_records[4].sources[146]: assets/redpower/textures/items/world/sickleiron.png
+dependency_records[4].sources[147]: assets/redpower/textures/items/world/sickleperidot.png
+dependency_records[4].sources[148]: assets/redpower/textures/items/world/sickleruby.png
+dependency_records[4].sources[149]: assets/redpower/textures/items/world/sicklesapphire.png
+dependency_records[4].sources[150]: assets/redpower/textures/items/world/sicklestone.png
+dependency_records[4].sources[151]: assets/redpower/textures/items/world/sicklewood.png
+dependency_records[4].sources[152]: assets/redpower/textures/items/world/swordperidot.png
+dependency_records[4].sources[153]: assets/redpower/textures/items/world/swordruby.png
+dependency_records[4].sources[154]: assets/redpower/textures/items/world/swordsapphire.png
+dependency_records[4].sources[155]: assets/redpower/textures/items/world/wool_gin.png
+dependency_records[4].sources[156]: assets/redpower/textures/models/
+dependency_records[4].sources[157]: assets/redpower/textures/models/lighting/
+dependency_records[4].sources[158]: assets/redpower/textures/models/lighting/button.png
+dependency_records[4].sources[159]: assets/redpower/textures/models/lighting/cage_lamp.png
+dependency_records[4].sources[160]: assets/redpower/textures/models/lighting/fallout.png
+dependency_records[4].sources[161]: assets/redpower/textures/models/lighting/fixture.png
+dependency_records[4].sources[162]: assets/redpower/textures/models/lighting/lampoff/
+dependency_records[4].sources[163]: assets/redpower/textures/models/lighting/lampoff/0.png
+dependency_records[4].sources[164]: assets/redpower/textures/models/lighting/lampoff/1.png
+dependency_records[4].sources[165]: assets/redpower/textures/models/lighting/lampoff/10.png
+dependency_records[4].sources[166]: assets/redpower/textures/models/lighting/lampoff/11.png
+dependency_records[4].sources[167]: assets/redpower/textures/models/lighting/lampoff/12.png
+dependency_records[4].sources[168]: assets/redpower/textures/models/lighting/lampoff/13.png
+dependency_records[4].sources[169]: assets/redpower/textures/models/lighting/lampoff/14.png
+dependency_records[4].sources[170]: assets/redpower/textures/models/lighting/lampoff/15.png
+dependency_records[4].sources[171]: assets/redpower/textures/models/lighting/lampoff/2.png
+dependency_records[4].sources[172]: assets/redpower/textures/models/lighting/lampoff/3.png
+dependency_records[4].sources[173]: assets/redpower/textures/models/lighting/lampoff/4.png
+dependency_records[4].sources[174]: assets/redpower/textures/models/lighting/lampoff/5.png
+dependency_records[4].sources[175]: assets/redpower/textures/models/lighting/lampoff/6.png
+dependency_records[4].sources[176]: assets/redpower/textures/models/lighting/lampoff/7.png
+dependency_records[4].sources[177]: assets/redpower/textures/models/lighting/lampoff/8.png
+dependency_records[4].sources[178]: assets/redpower/textures/models/lighting/lampoff/9.png
+dependency_records[4].sources[179]: assets/redpower/textures/models/lighting/lampon/
+dependency_records[4].sources[180]: assets/redpower/textures/models/lighting/lampon/0.png
+dependency_records[4].sources[181]: assets/redpower/textures/models/lighting/lampon/1.png
+dependency_records[4].sources[182]: assets/redpower/textures/models/lighting/lampon/10.png
+dependency_records[4].sources[183]: assets/redpower/textures/models/lighting/lampon/11.png
+dependency_records[4].sources[184]: assets/redpower/textures/models/lighting/lampon/12.png
+dependency_records[4].sources[185]: assets/redpower/textures/models/lighting/lampon/13.png
+dependency_records[4].sources[186]: assets/redpower/textures/models/lighting/lampon/14.png
+dependency_records[4].sources[187]: assets/redpower/textures/models/lighting/lampon/15.png
+dependency_records[4].sources[188]: assets/redpower/textures/models/lighting/lampon/2.png
+dependency_records[4].sources[189]: assets/redpower/textures/models/lighting/lampon/3.png
+dependency_records[4].sources[190]: assets/redpower/textures/models/lighting/lampon/4.png
+dependency_records[4].sources[191]: assets/redpower/textures/models/lighting/lampon/5.png
+dependency_records[4].sources[192]: assets/redpower/textures/models/lighting/lampon/6.png
+dependency_records[4].sources[193]: assets/redpower/textures/models/lighting/lampon/7.png
+dependency_records[4].sources[194]: assets/redpower/textures/models/lighting/lampon/8.png
+dependency_records[4].sources[195]: assets/redpower/textures/models/lighting/lampon/9.png
+dependency_records[4].sources[196]: assets/redpower/textures/models/lighting/lantern.png
+dependency_records[4].evidence[0]: resource namespace
 ```
 
 
@@ -234,10 +526,10 @@ class_files: 143
 packages: 33
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Network
+detections[1]: Old Rendering
 detections[2]: Old Forge API
-detections[3]: Old Network
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 19
@@ -299,8 +591,8 @@ client_hits: 244
 server_hits: 228
 client_percent: 51.7
 server_percent: 48.3
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 282
 models: 0
 blockstates: 0

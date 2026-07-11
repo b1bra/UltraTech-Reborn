@@ -11,14 +11,18 @@ version: 0.1.0
 author: Unknown
 size_mb: 0.63
 forge: FMLCorePlugin: net.loliland.airdrops.asm.CoremodPlugin
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: airdrops
+dependencies[2]: CraftTweaker
+dependencies[3]: Forge
+dependencies[4]: LaunchWrapper
 files: 59
 class_files: 36
 packages: 12
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Registry
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0
@@ -115,6 +119,69 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/airdrops_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: airdrops
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/airdrops/animations/entity/airdrop/animation.json
+dependency_records[1].sources[1]: assets/airdrops/geo/entity/airdrop/model.json
+dependency_records[1].sources[2]: assets/airdrops/lang/en_US.lang
+dependency_records[1].sources[3]: assets/airdrops/sounds.json
+dependency_records[1].sources[4]: assets/airdrops/sounds/entity/airdrop/bounce.ogg
+dependency_records[1].sources[5]: assets/airdrops/sounds/entity/airdrop/fell.ogg
+dependency_records[1].sources[6]: assets/airdrops/sounds/entity/airdrop/looting_default.ogg
+dependency_records[1].sources[7]: assets/airdrops/sounds/entity/airdrop/looting_legendary.ogg
+dependency_records[1].sources[8]: assets/airdrops/sounds/entity/airdrop/spawn_default.ogg
+dependency_records[1].sources[9]: assets/airdrops/sounds/entity/airdrop/spawn_legendary.ogg
+dependency_records[1].sources[10]: assets/airdrops/textures/entity/airdrop/default.png
+dependency_records[1].sources[11]: assets/airdrops/textures/entity/airdrop/default_new_year.png
+dependency_records[1].sources[12]: assets/airdrops/textures/entity/airdrop/legendary.png
+dependency_records[1].sources[13]: assets/airdrops/textures/entity/airdrop/legendary_new_year.png
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: CraftTweaker
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: net/loliland/airdrops/Airdrops.class
+dependency_records[2].sources[1]: net/loliland/airdrops/integration/minetweaker/MineTweakerAirdrop$setWeekdayLegendaryChance$1.class
+dependency_records[2].sources[2]: net/loliland/airdrops/integration/minetweaker/MineTweakerAirdrop$setWeekendLegendaryChance$1.class
+dependency_records[2].sources[3]: net/loliland/airdrops/integration/minetweaker/MineTweakerAirdrop.class
+dependency_records[2].evidence[0]: MineTweakerAPI, minetweaker
+dependency_records[2].evidence[1]: minetweaker
+dependency_records[3].name: Forge
+dependency_records[3].categories[0]: CoreMod
+dependency_records[3].categories[1]: Hidden
+dependency_records[3].confidence: 92
+dependency_records[3].sources[0]: net/loliland/airdrops/Airdrops$configDir$2.class
+dependency_records[3].sources[1]: net/loliland/airdrops/Airdrops.class
+dependency_records[3].sources[2]: net/loliland/airdrops/EventListener$onWorldTickServer$changed$1.class
+dependency_records[3].sources[3]: net/loliland/airdrops/EventListener.class
+dependency_records[3].sources[4]: net/loliland/airdrops/asm/CoremodPlugin.class
+dependency_records[3].sources[5]: net/loliland/airdrops/client/renderer/entity/airdrop/ModelAirdrop.class
+dependency_records[3].sources[6]: net/loliland/airdrops/client/renderer/entity/airdrop/RenderAirdrop.class
+dependency_records[3].sources[7]: net/loliland/airdrops/client/renderer/world/AirdropBeamsRenderer.class
+dependency_records[3].sources[8]: net/loliland/airdrops/entity/AirdropPlayer$Companion.class
+dependency_records[3].sources[9]: net/loliland/airdrops/entity/AirdropPlayer.class
+dependency_records[3].sources[10]: net/loliland/airdrops/entity/EntityAirdrop.class
+dependency_records[3].sources[11]: net/loliland/airdrops/network/AirdropsNetwork.class
+dependency_records[3].sources[12]: net/loliland/airdrops/network/SimpleNetwork.class
+dependency_records[3].sources[13]: net/loliland/airdrops/network/packet/PacketSyncWorldData$Handler.class
+dependency_records[3].sources[14]: net/loliland/airdrops/network/packet/PacketSyncWorldData.class
+dependency_records[3].evidence[0]: cpw/mods/fml/
+dependency_records[3].evidence[1]: net/minecraftforge/
+dependency_records[3].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[4].name: LaunchWrapper
+dependency_records[4].categories[0]: Runtime
+dependency_records[4].confidence: 90
+dependency_records[4].sources[0]: net/loliland/airdrops/Airdrops.class
+dependency_records[4].sources[1]: net/loliland/airdrops/integration/minetweaker/MineTweakerAirdrop$setWeekdayLegendaryChance$1.class
+dependency_records[4].sources[2]: net/loliland/airdrops/integration/minetweaker/MineTweakerAirdrop$setWeekendLegendaryChance$1.class
+dependency_records[4].sources[3]: net/loliland/airdrops/integration/minetweaker/MineTweakerAirdrop.class
+dependency_records[4].evidence[0]: tweaker marker
 ```
 
 
@@ -128,8 +195,8 @@ class_files: 36
 packages: 12
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Registry
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0

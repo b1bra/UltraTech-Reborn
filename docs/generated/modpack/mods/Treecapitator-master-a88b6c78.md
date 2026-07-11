@@ -11,7 +11,8 @@ version: Unknown
 author: Unknown
 size_mb: 0.09
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
+dependencies[1]: treecapitator
 files: 51
 class_files: 30
 packages: 8
@@ -92,6 +93,39 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: bspkrs/treecapitator/ClientProxy.class
+dependency_records[0].sources[1]: bspkrs/treecapitator/CommonProxy.class
+dependency_records[0].sources[2]: bspkrs/treecapitator/TCClientTicker.class
+dependency_records[0].sources[3]: bspkrs/treecapitator/Treecapitator.class
+dependency_records[0].sources[4]: bspkrs/treecapitator/TreecapitatorMod.class
+dependency_records[0].sources[5]: bspkrs/treecapitator/config/TCConfigHandler.class
+dependency_records[0].sources[6]: bspkrs/treecapitator/config/TCSettings.class
+dependency_records[0].sources[7]: bspkrs/treecapitator/fml/gui/GuiConfigCustomCategoryListEntry.class
+dependency_records[0].sources[8]: bspkrs/treecapitator/fml/gui/GuiTCConfig.class
+dependency_records[0].sources[9]: bspkrs/treecapitator/fml/gui/ModGuiFactoryHandler.class
+dependency_records[0].sources[10]: bspkrs/treecapitator/forge/ForgeEventHandler$CachedBreakSpeed.class
+dependency_records[0].sources[11]: bspkrs/treecapitator/forge/ForgeEventHandler.class
+dependency_records[0].sources[12]: bspkrs/treecapitator/forge/OreDictionaryHandler.class
+dependency_records[0].sources[13]: bspkrs/treecapitator/network/TCMessageToMessageCodec.class
+dependency_records[0].sources[14]: bspkrs/treecapitator/registry/ModConfigRegistry.class
+dependency_records[0].sources[15]: bspkrs/treecapitator/registry/ThirdPartyModConfig.class
+dependency_records[0].sources[16]: bspkrs/treecapitator/registry/ToolRegistry.class
+dependency_records[0].sources[17]: bspkrs/treecapitator/registry/TreeDefinition.class
+dependency_records[0].sources[18]: bspkrs/treecapitator/util/TCLog.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/
+dependency_records[0].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[1].name: treecapitator
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/treecapitator/
+dependency_records[1].sources[1]: assets/treecapitator/lang/
+dependency_records[1].sources[2]: assets/treecapitator/lang/en_US.lang
+dependency_records[1].sources[3]: assets/treecapitator/pack.mcmeta
+dependency_records[1].evidence[0]: resource namespace
 ```
 
 

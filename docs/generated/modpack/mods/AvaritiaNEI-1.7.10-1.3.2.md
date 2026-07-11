@@ -11,7 +11,7 @@ version: Unknown
 author: Unknown
 size_mb: 0.01
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
 files: 17
 class_files: 15
 packages: 5
@@ -90,6 +90,20 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/gamerforea/avaritianei/AvaritiaNeiMod.class
+dependency_records[0].sources[1]: com/gamerforea/avaritianei/client/AvaritiaIntegration.class
+dependency_records[0].sources[2]: com/gamerforea/avaritianei/client/ClientProxy.class
+dependency_records[0].sources[3]: com/gamerforea/avaritianei/client/handlers/ExtremeFakeOverlayHandler.class
+dependency_records[0].sources[4]: com/gamerforea/avaritianei/client/handlers/ExtremeOverlayHandler.class
+dependency_records[0].sources[5]: com/gamerforea/avaritianei/client/handlers/ExtremeStackPositioner.class
+dependency_records[0].sources[6]: com/gamerforea/avaritianei/network/NetworkManager.class
+dependency_records[0].sources[7]: com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage$Handler.class
+dependency_records[0].sources[8]: com/gamerforea/avaritianei/network/OverlayExtremeFakeRecipeMessage.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

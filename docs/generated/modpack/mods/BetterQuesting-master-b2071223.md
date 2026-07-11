@@ -11,7 +11,10 @@ version: Unknown
 author: Unknown
 size_mb: 1.24
 forge: Unknown
-dependencies: []
+dependencies[0]: betterquesting
+dependencies[1]: CoFHCore
+dependencies[2]: Forge
+dependencies[3]: LaunchWrapper
 files: 524
 class_files: 399
 packages: 88
@@ -79,8 +82,8 @@ client_hits: 548
 server_hits: 167
 client_percent: 76.6
 server_percent: 23.4
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 365
 models: 0
 blockstates: 0
@@ -140,6 +143,137 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: betterquesting
+dependency_records[0].categories[0]: Optional
+dependency_records[0].confidence: 45
+dependency_records[0].sources[0]: assets/betterquesting/
+dependency_records[0].sources[1]: assets/betterquesting/bq_themes.json
+dependency_records[0].sources[2]: assets/betterquesting/lang/
+dependency_records[0].sources[3]: assets/betterquesting/lang/en_US.lang
+dependency_records[0].sources[4]: assets/betterquesting/lang/ru_RU.lang
+dependency_records[0].sources[5]: assets/betterquesting/sounds/
+dependency_records[0].sources[6]: assets/betterquesting/sounds/page_flip0.wav
+dependency_records[0].sources[7]: assets/betterquesting/sounds/page_flip1.wav
+dependency_records[0].sources[8]: assets/betterquesting/textures/
+dependency_records[0].sources[9]: assets/betterquesting/textures/blocks/
+dependency_records[0].sources[10]: assets/betterquesting/textures/blocks/fluid_placeholder.png
+dependency_records[0].sources[11]: assets/betterquesting/textures/blocks/submit_station_side.png
+dependency_records[0].sources[12]: assets/betterquesting/textures/blocks/submit_station_top.png
+dependency_records[0].sources[13]: assets/betterquesting/textures/gui/
+dependency_records[0].sources[14]: assets/betterquesting/textures/gui/default_title.png
+dependency_records[0].sources[15]: assets/betterquesting/textures/gui/editor_icons.png
+dependency_records[0].sources[16]: assets/betterquesting/textures/gui/new_gui.png
+dependency_records[0].sources[17]: assets/betterquesting/textures/gui/null_texture.png
+dependency_records[0].sources[18]: assets/betterquesting/textures/gui/quest_frames.png
+dependency_records[0].sources[19]: assets/betterquesting/textures/gui/simple_frames.png
+dependency_records[0].sources[20]: assets/betterquesting/textures/items/
+dependency_records[0].sources[21]: assets/betterquesting/textures/items/heart_full.png
+dependency_records[0].sources[22]: assets/betterquesting/textures/items/heart_half.png
+dependency_records[0].sources[23]: assets/betterquesting/textures/items/heart_quarter.png
+dependency_records[0].sources[24]: assets/betterquesting/textures/items/placeholder.png
+dependency_records[0].evidence[0]: resource namespace
+dependency_records[1].name: CoFHCore
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: betterquesting/api/utils/ItemComparison.class
+dependency_records[1].evidence[0]: cofh/core/
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].categories[1]: Reflection
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: betterquesting/api/events/BQLivingUpdateEvent.class
+dependency_records[2].sources[1]: betterquesting/api/events/DatabaseEvent$Load.class
+dependency_records[2].sources[2]: betterquesting/api/events/DatabaseEvent$Save.class
+dependency_records[2].sources[3]: betterquesting/api/events/DatabaseEvent$Update.class
+dependency_records[2].sources[4]: betterquesting/api/events/DatabaseEvent.class
+dependency_records[2].sources[5]: betterquesting/api/events/NbtDocEvent.class
+dependency_records[2].sources[6]: betterquesting/api/events/QuestEvent.class
+dependency_records[2].sources[7]: betterquesting/api/nbt_doc/NbtDocBasic.class
+dependency_records[2].sources[8]: betterquesting/api/network/IPacketRegistry.class
+dependency_records[2].sources[9]: betterquesting/api/network/IPacketSender.class
+dependency_records[2].sources[10]: betterquesting/api/package-info.class
+dependency_records[2].sources[11]: betterquesting/api/placeholders/FluidPlaceholder.class
+dependency_records[2].sources[12]: betterquesting/api/placeholders/ItemPlaceholder.class
+dependency_records[2].sources[13]: betterquesting/api/placeholders/PlaceholderConverter.class
+dependency_records[2].sources[14]: betterquesting/api/properties/basic/PropertyTypeString.class
+dependency_records[2].sources[15]: betterquesting/api/questing/rewards/IReward.class
+dependency_records[2].sources[16]: betterquesting/api/questing/tasks/IFluidTask.class
+dependency_records[2].sources[17]: betterquesting/api/questing/tasks/ITask.class
+dependency_records[2].sources[18]: betterquesting/api/utils/BigItemStack.class
+dependency_records[2].sources[19]: betterquesting/api/utils/ItemComparison.class
+dependency_records[2].sources[20]: betterquesting/api/utils/JsonHelper.class
+dependency_records[2].sources[21]: betterquesting/api/utils/RenderUtils.class
+dependency_records[2].sources[22]: betterquesting/api2/cache/QuestCache.class
+dependency_records[2].sources[23]: betterquesting/api2/client/gui/SceneController.class
+dependency_records[2].sources[24]: betterquesting/api2/client/gui/events/PEventBroadcaster.class
+dependency_records[2].sources[25]: betterquesting/api2/client/gui/panels/content/PanelFluidSlot.class
+dependency_records[2].sources[26]: betterquesting/api2/client/gui/panels/lists/CanvasFluidDatabase.class
+dependency_records[2].sources[27]: betterquesting/api2/client/gui/panels/lists/CanvasItemDatabase.class
+dependency_records[2].sources[28]: betterquesting/api2/client/gui/resources/textures/FluidTexture.class
+dependency_records[2].sources[29]: betterquesting/api2/client/gui/resources/textures/SimpleTexture.class
+dependency_records[2].sources[30]: betterquesting/api2/client/gui/resources/textures/SlicedTexture.class
+dependency_records[2].sources[31]: betterquesting/api2/client/gui/themes/presets/PresetGUIs.class
+dependency_records[2].sources[32]: betterquesting/api2/package-info.class
+dependency_records[2].sources[33]: betterquesting/api2/utils/OreIngredient.class
+dependency_records[2].sources[34]: betterquesting/api2/utils/ParticipantInfo.class
+dependency_records[2].sources[35]: betterquesting/blocks/BlockSubmitStation.class
+dependency_records[2].sources[36]: betterquesting/blocks/TileSubmitStation.class
+dependency_records[2].sources[37]: betterquesting/client/BQ_Keybindings.class
+dependency_records[2].sources[38]: betterquesting/client/QuestNotification.class
+dependency_records[2].sources[39]: betterquesting/client/gui/GuiBQConfig.class
+dependency_records[2].sources[40]: betterquesting/client/gui2/GuiHome.class
+dependency_records[2].sources[41]: betterquesting/client/gui2/editors/nbt/GuiFluidSelection.class
+dependency_records[2].sources[42]: betterquesting/client/gui2/editors/nbt/GuiItemSelection.class
+dependency_records[2].sources[43]: betterquesting/client/gui2/editors/nbt/GuiNbtAdd.class
+dependency_records[2].sources[44]: betterquesting/client/gui2/editors/nbt/PanelScrollingNBT.class
+dependency_records[2].sources[45]: betterquesting/client/gui2/editors/nbt/callback/NbtFluidCallback.class
+dependency_records[2].sources[46]: betterquesting/client/gui2/inventory/GuiSubmitStation.class
+dependency_records[2].sources[47]: betterquesting/client/themes/ThemeRegistry.class
+dependency_records[2].sources[48]: betterquesting/commands/BQ_CommandAdmin.class
+dependency_records[2].sources[49]: betterquesting/commands/BQ_CommandUser.class
+dependency_records[2].sources[50]: betterquesting/core/BetterQuesting.class
+dependency_records[2].sources[51]: betterquesting/core/ExpansionLoader.class
+dependency_records[2].sources[52]: betterquesting/core/proxies/ClientProxy.class
+dependency_records[2].sources[53]: betterquesting/core/proxies/CommonProxy.class
+dependency_records[2].sources[54]: betterquesting/handlers/ConfigGuiFactory.class
+dependency_records[2].sources[55]: betterquesting/handlers/ConfigHandler.class
+dependency_records[2].sources[56]: betterquesting/handlers/EventHandler.class
+dependency_records[2].sources[57]: betterquesting/handlers/GuiHandler.class
+dependency_records[2].sources[58]: betterquesting/handlers/SaveLoadHandler.class
+dependency_records[2].sources[59]: betterquesting/items/ItemExtraLife.class
+dependency_records[2].sources[60]: betterquesting/items/ItemGuideBook.class
+dependency_records[2].sources[61]: betterquesting/network/PacketQuesting$HandleClient.class
+dependency_records[2].sources[62]: betterquesting/network/PacketQuesting$HandleServer.class
+dependency_records[2].sources[63]: betterquesting/network/PacketQuesting.class
+dependency_records[2].sources[64]: betterquesting/network/PacketSender.class
+dependency_records[2].sources[65]: betterquesting/network/PacketTypeRegistry.class
+dependency_records[2].sources[66]: betterquesting/network/handlers/NetBulkSync.class
+dependency_records[2].sources[67]: betterquesting/network/handlers/NetCacheSync.class
+dependency_records[2].sources[68]: betterquesting/network/handlers/NetChapterEdit.class
+dependency_records[2].sources[69]: betterquesting/network/handlers/NetChapterSync.class
+dependency_records[2].sources[70]: betterquesting/network/handlers/NetInviteSync.class
+dependency_records[2].sources[71]: betterquesting/network/handlers/NetLifeSync.class
+dependency_records[2].sources[72]: betterquesting/network/handlers/NetNameSync.class
+dependency_records[2].sources[73]: betterquesting/network/handlers/NetNotices.class
+dependency_records[2].sources[74]: betterquesting/network/handlers/NetPartyAction.class
+dependency_records[2].sources[75]: betterquesting/network/handlers/NetPartySync.class
+dependency_records[2].sources[76]: betterquesting/network/handlers/NetQuestAction.class
+dependency_records[2].sources[77]: betterquesting/network/handlers/NetQuestEdit.class
+dependency_records[2].sources[78]: betterquesting/network/handlers/NetQuestSync.class
+dependency_records[2].sources[79]: betterquesting/network/handlers/NetSettingSync.class
+dependency_records[2].sources[80]: betterquesting/network/handlers/NetStationEdit.class
+dependency_records[2].sources[81]: betterquesting/questing/QuestInstance.class
+dependency_records[2].sources[82]: betterquesting/questing/QuestLineEntry.class
+dependency_records[2].sources[83]: com/gamerforea/betterquesting/resource/UniResources.class
+dependency_records[2].sources[84]: com/gamerforea/betterquesting/util/PacketUtils.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
+dependency_records[2].evidence[1]: net/minecraftforge/
+dependency_records[2].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[3].name: LaunchWrapper
+dependency_records[3].categories[0]: CoreMod
+dependency_records[3].confidence: 92
+dependency_records[3].sources[0]: betterquesting/core/BetterQuesting.class
+dependency_records[3].evidence[0]: net/minecraft/launchwrapper/
 ```
 
 
@@ -215,8 +349,8 @@ client_hits: 548
 server_hits: 167
 client_percent: 76.6
 server_percent: 23.4
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 365
 models: 0
 blockstates: 0

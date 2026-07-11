@@ -11,7 +11,9 @@ version: 1.7.10-1.8
 author: Unknown
 size_mb: 0.05
 forge: Unknown
-dependencies: []
+dependencies[0]: CraftTweaker
+dependencies[1]: Forge
+dependencies[2]: LaunchWrapper
 files: 39
 class_files: 26
 packages: 7
@@ -88,6 +90,34 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: CraftTweaker
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: wanion/lib/common/MineTweakerHelper.class
+dependency_records[0].evidence[0]: MineTweakerAPI, minetweaker
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].categories[1]: Reflection
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: wanion/lib/WanionLib.class
+dependency_records[1].sources[1]: wanion/lib/client/ClientTickHandler.class
+dependency_records[1].sources[2]: wanion/lib/client/animation/Animation.class
+dependency_records[1].sources[3]: wanion/lib/client/animation/ComplexAnimation.class
+dependency_records[1].sources[4]: wanion/lib/client/animation/ComplexHalfAnimation.class
+dependency_records[1].sources[5]: wanion/lib/client/animation/SimpleAnimation.class
+dependency_records[1].sources[6]: wanion/lib/client/animation/SimpleHalfAnimation.class
+dependency_records[1].sources[7]: wanion/lib/common/MetaItem.class
+dependency_records[1].sources[8]: wanion/lib/common/MineTweakerHelper.class
+dependency_records[1].sources[9]: wanion/lib/common/Util.class
+dependency_records[1].sources[10]: wanion/lib/module/LoadStage.class
+dependency_records[1].sources[11]: wanion/lib/module/ModuleHandler.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[2].name: LaunchWrapper
+dependency_records[2].categories[0]: Runtime
+dependency_records[2].confidence: 90
+dependency_records[2].sources[0]: wanion/lib/common/MineTweakerHelper.class
+dependency_records[2].evidence[0]: tweaker marker
 ```
 
 

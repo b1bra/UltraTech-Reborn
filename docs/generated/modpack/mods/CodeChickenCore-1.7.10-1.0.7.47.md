@@ -11,7 +11,11 @@ version: Unknown
 author: Unknown
 size_mb: 0.12
 forge: FMLCorePlugin: codechicken.core.launch.CodeChickenCorePlugin
-dependencies: []
+dependencies[0]: ASM
+dependencies[1]: codechickencore
+dependencies[2]: CodeChickenLib
+dependencies[3]: Forge
+dependencies[4]: LaunchWrapper
 files: 84
 class_files: 77
 packages: 11
@@ -98,6 +102,117 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: ASM
+dependency_records[0].categories[0]: ASM
+dependency_records[0].confidence: 92
+dependency_records[0].sources[0]: codechicken/core/ClassDiscoverer.class
+dependency_records[0].sources[1]: codechicken/core/asm/DefaultImplementationTransformer$InterfaceImpl.class
+dependency_records[0].sources[2]: codechicken/core/asm/DefaultImplementationTransformer.class
+dependency_records[0].sources[3]: codechicken/core/asm/DelegatedTransformer.class
+dependency_records[0].sources[4]: codechicken/core/asm/DependancyLister$DependancyMethodLister.class
+dependency_records[0].sources[5]: codechicken/core/asm/DependancyLister.class
+dependency_records[0].sources[6]: codechicken/core/asm/InterfaceDependancyTransformer.class
+dependency_records[0].sources[7]: codechicken/core/asm/MethodASMifier.class
+dependency_records[0].sources[8]: codechicken/core/asm/TweakTransformer$1.class
+dependency_records[0].sources[9]: codechicken/core/asm/TweakTransformer$2.class
+dependency_records[0].sources[10]: codechicken/core/asm/TweakTransformer.class
+dependency_records[0].sources[11]: codechicken/obfuscator/ConstantObfuscator.class
+dependency_records[0].sources[12]: codechicken/obfuscator/ObfRemapper.class
+dependency_records[0].sources[13]: codechicken/obfuscator/ObfuscationRun.class
+dependency_records[0].evidence[0]: org/objectweb/asm/
+dependency_records[0].evidence[1]: org/objectweb/asm/, ClassVisitor, MethodVisitor
+dependency_records[0].evidence[2]: org/objectweb/asm/, IClassTransformer
+dependency_records[0].evidence[3]: org/objectweb/asm/, IClassTransformer, ClassVisitor
+dependency_records[0].evidence[4]: org/objectweb/asm/, MethodVisitor
+dependency_records[1].name: codechickencore
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/codechickencore/asm/tweaks.asm
+dependency_records[1].sources[1]: assets/codechickencore/lang/en_US.lang
+dependency_records[1].sources[2]: assets/codechickencore/lang/ru_RU.lang
+dependency_records[1].evidence[0]: resource namespace
+dependency_records[2].name: CodeChickenLib
+dependency_records[2].categories[0]: CoreMod
+dependency_records[2].categories[1]: Hidden
+dependency_records[2].categories[2]: Reflection
+dependency_records[2].confidence: 92
+dependency_records[2].sources[0]: codechicken/core/ClassDiscoverer.class
+dependency_records[2].sources[1]: codechicken/core/GuiModListScroll.class
+dependency_records[2].sources[2]: codechicken/core/ReflectionManager.class
+dependency_records[2].sources[3]: codechicken/core/ServerUtils.class
+dependency_records[2].sources[4]: codechicken/core/asm/CodeChickenCoreModContainer.class
+dependency_records[2].sources[5]: codechicken/core/asm/DefaultImplementationTransformer$InterfaceImpl.class
+dependency_records[2].sources[6]: codechicken/core/asm/DefaultImplementationTransformer.class
+dependency_records[2].sources[7]: codechicken/core/asm/InterfaceDependancyTransformer.class
+dependency_records[2].sources[8]: codechicken/core/asm/MethodASMifier.class
+dependency_records[2].sources[9]: codechicken/core/asm/TweakTransformer$1.class
+dependency_records[2].sources[10]: codechicken/core/asm/TweakTransformer$2.class
+dependency_records[2].sources[11]: codechicken/core/asm/TweakTransformer.class
+dependency_records[2].sources[12]: codechicken/core/featurehack/GameDataManipulator.class
+dependency_records[2].sources[13]: codechicken/core/featurehack/LiquidTextures.class
+dependency_records[2].sources[14]: codechicken/core/featurehack/mc/TextureLavaFX.class
+dependency_records[2].sources[15]: codechicken/core/featurehack/mc/TextureLavaFlowFX.class
+dependency_records[2].sources[16]: codechicken/core/featurehack/mc/TextureWaterFX.class
+dependency_records[2].sources[17]: codechicken/core/featurehack/mc/TextureWaterFlowFX.class
+dependency_records[2].sources[18]: codechicken/core/fluid/FluidUtils.class
+dependency_records[2].sources[19]: codechicken/core/gui/GuiScreenWidget.class
+dependency_records[2].sources[20]: codechicken/core/gui/GuiScrollPane.class
+dependency_records[2].sources[21]: codechicken/core/inventory/GuiContainerWidget.class
+dependency_records[2].sources[22]: codechicken/obfuscator/ConstantObfuscator.class
+dependency_records[2].sources[23]: codechicken/obfuscator/ObfDirection.class
+dependency_records[2].sources[24]: codechicken/obfuscator/ObfRemapper.class
+dependency_records[2].sources[25]: codechicken/obfuscator/ObfuscationMap$ClassEntry.class
+dependency_records[2].sources[26]: codechicken/obfuscator/ObfuscationMap$ObfuscationEntry.class
+dependency_records[2].sources[27]: codechicken/obfuscator/ObfuscationMap.class
+dependency_records[2].sources[28]: codechicken/obfuscator/ObfuscationRun.class
+dependency_records[2].sources[29]: dependencies.info
+dependency_records[2].evidence[0]: CodeChickenLib
+dependency_records[2].evidence[1]: codechicken/lib/
+dependency_records[3].name: Forge
+dependency_records[3].categories[0]: CoreMod
+dependency_records[3].categories[1]: Hidden
+dependency_records[3].categories[2]: Reflection
+dependency_records[3].confidence: 92
+dependency_records[3].sources[0]: codechicken/core/CCUpdateChecker.class
+dependency_records[3].sources[1]: codechicken/core/ClassDiscoverer.class
+dependency_records[3].sources[2]: codechicken/core/ClientUtils.class
+dependency_records[3].sources[3]: codechicken/core/CommonUtils.class
+dependency_records[3].sources[4]: codechicken/core/GuiModListScroll.class
+dependency_records[3].sources[5]: codechicken/core/asm/CodeChickenCoreModContainer.class
+dependency_records[3].sources[6]: codechicken/core/commands/CoreCommand.class
+dependency_records[3].sources[7]: codechicken/core/featurehack/FeatureHack.class
+dependency_records[3].sources[8]: codechicken/core/featurehack/LiquidTextures.class
+dependency_records[3].sources[9]: codechicken/core/featurehack/RenderEntityRenderHook.class
+dependency_records[3].sources[10]: codechicken/core/featurehack/TweakTransformerHelper.class
+dependency_records[3].sources[11]: codechicken/core/featurehack/mc/TextureLavaFX.class
+dependency_records[3].sources[12]: codechicken/core/featurehack/mc/TextureLavaFlowFX.class
+dependency_records[3].sources[13]: codechicken/core/featurehack/mc/TextureWaterFX.class
+dependency_records[3].sources[14]: codechicken/core/featurehack/mc/TextureWaterFlowFX.class
+dependency_records[3].sources[15]: codechicken/core/fluid/ExtendedFluidTank.class
+dependency_records[3].sources[16]: codechicken/core/fluid/FluidUtils.class
+dependency_records[3].sources[17]: codechicken/core/fluid/TankAccess.class
+dependency_records[3].sources[18]: codechicken/core/internal/CCCEventHandler.class
+dependency_records[3].sources[19]: codechicken/core/launch/CodeChickenCorePlugin.class
+dependency_records[3].sources[20]: codechicken/core/launch/DepLoader$DepLoadInst.class
+dependency_records[3].sources[21]: codechicken/core/launch/DepLoader$VersionedFile.class
+dependency_records[3].sources[22]: codechicken/core/launch/DepLoader.class
+dependency_records[3].evidence[0]: cpw/mods/fml/
+dependency_records[3].evidence[1]: net/minecraftforge/
+dependency_records[3].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[4].name: LaunchWrapper
+dependency_records[4].categories[0]: CoreMod
+dependency_records[4].confidence: 92
+dependency_records[4].sources[0]: codechicken/core/ClassDiscoverer.class
+dependency_records[4].sources[1]: codechicken/core/asm/DefaultImplementationTransformer.class
+dependency_records[4].sources[2]: codechicken/core/asm/DelegatedTransformer.class
+dependency_records[4].sources[3]: codechicken/core/asm/DependancyLister$DependancyMethodLister.class
+dependency_records[4].sources[4]: codechicken/core/asm/DependancyLister.class
+dependency_records[4].sources[5]: codechicken/core/asm/InterfaceDependancyTransformer.class
+dependency_records[4].sources[6]: codechicken/core/asm/MethodASMifier.class
+dependency_records[4].sources[7]: codechicken/core/asm/TweakTransformer.class
+dependency_records[4].sources[8]: codechicken/core/launch/DepLoader$DepLoadInst.class
+dependency_records[4].evidence[0]: net/minecraft/launchwrapper/
+dependency_records[4].evidence[1]: net/minecraft/launchwrapper/, LaunchClassLoader
 ```
 
 

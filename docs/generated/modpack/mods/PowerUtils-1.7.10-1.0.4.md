@@ -11,15 +11,18 @@ version: 1.7.10-1.0.4
 author: Unknown
 size_mb: 0.05
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
+dependencies[1]: IC2 API
+dependencies[2]: putils
+dependencies[3]: Thermal Foundation
 files: 75
 class_files: 27
 packages: 12
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 5
@@ -114,6 +117,68 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: ic2/api/crops/CropCard.class
+dependency_records[0].sources[1]: ic2/api/crops/Crops.class
+dependency_records[0].sources[2]: ic2/api/crops/package-info.class
+dependency_records[0].sources[3]: ic2/api/recipe/ISemiFluidFuelManager.class
+dependency_records[0].sources[4]: putils/client/ClientProxy.class
+dependency_records[0].sources[5]: putils/common/PowerUtils.class
+dependency_records[0].sources[6]: putils/common/ServerProxy.class
+dependency_records[0].sources[7]: putils/common/blocks/BlockMain.class
+dependency_records[0].sources[8]: putils/common/items/ItemStorageModule.class
+dependency_records[0].sources[9]: putils/common/tiles/TileEntityPowerConverter.class
+dependency_records[0].sources[10]: putils/network/PacketChangeState.class
+dependency_records[0].sources[11]: putils/network/PacketHandler.class
+dependency_records[0].sources[12]: putils/utils/Info.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/
+dependency_records[0].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[1].name: IC2 API
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: ic2/api/crops/BaseSeed.class
+dependency_records[1].sources[1]: ic2/api/crops/CropCard.class
+dependency_records[1].sources[2]: ic2/api/crops/Crops.class
+dependency_records[1].sources[3]: ic2/api/crops/ICropTile.class
+dependency_records[1].sources[4]: ic2/api/crops/package-info.class
+dependency_records[1].sources[5]: ic2/api/item/IKineticWindRotor.class
+dependency_records[1].sources[6]: ic2/api/item/ITerraformingBP.class
+dependency_records[1].sources[7]: ic2/api/recipe/IPatternStorage.class
+dependency_records[1].sources[8]: ic2/api/recipe/ISemiFluidFuelManager$BurnProperty.class
+dependency_records[1].sources[9]: ic2/api/recipe/ISemiFluidFuelManager.class
+dependency_records[1].sources[10]: putils/client/ClientProxy.class
+dependency_records[1].sources[11]: putils/common/PowerUtils.class
+dependency_records[1].sources[12]: putils/common/tiles/TileEntityBase.class
+dependency_records[1].sources[13]: putils/common/tiles/TileEntityPowerConverter.class
+dependency_records[1].evidence[0]: ic2.core
+dependency_records[1].evidence[1]: ic2/api/
+dependency_records[2].name: putils
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/putils/
+dependency_records[2].sources[1]: assets/putils/lang/
+dependency_records[2].sources[2]: assets/putils/lang/en_US.lang
+dependency_records[2].sources[3]: assets/putils/textures/
+dependency_records[2].sources[4]: assets/putils/textures/blocks/
+dependency_records[2].sources[5]: assets/putils/textures/blocks/pc_side.png
+dependency_records[2].sources[6]: assets/putils/textures/blocks/pc_side.png.mcmeta
+dependency_records[2].sources[7]: assets/putils/textures/blocks/pc_side_old.png
+dependency_records[2].sources[8]: assets/putils/textures/gui/
+dependency_records[2].sources[9]: assets/putils/textures/gui/ec_gui.png
+dependency_records[2].sources[10]: assets/putils/textures/items/
+dependency_records[2].sources[11]: assets/putils/textures/items/module_bc.png
+dependency_records[2].sources[12]: assets/putils/textures/items/module_ic.png
+dependency_records[2].sources[13]: assets/putils/textures/items/module_te.png
+dependency_records[2].sources[14]: assets/putils/textures/items/module_ue.png
+dependency_records[2].evidence[0]: resource namespace
+dependency_records[3].name: Thermal Foundation
+dependency_records[3].categories[0]: Hidden
+dependency_records[3].confidence: 78
+dependency_records[3].sources[0]: putils/common/tiles/TileEntityPowerConverter.class
+dependency_records[3].evidence[0]: cofh/api/
 ```
 
 
@@ -127,9 +192,9 @@ class_files: 27
 packages: 12
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
+detections[0]: Old Network
 detections[1]: Old Forge API
-detections[2]: Old Network
+detections[2]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 5

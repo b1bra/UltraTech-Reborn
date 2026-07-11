@@ -11,7 +11,7 @@ version: Unknown
 author: Unknown
 size_mb: 0.0
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
 files: 4
 class_files: 2
 packages: 1
@@ -88,6 +88,11 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/gamerforea/anvilrepairfix/AnvilRepairFix.class
+dependency_records[0].evidence[0]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

@@ -11,14 +11,16 @@ version: Unknown
 author: Unknown
 size_mb: 0.04
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
+dependencies[1]: LaunchWrapper
+dependencies[2]: uniresources
 files: 34
 class_files: 29
 packages: 11
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -84,16 +86,54 @@ recipe_data.smelting: 1
 recipe_data.special: 0
 recipe_data.json_files: 0
 recipe_data.class_files_scanned: 29
-recipe_data.recipe_classes[0]: com/gamerforea/uniresources/recipe/BlockToIngotRecipe.class
-recipe_data.recipe_classes[1]: com/gamerforea/uniresources/recipe/IngotToNuggetRecipe.class
-recipe_data.recipe_classes[2]: com/gamerforea/uniresources/recipe/IngotToBlockRecipe.class
-recipe_data.recipe_classes[3]: com/gamerforea/uniresources/recipe/NuggetToIngotRecipe.class
+recipe_data.recipe_classes[0]: com/gamerforea/uniresources/recipe/NuggetToIngotRecipe.class
+recipe_data.recipe_classes[1]: com/gamerforea/uniresources/recipe/IngotToBlockRecipe.class
+recipe_data.recipe_classes[2]: com/gamerforea/uniresources/recipe/IngotToNuggetRecipe.class
+recipe_data.recipe_classes[3]: com/gamerforea/uniresources/recipe/BlockToIngotRecipe.class
 recipe_data.recipe_classes[4]: com/gamerforea/uniresources/recipe/SmeltRecipe.class
 No data
 No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/gamerforea/uniresources/CommonProxy.class
+dependency_records[0].sources[1]: com/gamerforea/uniresources/UniversalResourcesConfig.class
+dependency_records[0].sources[2]: com/gamerforea/uniresources/UniversalResourcesMod.class
+dependency_records[0].sources[3]: com/gamerforea/uniresources/block/BlockBase.class
+dependency_records[0].sources[4]: com/gamerforea/uniresources/client/ClientProxy.class
+dependency_records[0].sources[5]: com/gamerforea/uniresources/client/TooltipHandler.class
+dependency_records[0].sources[6]: com/gamerforea/uniresources/creativetab/UniversalResourcesTab.class
+dependency_records[0].sources[7]: com/gamerforea/uniresources/event/BuildResourcesEvent.class
+dependency_records[0].sources[8]: com/gamerforea/uniresources/event/RegisterResourceEvent$Block.class
+dependency_records[0].sources[9]: com/gamerforea/uniresources/event/RegisterResourceEvent.class
+dependency_records[0].sources[10]: com/gamerforea/uniresources/handler/ConversionHandler.class
+dependency_records[0].sources[11]: com/gamerforea/uniresources/item/ItemBase.class
+dependency_records[0].sources[12]: com/gamerforea/uniresources/nei/NEIUniResourcesConfig.class
+dependency_records[0].sources[13]: com/gamerforea/uniresources/recipe/BlockToIngotRecipe.class
+dependency_records[0].sources[14]: com/gamerforea/uniresources/recipe/IngotToBlockRecipe.class
+dependency_records[0].sources[15]: com/gamerforea/uniresources/recipe/IngotToNuggetRecipe.class
+dependency_records[0].sources[16]: com/gamerforea/uniresources/recipe/NuggetToIngotRecipe.class
+dependency_records[0].sources[17]: com/gamerforea/uniresources/registry/BlockResource.class
+dependency_records[0].sources[18]: com/gamerforea/uniresources/registry/InternalRegistry.class
+dependency_records[0].sources[19]: com/gamerforea/uniresources/registry/Resource.class
+dependency_records[0].sources[20]: com/gamerforea/uniresources/registry/ResourceMappings.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[1].name: LaunchWrapper
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: com/gamerforea/uniresources/registry/InternalRegistry.class
+dependency_records[1].evidence[0]: net/minecraft/launchwrapper/, LaunchClassLoader
+dependency_records[2].name: uniresources
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/uniresources/config/hardness.txt
+dependency_records[2].sources[1]: assets/uniresources/lang/en_US.lang
+dependency_records[2].sources[2]: assets/uniresources/lang/ru_RU.lang
+dependency_records[2].evidence[0]: resource namespace
 ```
 
 
@@ -107,8 +147,8 @@ class_files: 29
 packages: 11
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -186,10 +226,10 @@ smelting: 1
 special: 0
 json_files: 0
 class_files_scanned: 29
-recipe_classes[0]: com/gamerforea/uniresources/recipe/BlockToIngotRecipe.class
-recipe_classes[1]: com/gamerforea/uniresources/recipe/IngotToNuggetRecipe.class
-recipe_classes[2]: com/gamerforea/uniresources/recipe/IngotToBlockRecipe.class
-recipe_classes[3]: com/gamerforea/uniresources/recipe/NuggetToIngotRecipe.class
+recipe_classes[0]: com/gamerforea/uniresources/recipe/NuggetToIngotRecipe.class
+recipe_classes[1]: com/gamerforea/uniresources/recipe/IngotToBlockRecipe.class
+recipe_classes[2]: com/gamerforea/uniresources/recipe/IngotToNuggetRecipe.class
+recipe_classes[3]: com/gamerforea/uniresources/recipe/BlockToIngotRecipe.class
 recipe_classes[4]: com/gamerforea/uniresources/recipe/SmeltRecipe.class
 No data
 No data

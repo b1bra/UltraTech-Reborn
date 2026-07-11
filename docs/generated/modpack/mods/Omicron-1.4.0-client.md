@@ -11,16 +11,18 @@ version: 1.4.0
 author: Unknown
 size_mb: 0.29
 forge: FMLCorePlugin: com.aizistral.omicron.asm.core.OmicronCoremod
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: Forge
+dependencies[2]: omicron
 files: 162
 class_files: 142
 packages: 48
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
-detections[2]: CoreMod / ASM
-detections[3]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
+detections[2]: Old Forge API
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 3
@@ -63,8 +65,8 @@ client_hits: 151
 server_hits: 97
 client_percent: 60.9
 server_percent: 39.1
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 0
 models: 0
 blockstates: 0
@@ -117,6 +119,84 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/omicron_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].categories[1]: Hidden
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: com/aizistral/omicron/OmicronMod.class
+dependency_records[1].sources[1]: com/aizistral/omicron/api/concurrent/GameThreadExecutor$Implementation.class
+dependency_records[1].sources[2]: com/aizistral/omicron/api/registry/utils/RegistryManager.class
+dependency_records[1].sources[3]: com/aizistral/omicron/api/render/effects/BatchedRenderEffect.class
+dependency_records[1].sources[4]: com/aizistral/omicron/api/render/effects/BatchedRenderEffectEntity.class
+dependency_records[1].sources[5]: com/aizistral/omicron/api/render/effects/EffectEngine.class
+dependency_records[1].sources[6]: com/aizistral/omicron/api/render/effects/IsolatedRenderEffect.class
+dependency_records[1].sources[7]: com/aizistral/omicron/api/render/effects/IsolatedRenderEffectEntity.class
+dependency_records[1].sources[8]: com/aizistral/omicron/api/render/effects/ManagedEffectEngine.class
+dependency_records[1].sources[9]: com/aizistral/omicron/api/render/effects/RenderEffect.class
+dependency_records[1].sources[10]: com/aizistral/omicron/api/render/effects/common/AuraBurstEffect.class
+dependency_records[1].sources[11]: com/aizistral/omicron/api/render/effects/common/CommonEffects.class
+dependency_records[1].sources[12]: com/aizistral/omicron/api/render/effects/common/EffectBuilder$Mandatory.class
+dependency_records[1].sources[13]: com/aizistral/omicron/api/render/effects/common/EffectBuilder$Optional.class
+dependency_records[1].sources[14]: com/aizistral/omicron/api/render/effects/common/EffectBuilder.class
+dependency_records[1].sources[15]: com/aizistral/omicron/api/render/effects/common/LightningBoltEffect$BoltType.class
+dependency_records[1].sources[16]: com/aizistral/omicron/api/render/effects/common/LightningBoltEffect.class
+dependency_records[1].sources[17]: com/aizistral/omicron/api/render/player/PlayerRenderCallbackEvent$Post.class
+dependency_records[1].sources[18]: com/aizistral/omicron/api/render/player/PlayerRenderCallbackEvent$Pre.class
+dependency_records[1].sources[19]: com/aizistral/omicron/api/render/player/PlayerRenderCallbackEvent.class
+dependency_records[1].sources[20]: com/aizistral/omicron/api/tooltip/world/WorldTooltipBlock.class
+dependency_records[1].sources[21]: com/aizistral/omicron/api/utils/gui/GUIUtils.class
+dependency_records[1].sources[22]: com/aizistral/omicron/api/utils/proxy/ProxyUtils.class
+dependency_records[1].sources[23]: com/aizistral/omicron/api/utils/textures/IconUtils.class
+dependency_records[1].sources[24]: com/aizistral/omicron/asm/OmicronHooks.class
+dependency_records[1].sources[25]: com/aizistral/omicron/asm/core/OmicronCoremod.class
+dependency_records[1].sources[26]: com/aizistral/omicron/blocks/tiles/ParticleEmitterTile.class
+dependency_records[1].sources[27]: com/aizistral/omicron/handlers/InvincibilityHandler.class
+dependency_records[1].sources[28]: com/aizistral/omicron/proxy/ClientProxy.class
+dependency_records[1].sources[29]: com/aizistral/omicron/registry/OmicronBlocks.class
+dependency_records[1].sources[30]: com/aizistral/omicron/render/effects/bolts/LightningBoltBuilder.class
+dependency_records[1].sources[31]: com/aizistral/omicron/render/effects/bolts/LightningBoltCommonFX.class
+dependency_records[1].sources[32]: com/aizistral/omicron/render/effects/bolts/LightningBoltFX.class
+dependency_records[1].sources[33]: com/aizistral/omicron/render/effects/bolts/WRMat4.class
+dependency_records[1].sources[34]: com/aizistral/omicron/render/effects/bolts/WRVector3.class
+dependency_records[1].sources[35]: com/aizistral/omicron/render/effects/engine/AbstractEffectEngine.class
+dependency_records[1].sources[36]: com/aizistral/omicron/render/effects/engine/ManagedBeamFX.class
+dependency_records[1].sources[37]: com/aizistral/omicron/render/effects/engine/ManagedEffectEngineImpl.class
+dependency_records[1].sources[38]: com/aizistral/omicron/render/effects/engine/SharedEffectEngine.class
+dependency_records[1].sources[39]: com/aizistral/omicron/render/effects/engine/UniversalEffectEngineImpl.class
+dependency_records[1].sources[40]: com/aizistral/omicron/render/effects/misc/BurstBuilder.class
+dependency_records[1].sources[41]: com/aizistral/omicron/render/effects/misc/BurstFX.class
+dependency_records[1].sources[42]: com/aizistral/omicron/render/effects/wisps/WispFX.class
+dependency_records[1].sources[43]: com/aizistral/omicron/render/hud/WorldTooltipHUD.class
+dependency_records[1].sources[44]: com/aizistral/omicron/render/misc/InterpolatedTexture.class
+dependency_records[1].sources[45]: com/aizistral/omicron/render/tiles/ParticleEmitterTileRenderer.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: omicron
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/omicron/lang/en_US.lang
+dependency_records[2].sources[1]: assets/omicron/lang/ru_RU.lang
+dependency_records[2].sources[2]: assets/omicron/textures/blocks/particle_emitter.png
+dependency_records[2].sources[3]: assets/omicron/textures/gui/world_tooltip_hud.png
+dependency_records[2].sources[4]: assets/omicron/textures/misc/beam_0.png
+dependency_records[2].sources[5]: assets/omicron/textures/misc/beam_1.png
+dependency_records[2].sources[6]: assets/omicron/textures/misc/beam_2.png
+dependency_records[2].sources[7]: assets/omicron/textures/misc/beam_3.png
+dependency_records[2].sources[8]: assets/omicron/textures/misc/beam_start.png
+dependency_records[2].sources[9]: assets/omicron/textures/misc/beam_start.png.mcmeta
+dependency_records[2].sources[10]: assets/omicron/textures/misc/burst.png
+dependency_records[2].sources[11]: assets/omicron/textures/misc/burst.png.mcmeta
+dependency_records[2].sources[12]: assets/omicron/textures/misc/p_large.png
+dependency_records[2].sources[13]: assets/omicron/textures/misc/p_small.png
+dependency_records[2].sources[14]: assets/omicron/textures/misc/particles.png
+dependency_records[2].sources[15]: assets/omicron/textures/misc/particles.png.mcmeta
+dependency_records[2].evidence[0]: resource namespace
 ```
 
 
@@ -130,10 +210,10 @@ class_files: 142
 packages: 48
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
-detections[2]: CoreMod / ASM
-detections[3]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
+detections[2]: Old Forge API
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 3
@@ -176,8 +256,8 @@ client_hits: 151
 server_hits: 97
 client_percent: 60.9
 server_percent: 39.1
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 0
 models: 0
 blockstates: 0

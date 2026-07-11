@@ -11,16 +11,19 @@ version: 1.7.10-2.0.3
 author: Unknown
 size_mb: 0.35
 forge: Unknown
-dependencies: []
+dependencies[0]: BuildCraft
+dependencies[1]: Forge
+dependencies[2]: gravisuite
+dependencies[3]: IC2 API
 files: 111
 class_files: 65
 packages: 9
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Network
+detections[1]: Old Rendering
 detections[2]: Old Forge API
-detections[3]: Old Network
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 18
 content.TileEntities: 5
@@ -175,6 +178,114 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: BuildCraft
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: buildcraft/api/tools/IToolWrench.class
+dependency_records[0].sources[1]: gravisuite/ItemGraviTool.class
+dependency_records[0].evidence[0]: buildcraft/api/
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].categories[1]: Reflection
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: gravisuite/EntityPlasmaBall.class
+dependency_records[1].sources[1]: gravisuite/GraviSuite.class
+dependency_records[1].sources[2]: gravisuite/GuiHandler.class
+dependency_records[1].sources[3]: gravisuite/Helpers.class
+dependency_records[1].sources[4]: gravisuite/ItemAdvChainsaw.class
+dependency_records[1].sources[5]: gravisuite/ItemAdvDDrill.class
+dependency_records[1].sources[6]: gravisuite/ItemAdvancedJetPack.class
+dependency_records[1].sources[7]: gravisuite/ItemAdvancedLappack.class
+dependency_records[1].sources[8]: gravisuite/ItemAdvancedNanoChestPlate.class
+dependency_records[1].sources[9]: gravisuite/ItemGraviChestPlate.class
+dependency_records[1].sources[10]: gravisuite/ItemGraviTool.class
+dependency_records[1].sources[11]: gravisuite/ItemRelocator.class
+dependency_records[1].sources[12]: gravisuite/ItemSimpleItems.class
+dependency_records[1].sources[13]: gravisuite/ItemSonicLauncher.class
+dependency_records[1].sources[14]: gravisuite/ItemUltimateLappack.class
+dependency_records[1].sources[15]: gravisuite/ItemVajra.class
+dependency_records[1].sources[16]: gravisuite/ServerProxy.class
+dependency_records[1].sources[17]: gravisuite/TickHandler.class
+dependency_records[1].sources[18]: gravisuite/audio/AudioManagerClient$1.class
+dependency_records[1].sources[19]: gravisuite/audio/AudioManagerClient.class
+dependency_records[1].sources[20]: gravisuite/audio/AudioSource.class
+dependency_records[1].sources[21]: gravisuite/client/BlockRelocatorPortalRenderer.class
+dependency_records[1].sources[22]: gravisuite/client/ClientProxy.class
+dependency_records[1].sources[23]: gravisuite/client/ClientTickHandler.class
+dependency_records[1].sources[24]: gravisuite/client/GuiRelocatorDisplay.class
+dependency_records[1].sources[25]: gravisuite/client/RenderPlasmaBall.class
+dependency_records[1].sources[26]: gravisuite/client/TileRelocatorPortalRenderer.class
+dependency_records[1].sources[27]: gravisuite/keyboard/KeyHandler.class
+dependency_records[1].sources[28]: gravisuite/keyboard/KeyboardClient.class
+dependency_records[1].sources[29]: gravisuite/network/PacketHandler.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: gravisuite
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/gravisuite/lang/en_US.lang
+dependency_records[2].sources[1]: assets/gravisuite/lang/fr_FR.lang
+dependency_records[2].sources[2]: assets/gravisuite/lang/ru_RU.lang
+dependency_records[2].sources[3]: assets/gravisuite/lang/tr_TR.lang
+dependency_records[2].sources[4]: assets/gravisuite/lang/zh_CN.lang
+dependency_records[2].sources[5]: assets/gravisuite/sounds.json
+dependency_records[2].sources[6]: assets/gravisuite/sounds/JetpackFire.ogg
+dependency_records[2].sources[7]: assets/gravisuite/sounds/JetpackLoop.ogg
+dependency_records[2].sources[8]: assets/gravisuite/sounds/Treetap.ogg
+dependency_records[2].sources[9]: assets/gravisuite/sounds/toolChange.ogg
+dependency_records[2].sources[10]: assets/gravisuite/sounds/wrench.ogg
+dependency_records[2].sources[11]: assets/gravisuite/textures/armor/armor_advNanoChestPlate.png
+dependency_records[2].sources[12]: assets/gravisuite/textures/armor/armor_advanced_jetpack.png
+dependency_records[2].sources[13]: assets/gravisuite/textures/armor/armor_advanced_lappack.png
+dependency_records[2].sources[14]: assets/gravisuite/textures/armor/armor_graviChestPlate.png
+dependency_records[2].sources[15]: assets/gravisuite/textures/armor/armor_ultimate_lappack.png
+dependency_records[2].sources[16]: assets/gravisuite/textures/blocks/block_side.png
+dependency_records[2].sources[17]: assets/gravisuite/textures/gravi_items.png
+dependency_records[2].sources[18]: assets/gravisuite/textures/gui/relocator_add.png
+dependency_records[2].sources[19]: assets/gravisuite/textures/gui/relocator_display.png
+dependency_records[2].sources[20]: assets/gravisuite/textures/items/itemAdvancedChainsaw.png
+dependency_records[2].sources[21]: assets/gravisuite/textures/items/itemAdvancedDDrill.png
+dependency_records[2].sources[22]: assets/gravisuite/textures/items/itemAdvancedJetPack.png
+dependency_records[2].sources[23]: assets/gravisuite/textures/items/itemAdvancedLappack.png
+dependency_records[2].sources[24]: assets/gravisuite/textures/items/itemAdvancedNanoChestPlate.png
+dependency_records[2].sources[25]: assets/gravisuite/textures/items/itemCoolingCore.png
+dependency_records[2].sources[26]: assets/gravisuite/textures/items/itemEngineBoost.png
+dependency_records[2].sources[27]: assets/gravisuite/textures/items/itemGraviChestPlate.png
+dependency_records[2].sources[28]: assets/gravisuite/textures/items/itemGraviEngine.png
+dependency_records[2].sources[29]: assets/gravisuite/textures/items/itemGraviToolHoe.png
+dependency_records[2].sources[30]: assets/gravisuite/textures/items/itemGraviToolScrewdriver.png
+dependency_records[2].sources[31]: assets/gravisuite/textures/items/itemGraviToolTreeTap.png
+dependency_records[2].sources[32]: assets/gravisuite/textures/items/itemGraviToolWrench.png
+dependency_records[2].sources[33]: assets/gravisuite/textures/items/itemMagnetron.png
+dependency_records[2].sources[34]: assets/gravisuite/textures/items/itemRelocator.png
+dependency_records[2].sources[35]: assets/gravisuite/textures/items/itemSuperconductor.png
+dependency_records[2].sources[36]: assets/gravisuite/textures/items/itemSuperconductorCover.png
+dependency_records[2].sources[37]: assets/gravisuite/textures/items/itemUltimateLappack.png
+dependency_records[2].sources[38]: assets/gravisuite/textures/items/itemVajra.png
+dependency_records[2].sources[39]: assets/gravisuite/textures/items/itemVajraCore.png
+dependency_records[2].sources[40]: assets/gravisuite/textures/items/plazma_launcher.png
+dependency_records[2].sources[41]: assets/gravisuite/textures/models/particles.png
+dependency_records[2].sources[42]: assets/gravisuite/textures/models/plazma.png
+dependency_records[2].evidence[0]: resource namespace
+dependency_records[3].name: IC2 API
+dependency_records[3].categories[0]: Hidden
+dependency_records[3].categories[1]: Reflection
+dependency_records[3].confidence: 78
+dependency_records[3].sources[0]: gravisuite/EntityPlasmaBall.class
+dependency_records[3].sources[1]: gravisuite/GraviSuite.class
+dependency_records[3].sources[2]: gravisuite/ItemAdvChainsaw.class
+dependency_records[3].sources[3]: gravisuite/ItemAdvDDrill.class
+dependency_records[3].sources[4]: gravisuite/ItemAdvancedJetPack.class
+dependency_records[3].sources[5]: gravisuite/ItemAdvancedLappack.class
+dependency_records[3].sources[6]: gravisuite/ItemAdvancedNanoChestPlate.class
+dependency_records[3].sources[7]: gravisuite/ItemGraviChestPlate.class
+dependency_records[3].sources[8]: gravisuite/ItemGraviTool.class
+dependency_records[3].sources[9]: gravisuite/ItemRelocator.class
+dependency_records[3].sources[10]: gravisuite/ItemUltimateLappack.class
+dependency_records[3].sources[11]: gravisuite/ItemVajra.class
+dependency_records[3].sources[12]: gravisuite/client/ClientTickHandler.class
+dependency_records[3].evidence[0]: ic2/api/
 ```
 
 
@@ -188,10 +299,10 @@ class_files: 65
 packages: 9
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Network
+detections[1]: Old Rendering
 detections[2]: Old Forge API
-detections[3]: Old Network
+detections[3]: Old Registry
 content.Blocks: 0
 content.Items: 18
 content.TileEntities: 5

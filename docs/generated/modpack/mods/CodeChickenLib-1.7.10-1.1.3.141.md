@@ -11,14 +11,19 @@ version: Unknown
 author: Unknown
 size_mb: 0.28
 forge: Unknown
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: ASM
+dependencies[2]: ccl
+dependencies[3]: CodeChickenLib
+dependencies[4]: Forge
+dependencies[5]: LaunchWrapper
 files: 179
 class_files: 175
 packages: 15
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0
@@ -63,8 +68,8 @@ client_hits: 134
 server_hits: 91
 client_percent: 59.6
 server_percent: 40.4
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 0
 models: 0
 blockstates: 0
@@ -102,6 +107,278 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/ccl_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: ASM
+dependency_records[1].categories[0]: ASM
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: codechicken/lib/asm/ASMBlock.class
+dependency_records[1].sources[1]: codechicken/lib/asm/ASMHelper$Acceptor.class
+dependency_records[1].sources[2]: codechicken/lib/asm/ASMHelper.class
+dependency_records[1].sources[3]: codechicken/lib/asm/ASMReader.class
+dependency_records[1].sources[4]: codechicken/lib/asm/CC_ClassWriter.class
+dependency_records[1].sources[5]: codechicken/lib/asm/ClassHeirachyManager.class
+dependency_records[1].sources[6]: codechicken/lib/asm/ImportantInsnVisitor$ImportantInsnMethodVisitor.class
+dependency_records[1].sources[7]: codechicken/lib/asm/ImportantInsnVisitor.class
+dependency_records[1].sources[8]: codechicken/lib/asm/InsnComparator.class
+dependency_records[1].sources[9]: codechicken/lib/asm/InsnListSection$InsnListSectionIterator.class
+dependency_records[1].sources[10]: codechicken/lib/asm/InsnListSection.class
+dependency_records[1].sources[11]: codechicken/lib/asm/LocalVariablesSorterVisitor.class
+dependency_records[1].sources[12]: codechicken/lib/asm/ModularASMTransformer$ClassNodeTransformer.class
+dependency_records[1].sources[13]: codechicken/lib/asm/ModularASMTransformer$ClassNodeTransformerList.class
+dependency_records[1].sources[14]: codechicken/lib/asm/ModularASMTransformer$FieldWriter.class
+dependency_records[1].sources[15]: codechicken/lib/asm/ModularASMTransformer$MethodInjector.class
+dependency_records[1].sources[16]: codechicken/lib/asm/ModularASMTransformer$MethodReplacer.class
+dependency_records[1].sources[17]: codechicken/lib/asm/ModularASMTransformer$MethodTransformer.class
+dependency_records[1].sources[18]: codechicken/lib/asm/ModularASMTransformer$MethodWriter.class
+dependency_records[1].sources[19]: codechicken/lib/asm/ObfMapping$ObfRemapper.class
+dependency_records[1].sources[20]: codechicken/lib/asm/ObfMapping.class
+dependency_records[1].evidence[0]: org/objectweb/asm/
+dependency_records[1].evidence[1]: org/objectweb/asm/, ClassVisitor
+dependency_records[1].evidence[2]: org/objectweb/asm/, ClassVisitor, MethodVisitor
+dependency_records[1].evidence[3]: org/objectweb/asm/, IClassTransformer
+dependency_records[1].evidence[4]: org/objectweb/asm/, MethodVisitor
+dependency_records[2].name: ccl
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/ccl/asm/hooks.asm
+dependency_records[2].evidence[0]: resource namespace
+dependency_records[3].name: CodeChickenLib
+dependency_records[3].categories[0]: CoreMod
+dependency_records[3].categories[1]: Hidden
+dependency_records[3].categories[2]: Reflection
+dependency_records[3].confidence: 92
+dependency_records[3].sources[0]: META-INF/ccl_at.cfg
+dependency_records[3].sources[1]: codechicken/lib/asm/ASMBlock.class
+dependency_records[3].sources[2]: codechicken/lib/asm/ASMHelper$Acceptor.class
+dependency_records[3].sources[3]: codechicken/lib/asm/ASMHelper.class
+dependency_records[3].sources[4]: codechicken/lib/asm/ASMInit.class
+dependency_records[3].sources[5]: codechicken/lib/asm/ASMReader.class
+dependency_records[3].sources[6]: codechicken/lib/asm/CC_ClassWriter.class
+dependency_records[3].sources[7]: codechicken/lib/asm/ClassHeirachyManager$SuperCache.class
+dependency_records[3].sources[8]: codechicken/lib/asm/ClassHeirachyManager.class
+dependency_records[3].sources[9]: codechicken/lib/asm/ImportantInsnVisitor$ImportantInsnMethodVisitor.class
+dependency_records[3].sources[10]: codechicken/lib/asm/ImportantInsnVisitor.class
+dependency_records[3].sources[11]: codechicken/lib/asm/InsnComparator.class
+dependency_records[3].sources[12]: codechicken/lib/asm/InsnListSection$1.class
+dependency_records[3].sources[13]: codechicken/lib/asm/InsnListSection$InsnListSectionIterator.class
+dependency_records[3].sources[14]: codechicken/lib/asm/InsnListSection.class
+dependency_records[3].sources[15]: codechicken/lib/asm/LocalVariablesSorterVisitor.class
+dependency_records[3].sources[16]: codechicken/lib/asm/ModularASMTransformer$ClassNodeTransformer.class
+dependency_records[3].sources[17]: codechicken/lib/asm/ModularASMTransformer$ClassNodeTransformerList.class
+dependency_records[3].sources[18]: codechicken/lib/asm/ModularASMTransformer$FieldWriter.class
+dependency_records[3].sources[19]: codechicken/lib/asm/ModularASMTransformer$MethodInjector.class
+dependency_records[3].sources[20]: codechicken/lib/asm/ModularASMTransformer$MethodReplacer.class
+dependency_records[3].sources[21]: codechicken/lib/asm/ModularASMTransformer$MethodTransformer.class
+dependency_records[3].sources[22]: codechicken/lib/asm/ModularASMTransformer$MethodWriter.class
+dependency_records[3].sources[23]: codechicken/lib/asm/ModularASMTransformer.class
+dependency_records[3].sources[24]: codechicken/lib/asm/ObfMapping$ObfRemapper.class
+dependency_records[3].sources[25]: codechicken/lib/asm/ObfMapping.class
+dependency_records[3].sources[26]: codechicken/lib/colour/Colour$1.class
+dependency_records[3].sources[27]: codechicken/lib/colour/Colour.class
+dependency_records[3].sources[28]: codechicken/lib/colour/ColourARGB.class
+dependency_records[3].sources[29]: codechicken/lib/colour/ColourRGBA.class
+dependency_records[3].sources[30]: codechicken/lib/colour/CustomGradient.class
+dependency_records[3].sources[31]: codechicken/lib/config/ConfigFile.class
+dependency_records[3].sources[32]: codechicken/lib/config/ConfigTag$IConfigType.class
+dependency_records[3].sources[33]: codechicken/lib/config/ConfigTag.class
+dependency_records[3].sources[34]: codechicken/lib/config/ConfigTagParent$TagOrderComparator.class
+dependency_records[3].sources[35]: codechicken/lib/config/ConfigTagParent.class
+dependency_records[3].sources[36]: codechicken/lib/config/DefaultingConfigFile.class
+dependency_records[3].sources[37]: codechicken/lib/config/SimpleProperties.class
+dependency_records[3].sources[38]: codechicken/lib/data/MCDataInput.class
+dependency_records[3].sources[39]: codechicken/lib/data/MCDataInputStream.class
+dependency_records[3].sources[40]: codechicken/lib/data/MCDataOutput.class
+dependency_records[3].sources[41]: codechicken/lib/data/MCDataOutputStream.class
+dependency_records[3].sources[42]: codechicken/lib/data/MCDataOutputWrapper.class
+dependency_records[3].sources[43]: codechicken/lib/gui/Canvas9Seg.class
+dependency_records[3].sources[44]: codechicken/lib/gui/GuiDraw$GuiHook.class
+dependency_records[3].sources[45]: codechicken/lib/gui/GuiDraw$ITooltipLineHandler.class
+dependency_records[3].sources[46]: codechicken/lib/gui/GuiDraw.class
+dependency_records[3].sources[47]: codechicken/lib/inventory/ContainerExtended.class
+dependency_records[3].sources[48]: codechicken/lib/inventory/ContainerSynchronised.class
+dependency_records[3].sources[49]: codechicken/lib/inventory/IContainerSyncVar.class
+dependency_records[3].sources[50]: codechicken/lib/inventory/IntegerSync.class
+dependency_records[3].sources[51]: codechicken/lib/inventory/InventoryCopy.class
+dependency_records[3].sources[52]: codechicken/lib/inventory/InventoryNBT.class
+dependency_records[3].sources[53]: codechicken/lib/inventory/InventoryRange.class
+dependency_records[3].sources[54]: codechicken/lib/inventory/InventorySimple.class
+dependency_records[3].sources[55]: codechicken/lib/inventory/InventoryUtils.class
+dependency_records[3].sources[56]: codechicken/lib/inventory/ItemKey.class
+dependency_records[3].sources[57]: codechicken/lib/inventory/SlotDummy.class
+dependency_records[3].sources[58]: codechicken/lib/inventory/SlotDummyOutput.class
+dependency_records[3].sources[59]: codechicken/lib/inventory/SlotHandleClicks.class
+dependency_records[3].sources[60]: codechicken/lib/lighting/LC.class
+dependency_records[3].sources[61]: codechicken/lib/lighting/LightMatrix.class
+dependency_records[3].sources[62]: codechicken/lib/lighting/LightModel$Light.class
+dependency_records[3].sources[63]: codechicken/lib/lighting/LightModel.class
+dependency_records[3].sources[64]: codechicken/lib/lighting/PlanarLightMatrix.class
+dependency_records[3].sources[65]: codechicken/lib/lighting/PlanarLightModel.class
+dependency_records[3].sources[66]: codechicken/lib/lighting/SimpleBrightnessModel.class
+dependency_records[3].sources[67]: codechicken/lib/math/MathHelper.class
+dependency_records[3].sources[68]: codechicken/lib/packet/ICustomPacketTile.class
+dependency_records[3].sources[69]: codechicken/lib/packet/PacketCustom$ClientInboundHandler.class
+dependency_records[3].sources[70]: codechicken/lib/packet/PacketCustom$CustomHandler.class
+dependency_records[3].sources[71]: codechicken/lib/packet/PacketCustom$CustomInboundHandler.class
+dependency_records[3].sources[72]: codechicken/lib/packet/PacketCustom$HandshakeInboundHandler.class
+dependency_records[3].sources[73]: codechicken/lib/packet/PacketCustom$IClientPacketHandler.class
+dependency_records[3].sources[74]: codechicken/lib/packet/PacketCustom$ICustomPacketHandler.class
+dependency_records[3].sources[75]: codechicken/lib/packet/PacketCustom$IHandshakeHandler.class
+dependency_records[3].sources[76]: codechicken/lib/packet/PacketCustom$IServerPacketHandler.class
+dependency_records[3].sources[77]: codechicken/lib/packet/PacketCustom$ServerInboundHandler.class
+dependency_records[3].sources[78]: codechicken/lib/packet/PacketCustom.class
+dependency_records[3].sources[79]: codechicken/lib/raytracer/ExtendedMOP.class
+dependency_records[3].sources[80]: codechicken/lib/raytracer/IndexedCuboid6.class
+dependency_records[3].sources[81]: codechicken/lib/raytracer/RayTracer.class
+dependency_records[3].sources[82]: codechicken/lib/render/BlockRenderer$BlockFace.class
+dependency_records[3].sources[83]: codechicken/lib/render/BlockRenderer$FullBlock.class
+dependency_records[3].sources[84]: codechicken/lib/render/BlockRenderer.class
+dependency_records[3].sources[85]: codechicken/lib/render/CCModel$PositionNormalEntry.class
+dependency_records[3].sources[86]: codechicken/lib/render/CCModel.class
+dependency_records[3].sources[87]: codechicken/lib/render/CCModelLibrary.class
+dependency_records[3].sources[88]: codechicken/lib/render/CCRenderPipeline$1.class
+dependency_records[3].sources[89]: codechicken/lib/render/CCRenderPipeline$PipelineBuilder.class
+dependency_records[3].sources[90]: codechicken/lib/render/CCRenderPipeline$PipelineNode.class
+dependency_records[3].sources[91]: codechicken/lib/render/CCRenderPipeline.class
+dependency_records[3].sources[92]: codechicken/lib/render/CCRenderState$1.class
+dependency_records[3].sources[93]: codechicken/lib/render/CCRenderState$2.class
+dependency_records[3].sources[94]: codechicken/lib/render/CCRenderState$3.class
+dependency_records[3].sources[95]: codechicken/lib/render/CCRenderState$4.class
+dependency_records[3].sources[96]: codechicken/lib/render/CCRenderState$5.class
+dependency_records[3].sources[97]: codechicken/lib/render/CCRenderState$IVertexOperation.class
+dependency_records[3].sources[98]: codechicken/lib/render/CCRenderState$IVertexSource.class
+dependency_records[3].sources[99]: codechicken/lib/render/CCRenderState$VertexAttribute.class
+dependency_records[3].sources[100]: codechicken/lib/render/CCRenderState.class
+dependency_records[3].sources[101]: codechicken/lib/render/ColourMultiplier.class
+dependency_records[3].sources[102]: codechicken/lib/render/EntityDigIconFX.class
+dependency_records[3].sources[103]: codechicken/lib/render/FontUtils.class
+dependency_records[3].sources[104]: codechicken/lib/render/IFaceRenderer.class
+dependency_records[3].sources[105]: codechicken/lib/render/ManagedTextureFX.class
+dependency_records[3].sources[106]: codechicken/lib/render/PlaceholderTexture.class
+dependency_records[3].sources[107]: codechicken/lib/render/QBImporter$ImagePackNode.class
+dependency_records[3].sources[108]: codechicken/lib/render/QBImporter$ImageTransform.class
+dependency_records[3].sources[109]: codechicken/lib/render/QBImporter$QBCuboid.class
+dependency_records[3].sources[110]: codechicken/lib/render/QBImporter$QBImage.class
+dependency_records[3].sources[111]: codechicken/lib/render/QBImporter$QBMatrix.class
+dependency_records[3].sources[112]: codechicken/lib/render/QBImporter$QBModel.class
+dependency_records[3].sources[113]: codechicken/lib/render/QBImporter$QBQuad.class
+dependency_records[3].sources[114]: codechicken/lib/render/QBImporter$RasterisedModel$Holder.class
+dependency_records[3].sources[115]: codechicken/lib/render/QBImporter$RasterisedModel.class
+dependency_records[3].sources[116]: codechicken/lib/render/QBImporter.class
+dependency_records[3].sources[117]: codechicken/lib/render/RenderUtils$1.class
+dependency_records[3].sources[118]: codechicken/lib/render/RenderUtils.class
+dependency_records[3].sources[119]: codechicken/lib/render/ShaderProgram.class
+dependency_records[3].sources[120]: codechicken/lib/render/SpriteSheetManager$1.class
+dependency_records[3].sources[121]: codechicken/lib/render/SpriteSheetManager$SpriteSheet.class
+dependency_records[3].sources[122]: codechicken/lib/render/SpriteSheetManager.class
+dependency_records[3].sources[123]: codechicken/lib/render/TextureDataHolder.class
+dependency_records[3].sources[124]: codechicken/lib/render/TextureFX.class
+dependency_records[3].sources[125]: codechicken/lib/render/TextureSpecial.class
+dependency_records[3].sources[126]: codechicken/lib/render/TextureUtils$IIconSelfRegister.class
+dependency_records[3].sources[127]: codechicken/lib/render/TextureUtils.class
+dependency_records[3].sources[128]: codechicken/lib/render/Vertex5.class
+dependency_records[3].sources[129]: codechicken/lib/render/uv/IconTransformation.class
+dependency_records[3].sources[130]: codechicken/lib/render/uv/MultiIconTransformation.class
+dependency_records[3].sources[131]: codechicken/lib/render/uv/UV.class
+dependency_records[3].sources[132]: codechicken/lib/render/uv/UVRotation.class
+dependency_records[3].sources[133]: codechicken/lib/render/uv/UVScale.class
+dependency_records[3].sources[134]: codechicken/lib/render/uv/UVTransformation.class
+dependency_records[3].sources[135]: codechicken/lib/render/uv/UVTransformationList.class
+dependency_records[3].sources[136]: codechicken/lib/render/uv/UVTranslation.class
+dependency_records[3].sources[137]: codechicken/lib/util/Copyable.class
+dependency_records[3].sources[138]: codechicken/lib/util/LangProxy.class
+dependency_records[3].sources[139]: codechicken/lib/vec/AxisCycle$1.class
+dependency_records[3].sources[140]: codechicken/lib/vec/AxisCycle$2.class
+dependency_records[3].sources[141]: codechicken/lib/vec/AxisCycle.class
+dependency_records[3].sources[142]: codechicken/lib/vec/BlockCoord.class
+dependency_records[3].sources[143]: codechicken/lib/vec/Cuboid6.class
+dependency_records[3].sources[144]: codechicken/lib/vec/CuboidCoord$1.class
+dependency_records[3].sources[145]: codechicken/lib/vec/CuboidCoord.class
+dependency_records[3].sources[146]: codechicken/lib/vec/ITransformation.class
+dependency_records[3].sources[147]: codechicken/lib/vec/IrreversibleTransformationException.class
+dependency_records[3].sources[148]: codechicken/lib/vec/Line3.class
+dependency_records[3].sources[149]: codechicken/lib/vec/Matrix4.class
+dependency_records[3].sources[150]: codechicken/lib/vec/Quat.class
+dependency_records[3].sources[151]: codechicken/lib/vec/Rectangle4i.class
+dependency_records[3].sources[152]: codechicken/lib/vec/RedundantTransformation.class
+dependency_records[3].sources[153]: codechicken/lib/vec/Rotation$1.class
+dependency_records[3].sources[154]: codechicken/lib/vec/Rotation$2.class
+dependency_records[3].sources[155]: codechicken/lib/vec/Rotation$3.class
+dependency_records[3].sources[156]: codechicken/lib/vec/Rotation$4.class
+dependency_records[3].sources[157]: codechicken/lib/vec/Rotation$5.class
+dependency_records[3].sources[158]: codechicken/lib/vec/Rotation$6.class
+dependency_records[3].sources[159]: codechicken/lib/vec/Rotation$7.class
+dependency_records[3].sources[160]: codechicken/lib/vec/Rotation$8.class
+dependency_records[3].sources[161]: codechicken/lib/vec/Rotation.class
+dependency_records[3].sources[162]: codechicken/lib/vec/Scale.class
+dependency_records[3].sources[163]: codechicken/lib/vec/SwapYZ.class
+dependency_records[3].sources[164]: codechicken/lib/vec/Transformation.class
+dependency_records[3].sources[165]: codechicken/lib/vec/TransformationList.class
+dependency_records[3].sources[166]: codechicken/lib/vec/Translation.class
+dependency_records[3].sources[167]: codechicken/lib/vec/VariableTransformation.class
+dependency_records[3].sources[168]: codechicken/lib/vec/Vector3.class
+dependency_records[3].sources[169]: codechicken/lib/world/ChunkExtension.class
+dependency_records[3].sources[170]: codechicken/lib/world/IChunkLoadTile.class
+dependency_records[3].sources[171]: codechicken/lib/world/TileChunkLoadHook.class
+dependency_records[3].sources[172]: codechicken/lib/world/WorldExtension.class
+dependency_records[3].sources[173]: codechicken/lib/world/WorldExtensionInstantiator.class
+dependency_records[3].sources[174]: codechicken/lib/world/WorldExtensionManager$WorldExtensionEventHandler.class
+dependency_records[3].sources[175]: codechicken/lib/world/WorldExtensionManager.class
+dependency_records[3].evidence[0]: CodeChickenLib
+dependency_records[3].evidence[1]: codechicken/lib/
+dependency_records[3].evidence[2]: codechicken/lib/, CodeChickenLib
+dependency_records[4].name: Forge
+dependency_records[4].categories[0]: CoreMod
+dependency_records[4].categories[1]: Hidden
+dependency_records[4].categories[2]: Reflection
+dependency_records[4].confidence: 92
+dependency_records[4].sources[0]: codechicken/lib/asm/ClassHeirachyManager.class
+dependency_records[4].sources[1]: codechicken/lib/asm/ObfMapping$ObfRemapper.class
+dependency_records[4].sources[2]: codechicken/lib/colour/Colour.class
+dependency_records[4].sources[3]: codechicken/lib/data/MCDataInput.class
+dependency_records[4].sources[4]: codechicken/lib/data/MCDataOutput.class
+dependency_records[4].sources[5]: codechicken/lib/data/MCDataOutputWrapper.class
+dependency_records[4].sources[6]: codechicken/lib/inventory/ContainerExtended.class
+dependency_records[4].sources[7]: codechicken/lib/inventory/InventoryUtils.class
+dependency_records[4].sources[8]: codechicken/lib/packet/PacketCustom$CustomInboundHandler.class
+dependency_records[4].sources[9]: codechicken/lib/packet/PacketCustom$HandshakeInboundHandler.class
+dependency_records[4].sources[10]: codechicken/lib/packet/PacketCustom.class
+dependency_records[4].sources[11]: codechicken/lib/raytracer/RayTracer.class
+dependency_records[4].sources[12]: codechicken/lib/render/RenderUtils.class
+dependency_records[4].sources[13]: codechicken/lib/render/SpriteSheetManager$SpriteSheet.class
+dependency_records[4].sources[14]: codechicken/lib/render/TextureFX.class
+dependency_records[4].sources[15]: codechicken/lib/render/TextureSpecial.class
+dependency_records[4].sources[16]: codechicken/lib/render/TextureUtils.class
+dependency_records[4].sources[17]: codechicken/lib/vec/Matrix4.class
+dependency_records[4].sources[18]: codechicken/lib/vec/RedundantTransformation.class
+dependency_records[4].sources[19]: codechicken/lib/vec/Rotation.class
+dependency_records[4].sources[20]: codechicken/lib/vec/Scale.class
+dependency_records[4].sources[21]: codechicken/lib/vec/Transformation.class
+dependency_records[4].sources[22]: codechicken/lib/vec/TransformationList.class
+dependency_records[4].sources[23]: codechicken/lib/vec/Translation.class
+dependency_records[4].sources[24]: codechicken/lib/vec/VariableTransformation.class
+dependency_records[4].sources[25]: codechicken/lib/vec/Vector3.class
+dependency_records[4].sources[26]: codechicken/lib/world/TileChunkLoadHook.class
+dependency_records[4].sources[27]: codechicken/lib/world/WorldExtensionManager$WorldExtensionEventHandler.class
+dependency_records[4].sources[28]: codechicken/lib/world/WorldExtensionManager.class
+dependency_records[4].evidence[0]: cpw/mods/fml/
+dependency_records[4].evidence[1]: net/minecraftforge/
+dependency_records[4].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[5].name: LaunchWrapper
+dependency_records[5].categories[0]: CoreMod
+dependency_records[5].confidence: 92
+dependency_records[5].sources[0]: codechicken/lib/asm/ASMHelper.class
+dependency_records[5].sources[1]: codechicken/lib/asm/ClassHeirachyManager.class
+dependency_records[5].sources[2]: codechicken/lib/asm/ImportantInsnVisitor$ImportantInsnMethodVisitor.class
+dependency_records[5].sources[3]: codechicken/lib/asm/ImportantInsnVisitor.class
+dependency_records[5].sources[4]: codechicken/lib/asm/LocalVariablesSorterVisitor.class
+dependency_records[5].sources[5]: codechicken/lib/asm/ModularASMTransformer$ClassNodeTransformerList.class
+dependency_records[5].evidence[0]: net/minecraft/launchwrapper/
+dependency_records[5].evidence[1]: net/minecraft/launchwrapper/, LaunchClassLoader
 ```
 
 
@@ -115,8 +392,8 @@ class_files: 175
 packages: 15
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: CoreMod / ASM
+detections[0]: CoreMod / ASM
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0
@@ -161,8 +438,8 @@ client_hits: 134
 server_hits: 91
 client_percent: 59.6
 server_percent: 40.4
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 0
 models: 0
 blockstates: 0

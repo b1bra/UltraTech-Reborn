@@ -11,15 +11,17 @@ version: 0.7.6
 author: Unknown
 size_mb: 1.17
 forge: FMLCorePlugin: ru.loliland.worldgen.asm.WorldGenEngineLoadingPlugin
-dependencies: []
+dependencies[0]: ASM
+dependencies[1]: Forge
+dependencies[2]: worldgen
 files: 693
 class_files: 686
 packages: 84
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
-detections[2]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 3
 content.Items: 0
 content.TileEntities: 1
@@ -98,6 +100,138 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: ASM
+dependency_records[0].categories[0]: ASM
+dependency_records[0].confidence: 92
+dependency_records[0].sources[0]: remap/net/minecraftforge/registries/ObjectHolderRegistry.class
+dependency_records[0].evidence[0]: org/objectweb/asm/
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].categories[1]: Hidden
+dependency_records[1].categories[2]: Reflection
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: remap/net/minecraft/core/Holder.class
+dependency_records[1].sources[1]: remap/net/minecraft/core/Registry.class
+dependency_records[1].sources[2]: remap/net/minecraft/core/RegistryAccess.class
+dependency_records[1].sources[3]: remap/net/minecraft/core/RegistryCodecs.class
+dependency_records[1].sources[4]: remap/net/minecraft/data/BuiltinRegistries.class
+dependency_records[1].sources[5]: remap/net/minecraft/data/worldgen/SurfaceRuleData.class
+dependency_records[1].sources[6]: remap/net/minecraft/resources/RegistryResourceAccess$1.class
+dependency_records[1].sources[7]: remap/net/minecraft/server/Bootstrap.class
+dependency_records[1].sources[8]: remap/net/minecraft/world/level/biome/Biome.class
+dependency_records[1].sources[9]: remap/net/minecraft/world/level/biome/BiomeGenerationSettings$Builder.class
+dependency_records[1].sources[10]: remap/net/minecraft/world/level/block/state/BlockState.class
+dependency_records[1].sources[11]: remap/net/minecraft/world/level/block/state/BlockStateRegistry.class
+dependency_records[1].sources[12]: remap/net/minecraft/world/level/chunk/ChunkStatus.class
+dependency_records[1].sources[13]: remap/net/minecraft/world/level/levelgen/blending/BlendingData.class
+dependency_records[1].sources[14]: remap/net/minecraft/world/level/levelgen/blockpredicates/BlockPredicate.class
+dependency_records[1].sources[15]: remap/net/minecraft/world/level/levelgen/carver/WorldCarver.class
+dependency_records[1].sources[16]: remap/net/minecraft/world/level/levelgen/feature/Feature.class
+dependency_records[1].sources[17]: remap/net/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProviderType.class
+dependency_records[1].sources[18]: remap/net/minecraft/world/level/levelgen/placement/PlacedFeature.class
+dependency_records[1].sources[19]: remap/net/minecraft/world/level/levelgen/structure/templatesystem/BlockMatchTest.class
+dependency_records[1].sources[20]: remap/net/minecraftforge/common/LenientUnboundedMapCodec.class
+dependency_records[1].sources[21]: remap/net/minecraftforge/event/RegistryEvent$1.class
+dependency_records[1].sources[22]: remap/net/minecraftforge/event/RegistryEvent$IdMappingEvent$ModRemapping.class
+dependency_records[1].sources[23]: remap/net/minecraftforge/event/RegistryEvent$IdMappingEvent.class
+dependency_records[1].sources[24]: remap/net/minecraftforge/event/RegistryEvent$MissingMappings$Action.class
+dependency_records[1].sources[25]: remap/net/minecraftforge/event/RegistryEvent$MissingMappings$Mapping.class
+dependency_records[1].sources[26]: remap/net/minecraftforge/event/RegistryEvent$MissingMappings.class
+dependency_records[1].sources[27]: remap/net/minecraftforge/event/RegistryEvent$Register.class
+dependency_records[1].sources[28]: remap/net/minecraftforge/event/RegistryEvent.class
+dependency_records[1].sources[29]: remap/net/minecraftforge/eventbus/api/GenericEvent.class
+dependency_records[1].sources[30]: remap/net/minecraftforge/eventbus/api/IGenericEvent.class
+dependency_records[1].sources[31]: remap/net/minecraftforge/fml/StartupMessageManager.class
+dependency_records[1].sources[32]: remap/net/minecraftforge/fml/event/IModBusEvent.class
+dependency_records[1].sources[33]: remap/net/minecraftforge/fml/loading/progress/StartupMessageManager$Message.class
+dependency_records[1].sources[34]: remap/net/minecraftforge/fml/loading/progress/StartupMessageManager$MessageType.class
+dependency_records[1].sources[35]: remap/net/minecraftforge/fml/loading/progress/StartupMessageManager.class
+dependency_records[1].sources[36]: remap/net/minecraftforge/fml/util/EnhancedRuntimeException$1.class
+dependency_records[1].sources[37]: remap/net/minecraftforge/fml/util/EnhancedRuntimeException$2.class
+dependency_records[1].sources[38]: remap/net/minecraftforge/fml/util/EnhancedRuntimeException$3.class
+dependency_records[1].sources[39]: remap/net/minecraftforge/fml/util/EnhancedRuntimeException$WrappedPrintStream.class
+dependency_records[1].sources[40]: remap/net/minecraftforge/fml/util/EnhancedRuntimeException.class
+dependency_records[1].sources[41]: remap/net/minecraftforge/registries/DataPackRegistriesHooks.class
+dependency_records[1].sources[42]: remap/net/minecraftforge/registries/DeferredRegister$1.class
+dependency_records[1].sources[43]: remap/net/minecraftforge/registries/DeferredRegister$EventDispatcher.class
+dependency_records[1].sources[44]: remap/net/minecraftforge/registries/DeferredRegister.class
+dependency_records[1].sources[45]: remap/net/minecraftforge/registries/ForgeRegistries$Keys.class
+dependency_records[1].sources[46]: remap/net/minecraftforge/registries/ForgeRegistries.class
+dependency_records[1].sources[47]: remap/net/minecraftforge/registries/ForgeRegistry$1.class
+dependency_records[1].sources[48]: remap/net/minecraftforge/registries/ForgeRegistry$DumpRow.class
+dependency_records[1].sources[49]: remap/net/minecraftforge/registries/ForgeRegistry$OverrideOwner.class
+dependency_records[1].sources[50]: remap/net/minecraftforge/registries/ForgeRegistry$RegistryCodec.class
+dependency_records[1].sources[51]: remap/net/minecraftforge/registries/ForgeRegistry$Snapshot.class
+dependency_records[1].sources[52]: remap/net/minecraftforge/registries/ForgeRegistry.class
+dependency_records[1].sources[53]: remap/net/minecraftforge/registries/ForgeRegistryEntry$1.class
+dependency_records[1].sources[54]: remap/net/minecraftforge/registries/ForgeRegistryEntry$UncheckedRegistryEntry.class
+dependency_records[1].sources[55]: remap/net/minecraftforge/registries/ForgeRegistryEntry.class
+dependency_records[1].sources[56]: remap/net/minecraftforge/registries/ForgeRegistryTag.class
+dependency_records[1].sources[57]: remap/net/minecraftforge/registries/ForgeRegistryTagManager.class
+dependency_records[1].sources[58]: remap/net/minecraftforge/registries/GameData$1.class
+dependency_records[1].sources[59]: remap/net/minecraftforge/registries/GameData$EventGenerator.class
+dependency_records[1].sources[60]: remap/net/minecraftforge/registries/GameData$FeatureCallbacks.class
+dependency_records[1].sources[61]: remap/net/minecraftforge/registries/GameData.class
+dependency_records[1].sources[62]: remap/net/minecraftforge/registries/IForgeRegistry$AddCallback.class
+dependency_records[1].sources[63]: remap/net/minecraftforge/registries/IForgeRegistry$BakeCallback.class
+dependency_records[1].sources[64]: remap/net/minecraftforge/registries/IForgeRegistry$ClearCallback.class
+dependency_records[1].sources[65]: remap/net/minecraftforge/registries/IForgeRegistry$CreateCallback.class
+dependency_records[1].sources[66]: remap/net/minecraftforge/registries/IForgeRegistry$DummyFactory.class
+dependency_records[1].sources[67]: remap/net/minecraftforge/registries/IForgeRegistry$MissingFactory.class
+dependency_records[1].sources[68]: remap/net/minecraftforge/registries/IForgeRegistry$ValidateCallback.class
+dependency_records[1].sources[69]: remap/net/minecraftforge/registries/IForgeRegistry.class
+dependency_records[1].sources[70]: remap/net/minecraftforge/registries/IForgeRegistryEntry.class
+dependency_records[1].sources[71]: remap/net/minecraftforge/registries/IForgeRegistryInternal.class
+dependency_records[1].sources[72]: remap/net/minecraftforge/registries/IForgeRegistryModifiable.class
+dependency_records[1].sources[73]: remap/net/minecraftforge/registries/IHolderHelperHolder.class
+dependency_records[1].sources[74]: remap/net/minecraftforge/registries/ILockableRegistry.class
+dependency_records[1].sources[75]: remap/net/minecraftforge/registries/IRegistryDelegate.class
+dependency_records[1].sources[76]: remap/net/minecraftforge/registries/NamespacedDefaultedWrapper$1.class
+dependency_records[1].sources[77]: remap/net/minecraftforge/registries/NamespacedDefaultedWrapper$Factory.class
+dependency_records[1].sources[78]: remap/net/minecraftforge/registries/NamespacedDefaultedWrapper.class
+dependency_records[1].sources[79]: remap/net/minecraftforge/registries/NamespacedHolderHelper.class
+dependency_records[1].sources[80]: remap/net/minecraftforge/registries/NamespacedWrapper$Factory.class
+dependency_records[1].sources[81]: remap/net/minecraftforge/registries/NamespacedWrapper.class
+dependency_records[1].sources[82]: remap/net/minecraftforge/registries/NewRegistryEvent$1.class
+dependency_records[1].sources[83]: remap/net/minecraftforge/registries/NewRegistryEvent$RegistryData.class
+dependency_records[1].sources[84]: remap/net/minecraftforge/registries/NewRegistryEvent$RegistryHolder.class
+dependency_records[1].sources[85]: remap/net/minecraftforge/registries/NewRegistryEvent.class
+dependency_records[1].sources[86]: remap/net/minecraftforge/registries/ObjectHolder.class
+dependency_records[1].sources[87]: remap/net/minecraftforge/registries/ObjectHolderRef.class
+dependency_records[1].sources[88]: remap/net/minecraftforge/registries/ObjectHolderRegistry.class
+dependency_records[1].sources[89]: remap/net/minecraftforge/registries/RegistryBuilder.class
+dependency_records[1].sources[90]: remap/net/minecraftforge/registries/RegistryDelegate.class
+dependency_records[1].sources[91]: remap/net/minecraftforge/registries/RegistryManager.class
+dependency_records[1].sources[92]: remap/net/minecraftforge/registries/RegistryObject$1.class
+dependency_records[1].sources[93]: remap/net/minecraftforge/registries/RegistryObject$2.class
+dependency_records[1].sources[94]: remap/net/minecraftforge/registries/RegistryObject.class
+dependency_records[1].sources[95]: remap/net/minecraftforge/registries/VanillaRegisterEvent.class
+dependency_records[1].sources[96]: remap/net/minecraftforge/registries/tags/IReverseTag.class
+dependency_records[1].sources[97]: remap/net/minecraftforge/registries/tags/ITag.class
+dependency_records[1].sources[98]: remap/net/minecraftforge/registries/tags/ITagManager.class
+dependency_records[1].sources[99]: ru/loliland/worldgen/WorldGenEngine.class
+dependency_records[1].sources[100]: ru/loliland/worldgen/asm/WorldGenEngineLoadingPlugin.class
+dependency_records[1].sources[101]: ru/loliland/worldgen/block/plant/BlockTerrainPlant.class
+dependency_records[1].sources[102]: ru/loliland/worldgen/command/CommandFindBiome.class
+dependency_records[1].sources[103]: ru/loliland/worldgen/handler/TempChunkHandler.class
+dependency_records[1].sources[104]: ru/loliland/worldgen/init/RegistryBootstrap.class
+dependency_records[1].sources[105]: ru/loliland/worldgen/init/WorldGenBlocks.class
+dependency_records[1].sources[106]: ru/loliland/worldgen/proxy/ClientProxy.class
+dependency_records[1].sources[107]: ru/loliland/worldgen/proxy/CommonProxy.class
+dependency_records[1].sources[108]: ru/loliland/worldgen/util/ChunkBorderRenderer.class
+dependency_records[1].sources[109]: ru/loliland/worldgen/world/biome/BiomeGenerator.class
+dependency_records[1].sources[110]: ru/loliland/worldgen/world/provider/WorldGenChunkProvider.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: worldgen
+dependency_records[2].categories[0]: Optional
+dependency_records[2].confidence: 45
+dependency_records[2].sources[0]: assets/worldgen/lang/en_US.lang
+dependency_records[2].sources[1]: assets/worldgen/lang/ru_RU.lang
+dependency_records[2].sources[2]: assets/worldgen/textures/blocks/bedrock.png
+dependency_records[2].sources[3]: assets/worldgen/textures/blocks/empty.png
+dependency_records[2].evidence[0]: resource namespace
 ```
 
 
@@ -111,9 +245,9 @@ class_files: 686
 packages: 84
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
-detections[2]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 3
 content.Items: 0
 content.TileEntities: 1

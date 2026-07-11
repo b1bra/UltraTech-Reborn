@@ -11,7 +11,7 @@ version: Unknown
 author: Unknown
 size_mb: 0.03
 forge: FMLCorePlugin: net.loliland.mctags.coremod.MCTagsCoreMod
-dependencies: []
+dependencies[0]: Forge
 files: 22
 class_files: 18
 packages: 7
@@ -98,6 +98,14 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].categories[1]: Hidden
+dependency_records[0].confidence: 92
+dependency_records[0].sources[0]: net/loliland/mctags/MCTagsMod.class
+dependency_records[0].sources[1]: net/loliland/mctags/coremod/MCTagsCoreMod.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

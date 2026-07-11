@@ -11,7 +11,9 @@ version: 2.4.4
 author: Unknown
 size_mb: 0.02
 forge: FMLAT: MouseTweaks_at.cfg
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: Forestry
+dependencies[2]: Forge
 files: 16
 class_files: 12
 packages: 7
@@ -90,6 +92,26 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/MouseTweaks_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: Forestry
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: forestry/core/gui/MouseTweaksGuiForestryAccessor.class
+dependency_records[1].sources[1]: yalter/mousetweaks/ModCompatibility.class
+dependency_records[1].evidence[0]: forestry
+dependency_records[2].name: Forge
+dependency_records[2].categories[0]: Hidden
+dependency_records[2].confidence: 78
+dependency_records[2].sources[0]: com/gamerforea/invtweaks/api/IInfiniteContainer.class
+dependency_records[2].sources[1]: forestry/core/gui/MouseTweaksGuiForestryAccessor.class
+dependency_records[2].sources[2]: yalter/mousetweaks/ModCompatibility.class
+dependency_records[2].sources[3]: yalter/mousetweaks/loaders/MouseTweaksForge.class
+dependency_records[2].evidence[0]: cpw/mods/fml/
 ```
 
 

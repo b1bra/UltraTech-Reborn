@@ -196,8 +196,8 @@ Packets: 95
 Migration detections:
 
 ```text
-Old Rendering
 CoreMod / ASM
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -295,10 +295,10 @@ Channels: 2
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -630,8 +630,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -893,11 +893,11 @@ Packets: 362
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
@@ -1113,8 +1113,8 @@ Packets: 242
 Migration detections:
 
 ```text
-Old Rendering
 CoreMod / ASM
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -1122,8 +1122,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -1278,10 +1278,10 @@ Channels: 10
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -1293,10 +1293,10 @@ Heavy networking
 Important classes:
 
 ```text
-name
-registry
 for
+name
 not
+registry
 ```
 
 Detected content names:
@@ -1374,8 +1374,8 @@ Channels: 6
 Migration detections:
 
 ```text
-Old Rendering
 Old Registry
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -1383,8 +1383,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -1466,8 +1466,8 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -1544,10 +1544,10 @@ Channels: 8
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -3220,8 +3220,8 @@ Packets: 337
 Migration detections:
 
 ```text
-Old Rendering
 Old Registry
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -3229,8 +3229,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -3378,18 +3378,18 @@ Channels: 7
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -3493,18 +3493,18 @@ Channels: 246
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
-Large block system
 Large amount of classes
+Large block system
+Heavy networking
 ```
 
 Important classes:
@@ -4077,9 +4077,9 @@ No data
 Migration detections:
 
 ```text
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -4359,8 +4359,8 @@ No data
 Migration detections:
 
 ```text
-Old Registry
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -4434,8 +4434,8 @@ Packets: 357
 Migration detections:
 
 ```text
-Old Rendering
 Old Registry
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -4790,9 +4790,9 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -5334,18 +5334,18 @@ Packets: 452
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
 Large block system
+Heavy networking
 ```
 
 Important classes:
@@ -6138,10 +6138,10 @@ Packets: 73
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -6258,8 +6258,8 @@ Channels: 10
 Migration detections:
 
 ```text
-Old Rendering
 Old Registry
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -6267,8 +6267,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -6655,8 +6655,8 @@ No data
 Migration detections:
 
 ```text
-Old Rendering
 CoreMod / ASM
+Old Rendering
 Old Forge API
 ```
 
@@ -6735,16 +6735,16 @@ Channels: 12
 Migration detections:
 
 ```text
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -7014,9 +7014,9 @@ No data
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -7090,17 +7090,17 @@ Packets: 104
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 Important classes:
@@ -7347,8 +7347,8 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -7436,20 +7436,20 @@ Channels: 26
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
-Large block system
 Large amount of classes
 Large machine system
+Large block system
+Heavy networking
 ```
 
 Important classes:
@@ -8908,11 +8908,11 @@ Packets: 47
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
@@ -9018,17 +9018,17 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
-Heavy networking
 Large amount of classes
+Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -9338,9 +9338,9 @@ Channels: 2
 Migration detections:
 
 ```text
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -9469,9 +9469,9 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -9578,8 +9578,8 @@ No reasons
 Important classes:
 
 ```text
-name
 does
+name
 ```
 
 Detected content names:
@@ -9642,8 +9642,8 @@ Channels: 7
 Migration detections:
 
 ```text
-Old Rendering
 Old Registry
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -9651,9 +9651,9 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
-Heavy networking
 Large amount of classes
+Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -9760,8 +9760,8 @@ Packets: 35
 Migration detections:
 
 ```text
-Old Rendering
 Old Registry
+Old Rendering
 Old Forge API
 Old Network
 ```
@@ -9769,8 +9769,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -10156,9 +10156,9 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -10236,10 +10236,10 @@ Channels: 9
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -10801,9 +10801,9 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -10944,10 +10944,10 @@ Channels: 5
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -11559,8 +11559,8 @@ No data
 Migration detections:
 
 ```text
-Old Registry
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -11649,17 +11649,17 @@ Packets: 65
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
 CoreMod / ASM
+Old Rendering
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -11743,17 +11743,17 @@ Packets: 415
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
 CoreMod / ASM
+Old Rendering
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -11832,8 +11832,8 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -11915,26 +11915,26 @@ Packets: 1962
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 Important classes:
 
 ```text
+of
 transformer
 for
-of
 ```
 
 Detected content names:
@@ -12240,9 +12240,9 @@ Packets: 45
 Migration detections:
 
 ```text
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -12474,17 +12474,17 @@ Channels: 6
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -12578,8 +12578,8 @@ No data
 Migration detections:
 
 ```text
-Old Registry
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -12665,9 +12665,9 @@ Channels: 2
 Migration detections:
 
 ```text
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -12761,9 +12761,9 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -13224,9 +13224,9 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -13427,9 +13427,9 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -14104,8 +14104,8 @@ No data
 Migration detections:
 
 ```text
-Old Registry
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -14179,17 +14179,17 @@ Packets: 56
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -14358,9 +14358,9 @@ No data
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -14525,8 +14525,8 @@ Channels: 4
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
+Old Registry
 Old Forge API
 Old Network
 ```
@@ -14615,20 +14615,20 @@ Packets: 794
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
-Heavy networking
 Large amount of classes
 Large machine system
+Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -14995,17 +14995,17 @@ Packets: 67
 Migration detections:
 
 ```text
-Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Rendering
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 Important classes:
@@ -15095,18 +15095,18 @@ Channels: 13
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 Important classes:
@@ -15217,11 +15217,11 @@ Packets: 317
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
@@ -15233,8 +15233,8 @@ Heavy networking
 Important classes:
 
 ```text
-code
 missing
+code
 for
 ```
 
@@ -15414,16 +15414,16 @@ Migration detections:
 
 ```text
 Old Rendering
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy networking
 Large amount of classes
+Heavy networking
 ```
 
 Important classes:
@@ -15818,9 +15818,9 @@ Packets: 7
 Migration detections:
 
 ```text
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:
@@ -15955,11 +15955,11 @@ Channels: 4
 Migration detections:
 
 ```text
-Old Forge API
 CoreMod / ASM
-Old Registry
-Old Rendering
 Old Network
+Old Forge API
+Old Rendering
+Old Registry
 ```
 
 Migration reasons:
@@ -16153,16 +16153,16 @@ Channels: 1
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
 Old Forge API
+Old Registry
 ```
 
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -16246,8 +16246,8 @@ Channels: 4
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
+Old Registry
 Old Forge API
 Old Network
 ```
@@ -16255,8 +16255,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Large amount of classes
+Heavy client code
 ```
 
 Important classes:
@@ -16334,8 +16334,8 @@ Channels: 7
 Migration detections:
 
 ```text
-Old Registry
 CoreMod / ASM
+Old Registry
 Old Forge API
 Old Network
 ```
@@ -16343,8 +16343,8 @@ Old Network
 Migration reasons:
 
 ```text
-Heavy client code
 Heavy networking
+Heavy client code
 ```
 
 Important classes:
@@ -16416,9 +16416,9 @@ Packets: 33
 Migration detections:
 
 ```text
-Old Registry
-Old Forge API
 Old Network
+Old Forge API
+Old Registry
 ```
 
 Migration reasons:

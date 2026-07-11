@@ -11,7 +11,7 @@ version: Unknown
 author: Unknown
 size_mb: 0.03
 forge: FMLCorePlugin: com.gamerforea.containerwarden.coremod.CoreMod
-dependencies: []
+dependencies[0]: Forge
 files: 28
 class_files: 26
 packages: 8
@@ -91,6 +91,25 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].categories[1]: Hidden
+dependency_records[0].confidence: 92
+dependency_records[0].sources[0]: com/gamerforea/containerwarden/CommonEventHandler.class
+dependency_records[0].sources[1]: com/gamerforea/containerwarden/Config.class
+dependency_records[0].sources[2]: com/gamerforea/containerwarden/ContainerWardenMod.class
+dependency_records[0].sources[3]: com/gamerforea/containerwarden/client/ClientEventHandler.class
+dependency_records[0].sources[4]: com/gamerforea/containerwarden/client/ClientProxy.class
+dependency_records[0].sources[5]: com/gamerforea/containerwarden/command/CommandReload.class
+dependency_records[0].sources[6]: com/gamerforea/containerwarden/coremod/CoreMod.class
+dependency_records[0].sources[7]: com/gamerforea/containerwarden/network/NetworkUtils.class
+dependency_records[0].sources[8]: com/gamerforea/containerwarden/network/RegistrySyncMessage$Handler.class
+dependency_records[0].sources[9]: com/gamerforea/containerwarden/network/RegistrySyncMessage.class
+dependency_records[0].sources[10]: com/gamerforea/containerwarden/registry/ContainerGroup.class
+dependency_records[0].sources[11]: com/gamerforea/containerwarden/registry/ItemGroup.class
+dependency_records[0].sources[12]: com/gamerforea/containerwarden/util/NormalString.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

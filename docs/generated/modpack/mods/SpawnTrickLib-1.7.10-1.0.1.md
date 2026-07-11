@@ -11,14 +11,16 @@ version: Unknown
 author: Unknown
 size_mb: 0.02
 forge: Unknown
-dependencies: []
+dependencies[0]: CraftTweaker
+dependencies[1]: Forge
+dependencies[2]: LaunchWrapper
 files: 31
 class_files: 23
 packages: 3
 score: 40
 difficulty: Normal
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0
@@ -100,6 +102,39 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: CraftTweaker
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/gamerforea/spawntrick/SpawnTrickMod.class
+dependency_records[0].sources[1]: com/gamerforea/spawntrick/minetweaker/EntitiesTweaker.class
+dependency_records[0].sources[2]: com/gamerforea/spawntrick/minetweaker/EntityAttributesTweaker.class
+dependency_records[0].sources[3]: com/gamerforea/spawntrick/minetweaker/MineTweakerIntegration.class
+dependency_records[0].sources[4]: com/gamerforea/spawntrick/minetweaker/MobSoulTweaker$AddBlackListAction.class
+dependency_records[0].sources[5]: com/gamerforea/spawntrick/minetweaker/MobSoulTweaker.class
+dependency_records[0].sources[6]: com/gamerforea/spawntrick/minetweaker/SpawnTrickTweaker.class
+dependency_records[0].sources[7]: com/gamerforea/spawntrick/util/EntityUtils.class
+dependency_records[0].evidence[0]: MineTweakerAPI, minetweaker
+dependency_records[0].evidence[1]: minetweaker
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: com/gamerforea/spawntrick/SpawnTrickMod.class
+dependency_records[1].sources[1]: com/gamerforea/spawntrick/minetweaker/MineTweakerIntegration.class
+dependency_records[1].sources[2]: com/gamerforea/spawntrick/util/EntityUtils.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[2].name: LaunchWrapper
+dependency_records[2].categories[0]: Runtime
+dependency_records[2].confidence: 90
+dependency_records[2].sources[0]: com/gamerforea/spawntrick/ModConstants.class
+dependency_records[2].sources[1]: com/gamerforea/spawntrick/SpawnTrickMod.class
+dependency_records[2].sources[2]: com/gamerforea/spawntrick/minetweaker/EntitiesTweaker.class
+dependency_records[2].sources[3]: com/gamerforea/spawntrick/minetweaker/EntityAttributesTweaker.class
+dependency_records[2].sources[4]: com/gamerforea/spawntrick/minetweaker/MineTweakerIntegration.class
+dependency_records[2].sources[5]: com/gamerforea/spawntrick/minetweaker/MobSoulTweaker$AddBlackListAction.class
+dependency_records[2].sources[6]: com/gamerforea/spawntrick/minetweaker/MobSoulTweaker.class
+dependency_records[2].sources[7]: com/gamerforea/spawntrick/minetweaker/SpawnTrickTweaker.class
+dependency_records[2].sources[8]: com/gamerforea/spawntrick/util/EntityUtils.class
+dependency_records[2].evidence[0]: tweaker marker
 ```
 
 
@@ -113,8 +148,8 @@ class_files: 23
 packages: 3
 score: 40
 difficulty: Normal
-detections[0]: Old Registry
-detections[1]: Old Forge API
+detections[0]: Old Forge API
+detections[1]: Old Registry
 content.Blocks: 0
 content.Items: 0
 content.TileEntities: 0

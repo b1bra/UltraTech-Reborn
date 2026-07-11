@@ -11,7 +11,9 @@ version: Unknown
 author: Unknown
 size_mb: 0.11
 forge: FMLCorePlugin: loliland.forge.hookslib.minecraft.HookLibPlugin
-dependencies: []
+dependencies[0]: ASM
+dependencies[1]: Forge
+dependencies[2]: LaunchWrapper
 files: 56
 class_files: 53
 packages: 3
@@ -45,8 +47,8 @@ recipes.Custom: 0
 gui.Containers: 70
 No data
 creative: 0
-important_classes[0]: name
-important_classes[1]: does
+important_classes[0]: does
+important_classes[1]: name
 estimated_methods: 126
 client_hits: 0
 server_hits: 0
@@ -90,6 +92,82 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: ASM
+dependency_records[0].categories[0]: ASM
+dependency_records[0].confidence: 92
+dependency_records[0].sources[0]: loliland/forge/hookslib/asm/AsmHook$Builder.class
+dependency_records[0].sources[1]: loliland/forge/hookslib/asm/AsmHook.class
+dependency_records[0].sources[2]: loliland/forge/hookslib/asm/ClassMetadataReader$CheckSuperClassVisitor.class
+dependency_records[0].sources[3]: loliland/forge/hookslib/asm/ClassMetadataReader$FindMethodClassVisitor.class
+dependency_records[0].sources[4]: loliland/forge/hookslib/asm/ClassMetadataReader$MethodReference.class
+dependency_records[0].sources[5]: loliland/forge/hookslib/asm/ClassMetadataReader.class
+dependency_records[0].sources[6]: loliland/forge/hookslib/asm/HookClassTransformer.class
+dependency_records[0].sources[7]: loliland/forge/hookslib/asm/HookContainerParser$HookAnnotationVisitor$1.class
+dependency_records[0].sources[8]: loliland/forge/hookslib/asm/HookContainerParser$HookAnnotationVisitor.class
+dependency_records[0].sources[9]: loliland/forge/hookslib/asm/HookContainerParser$HookClassVisitor.class
+dependency_records[0].sources[10]: loliland/forge/hookslib/asm/HookContainerParser$HookMethodVisitor$1.class
+dependency_records[0].sources[11]: loliland/forge/hookslib/asm/HookContainerParser$HookMethodVisitor.class
+dependency_records[0].sources[12]: loliland/forge/hookslib/asm/HookContainerParser.class
+dependency_records[0].sources[13]: loliland/forge/hookslib/asm/HookInjectorClassVisitor.class
+dependency_records[0].sources[14]: loliland/forge/hookslib/asm/HookInjectorFactory$ByAnchor.class
+dependency_records[0].sources[15]: loliland/forge/hookslib/asm/HookInjectorFactory$LineNumber.class
+dependency_records[0].sources[16]: loliland/forge/hookslib/asm/HookInjectorFactory$MethodEnter.class
+dependency_records[0].sources[17]: loliland/forge/hookslib/asm/HookInjectorFactory$MethodExit.class
+dependency_records[0].sources[18]: loliland/forge/hookslib/asm/HookInjectorFactory.class
+dependency_records[0].sources[19]: loliland/forge/hookslib/asm/HookInjectorMethodVisitor$1.class
+dependency_records[0].sources[20]: loliland/forge/hookslib/asm/HookInjectorMethodVisitor$ByAnchor.class
+dependency_records[0].sources[21]: loliland/forge/hookslib/asm/HookInjectorMethodVisitor$LineNumber.class
+dependency_records[0].sources[22]: loliland/forge/hookslib/asm/HookInjectorMethodVisitor$MethodEnter.class
+dependency_records[0].sources[23]: loliland/forge/hookslib/asm/HookInjectorMethodVisitor$MethodExit.class
+dependency_records[0].sources[24]: loliland/forge/hookslib/asm/HookInjectorMethodVisitor.class
+dependency_records[0].sources[25]: loliland/forge/hookslib/asm/ReadClassHelper.class
+dependency_records[0].sources[26]: loliland/forge/hookslib/asm/SafeClassWriter.class
+dependency_records[0].sources[27]: loliland/forge/hookslib/asm/TypeHelper.class
+dependency_records[0].sources[28]: loliland/forge/hookslib/asm/VariableIdHelper$1$1.class
+dependency_records[0].sources[29]: loliland/forge/hookslib/asm/VariableIdHelper$1.class
+dependency_records[0].sources[30]: loliland/forge/hookslib/asm/VariableIdHelper.class
+dependency_records[0].sources[31]: loliland/forge/hookslib/minecraft/DeobfuscationMetadataReader.class
+dependency_records[0].sources[32]: loliland/forge/hookslib/minecraft/MinecraftClassTransformer$1.class
+dependency_records[0].sources[33]: loliland/forge/hookslib/minecraft/MinecraftClassTransformer.class
+dependency_records[0].sources[34]: loliland/forge/hookslib/minecraft/PrimaryClassTransformer$1.class
+dependency_records[0].sources[35]: loliland/forge/hookslib/minecraft/PrimaryClassTransformer.class
+dependency_records[0].evidence[0]: ClassVisitor
+dependency_records[0].evidence[1]: MethodVisitor
+dependency_records[0].evidence[2]: org/objectweb/asm/
+dependency_records[0].evidence[3]: org/objectweb/asm/, ClassVisitor
+dependency_records[0].evidence[4]: org/objectweb/asm/, ClassVisitor, MethodVisitor
+dependency_records[0].evidence[5]: org/objectweb/asm/, IClassTransformer, ClassVisitor
+dependency_records[0].evidence[6]: org/objectweb/asm/, MethodVisitor
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].categories[1]: Hidden
+dependency_records[1].categories[2]: Reflection
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: loliland/forge/hookslib/minecraft/DeobfuscationMetadataReader.class
+dependency_records[1].sources[1]: loliland/forge/hookslib/minecraft/HookLibPlugin.class
+dependency_records[1].sources[2]: loliland/forge/hookslib/minecraft/HookLoader.class
+dependency_records[1].sources[3]: loliland/forge/hookslib/minecraft/PrimaryClassTransformer.class
+dependency_records[1].sources[4]: loliland/forge/hookslib/minecraft/SecondaryTransformerHook.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[2].name: LaunchWrapper
+dependency_records[2].categories[0]: CoreMod
+dependency_records[2].confidence: 92
+dependency_records[2].sources[0]: loliland/forge/hookslib/asm/ClassMetadataReader$CheckSuperClassVisitor.class
+dependency_records[2].sources[1]: loliland/forge/hookslib/asm/ClassMetadataReader$FindMethodClassVisitor.class
+dependency_records[2].sources[2]: loliland/forge/hookslib/asm/HookContainerParser$HookAnnotationVisitor$1.class
+dependency_records[2].sources[3]: loliland/forge/hookslib/asm/HookContainerParser$HookAnnotationVisitor.class
+dependency_records[2].sources[4]: loliland/forge/hookslib/asm/HookContainerParser$HookClassVisitor.class
+dependency_records[2].sources[5]: loliland/forge/hookslib/asm/HookContainerParser$HookMethodVisitor$1.class
+dependency_records[2].sources[6]: loliland/forge/hookslib/asm/HookContainerParser$HookMethodVisitor.class
+dependency_records[2].sources[7]: loliland/forge/hookslib/asm/HookInjectorClassVisitor.class
+dependency_records[2].sources[8]: loliland/forge/hookslib/asm/TypeHelper.class
+dependency_records[2].sources[9]: loliland/forge/hookslib/asm/VariableIdHelper$1$1.class
+dependency_records[2].sources[10]: loliland/forge/hookslib/asm/VariableIdHelper$1.class
+dependency_records[2].sources[11]: loliland/forge/hookslib/minecraft/DeobfuscationMetadataReader.class
+dependency_records[2].sources[12]: loliland/forge/hookslib/minecraft/MinecraftClassTransformer.class
+dependency_records[2].sources[13]: loliland/forge/hookslib/minecraft/PrimaryClassTransformer.class
+dependency_records[2].evidence[0]: net/minecraft/launchwrapper/
+dependency_records[2].evidence[1]: net/minecraft/launchwrapper/, LaunchClassLoader
 ```
 
 
@@ -131,8 +209,8 @@ recipes.Custom: 0
 gui.Containers: 70
 No data
 creative: 0
-important_classes[0]: name
-important_classes[1]: does
+important_classes[0]: does
+important_classes[1]: name
 estimated_methods: 126
 client_hits: 0
 server_hits: 0

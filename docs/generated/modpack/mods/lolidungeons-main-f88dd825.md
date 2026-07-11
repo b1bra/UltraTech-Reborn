@@ -11,15 +11,18 @@ version: 0.1.0
 author: Unknown
 size_mb: 0.13
 forge: FMLCorePlugin: net.loliland.lolidungeons.asm.CoremodPlugin
-dependencies: []
+dependencies[0]: AccessTransformer
+dependencies[1]: Forge
+dependencies[2]: LaunchWrapper
+dependencies[3]: lolidungeons
 files: 89
 class_files: 75
 packages: 24
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
-detections[2]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 1
 content.Items: 0
 content.TileEntities: 4
@@ -70,8 +73,8 @@ client_hits: 63
 server_hits: 49
 client_percent: 56.2
 server_percent: 43.8
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 9
 models: 0
 blockstates: 0
@@ -112,6 +115,61 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: AccessTransformer
+dependency_records[0].categories[0]: CoreMod
+dependency_records[0].confidence: 90
+dependency_records[0].sources[0]: META-INF/lolidungeons_at.cfg
+dependency_records[0].evidence[0]: access transformer file
+dependency_records[0].evidence[1]: access transformer resource
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: CoreMod
+dependency_records[1].categories[1]: Hidden
+dependency_records[1].confidence: 92
+dependency_records[1].sources[0]: net/loliland/lolidungeons/EventListener.class
+dependency_records[1].sources[1]: net/loliland/lolidungeons/LoliDungeons$configDir$2.class
+dependency_records[1].sources[2]: net/loliland/lolidungeons/LoliDungeons$lolimodLoaded$2.class
+dependency_records[1].sources[3]: net/loliland/lolidungeons/LoliDungeons$mswLoaded$2.class
+dependency_records[1].sources[4]: net/loliland/lolidungeons/LoliDungeons$preInit$$inlined$load$default$1.class
+dependency_records[1].sources[5]: net/loliland/lolidungeons/LoliDungeons$preInit$$inlined$load$default$2.class
+dependency_records[1].sources[6]: net/loliland/lolidungeons/LoliDungeons.class
+dependency_records[1].sources[7]: net/loliland/lolidungeons/api/event/DungeonEvent$JoinPlayer.class
+dependency_records[1].sources[8]: net/loliland/lolidungeons/api/event/DungeonEvent$LeavePlayer.class
+dependency_records[1].sources[9]: net/loliland/lolidungeons/api/event/DungeonEvent$Setup.class
+dependency_records[1].sources[10]: net/loliland/lolidungeons/api/event/DungeonEvent.class
+dependency_records[1].sources[11]: net/loliland/lolidungeons/asm/CoremodPlugin.class
+dependency_records[1].sources[12]: net/loliland/lolidungeons/block/LoliDungeonsBlocks.class
+dependency_records[1].sources[13]: net/loliland/lolidungeons/block/spawner/BlockDungeonSpawner.class
+dependency_records[1].sources[14]: net/loliland/lolidungeons/client/gui/block/GuiDungeonSpawner.class
+dependency_records[1].sources[15]: net/loliland/lolidungeons/client/renderer/dimension/DummyCloudRenderer.class
+dependency_records[1].sources[16]: net/loliland/lolidungeons/client/renderer/texture/TextureDungeonSpawner.class
+dependency_records[1].sources[17]: net/loliland/lolidungeons/entity/LoliDungeonsPlayer$Companion.class
+dependency_records[1].sources[18]: net/loliland/lolidungeons/entity/LoliDungeonsPlayer.class
+dependency_records[1].sources[19]: net/loliland/lolidungeons/impl/msw/RealmDungeonUtils.class
+dependency_records[1].sources[20]: net/loliland/lolidungeons/network/LoliDungeonsNetwork.class
+dependency_records[1].sources[21]: net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Companion.class
+dependency_records[1].sources[22]: net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings$Handler.class
+dependency_records[1].sources[23]: net/loliland/lolidungeons/network/packet/PacketDungeonSpawnerSettings.class
+dependency_records[1].sources[24]: net/loliland/lolidungeons/network/packet/PacketGuiDungeonSpawner$Handler.class
+dependency_records[1].sources[25]: net/loliland/lolidungeons/network/packet/PacketGuiDungeonSpawner.class
+dependency_records[1].sources[26]: net/loliland/lolidungeons/util/UltramineHelper.class
+dependency_records[1].sources[27]: net/loliland/lolidungeons/world/WorldProviderDungeonRealm.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: LaunchWrapper
+dependency_records[2].categories[0]: CoreMod
+dependency_records[2].confidence: 92
+dependency_records[2].sources[0]: net/loliland/lolidungeons/client/util/OptiFineHelper.class
+dependency_records[2].evidence[0]: net/minecraft/launchwrapper/, LaunchClassLoader
+dependency_records[3].name: lolidungeons
+dependency_records[3].categories[0]: Optional
+dependency_records[3].confidence: 45
+dependency_records[3].sources[0]: assets/lolidungeons/lang/en_US.lang
+dependency_records[3].sources[1]: assets/lolidungeons/sounds.json
+dependency_records[3].sources[2]: assets/lolidungeons/textures/blocks/dungeon_spawner.png
+dependency_records[3].sources[3]: assets/lolidungeons/textures/blocks/dungeon_spawner.png.mcmeta
+dependency_records[3].sources[4]: assets/lolidungeons/textures/items/dungeon_spawner.png
+dependency_records[3].evidence[0]: resource namespace
 ```
 
 
@@ -125,9 +183,9 @@ class_files: 75
 packages: 24
 score: 100
 difficulty: Hard
-detections[0]: Old Registry
-detections[1]: CoreMod / ASM
-detections[2]: Old Forge API
+detections[0]: CoreMod / ASM
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 1
 content.Items: 0
 content.TileEntities: 4
@@ -178,8 +236,8 @@ client_hits: 63
 server_hits: 49
 client_percent: 56.2
 server_percent: 43.8
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 9
 models: 0
 blockstates: 0

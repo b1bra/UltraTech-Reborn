@@ -11,15 +11,16 @@ version: Unknown
 author: Unknown
 size_mb: 0.02
 forge: Unknown
-dependencies: []
+dependencies[0]: Forge
+dependencies[1]: opframe
 files: 20
 class_files: 9
 packages: 4
 score: 100
 difficulty: Hard
 detections[0]: Old Rendering
-detections[1]: Old Registry
-detections[2]: Old Forge API
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 1
 content.Items: 0
 content.TileEntities: 5
@@ -100,6 +101,26 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: Forge
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/creativemd/opf/OPFrame.class
+dependency_records[0].sources[1]: com/creativemd/opf/block/BlockPicFrame.class
+dependency_records[0].sources[2]: com/creativemd/opf/block/TileEntityPicFrame.class
+dependency_records[0].sources[3]: com/creativemd/opf/client/DownloadThread.class
+dependency_records[0].sources[4]: com/creativemd/opf/client/OPFrameClient.class
+dependency_records[0].sources[5]: com/creativemd/opf/client/PicBlockRenderer.class
+dependency_records[0].sources[6]: com/creativemd/opf/client/PicTileRenderer.class
+dependency_records[0].sources[7]: com/creativemd/opf/gui/SubGuiPic.class
+dependency_records[0].evidence[0]: cpw/mods/fml/
+dependency_records[0].evidence[1]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[1].name: opframe
+dependency_records[1].categories[0]: Optional
+dependency_records[1].confidence: 45
+dependency_records[1].sources[0]: assets/opframe/
+dependency_records[1].sources[1]: assets/opframe/lang/
+dependency_records[1].sources[2]: assets/opframe/lang/en_US.lang
+dependency_records[1].evidence[0]: resource namespace
 ```
 
 
@@ -114,8 +135,8 @@ packages: 4
 score: 100
 difficulty: Hard
 detections[0]: Old Rendering
-detections[1]: Old Registry
-detections[2]: Old Forge API
+detections[1]: Old Forge API
+detections[2]: Old Registry
 content.Blocks: 1
 content.Items: 0
 content.TileEntities: 5

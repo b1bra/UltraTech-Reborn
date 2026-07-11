@@ -11,7 +11,8 @@ version: 1.6.4.B ported
 author: Unknown
 size_mb: 0.01
 forge: Unknown
-dependencies: []
+dependencies[0]: bettersigns
+dependencies[1]: Forge
 files: 9
 class_files: 5
 packages: 1
@@ -100,6 +101,22 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: bettersigns
+dependency_records[0].categories[0]: Optional
+dependency_records[0].confidence: 45
+dependency_records[0].sources[0]: assets/bettersigns/textures/entity/sign.png
+dependency_records[0].evidence[0]: resource namespace
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].categories[1]: Reflection
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: me/limito/bettersigns/BetterSigns.class
+dependency_records[1].sources[1]: me/limito/bettersigns/GuiHook.class
+dependency_records[1].sources[2]: me/limito/bettersigns/MGuiEditSign.class
+dependency_records[1].sources[3]: me/limito/bettersigns/MModelSign.class
+dependency_records[1].sources[4]: me/limito/bettersigns/MTileEntitySignRenderer.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 

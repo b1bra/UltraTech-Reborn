@@ -11,14 +11,15 @@ version: Unknown
 author: Unknown
 size_mb: 0.24
 forge: Unknown
-dependencies: []
+dependencies[0]: creativecore
+dependencies[1]: Forge
 files: 149
 class_files: 144
 packages: 29
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Registry
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0
@@ -69,8 +70,8 @@ client_hits: 301
 server_hits: 54
 client_percent: 84.8
 server_percent: 15.2
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 0
 models: 0
 blockstates: 0
@@ -105,17 +106,73 @@ recipe_data.smelting: 0
 recipe_data.special: 0
 recipe_data.json_files: 0
 recipe_data.class_files_scanned: 144
-recipe_data.recipe_classes[0]: com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler.class
+recipe_data.recipe_classes[0]: com/creativemd/creativecore/common/recipe/entry/BetterShapelessRecipe.class
 recipe_data.recipe_classes[1]: com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler$CachedInfoShapedRecipe.class
 recipe_data.recipe_classes[2]: com/creativemd/creativecore/common/recipe/CreativeShapelessRecipe.class
-recipe_data.recipe_classes[3]: com/creativemd/creativecore/common/recipe/entry/BetterShapelessRecipe.class
-recipe_data.recipe_classes[4]: com/creativemd/creativecore/common/recipe/RecipeLoader.class
-recipe_data.recipe_classes[5]: com/creativemd/creativecore/common/recipe/BetterShapedRecipe.class
+recipe_data.recipe_classes[3]: com/creativemd/creativecore/common/recipe/RecipeLoader.class
+recipe_data.recipe_classes[4]: com/creativemd/creativecore/common/recipe/BetterShapedRecipe.class
+recipe_data.recipe_classes[5]: com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler.class
 No data
 No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: creativecore
+dependency_records[0].categories[0]: Optional
+dependency_records[0].confidence: 45
+dependency_records[0].sources[0]: assets/creativecore/textures/gui/GUI.png
+dependency_records[0].sources[1]: assets/creativecore/textures/gui/Slider.png
+dependency_records[0].sources[2]: assets/creativecore/textures/gui/SliderRail.png
+dependency_records[0].evidence[0]: resource namespace
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].categories[1]: Reflection
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler.class
+dependency_records[1].sources[1]: com/creativemd/creativecore/client/avatar/Avatar.class
+dependency_records[1].sources[2]: com/creativemd/creativecore/client/block/BlockRenderHelper.class
+dependency_records[1].sources[3]: com/creativemd/creativecore/client/block/IBlockAccessFake.class
+dependency_records[1].sources[4]: com/creativemd/creativecore/client/rendering/EffectUtils.class
+dependency_records[1].sources[5]: com/creativemd/creativecore/client/rendering/RenderHelper2D.class
+dependency_records[1].sources[6]: com/creativemd/creativecore/client/rendering/RenderHelper3D$1.class
+dependency_records[1].sources[7]: com/creativemd/creativecore/client/rendering/RenderHelper3D.class
+dependency_records[1].sources[8]: com/creativemd/creativecore/common/container/ContainerSub.class
+dependency_records[1].sources[9]: com/creativemd/creativecore/common/container/SubContainer.class
+dependency_records[1].sources[10]: com/creativemd/creativecore/common/container/slot/ContainerControl.class
+dependency_records[1].sources[11]: com/creativemd/creativecore/common/container/slot/SlotControl.class
+dependency_records[1].sources[12]: com/creativemd/creativecore/common/entity/EntitySit.class
+dependency_records[1].sources[13]: com/creativemd/creativecore/common/event/TickHandler.class
+dependency_records[1].sources[14]: com/creativemd/creativecore/common/gui/CustomGuiHandler.class
+dependency_records[1].sources[15]: com/creativemd/creativecore/common/gui/GuiHandler.class
+dependency_records[1].sources[16]: com/creativemd/creativecore/common/gui/IGuiCreator.class
+dependency_records[1].sources[17]: com/creativemd/creativecore/common/gui/SubGui.class
+dependency_records[1].sources[18]: com/creativemd/creativecore/common/gui/controls/GuiControl.class
+dependency_records[1].sources[19]: com/creativemd/creativecore/common/multiblock/connections/TwoBlockConnection.class
+dependency_records[1].sources[20]: com/creativemd/creativecore/common/packet/ContainerControlUpdatePacket.class
+dependency_records[1].sources[21]: com/creativemd/creativecore/common/packet/CreativeCorePacket.class
+dependency_records[1].sources[22]: com/creativemd/creativecore/common/packet/CreativeMessageHandler.class
+dependency_records[1].sources[23]: com/creativemd/creativecore/common/packet/GuiLayerPacket.class
+dependency_records[1].sources[24]: com/creativemd/creativecore/common/packet/GuiUpdatePacket.class
+dependency_records[1].sources[25]: com/creativemd/creativecore/common/packet/OpenGuiPacket.class
+dependency_records[1].sources[26]: com/creativemd/creativecore/common/packet/PacketHandler.class
+dependency_records[1].sources[27]: com/creativemd/creativecore/common/packet/PacketReciever.class
+dependency_records[1].sources[28]: com/creativemd/creativecore/common/packet/TEContainerPacket.class
+dependency_records[1].sources[29]: com/creativemd/creativecore/common/recipe/RecipeLoader.class
+dependency_records[1].sources[30]: com/creativemd/creativecore/common/recipe/entry/RecipeEntry.class
+dependency_records[1].sources[31]: com/creativemd/creativecore/common/tileentity/TileEntityCreative.class
+dependency_records[1].sources[32]: com/creativemd/creativecore/common/utils/CubeObject$1.class
+dependency_records[1].sources[33]: com/creativemd/creativecore/common/utils/CubeObject.class
+dependency_records[1].sources[34]: com/creativemd/creativecore/common/utils/Rotation$1.class
+dependency_records[1].sources[35]: com/creativemd/creativecore/common/utils/Rotation.class
+dependency_records[1].sources[36]: com/creativemd/creativecore/common/utils/RotationUtils$1.class
+dependency_records[1].sources[37]: com/creativemd/creativecore/common/utils/RotationUtils$Axis.class
+dependency_records[1].sources[38]: com/creativemd/creativecore/common/utils/RotationUtils.class
+dependency_records[1].sources[39]: com/creativemd/creativecore/common/utils/stack/StackInfoOre.class
+dependency_records[1].sources[40]: com/creativemd/creativecore/core/CreativeCore.class
+dependency_records[1].sources[41]: com/n247s/api/eventapi/eventsystem/EventBus.class
+dependency_records[1].evidence[0]: cpw/mods/fml/
+dependency_records[1].evidence[1]: net/minecraftforge/
+dependency_records[1].evidence[2]: net/minecraftforge/, cpw/mods/fml/
 ```
 
 
@@ -129,8 +186,8 @@ class_files: 144
 packages: 29
 score: 100
 difficulty: Hard
-detections[0]: Old Rendering
-detections[1]: Old Registry
+detections[0]: Old Registry
+detections[1]: Old Rendering
 detections[2]: Old Forge API
 detections[3]: Old Network
 content.Blocks: 0
@@ -181,8 +238,8 @@ client_hits: 301
 server_hits: 54
 client_percent: 84.8
 server_percent: 15.2
-reasons[0]: Heavy client code
-reasons[1]: Heavy networking
+reasons[0]: Heavy networking
+reasons[1]: Heavy client code
 lang_entries: 0
 models: 0
 blockstates: 0
@@ -229,12 +286,12 @@ smelting: 0
 special: 0
 json_files: 0
 class_files_scanned: 144
-recipe_classes[0]: com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler.class
+recipe_classes[0]: com/creativemd/creativecore/common/recipe/entry/BetterShapelessRecipe.class
 recipe_classes[1]: com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler$CachedInfoShapedRecipe.class
 recipe_classes[2]: com/creativemd/creativecore/common/recipe/CreativeShapelessRecipe.class
-recipe_classes[3]: com/creativemd/creativecore/common/recipe/entry/BetterShapelessRecipe.class
-recipe_classes[4]: com/creativemd/creativecore/common/recipe/RecipeLoader.class
-recipe_classes[5]: com/creativemd/creativecore/common/recipe/BetterShapedRecipe.class
+recipe_classes[3]: com/creativemd/creativecore/common/recipe/RecipeLoader.class
+recipe_classes[4]: com/creativemd/creativecore/common/recipe/BetterShapedRecipe.class
+recipe_classes[5]: com/creativemd/creativecore/api/nei/NEIRecipeInfoHandler.class
 No data
 No data
 recipe_paths: []

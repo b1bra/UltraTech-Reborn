@@ -11,7 +11,9 @@ version: Unknown
 author: Unknown
 size_mb: 0.01
 forge: Unknown
-dependencies: []
+dependencies[0]: CraftTweaker
+dependencies[1]: Forge
+dependencies[2]: LaunchWrapper
 files: 17
 class_files: 8
 packages: 3
@@ -88,6 +90,25 @@ No data
 recipe_data.recipe_paths: []
 No data
 No data
+dependency_records[0].name: CraftTweaker
+dependency_records[0].categories[0]: Hidden
+dependency_records[0].confidence: 78
+dependency_records[0].sources[0]: com/gamerforea/ic2twekaer/IC2Tweaker.class
+dependency_records[0].sources[1]: com/gamerforea/ic2twekaer/minetweaker/Replicator$AddAction.class
+dependency_records[0].sources[2]: com/gamerforea/ic2twekaer/minetweaker/Replicator.class
+dependency_records[0].evidence[0]: MineTweakerAPI, minetweaker
+dependency_records[0].evidence[1]: minetweaker
+dependency_records[1].name: Forge
+dependency_records[1].categories[0]: Hidden
+dependency_records[1].confidence: 78
+dependency_records[1].sources[0]: com/gamerforea/ic2twekaer/IC2Tweaker.class
+dependency_records[1].evidence[0]: net/minecraftforge/, cpw/mods/fml/
+dependency_records[2].name: LaunchWrapper
+dependency_records[2].categories[0]: Runtime
+dependency_records[2].confidence: 90
+dependency_records[2].sources[0]: com/gamerforea/ic2twekaer/IC2Tweaker.class
+dependency_records[2].sources[1]: com/gamerforea/ic2twekaer/minetweaker/Replicator.class
+dependency_records[2].evidence[0]: tweaker marker
 ```
 
 
