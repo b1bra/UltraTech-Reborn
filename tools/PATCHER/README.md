@@ -1,29 +1,26 @@
 # PATCHER
 
-PATCHER is a modular PySide6 application for analysing Minecraft JAR mods, diagnosing launch incompatibilities, and applying safe, extensible repairs without removing gameplay content.
+PATCHER is a Python 3.12+ modular PySide6 platform for analysing, planning safe repairs, and verifying Minecraft mods. The application is organized around a Core API: `ServiceRegistry`, `EventBus`, `MessageBus`, background `TaskScheduler`, plugin metadata, typed domain models, and shared managers for logging, configuration, resources, themes, and animations.
 
-Run with Python 3.12+:
+Run:
 
 ```bash
 pip install -r tools/PATCHER/requirements.txt
 PYTHONPATH=tools/PATCHER python -m patcher.app
 ```
 
-Alternatively, run the package from inside `tools/PATCHER`:
+## Architecture
 
-```bash
-cd tools/PATCHER
-python -m patcher.app
-```
+The `patcher/core` package is the only integration layer shared by subsystems. Analyzers, patchers, AI providers, decompilers, sandbox runners, knowledge bases, diagnostics, and UI services are expected to register as plugins and communicate through Core API services/events instead of direct cross-subsystem imports.
 
-You can also launch the application file directly; it bootstraps the package path and prints startup errors instead of closing the console immediately:
+Implemented foundations include:
 
-```bash
-python tools/PATCHER/patcher/app.py
-```
+- typed dataclass models for projects, JARs, classes, methods, fields, dependencies, diagnostics, and patch plans;
+- plugin lifecycle contracts (`initialize`, `shutdown`, `metadata`, `dependencies`, `execute`, `health`);
+- service registry, event bus, message bus, task scheduler, logger, config manager, resource manager, theme manager, and animation manager;
+- asynchronous JAR analysis that keeps the UI responsive;
+- first-launch launcher selection persisted via `ConfigManager`;
+- frameless dark PySide6 main window, custom title bar, drag-and-drop JAR area, mod cards, AI journal placeholder, and asynchronous settings window;
+- scanner and patch-engine foundations that never modify the source JAR and create safe `*-patched.jar` copies.
 
-On minimal Linux installations, install the Qt runtime libraries required by PySide6 (for example `libgl1` on Debian/Ubuntu) before launching the GUI.
-
-## Static compatibility analysis
-
-PATCHER performs analysis before Minecraft starts. After a JAR is opened, independent analyzers registered in `AnalyzerRegistry` scan class constants, build a dependency map, report likely missing classes, and match references against the expandable `patcher/compatibility_database/*.json` compatibility rules. Crash reports can still be used as extra context, but they are no longer the primary diagnostic source.
+The scaffold is intentionally plugin-oriented so new analyzers, patchers, AI providers, decompilers, Minecraft versions, launcher adapters, compatibility databases, and exporters can be added without changing existing callers.
