@@ -4,21 +4,20 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True, slots=True)
 class Colors:
-    background: str = "#1e1f22"
-    surface: str = "#25262b"
-    surface_hover: str = "#30323a"
-    border: str = "#3b3d46"
-    text: str = "#e6e8ef"
-    muted: str = "#9aa3b2"
-    accent: str = "#7aa2f7"
-    danger_hover: str = "#8a5a5f"
-    notification: str = "#516274"
+    background: str = "#1e1e1e"
+    surface: str = "#2b2b2b"
+    surface_hover: str = "#3a3a3a"
+    border: str = "#3a3a3a"
+    text: str = "#f0f0f0"
+    muted: str = "#b8b8b8"
+    progress_loaded: str = "#2f8f46"
+    progress_remaining: str = "#8f3434"
 
 @dataclass(frozen=True, slots=True)
 class Sizes:
-    radius: int = 14
-    padding: int = 18
-    gap: int = 14
+    radius: int = 12
+    padding: int = 14
+    gap: int = 12
     window_width: int = 1280
     window_height: int = 780
     title_height: int = 42
@@ -32,6 +31,8 @@ class Strings:
     add_launcher: str = "Добавить лаунчер"
     choose_launcher_required: str = "Необходимо выбрать лаунчер"
     continue_without_launcher: str = "Продолжить без лаунчера"
+    ai_chat: str = "Чат с ИИ"
+    save_mod: str = "Сохранить мод"
 
 COLORS = Colors()
 SIZES = Sizes()
