@@ -9,6 +9,8 @@ from patcher.core.scheduler.tasks import TaskScheduler
 from patcher.core.services.environment import RuntimeInfo
 from patcher.patchers.engine import PatchExecutor, PatchPlanner
 from patcher.scanner.engine import ScannerEngine
+from patcher.compatibility.engine import CompatibilityEngine
+from patcher.verification.engine import VerificationEngine
 from patcher.ui.styles.tokens import SIZES, STRINGS
 from patcher.ui.widgets.mod_card import ModCard
 from patcher.ui.windows.ai_chat import AIChatWindow, ModelSelectorDialog
@@ -54,10 +56,16 @@ class MainWindow(QMainWindow):
         self.java = java
         self.minecraft = minecraft
         self.scanner = ScannerEngine()
+        self.compatibility = CompatibilityEngine()
         self.planner = PatchPlanner()
         self.executor = PatchExecutor()
         self.latest_source: Path | None = None
         self.latest_card: ModCard | None = None
+        self.latest_jar = None
+        self.latest_plan = None
+        self.latest_patched: Path | None = None
+        self.ai_manager = AIManager()
+        self.verifier = VerificationEngine(java, minecraft)
         self._drag_pos = None
         self._ai_expanded = False
         self.ai_entries: list[str] = []
@@ -103,8 +111,14 @@ class MainWindow(QMainWindow):
         scroll.setWidgetResizable(True)
         scroll.setWidget(self.mod_list)
         right.addWidget(scroll)
+        patch_button = QPushButton("Patch Mod")
+        patch_button.clicked.connect(self._patch_latest_mod)
+        verify_button = QPushButton("Verify Patch")
+        verify_button.clicked.connect(self._verify_latest_patch)
         save = QPushButton(STRINGS.save_mod)
         save.clicked.connect(self._save_latest_mod)
+        right.addWidget(patch_button, alignment=Qt.AlignmentFlag.AlignRight)
+        right.addWidget(verify_button, alignment=Qt.AlignmentFlag.AlignRight)
         right.addWidget(save, alignment=Qt.AlignmentFlag.AlignRight)
         body.addWidget(right_root, 35)
         outer.addLayout(body)
@@ -146,8 +160,10 @@ class MainWindow(QMainWindow):
                 card.set_progress(current, "Analyzing…")
                 QTimer.singleShot(140, poll)
                 return
-            jar = future.result()
+            jar = self.compatibility.analyze(future.result())
             plan = self.planner.plan(jar)
+            self.latest_jar = jar
+            self.latest_plan = plan
             card.set_result(jar, plan.total_problems, plan.auto_fixable)
             self._log_ai(f"Scanner: {path.name} analyzed; classes={jar.metadata.get('class_count', 0)}, loader={jar.loader.value}")
             for diagnostic in jar.diagnostics:
@@ -161,14 +177,52 @@ class MainWindow(QMainWindow):
         destination, _ = QFileDialog.getSaveFileName(self, "Save patched JAR", str(self.latest_source.with_name(self.latest_source.stem + "-patched.jar")), "Minecraft mods (*.jar)")
         if not destination:
             return
-        patched = self.executor.create_patched_copy(self.latest_source, Path(destination))
+        source = self.latest_patched or self.latest_source
+        patched = self.executor.create_patched_copy(source, Path(destination))
         self._log_ai(f"PatchExecutor: saved patched copy to {patched}")
 
+    def _load_ai_models(self):
+        return self.ai_manager.load_keys(Path(self.config.config.api_file)) if self.config.config.api_file else []
+
+    def _patch_latest_mod(self) -> None:
+        if self.latest_source is None or self.latest_jar is None or self.latest_plan is None:
+            self._log_ai("PatchPipeline: load and analyze a mod before patching")
+            return
+        models = self._load_ai_models()
+        if len(models) < 2:
+            self._log_ai("PatchPipeline: api.txt should contain two AI lines; using available/local consensus fallback")
+        responses = self.ai_manager.analyze_with_all(models, self.latest_jar, self.latest_plan, self.executor.history.entries)
+        for response in responses:
+            self._log_ai(f"{response.model_name}: {response.content}")
+        decision = self.ai_manager.agree(responses)
+        self._log_ai(f"AI consensus: {decision.content}")
+        destination = self.latest_source.with_name(self.latest_source.stem + "-patched.jar")
+        applied = self.executor.apply_ai_patch(self.latest_source, destination, decision, self.latest_jar)
+        self.latest_patched = applied.output
+        self._log_ai(f"PatchExecutor: applied {applied.patch_type} -> {applied.output}")
+
+    def _verify_latest_patch(self) -> None:
+        if self.latest_patched is None:
+            self._log_ai("Verification: no patched mod yet; run Patch Mod first")
+            return
+        future = self.scheduler.submit(self.verifier.verify, self.latest_patched, 30)
+        self._log_ai("Verification: sandbox creation and Minecraft launch queued")
+        def poll() -> None:
+            if not future.done():
+                QTimer.singleShot(250, poll)
+                return
+            report = future.result()
+            self._log_ai(f"Verification: success={report.success}; sandbox={report.sandbox}; error={report.error or 'none'}")
+            for line in report.logs[-20:]:
+                self._log_ai(f"VerificationLog: {line}")
+        poll()
+
     def _open_model_selector_for_chat(self) -> None:
-        models = AIManager().load_keys(Path(self.config.config.api_file)) if self.config.config.api_file else []
+        models = self._load_ai_models()
         selector = ModelSelectorDialog(models, allow_chat=True)
         if selector.exec() == 1 and selector.selected:
-            chat = AIChatWindow(selector.selected, self._log_ai)
+            context = self.ai_manager.build_context(self.latest_jar, self.latest_plan, self.executor.history.entries)
+            chat = AIChatWindow(self.ai_manager, selector.selected, context, self._log_ai)
             chat.exec()
 
     def _log_ai(self, message: str) -> None:

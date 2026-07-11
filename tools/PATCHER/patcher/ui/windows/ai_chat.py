@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QDialog, QFrame, QLabel, QPushButton, QScrollArea, QTextEdit, QVBoxLayout, QWidget, QHBoxLayout
-from patcher.ai.manager import ApiKey
+
+from patcher.ai.manager import AIContext, AIManager, AIRequest, ApiKey
 
 @dataclass(slots=True)
 class ChatMessage:
@@ -50,11 +50,13 @@ class ModelSelectorDialog(QDialog):
         self.accept()
 
 class AIChatWindow(QDialog):
-    """Local chat window that records user prompts and placeholder provider thoughts in the AI journal."""
+    """Chat window that sends prompts to AIManager immediately and writes responses to the journal."""
 
-    def __init__(self, model: ApiKey, on_log: callable) -> None:
+    def __init__(self, manager: AIManager, model: ApiKey, context: AIContext, on_log: callable) -> None:
         super().__init__()
+        self.manager = manager
         self.model = model
+        self.context = context
         self.on_log = on_log
         self.setWindowTitle(f"AI Chat — {model.name}")
         self.resize(720, 560)
@@ -62,7 +64,7 @@ class AIChatWindow(QDialog):
         self.history = QTextEdit(); self.history.setReadOnly(True); root.addWidget(self.history)
         row = QHBoxLayout(); self.input = QTextEdit(); self.input.setFixedHeight(86); send = QPushButton("Отправить"); send.clicked.connect(self._send)
         row.addWidget(self.input); row.addWidget(send); root.addLayout(row)
-        self._append("system", f"Модель {model.name} готова. Проверка соединения будет выполнена при первом реальном использовании провайдера.")
+        self._append("system", f"Модель {model.name} готова. Запросы обрабатываются AI Manager без бесконечного ожидания.")
 
     def _append(self, role: str, text: str) -> None:
         self.history.append(f"[{role}] {text}")
@@ -74,4 +76,5 @@ class AIChatWindow(QDialog):
             return
         self.input.clear()
         self._append("user", prompt)
-        self._append("thought", "Запрос поставлен в очередь AI Manager; контекст Scanner/Patch History будет приложен перед отправкой.")
+        response = self.manager.submit(AIRequest(self.model, prompt, self.context))
+        self._append("assistant", response.content)
