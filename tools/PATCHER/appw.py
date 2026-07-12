@@ -1,5 +1,9 @@
-"""Windowed entrypoint for launchers that still invoke .py files."""
-from tools.PATCHER.ui.windows.main_window import main
-
+"""Windowed Python entrypoint for PATCHER."""
+from pathlib import Path
+import sys
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+from tools.PATCHER.launcher_app import launch
 if __name__ == "__main__":
-    main()
+    raise SystemExit(launch())
