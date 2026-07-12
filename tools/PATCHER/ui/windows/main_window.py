@@ -144,6 +144,8 @@ class SettingsDialog(QDialog):
         self.registry = registry
         self.config = registry.get("ConfigManager")
         self.detector = registry.get("EnvironmentDetector")
+        self.scheduler = registry.get("TaskScheduler")
+        self.cards_by_name: dict[str, Card] = {}
         self.resize(900, 650)
         make_standard_window(self)
         box = QVBoxLayout(self)
@@ -153,52 +155,84 @@ class SettingsDialog(QDialog):
         box.addWidget(title)
         self.cards_layout = QVBoxLayout()
         box.addLayout(self.cards_layout, 1)
-        self.populate_cards()
+        self.create_placeholder_cards()
         footer = label("Заполняется асинхронно через Task Scheduler", muted=True, center=True)
         box.addWidget(footer)
+        QTimer.singleShot(0, self.populate_async)
 
     def launcher_title(self) -> tuple[str, str]:
         if self.config.data.launchers:
-            exe = Path(self.config.data.launchers[-1])
-            return exe.stem, infer_launcher_root(str(exe))
+            path = Path(self.config.data.launchers[-1])
+            title = path.stem if path.suffix else path.name
+            return title, infer_launcher_root(str(path)) or str(path if path.is_dir() else path.parent)
         return "Launcher", ""
 
-    def populate_cards(self) -> None:
-        java = self.detector.detect_java()
-        launcher_name, launcher_path = self.launcher_title()
-        rows = [
-            ("Java Runtime", java.path if java.status.startswith("available") else ""),
-            (launcher_name, launcher_path),
-            ("Recaf", self.config.data.tools.get("Recaf", "")),
-            ("CFR", self.config.data.tools.get("CFR", "")),
-            ("FernFlower", self.config.data.tools.get("FernFlower", "")),
-            ("Vineflower", self.config.data.tools.get("Vineflower", "")),
-            ("ASMifier", self.config.data.tools.get("ASMifier", "")),
-            ("JD-GUI", self.config.data.tools.get("JD-GUI", "")),
-            ("Bytecode Viewer", self.config.data.tools.get("Bytecode Viewer", "")),
-            ("Decompiler", self.config.data.tools.get("Decompiler", "")),
-            ("Compiler", self.config.data.tools.get("Compiler", "")),
-            ("API Configuration", self.config.data.api_file),
-        ]
-        for title, current in rows:
-            card = Card(title, current)
-            card.doubleClicked.connect(lambda checked=False, name=title: self.choose_path(name))
+    def create_placeholder_cards(self) -> None:
+        names = ["Java Runtime", "Launcher", "Recaf", "CFR", "FernFlower", "Vineflower", "ASMifier", "JD-GUI", "Bytecode Viewer", "Decompiler", "Compiler", "API Configuration"]
+        for name in names:
+            card = Card(name, "")
+            card.doubleClicked.connect(lambda checked=False, value=name: self.choose_path(value))
+            self.cards_by_name[name] = card
             self.cards_layout.addWidget(card)
         self.cards_layout.addStretch()
 
+    def populate_async(self) -> None:
+        task = self.scheduler.submit("settings_detect", self.collect_settings_rows)
+        timer = QTimer(self)
+        timer.setInterval(80)
+
+        def apply_when_ready() -> None:
+            if not task.future.done():
+                return
+            timer.stop()
+            rows = task.future.result()
+            for name, title, path in rows:
+                card = self.cards_by_name.get(name)
+                if card:
+                    card.set_text(title, path)
+
+        timer.timeout.connect(apply_when_ready)
+        timer.start()
+
+    def collect_settings_rows(self) -> list[tuple[str, str, str]]:
+        java = self.detector.detect_java()
+        launcher_name, launcher_path = self.launcher_title()
+        return [
+            ("Java Runtime", "Java Runtime", java.path if java.status.startswith("available") else ""),
+            ("Launcher", launcher_name, launcher_path),
+            ("Recaf", "Recaf", self.config.data.tools.get("Recaf", "")),
+            ("CFR", "CFR", self.config.data.tools.get("CFR", "")),
+            ("FernFlower", "FernFlower", self.config.data.tools.get("FernFlower", "")),
+            ("Vineflower", "Vineflower", self.config.data.tools.get("Vineflower", "")),
+            ("ASMifier", "ASMifier", self.config.data.tools.get("ASMifier", "")),
+            ("JD-GUI", "JD-GUI", self.config.data.tools.get("JD-GUI", "")),
+            ("Bytecode Viewer", "Bytecode Viewer", self.config.data.tools.get("Bytecode Viewer", "")),
+            ("Decompiler", "Decompiler", self.config.data.tools.get("Decompiler", "")),
+            ("Compiler", "Compiler", self.config.data.tools.get("Compiler", "")),
+            ("API Configuration", "API Configuration", self.config.data.api_file),
+        ]
+
     def choose_path(self, name: str) -> None:
+        if name == "Launcher":
+            folder = QFileDialog.getExistingDirectory(self, "Launcher", str(Path.home()))
+            if folder:
+                self.config.add_launcher(folder)
+                title = Path(folder).name or "Launcher"
+                self.cards_by_name[name].set_text(title, folder)
+            return
         if name == "API Configuration":
             path, _ = QFileDialog.getOpenFileName(self, "api.txt", str(Path.home()), "API file (api.txt);;Text files (*.txt);;All files (*)")
             if path:
                 self.config.set("api_file", path)
+                self.registry.get("AIManager").configure_api_file(path)
+                self.cards_by_name[name].set_text("API Configuration", path)
             return
         path, _ = QFileDialog.getOpenFileName(self, name, str(Path.home()), "Executable/JAR (*.exe *.jar);;All files (*)")
-        if not path:
-            folder = QFileDialog.getExistingDirectory(self, name, str(Path.home()))
-            path = folder
         if path:
             self.config.data.tools[name] = path
             self.config.save()
+            self.cards_by_name[name].set_text(name, path)
+
 
 
 class MainWindow(QMainWindow):
@@ -211,6 +245,7 @@ class MainWindow(QMainWindow):
         self.scheduler = self.registry.get("TaskScheduler")
         self.theme = self.registry.get("ThemeManager")
         self.jars = {}
+        self.mod_cards: dict[str, ModCard] = {}
         self.setMinimumSize(DIMENSIONS.min_width, DIMENSIONS.min_height)
         self.resize(DIMENSIONS.start_width, DIMENSIONS.start_height)
         self.setStyleSheet(self.theme.stylesheet() + SCROLLBAR_STYLE)
@@ -272,23 +307,29 @@ class MainWindow(QMainWindow):
         self.drop.hide()
         self.info.show()
         self.ai_log.text.append("Запуск анализа JAR…")
+        card = ModCard(path)
+        card.progress.setValue(3)
+        card.start_activity("scanner")
+        card.patchRequested.connect(self.patch_jar)
+        card.verifyRequested.connect(self.verify_jar)
+        card.filesRequested.connect(self.show_files)
+        self.mod_cards[path] = card
+        self.mod_list.insertWidget(0, card)
         task = self.scheduler.submit("scan", self.scanner.scan, Path(path))
         timer = QTimer(self)
         timer.setInterval(100)
 
         def finish_when_ready() -> None:
             if not task.future.done():
+                current = min(95, card.progress.value + 2)
+                card.progress.setValue(current)
                 return
             timer.stop()
             jar = task.future.result()
             self.jars[path] = jar
             self.info.setText(f"Файл: {path}\nSHA256: {jar.sha256}\nCRC: {jar.crc}\nКлассы: {jar.class_count}\nПлатформа: {jar.platform.value}\nПроблемы: {len(jar.problems)}")
-            card = ModCard(path)
-            card.progress.setValue(96)
-            card.patchRequested.connect(self.patch_jar)
-            card.verifyRequested.connect(self.verify_jar)
-            card.filesRequested.connect(self.show_files)
-            self.mod_list.insertWidget(0, card)
+            card.progress.setValue(100)
+            card.stop_activity()
             self.ai_log.text.append("Анализ завершён; план патчей готовится по запросу.")
 
         timer.timeout.connect(finish_when_ready)
@@ -296,13 +337,40 @@ class MainWindow(QMainWindow):
 
     def patch_jar(self, path: str) -> None:
         jar = self.jars[path]
-        plan = self.patcher.plan(jar)
+        card = self.mod_cards.get(path)
+        if card:
+            card.start_activity("ai")
+            card.progress.setValue(20)
         ai = self.registry.get("AIManager")
-        first = ai.enqueue_request(Provider.OPENAI, "patch plan", {"problems": len(plan.problems)})
-        second = ai.enqueue_request(Provider.DEEPSEEK, "patch plan", {"problems": len(plan.problems)})
-        jar = self.patcher.apply(jar, plan, True)
-        self.jars[path] = jar
-        self.ai_log.text.append(f"AI сравнение: {ai.get_response(first).text} / {ai.get_response(second).text}\nСоздан: {jar.patched_path}")
+        if self.config.data.api_file:
+            ai.configure_api_file(self.config.data.api_file)
+
+        def run_patch():
+            plan = self.patcher.plan(jar)
+            first = ai.enqueue_request(Provider.OPENAI, "patch plan", {"problems": len(plan.problems)})
+            second = ai.enqueue_request(Provider.DEEPSEEK, "patch plan", {"problems": len(plan.problems)})
+            patched = self.patcher.apply(jar, plan, True)
+            return patched, ai.get_response(first).text, ai.get_response(second).text
+
+        task = self.scheduler.submit("patch_ai", run_patch)
+        timer = QTimer(self)
+        timer.setInterval(100)
+
+        def finish_patch() -> None:
+            if not task.future.done():
+                if card:
+                    card.progress.setValue(min(95, card.progress.value + 3))
+                return
+            timer.stop()
+            patched, first_text, second_text = task.future.result()
+            self.jars[path] = patched
+            if card:
+                card.progress.setValue(100)
+                card.stop_activity()
+            self.ai_log.text.append(f"AI сравнение: {first_text} / {second_text}\nСоздан: {patched.patched_path}")
+
+        timer.timeout.connect(finish_patch)
+        timer.start()
 
     def verify_jar(self, path: str) -> None:
         jar = self.jars[path]
@@ -344,14 +412,31 @@ class MainWindow(QMainWindow):
         def add_message(text: str, incoming: bool = False) -> None:
             color = PALETTE.card if incoming else PALETTE.accent
             align = "left" if incoming else "right"
-            chat_area.append(f"<div align='{align}'><span style='background:{color};border-radius:8px;padding:8px;color:{PALETTE.text};'>{text}</span></div>")
+            chat_area.append(f"<div align='{align}' style='margin:8px;'><span style='background:{color};border-radius:8px;padding:12px 16px;color:{PALETTE.text};display:inline-block;'>{text}</span></div>")
 
         def send(text: str) -> None:
             add_message(text, False)
             provider = Provider.OPENAI if not models.currentItem() or models.currentItem().text().startswith("OpenAI") else Provider.DEEPSEEK
-            request = self.registry.get("AIManager").enqueue_request(provider, text, {"source": "chat"})
-            response = self.registry.get("AIManager").get_response(request)
-            add_message(response.text, True)
+            ai = self.registry.get("AIManager")
+            if self.config.data.api_file:
+                ai.configure_api_file(self.config.data.api_file)
+
+            def run_chat():
+                request = ai.enqueue_request(provider, text, {"source": "chat"})
+                return ai.get_response(request).text
+
+            task = self.scheduler.submit("ai_chat", run_chat)
+            timer = QTimer(dialog)
+            timer.setInterval(100)
+
+            def finish_chat() -> None:
+                if not task.future.done():
+                    return
+                timer.stop()
+                add_message(task.future.result(), True)
+
+            timer.timeout.connect(finish_chat)
+            timer.start()
 
         input_row.sendRequested.connect(send)
         models.itemClicked.connect(lambda item: add_message(f"Чат открыт для {item.text()}", True))
