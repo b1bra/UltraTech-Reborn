@@ -1,9 +1,9 @@
 """Reusable dark PySide6 widgets for cards, toast, drop area, chat and mod rows."""
 from __future__ import annotations
 from pathlib import Path
-from PySide6.QtCore import Qt, Signal, QPropertyAnimation, QEasingCurve
+from PySide6.QtCore import Qt, Signal, QPropertyAnimation, QEasingCurve, QTimer, Property
 from PySide6.QtGui import QDragEnterEvent, QDropEvent, QPainter, QColor, QPixmap, QIcon
-from PySide6.QtWidgets import QWidget, QFrame, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QTextEdit, QLineEdit, QSizePolicy
+from PySide6.QtWidgets import QWidget, QFrame, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QFileDialog, QTextEdit, QLineEdit, QGraphicsDropShadowEffect
 from tools.PATCHER.resources.design_tokens import PALETTE, DIMENSIONS, STRINGS
 
 PURPLE = "#A259FF"
@@ -131,7 +131,7 @@ class SegmentedProgress(QWidget):
     def __init__(self) -> None:
         super().__init__()
         self.value = 0
-        self.setFixedHeight(8)
+        self.setFixedHeight(10)
 
     def setValue(self, value: int) -> None:
         self.value = max(0, min(100, value))
@@ -139,11 +139,97 @@ class SegmentedProgress(QWidget):
 
     def paintEvent(self, event) -> None:
         painter = QPainter(self)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
         width = self.width()
+        height = self.height()
         loaded = int(width * self.value / 100)
-        painter.fillRect(0, 0, width, self.height(), QColor(PALETTE.border))
-        painter.fillRect(0, 0, max(0, loaded - DIMENSIONS.progress_gap), self.height(), QColor(PALETTE.success))
-        painter.fillRect(loaded + DIMENSIONS.progress_gap, 0, max(0, width - loaded - DIMENSIONS.progress_gap), self.height(), QColor(PALETTE.error))
+        radius = min(DIMENSIONS.radius, height // 2)
+        painter.setBrush(QColor(PALETTE.border))
+        painter.setPen(Qt.PenStyle.NoPen)
+        painter.drawRoundedRect(0, 0, width, height, radius, radius)
+        if loaded > 0:
+            painter.setBrush(QColor(PALETTE.success))
+            painter.drawRoundedRect(0, 0, loaded, height, radius, radius)
+
+
+class ActivityIndicator(QFrame):
+    def __init__(self) -> None:
+        super().__init__()
+        self._color = QColor(PALETTE.border)
+        self.setFixedSize(12, 6)
+        self.setStyleSheet(f"background:{PALETTE.border};border-radius:2px;")
+        self.glow = QGraphicsDropShadowEffect(self)
+        self.glow.setBlurRadius(0)
+        self.glow.setOffset(0, 0)
+        self.setGraphicsEffect(self.glow)
+
+    def getColor(self) -> QColor:
+        return self._color
+
+    def setColor(self, color: QColor) -> None:
+        self._color = color
+        self.setStyleSheet(f"background:{color.name()};border-radius:2px;")
+        self.glow.setColor(color)
+        self.glow.setBlurRadius(10 if color.name().lower() != PALETTE.border.lower() else 0)
+
+    color = Property(QColor, getColor, setColor)
+
+    def animate_to(self, color: str, duration: int = 300) -> None:
+        animation = QPropertyAnimation(self, b"color", self)
+        animation.setStartValue(self._color)
+        animation.setEndValue(QColor(color))
+        animation.setDuration(duration)
+        animation.setEasingCurve(QEasingCurve.Type.OutCubic)
+        animation.start()
+        self._animation = animation
+
+
+class IndicatorRow(QWidget):
+    COLORS = {"scanner": "#00BCD4", "ai": "#FF9800", "search": "#FFFFFF"}
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.indicators = [ActivityIndicator() for _ in range(3)]
+        self.kind = "scanner"
+        self.active = False
+        self.index = 0
+        self.timer = QTimer(self)
+        self.timer.setInterval(500)
+        self.timer.timeout.connect(self._tick)
+        layout = QHBoxLayout(self)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(5)
+        layout.addStretch()
+        for indicator in self.indicators:
+            layout.addWidget(indicator)
+        layout.addStretch()
+
+    def start(self, kind: str) -> None:
+        self.kind = kind if kind in self.COLORS else "scanner"
+        self.active = True
+        self.index = 0
+        self.reset()
+        self.timer.start()
+        self._tick()
+
+    def stop(self) -> None:
+        self.active = False
+        self.timer.stop()
+        self.reset()
+
+    def reset(self) -> None:
+        for indicator in self.indicators:
+            indicator.animate_to(PALETTE.border)
+
+    def _tick(self) -> None:
+        if not self.active:
+            return
+        if self.index < len(self.indicators):
+            self.indicators[self.index].animate_to(self.COLORS[self.kind])
+            self.index += 1
+            return
+        QTimer.singleShot(200, self.reset)
+        self.index = 0
 
 
 class ModCard(Card):
@@ -163,11 +249,19 @@ class ModCard(Card):
         row.addWidget(self.verify)
         row.addWidget(self.menu)
         self.layout().addLayout(row)
+        self.indicators = IndicatorRow()
+        self.layout().addWidget(self.indicators)
         self.progress = SegmentedProgress()
         self.layout().addWidget(self.progress)
         self.menu.clicked.connect(lambda: self.filesRequested.emit(self.path))
         self.patch.clicked.connect(lambda: self.patchRequested.emit(self.path))
         self.verify.clicked.connect(lambda: self.verifyRequested.emit(self.path))
+
+    def start_activity(self, kind: str) -> None:
+        self.indicators.start(kind)
+
+    def stop_activity(self) -> None:
+        self.indicators.stop()
 
 
 class AILogPanel(QFrame):

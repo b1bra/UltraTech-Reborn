@@ -1,12 +1,12 @@
 # Auto detect text files and normalize line endings
 * text=auto
-
 # Java
 *.java text
 *.properties text
 *.json text
 *.xml text
 *.gradle text
-
 # Markdown
 *.md text
+*.dll filter=lfs diff=lfs merge=lfs -text
+tools/lolimods/.loliland/game-resources/runtimes/java-25/lib filter=lfs diff=lfs merge=lfs -text

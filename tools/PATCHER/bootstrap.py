@@ -19,7 +19,33 @@ from tools.PATCHER.diagnostics.health import HealthMonitor
 from tools.PATCHER.launcher.detection import EnvironmentDetector
 from tools.PATCHER.utils.cache import JsonCache
 
-def build_registry(base:Path|None=None)->ServiceRegistry:
-    base=base or Path.home()/'.patcher'; reg=ServiceRegistry()
-    for name,svc in {'Logger':PatcherLogger(base/'logs'),'ConfigManager':ConfigManager(base/'config.json'),'EventBus':EventBus(),'MessageBus':MessageBus(),'TaskScheduler':TaskScheduler(),'ThemeManager':ThemeManager(),'AnimationManager':AnimationManager(),'ResourceManager':ResourceManager(base),'ScannerEngine':default_scanner(),'PatchEngine':PatchEngine(),'AIManager':AIManager(),'SandboxManager':SandboxManager(),'DecompilerEngine':DecompilerEngine(),'KnowledgeBase':CompatibilityDatabase(base/'compatibility'),'PluginManager':PluginManager(),'VerificationEngine':VerificationEngine(),'Diagnostics':HealthMonitor(base),'EnvironmentDetector':EnvironmentDetector(),'Cache':JsonCache(base/'cache/cache.json')}.items(): reg.register(name,svc)
-    return reg
+
+def build_registry(base: Path | None = None) -> ServiceRegistry:
+    base = base or Path.home() / ".patcher"
+    registry = ServiceRegistry()
+    config = ConfigManager(base / "config.json")
+    ai_manager = AIManager(Path(config.data.api_file) if config.data.api_file else None)
+    services = {
+        "Logger": PatcherLogger(base / "logs"),
+        "ConfigManager": config,
+        "EventBus": EventBus(),
+        "MessageBus": MessageBus(),
+        "TaskScheduler": TaskScheduler(),
+        "ThemeManager": ThemeManager(),
+        "AnimationManager": AnimationManager(),
+        "ResourceManager": ResourceManager(base),
+        "ScannerEngine": default_scanner(),
+        "PatchEngine": PatchEngine(),
+        "AIManager": ai_manager,
+        "SandboxManager": SandboxManager(),
+        "DecompilerEngine": DecompilerEngine(),
+        "KnowledgeBase": CompatibilityDatabase(base / "compatibility"),
+        "PluginManager": PluginManager(),
+        "VerificationEngine": VerificationEngine(),
+        "Diagnostics": HealthMonitor(base),
+        "EnvironmentDetector": EnvironmentDetector(),
+        "Cache": JsonCache(base / "cache/cache.json"),
+    }
+    for name, service in services.items():
+        registry.register(name, service)
+    return registry
