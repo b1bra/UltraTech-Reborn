@@ -1,7 +1,7 @@
 """Frameless main window, launcher first-run dialog, settings, model chat and file-change dialogs."""
 from __future__ import annotations
 from pathlib import Path
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QTimer
 from PySide6.QtWidgets import QApplication, QDialog, QFileDialog, QFrame, QLabel, QMainWindow, QPushButton, QScrollArea, QVBoxLayout, QHBoxLayout, QWidget, QTextEdit, QListWidget
 from tools.PATCHER.bootstrap import build_registry
 from tools.PATCHER.core.models.entities import Provider
@@ -45,16 +45,31 @@ class MainWindow(QMainWindow):
         self.drop=JarDropArea(); self.drop.jarSelected.connect(self.load_jar); left.addWidget(self.drop,1); self.info=QTextEdit(); self.info.setReadOnly(True); self.info.hide(); left.addWidget(self.info,1); self.ai_log=AILogPanel(); left.addWidget(self.ai_log)
         bottom=QHBoxLayout(); self.model_btn=QPushButton('AI Models'); self.settings_btn=QPushButton('Settings'); bottom.addWidget(self.model_btn); bottom.addWidget(self.settings_btn); left.addLayout(bottom)
         self.scroll=QScrollArea(); self.scroll.setWidgetResizable(True); self.mod_container=QWidget(); self.mod_list=QVBoxLayout(self.mod_container); self.mod_list.addStretch(); self.scroll.setWidget(self.mod_container); right.addWidget(self.scroll); self.save_btn=QPushButton(STRINGS.save_patched); right.addWidget(self.save_btn)
-        self.model_btn.clicked.connect(self.open_models); self.settings_btn.clicked.connect(lambda:SettingsDialog(self.registry,self).exec())
+        self.model_btn.clicked.connect(self.open_models); self.settings_btn.clicked.connect(lambda:SettingsDialog(self.registry,self).exec()); self.save_btn.clicked.connect(self.save_patched)
         if not self.config.data.launchers: LauncherDialog(self.config,self).exec()
     def load_jar(self,path):
-        self.drop.hide(); self.info.show(); self.ai_log.text.append('Запуск анализа JAR...'); task=self.scheduler.submit('scan',self.scanner.scan,Path(path)); jar=task.future.result(); self.jars[path]=jar; self.info.setText(f"Файл: {path}\nSHA256: {jar.sha256}\nКлассы: {jar.class_count}\nПлатформа: {jar.platform.value}\nПроблемы: {len(jar.problems)}")
-        card=ModCard(path); card.progress.setValue(96); card.patchRequested.connect(self.patch_jar); card.verifyRequested.connect(self.verify_jar); card.filesRequested.connect(self.show_files); self.mod_list.insertWidget(0,card); self.ai_log.text.append('Анализ завершён; план патчей готовится по запросу.')
+        self.drop.hide(); self.info.show(); self.ai_log.text.append('Запуск анализа JAR…')
+        task=self.scheduler.submit('scan',self.scanner.scan,Path(path))
+        timer=QTimer(self); timer.setInterval(100)
+        def finish_when_ready():
+            if not task.future.done():
+                return
+            timer.stop(); jar=task.future.result(); self.jars[path]=jar
+            self.info.setText(f"Файл: {path}\nSHA256: {jar.sha256}\nCRC: {jar.crc}\nКлассы: {jar.class_count}\nПлатформа: {jar.platform.value}\nПроблемы: {len(jar.problems)}")
+            card=ModCard(path); card.progress.setValue(96); card.patchRequested.connect(self.patch_jar); card.verifyRequested.connect(self.verify_jar); card.filesRequested.connect(self.show_files); self.mod_list.insertWidget(0,card)
+            self.ai_log.text.append('Анализ завершён; план патчей готовится по запросу.')
+        timer.timeout.connect(finish_when_ready); timer.start()
     def patch_jar(self,path):
         jar=self.jars[path]; plan=self.patcher.plan(jar); ai=self.registry.get('AIManager'); a=ai.enqueue_request(Provider.OPENAI,'patch plan',{'problems':len(plan.problems)}); b=ai.enqueue_request(Provider.DEEPSEEK,'patch plan',{'problems':len(plan.problems)}); jar=self.patcher.apply(jar,plan,True); self.jars[path]=jar; self.ai_log.text.append(f'AI сравнение: {ai.get_response(a).text} / {ai.get_response(b).text}\nСоздан: {jar.patched_path}')
     def verify_jar(self,path):
-        jar=self.jars[path]; target=jar.patched_path or jar.path; report=self.registry.get('SandboxManager').verify(target); self.ai_log.text.append('\n'.join(report.logs))
+        jar=self.jars[path]; target=jar.patched_path or jar.path; report=self.registry.get('VerificationEngine').verify(target); self.ai_log.text.append('\n'.join(report.log_lines)); self.ai_log.text.append(f'Verification success: {report.success}')
     def show_files(self,path): ChangedFilesDialog(self.jars[path].changes,self).exec()
+    def save_patched(self):
+        patched=[jar.patched_path for jar in self.jars.values() if jar.patched_path]
+        if not patched: self.ai_log.text.append('Нет пропатченного JAR для сохранения'); return
+        target,_=QFileDialog.getSaveFileName(self,STRINGS.save_patched,str(patched[-1].name),'Minecraft Mod (*.jar)')
+        if target:
+            import shutil; shutil.copy2(patched[-1],target); self.ai_log.text.append(f'Сохранено: {target}')
     def open_models(self):
         d=QDialog(self); d.resize(700,500); box=QVBoxLayout(d); box.addWidget(QLabel('Выбор модели')); listw=QListWidget(); listw.addItems(['OpenAI:gpt-4.1','DeepSeek:deepseek-chat']); chat=QTextEdit(); box.addWidget(listw); box.addWidget(chat); listw.itemClicked.connect(lambda i: chat.append(f'Чат открыт для {i.text()}\nStreaming: готов к генерации.')); d.exec()
 

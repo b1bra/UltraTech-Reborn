@@ -1,3 +1,3 @@
-"""PATCHER package: modular Minecraft mod analysis, patching and verification platform."""
-__all__ = ["bootstrap"]
-__version__ = "0.1.0"
+"""Plugin infrastructure exports the runtime PluginManager."""
+from tools.PATCHER.core.plugins.plugin_manager import PluginManager, PluginState
+__all__ = ["PluginManager", "PluginState"]

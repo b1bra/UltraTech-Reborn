@@ -13,8 +13,13 @@ from tools.PATCHER.ai.manager import AIManager
 from tools.PATCHER.sandbox.manager import SandboxManager
 from tools.PATCHER.decompiler.engine import DecompilerEngine
 from tools.PATCHER.compatibility.database import CompatibilityDatabase
+from tools.PATCHER.core.plugins.plugin_manager import PluginManager
+from tools.PATCHER.verification.engine import VerificationEngine
+from tools.PATCHER.diagnostics.health import HealthMonitor
+from tools.PATCHER.launcher.detection import EnvironmentDetector
+from tools.PATCHER.utils.cache import JsonCache
 
 def build_registry(base:Path|None=None)->ServiceRegistry:
     base=base or Path.home()/'.patcher'; reg=ServiceRegistry()
-    for name,svc in {'Logger':PatcherLogger(base/'logs'),'ConfigManager':ConfigManager(base/'config.json'),'EventBus':EventBus(),'MessageBus':MessageBus(),'TaskScheduler':TaskScheduler(),'ThemeManager':ThemeManager(),'AnimationManager':AnimationManager(),'ResourceManager':ResourceManager(base),'ScannerEngine':default_scanner(),'PatchEngine':PatchEngine(),'AIManager':AIManager(),'SandboxManager':SandboxManager(),'DecompilerEngine':DecompilerEngine(),'KnowledgeBase':CompatibilityDatabase(base/'compatibility')}.items(): reg.register(name,svc)
+    for name,svc in {'Logger':PatcherLogger(base/'logs'),'ConfigManager':ConfigManager(base/'config.json'),'EventBus':EventBus(),'MessageBus':MessageBus(),'TaskScheduler':TaskScheduler(),'ThemeManager':ThemeManager(),'AnimationManager':AnimationManager(),'ResourceManager':ResourceManager(base),'ScannerEngine':default_scanner(),'PatchEngine':PatchEngine(),'AIManager':AIManager(),'SandboxManager':SandboxManager(),'DecompilerEngine':DecompilerEngine(),'KnowledgeBase':CompatibilityDatabase(base/'compatibility'),'PluginManager':PluginManager(),'VerificationEngine':VerificationEngine(),'Diagnostics':HealthMonitor(base),'EnvironmentDetector':EnvironmentDetector(),'Cache':JsonCache(base/'cache/cache.json')}.items(): reg.register(name,svc)
     return reg

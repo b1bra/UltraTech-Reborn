@@ -6,7 +6,7 @@ import zipfile
 @dataclass(frozen=True)
 class DecompileResult: class_name:str; source:str; adapter:str
 class DecompilerEngine:
-    adapters:tuple[str,...]=('CFR','Vineflower','FernFlower','Bytecode')
+    adapters:tuple[str, str, str, str]=('CFR','Vineflower','FernFlower','Bytecode')
     def decompile(self,jar:Path,adapter:str='Bytecode')->list[DecompileResult]:
         out=[]
         with zipfile.ZipFile(jar) as z:

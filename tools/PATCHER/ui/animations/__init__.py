@@ -1,3 +1,3 @@
-"""PATCHER package: modular Minecraft mod analysis, patching and verification platform."""
-__all__ = ["bootstrap"]
-__version__ = "0.1.0"
+"""Animations package exposes the QPropertyAnimation-backed manager."""
+from tools.PATCHER.core.resources.managers import AnimationManager
+__all__ = ["AnimationManager"]

@@ -1,3 +1,3 @@
-"""PATCHER package: modular Minecraft mod analysis, patching and verification platform."""
-__all__ = ["bootstrap"]
-__version__ = "0.1.0"
+"""Offline compatibility package exports generated adapter/stub utilities."""
+from tools.PATCHER.offline_compatibility.generator import StubGenerator, GeneratedClass
+__all__ = ["StubGenerator", "GeneratedClass"]

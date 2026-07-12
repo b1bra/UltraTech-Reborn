@@ -1,3 +1,3 @@
-"""PATCHER package: modular Minecraft mod analysis, patching and verification platform."""
-__all__ = ["bootstrap"]
-__version__ = "0.1.0"
+"""Utility package exports shared cache helpers."""
+from tools.PATCHER.utils.cache import JsonCache, CacheEntry
+__all__ = ["JsonCache", "CacheEntry"]

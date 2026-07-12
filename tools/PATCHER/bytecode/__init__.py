@@ -1,3 +1,3 @@
-"""PATCHER package: modular Minecraft mod analysis, patching and verification platform."""
-__all__ = ["bootstrap"]
-__version__ = "0.1.0"
+"""Bytecode package exports binary-safe JAR editing primitives."""
+from tools.PATCHER.bytecode.editor import BytecodeEditor, BytecodeEditResult
+__all__ = ["BytecodeEditor", "BytecodeEditResult"]

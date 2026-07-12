@@ -1,3 +1,3 @@
-"""PATCHER package: modular Minecraft mod analysis, patching and verification platform."""
-__all__ = ["bootstrap"]
-__version__ = "0.1.0"
+"""Diagnostics package exports health checks and reports."""
+from tools.PATCHER.diagnostics.health import HealthMonitor, HealthCheck
+__all__ = ["HealthMonitor", "HealthCheck"]

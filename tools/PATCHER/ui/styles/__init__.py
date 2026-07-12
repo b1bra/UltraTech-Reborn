@@ -1,3 +1,3 @@
-"""PATCHER package: modular Minecraft mod analysis, patching and verification platform."""
-__all__ = ["bootstrap"]
-__version__ = "0.1.0"
+"""Styles package exposes centralized theme constants via ThemeManager."""
+from tools.PATCHER.core.resources.managers import ThemeManager
+__all__ = ["ThemeManager"]
