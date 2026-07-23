@@ -1,0 +1,8 @@
+{
+  "version": 5,
+  "multiWorldIntegrationEnabled": false,
+  "hidingTechnicalItemsFromNEI": true,
+  "debugModeEnabled": false,
+  "texturePreloadingEnabled": true,
+  "easyBossModeEnabled": false
+}

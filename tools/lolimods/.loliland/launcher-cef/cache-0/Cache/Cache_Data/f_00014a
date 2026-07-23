@@ -1,0 +1,951 @@
+{
+  "main" : {
+    "discount" : 0,
+    "roles" : {
+      "god" : {
+        "level" : 1000.0,
+        "systemName" : "god",
+        "displayName" : "Создатель",
+        "colors" : {
+          "first" : "#FFB700",
+          "second" : "#FF4C00",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "chief_curator" : {
+        "level" : 204.0,
+        "systemName" : "chief_curator",
+        "displayName" : "Куратор проекта",
+        "colors" : {
+          "first" : "#FF533C",
+          "second" : "#C3002F",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "art_director" : {
+        "level" : 203.0,
+        "systemName" : "art_director",
+        "displayName" : "Арт-директор",
+        "colors" : {
+          "first" : "#FF77F1",
+          "second" : "#7A2DDB",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "chief_developer" : {
+        "level" : 203.0,
+        "systemName" : "chief_developer",
+        "displayName" : "Гл. Разработчик",
+        "colors" : {
+          "first" : "#74A7FF",
+          "second" : "#6225FF",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "artist" : {
+        "level" : 201.0,
+        "systemName" : "artist",
+        "displayName" : "Художник",
+        "colors" : {
+          "first" : "#FF844F",
+          "second" : "#C8421D",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "developer" : {
+        "level" : 201.0,
+        "systemName" : "developer",
+        "displayName" : "Разработчик",
+        "colors" : {
+          "first" : "#38DBF0",
+          "second" : "#6357FF",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "curator" : {
+        "level" : 110.0,
+        "systemName" : "curator",
+        "displayName" : "Куратор",
+        "colors" : {
+          "first" : "#CBFFF6",
+          "second" : "#8B63FF",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "chief_admin" : {
+        "level" : 109.0,
+        "systemName" : "chief_admin",
+        "displayName" : "Гл. Админ",
+        "colors" : {
+          "first" : "#76F7FF",
+          "second" : "#0084E0",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "senior_admin" : {
+        "level" : 108.0,
+        "systemName" : "senior_admin",
+        "displayName" : "Ст. Админ",
+        "colors" : {
+          "first" : "#DDFAFF",
+          "second" : "#2396CC",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "admin" : {
+        "level" : 107.0,
+        "systemName" : "admin",
+        "displayName" : "Админ",
+        "colors" : {
+          "first" : "#DFFFD8",
+          "second" : "#18ADC3",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "junior_admin" : {
+        "level" : 106.0,
+        "systemName" : "junior_admin",
+        "displayName" : "Мл. Админ",
+        "colors" : {
+          "first" : "#DFFFDD",
+          "second" : "#41DB7F",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "senior_moderator" : {
+        "level" : 105.0,
+        "systemName" : "senior_moderator",
+        "displayName" : "Ст. Модер",
+        "colors" : {
+          "first" : "#FFFCB7",
+          "second" : "#88D524",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "moderator" : {
+        "level" : 104.0,
+        "systemName" : "moderator",
+        "displayName" : "Модератор",
+        "colors" : {
+          "first" : "#FCFFB1",
+          "second" : "#9CE87A",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "junior_moderator" : {
+        "level" : 103.0,
+        "systemName" : "junior_moderator",
+        "displayName" : "Мл. Модер",
+        "colors" : {
+          "first" : "#DFFFD2",
+          "second" : "#69E5AC",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "senior_helper" : {
+        "level" : 102.0,
+        "systemName" : "senior_helper",
+        "displayName" : "Ст. Хелпер",
+        "colors" : {
+          "first" : "#D9EDDD",
+          "second" : "#6EDBC0",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "helper" : {
+        "level" : 101.0,
+        "systemName" : "helper",
+        "displayName" : "Хелпер",
+        "colors" : {
+          "first" : "#E5FFEB",
+          "second" : "#81AE91",
+          "text" : "#000000"
+        },
+        "hoist" : true,
+        "mentionable" : true
+      },
+      "legendary" : {
+        "level" : 60.0,
+        "systemName" : "legendary",
+        "displayName" : "Легенда",
+        "colors" : {
+          "first" : "#FFA944",
+          "second" : "#FF2299",
+          "third" : "#7538FF",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "ultra" : {
+        "level" : 50.0,
+        "systemName" : "ultra",
+        "displayName" : "Ультра",
+        "colors" : {
+          "first" : "#19CCDC",
+          "second" : "#0777DF",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "deluxe" : {
+        "level" : 40.0,
+        "systemName" : "deluxe",
+        "displayName" : "Делюкс",
+        "colors" : {
+          "first" : "#FF3AEB",
+          "second" : "#E8008A",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "premium" : {
+        "level" : 30.0,
+        "systemName" : "premium",
+        "displayName" : "Премиум",
+        "colors" : {
+          "first" : "#A286FF",
+          "second" : "#7E40E3",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "vip" : {
+        "level" : 20.0,
+        "systemName" : "vip",
+        "displayName" : "Вип",
+        "colors" : {
+          "first" : "#FAC126",
+          "second" : "#FF8E42",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : true
+      },
+      "default" : {
+        "level" : 10.0,
+        "systemName" : "default",
+        "displayName" : "Игрок",
+        "colors" : {
+          "first" : "#FFFFFF66",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : false
+      },
+      "all" : {
+        "level" : 0.0,
+        "systemName" : "all",
+        "displayName" : "Everyone",
+        "colors" : {
+          "first" : "#FFFFFF66",
+          "text" : "#FFFFFF"
+        },
+        "hoist" : false,
+        "mentionable" : false
+      }
+    },
+    "servers" : [ {
+      "id" : "01958f69-b3ee-7208-bfed-d10e9957979d",
+      "title" : "TechnoMagic RPG",
+      "link" : "techno-magic-rpg",
+      "colorScheme" : "blue",
+      "documentMeta" : {
+        "serverName" : "techno_magic_rpg",
+        "category" : "Техно-магический",
+        "tags" : [ "RECOMMENDED" ],
+        "size" : "BIG"
+      },
+      "additionalData" : {
+        "views" : {
+          "unique" : 3813,
+          "user" : 941,
+          "simple" : 7443
+        },
+        "isNew" : false,
+        "isPopular" : false,
+        "isViewed" : true,
+        "isViewedComments" : true,
+        "isLiked" : false,
+        "isCommented" : false,
+        "lastCommentId" : "00000000-0000-0000-0000-000000000000",
+        "lastCommentPage" : -1,
+        "likes" : 1,
+        "comments" : 0,
+        "verified" : true,
+        "updateTime" : 1742747501150
+      },
+      "customImages" : {
+        "icon" : "0195a011-dee3-718c-9ea1-d43be053763b",
+        "preview" : "01959b03-2842-74a6-b5ba-0424c8500c5d",
+        "header" : "0195a9aa-b27b-76cf-ba28-9b1a72670b30"
+      },
+      "pinTime" : 0,
+      "createTime" : 1741867826071,
+      "closed" : false,
+      "hidden" : false,
+      "author" : {
+        "id" : "01956743-fc62-7837-93e8-5c7fb6deabd4",
+        "login" : "intelrug",
+        "registerDate" : 1669236928756,
+        "roles" : {
+          "entry" : {
+            "role" : "default",
+            "endless" : false,
+            "count" : 1
+          },
+          "count" : 0,
+          "tooltip" : {
+            "serverStackedRoles" : { }
+          }
+        },
+        "avatarOrSkin" : {
+          "type" : "AVATAR",
+          "id" : "019615cf-f3f0-7bc5-81d9-771f387ad376",
+          "extension" : "png"
+        }
+      }
+    }, {
+      "id" : "01959a56-3d78-7663-be32-228629fdc2b4",
+      "title" : "TechnoMagic SKY",
+      "link" : "techno-magic-sky",
+      "colorScheme" : "blue",
+      "documentMeta" : {
+        "serverName" : "techno_magic_sky",
+        "category" : "SkyBlock",
+        "tags" : [ "RECOMMENDED" ],
+        "size" : "BIG"
+      },
+      "additionalData" : {
+        "views" : {
+          "unique" : 1962,
+          "user" : 561,
+          "simple" : 3798
+        },
+        "isNew" : false,
+        "isPopular" : false,
+        "isViewed" : true,
+        "isViewedComments" : true,
+        "isLiked" : false,
+        "isCommented" : false,
+        "lastCommentId" : "00000000-0000-0000-0000-000000000000",
+        "lastCommentPage" : -1,
+        "likes" : 0,
+        "comments" : 0,
+        "verified" : true,
+        "updateTime" : 1744443242612
+      },
+      "customImages" : {
+        "icon" : "01959a5d-22ae-70e2-998a-4d3c5b21098d",
+        "preview" : "0195a999-5971-7bb5-bcfb-2735ae3adbba",
+        "header" : "0195a9aa-f170-7cd6-962d-b59aa1ad47bc"
+      },
+      "pinTime" : 0,
+      "createTime" : 1742051552171,
+      "closed" : false,
+      "hidden" : false,
+      "author" : {
+        "id" : "01956735-460a-7adb-b71c-22d08675eee8",
+        "login" : "MrYarik666",
+        "registerDate" : 1573398859783,
+        "roles" : {
+          "entry" : {
+            "role" : "god",
+            "endless" : false,
+            "count" : 53
+          },
+          "count" : 53,
+          "tooltip" : {
+            "serverStackedRoles" : { }
+          }
+        },
+        "avatarOrSkin" : {
+          "type" : "AVATAR",
+          "id" : "016e55e1-5007-7c35-972f-c5432db95c30",
+          "extension" : "gif"
+        }
+      }
+    }, {
+      "id" : "01959020-78b4-7395-866e-7d7b2e14196f",
+      "title" : "HiTech",
+      "link" : "hitech",
+      "colorScheme" : "blue",
+      "documentMeta" : {
+        "serverName" : "hitech",
+        "category" : "Технический",
+        "tags" : [ "GAIN_POPULARITY" ],
+        "size" : "BIG"
+      },
+      "additionalData" : {
+        "views" : {
+          "unique" : 1489,
+          "user" : 442,
+          "simple" : 2889
+        },
+        "isNew" : false,
+        "isPopular" : false,
+        "isViewed" : true,
+        "isViewedComments" : true,
+        "isLiked" : false,
+        "isCommented" : false,
+        "lastCommentId" : "00000000-0000-0000-0000-000000000000",
+        "lastCommentPage" : -1,
+        "likes" : 0,
+        "comments" : 0,
+        "verified" : true,
+        "updateTime" : 1742752503890
+      },
+      "customImages" : {
+        "icon" : "0195a012-9470-763e-82c3-3f1d3b36e191",
+        "preview" : "0195a98e-6820-7628-8005-e2f4f16f9554",
+        "header" : "0195b4db-97e8-78a5-a325-0cad9725992d"
+      },
+      "pinTime" : 0,
+      "createTime" : 1741879855939,
+      "closed" : false,
+      "hidden" : false,
+      "author" : {
+        "id" : "01956743-fc62-7837-93e8-5c7fb6deabd4",
+        "login" : "intelrug",
+        "registerDate" : 1669236928756,
+        "roles" : {
+          "entry" : {
+            "role" : "default",
+            "endless" : false,
+            "count" : 1
+          },
+          "count" : 0,
+          "tooltip" : {
+            "serverStackedRoles" : { }
+          }
+        },
+        "avatarOrSkin" : {
+          "type" : "AVATAR",
+          "id" : "019615cf-f3f0-7bc5-81d9-771f387ad376",
+          "extension" : "png"
+        }
+      }
+    }, {
+      "id" : "01959a56-4fc1-7bc4-a57d-3514100d0f71",
+      "title" : "Magic RPG",
+      "link" : "magic-rpg",
+      "colorScheme" : "blue",
+      "documentMeta" : {
+        "serverName" : "magic_rpg",
+        "category" : "Магический",
+        "tags" : [ ],
+        "size" : "BIG"
+      },
+      "additionalData" : {
+        "views" : {
+          "unique" : 738,
+          "user" : 198,
+          "simple" : 1329
+        },
+        "isNew" : false,
+        "isPopular" : false,
+        "isViewed" : true,
+        "isViewedComments" : true,
+        "isLiked" : false,
+        "isCommented" : false,
+        "lastCommentId" : "00000000-0000-0000-0000-000000000000",
+        "lastCommentPage" : -1,
+        "likes" : 0,
+        "comments" : 0,
+        "verified" : true,
+        "updateTime" : 1742747543655
+      },
+      "customImages" : {
+        "icon" : "0195a012-c3a2-708a-97e9-7aba17d0cca1",
+        "preview" : "01959a5a-f762-7dea-b953-6ebc9a229c26",
+        "header" : "0195a9ab-84ce-78eb-9889-5b024a374824"
+      },
+      "pinTime" : 0,
+      "createTime" : 1742051409411,
+      "closed" : false,
+      "hidden" : false,
+      "author" : {
+        "id" : "01956735-460a-7adb-b71c-22d08675eee8",
+        "login" : "MrYarik666",
+        "registerDate" : 1573398859783,
+        "roles" : {
+          "entry" : {
+            "role" : "god",
+            "endless" : false,
+            "count" : 53
+          },
+          "count" : 53,
+          "tooltip" : {
+            "serverStackedRoles" : { }
+          }
+        },
+        "avatarOrSkin" : {
+          "type" : "AVATAR",
+          "id" : "016e55e1-5007-7c35-972f-c5432db95c30",
+          "extension" : "gif"
+        }
+      }
+    }, {
+      "id" : "01959f4d-f2cb-75ca-bc20-cf3a710a7443",
+      "title" : "UltraTech",
+      "link" : "ultra-tech",
+      "colorScheme" : "blue",
+      "documentMeta" : {
+        "serverName" : "ultra_tech",
+        "category" : "Космический",
+        "tags" : [ ],
+        "size" : "SMALL"
+      },
+      "additionalData" : {
+        "views" : {
+          "unique" : 676,
+          "user" : 226,
+          "simple" : 1183
+        },
+        "isNew" : false,
+        "isPopular" : false,
+        "isViewed" : true,
+        "isViewedComments" : true,
+        "isLiked" : false,
+        "isCommented" : false,
+        "lastCommentId" : "00000000-0000-0000-0000-000000000000",
+        "lastCommentPage" : -1,
+        "likes" : 0,
+        "comments" : 0,
+        "verified" : true,
+        "updateTime" : 1742747555057
+      },
+      "customImages" : {
+        "icon" : "0195a013-023d-7ade-b218-7ff772ba9754",
+        "preview" : "0195a987-4e47-7e03-aacd-bed0b7ae30fc",
+        "header" : "0195a9ab-d120-7311-bf2b-cc792363fa37"
+      },
+      "pinTime" : 0,
+      "createTime" : 1742134474212,
+      "closed" : false,
+      "hidden" : false,
+      "author" : {
+        "id" : "01956735-460a-7adb-b71c-22d08675eee8",
+        "login" : "MrYarik666",
+        "registerDate" : 1573398859783,
+        "roles" : {
+          "entry" : {
+            "role" : "god",
+            "endless" : false,
+            "count" : 53
+          },
+          "count" : 53,
+          "tooltip" : {
+            "serverStackedRoles" : { }
+          }
+        },
+        "avatarOrSkin" : {
+          "type" : "AVATAR",
+          "id" : "016e55e1-5007-7c35-972f-c5432db95c30",
+          "extension" : "gif"
+        }
+      }
+    }, {
+      "id" : "019843e6-4bc8-7392-a30b-ec85a0f21f58",
+      "title" : "DarkGalaxy",
+      "link" : "dark-galaxy",
+      "colorScheme" : "blue",
+      "documentMeta" : {
+        "serverName" : "dark_galaxy",
+        "category" : "Космический",
+        "tags" : [ ],
+        "size" : "SMALL"
+      },
+      "additionalData" : {
+        "views" : {
+          "unique" : 579,
+          "user" : 191,
+          "simple" : 1026
+        },
+        "isNew" : false,
+        "isPopular" : false,
+        "isViewed" : true,
+        "isViewedComments" : true,
+        "isLiked" : false,
+        "isCommented" : false,
+        "lastCommentId" : "00000000-0000-0000-0000-000000000000",
+        "lastCommentPage" : -1,
+        "likes" : 0,
+        "comments" : 0,
+        "verified" : true,
+        "updateTime" : 1753487688904
+      },
+      "customImages" : {
+        "icon" : "019843e8-bc44-7325-aa2a-f45252edd7b0",
+        "preview" : "019843e8-bd6a-75f9-b86e-fccdcebae7e9",
+        "header" : "019843f5-3351-74ae-aa43-87f9a3c31a35"
+      },
+      "pinTime" : 0,
+      "createTime" : 1753485984144,
+      "closed" : false,
+      "hidden" : false,
+      "author" : {
+        "id" : "01956735-460a-7adb-b71c-22d08675eee8",
+        "login" : "MrYarik666",
+        "registerDate" : 1573398859783,
+        "roles" : {
+          "entry" : {
+            "role" : "god",
+            "endless" : false,
+            "count" : 53
+          },
+          "count" : 53,
+          "tooltip" : {
+            "serverStackedRoles" : { }
+          }
+        },
+        "avatarOrSkin" : {
+          "type" : "AVATAR",
+          "id" : "016e55e1-5007-7c35-972f-c5432db95c30",
+          "extension" : "gif"
+        }
+      }
+    }, {
+      "id" : "01959f4f-121f-7fc2-8773-a1cb3c3debc3",
+      "title" : "PokeStorm",
+      "link" : "poke-storm",
+      "colorScheme" : "blue",
+      "documentMeta" : {
+        "serverName" : "poke_storm",
+        "category" : "Другой",
+        "tags" : [ ],
+        "size" : "SMALL"
+      },
+      "additionalData" : {
+        "views" : {
+          "unique" : 507,
+          "user" : 153,
+          "simple" : 963
+        },
+        "isNew" : false,
+        "isPopular" : false,
+        "isViewed" : true,
+        "isViewedComments" : true,
+        "isLiked" : false,
+        "isCommented" : false,
+        "lastCommentId" : "00000000-0000-0000-0000-000000000000",
+        "lastCommentPage" : -1,
+        "likes" : 1,
+        "comments" : 0,
+        "verified" : true,
+        "updateTime" : 1767429112695
+      },
+      "customImages" : {
+        "icon" : "019b82e2-c937-770e-8df2-2a7efea60c57",
+        "preview" : "019b82e2-cac3-7d70-bfd5-7340c210dcb8",
+        "header" : "019b82e2-ce1c-79b3-9e73-38f1d7a7fd4d"
+      },
+      "pinTime" : 0,
+      "createTime" : 1742134550715,
+      "closed" : false,
+      "hidden" : false,
+      "author" : {
+        "id" : "01956735-460a-7adb-b71c-22d08675eee8",
+        "login" : "MrYarik666",
+        "registerDate" : 1573398859783,
+        "roles" : {
+          "entry" : {
+            "role" : "god",
+            "endless" : false,
+            "count" : 53
+          },
+          "count" : 53,
+          "tooltip" : {
+            "serverStackedRoles" : { }
+          }
+        },
+        "avatarOrSkin" : {
+          "type" : "AVATAR",
+          "id" : "016e55e1-5007-7c35-972f-c5432db95c30",
+          "extension" : "gif"
+        }
+      }
+    } ],
+    "counts" : {
+      "vk" : 142873,
+      "discord" : 48034,
+      "youtube" : 5100
+    },
+    "links" : {
+      "vk" : "https://vk.com/loliland",
+      "2fa_vk" : "https://vk.com/loliland2fa",
+      "2fa_tg" : "https://t.me/LoliLand2FABot",
+      "support_link" : "https://t.me/loliland_support_bot",
+      "message_link" : "https://vk.com/im?sel=-180476635&entrypoint=community_page",
+      "discord" : "https://discord.gg/A2VnGXTZFZ",
+      "youtube" : "https://www.youtube.com/channel/UC3hiYOGzQduy2CGGZyT4IWw"
+    },
+    "region" : "global",
+    "page" : {
+      "id" : "019f716c-32b8-754b-9297-472d362ab64c",
+      "link" : "/news/wipe-summer-2026",
+      "imageId" : "019f7176-a963-75ce-bffe-8f0bc9ddf320",
+      "title" : "Летний вайп 2026",
+      "description" : "Атмосферные измерения, обновление \nИндустриализации, Автоматизации, \nМолекулярной инженерии и не только",
+      "button" : "Читать статью"
+    },
+    "theme" : {
+      "id" : "01956c0d-b01a-7a2d-9fff-52411320e1a7",
+      "data" : {
+        "accent1" : "#E3FFC6FF",
+        "accent2" : "#BDF323FF",
+        "glowUltraLight" : "#FFFBECFF",
+        "glowLight" : "#BDF323FF",
+        "glowDark" : "#339431FF",
+        "buttonGlow" : "#339431B3",
+        "buttonGlowHover" : "#339431A6",
+        "backgroundTabTransparent" : "#33943126",
+        "graphAccent" : "#BDF323FF",
+        "graphText" : "#FFFFFFFF",
+        "graphMarker" : "#FFFFFFFF",
+        "doubleGradient1" : "#57DB28FF",
+        "doubleGradient2" : "#037900FF",
+        "tripleGradient1" : "#FCFF54FF",
+        "tripleGradient2" : "#53B805FF",
+        "tripleGradient3" : "#CAF64CFF",
+        "globalAccess" : true,
+        "images" : {
+          "footerGlow" : "019cb0d6-6bdb-7834-b5bf-cde6eb0dd32f",
+          "mainBarGlow" : "01959133-fb2c-7472-8d44-356ee7b2206e",
+          "authFormParticles" : "01959133-ffa9-7312-88ae-58c9f77dab44",
+          "mainPageLogoGlow" : "01959134-0641-7069-a325-e2b70b96ab26",
+          "mainPageParticles" : "01959134-1232-7a8e-807d-7b346e08321d",
+          "mainPageBackgroundAbout" : "01959134-2187-79ea-8d9d-8af8b27655f3",
+          "modalLightGlow" : "01959134-2916-798f-be88-cb39431b4aef",
+          "modalDarkGlow" : "01959134-34b3-7b18-8a2f-3a5ba8700cd8",
+          "modalAdditionalGlow" : "01959134-3b4d-7910-82ee-a850a0dc3c91",
+          "serversGlow" : "01959134-3f4f-7bec-986d-c7a79f0a1675"
+        }
+      }
+    }
+  },
+  "monitoring" : {
+    "tps" : 20,
+    "servers" : {
+      "techno_magic_rpg" : {
+        "online" : 1407,
+        "maxOnline" : 1500
+      },
+      "techno_magic_sky" : {
+        "online" : 1075,
+        "maxOnline" : 1150
+      },
+      "hitech" : {
+        "online" : 440,
+        "maxOnline" : 480
+      },
+      "magic_rpg" : {
+        "online" : 32,
+        "maxOnline" : 100
+      },
+      "ultra_tech" : {
+        "online" : 45,
+        "maxOnline" : 100
+      },
+      "dark_galaxy" : {
+        "online" : 61,
+        "maxOnline" : 100
+      },
+      "poke_storm" : {
+        "online" : 12,
+        "maxOnline" : 100
+      }
+    },
+    "records" : {
+      "onlineCurrent" : 3072,
+      "onlineDay" : 3572,
+      "onlineMax" : 6333,
+      "timeOnlineDay" : 1784754001255,
+      "timeOnlineMax" : 1754231819498
+    }
+  },
+  "auth" : null,
+  "clients" : {
+    "environments" : [ "PROD", "WIPE", "DEV" ],
+    "clients" : [ {
+      "uuid" : "019b6287-7644-7611-b04f-485cff49e9ec",
+      "systemName" : "magic_rpg",
+      "displayName" : "Magic RPG",
+      "branch" : "main",
+      "title" : {
+        "en_us" : "Magic RPG",
+        "ru_ru" : "Magic RPG"
+      },
+      "category" : {
+        "en_us" : "Magical",
+        "ru_ru" : "Магический"
+      },
+      "environment" : "PROD",
+      "tags" : [ ],
+      "size" : "BIG",
+      "previewImageId" : "019b6287-789d-7a4c-85b8-85d81094f2f1",
+      "iconImageId" : "019b6287-759a-7640-925f-a0eb7925ecd1",
+      "relativeFolderPath" : "magic_rpg\\main",
+      "clientFolder" : "C:\\Users\\Vasya\\AppData\\Roaming\\.loliland\\game-resources\\clients\\magic_rpg\\main"
+    }, {
+      "uuid" : "019b6287-855e-782d-adbe-92704701c034",
+      "systemName" : "ultra_tech",
+      "displayName" : "UltraTech",
+      "branch" : "main",
+      "title" : {
+        "en_us" : "UltraTech",
+        "ru_ru" : "UltraTech"
+      },
+      "category" : {
+        "en_us" : "Galactic",
+        "ru_ru" : "Космический"
+      },
+      "environment" : "PROD",
+      "tags" : [ ],
+      "size" : "SMALL",
+      "previewImageId" : "019b6287-87e0-7868-a480-d84638a628ff",
+      "iconImageId" : "019b6287-84de-781c-991b-3a5dd66136a5",
+      "relativeFolderPath" : "ultra_tech\\main",
+      "clientFolder" : "C:\\Users\\Vasya\\AppData\\Roaming\\.loliland\\game-resources\\clients\\ultra_tech\\main"
+    }, {
+      "uuid" : "019b6287-946a-7291-a571-7dea863477c1",
+      "systemName" : "dark_galaxy",
+      "displayName" : "DarkGalaxy",
+      "branch" : "main",
+      "title" : {
+        "en_us" : "DarkGalaxy",
+        "ru_ru" : "DarkGalaxy"
+      },
+      "category" : {
+        "en_us" : "Cosmic",
+        "ru_ru" : "Космический"
+      },
+      "environment" : "PROD",
+      "tags" : [ ],
+      "size" : "SMALL",
+      "previewImageId" : "019b6287-97cd-7362-863c-17b1e2e15425",
+      "iconImageId" : "019b6287-9542-756a-a548-9b3db3d4f857",
+      "relativeFolderPath" : "dark_galaxy\\main",
+      "clientFolder" : "C:\\Users\\Vasya\\AppData\\Roaming\\.loliland\\game-resources\\clients\\dark_galaxy\\main"
+    }, {
+      "uuid" : "019b6287-4292-75b4-833c-c7d422c01c3d",
+      "systemName" : "techno_magic_rpg",
+      "displayName" : "TechnoMagic RPG",
+      "branch" : "main",
+      "title" : {
+        "en_us" : "TechnoMagic RPG",
+        "ru_ru" : "TechnoMagic RPG"
+      },
+      "category" : {
+        "en_us" : "Technomagical",
+        "ru_ru" : "Техно-магический"
+      },
+      "environment" : "PROD",
+      "tags" : [ "RECOMMENDED" ],
+      "size" : "BIG",
+      "previewImageId" : "019b6287-4788-7b42-8f44-b2f79fde1b34",
+      "iconImageId" : "019b6287-4261-7df7-89ad-bb98717ff10a",
+      "relativeFolderPath" : "techno_magic_rpg\\main",
+      "clientFolder" : "C:\\Users\\Vasya\\AppData\\Roaming\\.loliland\\game-resources\\clients\\techno_magic_rpg\\main"
+    }, {
+      "uuid" : "019b6287-5597-7255-b26a-61e2aae70d4e",
+      "systemName" : "techno_magic_sky",
+      "displayName" : "TechnoMagic SKY",
+      "branch" : "main",
+      "title" : {
+        "en_us" : "TechnoMagic SKY",
+        "ru_ru" : "TechnoMagic SKY"
+      },
+      "category" : {
+        "en_us" : "SkyBlock",
+        "ru_ru" : "SkyBlock"
+      },
+      "environment" : "PROD",
+      "tags" : [ "RECOMMENDED" ],
+      "size" : "BIG",
+      "previewImageId" : "019b6287-58c8-770c-aff4-80b3fe53b4b6",
+      "iconImageId" : "019b6287-55ab-74f5-82a8-617a5c23fbd1",
+      "relativeFolderPath" : "techno_magic_sky\\main",
+      "clientFolder" : "C:\\Users\\Vasya\\AppData\\Roaming\\.loliland\\game-resources\\clients\\techno_magic_sky\\main"
+    }, {
+      "uuid" : "019b6287-659b-7531-8e40-9a7170bcf4c7",
+      "systemName" : "hitech",
+      "displayName" : "HiTech",
+      "branch" : "main",
+      "title" : {
+        "en_us" : "HiTech",
+        "ru_ru" : "HiTech"
+      },
+      "category" : {
+        "en_us" : "Technical",
+        "ru_ru" : "Технический"
+      },
+      "environment" : "PROD",
+      "tags" : [ "GAIN_POPULARITY" ],
+      "size" : "BIG",
+      "previewImageId" : "019b6287-69b9-7b12-99f7-b364c7f8e5a8",
+      "iconImageId" : "019b6287-6681-7ca7-a627-6afea5d0bf9c",
+      "relativeFolderPath" : "hitech\\main",
+      "clientFolder" : "C:\\Users\\Vasya\\AppData\\Roaming\\.loliland\\game-resources\\clients\\hitech\\main"
+    }, {
+      "uuid" : "019b82fe-db11-776e-a99f-fe3fb8cc4021",
+      "systemName" : "poke_storm",
+      "displayName" : "PokeStorm",
+      "branch" : "main",
+      "title" : {
+        "en_us" : "PokeStorm",
+        "ru_ru" : "PokeStorm"
+      },
+      "category" : {
+        "en_us" : "Other",
+        "ru_ru" : "Другой"
+      },
+      "environment" : "PROD",
+      "tags" : [ ],
+      "size" : "SMALL",
+      "previewImageId" : "019b82fe-dfc1-78a9-8342-7c89e0dda322",
+      "iconImageId" : "019b82fe-dd31-75f0-ab1b-8222a4fcdf83",
+      "relativeFolderPath" : "poke_storm\\main",
+      "clientFolder" : "C:\\Users\\Vasya\\AppData\\Roaming\\.loliland\\game-resources\\clients\\poke_storm\\main"
+    } ]
+  },
+  "authError" : {
+    "error_code" : -6,
+    "error_message" : "Token not found",
+    "details" : { },
+    "status_code" : 401
+  }
+}

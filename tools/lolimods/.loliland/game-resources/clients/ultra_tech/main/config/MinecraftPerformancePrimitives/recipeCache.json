@@ -1,0 +1,7 @@
+{
+  "recipeListTypeFixClasses": [
+	"net.divinerpg.utils.recipes.RecipeUtil"
+  ],
+  "staticRecipeCache": true,
+  "ultramineRecipeCache": false
+}

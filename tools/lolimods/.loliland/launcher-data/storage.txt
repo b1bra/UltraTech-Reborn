@@ -1,0 +1,9 @@
+settings.game-resources-folder:QzpcVXNlcnNcVmFzeWFcQXBwRGF0YVxSb2FtaW5nXC5sb2xpbGFuZFxnYW1lLXJlc291cmNlcw==
+locale:cnU=
+domain-pool.launcher.dg:dHJ1ZQ==
+settings.memory:MTYzODQ=
+settings.debugger-enabled:ZmFsc2U=
+settings.jvm-flags:
+settings.log-display:ZmFsc2U=
+settings.max-speed:MTAwMDAwMDAw
+latest-client-data:dWx0cmFfdGVjaFxtYWlu

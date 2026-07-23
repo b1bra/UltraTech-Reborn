@@ -1,0 +1,17 @@
+{
+  "id": "ДОМ_80,67,73",
+  "name": "ДОМ",
+  "icon": "waypoint-normal.png",
+  "x": 80,
+  "y": 67,
+  "z": 73,
+  "r": 66,
+  "g": 117,
+  "b": 71,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

@@ -1,0 +1,82 @@
+<!--
+  Custom recipes that will not be over written by Ender IO are added here. Examples of recipes can be found in the
+  AlloySmelterRecipes_Core.xml and general format documentation in the SAGMillRecipes_Core/User.
+
+  As well as adding custom recipes to the operation of the Alloy Smelter, a vanilla furnace recipe can be controlled.
+  It can be disabled completely by simply adding this line:
+
+  <vanillaFurnaceRecipes enabled="false" />
+
+  It is also possible to selectively disable vanilla furnace recipes. The following example disables the smelting of iron
+  ingots, ender pearls, and any form of iron ore registered in the ore dictionary.
+
+  <vanillaFurnaceRecipes>
+
+	<exclude>
+      <itemStack modID="minecraft" itemName="iron_ingot" />
+      <itemStack modID="minecraft" itemName="ender_pearl" />
+      <itemStack oreDictionary="oreIron" />
+    </exclude>
+
+  </vanillaFurnaceRecipes>
+
+  Add this line to disable the creation of TE alloys using the Alloy Smelter.
+
+  <recipeGroup name="Thermal Expansion" enabled="false" />
+
+-->
+
+<AlloySmelterRecipes>
+  <recipeGroup name="custom" >
+  <recipe name="chaos" energyCost="10000" >
+      <input>
+        <itemStack modID="DraconicEvolution" itemName="draconicIngot" />
+        <itemStack modID="loli_dragon_might" itemName="soakedDraconiumDust" />
+        <itemStack modID="DraconicEvolution" itemName="draconiumIngot" />
+      </input>
+      <output>
+        <itemStack modID="loli_dragon_might" itemName="ingotDragonChaos" exp="0" />
+      </output>
+  </recipe>
+  <recipe name="drulloy" energyCost="10000" >
+      <input>
+        <itemStack modID="loli_technologies" itemName="item.processor_orange" />
+        <itemStack modID="ExtraBees" itemName="honeyComb" itemMeta="17" />
+        <itemStack modID="divinerpg" itemName="realmiteIngot" />
+      </input>
+      <output>
+        <itemStack modID="ExtraTiC" itemName="drulloyIngot" exp="0" />
+      </output>
+  </recipe>
+  <recipe name="RedAurum" energyCost="10000" >
+      <input>
+        <itemStack modID="loli_technologies" itemName="item.processor_red" />
+        <itemStack modID="loli_dragon_might" itemName="ice_dragon_blood" />
+        <itemStack modID="lolienergistics" itemName="galaxy_singularity_red" />
+      </input>
+      <output>
+        <itemStack modID="ExtraTiC" itemName="funStuffIngot" itemMeta="2" exp="0" />
+      </output>
+  </recipe>
+  <recipe name="Fairy" energyCost="10000" >
+      <input>
+        <itemStack oreDictionary="ingotArdite" />
+        <itemStack modID="minecraft" itemName="rotten_flesh" number="32" />
+        <itemStack modID="minecraft" itemName="obsidian" number="2" />
+      </input>
+      <output>
+        <itemStack modID="ExtraTiC" itemName="funStuffIngot" exp="0" />
+      </output>
+  </recipe>
+  <recipe name="Pokfenium" energyCost="10000" >
+      <input>
+        <itemStack oreDictionary="ingotCobalt" />
+        <itemStack modID="minecraft" itemName="rotten_flesh" number="32" />
+        <itemStack modID="minecraft" itemName="obsidian" number="2" />
+      </input>
+      <output>
+        <itemStack modID="ExtraTiC" itemName="funStuffIngot" itemMeta="1" exp="0" />
+      </output>
+  </recipe>
+  </recipeGroup>
+</AlloySmelterRecipes>

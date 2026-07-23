@@ -1,0 +1,1151 @@
+[
+  {
+    "name": "§8Угольная Сингулярность",
+    "id": "coal",
+    "type": "standard",
+    "overlayColor": "#282828",
+    "underlayColor": "#0C0C0C"
+  },
+  {
+    "name": "Изумрудная Сингулярность",
+    "id": "emerald",
+    "type": "standard",
+    "overlayColor": "#60DB83",
+    "underlayColor": "#2CA746"
+  },
+  {
+    "name": "Алмазная Сингулярность",
+    "id": "diamond",
+    "type": "standard",
+    "overlayColor": "#4AEDD1",
+    "underlayColor": "#30DBBD"
+  },
+  {
+    "name": "§fАлюминиевая Сингулярность",
+    "id": "aluminum",
+    "type": "standard",
+    "overlayColor": "#EDEDED",
+    "underlayColor": "#C5C5C5"
+  },
+  {
+    "name": "Латунная сингулярность",
+    "id": "brass",
+    "type": "standard",
+    "overlayColor": "#D89634",
+    "underlayColor": "#8B5F1B"
+  },
+  {
+    "name": "Бронзовая Сингулярность",
+    "id": "bronze",
+    "type": "standard",
+    "overlayColor": "#CA904E",
+    "underlayColor": "#C97A25"
+  },
+  {
+    "name": "Сингулярность древесного угля",
+    "id": "charcoal",
+    "type": "standard",
+    "overlayColor": "#605543",
+    "underlayColor": "#100E0B"
+  },
+  {
+    "name": "§eЭлектрумовая Сингулярность",
+    "id": "electrum",
+    "type": "standard",
+    "overlayColor": "#FDEF5A",
+    "underlayColor": "#EFE252"
+  },
+  {
+    "name": "Инваровая Сингулярность",
+    "id": "invar",
+    "type": "standard",
+    "overlayColor": "#D0D7CE",
+    "underlayColor": "#ACB4B1"
+  },
+  {
+    "name": "Магниевая сингулярность",
+    "id": "magnesium",
+    "type": "standard",
+    "overlayColor": "#937C6C",
+    "underlayColor": "#776457"
+  },
+  {
+    "name": "§bСингулярность абсолютного нуля",
+    "id": "osmium",
+    "type": "standard",
+    "overlayColor": "#AABACE",
+    "underlayColor": "#9BABC4"
+  },
+  {
+    "name": "Перидотовая сингулярность",
+    "id": "peridot",
+    "type": "vortex",
+    "overlayColor": "#58A52B",
+    "underlayColor": "#4E9226"
+  },
+  {
+    "name": "Рубиновая Сингулярность",
+    "id": "ruby",
+    "type": "vortex",
+    "overlayColor": "#B44848",
+    "underlayColor": "#993D3D"
+  },
+  {
+    "name": "Сапфировая Сингулярность",
+    "id": "sapphire",
+    "type": "vortex",
+    "overlayColor": "#5173D1",
+    "underlayColor": "#466ACE"
+  },
+  {
+    "name": "Стальная Сингулярность",
+    "id": "steel",
+    "type": "vortex",
+    "overlayColor": "#9F9F9F",
+    "underlayColor": "#888888"
+  },
+  {
+    "name": "Тёмная Пульсирующая Сингулярность",
+    "id": "titanium",
+    "type": "vortex",
+    "overlayColor": "#1C242E",
+    "underlayColor": "#192029"
+  },
+  {
+    "name": "Вольфрамовая сингулярность",
+    "id": "tungsten",
+    "type": "vortex",
+    "overlayColor": "#D6D6D6",
+    "underlayColor": "#CACACA"
+  },
+  {
+    "name": "§2Урановая Сингулярность",
+    "id": "uranium",
+    "type": "vortex",
+    "overlayColor": "#00CB40",
+    "underlayColor": "#00C43E"
+  },
+  {
+    "name": "Цинковая сингулярность",
+    "id": "zinc",
+    "type": "vortex",
+    "overlayColor": "#BFC55C",
+    "underlayColor": "#939836"
+  },
+  {
+    "name": "Сингулярность Подземелий Тайн",
+    "id": "blutonium",
+    "type": "vortex",
+    "overlayColor": "#d6f5ff",
+    "underlayColor": "#6f7bcd",
+    "haloSize": 3,
+    "haloColor": "#6f7bcd"
+  },
+  {
+    "name": "Сингулярность силового поля",
+    "id": "cyanite",
+    "type": "vortex",
+    "overlayColor": "#5CAFDB",
+    "underlayColor": "#0087EF"
+  },
+  {
+    "name": "Сингулярность Бесконечной Прочности",
+    "id": "graphite",
+    "type": "vortex",
+    "overlayColor": "#5D5D5D",
+    "underlayColor": "#444444"
+  },
+  {
+    "name": "Сингулярность Заполненная Сновидениями",
+    "id": "ludicrite",
+    "type": "vortex",
+    "overlayColor": "#F001E8",
+    "underlayColor": "#F103B1",
+    "haloSize": 3,
+    "haloColor": "#F103B1"
+  },
+  {
+    "name": "Амфетаминовая Сингулярность",
+    "id": "yellorium",
+    "type": "chemical",
+    "overlayColor": "#D9DB5C",
+    "underlayColor": "#EBFF3D"
+  },
+  {
+    "name": "§dДракониевая Сингулярность",
+    "id": "draconium",
+    "type": "vortex",
+    "overlayColor": "#8E5CC0",
+    "underlayColor": "#7C4AAE"
+  },
+  {
+    "name": "Точка Драконьего Беспредела",
+    "id": "draconium_awakened",
+    "type": "spiral",
+    "overlayColor": "#FF7200",
+    "underlayColor": "#FF6600"
+  },
+  {
+    "name": "Сингулярность из Проводящего Железа",
+    "id": "conductive_iron",
+    "type": "standard",
+    "overlayColor": "#CA9D9D",
+    "underlayColor": "#C39499"
+  },
+  {
+    "name": "Наэлектролизованная Сингулярность",
+    "id": "electrical_steel",
+    "type": "spiral",
+    "overlayColor": "#949494",
+    "underlayColor": "#8D8D8D"
+  },
+  {
+    "name": "Сингулярность из Энергетического сплава",
+    "id": "energetic_alloy",
+    "type": "spiral",
+    "overlayColor": "#FFA638",
+    "underlayColor": "#FF9C21"
+  },
+  {
+    "name": "Сингулярность Теневого Покрова",
+    "id": "dark_steel",
+    "type": "spiral",
+    "overlayColor": "#3C3C3C",
+    "underlayColor": "#383838"
+  },
+  {
+    "name": "Волновая Сингулярность",
+    "id": "pulsating_iron",
+    "type": "spiral",
+    "overlayColor": "#82FA9E",
+    "underlayColor": "#69EA88"
+  },
+  {
+    "name": "Сингулярность Красного Сплава",
+    "id": "redstone_alloy",
+    "type": "spiral",
+    "overlayColor": "#F25757",
+    "underlayColor": "#D63C3C"
+  },
+  {
+    "name": "Сингулярность из Соулария",
+    "id": "soularium",
+    "type": "spiral",
+    "overlayColor": "#5C4527",
+    "underlayColor": "#5A3E25"
+  },
+  {
+    "name": "Сингулярность вибрирующего сплава",
+    "id": "vibrant_alloy",
+    "type": "spiral",
+    "overlayColor": "#A7CA52",
+    "underlayColor": "#98BB40"
+  },
+  {
+    "name": "§bСингулярность Искрящейся Материи§f",
+    "id": "blue_gem",
+    "type": "standard",
+    "overlayColor": "#38D7FF",
+    "underlayColor": "#03C6F6"
+  },
+  {
+    "name": "§8Нейтронная Сингулярность",
+    "id": "carbon",
+    "type": "spiral",
+    "overlayColor": "#1D1D1D",
+    "underlayColor": "#0F0F0F"
+  },
+  {
+    "name": "Плутониевая Сингулярность",
+    "id": "crystal",
+    "type": "standard",
+    "overlayColor": "#E2E2E2",
+    "underlayColor": "#C1C1C1"
+  },
+  {
+    "name": "§3Звёздная Сингулярность",
+    "id": "palladium",
+    "type": "spiral",
+    "overlayColor": "#F0F0F0",
+    "underlayColor": "#E2E2E2"
+  },
+  {
+    "name": "Сингулярность красного самоцвета",
+    "id": "red_gem",
+    "type": "standard",
+    "overlayColor": "#FF3B0C",
+    "underlayColor": "#F93100"
+  },
+  {
+    "name": "§6Иридиевая Сингулярность§f",
+    "id": "white_gem",
+    "type": "spiral",
+    "overlayColor": "#C6C6C6",
+    "underlayColor": "#A5A5A5"
+  },
+  {
+    "name": "Сингулярность Наполнененая Мортумом",
+    "id": "fairy",
+    "type": "vortex",
+    "overlayColor": "#ff8bc6",
+    "underlayColor": "#8b2435",
+    "haloSize": 3,
+    "haloColor": "#8b2435"
+  },
+  {
+    "name": "Сингулярность Покфениума",
+    "id": "pokefennium",
+    "type": "standard",
+    "overlayColor": "#436B73",
+    "underlayColor": "#485361"
+  },
+  {
+    "name": "Бесконечно Нестабильная Сингулярность",
+    "id": "unstable",
+    "type": "standard",
+    "overlayColor": "#C5C5C5",
+    "underlayColor": "#B1B1B1"
+  },
+  {
+    "name": "Сингулярность из Светящегося камня",
+    "id": "refined_glowstone",
+    "type": "standard",
+    "overlayColor": "#F4D036",
+    "underlayColor": "#DBA622"
+  },
+  {
+    "name": "Сингулярность Тёмного Энергона",
+    "id": "refined_obsidian",
+    "type": "standard",
+    "overlayColor": "#d156dc",
+    "underlayColor": "#33024a"
+  },
+  {
+    "name": "Сингулярность Бесконечного Разрушения",
+    "id": "bitumen",
+    "type": "standard",
+    "overlayColor": "#242424",
+    "underlayColor": "#313131"
+  },
+  {
+    "name": "Сингулярность Красного Энергона",
+    "id": "phosphorus",
+    "type": "standard",
+    "overlayColor": "#ff86ca",
+    "underlayColor": "#89153f"
+  },
+  {
+    "name": "Сингулярность из Поташа",
+    "id": "potash",
+    "type": "standard",
+    "overlayColor": "#EF9103",
+    "underlayColor": "#DA8403"
+  },
+  {
+    "name": "Радостная Сингулярность",
+    "id": "saltpeter",
+    "type": "chemical",
+    "overlayColor": "#F0F0F0",
+    "underlayColor": "#E1E1E1"
+  },
+  {
+    "name": "Сингулярность из Серы",
+    "id": "sulfur",
+    "type": "standard",
+    "overlayColor": "#FFF200",
+    "underlayColor": "#FCD703"
+  },
+  {
+    "name": "Сингулярность из Ангмаллена",
+    "id": "angmallen",
+    "type": "standard",
+    "overlayColor": "#E1D78A",
+    "underlayColor": "#D6C761"
+  },
+  {
+    "name": "Сингулярность Нектарного Сердца",
+    "id": "damascus_steel",
+    "type": "standard",
+    "overlayColor": "#996D4D",
+    "underlayColor": "#583F2C"
+  },
+  {
+    "name": "Метамфетоминовая Сингулярность",
+    "id": "hepatizon",
+    "type": "chemical",
+    "overlayColor": "#755E75",
+    "underlayColor": "#614E61"
+  },
+  {
+    "name": "§5Обсидиановая Сингулярность",
+    "id": "desichalkos",
+    "type": "standard",
+    "overlayColor": "#722FA8",
+    "underlayColor": "#502176"
+  },
+  {
+    "name": "Тритановая Сингулярность",
+    "id": "black_steel",
+    "type": "standard",
+    "overlayColor": "#395679",
+    "underlayColor": "#314966"
+  },
+  {
+    "name": "Сингулярность Наполнененая Кошмарами",
+    "id": "celenegil",
+    "type": "vortex",
+    "overlayColor": "#f1ff97",
+    "underlayColor": "#779546",
+    "haloSize": 4,
+    "haloColor": "#3e6030"
+  },
+  {
+    "name": "Сингулярность из Хадерота",
+    "id": "haderoth",
+    "type": "standard",
+    "overlayColor": "#77341E",
+    "underlayColor": "#592817"
+  },
+  {
+    "name": "Мятно-Леденцовая Сингулярность",
+    "id": "quicksilver",
+    "type": "standard",
+    "overlayColor": "#7CD3C7",
+    "underlayColor": "#2B8073"
+  },
+  {
+    "name": "Сингулярность из Тартарита",
+    "id": "tartarite",
+    "type": "standard",
+    "overlayColor": "#AE3400",
+    "underlayColor": "#792400"
+  },
+  {
+    "name": "Сингулярность из Амордрине",
+    "id": "amordrine",
+    "type": "standard",
+    "overlayColor": "#A98DB1",
+    "underlayColor": "#8F6B9A"
+  },
+  {
+    "name": "Арлемитовая Сингулярность",
+    "id": "inolashite",
+    "type": "standard",
+    "overlayColor": "#40AA7D",
+    "underlayColor": "#338864"
+  },
+  {
+    "name": "Сингулярность из Теневой Стали",
+    "id": "shadow_steel",
+    "type": "standard",
+    "overlayColor": "#887362",
+    "underlayColor": "#766354"
+  },
+  {
+    "name": "Бедрокиевая Сингулярность",
+    "id": "compressed_iron",
+    "type": "standard",
+    "overlayColor": "#636363",
+    "underlayColor": "#515151"
+  },
+  {
+    "name": "Сингулярность Синей Магии",
+    "id": "electrotine",
+    "type": "standard",
+    "overlayColor": "#0F4985",
+    "underlayColor": "#0D3F72"
+  },
+  {
+    "name": "Полярная Сингулярность",
+    "id": "electrum_flux",
+    "type": "standard",
+    "overlayColor": "#D0B64D",
+    "underlayColor": "#A40606"
+  },
+  {
+    "name": "Флаксовая сингулярность",
+    "id": "crystal_flux",
+    "type": "standard",
+    "overlayColor": "#FE333A",
+    "underlayColor": "#E8111A"
+  },
+  {
+    "name": "Сингулярность Алюминиевой Латуни",
+    "id": "aluminum_brass",
+    "type": "standard",
+    "overlayColor": "#E2BE4E",
+    "underlayColor": "#D4B148"
+  },
+  {
+    "name": "Алюмитовая сингулярность",
+    "id": "alumite",
+    "type": "standard",
+    "overlayColor": "#E9ADDA",
+    "underlayColor": "#E298D1"
+  },
+  {
+    "name": "Ардитовая Сингулярность",
+    "id": "ardite",
+    "type": "standard",
+    "overlayColor": "#D24900",
+    "underlayColor": "#960000"
+  },
+  {
+    "name": "Кобальтовая Сингулярность",
+    "id": "cobalt",
+    "type": "standard",
+    "overlayColor": "#2376DD",
+    "underlayColor": "#023C9B"
+  },
+  {
+    "name": "Сингулярность Глубокой Бездны",
+    "id": "ender",
+    "type": "standard",
+    "overlayColor": "#00B293",
+    "underlayColor": "#00927C"
+  },
+  {
+    "name": "Клеевая сингулярность",
+    "id": "glue",
+    "type": "standard",
+    "overlayColor": "#DBD0D0",
+    "underlayColor": "#CEBFBF"
+  },
+  {
+    "name": "Мануллиновая Сингулярность",
+    "id": "manyullyn",
+    "type": "standard",
+    "overlayColor": "#A97DE0",
+    "underlayColor": "#926AC3"
+  },
+  {
+    "name": "Сингулярность водорода",
+    "id": "hydrogen",
+    "type": "chemical",
+    "overlayColor": "#FF5733",
+    "underlayColor": "#C41E3A"
+  },
+  {
+    "name": "Сингулярность углерода",
+    "id": "carbon1",
+    "type": "chemical",
+    "overlayColor": "#5C5C5C",
+    "underlayColor": "#8B6914"
+  },
+  {
+    "name": "Сингулярность азота",
+    "id": "nitrogen",
+    "type": "chemical",
+    "overlayColor": "#4FC3F7",
+    "underlayColor": "#1565C0"
+  },
+  {
+    "name": "Сингулярность кислорода",
+    "id": "oxygen",
+    "type": "chemical",
+    "overlayColor": "#B2EBF2",
+    "underlayColor": "#00838F"
+  },
+  {
+    "name": "Сингулярность фосфора",
+    "id": "phosphorus1",
+    "type": "chemical",
+    "overlayColor": "#76FF03",
+    "underlayColor": "#33691E"
+  },
+  {
+    "name": "Сингулярность серы",
+    "id": "sulfur1",
+    "type": "chemical",
+    "overlayColor": "#FFD600",
+    "underlayColor": "#F57F17"
+  },
+  {
+    "name": "Сингулярность селена",
+    "id": "selenium",
+    "type": "chemical",
+    "overlayColor": "#D7CCC8",
+    "underlayColor": "#795548"
+  },
+  {
+    "name": "Сингулярность нулевого элемента",
+    "id": "zero_element",
+    "type": "chemical",
+    "overlayColor": "#E8EAF6",
+    "underlayColor": "#283593"
+  },
+  {
+    "name": "Сингулярность искрина",
+    "id": "iskrin",
+    "type": "chemical",
+    "overlayColor": "#00E5FF",
+    "underlayColor": "#006064"
+  },
+  {
+    "name": "Сингулярность гелия",
+    "id": "helium",
+    "type": "chemical",
+    "overlayColor": "#FFF9C4",
+    "underlayColor": "#F9A825"
+  },
+  {
+    "name": "Сингулярность неона",
+    "id": "neon",
+    "type": "chemical",
+    "overlayColor": "#FF1744",
+    "underlayColor": "#B71C1C"
+  },
+  {
+    "name": "Сингулярность аргона",
+    "id": "argon",
+    "type": "chemical",
+    "overlayColor": "#CE93D8",
+    "underlayColor": "#6A1B9A"
+  },
+  {
+    "name": "Сингулярность криптона",
+    "id": "krypton",
+    "type": "chemical",
+    "overlayColor": "#A5D6A7",
+    "underlayColor": "#2E7D32"
+  },
+  {
+    "name": "Сингулярность ксенона",
+    "id": "xenon",
+    "type": "chemical",
+    "overlayColor": "#90CAF9",
+    "underlayColor": "#1A237E"
+  },
+  {
+    "name": "Сингулярность лития",
+    "id": "lithium",
+    "type": "chemical",
+    "overlayColor": "#EF5350",
+    "underlayColor": "#8E0000"
+  },
+  {
+    "name": "Сингулярность натрия",
+    "id": "sodium",
+    "type": "chemical",
+    "overlayColor": "#FFEE58",
+    "underlayColor": "#E65100"
+  },
+  {
+    "name": "Сингулярность калия",
+    "id": "potassium",
+    "type": "chemical",
+    "overlayColor": "#BA68C8",
+    "underlayColor": "#4A148C"
+  },
+  {
+    "name": "Сингулярность рубидия",
+    "id": "rubidium",
+    "type": "chemical",
+    "overlayColor": "#EC407A",
+    "underlayColor": "#880E4F"
+  },
+  {
+    "name": "Сингулярность цезия",
+    "id": "cesium",
+    "type": "chemical",
+    "overlayColor": "#7E57C2",
+    "underlayColor": "#311B92"
+  },
+  {
+    "name": "Сингулярность бериллия",
+    "id": "beryllium",
+    "type": "chemical",
+    "overlayColor": "#81C784",
+    "underlayColor": "#1B5E20"
+  },
+  {
+    "name": "Сингулярность магния",
+    "id": "magnesium1",
+    "type": "chemical",
+    "overlayColor": "#F5F5F5",
+    "underlayColor": "#9E9E9E"
+  },
+  {
+    "name": "Сингулярность кальция",
+    "id": "calcium",
+    "type": "chemical",
+    "overlayColor": "#FFECB3",
+    "underlayColor": "#FF6F00"
+  },
+  {
+    "name": "Сингулярность стронция",
+    "id": "strontium",
+    "type": "chemical",
+    "overlayColor": "#FF5252",
+    "underlayColor": "#C62828"
+  },
+  {
+    "name": "Сингулярность бария",
+    "id": "barium",
+    "type": "chemical",
+    "overlayColor": "#C5E1A5",
+    "underlayColor": "#558B2F"
+  },
+  {
+    "name": "Сингулярность бора",
+    "id": "boron",
+    "type": "chemical",
+    "overlayColor": "#A1887F",
+    "underlayColor": "#4E342E"
+  },
+  {
+    "name": "Сингулярность германия",
+    "id": "germanium",
+    "type": "chemical",
+    "overlayColor": "#CFD8DC",
+    "underlayColor": "#546E7A"
+  },
+  {
+    "name": "Сингулярность мышьяка",
+    "id": "arsenic",
+    "type": "chemical",
+    "overlayColor": "#90A4AE",
+    "underlayColor": "#37474F"
+  },
+  {
+    "name": "Сингулярность сурьмы",
+    "id": "antimony",
+    "type": "chemical",
+    "overlayColor": "#B8C6D0",
+    "underlayColor": "#455A64"
+  },
+  {
+    "name": "Сингулярность теллура",
+    "id": "tellurium",
+    "type": "chemical",
+    "overlayColor": "#E0E0E0",
+    "underlayColor": "#616161"
+  },
+  {
+    "name": "Сингулярность фтора",
+    "id": "fluorine",
+    "type": "chemical",
+    "overlayColor": "#F0F4C3",
+    "underlayColor": "#827717"
+  },
+  {
+    "name": "Сингулярность хлора",
+    "id": "chlorine",
+    "type": "chemical",
+    "overlayColor": "#AED581",
+    "underlayColor": "#33691E"
+  },
+  {
+    "name": "Сингулярность брома",
+    "id": "bromine",
+    "type": "chemical",
+    "overlayColor": "#EF6C00",
+    "underlayColor": "#BF360C"
+  },
+  {
+    "name": "Сингулярность йода",
+    "id": "iodine",
+    "type": "chemical",
+    "overlayColor": "#7B1FA2",
+    "underlayColor": "#4A148C"
+  },
+  {
+    "name": "Сингулярность алюминия",
+    "id": "aluminum1",
+    "type": "chemical",
+    "overlayColor": "#EEEEEE",
+    "underlayColor": "#757575"
+  },
+  {
+    "name": "Сингулярность кремния",
+    "id": "silicon",
+    "type": "chemical",
+    "overlayColor": "#78909C",
+    "underlayColor": "#263238"
+  },
+  {
+    "name": "Сингулярность галлия",
+    "id": "gallium",
+    "type": "chemical",
+    "overlayColor": "#B3E5FC",
+    "underlayColor": "#01579B"
+  },
+  {
+    "name": "Сингулярность индия",
+    "id": "indium",
+    "type": "chemical",
+    "overlayColor": "#E1BEE7",
+    "underlayColor": "#6A1B9A"
+  },
+  {
+    "name": "Сингулярность олова",
+    "id": "tin",
+    "type": "chemical",
+    "overlayColor": "#D7CCC8",
+    "underlayColor": "#5D4037"
+  },
+  {
+    "name": "Сингулярность таллия",
+    "id": "thallium",
+    "type": "chemical",
+    "overlayColor": "#80DEEA",
+    "underlayColor": "#00695C"
+  },
+  {
+    "name": "Сингулярность свинца",
+    "id": "lead",
+    "type": "chemical",
+    "overlayColor": "#9E9E9E",
+    "underlayColor": "#424242"
+  },
+  {
+    "name": "Сингулярность скандия",
+    "id": "scandium",
+    "type": "chemical",
+    "overlayColor": "#F0F4C3",
+    "underlayColor": "#9E9D24"
+  },
+  {
+    "name": "Сингулярность титана",
+    "id": "titanium1",
+    "type": "chemical",
+    "overlayColor": "#B8C6D4",
+    "underlayColor": "#37474F"
+  },
+  {
+    "name": "Сингулярность ванадия",
+    "id": "vanadium",
+    "type": "chemical",
+    "overlayColor": "#CE93D8",
+    "underlayColor": "#5C6BC0"
+  },
+  {
+    "name": "Сингулярность хрома",
+    "id": "chromium",
+    "type": "chemical",
+    "overlayColor": "#66BB6A",
+    "underlayColor": "#1B5E20"
+  },
+  {
+    "name": "Сингулярность марганца",
+    "id": "manganese",
+    "type": "chemical",
+    "overlayColor": "#BCAAA4",
+    "underlayColor": "#6D4C41"
+  },
+  {
+    "name": "Сингулярность железа",
+    "id": "iron",
+    "type": "chemical",
+    "overlayColor": "#BCBCBC",
+    "underlayColor": "#8D6E63"
+  },
+  {
+    "name": "Сингулярность кобальта",
+    "id": "cobalt1",
+    "type": "chemical",
+    "overlayColor": "#42A5F5",
+    "underlayColor": "#0D47A1"
+  },
+  {
+    "name": "Сингулярность никеля",
+    "id": "nickel",
+    "type": "chemical",
+    "overlayColor": "#AED581",
+    "underlayColor": "#558B2F"
+  },
+  {
+    "name": "Сингулярность меди",
+    "id": "copper",
+    "type": "chemical",
+    "overlayColor": "#FF8A65",
+    "underlayColor": "#BF360C"
+  },
+  {
+    "name": "Сингулярность цинка",
+    "id": "zinc1",
+    "type": "chemical",
+    "overlayColor": "#80CBC4",
+    "underlayColor": "#004D40"
+  },
+  {
+    "name": "Сингулярность иттрия",
+    "id": "yttrium",
+    "type": "chemical",
+    "overlayColor": "#EF9A9A",
+    "underlayColor": "#C62828"
+  },
+  {
+    "name": "Сингулярность циркония",
+    "id": "zirconium",
+    "type": "chemical",
+    "overlayColor": "#FFCC80",
+    "underlayColor": "#E65100"
+  },
+  {
+    "name": "Сингулярность ниобия",
+    "id": "niobium",
+    "type": "chemical",
+    "overlayColor": "#90CAF9",
+    "underlayColor": "#1565C0"
+  },
+  {
+    "name": "Сингулярность молибдена",
+    "id": "molybdenum",
+    "type": "chemical",
+    "overlayColor": "#A5D6A7",
+    "underlayColor": "#2E7D32"
+  },
+  {
+    "name": "Сингулярность рутения",
+    "id": "ruthenium",
+    "type": "chemical",
+    "overlayColor": "#CE93D8",
+    "underlayColor": "#7B1FA2"
+  },
+  {
+    "name": "Сингулярность родия",
+    "id": "rhodium",
+    "type": "chemical",
+    "overlayColor": "#FFF59D",
+    "underlayColor": "#F9A825"
+  },
+  {
+    "name": "Сингулярность палладия",
+    "id": "palladium1",
+    "type": "chemical",
+    "overlayColor": "#FFAB91",
+    "underlayColor": "#D84315"
+  },
+  {
+    "name": "Сингулярность серебра",
+    "id": "silver",
+    "type": "chemical",
+    "overlayColor": "#F5F5F5",
+    "underlayColor": "#B0BEC5"
+  },
+  {
+    "name": "Сингулярность кадмия",
+    "id": "cadmium",
+    "type": "chemical",
+    "overlayColor": "#FFD54F",
+    "underlayColor": "#FF6F00"
+  },
+  {
+    "name": "Сингулярность гафния",
+    "id": "hafnium",
+    "type": "chemical",
+    "overlayColor": "#80DEEA",
+    "underlayColor": "#00838F"
+  },
+  {
+    "name": "Сингулярность тантала",
+    "id": "tantalum",
+    "type": "chemical",
+    "overlayColor": "#B39DDB",
+    "underlayColor": "#4527A0"
+  },
+  {
+    "name": "Сингулярность вольфрама",
+    "id": "tungsten1",
+    "type": "chemical",
+    "overlayColor": "#78909C",
+    "underlayColor": "#263238"
+  },
+  {
+    "name": "Сингулярность осмия",
+    "id": "osmium1",
+    "type": "chemical",
+    "overlayColor": "#4DD0E1",
+    "underlayColor": "#006064"
+  },
+  {
+    "name": "Сингулярность иридия",
+    "id": "iridium",
+    "type": "chemical",
+    "overlayColor": "#FFF8E1",
+    "underlayColor": "#FFD54F"
+  },
+  {
+    "name": "Сингулярность платины",
+    "id": "platinum",
+    "type": "chemical",
+    "overlayColor": "#E8EAF6",
+    "underlayColor": "#7986CB"
+  },
+  {
+    "name": "Сингулярность золота",
+    "id": "gold",
+    "type": "chemical",
+    "overlayColor": "#FFD700",
+    "underlayColor": "#FF8F00"
+  },
+  {
+    "name": "Сингулярность меркурия",
+    "id": "mercury",
+    "type": "chemical",
+    "overlayColor": "#CFD8DC",
+    "underlayColor": "#546E7A"
+  },
+  {
+    "name": "Сингулярность элериума",
+    "id": "elerium",
+    "type": "chemical",
+    "overlayColor": "#69F0AE",
+    "underlayColor": "#00C853"
+  },
+  {
+    "name": "Сингулярность ультрафина",
+    "id": "ultrafin",
+    "type": "chemical",
+    "overlayColor": "#B388FF",
+    "underlayColor": "#6200EA"
+  },
+  {
+    "name": "Сингулярность лантана",
+    "id": "lanthanum",
+    "type": "chemical",
+    "overlayColor": "#E0E0E0",
+    "underlayColor": "#757575"
+  },
+  {
+    "name": "Сингулярность церия",
+    "id": "cerium",
+    "type": "chemical",
+    "overlayColor": "#FFF9C4",
+    "underlayColor": "#E65100"
+  },
+  {
+    "name": "Сингулярность празеодима",
+    "id": "praseodymium",
+    "type": "chemical",
+    "overlayColor": "#C8E6C9",
+    "underlayColor": "#388E3C"
+  },
+  {
+    "name": "Сингулярность неодима",
+    "id": "neodymium",
+    "type": "chemical",
+    "overlayColor": "#F8BBD0",
+    "underlayColor": "#AD1457"
+  },
+  {
+    "name": "Сингулярность самария",
+    "id": "samarium",
+    "type": "chemical",
+    "overlayColor": "#FFF176",
+    "underlayColor": "#C6A700"
+  },
+  {
+    "name": "Сингулярность европия",
+    "id": "europium",
+    "type": "chemical",
+    "overlayColor": "#FF8A80",
+    "underlayColor": "#C62828"
+  },
+  {
+    "name": "Сингулярность гадолиния",
+    "id": "gadolinium",
+    "type": "chemical",
+    "overlayColor": "#B0BEC5",
+    "underlayColor": "#455A64"
+  },
+  {
+    "name": "Сингулярность тербия",
+    "id": "terbium",
+    "type": "chemical",
+    "overlayColor": "#81C784",
+    "underlayColor": "#2E7D32"
+  },
+  {
+    "name": "Сингулярность диспрозия",
+    "id": "dysprosium",
+    "type": "chemical",
+    "overlayColor": "#81D4FA",
+    "underlayColor": "#0277BD"
+  },
+  {
+    "name": "Сингулярность гольмия",
+    "id": "holmium",
+    "type": "chemical",
+    "overlayColor": "#FFCC80",
+    "underlayColor": "#E65100"
+  },
+  {
+    "name": "Сингулярность эрбия",
+    "id": "erbium",
+    "type": "chemical",
+    "overlayColor": "#F48FB1",
+    "underlayColor": "#C2185B"
+  },
+  {
+    "name": "Сингулярность тулия",
+    "id": "thulium",
+    "type": "chemical",
+    "overlayColor": "#B2EBF2",
+    "underlayColor": "#00838F"
+  },
+  {
+    "name": "Сингулярность иттербия",
+    "id": "ytterbium",
+    "type": "chemical",
+    "overlayColor": "#C5CAE9",
+    "underlayColor": "#283593"
+  },
+  {
+    "name": "Сингулярность лютеция",
+    "id": "lutetium",
+    "type": "chemical",
+    "overlayColor": "#F5F5F5",
+    "underlayColor": "#78909C"
+  },
+  {
+    "name": "Сингулярность Item 1",
+    "id": "item_1",
+    "type": "standard",
+    "overlayColor": "#FFFFFF",
+    "underlayColor": "#000000"
+  },
+  {
+    "name": "Сингулярность Item 2",
+    "id": "item_2",
+    "type": "standard",
+    "overlayColor": "#FFFFFF",
+    "underlayColor": "#000000"
+  },
+  {
+    "name": "Сингулярность Item 3",
+    "id": "item_3",
+    "type": "standard",
+    "overlayColor": "#FFFFFF",
+    "underlayColor": "#000000"
+  },
+  {
+    "name": "Сингулярность Item 4",
+    "id": "item_4",
+    "type": "standard",
+    "overlayColor": "#FFFFFF",
+    "underlayColor": "#000000"
+  },
+  {
+    "name": "Сингулярность Item 5",
+    "id": "item_5",
+    "type": "standard",
+    "overlayColor": "#FFFFFF",
+    "underlayColor": "#000000"
+  },
+  {
+    "name": "Сингулярность Item 6",
+    "id": "item_6",
+    "type": "standard",
+    "overlayColor": "#FFFFFF",
+    "underlayColor": "#000000"
+  },
+  {
+    "name": "Сингулярность Item 7",
+    "id": "item_7",
+    "type": "standard",
+    "overlayColor": "#FFFFFF",
+    "underlayColor": "#000000"
+  }
+]

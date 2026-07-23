@@ -1,0 +1,53 @@
+# Все размеры, радиусы, длительности анимаций
+class AppConstants:
+    DEFAULT_WIDTH = 1250
+    DEFAULT_HEIGHT = 760
+    MIN_WIDTH = 1000
+    MIN_HEIGHT = 650
+
+    RADIUS_WINDOW = 20
+    RADIUS_PANEL = 18
+    RADIUS_CARD = 14
+    RADIUS_BUTTON = 12
+    RADIUS_PROGRESS = 8
+
+    PADDING_XS = 4
+    PADDING_SM = 8
+    PADDING_MD = 12
+    PADDING_LG = 16
+    PADDING_XL = 24
+    OUTER_MARGIN = 16
+    GAP_BETWEEN_PANELS = 18
+
+    TITLE_BAR_HEIGHT = 44
+    SAVE_BUTTON_HEIGHT = 38          # уменьшено
+    CIRCULAR_BUTTON_DIAMETER = 48
+    FLOATING_MENU_BUTTON_HEIGHT = 42
+    LOG_CONSOLE_HEIGHT = 200
+    PROGRESS_BAR_HEIGHT = 10
+
+    WINDOW_BTN_SIZE = 34
+
+    ANIM_FAST = 120
+    ANIM_NORMAL = 200
+    ANIM_SLOW = 300
+    ANIM_FADE = 200
+    ANIM_SLIDE = 250
+    ANIM_MENU_OPEN = 250
+    ANIM_PROGRESS = 250
+
+    FONT_MAIN = "Tenali Ramakrishna"
+    FONT_LOGO = "Stick"
+    FONT_MONO = "Courier Prime"
+
+    FONT_SIZE_TITLE = 30
+    FONT_SIZE_DROP_TITLE = 36        # для "Drop your file"
+    FONT_SIZE_SUBTITLE = 20
+    FONT_SIZE_NORMAL = 14
+    FONT_SIZE_SMALL = 12
+    FONT_SIZE_LOG = 13
+
+    ICON_SIZE_MENU = 24
+    ICON_SIZE_CARD = 48
+
+    MAX_LOG_LINES = 5000

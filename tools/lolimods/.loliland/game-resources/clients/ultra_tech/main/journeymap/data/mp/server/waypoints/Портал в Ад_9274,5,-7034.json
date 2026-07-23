@@ -1,0 +1,17 @@
+{
+  "id": "Портал в Ад_9274,5,-7034",
+  "name": "Портал в Ад",
+  "icon": "waypoint-normal.png",
+  "x": 9274,
+  "y": 5,
+  "z": -7034,
+  "r": 159,
+  "g": 0,
+  "b": 211,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

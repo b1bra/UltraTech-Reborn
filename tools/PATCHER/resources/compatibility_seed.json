@@ -1,1 +1,0 @@
-{"entries":[{"old":"org.lwjgl.opengl.Display","new":"com.mojang.blaze3d.systems.RenderSystem","kind":"class","mc":"1.13+","level":"low","probability":0.35},{"old":"cpw.mods.fml.common.Mod","new":"net.minecraftforge.fml.common.Mod","kind":"annotation","mc":"1.13+","level":"medium","probability":0.62}]}

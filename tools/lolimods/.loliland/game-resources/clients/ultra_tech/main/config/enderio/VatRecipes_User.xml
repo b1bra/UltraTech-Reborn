@@ -1,0 +1,218 @@
+<VatRecipes>
+    <recipeGroup name="custom">
+        <recipe name="Rocket_fuel" energyCost="100">
+            <input>
+                <itemStack modID="IC2" itemName="itemDust" itemMeta="14" slot="0" multiplier="1"/>
+                <itemStack modID="IC2" itemName="itemDust" itemMeta="9" slot="1" multiplier="1"/>
+                <fluidStack name="oil" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="rocket_fuel"/>
+            </output>
+        </recipe>
+
+        <recipe name="Cloud_seed" energyCost="100">
+            <input>
+                <itemStack modID="IC2" itemName="itemCellEmpty" itemMeta="9" slot="0" multiplier="1"/>
+                <itemStack modID="ThermalFoundation" itemName="material" itemMeta="513" slot="1" multiplier="1"/>
+                <fluidStack name="molecule.polyvinylchloride" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="cloud_seed"/>
+            </output>
+        </recipe>
+
+        <recipe name="Hootch" energyCost="100">
+            <input>
+                <itemStack modID="EnderIO" itemName="itemPowderIngot" itemMeta="8" slot="0" multiplier="1"/>
+                <itemStack modID="minecraft" itemName="sugar" slot="1" multiplier="1"/>
+                <fluidStack name="bioethanol" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="hootch"/>
+            </output>
+        </recipe>
+
+        <recipe name="Alumite.molten" energyCost="100">
+            <input>
+                <itemStack modID="minecraft" itemName="obsidian" slot="0" multiplier="1"/>
+                <itemStack modID="minecraft" itemName="iron_ingot" slot="1" multiplier="1"/>
+                <fluidStack name="element.al" multiplier="1"/>
+            </input>
+            <output>
+                <fluidStack name="alumite.molten"/>
+            </output>
+        </recipe>
+
+        <recipe name="Liquid_sunshine" energyCost="100">
+            <input>
+                <itemStack modID="ThermalFoundation" itemName="material" itemMeta="43" slot="0" multiplier="1"/>
+                <itemStack modID="ExtraBees" itemName="misc" itemMeta="7" slot="1" multiplier="1"/>
+                <fluidStack name="seedoil" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="liquid_sunshine"/>
+            </output>
+        </recipe>
+
+        <recipe name="pigiron.molten" energyCost="100">
+            <input>
+                <itemStack modID="ExtraTiC" itemName="funStuffIngot" itemMeta="2" slot="0" multiplier="2"/>
+                <itemStack modID="MineFactoryReloaded" itemName="meat.ingot.raw" slot="1" multiplier="2"/>
+                <fluidStack name="emerald.liquid" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="pigiron.molten"/>
+            </output>
+        </recipe>
+
+        <recipe name="Fairy.molten" energyCost="100">
+            <input>
+                <itemStack modID="TConstruct" itemName="materials" itemMeta="34" slot="0" multiplier="1"/>
+                <itemStack modID="ExtraTiC" itemName="funStuffIngot" slot="1" multiplier="1"/>
+                <fluidStack name="liquid_sunshine" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="fairy.molten"/>
+            </output>
+        </recipe>
+
+        <recipe name="Nutrient_distillation" energyCost="100">
+            <input>
+                <itemStack modID="ThermalExpansion" itemName="material" itemMeta="516" slot="0" multiplier="1"/>
+                <itemStack modID="ThermalExpansion" itemName="material" itemMeta="512" slot="1" multiplier="1"/>
+                <fluidStack name="biomass" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="nutrient_distillation"/>
+            </output>
+        </recipe>
+
+        <recipe name="Adamantine.molten" energyCost="100">
+            <input>
+                <itemStack modID="lolienergistics" itemName="ingot_rose_gold" slot="0" multiplier="2"/>
+                <itemStack modID="loli_dragon_might" itemName="infinity_dragon_blood" slot="1" multiplier="2"/>
+                <fluidStack name="redstone" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="adamantine.molten"/>
+            </output>
+        </recipe>
+
+        <recipe name="blood" energyCost="100">
+            <input>
+                <itemStack modID="IC2" itemName="itemCellEmpty" itemMeta="10" slot="0" multiplier="1"/>
+                <itemStack modID="ThermalFoundation" itemName="material" itemMeta="512" slot="1" multiplier="1"/>
+                <fluidStack name="molecule.polyvinylchloride" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="fire_water"/>
+            </output>
+        </recipe>
+    </recipeGroup>
+
+    <recipeGroup name="EnderIO" enabled="false">
+        <recipe name="Nutrient Distilation" energyCost="10000" allowMissing="true">
+            <input>
+                <itemStack modID="Thaumcraft" itemName="ItemZombieBrain" slot="0" multiplier="2"/>
+                <itemStack oreDictionary="itemSkull" slot="0" multiplier="2"/>
+                <itemStack modID="minecraft" itemName="rotten_flesh" slot="0" multiplier="1.5"/>
+                <itemStack modID="minecraft" itemName="chicken" slot="0" multiplier="0.75"/>
+                <itemStack modID="minecraft" itemName="beef" slot="0" multiplier="0.75"/>
+                <itemStack modID="minecraft" itemName="porkchop" slot="0" multiplier="0.75"/>
+                <itemStack modID="minecraft" itemName="sugar" slot="1" multiplier="1"/>
+                <itemStack modID="minecraft" itemName="brown_mushroom" slot="1" multiplier="1.5"/>
+                <itemStack modID="minecraft" itemName="red_mushroom" slot="1" multiplier="1.5"/>
+                <itemStack modID="minecraft" itemName="nether_wart" slot="1" multiplier="1.5"/>
+                <itemStack modID="minecraft" itemName="fermented_spider_eye" slot="1" multiplier="2"/>
+                <fluidStack name="water" multiplier="0.25"/>
+            </input>
+            <output>
+                <fluidStack name="nutrient_distillation"/>
+            </output>
+        </recipe>
+        <recipe name="Hootch" energyCost="10000">
+            <input>
+                <itemStack modID="minecraft" itemName="poisonous_potato" slot="0" multiplier="8"/>
+                <itemStack modID="minecraft" itemName="potato" slot="0" multiplier="4"/>
+                <itemStack modID="minecraft" itemName="apple" slot="0" multiplier="3.5"/>
+                <itemStack modID="minecraft" itemName="wheat" slot="0" multiplier="3"/>
+                <itemStack modID="minecraft" itemName="wheat_seeds" slot="0" multiplier="2"/>
+                <itemStack modID="minecraft" itemName="sugar" slot="1" multiplier="1"/>
+                <fluidStack name="water" multiplier="0.25"/>
+            </input>
+            <output>
+                <fluidStack name="hootch"/>
+            </output>
+        </recipe>
+        <recipe name="Rocket Fuel" energyCost="10000">
+            <input>
+                <itemStack modID="minecraft" itemName="gunpowder" slot="0" multiplier="1"/>
+                <itemStack modID="minecraft" itemName="redstone" slot="1" multiplier="1"/>
+                <fluidStack name="hootch" multiplier="1"/>
+            </input>
+            <output>
+                <fluidStack name="rocket_fuel"/>
+            </output>
+        </recipe>
+        <recipe name="Fire Water" energyCost="10000">
+            <input>
+                <itemStack modID="minecraft" itemName="blaze_powder" slot="0" multiplier="1"/>
+                <itemStack modID="minecraft" itemName="redstone" slot="1" multiplier="1"/>
+                <fluidStack name="hootch" multiplier="1"/>
+            </input>
+            <output>
+                <fluidStack name="fire_water"/>
+            </output>
+        </recipe>
+        <recipe name="Liquid Sunshine" energyCost="10000">
+            <input>
+                <itemStack modID="minecraft" itemName="glowstone_dust" slot="0" multiplier="0.25"/>
+                <itemStack modID="minecraft" itemName="glowstone" slot="0" multiplier="1"/>
+                <itemStack modID="minecraft" itemName="double_plant" itemMeta="0" slot="1" multiplier="1"/>
+                <fluidStack name="fire_water" multiplier="1"/>
+            </input>
+            <output>
+                <fluidStack name="liquid_sunshine"/>
+            </output>
+        </recipe>
+        <recipe name="Cloud Seed" energyCost="10000" allowMissing="true">
+            <input>
+                <itemStack oreDictionary="dustSalt" slot="0" multiplier="1"/>
+                <itemStack oreDictionary="itemClay" slot="0" multiplier="0.5"/>
+                <itemStack modID="minecraft" itemName="clay" slot="0" multiplier="2"/>
+                <itemStack modID="minecraft" itemName="snowball" slot="1" multiplier="0.1"/>
+                <itemStack modID="minecraft" itemName="snow" slot="1" multiplier="0.5"/>
+                <itemStack oreDictionary="ice" slot="1" multiplier="0.5"/>
+                <itemStack modID="minecraft" itemName="packed_ice" itemMeta="0" slot="1" multiplier="1"/>
+                <fluidStack name="water" multiplier="1"/>
+            </input>
+            <output>
+                <fluidStack name="cloud_seed"/>
+            </output>
+        </recipe>
+        <recipe name="Concentrated Cloud Seed" energyCost="20000" allowMissing="true">
+            <input>
+                <itemStack oreDictionary="dustSalt" slot="0" multiplier="1"/>
+                <itemStack oreDictionary="itemClay" slot="0" multiplier="0.5"/>
+                <itemStack modID="minecraft" itemName="clay" slot="0" multiplier="2"/>
+                <fluidStack name="cloud_seed" multiplier="1"/>
+            </input>
+            <output>
+                <fluidStack name="cloud_seed_concentrated"/>
+            </output>
+        </recipe>
+        <recipe name="Alumite.molten" energyCost="10000">
+            <input>
+                <itemStack modID="lolienergistics" itemName="ingot_rose_gold" slot="0" multiplier="2"/>
+                <itemStack modID="loli_dragon_might" itemName="infinity_dragon_blood" slot="1" multiplier="2"/>
+                <fluidStack name="redstone" multiplier="2"/>
+            </input>
+            <output>
+                <fluidStack name="alumite.molten"/>
+            </output>
+
+
+        </recipe>
+    </recipeGroup>
+</VatRecipes>

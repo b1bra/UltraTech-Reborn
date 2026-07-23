@@ -1,0 +1,13 @@
+tile.Radio.name=§5Радио
+tile.Speaker.name=§5Динамик
+tile.DummySpeaker.name=§5Декоративный динамик
+item.DragonsRadioTuner.name=§5Радио тюнер
+itemGroup.tabRadioMod=Dragon's Radio Mod
+msg.selected_speaker=[Dragon's Radio Mod] Выбран динамик
+msg.added_speaker=[Dragon's Radio Mod] Добавлен динамик
+msg.failed_adding_speaker_limit=[Dragon's Radio Mod] Не удалось добавить динамик. Разрешено максимум 10!
+msg.failed_adding_speaker_exists=[Dragon's Radio Mod] Этот динамик уже привязан к этому радио
+msg.failed_adding_speaker_unknown=[Dragon's Radio Mod] Не удалось добавить динамик.
+msg.not_correct_stream=[Dragon's Radio Mod] Введенный URL-адрес не в правильной форме.
+msg.invalid_link=[Dragon's Radio Mod] URL, который был вставлен в радио, недействителен. Убедитесь, что ваша ссылка относится к файлу mp3 или mp3-потоку, который находится в формате m3u или pls.
+msg.failed_adding_speaker_not_selected=[Dragon's Radio Mod] Не выбран динамик!
