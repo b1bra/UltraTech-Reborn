@@ -11,5 +11,4 @@
 *.dll filter=lfs diff=lfs merge=lfs -text
 tools/lolimods/.loliland/game-resources/runtimes/java-25/lib filter=lfs diff=lfs merge=lfs -text
 *.exe filter=lfs diff=lfs merge=lfs -text
-*.jar filter=lfs diff=lfs merge=lfs -text
 tools/lolimods/.loliland/game-resources/runtimes/java-25/lib/modules filter=lfs diff=lfs merge=lfs -text

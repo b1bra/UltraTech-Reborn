@@ -1,0 +1,1 @@
+package cpw.mods.fml.common.gameevent; import net.minecraft.entity.player.EntityPlayer; public class PlayerEvent { public EntityPlayer player; public static class PlayerLoggedInEvent extends PlayerEvent {} }
