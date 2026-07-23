@@ -1,15 +1,35 @@
-plugins { id 'java' }
+plugins {
+    id 'java'
+}
 
 group = 'ru.loliland'
 version = '1.7.10-0.1.0'
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
+jar {
+    manifest {
+        attributes(
+                'Implementation-Title': 'LoliSimulation',
+                'Implementation-Version': version
+        )
+    }
+}
 
-jar { manifest { attributes 'Implementation-Title': 'LoliSimulation', 'Implementation-Version': version } }
+sourceSets {
+    compatStubs {
+        java {
+            srcDir 'src/compatStubs/java'
+        }
+    }
+}
 
-sourceSets { compatStubs { java { srcDir 'src/compatStubs/java' } } }
 compileJava.dependsOn compileCompatStubsJava
 compileJava.classpath += sourceSets.compatStubs.output
-jar { exclude 'cpw/**', 'net/minecraftforge/**', 'net/minecraft/**' }
+
+jar {
+    exclude 'cpw/**', 'net/minecraftforge/**', 'net/minecraft/**'
+}

@@ -1,1 +1,0 @@
-package cpw.mods.fml.common; import java.util.*; public class Loader { public static Loader instance(){return new Loader();} public Map<String,ModContainer> getIndexedModList(){return new LinkedHashMap<String,ModContainer>();} }
