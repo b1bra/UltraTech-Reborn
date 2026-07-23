@@ -1,0 +1,1 @@
+package cpw.mods.fml.common.gameevent; import net.minecraft.world.World; public class TickEvent { public enum Phase { START, END } public static class WorldTickEvent { public Phase phase; public World world; } }
