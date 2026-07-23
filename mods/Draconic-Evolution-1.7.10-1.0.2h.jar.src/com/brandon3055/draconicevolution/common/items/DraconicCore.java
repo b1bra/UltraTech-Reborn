@@ -8,8 +8,8 @@
 /*    */ import cpw.mods.fml.relauncher.Side;
 /*    */ import cpw.mods.fml.relauncher.SideOnly;
 /*    */ import java.util.List;
-/*    */ import net.loliland.mctags.api.Tags;
-/*    */ import net.loliland.mctags.api.spawner.ISpawnerLogic;
+/*    */ import com.brandon3055.brandonscore.common.tags.Tags;
+/*    */ import com.brandon3055.brandonscore.common.tags.SpawnerLogic;
 /*    */ import net.minecraft.block.Block;
 /*    */ import net.minecraft.entity.player.EntityPlayer;
 /*    */ import net.minecraft.item.ItemStack;
@@ -35,7 +35,7 @@
 /*    */ 
 /*    */   
 /*    */   public boolean func_77648_a(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int par7, float par8, float par9, float par10) {
-/* 38 */     ISpawnerLogic logic = Tags.Spawners.MOB_SPAWNER.getLogic((IBlockAccess)world, x, y, z);
+/* 38 */     SpawnerLogic logic = Tags.Spawners.MOB_SPAWNER.getLogic((IBlockAccess)world, x, y, z);
 /*    */     
 /* 40 */     if (logic != null) {
 /* 41 */       String mobName = logic.getEntityName();

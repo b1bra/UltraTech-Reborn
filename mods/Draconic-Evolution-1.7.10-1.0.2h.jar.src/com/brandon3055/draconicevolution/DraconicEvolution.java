@@ -21,7 +21,7 @@
 /*    */ 
 /*    */ 
 /*    */ 
-/*    */ @Mod(modid = "DraconicEvolution", name = "Draconic Evolution", version = "1.0.2h", guiFactory = "com.brandon3055.draconicevolution.client.gui.DEGUIFactory", dependencies = "after:NotEnoughItems;after:NotEnoughItems;after:ThermalExpansion;after:ThermalFoundation;required-after:BrandonsCore@[1.0.0.11,);after:lolidimensions;")
+/*    */ @Mod(modid = "DraconicEvolution", name = "Draconic Evolution", version = "1.0.2h", guiFactory = "com.brandon3055.draconicevolution.client.gui.DEGUIFactory", dependencies = "after:NotEnoughItems;after:NotEnoughItems;after:ThermalExpansion;after:ThermalFoundation;required-after:BrandonsCore@[1.0.0.11,);")
 /*    */ public class DraconicEvolution
 /*    */ {
 /*    */   @Instance("DraconicEvolution")
