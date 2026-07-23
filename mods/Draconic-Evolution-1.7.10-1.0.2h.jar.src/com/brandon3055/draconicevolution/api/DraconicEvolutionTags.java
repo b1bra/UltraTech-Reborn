@@ -1,22 +1,22 @@
 /*    */ package com.brandon3055.draconicevolution.api;
 /*    */ 
-/*    */ import net.loliland.mctags.api.block.IBlockTag;
-/*    */ import net.loliland.mctags.api.item.IItemTag;
+/*    */ import com.brandon3055.brandonscore.common.tags.BlockTag;
+/*    */ import com.brandon3055.brandonscore.common.tags.ItemTag;
 /*    */ 
 /*    */ public final class DraconicEvolutionTags {
 /*    */   public static final class Blocks {
-/*  8 */     public static final IBlockTag DRACONIUM = IBlockTag.get("DraconicEvolution", "draconium");
-/*  9 */     public static final IBlockTag AWAKENED_DRACONIUM = IBlockTag.get("DraconicEvolution", "awakened_draconium");
+/*  8 */     public static final BlockTag DRACONIUM = BlockTag.get("DraconicEvolution", "draconium");
+/*  9 */     public static final BlockTag AWAKENED_DRACONIUM = BlockTag.get("DraconicEvolution", "awakened_draconium");
 /*    */   }
 /*    */   
 /*    */   public static final class Items
 /*    */   {
-/* 14 */     public static final IItemTag AWAKENED_DRACONIUM_NUGGET = IItemTag.get("DraconicEvolution", "awakened_draconium_nugget");
+/* 14 */     public static final ItemTag AWAKENED_DRACONIUM_NUGGET = ItemTag.get("DraconicEvolution", "awakened_draconium_nugget");
 /*    */ 
 /*    */     
-/* 17 */     public static final IItemTag AWAKENED_DRACONIUM_INGOT = IItemTag.get("DraconicEvolution", "awakened_draconium_ingot");
+/* 17 */     public static final ItemTag AWAKENED_DRACONIUM_INGOT = ItemTag.get("DraconicEvolution", "awakened_draconium_ingot");
 /*    */     
-/* 19 */     public static final IItemTag CHAOS_SHARD = IItemTag.get("DraconicEvolution", "chaos_shard");
+/* 19 */     public static final ItemTag CHAOS_SHARD = ItemTag.get("DraconicEvolution", "chaos_shard");
 /*    */   }
 /*    */ }
 
