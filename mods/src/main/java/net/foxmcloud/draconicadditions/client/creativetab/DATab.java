@@ -6,8 +6,8 @@ import com.brandon3055.draconicevolution.client.creativetab.DETab;
 import net.foxmcloud.draconicadditions.DAFeatures;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class DATab extends DETab {
 	private String label;

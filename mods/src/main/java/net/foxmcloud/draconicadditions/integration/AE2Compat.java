@@ -1,7 +1,7 @@
 package net.foxmcloud.draconicadditions.integration;
 
-import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.event.FMLInterModComms;
+import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.event.FMLInterModComms;
 
 public class AE2Compat {
 	public static void init() {

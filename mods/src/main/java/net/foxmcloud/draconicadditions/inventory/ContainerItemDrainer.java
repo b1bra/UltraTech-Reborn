@@ -3,7 +3,7 @@ package net.foxmcloud.draconicadditions.inventory;
 import com.brandon3055.brandonscore.inventory.ContainerBCBase;
 import com.brandon3055.brandonscore.inventory.SlotCheckValid;
 
-import cofh.redstoneflux.api.IEnergyContainerItem;
+import cofh.api.energy.IEnergyContainerItem;
 import net.foxmcloud.draconicadditions.blocks.tileentity.TileItemDrainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

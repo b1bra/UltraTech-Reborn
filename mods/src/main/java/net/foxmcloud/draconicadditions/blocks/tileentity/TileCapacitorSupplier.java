@@ -7,13 +7,13 @@ import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
 import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 import com.brandon3055.brandonscore.utils.ItemNBTHelper;
 
-import cofh.redstoneflux.api.IEnergyContainerItem;
-import cofh.redstoneflux.api.IEnergyProvider;
-import cofh.redstoneflux.api.IEnergyReceiver;
+import cofh.api.energy.IEnergyContainerItem;
+import cofh.api.energy.IEnergyProvider;
+import cofh.api.energy.IEnergyReceiver;
 import net.foxmcloud.draconicadditions.DAFeatures;
 import net.foxmcloud.draconicadditions.items.Hermal;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import scala.Int;
@@ -63,7 +63,7 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
         if (getEnergyStored() <= 0) {
             return 0;
         }
-        for (EnumFacing direction : EnumFacing.VALUES) {
+        for (ForgeDirection direction : ForgeDirection.VALID_DIRECTIONS) {
             energyStorage.modifyEnergyStored(-sendEnergyTo(direction));
         }
         return 0;
@@ -120,7 +120,7 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
 	}
 	
 	@Override
-	public boolean canConnectEnergy(EnumFacing from) {
+	public boolean canConnectEnergy(ForgeDirection from) {
 		return true;
 	}
 

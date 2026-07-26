@@ -14,9 +14,9 @@ import net.foxmcloud.draconicadditions.entity.EntityPlug;
 import net.foxmcloud.draconicadditions.utils.DATextures;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ClientProxy extends CommonProxy {
 

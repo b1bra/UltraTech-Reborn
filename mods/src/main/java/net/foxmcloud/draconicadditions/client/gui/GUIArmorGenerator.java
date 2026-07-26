@@ -14,7 +14,7 @@ import net.foxmcloud.draconicadditions.utils.DATextures;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.text.TextFormatting;
 
 public class GUIArmorGenerator extends GuiContainer {
@@ -44,7 +44,7 @@ public class GUIArmorGenerator extends GuiContainer {
 			drawTexturedModalRect(guiLeft + 63, guiTop + 34, 36, ySize, 18, 18); //Fuel box
 		}
 
-		float power = (float) tile.energySync.value / (float) tile.getMaxEnergyStored(EnumFacing.DOWN) * -1 + 1;
+		float power = (float) tile.energySync.value / (float) tile.getMaxEnergyStored(ForgeDirection.DOWN) * -1 + 1;
 		float fuel = tile.burnTimeRemaining.value / ((float) tile.burnTime.value) * -1 + 1;
 
 		drawTexturedModalRect(guiLeft + 83, guiTop + 11 + (int) (power * 40), xSize, (int) (power * 40), 12, 40 - (int) (power * 40)); //Power bar
@@ -59,7 +59,7 @@ public class GUIArmorGenerator extends GuiContainer {
 		if (GuiHelper.isInRect(83, 10, 12, 40, x, y)) {
 			ArrayList<String> internal = new ArrayList<>();
 			internal.add(I18n.format("info.de.energyBuffer.txt"));
-			internal.add("" + TextFormatting.BLUE + tile.energySync.value + "/" + tile.getMaxEnergyStored(EnumFacing.UP));
+			internal.add("" + TextFormatting.BLUE + tile.energySync.value + "/" + tile.getMaxEnergyStored(ForgeDirection.UP));
 			drawHoveringText(internal, x + guiLeft, y + guiTop, fontRenderer);
 		}
 	}
