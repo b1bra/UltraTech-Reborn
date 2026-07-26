@@ -10,7 +10,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.tileentity.TileEntity;
+import java.util.List;
+
 
 /**
  * TODO 1.7.10: reconnect this class to the correct Draconic Evolution 1.7.10
@@ -44,5 +46,6 @@ public class ChaosCrystalStable extends BlockBCore implements IChaosItem {
 	@Override
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase placer, ItemStack stack) {
 		// TODO 1.7.10: detonate/lock the real DE chaos crystal tile when the 1.7.10 class is wired back in.
+
 	}
 }

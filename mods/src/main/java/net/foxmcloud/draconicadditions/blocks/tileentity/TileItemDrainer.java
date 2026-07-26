@@ -93,6 +93,7 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 
 	@Override
 	public void onNeighborChange(int x, int y, int z) {
+
 		powered = world.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
 	}
 }

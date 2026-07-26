@@ -53,7 +53,7 @@ public class EntityPlug extends Entity {
 	public EntityPlug(World worldIn, EntityPlayer player, int x, int y, int z, ForgeDirection facing) {
 		this(worldIn, player, (double) x, (double) y, (double) z, facing);
 	}
-
+	
 
 	@Override
 	protected void entityInit() {}

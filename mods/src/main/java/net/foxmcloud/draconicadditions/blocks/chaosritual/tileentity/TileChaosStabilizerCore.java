@@ -54,6 +54,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 			checkMultiblock();
 			updateBlock();
 		}
+
 		if (!isRitualOngoing) {
 			if (isMultiblock) {
 				intensity = 0.25F;
@@ -331,6 +332,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 								item.setChaosStable(newStack, true);
 								EntityItem chaosItem = new EntityItem(world, xCoord, yCoord + 1.01D, zCoord, newStack);
 								world.spawnEntityInWorld(chaosItem);
+
 							}
 							else sendMessage(player, "msg.da.chaosStabilizer.canStabilize");
 						}

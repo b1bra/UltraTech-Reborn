@@ -27,6 +27,7 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	}
 
 	@Override
+
 	public float getBlockHardness(World world, int x, int y, int z) {
 		TileEntity tile = world.getTileEntity(x, y, z);
 		return tile instanceof TileChaosStabilizerCore ? 200F : super.getBlockHardness(world, x, y, z);
@@ -41,6 +42,7 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	@Override
 	public int getRenderType() {
 		return -1;
+
 	}
 
 	@Override
@@ -49,6 +51,7 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	}
 
 	@Override
+
 	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
 		return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1, z + 1);
 	}
@@ -57,6 +60,7 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
 		TileEntity tile = world.getTileEntity(x, y, z);
 		return tile instanceof TileChaosStabilizerCore ? AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1, z + 1) : super.getCollisionBoundingBoxFromPool(world, x, y, z);
+
 	}
 
 	@Override
@@ -69,6 +73,7 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 
 	@Override
 	@SideOnly(Side.CLIENT)
+
 	public void randomDisplayTick(World worldIn, int x, int y, int z, Random rand) {
 		if (worldIn.getTileEntity(x, y, z) instanceof TileChaosStabilizerCore) {
 			TileChaosStabilizerCore tile = (TileChaosStabilizerCore) worldIn.getTileEntity(x, y, z);
@@ -78,6 +83,7 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 					double py = y + 0.5D + ((0.5D - rand.nextDouble()) * 2);
 					double pz = z + 0.5D + ((0.5D - rand.nextDouble()) * 2);
 					worldIn.spawnParticle("portal", px, py, pz, px - x, py - y - 0.5D, pz - z);
+
 				}
 			}
 		}
