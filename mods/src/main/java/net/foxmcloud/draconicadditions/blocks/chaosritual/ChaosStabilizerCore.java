@@ -2,34 +2,20 @@ package net.foxmcloud.draconicadditions.blocks.chaosritual;
 
 import java.util.Random;
 
-import javax.annotation.Nullable;
+import com.brandon3055.brandonscore.block.BlockBCore;
 
-import com.brandon3055.brandonscore.blocks.BlockBCore;
-import com.brandon3055.brandonscore.registry.Feature;
-import com.brandon3055.brandonscore.registry.IRenderOverride;
-
-import codechicken.lib.model.ModelRegistryHelper;
 import net.foxmcloud.draconicadditions.blocks.chaosritual.tileentity.TileChaosStabilizerCore;
-import net.foxmcloud.draconicadditions.client.render.item.RenderItemChaosStabilizerCore;
-import net.foxmcloud.draconicadditions.client.render.tile.RenderTileChaosStabilizerCore;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumBlockRenderType;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.Explosion;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvider, IRenderOverride {
-
-	private static final AxisAlignedBB FULL_AABB = new AxisAlignedBB(0, 0, 0, 1, 1, 1);
+public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvider {
 
 	public ChaosStabilizerCore() {
 		super();
@@ -40,84 +26,58 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 		return new TileChaosStabilizerCore();
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
-		TileEntity tile = world.getTileEntity(pos);
-		if (tile instanceof TileChaosStabilizerCore) {
-			return 200;
-		}
-		return super.getBlockHardness(blockState, world, pos);
+	public float getBlockHardness(World world, int x, int y, int z) {
+		TileEntity tile = world.getTileEntity(x, y, z);
+		return tile instanceof TileChaosStabilizerCore ? 200F : super.getBlockHardness(world, x, y, z);
 	}
 
 	@Override
-	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
-		TileEntity tile = world.getTileEntity(pos);
-		if (tile instanceof TileChaosStabilizerCore) {
-			return 6000000.0F;
-		}
-		return super.getExplosionResistance(world, pos, exploder, explosion);
+	public float getExplosionResistance(Entity exploder, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ) {
+		TileEntity tile = world.getTileEntity(x, y, z);
+		return tile instanceof TileChaosStabilizerCore ? 6000000.0F : super.getExplosionResistance(exploder, world, x, y, z, explosionX, explosionY, explosionZ);
 	}
 
 	@Override
-	public EnumBlockRenderType getRenderType(IBlockState state) {
-		return EnumBlockRenderType.INVISIBLE;
-	}
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	public void registerRenderer(Feature feature) {
-		ClientRegistry.bindTileEntitySpecialRenderer(TileChaosStabilizerCore.class, new RenderTileChaosStabilizerCore());
-		ModelRegistryHelper.registerItemRenderer(Item.getItemFromBlock(this), new RenderItemChaosStabilizerCore());
+	public int getRenderType() {
+		return -1;
 	}
 
 	@Override
-	public boolean registerNormal(Feature feature) {
+	public boolean isOpaqueCube() {
 		return false;
 	}
 
 	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
+	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
+		return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1, z + 1);
 	}
 
 	@Override
-	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos) {
-		return FULL_AABB;
-	}
-
-	@SuppressWarnings("deprecation")
-	@Nullable
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
-		TileEntity tile = worldIn.getTileEntity(pos);
-		if (tile instanceof TileChaosStabilizerCore) {
-			return FULL_AABB;
-		}
-		return super.getCollisionBoundingBox(blockState, worldIn, pos);
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+		TileEntity tile = world.getTileEntity(x, y, z);
+		return tile instanceof TileChaosStabilizerCore ? AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1, z + 1) : super.getCollisionBoundingBoxFromPool(world, x, y, z);
 	}
 
 	@Override
-	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
-		TileEntity tile = world.getTileEntity(pos);
+	public void onBlockExploded(World world, int x, int y, int z, Explosion explosion) {
+		TileEntity tile = world.getTileEntity(x, y, z);
 		if (!(tile instanceof TileChaosStabilizerCore)) {
-			super.onBlockExploded(world, pos, explosion);
+			super.onBlockExploded(world, x, y, z, explosion);
 		}
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-		if (worldIn.getTileEntity(pos) instanceof TileChaosStabilizerCore) {
-			TileChaosStabilizerCore tile = (TileChaosStabilizerCore) worldIn.getTileEntity(pos);
-			if (tile.isMultiblock.value) {
+	public void randomDisplayTick(World worldIn, int x, int y, int z, Random rand) {
+		if (worldIn.getTileEntity(x, y, z) instanceof TileChaosStabilizerCore) {
+			TileChaosStabilizerCore tile = (TileChaosStabilizerCore) worldIn.getTileEntity(x, y, z);
+			if (tile.isMultiblock) {
 				for (int i = 0; i < 10; i++) {
-					double x = pos.getX() + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double y = pos.getY() + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double z = pos.getZ() + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double xspeed = (x - pos.getX()) / 1;
-					double yspeed = -0.5D + ((y - pos.getY()) / 1);
-					double zspeed = (z - pos.getZ()) / 1;
-					worldIn.spawnParticle(EnumParticleTypes.PORTAL, x, y, z, xspeed, yspeed, zspeed, new int[0]);
+					double px = x + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					double py = y + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					double pz = z + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					worldIn.spawnParticle("portal", px, py, pz, px - x, py - y - 0.5D, pz - z);
 				}
 			}
 		}

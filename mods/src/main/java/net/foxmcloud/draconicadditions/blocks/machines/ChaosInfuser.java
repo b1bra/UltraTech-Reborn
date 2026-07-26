@@ -2,90 +2,34 @@ package net.foxmcloud.draconicadditions.blocks.machines;
 
 import java.util.Random;
 
-import com.brandon3055.brandonscore.blocks.BlockBCore;
+import com.brandon3055.brandonscore.block.BlockBCore;
 
 import net.foxmcloud.draconicadditions.DraconicAdditions;
 import net.foxmcloud.draconicadditions.GUIHandler;
 import net.foxmcloud.draconicadditions.blocks.tileentity.TileChaosInfuser;
-import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ChaosInfuser extends BlockBCore implements ITileEntityProvider {
-	public static final PropertyDirection FACING = BlockHorizontal.FACING;
-	public static final PropertyBool ACTIVE = PropertyBool.create("active");
 
 	public ChaosInfuser() {
 		super(Material.IRON);
-		this.setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(ACTIVE, false));
+		this.setDefaultDirection(ForgeDirection.NORTH);
 	}
 
 	@Override
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, FACING, ACTIVE);
-	}
-
-	@Override
-	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-		TileChaosInfuser tileChaosInfuser = worldIn.getTileEntity(pos) instanceof TileChaosInfuser ? (TileChaosInfuser) worldIn.getTileEntity(pos) : null;
-		return state.withProperty(ACTIVE, tileChaosInfuser != null && tileChaosInfuser.active.value);
-	}
-
-	@Override
-	public IBlockState getStateFromMeta(int meta) {
-		EnumFacing enumfacing = EnumFacing.VALUES[MathHelper.abs(meta % EnumFacing.VALUES.length)];
-
-		if (enumfacing.getAxis() == EnumFacing.Axis.Y) {
-			enumfacing = EnumFacing.NORTH;
-		}
-
-		return this.getDefaultState().withProperty(FACING, enumfacing);
-	}
-
-	@Override
-	public int getMetaFromState(IBlockState state) {
-		return state.getValue(FACING).getIndex();
-	}
-
-	@Override
-	public IBlockState withRotation(IBlockState state, Rotation rot) {
-		return state.withProperty(FACING, rot.rotate(state.getValue(FACING)));
-	}
-
-	@Override
-	public IBlockState withMirror(IBlockState state, Mirror mirrorIn) {
-		return state.withRotation(mirrorIn.toRotation(state.getValue(FACING)));
-	}
-
-	@Override
-	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand) {
-		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
-	}
-
-	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
-		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
+	public void onBlockPlacedBy(World worldIn, int x, int y, int z, EntityLivingBase placer, ItemStack stack) {
+		super.onBlockPlacedBy(worldIn, x, y, z, placer, stack);
 	}
 
 	@Override
@@ -93,15 +37,11 @@ public class ChaosInfuser extends BlockBCore implements ITileEntityProvider {
 		return new TileChaosInfuser();
 	}
 
-	@Override
-	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-		return 0;
-	}
 
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
-			FMLNetworkHandler.openGui(player, DraconicAdditions.instance, GUIHandler.GUIID_CHAOS_INFUSER, world, pos.getX(), pos.getY(), pos.getZ());
+			FMLNetworkHandler.openGui(player, DraconicAdditions.instance, GUIHandler.GUIID_CHAOS_INFUSER, world, x, y, z);
 		}
 		return true;
 	}
@@ -109,31 +49,36 @@ public class ChaosInfuser extends BlockBCore implements ITileEntityProvider {
 	@Override
 	@SideOnly(Side.CLIENT)
 	@SuppressWarnings("incomplete-switch")
-	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-		if (stateIn.getActualState(worldIn, pos).getValue(ACTIVE)) {
-			EnumFacing enumfacing = stateIn.getValue(FACING);
-			double d0 = pos.getX() + 0.5D;
-			double d1 = pos.getY() + 0.4 + rand.nextDouble() * 0.2;
-			double d2 = pos.getZ() + 0.5D;
+	public void randomDisplayTick(World worldIn, int x, int y, int z, Random rand) {
+		TileEntity tile = worldIn.getTileEntity(x, y, z);
+		boolean active = false;
+		if (tile instanceof TileChaosInfuser) {
+			active = ((TileChaosInfuser) tile).active;
+		}
+		if (active) {
+			ForgeDirection enumfacing = ForgeDirection.getOrientation(worldIn.getBlockMetadata(x, y, z));
+			double d0 = x + 0.5D;
+			double d1 = y + 0.4 + rand.nextDouble() * 0.2;
+			double d2 = z + 0.5D;
 			double d3 = 0.52D;
 			double d4 = rand.nextDouble() * 0.4D - 0.2D;
 
 			switch (enumfacing) {
 			case WEST:
-				worldIn.spawnParticle(EnumParticleTypes.SPELL, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
-				worldIn.spawnParticle(EnumParticleTypes.SPELL_INSTANT, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle("spell", d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
+				worldIn.spawnParticle("instantSpell", d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
 				break;
 			case EAST:
-				worldIn.spawnParticle(EnumParticleTypes.SPELL, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
-				worldIn.spawnParticle(EnumParticleTypes.SPELL_INSTANT, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle("spell", d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
+				worldIn.spawnParticle("instantSpell", d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D);
 				break;
 			case NORTH:
-				worldIn.spawnParticle(EnumParticleTypes.SPELL, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
-				worldIn.spawnParticle(EnumParticleTypes.SPELL_INSTANT, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle("spell", d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D);
+				worldIn.spawnParticle("instantSpell", d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D);
 				break;
 			case SOUTH:
-				worldIn.spawnParticle(EnumParticleTypes.SPELL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
-				worldIn.spawnParticle(EnumParticleTypes.SPELL_INSTANT, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle("spell", d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D);
+				worldIn.spawnParticle("instantSpell", d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D);
 			}
 		}
 	}

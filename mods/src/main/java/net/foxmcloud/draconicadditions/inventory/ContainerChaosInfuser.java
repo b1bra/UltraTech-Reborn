@@ -52,7 +52,7 @@ public class ContainerChaosInfuser extends ContainerBCBase<TileChaosInfuser> {
 				return null;
 			}
 
-			if (stack.getCount() == 0) {
+			if (stack.stackSize == 0) {
 				slot.putStack(null);
 			}
 			else {

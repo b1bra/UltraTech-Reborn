@@ -2,9 +2,8 @@ package net.foxmcloud.draconicadditions.items.armor;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.DEConfig;
 import com.brandon3055.draconicevolution.DEFeatures;
 import com.brandon3055.draconicevolution.api.itemconfig.ItemConfigFieldRegistry;
@@ -14,13 +13,11 @@ import net.foxmcloud.draconicadditions.DraconicAdditions;
 import net.foxmcloud.draconicadditions.client.model.ModelPotatoArmor;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -28,7 +25,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class PotatoArmor extends WyvernArmor {
 
-	private static ArmorMaterial potatoMaterial = EnumHelper.addArmorMaterial("potatoArmor", DraconicAdditions.MODID_PREFIX + "potato_armor", -1, new int[] {1, 1, 2, 1}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	private static ArmorMaterial potatoMaterial = EnumHelper.addArmorMaterial("potatoArmor", DraconicAdditions.MODID_PREFIX + "potato_armor", -1, new int[] {1, 1, 2, 1}, 0, "random.pop", 0.0F);
 
 	public PotatoArmor(int renderIndexIn, int armorType) {
 		super(potatoMaterial, renderIndexIn, armorType);
@@ -116,14 +113,14 @@ public class PotatoArmor extends WyvernArmor {
 					player.addItemStackToInventory(diamond);
 				}
 				player.inventory.deleteStack(stack);
-				player.sendStatusMessage(new TextComponentTranslation("msg.da.energizedBreak"), true);
+				player.addChatMessage(new ChatComponentTranslation("msg.da.energizedBreak"));
 			}
 		}
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
 		tooltip.add(I18n.format("item.draconicadditions:potato.lore"));
 		tooltip.add(I18n.format("item.draconicadditions:potato.lore2"));
 	}

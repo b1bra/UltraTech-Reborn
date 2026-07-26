@@ -25,13 +25,13 @@ public class RenderTileCapacitorSupplier extends TESRBase<TileCapacitorSupplier>
             GlStateManager.translate(x + 0.5, y + 0.9, z + 0.5);
 
             /*
-            if (te.facing.getAxis() == EnumFacing.Axis.Y) {
+            if (te.facing.getAxis() == ForgeDirection.Y) {
                 GlStateManager.rotate(90, te.facing.getFrontOffsetY(), 0, 0);
             }
-            else if (te.facing.getAxis() == EnumFacing.Axis.X) {
+            else if (te.facing.getAxis() == ForgeDirection.X) {
                 GlStateManager.rotate(90, 0, -te.facing.getFrontOffsetX(), 0);
             }
-            else if (te.facing == EnumFacing.SOUTH) {
+            else if (te.facing == ForgeDirection.SOUTH) {
                 GlStateManager.rotate(180, 0, 1, 0);
             }
             */

@@ -1,6 +1,6 @@
 package net.foxmcloud.draconicadditions.handlers;
 
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.entity.EntityChaosGuardian;
 import com.brandon3055.draconicevolution.handlers.CustomArmorHandler;
 
@@ -88,7 +88,7 @@ public class DAEventHandler {
         if (!event.getEntity().world.isRemote && event.getEntity() instanceof EntityChaosGuardian) {
             if (DAFeatures.chaosHeart != null) {
                 EntityChaosHeart heart = new EntityChaosHeart(event.getEntity().world, event.getEntity().posX, event.getEntity().posY, event.getEntity().posZ);
-                event.getEntity().world.spawnEntity(heart);
+                event.getEntity().world.spawnEntityInWorld(heart);
             }
         }
 	}

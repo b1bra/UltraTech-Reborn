@@ -1,6 +1,6 @@
 package net.foxmcloud.draconicadditions.items;
 
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;

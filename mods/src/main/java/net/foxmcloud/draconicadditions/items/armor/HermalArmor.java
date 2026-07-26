@@ -2,7 +2,6 @@ package net.foxmcloud.draconicadditions.items.armor;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 import com.brandon3055.draconicevolution.DEConfig;
 import com.brandon3055.draconicevolution.api.itemconfig.ToolConfigHelper;
@@ -15,14 +14,12 @@ import net.foxmcloud.draconicadditions.DraconicAdditions;
 import net.foxmcloud.draconicadditions.client.model.ModelPotatoArmor;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import java.util.List;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -30,7 +27,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class HermalArmor extends ChaoticArmor {
 
-	private static ArmorMaterial hermalMaterial = EnumHelper.addArmorMaterial("hermalArmor", DraconicAdditions.MODID_PREFIX + "hermal_armor", -1, new int[] {8, 14, 20, 8}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	private static ArmorMaterial hermalMaterial = EnumHelper.addArmorMaterial("hermalArmor", DraconicAdditions.MODID_PREFIX + "hermal_armor", -1, new int[] {8, 14, 20, 8}, 0, "random.pop", 0.0F);
 
 	public HermalArmor(int renderIndexIn, int armorType) {
 		super(hermalMaterial, renderIndexIn, armorType);
@@ -41,7 +38,7 @@ public class HermalArmor extends ChaoticArmor {
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	public void getSubItems(CreativeTabs tab, List<ItemStack> subItems) {
 		if (RecipeManager.isEnabled(DAFeatures.hermal)) {
 			if (isInCreativeTab(tab)) {
 				ItemStack stack = new ItemStack(this);
@@ -136,7 +133,7 @@ public class HermalArmor extends ChaoticArmor {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
 		tooltip.add(I18n.format("item.draconicadditions:hermal.lore"));
 		tooltip.add(I18n.format("item.draconicadditions:hermal.lore2"));
 		super.addInformation(stack, playerIn, tooltip, advanced);

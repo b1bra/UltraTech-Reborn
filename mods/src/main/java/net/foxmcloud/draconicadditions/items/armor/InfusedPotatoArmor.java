@@ -2,31 +2,24 @@ package net.foxmcloud.draconicadditions.items.armor;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 import net.foxmcloud.draconicadditions.DAFeatures;
 import net.foxmcloud.draconicadditions.DraconicAdditions;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class InfusedPotatoArmor extends ItemArmor {
-	private static ArmorMaterial potatoMaterial = EnumHelper.addArmorMaterial("infusedPotatoArmor", DraconicAdditions.MODID_PREFIX + "infused_potato_armor", -1, new int[] {1, 1, 2, 1}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	private static ArmorMaterial potatoMaterial = EnumHelper.addArmorMaterial("infusedPotatoArmor", DraconicAdditions.MODID_PREFIX + "infused_potato_armor", -1, new int[] {1, 1, 2, 1}, 0, "random.pop", 0.0F);
 
 	public InfusedPotatoArmor(int renderIndexIn, int armorType) {
 		super(potatoMaterial, renderIndexIn, armorType);
@@ -39,18 +32,18 @@ public class InfusedPotatoArmor extends ItemArmor {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-		if (ArmorStats.INFUSED_POTATO_RIGHT_CLICK) return new ActionResult<ItemStack>(EnumActionResult.FAIL, transformItem(player, hand, false));
-		else return new ActionResult<ItemStack>(EnumActionResult.PASS, player.getHeldItem(hand));
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+		if (ArmorStats.INFUSED_POTATO_RIGHT_CLICK) return transformItem(player, stack, false);
+		else return stack;
 	}
 
 	@Override
-	public EnumActionResult onItemUseFirst(EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, EnumHand hand) {
+	public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 		if (ArmorStats.INFUSED_POTATO_RIGHT_CLICK) {
-			transformItem(player, hand, true);
-			return EnumActionResult.FAIL;
+			transformItem(player, stack, true);
+			return false;
 		}
-		else return EnumActionResult.PASS;
+		else return false;
 	}
 
 	@Override
@@ -70,8 +63,8 @@ public class InfusedPotatoArmor extends ItemArmor {
 		else return true;
 	}
 
-	private ItemStack transformItem(EntityPlayer player, EnumHand hand, boolean replace) {
-		ItemStack itemStack = player.getHeldItem(hand);
+	private ItemStack transformItem(EntityPlayer player, boolean replace) {
+		ItemStack itemStack = player.getHeldItem();
 		return transformItem(player, itemStack, replace);
 	}
 
@@ -91,15 +84,15 @@ public class InfusedPotatoArmor extends ItemArmor {
 		player.inventory.deleteStack(stack);
 		if (replace) {
 			player.addItemStackToInventory(armorItem);
-			player.sendStatusMessage(new TextComponentTranslation("msg.da.infusedTransformation.smack"), true);
+			player.addChatMessage(new ChatComponentTranslation("msg.da.infusedTransformation.smack"));
 		}
-		else player.sendStatusMessage(new TextComponentTranslation("msg.da.infusedTransformation.normal"), true);
+		else player.addChatMessage(new ChatComponentTranslation("msg.da.infusedTransformation.normal"));
 		return armorItem;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
 		tooltip.add(I18n.format("item.draconicadditions:infused_potato.lore"));
 		tooltip.add(I18n.format("item.draconicadditions:infused_potato.lore2"));
 	}

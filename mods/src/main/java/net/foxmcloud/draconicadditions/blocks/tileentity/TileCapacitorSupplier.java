@@ -1,11 +1,9 @@
 package net.foxmcloud.draconicadditions.blocks.tileentity;
 
-import com.brandon3055.brandonscore.blocks.TileEnergyInventoryBase;
+import com.brandon3055.brandonscore.block.TileEnergyInventoryBase;
 import com.brandon3055.brandonscore.lib.EnergyHelper;
 import com.brandon3055.brandonscore.lib.IChangeListener;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 
 import cofh.api.energy.IEnergyContainerItem;
 import cofh.api.energy.IEnergyProvider;
@@ -14,19 +12,18 @@ import net.foxmcloud.draconicadditions.DAFeatures;
 import net.foxmcloud.draconicadditions.items.Hermal;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.math.BlockPos;
 import scala.Int;
 
 public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IEnergyProvider, IEnergyReceiver, IChangeListener {
 
 	private int energyToExtract = 0;
 
-	public final ManagedBool active = register("active", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedBool powered = register("powered", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedInt capacityBackup = register("capacityBackup", new ManagedInt(0)).saveToTile().saveToItem().finish();
-	public final ManagedInt energyBackup = register("energyBackup", new ManagedInt(0)).saveToTile().saveToItem().finish();
-	public final ManagedInt rateBackup = register("rateBackup", new ManagedInt(0)).saveToTile().saveToItem().finish();
-	public final ManagedBool isHermal = register("isHermal", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
+	public boolean active = false;
+	public boolean powered = false;
+	public int capacityBackup = 0;
+	public int energyBackup = 0;
+	public int rateBackup = 0;
+	public boolean isHermal = false;
 
 	public TileCapacitorSupplier() {
 		setInventorySize(1);
@@ -40,18 +37,18 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
 		if (world.isRemote) {
 			return;
 		}
-		if (getMaxEnergyStored() == 0 && capacityBackup.value > 0) {
-			setCapacityAndTransfer(capacityBackup.value, rateBackup.value, rateBackup.value);
-			energyStorage.setEnergyStored(energyBackup.value);
+		if (getMaxEnergyStored() == 0 && capacityBackup > 0) {
+			setCapacityAndTransfer(capacityBackup, rateBackup, rateBackup);
+			energyStorage.setEnergyStored(energyBackup);
 		}
-		if ((getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0) && active.value) {
-			active.value = false;
+		if ((getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0) && active) {
+			active = false;
 		}
-		else if (!(getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0) && !active.value) {
-			active.value = true;
+		else if (!(getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0) && !active) {
+			active = true;
 		}
-		if (isHermal.value) {
-			energyStorage.setEnergyStored(capacityBackup.value);
+		if (isHermal) {
+			energyStorage.setEnergyStored(capacityBackup);
 		}
 		sendEnergyToAll();
 		backupValues();
@@ -73,7 +70,7 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
 			ItemStack stackInClaws = getStackInSlot(0);
 			if ((stackInClaws == null || stackInClaws.stackSize <= 0)) {
 				if (EnergyHelper.canExtractEnergy(stack) || ItemNBTHelper.getInteger(stack, "Energy", -1) >= 0) {
-					isHermal.value = stack.getItem() instanceof Hermal;
+					isHermal = stack.getItem() instanceof Hermal;
 					IEnergyContainerItem item = (IEnergyContainerItem)stack.getItem();
 					int currentEnergy = item.getEnergyStored(stack);
 					int maxEnergy = item.getMaxEnergyStored(stack);
@@ -96,7 +93,7 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
 		ItemStack stack = null;
 		ItemStack stackInClaws = getStackInSlot(0);
 		if ((stackInClaws != null && stackInClaws.stackSize > 0)) {
-			if (isHermal.value) {
+			if (isHermal) {
 				ItemNBTHelper.setInteger(stackInClaws, "Energy", ((Hermal)stackInClaws.getItem()).getCapacity(stackInClaws));
 			}
 			else {
@@ -113,9 +110,9 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
 	}
 
 	protected void backupValues() {
-		energyBackup.value = getEnergyStored();
-		capacityBackup.value = getMaxEnergyStored();
-		rateBackup.value = energyStorage.getMaxExtract();
+		energyBackup = getEnergyStored();
+		capacityBackup = getMaxEnergyStored();
+		rateBackup = energyStorage.getMaxExtract();
 	}
 
 	@Override
@@ -132,7 +129,7 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
 	}
 
 	@Override
-	public void onNeighborChange(BlockPos neighbor) {
-		powered.value = world.isBlockPowered(pos);
+	public void onNeighborChange(int x, int y, int z) {
+		powered = world.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
 	}
 }

@@ -1,17 +1,11 @@
 package net.foxmcloud.draconicadditions;
 
-import com.brandon3055.brandonscore.client.particle.BCEffectHandler;
-import com.brandon3055.brandonscore.lib.Vec3D;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
-import com.brandon3055.draconicevolution.client.DEParticles;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.handlers.CustomArmorHandler.ArmorSummery;
-import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class CommonMethods {
@@ -59,17 +53,17 @@ public class CommonMethods {
 		return isCheating;
 	}
 
-	public static void explodeEntity(Vec3D pos, World world) {
-		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.beam, SoundCategory.MASTER, 0.25F, 0.5F, false);
-		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.fusionComplete, SoundCategory.MASTER, 1.0F, 2.0F, false);
+	public static void explodeEntity(double x, double y, double z, World world) {
+		world.playSoundEffect(x, y, z, "draconicevolution:beam", 0.25F, 0.5F);
+		world.playSoundEffect(x, y, z, "draconicevolution:fusion_complete", 1.0F, 2.0F);
 		if (world.isRemote) {
 			for (int i = 0; i < 5; i++) {
-				BCEffectHandler.spawnFX(DEParticles.ARROW_SHOCKWAVE, world, pos, pos, 128D, 2);
+				world.spawnParticle("largeexplode", x, y, z, 0.0D, 0.0D, 0.0D);
 			}
 		}
 	}
 
-	public static void explodeEntity(BlockPos pos, World world) {
-		explodeEntity(new Vec3D(pos), world);
+	public static void explodeEntity(int x, int y, int z, World world) {
+		explodeEntity((double)x, (double)y, (double)z, world);
 	}
 }

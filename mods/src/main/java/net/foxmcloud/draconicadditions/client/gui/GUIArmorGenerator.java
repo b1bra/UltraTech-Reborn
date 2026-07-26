@@ -44,14 +44,14 @@ public class GUIArmorGenerator extends GuiContainer {
 			drawTexturedModalRect(guiLeft + 63, guiTop + 34, 36, ySize, 18, 18); //Fuel box
 		}
 
-		float power = (float) tile.energySync.value / (float) tile.getMaxEnergyStored(ForgeDirection.DOWN) * -1 + 1;
-		float fuel = tile.burnTimeRemaining.value / ((float) tile.burnTime.value) * -1 + 1;
+		float power = (float) tile.energySync / (float) tile.getMaxEnergyStored(ForgeDirection.DOWN) * -1 + 1;
+		float fuel = tile.burnTimeRemaining / ((float) tile.burnTime) * -1 + 1;
 
 		drawTexturedModalRect(guiLeft + 83, guiTop + 11 + (int) (power * 40), xSize, (int) (power * 40), 12, 40 - (int) (power * 40)); //Power bar
 		drawTexturedModalRect(guiLeft + 100, guiTop + 37 + (int) (fuel * 13), xSize, 40 + (int) (fuel * 13), 18, 18 - (int) (fuel * 13)); //Power bar
 
 		if (tile instanceof TileChaoticArmorGenerator) {
-			fontRenderer.drawStringWithShadow("Chaos: " + tile.chaos.value + " B", guiLeft + 60, guiTop - 8, 0x00FFFF);
+			fontRenderer.drawStringWithShadow("Chaos: " + tile.chaos + " B", guiLeft + 60, guiTop - 8, 0x00FFFF);
 		}
 
 		int x = X - guiLeft;
@@ -59,7 +59,7 @@ public class GUIArmorGenerator extends GuiContainer {
 		if (GuiHelper.isInRect(83, 10, 12, 40, x, y)) {
 			ArrayList<String> internal = new ArrayList<>();
 			internal.add(I18n.format("info.de.energyBuffer.txt"));
-			internal.add("" + EnumChatFormatting.BLUE + tile.energySync.value + "/" + tile.getMaxEnergyStored(ForgeDirection.UP));
+			internal.add("" + EnumChatFormatting.BLUE + tile.energySync + "/" + tile.getMaxEnergyStored(ForgeDirection.UP));
 			drawHoveringText(internal, x + guiLeft, y + guiTop, fontRenderer);
 		}
 	}

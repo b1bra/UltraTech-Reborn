@@ -1,23 +1,20 @@
 package net.foxmcloud.draconicadditions.blocks.tileentity;
 
 import com.brandon3055.brandonscore.lib.IChangeListener;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
 import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
 import cofh.api.energy.IEnergyReceiver;
 import net.foxmcloud.draconicadditions.items.IChaosContainer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
 
 public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyReceiver, IChangeListener {
 
 	private int chargeRate = 1000000;
 	public int maxCharge = 200;
 
-	public final ManagedBool active = register("active", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedBool powered = register("powered", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
+	public boolean active = false;
+	public boolean powered = false;
 
 	public TileChaosInfuser() {
 		setInventorySize(1);
@@ -30,23 +27,23 @@ public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyRece
 	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
-			if (active.value) {
+			if (active) {
 				float beamPitch = (float)(0.5F + (Math.random() * 0.1F));
-				world.playSound(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, DESoundHandler.beam, SoundCategory.BLOCKS, 0.2F, beamPitch, false);
+				world.playSoundEffect(xCoord + 0.5D, yCoord, zCoord + 0.5D, DESoundHandler.beam, 0.2F, beamPitch);
 			}
 		}
 		else {
 			ItemStack stack = getStackInSlot(0);
-			if ((stack != null && stack.stackSize > 0) && isItemValidForSlot(0, stack) && chaos.value > 0) {
+			if ((stack != null && stack.stackSize > 0) && isItemValidForSlot(0, stack) && chaos > 0) {
 				IChaosContainer chaosItem = (IChaosContainer)stack.getItem();
 				if (chaosItem.getMaxChaos(stack) > 0 && chaosItem.getChaos(stack) < chaosItem.getMaxChaos(stack) && energyStorage.getEnergyStored() >= chargeRate) {
-					active.value = true;
+					active = true;
 					energyStorage.modifyEnergyStored(-chargeRate);
-					chaos.value += chaosItem.addChaos(stack, 1) - 1;
+					chaos += chaosItem.addChaos(stack, 1) - 1;
 				}
-				else active.value = false;
+				else active = false;
 			}
-			else active.value = false;
+			else active = false;
 		}
 	}
 
@@ -64,7 +61,7 @@ public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyRece
 	}
 
 	@Override
-	public void onNeighborChange(BlockPos neighbor) {
-		powered.value = world.isBlockPowered(pos);
+	public void onNeighborChange(int x, int y, int z) {
+		powered = world.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
 	}
 }

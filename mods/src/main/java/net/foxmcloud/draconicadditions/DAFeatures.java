@@ -1,8 +1,7 @@
 package net.foxmcloud.draconicadditions;
 
 
-import com.brandon3055.brandonscore.blocks.ItemBlockBCore;
-import com.brandon3055.draconicevolution.blocks.tileentity.TileChaosCrystal;
+import com.brandon3055.brandonscore.block.ItemBlockBCore;
 import com.brandon3055.draconicevolution.items.ItemPersistent;
 
 import net.foxmcloud.draconicadditions.blocks.ChaosCrystalStable;
@@ -130,7 +129,7 @@ public class DAFeatures {
 		registerItem(overloadBelt, "overload_belt");
 		registerItem(vampiricShirt, "vampiric_shirt");
 		registerItem(inertiaCancelRing, "inertia_cancel_ring");
-		registerBlock(chaosCrystalStable, "chaos_crystal_stable", TileChaosCrystal.class);
+		registerBlock(chaosCrystalStable, "chaos_crystal_stable");
 	}
 
 	private static void registerItem(Item item, String name) {
@@ -139,9 +138,13 @@ public class DAFeatures {
 	}
 
 	private static void registerBlock(Block block, String name, Class tileEntityClass) {
+		registerBlock(block, name);
+		GameRegistry.registerTileEntity(tileEntityClass, DraconicAdditions.MODID + ":" + name);
+	}
+
+	private static void registerBlock(Block block, String name) {
 		block.setBlockName(DraconicAdditions.MODID + ":" + name);
 		GameRegistry.registerBlock(block, ItemBlockBCore.class, name);
-		GameRegistry.registerTileEntity(tileEntityClass, DraconicAdditions.MODID + ":" + name);
 	}
 
 }

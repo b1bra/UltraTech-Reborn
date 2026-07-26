@@ -1,6 +1,6 @@
 package net.foxmcloud.draconicadditions.items.baubles;
 
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.api.itemconfig.IConfigurableItem;
 import com.brandon3055.draconicevolution.api.itemconfig.IItemConfigField.EnumControlType;
 import com.brandon3055.draconicevolution.api.itemconfig.IntegerConfigField;
@@ -11,7 +11,6 @@ import com.brandon3055.draconicevolution.handlers.CustomArmorHandler.ArmorSummer
 import baubles.api.BaubleType;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 
 public class VampiricShirt extends BasicBauble implements IConfigurableItem {
@@ -49,7 +48,7 @@ public class VampiricShirt extends BasicBauble implements IConfigurableItem {
 		summary.saveStacks(player);
 		if (!player.isCreative()) {
 			player.setHealth(player.getHealth() - 1);
-			player.playSound(SoundEvents.BLOCK_FIRE_EXTINGUISH, 0.5F, 1F);
+			player.playSound("random.fizz", 0.5F, 1F);
 		}
 	}
 }
