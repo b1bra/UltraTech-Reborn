@@ -45,7 +45,7 @@ public class ContainerItemDrainer extends ContainerBCBase<TileItemDrainer> {
 			else if (stack.getItem() instanceof IEnergyContainerItem || !mergeItemStack(stack, 36, 36 + tile.getSizeInventory(), false)) {
 				return null;
 			}
-			if (stack.getCount() == 0) {
+			if (stack.stackSize == 0) {
 				slot.putStack(null);
 			}
 			else {

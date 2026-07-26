@@ -1,8 +1,6 @@
 package net.foxmcloud.draconicadditions.blocks.tileentity;
 
 import com.brandon3055.brandonscore.lib.IChangeListener;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
 import cofh.api.energy.IEnergyReceiver;
@@ -15,10 +13,10 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 	private int chargeRate = 10000000;
 	public int maxCharge = 200;
 
-	public final ManagedInt charge = register("charge", new ManagedInt(0)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedInt chargeTo = register("chargeTo", new ManagedInt(maxCharge)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedBool active = register("active", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedBool powered = register("powered", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
+	public int charge = 0;
+	public int chargeTo = maxCharge;
+	public boolean active = false;
+	public boolean powered = false;
 
 	public TileChaosLiquefier() {
 		setInventorySize(1);
@@ -31,54 +29,54 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
-			if (active.value) {
-				if (charge.value >= 0 && charge.value < chargeTo.value - 1) {
-					float beamPitch = (1.5F * charge.value / maxCharge) + 0.5F;
-					world.playSound(x + 0.5D, y, z + 0.5D, DESoundHandler.beam, 0.2F, beamPitch, false);
-					// charge.value += 1;
+			if (active) {
+				if (charge >= 0 && charge < chargeTo - 1) {
+					float beamPitch = (1.5F * charge / maxCharge) + 0.5F;
+					world.playSoundEffect(xCoord + 0.5D, yCoord, zCoord + 0.5D, DESoundHandler.beam, 0.2F, beamPitch);
+					// charge += 1;
 				}
 				else {
-					world.playSound(x + 0.5D, y, z + 0.5D, DESoundHandler.boom, 1.0F, 2.0F, false);
-					// charge.value = 0;
+					world.playSoundEffect(xCoord + 0.5D, yCoord, zCoord + 0.5D, DESoundHandler.boom, 1.0F, 2.0F);
+					// charge = 0;
 				}
 			}
 		}
 		else {
-			active.value = charge.value > 0;
+			active = charge > 0;
 			ItemStack stack = getStackInSlot(0);
-			if ((stack != null && stack.stackSize > 0) && isItemValidForSlot(0, stack) && chaos.value < getMaxChaos()) {
+			if ((stack != null && stack.stackSize > 0) && isItemValidForSlot(0, stack) && chaos < getMaxChaos()) {
 				int finalCharge = calcCharge(stack);
-				if (finalCharge != chargeTo.value) {
-					chargeTo.value = finalCharge;
+				if (finalCharge != chargeTo) {
+					chargeTo = finalCharge;
 				}
 				if (energyStorage.getEnergyStored() >= chargeRate) {
-					charge.value += 1;
+					charge += 1;
 					energyStorage.modifyEnergyStored(-chargeRate);
-					if (charge.value >= chargeTo.value) {
+					if (charge >= chargeTo) {
 						discharge();
 					}
 				}
-				else if (charge.value > 0) {
-					charge.value -= 1;
+				else if (charge > 0) {
+					charge -= 1;
 				}
 			}
-			else if (charge.value > 0) {
-				charge.value -= 1;
+			else if (charge > 0) {
+				charge -= 1;
 			}
 		}
 	}
 
 	public void discharge() {
 		ItemStack stack = getStackInSlot(0);
-		chaos.value += calcChaos(stack);
-		if (chaos.value > getMaxChaos()) {
-			chaos.value = getMaxChaos();
+		chaos += calcChaos(stack);
+		if (chaos > getMaxChaos()) {
+			chaos = getMaxChaos();
 		}
-		stack.shrink(1);
-		if (stack.getCount() == 0) {
+		stack.stackSize--;
+		if (stack.stackSize == 0) {
 			stack = null;
 		}
-		charge.value = 0;
+		charge = 0;
 	}
 
 	public int calcChaos(ItemStack stack) {
@@ -135,6 +133,6 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 
 	@Override
 	public void onNeighborChange(int x, int y, int z) {
-		powered.value = world.isBlockPowered(pos);
+		powered = world.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
 	}
 }

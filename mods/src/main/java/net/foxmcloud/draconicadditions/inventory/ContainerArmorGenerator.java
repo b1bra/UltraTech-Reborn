@@ -52,7 +52,7 @@ public class ContainerArmorGenerator extends ContainerBCBase<TileArmorGenerator>
 				return null;
 			}
 
-			if (stack.getCount() == 0) {
+			if (stack.stackSize == 0) {
 				slot.putStack(null);
 			}
 			else {

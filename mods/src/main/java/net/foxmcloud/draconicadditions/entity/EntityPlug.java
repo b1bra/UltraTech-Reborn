@@ -1,7 +1,6 @@
 package net.foxmcloud.draconicadditions.entity;
 
-import com.brandon3055.brandonscore.lib.Vec3D;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 
 import net.foxmcloud.draconicadditions.items.tools.PortableWiredCharger;
 import net.minecraft.entity.Entity;
@@ -54,10 +53,7 @@ public class EntityPlug extends Entity {
 	public EntityPlug(World worldIn, EntityPlayer player, int x, int y, int z, ForgeDirection facing) {
 		this(worldIn, player, (double) x, (double) y, (double) z, facing);
 	}
-
-	public EntityPlug(World worldIn, EntityPlayer player, Vec3D vec, ForgeDirection facing) {
-		this(worldIn, player, vec.x, vec.y, vec.z, facing);
-	}
+	
 
 	@Override
 	protected void entityInit() {}
@@ -65,10 +61,7 @@ public class EntityPlug extends Entity {
 	public void onEntityUpdate() {
 		this.world.profiler.startSection("entityBaseTick");
 		if (this.player != null) {
-			ItemStack stack = this.player.getHeldItemMainhand();
-			if ((stack == null || stack.stackSize <= 0) || !(stack.getItem() instanceof PortableWiredCharger)) {
-				stack = this.player.getHeldItemOffhand();
-			}
+			ItemStack stack = this.player.getHeldItem();
 			if ((stack == null || stack.stackSize <= 0) || !(stack.getItem() instanceof PortableWiredCharger)) {
 				this.setDead();
 			}

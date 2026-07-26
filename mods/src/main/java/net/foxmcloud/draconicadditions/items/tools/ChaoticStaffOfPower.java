@@ -4,10 +4,8 @@ import static com.brandon3055.draconicevolution.client.model.tool.ToolTransforms
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 import com.brandon3055.brandonscore.lib.PairKV;
-import com.brandon3055.brandonscore.registry.Feature;
 import com.brandon3055.draconicevolution.api.itemconfig.ItemConfigFieldRegistry;
 import com.brandon3055.draconicevolution.api.itemconfig.ToolConfigHelper;
 import com.brandon3055.draconicevolution.api.itemupgrade.UpgradeHelper;
@@ -19,8 +17,8 @@ import net.foxmcloud.draconicadditions.items.IChaosItem;
 import net.foxmcloud.draconicadditions.utils.DATextures;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import java.util.List;
 import net.minecraft.util.ResourceLocation;
@@ -73,7 +71,7 @@ public class ChaoticStaffOfPower extends DraconicStaffOfPower implements IChaosI
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
+    public void addInformation(ItemStack stack, EntityPlayer player, List tooltip, boolean advanced) {
         if (getChaosInfoStable(stack) != null) tooltip.add(getChaosInfoStable(stack));
         super.addInformation(stack, player, tooltip, advanced);
     }
@@ -124,11 +122,6 @@ public class ChaoticStaffOfPower extends DraconicStaffOfPower implements IChaosI
 		return 5;
 	}
 
-	@Override
-	public void registerRenderer(Feature feature) {
-		super.registerRenderer(feature);
-		ToolOverrideList.putOverride(this, ChaoticStaffOfPower::handleTransforms);
-	}
 
 	@SideOnly(Side.CLIENT)
 	private static IModelState handleTransforms(TransformType transformType, IModelState state) {

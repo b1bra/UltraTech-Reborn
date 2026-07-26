@@ -4,11 +4,10 @@ import static com.brandon3055.draconicevolution.api.itemconfig.IItemConfigField.
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 import com.brandon3055.brandonscore.lib.DelayedTask;
 import com.brandon3055.brandonscore.utils.InventoryUtils;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.DEConfig;
 import com.brandon3055.draconicevolution.api.itemconfig.BooleanConfigField;
 import com.brandon3055.draconicevolution.api.itemconfig.IntegerConfigField;
@@ -26,12 +25,10 @@ import net.foxmcloud.draconicadditions.capabilities.IChaosInBlood;
 import net.foxmcloud.draconicadditions.client.model.ModelChaoticArmor;
 import net.foxmcloud.draconicadditions.items.IChaosItem;
 import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -47,7 +44,7 @@ import net.minecraftforge.items.IItemHandler;
 
 public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 
-	private static ArmorMaterial chaoticMaterial = EnumHelper.addArmorMaterial("chaoticArmor", DraconicAdditions.MODID_PREFIX + "chaotic_armor", -1, new int[] {6, 12, 16, 6}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
+	private static ArmorMaterial chaoticMaterial = EnumHelper.addArmorMaterial("chaoticArmor", DraconicAdditions.MODID_PREFIX + "chaotic_armor", -1, new int[] {6, 12, 16, 6}, 0, "random.pop", 6.0F);
 
 	public ChaoticArmor(int renderIndexIn, int armorType) {
 		super(chaoticMaterial, renderIndexIn, armorType);
@@ -124,7 +121,7 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
 		if (stack.getItem() instanceof ChaoticArmor) {
 			if (getChaosInfoStable(stack) != null) tooltip.add(getChaosInfoStable(stack));
 		}
@@ -232,16 +229,16 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 							int amount = food.getHealAmount(candidate);
 							if (amount > 0 && food.getHealAmount(candidate) + foodStats.getFoodLevel() <= 20) {
 								candidate = candidate.copy();
-								ItemStack foodStack = handler.extractItem(i, candidate.getCount(), false);
+								ItemStack foodStack = handler.extractItem(i, candidate.stackSize, false);
 
 								if (ItemStack.areItemStacksEqual(foodStack, candidate)) {
 									foodStats.addStats(food, foodStack);
 									foodStack = food.onItemUseFinish(foodStack, world, player);
 									if (world.rand.nextInt(3) == 0) {
-										DelayedTask.run(20, () -> world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_PLAYER_BURP, .5F, world.rand.nextFloat() * 0.1F + 0.9F));
+										DelayedTask.run(20, () -> world.playSoundEffect(player.posX, player.posY, player.posZ, "random.burp", .5F, world.rand.nextFloat() * 0.1F + 0.9F));
 									}
 
-									world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_GENERIC_EAT, 0.5F + 0.5F * world.rand.nextInt(2), (world.rand.nextFloat() - world.rand.nextFloat()) * 0.2F + 1.0F);
+									world.playSoundEffect(player.posX, player.posY, player.posZ, "random.eat", 0.5F + 0.5F * world.rand.nextInt(2), (world.rand.nextFloat() - world.rand.nextFloat()) * 0.2F + 1.0F);
 									foodStack = handler.insertItem(i, foodStack, false);
 									this.modifyEnergy(stack, -500);
 									if ((foodStack != null && foodStack.stackSize > 0)) {

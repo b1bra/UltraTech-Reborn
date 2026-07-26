@@ -5,28 +5,22 @@ import java.util.List;
 
 import com.brandon3055.brandonscore.items.ItemEnergyBase;
 import com.brandon3055.brandonscore.lib.EnergyHelper;
-import com.brandon3055.brandonscore.lib.Vec3D;
 import com.brandon3055.brandonscore.utils.InfoHelper;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.entity.EntityPersistentItem;
 import com.brandon3055.draconicevolution.integration.BaublesHelper;
 import com.brandon3055.draconicevolution.integration.ModHelper;
 
 import net.foxmcloud.draconicadditions.DAFeatures;
 import net.foxmcloud.draconicadditions.entity.EntityPlug;
-import net.foxmcloud.draconicadditions.lib.DASoundHandler;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
 import net.minecraftforge.common.util.ForgeDirection;
-import java.util.List;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -64,7 +58,7 @@ public class PortableWiredDischarger extends PortableWiredCharger {
 		updateActive(stack);
 		EntityPlayer player = (EntityPlayer) entity;
 		if (active) {
-			if (player.getHeldItemMainhand() != stack && player.getHeldItemOffhand() != stack) {
+			if (player.getHeldItem() != stack) {
 				unplug(stack, player);
 			}
 			else if (getTileEntity(stack, world) != null) {

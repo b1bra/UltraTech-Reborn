@@ -4,16 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.brandon3055.brandonscore.blocks.TileInventoryBase;
+import com.brandon3055.brandonscore.block.TileInventoryBase;
 import com.brandon3055.brandonscore.lib.IActivatableTile;
-import com.brandon3055.brandonscore.lib.Vec3D;
-import com.brandon3055.brandonscore.lib.Vec3I;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedDouble;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 import com.brandon3055.draconicevolution.handlers.CustomArmorHandler.ArmorSummery;
 import com.brandon3055.draconicevolution.handlers.DEEventHandler;
-import com.brandon3055.draconicevolution.lib.DESoundHandler;
 import com.google.common.collect.Lists;
 
 import net.foxmcloud.draconicadditions.items.IChaosItem;
@@ -23,29 +17,28 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.IUpdatePlayerListBox;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.world.IUpdatePlayerListBox;
+import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraftforge.common.util.FakePlayer;
 
 public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdatePlayerListBox, IActivatableTile {
 
-	public final ManagedDouble diameter = register("diameter", new ManagedDouble(1)).syncViaTile().finish();
-	public final ManagedDouble intensity = register("intensity", new ManagedDouble(0)).syncViaTile().finish();
+	public double diameter = 1;
+	public double intensity = 0;
 	private static final float chaosDamage = 10;
 	private static final double suckRadius = 6;
 	private static final int delayInMultiblockCheck = 20;
-	private double actualDiameter = diameter.value;
-	private double actualIntensity = intensity.value;
-	private final ManagedInt ritualTicks = register("ritualTicks", new ManagedInt(0)).syncViaTile().finish();
-	public final ManagedBool isRitualOngoing = register("isRitualOngoing", new ManagedBool(false)).syncViaTile().finish();
-	public final ManagedBool isMultiblock = register("isMultiblock", new ManagedBool(false)).syncViaTile().finish();
+	private double actualDiameter = diameter;
+	private double actualIntensity = intensity;
+	private int ritualTicks = 0;
+	public boolean isRitualOngoing = false;
+	public boolean isMultiblock = false;
 	private Random rand = new Random();
 	private DamageSource chaosBurst = new DamageSource("chaosBurst").setDamageBypassesArmor();
 
@@ -61,9 +54,10 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 			checkMultiblock();
 			updateBlock();
 		}
-		if (!isRitualOngoing.value) {
-			if (isMultiblock.value) {
-				intensity.value = 0.25F;
+
+		if (!isRitualOngoing) {
+			if (isMultiblock) {
+				intensity = 0.25F;
 				List<Entity> suckEntities = this.world.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox(xCoord, yCoord, zCoord, xCoord + 1, yCoord + 1, zCoord + 1).expand(suckRadius, suckRadius, suckRadius));
 				for (Entity e : suckEntities) {
 					if (e instanceof EntityItem) {
@@ -91,7 +85,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 							e.motionX -= (e.motionX * (suckRadius) / 1.5);
 							e.motionY -= (e.motionY * (suckRadius) / 1.5);
 							e.motionZ -= (e.motionZ * (suckRadius) / 1.5);
-							playSound(SoundEvents.BLOCK_END_PORTAL_FRAME_FILL, 1.0F, 1.0F);
+							playSound("random.pop", 1.0F, 1.0F);
 						}
 					}
 					else {
@@ -105,11 +99,11 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 					}
 				}
 			}
-			else intensity.value = 0;
+			else intensity = 0;
 		}
 		else {
-			if (isMultiblock.value) {
-				ritualTicks.value++;
+			if (isMultiblock) {
+				ritualTicks++;
 				List<Entity> suckEntities = this.world.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox(xCoord, yCoord, zCoord, xCoord + 1, yCoord + 1, zCoord + 1).expand(suckRadius * 2, suckRadius * 2, suckRadius * 2));
 				for (Entity e : suckEntities) {
 					double dx = (xCoord + 0.5D - e.posX);
@@ -134,7 +128,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 							((EntityLiving) e).attackEntityFrom(chaosBurst, 20);
 						}
 					}
-					double limit = 1.0 - (distance / (suckRadius * diameter.value));
+					double limit = 1.0 - (distance / (suckRadius * diameter));
 					if (limit > 0.0D) {
 						limit *= limit;
 						e.motionX += dx / distance * limit * 0.8D;
@@ -142,37 +136,37 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 						e.motionZ += dz / distance * limit * 0.8D;
 					}
 				}
-				if (ritualTicks.value < 260 && DEEventHandler.serverTicks % 10 == 0) {
-					playSound(DESoundHandler.sunDialEffect, 1.0F, 0.5F);
+				if (ritualTicks < 260 && DEEventHandler.serverTicks % 10 == 0) {
+					playSound("draconicevolution:sun_dial_effect", 1.0F, 0.5F);
 				}
-				if (ritualTicks.value >= 120 && ritualTicks.value < 260) {
+				if (ritualTicks >= 120 && ritualTicks < 260) {
 					if (DEEventHandler.serverTicks % 4 == 0 && rand.nextBoolean()) {
 						int i = rand.nextInt(4);
 						switch (i) {
 						case 0: // West Pillar
-							world.spawnEntity(new EntityLightningBolt(world, xCoord + 2, yCoord + 1, zCoord, false));
+							world.spawnEntityInWorld(new EntityLightningBolt(world, xCoord + 2, yCoord + 1, zCoord));
 							break;
 						case 1: // East Pillar
-							world.spawnEntity(new EntityLightningBolt(world, xCoord - 2, yCoord + 1, zCoord, false));
+							world.spawnEntityInWorld(new EntityLightningBolt(world, xCoord - 2, yCoord + 1, zCoord));
 							break;
 						case 2: // South Pillar
-							world.spawnEntity(new EntityLightningBolt(world, xCoord, yCoord + 1, zCoord + 2, false));
+							world.spawnEntityInWorld(new EntityLightningBolt(world, xCoord, yCoord + 1, zCoord + 2));
 							break;
 						case 3: // North Pillar
-							world.spawnEntity(new EntityLightningBolt(world, xCoord, yCoord + 1, zCoord - 2, false));
+							world.spawnEntityInWorld(new EntityLightningBolt(world, xCoord, yCoord + 1, zCoord - 2));
 							break;
 						}
 					}
 				}
-				if (ritualTicks.value == 200) {
-					diameter.value = 3;
-					intensity.value = 0.8D;
+				if (ritualTicks == 200) {
+					diameter = 3;
+					intensity = 0.8D;
 				}
-				else if (ritualTicks.value == 260) {
-					diameter.value = 5.1D;
-					intensity.value = 1;
+				else if (ritualTicks == 260) {
+					diameter = 5.1D;
+					intensity = 1;
 				}
-				if (ritualTicks.value >= 340) {
+				if (ritualTicks >= 340) {
 					endRitual(checkMultiblock());
 				}
 			}
@@ -194,7 +188,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 	}
 
 	private boolean checkMultiblock() {
-		isMultiblock.value = true;
+		isMultiblock = true;
 		List<IntPos> check = new ArrayList<IntPos>();
 		check.add(new IntPos(xCoord + 2, yCoord, zCoord));
 		check.add(new IntPos(xCoord - 2, yCoord, zCoord));
@@ -202,7 +196,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 		check.add(new IntPos(xCoord, yCoord, zCoord - 2));
 		for (IntPos checkPos : check) {
 			if (world.getBlock(checkPos.x, checkPos.y, checkPos.z).equals(Block.getBlockFromName("draconicevolution:draconic_block"))) continue;
-			isMultiblock.value = false;
+			isMultiblock = false;
 			return false;
 		}
 		check.clear();
@@ -210,7 +204,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 		for (IntPos checkPos : check) {
 			if (checkPos.x == xCoord && checkPos.y == yCoord && checkPos.z == zCoord) continue;
 			if (world.isAirBlock(checkPos.x, checkPos.y, checkPos.z)) continue;
-			isMultiblock.value = false;
+			isMultiblock = false;
 			return false;
 		}
 		check.clear();
@@ -221,21 +215,13 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 		check.addAll(Lists.newArrayList(getAllInBox(3, -2, 0, 3, 0, 0)));
 		for (IntPos checkPos : check) {
 			if (world.getBlock(checkPos.x, checkPos.y, checkPos.z).equals(Block.getBlockFromName("draconicevolution:infused_obsidian"))) continue;
-			isMultiblock.value = false;
+			isMultiblock = false;
 			return false;
 		}
 		return true;
 	}
 
-	private IntPos getOffsetPos(Vec3I vec) {
-		return new IntPos(xCoord - vec.x, yCoord - vec.y, zCoord - vec.z);
-	}
-
-	private Vec3I getOffsetVec(IntPos offsetPos) {
-		return new Vec3I(xCoord - offsetPos.x, yCoord - offsetPos.y, zCoord - offsetPos.z);
-	}
-
-	private static class IntPos {
+		private static class IntPos {
 		final int x;
 		final int y;
 		final int z;
@@ -260,6 +246,26 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 	}
 
 	@Override
+	public void writeToNBT(NBTTagCompound compound) {
+		super.writeToNBT(compound);
+		compound.setDouble("diameter", diameter);
+		compound.setDouble("intensity", intensity);
+		compound.setInteger("ritualTicks", ritualTicks);
+		compound.setBoolean("isRitualOngoing", isRitualOngoing);
+		compound.setBoolean("isMultiblock", isMultiblock);
+	}
+
+	@Override
+	public void readFromNBT(NBTTagCompound compound) {
+		super.readFromNBT(compound);
+		diameter = compound.getDouble("diameter");
+		intensity = compound.getDouble("intensity");
+		ritualTicks = compound.getInteger("ritualTicks");
+		isRitualOngoing = compound.getBoolean("isRitualOngoing");
+		isMultiblock = compound.getBoolean("isMultiblock");
+	}
+
+	@Override
 	public boolean canRenderBreaking() {
 		return true;
 	}
@@ -275,18 +281,18 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 	}
 
 	private void sendMessage(EntityPlayer player, String message) {
-		if (!world.isRemote) player.sendStatusMessage(new TextComponentTranslation(message), true);
+		if (!world.isRemote) player.addChatMessage(new ChatComponentTranslation(message));
 	}
 
-	private void playSound(SoundEvent sound, float volume, float pitch) {
-		if (!world.isRemote) DESoundHandler.playSoundFromServer(world, new Vec3D(xCoord, yCoord, zCoord), sound, volume, pitch, false, 128);
+	private void playSound(String sound, float volume, float pitch) {
+		if (!world.isRemote) world.playSoundEffect(xCoord + 0.5D, yCoord + 0.5D, zCoord + 0.5D, sound, volume, pitch);
 	}
 
 	public double getCoreDiameter() {
-		if (diameter.value > actualDiameter) {
+		if (diameter > actualDiameter) {
 			actualDiameter += 0.002F;
 		}
-		else if (diameter.value < actualDiameter) {
+		else if (diameter < actualDiameter) {
 			actualDiameter -= 0.002F;
 		}
 
@@ -294,14 +300,14 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 	}
 
 	public double getCoreIntensity() {
-		if (intensity.value > actualIntensity) {
+		if (intensity > actualIntensity) {
 			actualIntensity += 0.0005F;
 		}
-		else if (intensity.value < actualIntensity) {
+		else if (intensity < actualIntensity) {
 			actualIntensity -= 0.0005F;
 		}
-		else if (isMultiblock.value && rand.nextInt(10) == 0) {
-			intensity.value += rand.nextDouble() / 10;
+		else if (isMultiblock && rand.nextInt(10) == 0) {
+			intensity += rand.nextDouble() / 10;
 		}
 		return actualIntensity;
 	}
@@ -311,9 +317,8 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 		if (world.isRemote) {
 			return true;
 		}
-		if (isMultiblock.value || player.isCreative()) {
-			ItemStack stack = player.getHeldItem();
-			if ((stack != null && stack.stackSize > 0) && stack.getCount() > 0) {
+		if (isMultiblock || player.isCreative()) {
+				if ((stack != null && stack.stackSize > 0) && stack.stackSize > 0) {
 				if ((getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0)) {
 					IChaosItem item = getChaosItem(stack.getItem());
 					if (item != null) {
@@ -323,10 +328,11 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 						else {
 							if (player.isCreative()) {
 								ItemStack newStack = stack.splitStack(1);
-								playSound(SoundEvents.ENTITY_ENDERDRAGON_GROWL, 1.0F, 0.2F);
+								playSound("mob.enderdragon.growl", 1.0F, 0.2F);
 								item.setChaosStable(newStack, true);
 								EntityItem chaosItem = new EntityItem(world, xCoord, yCoord + 1.01D, zCoord, newStack);
-								world.spawnEntity(chaosItem);
+								world.spawnEntityInWorld(chaosItem);
+
 							}
 							else sendMessage(player, "msg.da.chaosStabilizer.canStabilize");
 						}
@@ -362,26 +368,26 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 	}
 
 	private void startRitual() {
-		if (!isRitualOngoing.value) {
-			playSound(SoundEvents.ENTITY_ENDERDRAGON_GROWL, 1.0F, 0.2F);
-			isRitualOngoing.value = true;
-			diameter.value = 2.5D;
-			intensity.value = 0.6D;
+		if (!isRitualOngoing) {
+			playSound("mob.enderdragon.growl", 1.0F, 0.2F);
+			isRitualOngoing = true;
+			diameter = 2.5D;
+			intensity = 0.6D;
 			markDirty();
 			updateBlock();
 		}
 	}
 
 	private void endRitual(boolean complete) {
-		if (isRitualOngoing.value) {
-			isRitualOngoing.value = false;
-			ritualTicks.value = 0;
-			diameter.value = 1;
-			intensity.value = 0.25D;
+		if (isRitualOngoing) {
+			isRitualOngoing = false;
+			ritualTicks = 0;
+			diameter = 1;
+			intensity = 0.25D;
 			ItemStack invStack = removeStackFromSlot(0);
 			if (!world.isRemote) {
 				if (complete) {
-					isMultiblock.value = false;
+					isMultiblock = false;
 					List<IntPos> check = new ArrayList<IntPos>();
 					check.add(new IntPos(xCoord + 2, yCoord, zCoord));
 					check.add(new IntPos(xCoord - 2, yCoord, zCoord));
@@ -389,12 +395,12 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdat
 					check.add(new IntPos(xCoord, yCoord, zCoord - 2));
 					for (IntPos checkPos : check) {
 						world.setBlockToAir(checkPos.x, checkPos.y, checkPos.z);
-						world.spawnEntity(new EntityLightningBolt(world, checkPos.x, checkPos.y + 1, checkPos.z, true));
+						world.spawnEntityInWorld(new EntityLightningBolt(world, checkPos.x, checkPos.y + 1, checkPos.z));
 					}
 					getChaosItem(invStack.getItem()).setChaosStable(invStack, true);
 				}
 				EntityItem chaosItem = new EntityItem(world, xCoord, yCoord + 1.01D, zCoord, invStack);
-				world.spawnEntity(chaosItem);
+				world.spawnEntityInWorld(chaosItem);
 				chaosItem.motionX = 0;
 				chaosItem.motionY = 0;
 				chaosItem.motionZ = 0;

@@ -9,7 +9,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import java.util.List;
-import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.ChatComponentTranslation;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
@@ -37,20 +37,20 @@ public class PacketChaosInjection implements IMessage {
 					if (UpgradeHelper.getUpgradeLevel(chest, ToolUpgrade.ATTACK_DAMAGE) > 0) {
 						NBTTagCompound chestNBT = chest.getTagCompound();
 						if (chestNBT.getBoolean("injecting")) {
-							player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosInjection.stop"), true);
+							player.addChatMessage(new ChatComponentTranslation("msg.da.chaosInjection.stop"));
 							chestNBT.setBoolean("injecting", false);
 						}
 						else {
-							player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosInjection.start"), true);
+							player.addChatMessage(new ChatComponentTranslation("msg.da.chaosInjection.start"));
 							chestNBT.setBoolean("injecting", true);
 						}
 					}
 					else {
-						player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosInjection.noupgrade"), true);
+						player.addChatMessage(new ChatComponentTranslation("msg.da.chaosInjection.noupgrade"));
 					}
 				}
 				else {
-					player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosInjection.incompatible"), true);
+					player.addChatMessage(new ChatComponentTranslation("msg.da.chaosInjection.incompatible"));
 				}
 			});
 			return null;

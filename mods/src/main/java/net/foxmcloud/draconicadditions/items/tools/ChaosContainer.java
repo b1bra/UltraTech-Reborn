@@ -3,11 +3,9 @@ package net.foxmcloud.draconicadditions.items.tools;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 import com.brandon3055.brandonscore.items.ItemEnergyBase;
-import com.brandon3055.brandonscore.lib.Vec3D;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.api.IInvCharge;
 import com.brandon3055.draconicevolution.api.itemupgrade.IUpgradableItem;
 import com.brandon3055.draconicevolution.api.itemupgrade.UpgradeHelper;
@@ -20,17 +18,14 @@ import net.foxmcloud.draconicadditions.capabilities.ChaosInBloodProvider;
 import net.foxmcloud.draconicadditions.capabilities.IChaosInBlood;
 import net.foxmcloud.draconicadditions.items.IChaosContainer;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
 import net.minecraftforge.common.util.ForgeDirection;
 import java.util.List;
-import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -108,11 +103,10 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 			}
 			int drainedRF = extractEnergy(stack, getChaos(stack) * ToolStats.CHAOS_CONTAINER_RF_PER_CHAOS, false);
 			if (drainedRF != getChaos(stack) * ToolStats.CHAOS_CONTAINER_RF_PER_CHAOS) {
-				Vec3D pos = new Vec3D(player.posX, player.posY, player.posZ);
-				CommonMethods.explodeEntity(x, y, z, world);
+				CommonMethods.explodeEntity(player.posX, player.posY, player.posZ, world);
 				player.attackEntityFrom(CommonMethods.chaosBurst, getChaos(stack));
-				player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosContainer.explode"), true);
-				stack.shrink(1);
+				player.addChatMessage(new ChatComponentTranslation("msg.da.chaosContainer.explode"));
+				stack.stackSize--;
 			}
 		}
 		else CommonMethods.cheatCheck(stack, world);
@@ -121,7 +115,7 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 	@Override
 	public boolean onDroppedByPlayer(ItemStack stack, EntityPlayer player) {
 		if (getChaos(stack) > 0 && !player.isCreative()) {
-			player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosContainer.cantdrop"), true);
+			player.addChatMessage(new ChatComponentTranslation("msg.da.chaosContainer.cantdrop"));
 			return false;
 		}
 		else {
@@ -135,8 +129,7 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 		if (entity instanceof EntityLiving) {
 			EntityLiving ent = (EntityLiving) entity;
 			if (getChaos(stack) > 0 && !ent.isEntityInvulnerable(CommonMethods.chaosBurst)) {
-				Vec3D pos = new Vec3D(ent.posX, ent.posY, ent.posZ);
-				CommonMethods.explodeEntity(pos, player.world);
+				CommonMethods.explodeEntity(ent.posX, ent.posY, ent.posZ, player.world);
 				if (!player.world.isRemote) {
 					float damage = Math.min(getChaos(stack), ent.getHealth());
 					entity.attackEntityFrom(CommonMethods.chaosBurst, damage);
@@ -149,36 +142,33 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 	}
 
 	@Override
-	public EnumActionResult onItemUseFirst(EntityPlayer player, World world, int x, int y, int z, ForgeDirection side, float hitX, float hitY, float hitZ) {
-		ItemStack stack = player.getHeldItem();
+	public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 		if (world.getTileEntity(x, y, z) instanceof TileChaosHolderBase) {
 			TileChaosHolderBase tileEntity = (TileChaosHolderBase) world.getTileEntity(x, y, z);
-			if (((ChaosContainer) stack.getItem()).getChaos(stack) > 0 && tileEntity.chaos.value != tileEntity.getMaxChaos()) {
-				int chaosToRemove = Math.min(getMaxChaos(stack) - tileEntity.chaos.value, getChaos(stack));
+			if (((ChaosContainer) stack.getItem()).getChaos(stack) > 0 && tileEntity.chaos != tileEntity.getMaxChaos()) {
+				int chaosToRemove = Math.min(getMaxChaos(stack) - tileEntity.chaos, getChaos(stack));
 				removeChaos(stack, chaosToRemove);
-				tileEntity.chaos.value += chaosToRemove;
+				tileEntity.chaos += chaosToRemove;
 			}
 			else {
-				int chaosToAdd = Math.min(getMaxChaos(stack) - getChaos(stack), tileEntity.chaos.value);
+				int chaosToAdd = Math.min(getMaxChaos(stack) - getChaos(stack), tileEntity.chaos);
 				addChaos(stack, chaosToAdd);
-				tileEntity.chaos.value -= chaosToAdd;
+				tileEntity.chaos -= chaosToAdd;
 			}
-			return EnumActionResult.SUCCESS;
+			return true;
 		}
 		else {
 			IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 			if (pCap != null && player.isEntityAlive() && pCap.getChaos() > 0) {
-				ActionResult<ItemStack> result = onItemRightClick(stack, world, player);
-				stack = result.getResult();
-				return result.getType();
+				onItemRightClick(stack, world, player);
+				return true;
 			}
 		}
-		return EnumActionResult.PASS;
+		return false;
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player) {
-		ItemStack stack = player.getHeldItem();
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 		if (pCap != null && player.isEntityAlive() && pCap.getChaos() > 0) {
 			int chaosToAdd = (int)(Math.min(pCap.getChaos(), 2) * 4);
@@ -188,20 +178,20 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 				ItemStack chest = player.inventory.armorItemInSlot(2);
 				if (chest.getItem() == DAFeatures.chaoticChest && ItemNBTHelper.getBoolean(chest, "injecting", false)) {
 					ItemNBTHelper.setBoolean(chest, "injecting", false);
-					player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosInjection.failsafe"), true);
+					player.addChatMessage(new ChatComponentTranslation("msg.da.chaosInjection.failsafe"));
 				}
 			}
 			else {
-				player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosContainer.charge"), true);
+				player.addChatMessage(new ChatComponentTranslation("msg.da.chaosContainer.charge"));
 			}
-			return new ActionResult<ItemStack>(EnumActionResult.FAIL, stack);
+			return stack;
 		}
-		return new ActionResult<ItemStack>(EnumActionResult.PASS, stack);
+		return stack;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
 		tooltip.add(getChaosInfo(stack));
 		if (getMaxEnergyStored(stack) > 0)
 		tooltip.add(I18n.format("info.da.shieldcharge.txt") + ": " + getEnergyStored(stack) + " / " + getMaxEnergyStored(stack) + " RF");

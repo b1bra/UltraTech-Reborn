@@ -1,5 +1,6 @@
 # Remaining manual backport work
 
-- No occurrences of the requested 1.12-only API names remain under `mods/src/main/java` after the mechanical pass.
-- A full Forge 1.7.10 compile still needs to be run in a complete modding workspace; this checkout does not include a Gradle wrapper or build file at repository depth 3, so I could not validate against the actual Minecraft/Forge/Brandon's Core/Draconic Evolution APIs here.
-- Several adjacent 1.8+/1.12 compatibility issues may still need manual cleanup during compile, especially `ActionResult`/`EnumActionResult`, `TextComponentString`/`TextComponentTranslation`, `ITooltipFlag`, `SoundEvents`/`SoundEvent`, `EnumParticleTypes`, `ItemStack#getCount`/`shrink`, blockstate/property setup, and other non-requested modern API symbols.
+- This pass removes the requested 1.12-only symbols/imports from `mods/src/main/java` and fixes the listed BrandonsCore/Minecraft 1.7.10 package moves.
+- A real Forge 1.7.10 build still must be run with the project dependencies on the classpath. This checkout has no Gradle wrapper/build file, so local `javac` can only confirm source syntax before failing on missing Minecraft/Forge/BrandonsCore/Draconic Evolution classes.
+- `ChaosCrystalStable` has been temporarily detached from Draconic Evolution's 1.12 `ChaosCrystal`/`TileChaosCrystal` classes. Reconnect its TODOs to the correct Draconic Evolution 1.7.10 chaos crystal classes once those package names are available.
+- Manual networking/render synchronization is still needed for the primitive tile fields that replaced BrandonsCore's data-manager `Managed*` values.

@@ -15,8 +15,8 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.MathHelper;
+import net.minecraft.util.Vec3;
 
 public class RenderPlug extends Render<EntityPlug> {
 
@@ -33,7 +33,7 @@ public class RenderPlug extends Render<EntityPlug> {
 			Tessellator tessellator = Tessellator.getInstance();
 			BufferBuilder bufferbuilder = tessellator.getBuffer();
 			int k = 1;
-			ItemStack itemstack = entityplayer.getHeldItemMainhand();
+			ItemStack itemstack = entityplayer.getHeldItem();
 			if (!(itemstack.getItem() instanceof PortableWiredCharger)) {
 				k = -k;
 			}
@@ -49,14 +49,14 @@ public class RenderPlug extends Render<EntityPlug> {
 			if ((this.renderManager.options == null || this.renderManager.options.thirdPersonView <= 0) && entityplayer == Minecraft.getMinecraft().player) {
 				float f4 = this.renderManager.options.fovSetting;
 				f4 = f4 / 100.0F;
-				Vec3d vec3d = new Vec3d((double)k * -0.36D * (double)f4 + (k < 0 ? -0.07D : 0), -0.045D * (double)f4, 0.4D);
+				Vec3 vec3d = Vec3.createVectorHelper((double)k * -0.36D * (double)f4 + (k < 0 ? -0.07D : 0), -0.045D * (double)f4, 0.4D);
 				vec3d = vec3d.rotatePitch(-(entityplayer.prevRotationPitch + (entityplayer.rotationPitch - entityplayer.prevRotationPitch) * partialTicks) * 0.017453292F);
 				vec3d = vec3d.rotateYaw(-(entityplayer.prevRotationYaw + (entityplayer.rotationYaw - entityplayer.prevRotationYaw) * partialTicks) * 0.017453292F);
 				vec3d = vec3d.rotateYaw(f2 * 0.5F);
 				vec3d = vec3d.rotatePitch(-f2 * 0.7F);
-				d4 = entityplayer.prevPosX + (entityplayer.posX - entityplayer.prevPosX) * (double) partialTicks + vec3d.x;
-				d5 = -0.3D + entityplayer.prevPosY + (entityplayer.posY - entityplayer.prevPosY) * (double) partialTicks + vec3d.y;
-				d6 = entityplayer.prevPosZ + (entityplayer.posZ - entityplayer.prevPosZ) * (double) partialTicks + vec3d.z;
+				d4 = entityplayer.prevPosX + (entityplayer.posX - entityplayer.prevPosX) * (double) partialTicks + vec3d.xCoord;
+				d5 = -0.3D + entityplayer.prevPosY + (entityplayer.posY - entityplayer.prevPosY) * (double) partialTicks + vec3d.yCoord;
+				d6 = entityplayer.prevPosZ + (entityplayer.posZ - entityplayer.prevPosZ) * (double) partialTicks + vec3d.zCoord;
 				d7 = (double) entityplayer.getEyeHeight();
 			}
 			else {

@@ -2,7 +2,6 @@ package net.foxmcloud.draconicadditions.items;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 import com.brandon3055.brandonscore.items.ItemEnergyBase;
 import com.brandon3055.draconicevolution.entity.EntityPersistentItem;
@@ -10,7 +9,6 @@ import com.brandon3055.draconicevolution.lib.RecipeManager;
 
 import net.foxmcloud.draconicadditions.DAConfig;
 import net.foxmcloud.draconicadditions.DAFeatures;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,11 +16,9 @@ import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumActionResult;
 import java.util.List;
-import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -68,11 +64,11 @@ public class Hermal extends ItemEnergyBase {
 		if (entityLiving instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer)entityLiving;
-			player.sendStatusMessage(new TextComponentString("No one contests the power of hermal."), true);
-			world.spawnEntity(new EntityLightningBolt(world, player.posX, player.posY + 1, player.posZ, false));
+			player.addChatMessage(new ChatComponentText("No one contests the power of hermal."));
+			world.spawnEntityInWorld(new EntityLightningBolt(world, player.posX, player.posY + 1, player.posZ, false));
             player.attackEntityFrom(new DamageSource("administrative.kill").setDamageAllowedInCreativeMode().setDamageBypassesArmor().setDamageIsAbsolute(), Float.MAX_VALUE);
 		}
-		stack.shrink(1);
+		stack.stackSize--;
 		return stack;
 	}
 
@@ -122,13 +118,13 @@ public class Hermal extends ItemEnergyBase {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player) {
-		player.sendStatusMessage(new TextComponentString("This seems like a bad idea..."), true);
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+		player.addChatMessage(new ChatComponentText("This seems like a bad idea..."));
 		player.setItemInUse(player.getHeldItem(), getMaxItemUseDuration(player.getHeldItem()));
-		return ActionResult.newResult(EnumActionResult.SUCCESS, player.getHeldItem());
+		return stack;
 	}
 }

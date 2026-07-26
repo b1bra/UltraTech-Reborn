@@ -1,9 +1,7 @@
 package net.foxmcloud.draconicadditions.blocks.tileentity;
 
 import com.brandon3055.brandonscore.lib.IChangeListener;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
 import cofh.api.energy.IEnergyContainerItem;
@@ -17,11 +15,11 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 	private int cooldownRatio = 100000;
 	private boolean clientPlayedSound = true;
 
-	public final ManagedInt cooldownTime = register("cooldownTime", new ManagedInt(1)).saveToTile().saveToItem().syncViaContainer().finish();
-	public final ManagedInt cooldownTimeRemaining = register("cooldownTimeRemaining", new ManagedInt(0)).saveToTile().saveToItem().syncViaContainer().finish();
-	public final ManagedInt fakeCapacity = register("fakeCapacity", new ManagedInt(0)).saveToTile().saveToItem().syncViaContainer().finish();
-	public final ManagedBool active = register("active", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedBool powered = register("powered", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
+	public int cooldownTime = 1;
+	public int cooldownTimeRemaining = 0;
+	public int fakeCapacity = 0;
+	public boolean active = false;
+	public boolean powered = false;
 
 	public TileItemDrainer() {
 		setInventorySize(1);
@@ -35,46 +33,46 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
-			if (active.value && !clientPlayedSound) {
-				world.playSound(x + 0.5D, y, z + 0.5D, DESoundHandler.boom, 1.0F, 2.0F, false);
+			if (active && !clientPlayedSound) {
+				world.playSoundEffect(xCoord + 0.5D, yCoord, zCoord + 0.5D, DESoundHandler.boom, 1.0F, 2.0F);
 				clientPlayedSound = true;
 			}
-			else if (!active.value && clientPlayedSound) {
+			else if (!active && clientPlayedSound) {
 				clientPlayedSound = false;
 			}
 			return;
 		}
-		active.value = cooldownTimeRemaining.value > 2;
-		if (cooldownTimeRemaining.value > 0) {
-			cooldownTimeRemaining.value -= 1;
+		active = cooldownTimeRemaining > 2;
+		if (cooldownTimeRemaining > 0) {
+			cooldownTimeRemaining -= 1;
 		}
-		if (cooldownTimeRemaining.value == 0 && cooldownTime.value > 0) {
-			cooldownTime.value = 0;
+		if (cooldownTimeRemaining == 0 && cooldownTime > 0) {
+			cooldownTime = 0;
 		}
-		if (cooldownTimeRemaining.value <= 0 && getEnergyStored() == 0 && !powered.value) {
+		if (cooldownTimeRemaining <= 0 && getEnergyStored() == 0 && !powered) {
 			extractEnergy();
 		}
 		energyStorage.modifyEnergyStored(-sendEnergyToAll());
-		if (energyStorage.getEnergyStored() == 0 && fakeCapacity.value > 0) {
-			fakeCapacity.value = 0;
+		if (energyStorage.getEnergyStored() == 0 && fakeCapacity > 0) {
+			fakeCapacity = 0;
 		}
 	}
 
 	public void extractEnergy() {
-		if (cooldownTimeRemaining.value > 0 || getEnergyStored() > 0) return;
+		if (cooldownTimeRemaining > 0 || getEnergyStored() > 0) return;
 		ItemStack stack = getStackInSlot(0);
 		if ((stack != null && stack.stackSize > 0) && stack.getItem() instanceof IEnergyContainerItem) {
 			if (ItemNBTHelper.getInteger(stack, "Energy", 0) > 0) {
 				int energyToExtract = ItemNBTHelper.getInteger(stack, "Energy", 0);
-				cooldownTime.value = energyToExtract / cooldownRatio;
-				cooldownTimeRemaining.value = cooldownTime.value;
-				fakeCapacity.value = energyToExtract;
+				cooldownTime = energyToExtract / cooldownRatio;
+				cooldownTimeRemaining = cooldownTime;
+				fakeCapacity = energyToExtract;
 				energyStorage.modifyEnergyStored(energyToExtract);
 				ItemNBTHelper.setInteger(stack, "Energy", 0);
 				/*
-				 * if (chaos.value > 0) { burnTime.value = (int)(extractSpeed * (1 +
-				 * (chaos.value / 2.0D))); extractTimeRemaining.value = burnTime.value;
-				 * chaos.value -= (int)Math.floor(Math.random() * (chaos.value / 8)); }
+				 * if (chaos > 0) { burnTime = (int)(extractSpeed * (1 +
+				 * (chaos / 2.0D))); extractTimeRemaining = burnTime;
+				 * chaos -= (int)Math.floor(Math.random() * (chaos / 8)); }
 				 */
 			}
 		}
@@ -95,6 +93,7 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 
 	@Override
 	public void onNeighborChange(int x, int y, int z) {
-		powered.value = world.isBlockPowered(pos);
+
+		powered = world.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
 	}
 }

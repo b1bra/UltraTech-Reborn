@@ -2,14 +2,12 @@ package net.foxmcloud.draconicadditions.items.baubles;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 import com.brandon3055.brandonscore.lib.EnergyContainerWrapper;
 import com.brandon3055.brandonscore.utils.InfoHelper;
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 
 import cofh.api.energy.IEnergyContainerItem;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -94,7 +92,7 @@ public class EnergyBauble extends BasicBauble implements IEnergyContainerItem {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced) {
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced) {
 		if (getMaxEnergyStored(stack) > 0) {
 			InfoHelper.addEnergyInfo(stack, tooltip);
 		}

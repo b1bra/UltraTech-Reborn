@@ -10,10 +10,7 @@ import baubles.api.cap.IBaublesItemHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
 import net.minecraft.world.World;
 
 public class BasicBauble extends ItemBCore implements IBauble {
@@ -28,15 +25,15 @@ public class BasicBauble extends ItemBCore implements IBauble {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player) {
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
 		for (int i = 0; i < baubles.getSlots(); i++) if ((baubles.getStackInSlot(i) == null || (baubles.getStackInSlot(i) == null || baubles.getStackInSlot(i).stackSize <= 0)) && baubles.isItemValidForSlot(i, player.getHeldItem(), player)) {
 			ItemStack bauble = player.getHeldItem().splitStack(1).copy();
-			player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, .75F, 1.75f);
+			player.playSound("random.pop", .75F, 1.75f);
 			baubles.setStackInSlot(i, bauble);
 			break;
 		}
-		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, player.getHeldItem());
+		return stack;
 	}
 
 	@Override
@@ -51,11 +48,11 @@ public class BasicBauble extends ItemBCore implements IBauble {
 
 	@Override
 	public void onEquipped(ItemStack stack, EntityLivingBase player) {
-		player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, .75F, 1.75f);
+		player.playSound("random.pop", .75F, 1.75f);
 	}
 
 	@Override
 	public void onUnequipped(ItemStack stack, EntityLivingBase player) {
-		player.playSound(SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, .75F, 2f);
+		player.playSound("random.pop", .75F, 2f);
 	}
 }

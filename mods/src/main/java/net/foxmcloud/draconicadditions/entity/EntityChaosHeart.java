@@ -2,17 +2,13 @@ package net.foxmcloud.draconicadditions.entity;
 
 import java.util.List;
 
-import com.brandon3055.brandonscore.client.particle.BCEffectHandler;
-import com.brandon3055.brandonscore.lib.Vec3D;
-import com.brandon3055.brandonscore.utils.FeatureUtils;
-import com.brandon3055.draconicevolution.DEFeatures;
-import com.brandon3055.draconicevolution.client.DEParticles;
 import com.brandon3055.draconicevolution.entity.EntityDragonHeart;
 
 import net.foxmcloud.draconicadditions.DAFeatures;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class EntityChaosHeart extends EntityDragonHeart {
@@ -32,8 +28,8 @@ public class EntityChaosHeart extends EntityDragonHeart {
 	if (!world.isRemote) {
 		int age = getAge();
 		if (age == 801) {
-		List<EntityDragonHeart> dragonHearts = world.getEntitiesWithinAABB(EntityDragonHeart.class, new AxisAlignedBB(this.posX - 1, this.posY - 1, this.posZ - 1, this.posX + 1, this.posY + 1, this.posZ + 1));
-		if ((dragonHearts != null && dragonHearts.stackSize > 0)) {
+		List<EntityDragonHeart> dragonHearts = world.getEntitiesWithinAABB(EntityDragonHeart.class, AxisAlignedBB.getBoundingBox(this.posX - 1, this.posY - 1, this.posZ - 1, this.posX + 1, this.posY + 1, this.posZ + 1));
+		if (dragonHearts != null && dragonHearts.size() > 0) {
 			for(int i = 0; i < dragonHearts.size(); i++) {
 				if (!(dragonHearts.get(i) instanceof EntityChaosHeart))
 					dragonHearts.get(i).setDead();
@@ -52,11 +48,11 @@ public class EntityChaosHeart extends EntityDragonHeart {
         EntityPlayer player = world.getClosestPlayerToEntity(this, 512);
 
         if (player != null) {
-            BCEffectHandler.spawnFX(DEParticles.DRAGON_HEART, world, new Vec3D(this), new Vec3D(player), 128D, 0, 0, 0, 1);
-            FeatureUtils.dropItemNoDellay(new ItemStack(DAFeatures.chaosHeart), world, new Vec3D(player).toVector3());
+            world.spawnParticle("portal", posX, posY, posZ, 0.0D, 0.0D, 0.0D);
+            world.spawnEntityInWorld(new EntityItem(world, player.posX, player.posY, player.posZ, new ItemStack(DAFeatures.chaosHeart)));
         }
         else {
-            FeatureUtils.dropItemNoDellay(new ItemStack(DAFeatures.chaosHeart), world, new Vec3D(this).toVector3());
+            world.spawnEntityInWorld(new EntityItem(world, posX, posY, posZ, new ItemStack(DAFeatures.chaosHeart)));
         }
 
         setDead();

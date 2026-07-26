@@ -1,9 +1,6 @@
 package net.foxmcloud.draconicadditions.blocks.tileentity;
 
 import com.brandon3055.brandonscore.lib.IChangeListener;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedDouble;
-import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 
 import cofh.api.energy.IEnergyContainerItem;
 import cofh.api.energy.IEnergyProvider;
@@ -18,11 +15,11 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	private int burnSpeed = 50;
 	private int baseRFMult = 40;
 
-	public final ManagedInt burnTime = register("burnTime", new ManagedInt(1)).saveToTile().saveToItem().syncViaContainer().finish();
-	public final ManagedInt burnTimeRemaining = register("burnTimeRemaining", new ManagedInt(0)).saveToTile().saveToItem().syncViaContainer().finish();
-	public final ManagedDouble burnSpeedMultiplier = register("burnSpeedMultiplier", new ManagedDouble(1.0D)).saveToTile().saveToItem().syncViaContainer().finish();
-	public final ManagedBool active = register("active", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
-	public final ManagedBool powered = register("powered", new ManagedBool(false)).saveToTile().saveToItem().syncViaTile().trigerUpdate().finish();
+	public int burnTime = 1;
+	public int burnTimeRemaining = 0;
+	public double burnSpeedMultiplier = 1.0D;
+	public boolean active = false;
+	public boolean powered = false;
 
 	public TileArmorGenerator() {
 		setInventorySize(1);
@@ -39,16 +36,16 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 			return;
 		}
 
-		active.value = burnTimeRemaining.value > 0 && getEnergyStored() < getMaxEnergyStored();
+		active = burnTimeRemaining > 0 && getEnergyStored() < getMaxEnergyStored();
 
-		if (burnTimeRemaining.value > 0 && getEnergyStored() < getMaxEnergyStored()) {
-			int energyGen = (int) (burnSpeed * burnSpeedMultiplier.value);
-			if (burnTimeRemaining.value < energyGen) energyGen = burnTimeRemaining.value;
-			burnTimeRemaining.value -= energyGen;
+		if (burnTimeRemaining > 0 && getEnergyStored() < getMaxEnergyStored()) {
+			int energyGen = (int) (burnSpeed * burnSpeedMultiplier);
+			if (burnTimeRemaining < energyGen) energyGen = burnTimeRemaining;
+			burnTimeRemaining -= energyGen;
 			energyStorage.modifyEnergyStored(energyGen);
 		}
 
-		if (burnTimeRemaining.value <= 0 && getEnergyStored() < getMaxEnergyStored() && !powered.value) {
+		if (burnTimeRemaining <= 0 && getEnergyStored() < getMaxEnergyStored() && !powered) {
 			refuel();
 		}
 
@@ -56,13 +53,13 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	}
 
 	public void refuel() {
-		if (burnTimeRemaining.value > 0 || getEnergyStored() >= getMaxEnergyStored()) return;
+		if (burnTimeRemaining > 0 || getEnergyStored() >= getMaxEnergyStored()) return;
 		ItemStack stack = getStackInSlot(0);
 		if ((stack != null && stack.stackSize > 0) && !(stack.getItem() instanceof IEnergyContainerItem)) {
 			if (stack.getItem() instanceof ItemArmor) {
 				ItemArmor item = (ItemArmor) stack.getItem();
 				int itemBurnTime = item.damageReduceAmount * (item.getMaxDamage(stack) - item.getDamage(stack) + 1) * baseRFMult;
-				burnSpeedMultiplier.value = Math.round(item.toughness > 0 ? 1 + item.toughness : 1);
+				burnSpeedMultiplier = Math.round(item.toughness > 0 ? 1 + item.toughness : 1);
 				if (stack.isItemEnchanted()) {
 					NBTTagList list = stack.getEnchantmentTagList();
 					if (list != null) {
@@ -72,22 +69,22 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 							lvls += compound.getShort("lvl") / 5.0D;
 						}
 						itemBurnTime *= lvls;
-						burnSpeedMultiplier.value = burnSpeedMultiplier.value * lvls;
+						burnSpeedMultiplier = burnSpeedMultiplier * lvls;
 					}
 				}
 				if (itemBurnTime > 0) {
-					if (stack.getCount() == 1) {
+					if (stack.stackSize == 1) {
 						stack = stack.getItem().getContainerItem(stack);
 					}
 					else {
-						stack.shrink(1);
+						stack.stackSize--;
 					}
 					setInventorySlotContents(0, stack);
-					burnSpeedMultiplier.value *= (1 + (chaos.value / 80D));
-					burnTime.value = (int) (itemBurnTime * (1 + (chaos.value / 80D)));
-					burnTimeRemaining.value = burnTime.value;
-					if (chaos.value > 0) {
-						chaos.value -= (int) Math.floor(Math.random() * (chaos.value / 100));
+					burnSpeedMultiplier *= (1 + (chaos / 80D));
+					burnTime = (int) (itemBurnTime * (1 + (chaos / 80D)));
+					burnTimeRemaining = burnTime;
+					if (chaos > 0) {
+						chaos -= (int) Math.floor(Math.random() * (chaos / 100));
 					}
 				}
 			}
@@ -125,6 +122,6 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 
 	@Override
 	public void onNeighborChange(int x, int y, int z) {
-		powered.value = world.isBlockPowered(pos);
+		powered = world.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord);
 	}
 }

@@ -1,6 +1,6 @@
 package net.foxmcloud.draconicadditions.capabilities;
 
-import com.brandon3055.brandonscore.utils.ItemNBTHelper;
+import com.brandon3055.brandonscore.util.ItemNBTHelper;
 
 public class ChaosInBlood implements IChaosInBlood {
 

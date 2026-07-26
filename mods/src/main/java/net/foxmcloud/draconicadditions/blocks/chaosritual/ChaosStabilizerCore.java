@@ -2,33 +2,20 @@ package net.foxmcloud.draconicadditions.blocks.chaosritual;
 
 import java.util.Random;
 
-import javax.annotation.Nullable;
+import com.brandon3055.brandonscore.block.BlockBCore;
 
-import com.brandon3055.brandonscore.blocks.BlockBCore;
-import com.brandon3055.brandonscore.registry.Feature;
-import com.brandon3055.brandonscore.registry.IRenderOverride;
-
-import codechicken.lib.model.ModelRegistryHelper;
 import net.foxmcloud.draconicadditions.blocks.chaosritual.tileentity.TileChaosStabilizerCore;
-import net.foxmcloud.draconicadditions.client.render.item.RenderItemChaosStabilizerCore;
-import net.foxmcloud.draconicadditions.client.render.tile.RenderTileChaosStabilizerCore;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumBlockRenderType;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.Explosion;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvider, IRenderOverride {
-
-	private static final AxisAlignedBB FULL_AABB = new AxisAlignedBB(0, 0, 0, 1, 1, 1);
+public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvider {
 
 	public ChaosStabilizerCore() {
 		super();
@@ -39,84 +26,64 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 		return new TileChaosStabilizerCore();
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
-	public float getBlockHardness(Block blockState, World world, int x, int y, int z) {
+
+	public float getBlockHardness(World world, int x, int y, int z) {
 		TileEntity tile = world.getTileEntity(x, y, z);
-		if (tile instanceof TileChaosStabilizerCore) {
-			return 200;
-		}
-		return super.getBlockHardness(blockState, world, pos);
+		return tile instanceof TileChaosStabilizerCore ? 200F : super.getBlockHardness(world, x, y, z);
 	}
 
 	@Override
-	public float getExplosionResistance(World world, int x, int y, int z, Entity exploder, Explosion explosion) {
+	public float getExplosionResistance(Entity exploder, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ) {
 		TileEntity tile = world.getTileEntity(x, y, z);
-		if (tile instanceof TileChaosStabilizerCore) {
-			return 6000000.0F;
-		}
-		return super.getExplosionResistance(world, pos, exploder, explosion);
+		return tile instanceof TileChaosStabilizerCore ? 6000000.0F : super.getExplosionResistance(exploder, world, x, y, z, explosionX, explosionY, explosionZ);
 	}
 
 	@Override
-	public EnumBlockRenderType getRenderType(Block state) {
-		return EnumBlockRenderType.INVISIBLE;
-	}
+	public int getRenderType() {
+		return -1;
 
-	@SideOnly(Side.CLIENT)
-	@Override
-	public void registerRenderer(Feature feature) {
-		ClientRegistry.bindTileEntitySpecialRenderer(TileChaosStabilizerCore.class, new RenderTileChaosStabilizerCore());
-		ModelRegistryHelper.registerItemRenderer(Item.getItemFromBlock(this), new RenderItemChaosStabilizerCore());
 	}
 
 	@Override
-	public boolean registerNormal(Feature feature) {
+	public boolean isOpaqueCube() {
 		return false;
 	}
 
 	@Override
-	public boolean isOpaqueCube(Block state) {
-		return false;
+
+	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
+		return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1, z + 1);
 	}
 
 	@Override
-	public AxisAlignedBB getSelectedBoundingBox(Block state, World worldIn, int x, int y, int z) {
-		return FULL_AABB;
-	}
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+		TileEntity tile = world.getTileEntity(x, y, z);
+		return tile instanceof TileChaosStabilizerCore ? AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1, z + 1) : super.getCollisionBoundingBoxFromPool(world, x, y, z);
 
-	@SuppressWarnings("deprecation")
-	@Nullable
-	public AxisAlignedBB getCollisionBoundingBox(Block blockState, World worldIn, int x, int y, int z) {
-		TileEntity tile = worldIn.getTileEntity(pos);
-		if (tile instanceof TileChaosStabilizerCore) {
-			return FULL_AABB;
-		}
-		return super.getCollisionBoundingBox(blockState, worldIn, pos);
 	}
 
 	@Override
 	public void onBlockExploded(World world, int x, int y, int z, Explosion explosion) {
 		TileEntity tile = world.getTileEntity(x, y, z);
 		if (!(tile instanceof TileChaosStabilizerCore)) {
-			super.onBlockExploded(world, pos, explosion);
+			super.onBlockExploded(world, x, y, z, explosion);
 		}
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(Block stateIn, World worldIn, int x, int y, int z, Random rand) {
-		if (worldIn.getTileEntity(pos) instanceof TileChaosStabilizerCore) {
-			TileChaosStabilizerCore tile = (TileChaosStabilizerCore) worldIn.getTileEntity(pos);
-			if (tile.isMultiblock.value) {
+
+	public void randomDisplayTick(World worldIn, int x, int y, int z, Random rand) {
+		if (worldIn.getTileEntity(x, y, z) instanceof TileChaosStabilizerCore) {
+			TileChaosStabilizerCore tile = (TileChaosStabilizerCore) worldIn.getTileEntity(x, y, z);
+			if (tile.isMultiblock) {
 				for (int i = 0; i < 10; i++) {
-					double x = x + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double y = y + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double z = z + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double xspeed = (x - x) / 1;
-					double yspeed = -0.5D + ((y - y) / 1);
-					double zspeed = (z - z) / 1;
-					worldIn.spawnParticle(EnumParticleTypes.PORTAL, x, y, z, xspeed, yspeed, zspeed, new int[0]);
+					double px = x + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					double py = y + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					double pz = z + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					worldIn.spawnParticle("portal", px, py, pz, px - x, py - y - 0.5D, pz - z);
+
 				}
 			}
 		}

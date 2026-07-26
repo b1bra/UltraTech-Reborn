@@ -43,12 +43,12 @@ public class GUIItemDrainer extends GuiContainer {
 		}
 
 		float power = 1;
-		if (tile.fakeCapacity.value > 0) {
-			power = (float) tile.energySync.value / (float) tile.fakeCapacity.value * -1 + 1;
+		if (tile.fakeCapacity > 0) {
+			power = (float) tile.energySync / (float) tile.fakeCapacity * -1 + 1;
 		}
 		float fuel = 1;
-		if (tile.cooldownTimeRemaining.value > 0) {
-			fuel = tile.cooldownTimeRemaining.value / ((float) tile.cooldownTime.value) * -1 + 1;
+		if (tile.cooldownTimeRemaining > 0) {
+			fuel = tile.cooldownTimeRemaining / ((float) tile.cooldownTime) * -1 + 1;
 		}
 
 		drawTexturedModalRect(guiLeft + 83, guiTop + 11 + (int) (power * 40), xSize, (int) (power * 40), 12, 40 - (int) (power * 40)); // Power
@@ -57,7 +57,7 @@ public class GUIItemDrainer extends GuiContainer {
 																																			// bar
 
 		// if (tile instanceof TileChaoticItemDrainer) {
-		// fontRenderer.drawStringWithShadow("Chaos: " + tile.chaos.value + " B",
+		// fontRenderer.drawStringWithShadow("Chaos: " + tile.chaos + " B",
 		// guiLeft + 60, guiTop - 8, 0x00FFFF);
 		// }
 
@@ -66,13 +66,13 @@ public class GUIItemDrainer extends GuiContainer {
 		if (GuiHelper.isInRect(83, 10, 12, 40, x, y)) {
 			ArrayList<String> internal = new ArrayList<>();
 			internal.add(I18n.format("info.de.energyBuffer.txt"));
-			internal.add("" + EnumChatFormatting.BLUE + tile.energySync.value + "/" + tile.fakeCapacity.value);
+			internal.add("" + EnumChatFormatting.BLUE + tile.energySync + "/" + tile.fakeCapacity);
 			drawHoveringText(internal, x + guiLeft, y + guiTop, fontRenderer);
 		}
 		if (GuiHelper.isInRect(100, 36, 18, 18, x, y)) {
 			ArrayList<String> internal = new ArrayList<>();
 			internal.add(I18n.format("info.da.cooldown.txt"));
-			internal.add("" + EnumChatFormatting.BLUE + tile.cooldownTimeRemaining.value / 20 + "/" + tile.cooldownTime.value / 20);
+			internal.add("" + EnumChatFormatting.BLUE + tile.cooldownTimeRemaining / 20 + "/" + tile.cooldownTime / 20);
 			drawHoveringText(internal, x + guiLeft, y + guiTop, fontRenderer);
 		}
 	}
