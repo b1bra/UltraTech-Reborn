@@ -7,8 +7,6 @@ import static net.foxmcloud.draconicadditions.DAFeatures.*;
 import static net.minecraft.init.Blocks.*;
 import static net.minecraft.init.Items.*;
 
-import com.brandon3055.brandonscore.registry.Feature;
-import com.brandon3055.brandonscore.registry.ModFeatures;
 import com.brandon3055.draconicevolution.lib.RecipeManager;
 
 import net.foxmcloud.draconicadditions.DAFeatures;
@@ -81,9 +79,9 @@ public class DARecipes {
 		addShaped(ALL, capacitorSupplier, " B ", "BAB", "BBB", 'A', END_ROD, 'B', IRON_INGOT);
 		//addFusion(NORMAL, new ItemStack(chaosInfuser), new ItemStack(chaosLiquefier), 500000, 3, awakenedCore, awakenedCore);
 		//addFusion(HARD, new ItemStack(chaosInfuser), new ItemStack(chaosLiquefier), 250000, 3, awakenedCore, draconicEnergyCore, draconicEnergyCore);
-		
+
 		// Hermal
-		
+
 		if (RecipeManager.isEnabled(DAFeatures.hermal)) {
 			addShaped(HARD, new ItemStack(hermal), "ABA", "BCB", "ABA", 'A', REDSTONE_BLOCK, 'B', new ItemStack(chaosShard, 1, 2), 'C', POISONOUS_POTATO);
 			addFusionTool(HARD, new ItemStack(hermalHelm), new ItemStack(draconicHelm), 128000000, 2, hermal, chaoticEnergyCore);
@@ -91,7 +89,7 @@ public class DARecipes {
 			addFusionTool(HARD, new ItemStack(hermalLegs), new ItemStack(draconicLegs), 128000000, 2, hermal, chaoticEnergyCore);
 			addFusionTool(HARD, new ItemStack(hermalBoots), new ItemStack(draconicBoots), 128000000, 2, hermal, chaoticEnergyCore);
 		}
-		
+
 		// Shield Baubles
 
 		addShaped(NORMAL, basicShieldNecklace, "AAA", "ACA", " B ", 'A', GOLD_INGOT, 'B', draconicCore, 'C', wyvernEnergyCore);
@@ -105,9 +103,9 @@ public class DARecipes {
 		addShaped(ALL, vampiricShirt, "A A", "BCB", "ACA", 'A', "ingotDraconiumAwakened", 'B', awakenedCore, 'C', WOOL);
 		addShaped(NORMAL, inertiaCancelRing, "ABA", "B B", "ABA", 'A', GOLD_INGOT, 'B', wyvernEnergyCore);
 		addShaped(HARD, inertiaCancelRing, "ABA", "B B", "ABA", 'A', GOLD_INGOT, 'B', wyvernCore);
-		
+
 		// Misc / Decor
-		
+
 		addFusion(ALL, new ItemStack(chaosCrystalStable), new ItemStack(chaosShard, 1, 0), 2000000000, 3, new ItemStack(chaosShard, 1, 0), new ItemStack(chaosShard, 1, 0), new ItemStack(chaosShard, 1, 0), new ItemStack(chaosShard, 1, 0));
 	}
 }

@@ -53,7 +53,7 @@ public class DAConfig implements IModConfigHelper {
 		DAFeatures.chaoticStaffOfPower.loadStatConfig();
 		DAFeatures.chaoticBow.loadStatConfig();
 	}
-	
+
 	@ModConfigProperty(category = "Misc Tweaks", name = "Hermal - RF Generation", comment = "Modifies how much RF/t Hermal provides.", autoSync = true)
 	@ModConfigProperty.MinMax(min = "0", max = "4")
 	public static int HERMAL_RF = 1000;

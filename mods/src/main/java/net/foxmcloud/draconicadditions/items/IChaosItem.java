@@ -14,7 +14,7 @@ public interface IChaosItem {
 	public default void setChaosStable(ItemStack stack, boolean stable) {
 		ItemNBTHelper.setBoolean(stack, "isStable", stable);
     }
-	
+
 	public default String getChaosInfoStable(ItemStack stack) {
 		if (!isChaosStable(stack)) return I18n.format("item.draconicadditions:chaosItem.lore");
 		else return null;

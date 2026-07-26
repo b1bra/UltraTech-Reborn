@@ -176,7 +176,7 @@ public class PortableWiredCharger extends ItemEnergyBase {
 		stacks.addAll(player.inventory.offHandInventory);
 		for (ItemStack stack : stacks) {
 			if (getEnergyStored(charger) == 0) break;
-			if (stack.isEmpty()) continue;
+			if ((stack == null || stack.stackSize <= 0)) continue;
 			if (EnergyHelper.canReceiveEnergy(stack)) {
 				int max = Math.min(getEnergyStored(charger), getMaxExtract(charger));
 				int insertedEnergy = EnergyHelper.insertEnergy(stack, Math.min(getMaxExtract(charger), max), false);

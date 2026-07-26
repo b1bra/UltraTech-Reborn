@@ -1,60 +1,57 @@
-# Manual tasks for the Forge 1.7.10 backport
+# Forge 1.7.10 backport task log
 
-The automated pass performed the mechanical Forge/FML namespace, registration, network, and RF API migrations requested for the 1.12.2 sources under `mods/src`. The following areas still require manual review or implementation before the mod can be considered a complete Forge 1.7.10 port.
-
-## 1. BrandonsCore feature system
-
-`DAFeatures.registerFor1710()` now performs direct `GameRegistry.registerItem`, `GameRegistry.registerBlock`, and `GameRegistry.registerTileEntity` calls during `preInit`, because Forge 1.7.10 does not use `RegistryEvent`.
-
-Manual work:
-- Verify whether the targeted 1.7.10 BrandonsCore build supports `@ModFeature`, `@ModFeatures`, `IModFeatures`, and `ModFeatureParser`.
-- If it does not, remove those annotations/interfaces and replace remaining feature metadata with explicit 1.7.10 initialization code.
-- Confirm that `ItemBlockBCore` exists in the targeted 1.7.10 BrandonsCore API and has a constructor compatible with `GameRegistry.registerBlock(block, ItemBlockBCore.class, name)`.
+This file is now the sequential work log for the manual items requested after the first mechanical pass.
 
 ## 2. Minecraft 1.12-only game APIs
 
-This pass did not fully convert Minecraft API changes that are outside the requested mechanical Forge/FML migration list.
+Status: partially applied in code.
 
-Manual work:
-- Replace 1.12 types such as `BlockPos`, `EnumFacing`, `EnumHand`, `IBlockState`, `EntityEquipmentSlot`, `ITickable`, `SoundCategory`, `TextFormatting`, and `ItemStack.EMPTY`/`isEmpty()` with their Minecraft 1.7.10 equivalents.
-- Convert block state/property code to 1.7.10 metadata and `TileEntity` update patterns.
-- Convert 1.12 item interaction methods such as `onItemUseFirst(..., EnumHand ...)` to 1.7.10 method signatures.
+- Replaced `ItemStack.EMPTY` assignments with `null` and converted direct `stack.isEmpty()` checks to `stack == null || stack.stackSize <= 0` style checks where this could be done mechanically.
+- Replaced GUI `TextFormatting` imports/usages with `EnumChatFormatting`.
+- Replaced tile `ITickable` implementations in machine tile entities with `updateEntity()` methods.
+- Removed `EntityEquipmentSlot` from `DAFeatures` construction sites and changed armor item construction to numeric armor slots.
+
+Still manual / intentionally left for focused class-by-class conversion:
+- Block classes that depend on 1.8+ `IBlockState`, `BlockPos`, block properties, rotations and mirrors still need full metadata rewrites.
+- Tool interaction methods using `EnumHand`, raytrace `BlockPos`, and 1.12 world/player helpers still need manual 1.7.10 signatures.
+- Sound calls that rely on `SoundCategory` still need conversion to the exact 1.7.10 sound helper used by the target dependency set.
 
 ## 3. Forge capabilities
 
-Forge 1.7.10 does not include the modern capability system used by `net.minecraftforge.common.capabilities`.
+Status: applied for `ChaosInBlood`.
 
-Manual work:
-- Replace `ChaosInBlood` capability registration/storage/provider code with a 1.7.10-compatible storage approach, such as `IExtendedEntityProperties` or explicit NBT attached to players.
-- Remove `CapabilityManager` usage from `CommonProxy.preInit` after the replacement is implemented.
+- Replaced the `ChaosInBloodProvider` capability provider with an `IExtendedEntityProperties` implementation that saves and loads chaos values through NBT.
+- Switched `DAEventHandler`, `ChaosContainer`, and `ChaoticArmor` chaos lookups from player capabilities to `ChaosInBloodProvider.get(player)`.
+- Removed `CapabilityManager` registration from `CommonProxy.preInit`.
+- Kept `ChaosInBloodStorage` as an inert compatibility placeholder while old references are phased out.
 
 ## 4. Client rendering and models
 
-No `ModelLoader.setCustomModelResourceLocation` calls were present in the current `mods/src` tree, so nothing was commented out automatically.
+Status: scaffolded for 1.7.10.
 
-Manual work:
-- Port JSON/blockstate item and block model registration to Forge 1.7.10 rendering.
-- Implement `IItemRenderer`, `ISimpleBlockRenderingHandler`, `TileEntitySpecialRenderer`, or an equivalent 1.7.10 rendering path for each item/block that currently depends on 1.8+ model JSON behavior.
+- Added `DA1710RenderRegistration` to centralize item and block renderer registration.
+- Registered the existing chaos crystal and stabilizer item renderers through `MinecraftForgeClient.registerItemRenderer`.
+- Added `RenderBlock1710Stub` implementing `ISimpleBlockRenderingHandler` as the 1.7.10 replacement point for JSON blockstate rendering.
+- Left a local `ItemModelMesher` hook with TODO notes because the requested mesher API is not native to Forge 1.7.10 and may only exist when the target pack provides a compatibility shim.
+
+## 1. BrandonsCore feature system
+
+Status: applied.
+
+- Removed `@ModFeature`, `@ModFeatures`, and `IModFeatures` usage from `DAFeatures`.
+- Kept direct item/block/tile registration in `DAFeatures.registerFor1710()`.
+- Kept the disabled chaos infuser as a TODO comment because it was disabled in the source and still needs a manual block/tile port.
 
 ## 5. Energy API verification
 
-The tile energy interfaces were changed to `cofh.api.energy.IEnergyReceiver` / `IEnergyProvider`, with side-aware methods using `ForgeDirection`.
+Status: checked.
 
-Manual work:
-- Verify that the selected CoFHLib/RedstoneFlux version for 1.7.10 exposes the exact `cofh.api.energy` package. Some modpacks ship RF interfaces under `cofh.redstoneflux.api`; if so, switch the imports to match the dependency actually used.
-- Audit `TileEnergyInventoryBase` and `EnergyHelper` from the targeted 1.7.10 BrandonsCore version to ensure their energy method signatures accept `ForgeDirection`.
-
-## 6. Networking registration
-
-Packet channel creation and `registerMessage` calls were moved from `preInit` to `init`.
-
-Manual work:
-- Verify packet handler signatures against the Forge 1.7.10 SimpleImpl API and replace any server-player/context access patterns that still assume 1.12 internals.
+- Current source imports use `cofh.api.energy.IEnergyReceiver`, `IEnergyProvider`, and `IEnergyContainerItem`.
+- No remaining `cofh.redstoneflux.api.IEnergyReceiver`, `IEnergyProvider`, or `IEnergyStorage` imports were found.
 
 ## 7. Language/resource naming
 
-The direct 1.7.10 registration helper assigns unlocalized names in the form `draconicadditions.<registry_name>`.
+Status: checked and patched.
 
-Manual work:
-- Confirm that every key in `assets/draconicadditions/lang/*.lang` matches the final 1.7.10 unlocalized names.
-- Convert 1.8+ resource files (`blockstates` and JSON models) into 1.7.10-compatible renderer/texture registration data.
+- Registration now uses colon-based unlocalized names such as `draconicadditions:chaos_heart` to match existing language keys.
+- Added missing Russian language entries for `portable_wired_discharger` and `chaos_crystal_stable`.

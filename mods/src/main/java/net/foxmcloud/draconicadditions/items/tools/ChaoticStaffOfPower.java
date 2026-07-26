@@ -34,7 +34,7 @@ public class ChaoticStaffOfPower extends DraconicStaffOfPower implements IChaosI
 	public ChaoticStaffOfPower() {
 		super();
 	}
-	
+
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
         super.getSubItems(tab, subItems);
@@ -70,7 +70,7 @@ public class ChaoticStaffOfPower extends DraconicStaffOfPower implements IChaosI
 		int capacity = ToolStats.CHAOTIC_BASE_CAPACITY * 3;
 		setEnergyStats(capacity, capacity, 0);
 	}
-	
+
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {

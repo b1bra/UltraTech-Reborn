@@ -168,7 +168,7 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 			return EnumActionResult.SUCCESS;
 		}
 		else {
-			IChaosInBlood pCap = player.getCapability(ChaosInBloodProvider.PLAYER_CAP, null);
+			IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 			if (pCap != null && player.isEntityAlive() && pCap.getChaos() > 0) {
 				ActionResult<ItemStack> result = onItemRightClick(world, player, hand);
 				stack = result.getResult();
@@ -177,11 +177,11 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 		}
 		return EnumActionResult.PASS;
 	}
-	
+
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		ItemStack stack = player.getHeldItem(hand);
-		IChaosInBlood pCap = player.getCapability(ChaosInBloodProvider.PLAYER_CAP, null);
+		IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 		if (pCap != null && player.isEntityAlive() && pCap.getChaos() > 0) {
 			int chaosToAdd = (int)(Math.min(pCap.getChaos(), 2) * 4);
 			addChaos(stack, chaosToAdd);

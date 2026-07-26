@@ -7,6 +7,7 @@ import net.foxmcloud.draconicadditions.DraconicAdditions;
 import net.foxmcloud.draconicadditions.client.keybinding.KeyBindings;
 import net.foxmcloud.draconicadditions.client.keybinding.KeyInputHandler;
 import net.foxmcloud.draconicadditions.client.model.DAArmorModelHelper;
+import net.foxmcloud.draconicadditions.client.render.DA1710RenderRegistration;
 import net.foxmcloud.draconicadditions.client.render.entity.RenderChaosHeart;
 import net.foxmcloud.draconicadditions.client.render.entity.RenderPlug;
 import net.foxmcloud.draconicadditions.entity.EntityChaosHeart;
@@ -36,5 +37,7 @@ public class ClientProxy extends CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		KeyBindings.init();
+		DA1710RenderRegistration.registerItemModels();
+		DA1710RenderRegistration.registerBlockRenderers();
 	}
 }

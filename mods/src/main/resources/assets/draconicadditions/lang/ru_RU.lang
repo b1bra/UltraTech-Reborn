@@ -9,7 +9,7 @@ item.draconicadditions:inert_potato_boots.name=Инертные картофел
 item.draconicadditions:infused_potato_helm.name=Пробуждённый картофельный шлем
 item.draconicadditions:infused_potato_chest.name=Пробуждённый картофельный нагрудник
 item.draconicadditions:infused_potato_legs.name=Пробуждённые картофельные поножи
-item.draconicadditions:infused_potato_boots.name=Пробуждённые картофельные ботинки 
+item.draconicadditions:infused_potato_boots.name=Пробуждённые картофельные ботинки
 item.draconicadditions:potato_helm.name=Заряженный картофельный шлем
 item.draconicadditions:potato_chest.name=Заряженный картофельный нагрудник
 item.draconicadditions:potato_legs.name=Заряженные картофельные поножи
@@ -21,7 +21,7 @@ item.draconicadditions:chaotic_boots.name=Ботинки хаоса
 item.draconicadditions:hermal_helm.name=Пробуждённый гермальный шлем
 item.draconicadditions:hermal_chest.name=Пробуждённый гермальный нагрудник
 item.draconicadditions:hermal_legs.name=Пробуждённые гермальные поножи
-item.draconicadditions:hermal_boots.name=Пробуждённые гермальные ботинки 
+item.draconicadditions:hermal_boots.name=Пробуждённые гермальные ботинки
 
 //Blocks
 
@@ -118,3 +118,5 @@ key.chaosInjection=Переключить Инжектор Хаоса
 
 //Russian translation by Lewui, Bytegm, Big_Energy
 //Modified by FoxMcloud5655
+item.draconicadditions:portable_wired_discharger.name=Портативный проводной разрядник
+tile.draconicadditions:chaos_crystal_stable.name=Полустабильный кристалл Хаоса

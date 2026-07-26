@@ -15,7 +15,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.EnumChatFormatting;
 
 public class GUIArmorGenerator extends GuiContainer {
 	public EntityPlayer player;
@@ -40,7 +40,7 @@ public class GUIArmorGenerator extends GuiContainer {
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 		drawTexturedModalRect(guiLeft + 63, guiTop + 34, 0, ySize, 18, 18); //Fuel box
 		drawTexturedModalRect(guiLeft + 97, guiTop + 34, 18, ySize, 18, 18); //Flame box
-		if (tile.getStackInSlot(0).isEmpty()) {
+		if ((tile.getStackInSlot(0) == null || tile.getStackInSlot(0).stackSize <= 0)) {
 			drawTexturedModalRect(guiLeft + 63, guiTop + 34, 36, ySize, 18, 18); //Fuel box
 		}
 
@@ -59,7 +59,7 @@ public class GUIArmorGenerator extends GuiContainer {
 		if (GuiHelper.isInRect(83, 10, 12, 40, x, y)) {
 			ArrayList<String> internal = new ArrayList<>();
 			internal.add(I18n.format("info.de.energyBuffer.txt"));
-			internal.add("" + TextFormatting.BLUE + tile.energySync.value + "/" + tile.getMaxEnergyStored(ForgeDirection.UP));
+			internal.add("" + EnumChatFormatting.BLUE + tile.energySync.value + "/" + tile.getMaxEnergyStored(ForgeDirection.UP));
 			drawHoveringText(internal, x + guiLeft, y + guiTop, fontRenderer);
 		}
 	}

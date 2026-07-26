@@ -19,7 +19,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
@@ -31,12 +30,12 @@ public class PotatoArmor extends WyvernArmor {
 
 	private static ArmorMaterial potatoMaterial = EnumHelper.addArmorMaterial("potatoArmor", DraconicAdditions.MODID_PREFIX + "potato_armor", -1, new int[] {1, 1, 2, 1}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 
-	public PotatoArmor(int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(potatoMaterial, renderIndexIn, equipmentSlotIn);
+	public PotatoArmor(int renderIndexIn, int armorType) {
+		super(potatoMaterial, renderIndexIn, armorType);
 	}
 
-	public PotatoArmor(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(materialIn, renderIndexIn, equipmentSlotIn);
+	public PotatoArmor(ArmorMaterial materialIn, int renderIndexIn, int armorType) {
+		super(materialIn, renderIndexIn, armorType);
 	}
 
 	@Override
@@ -54,23 +53,23 @@ public class PotatoArmor extends WyvernArmor {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
+	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot, ModelBiped _default) {
 		if (DEConfig.disable3DModels) {
 			return super.getArmorModel(entityLiving, itemStack, armorSlot, _default);
 		}
 
 		if (model == null) {
-			if (armorType == EntityEquipmentSlot.HEAD) model = new ModelPotatoArmor(0.5F, true, false, false, false);
-			else if (armorType == EntityEquipmentSlot.CHEST) model = new ModelPotatoArmor(1.5F, false, true, false, false);
-			else if (armorType == EntityEquipmentSlot.LEGS) model = new ModelPotatoArmor(1.5F, false, false, true, false);
+			if (armorType == 0) model = new ModelPotatoArmor(0.5F, true, false, false, false);
+			else if (armorType == 1) model = new ModelPotatoArmor(1.5F, false, true, false, false);
+			else if (armorType == 2) model = new ModelPotatoArmor(1.5F, false, false, true, false);
 			else model = new ModelPotatoArmor(1F, false, false, false, true);
-			this.model.bipedHead.showModel = (armorType == EntityEquipmentSlot.HEAD);
-			this.model.bipedHeadwear.showModel = (armorType == EntityEquipmentSlot.HEAD);
-			this.model.bipedBody.showModel = ((armorType == EntityEquipmentSlot.CHEST) || (armorType == EntityEquipmentSlot.LEGS));
-			this.model.bipedLeftArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-			this.model.bipedRightArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-			this.model.bipedLeftLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
-			this.model.bipedRightLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
+			this.model.bipedHead.showModel = (armorType == 0);
+			this.model.bipedHeadwear.showModel = (armorType == 0);
+			this.model.bipedBody.showModel = ((armorType == 1) || (armorType == 2));
+			this.model.bipedLeftArm.showModel = (armorType == 1);
+			this.model.bipedRightArm.showModel = (armorType == 1);
+			this.model.bipedLeftLeg.showModel = (armorType == 2 || armorType == 3);
+			this.model.bipedRightLeg.showModel = (armorType == 2 || armorType == 3);
 		}
 
 		if (entityLiving == null) {
@@ -81,12 +80,12 @@ public class PotatoArmor extends WyvernArmor {
 		this.model.isRiding = entityLiving.isRiding();
 		this.model.isChild = entityLiving.isChild();
 
-		this.model.bipedHeadwear.showModel = (armorType == EntityEquipmentSlot.HEAD);
-		this.model.bipedBody.showModel = ((armorType == EntityEquipmentSlot.CHEST) || (armorType == EntityEquipmentSlot.LEGS));
-		this.model.bipedLeftArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-		this.model.bipedRightArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-		this.model.bipedLeftLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
-		this.model.bipedRightLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
+		this.model.bipedHeadwear.showModel = (armorType == 0);
+		this.model.bipedBody.showModel = ((armorType == 1) || (armorType == 2));
+		this.model.bipedLeftArm.showModel = (armorType == 1);
+		this.model.bipedRightArm.showModel = (armorType == 1);
+		this.model.bipedLeftLeg.showModel = (armorType == 2 || armorType == 3);
+		this.model.bipedRightLeg.showModel = (armorType == 2 || armorType == 3);
 
 		return model;
 	}
@@ -99,7 +98,7 @@ public class PotatoArmor extends WyvernArmor {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-		if (!stack.isEmpty() && ArmorStats.POTATO_BREAK_ON_EXHAUST) {
+		if ((stack != null && stack.stackSize > 0) && ArmorStats.POTATO_BREAK_ON_EXHAUST) {
 			PotatoArmor armor = (PotatoArmor) stack.getItem();
 			if (armor.getEnergyStored(stack) < 1000 && ItemNBTHelper.getFloat(stack, "ProtectionPoints", 0) == 0) {
 				ItemStack draconiumDust = new ItemStack(DEFeatures.draconiumDust);

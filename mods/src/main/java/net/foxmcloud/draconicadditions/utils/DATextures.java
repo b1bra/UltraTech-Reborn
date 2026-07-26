@@ -46,7 +46,7 @@ public class DATextures implements IIconRegister, ISelectiveResourceReloadListen
 	}
 
 	public static TextureAtlasSprite CHAOTIC_STAFF_OF_POWER;
-	
+
     public static TextureAtlasSprite CHAOTIC_BOW00;
     public static TextureAtlasSprite CHAOTIC_BOW01;
     public static TextureAtlasSprite CHAOTIC_BOW02;

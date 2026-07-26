@@ -1,12 +1,8 @@
 package net.foxmcloud.draconicadditions;
 
-import com.brandon3055.brandonscore.registry.ModFeatureParser;
 import com.brandon3055.draconicevolution.DraconicEvolution;
 import com.brandon3055.draconicevolution.entity.EntityDragonHeart;
 
-import net.foxmcloud.draconicadditions.capabilities.ChaosInBlood;
-import net.foxmcloud.draconicadditions.capabilities.ChaosInBloodStorage;
-import net.foxmcloud.draconicadditions.capabilities.IChaosInBlood;
 import net.foxmcloud.draconicadditions.entity.EntityChaosHeart;
 import net.foxmcloud.draconicadditions.entity.EntityPlug;
 import net.foxmcloud.draconicadditions.handlers.DAEventHandler;
@@ -17,7 +13,6 @@ import net.foxmcloud.draconicadditions.network.PacketChaosInjection;
 import net.foxmcloud.draconicadditions.network.PacketOverloadBelt;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.capabilities.CapabilityManager;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -29,10 +24,7 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
 		// Forge 1.7.10 has no RegistryEvent; register mod features directly during preInit.
 		DAFeatures.registerFor1710();
-		// TODO 1.7.10 backport: audit whether BrandonsCore ModFeatureParser is still needed after direct GameRegistry registration.
-		// ModFeatureParser.registerModFeatures(DraconicAdditions.MODID);
 		MinecraftForge.EVENT_BUS.register(new DAEventHandler());
-		CapabilityManager.INSTANCE.register(IChaosInBlood.class, new ChaosInBloodStorage(), ChaosInBlood::new);
 		EntityRegistry.registerModEntity(new ResourceLocation(DraconicAdditions.MODID, "plug"), EntityPlug.class, "draconicadditions:plug", 1, DraconicAdditions.instance, 64, 5, false);
 		EntityRegistry.registerModEntity(new ResourceLocation(DraconicAdditions.MODID, "chaosHeart"), EntityChaosHeart.class, "draconicadditions:chaosheartitem", 2, DraconicAdditions.instance, 64, 5, false);
 	}
@@ -44,7 +36,7 @@ public class CommonProxy {
 		DARecipes.addRecipes();
 		AE2Compat.init();
 	}
-	
+
 	public void postInit(FMLPostInitializationEvent event) {
 		FusionCostMultiplier.postInit();
 	}

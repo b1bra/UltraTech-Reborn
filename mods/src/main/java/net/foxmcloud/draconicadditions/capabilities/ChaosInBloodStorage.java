@@ -1,20 +1,6 @@
 package net.foxmcloud.draconicadditions.capabilities;
 
-import net.minecraft.nbt.NBTBase;
-import net.minecraft.nbt.NBTTagFloat;
-import net.minecraft.util.EnumFacing;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.Capability.IStorage;
-
-public class ChaosInBloodStorage implements IStorage<IChaosInBlood> {
-
-	@Override
-	public NBTBase writeNBT(Capability capability, IChaosInBlood instance, EnumFacing side) {
-		return new NBTTagFloat(instance.getChaos());
-	}
-
-	@Override
-	public void readNBT(Capability capability, IChaosInBlood instance, EnumFacing side, NBTBase nbt) {
-		instance.setChaos(((NBTTagFloat)nbt).getFloat());
-	}
-}
+// Forge 1.7.10 backport: capability storage is replaced by ChaosInBloodProvider's
+// IExtendedEntityProperties NBT implementation. This class remains only as a
+// source-compatible placeholder for old references during the migration.
+public class ChaosInBloodStorage {}

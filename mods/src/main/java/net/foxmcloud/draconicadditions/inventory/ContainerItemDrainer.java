@@ -39,14 +39,14 @@ public class ContainerItemDrainer extends ContainerBCBase<TileItemDrainer> {
 			ItemStack result = stack.copy();
 			if (i >= 36) {
 				if (!mergeItemStack(stack, 0, 36, false)) {
-					return ItemStack.EMPTY;
+					return null;
 				}
 			}
 			else if (stack.getItem() instanceof IEnergyContainerItem || !mergeItemStack(stack, 36, 36 + tile.getSizeInventory(), false)) {
-				return ItemStack.EMPTY;
+				return null;
 			}
 			if (stack.getCount() == 0) {
-				slot.putStack(ItemStack.EMPTY);
+				slot.putStack(null);
 			}
 			else {
 				slot.onSlotChanged();
@@ -54,6 +54,6 @@ public class ContainerItemDrainer extends ContainerBCBase<TileItemDrainer> {
 			slot.onTake(player, stack);
 			return result;
 		}
-		return ItemStack.EMPTY;
+		return null;
 	}
 }

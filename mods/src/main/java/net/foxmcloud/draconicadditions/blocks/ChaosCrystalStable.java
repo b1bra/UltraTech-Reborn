@@ -33,14 +33,14 @@ public class ChaosCrystalStable extends ChaosCrystal implements IChaosItem {
 		super();
 		this.setHardness(100.0F);
 	}
-	
+
     @Override
     public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
     	ItemStack stack = new ItemStack(this);
     	setChaosStable(stack, true);
     	list.add(stack);
     }
-    
+
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
@@ -70,7 +70,7 @@ public class ChaosCrystalStable extends ChaosCrystal implements IChaosItem {
 			}
 		}
 	}
-	
+
     @SideOnly(Side.CLIENT)
     @Override
     public void registerRenderer(Feature feature) {

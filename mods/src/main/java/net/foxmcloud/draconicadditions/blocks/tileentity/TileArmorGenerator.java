@@ -12,10 +12,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 
-public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyProvider, ITickable, IChangeListener {
+public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyProvider, IChangeListener {
 
 	private int burnSpeed = 50;
 	private int baseRFMult = 40;
@@ -35,7 +34,7 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	}
 
 	@Override
-	public void update() {
+	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
 			return;
@@ -60,7 +59,7 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	public void refuel() {
 		if (burnTimeRemaining.value > 0 || getEnergyStored() >= getMaxEnergyStored()) return;
 		ItemStack stack = getStackInSlot(0);
-		if (!stack.isEmpty() && !(stack.getItem() instanceof IEnergyContainerItem)) {
+		if ((stack != null && stack.stackSize > 0) && !(stack.getItem() instanceof IEnergyContainerItem)) {
 			if (stack.getItem() instanceof ItemArmor) {
 				ItemArmor item = (ItemArmor) stack.getItem();
 				int itemBurnTime = item.damageReduceAmount * (item.getMaxDamage(stack) - item.getDamage(stack) + 1) * baseRFMult;

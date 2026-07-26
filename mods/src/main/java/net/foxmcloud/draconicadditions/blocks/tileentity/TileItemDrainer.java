@@ -10,12 +10,11 @@ import cofh.api.energy.IEnergyContainerItem;
 import cofh.api.energy.IEnergyProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.ITickable;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import scala.Int;
 
-public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvider, ITickable, IChangeListener {
+public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvider, IChangeListener {
 
 	private int cooldownRatio = 100000;
 	private boolean clientPlayedSound = true;
@@ -35,7 +34,7 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 	}
 
 	@Override
-	public void update() {
+	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
 			if (active.value && !clientPlayedSound) {
@@ -66,7 +65,7 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 	public void extractEnergy() {
 		if (cooldownTimeRemaining.value > 0 || getEnergyStored() > 0) return;
 		ItemStack stack = getStackInSlot(0);
-		if (!stack.isEmpty() && stack.getItem() instanceof IEnergyContainerItem) {
+		if ((stack != null && stack.stackSize > 0) && stack.getItem() instanceof IEnergyContainerItem) {
 			if (ItemNBTHelper.getInteger(stack, "Energy", 0) > 0) {
 				int energyToExtract = ItemNBTHelper.getInteger(stack, "Energy", 0);
 				cooldownTime.value = energyToExtract / cooldownRatio;

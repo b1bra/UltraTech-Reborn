@@ -1,10 +1,8 @@
 package net.foxmcloud.draconicadditions.handlers;
 
-import com.brandon3055.brandonscore.registry.ModFeatureParser;
 import com.brandon3055.brandonscore.utils.ItemNBTHelper;
 import com.brandon3055.draconicevolution.entity.EntityChaosGuardian;
 import com.brandon3055.draconicevolution.handlers.CustomArmorHandler;
-import com.brandon3055.draconicevolution.helpers.ResourceHelperDE;
 
 import net.foxmcloud.draconicadditions.CommonMethods;
 import net.foxmcloud.draconicadditions.DAFeatures;
@@ -25,7 +23,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.event.GuiScreenEvent.MouseInputEvent;
 import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -84,21 +82,21 @@ public class DAEventHandler {
 			}
 		}
 	}
-	
+
 	@SubscribeEvent
 	public void onDropEvent(LivingDropsEvent event) {
         if (!event.getEntity().world.isRemote && event.getEntity() instanceof EntityChaosGuardian) {
-            if (ModFeatureParser.isEnabled(DAFeatures.chaosHeart)) {
+            if (DAFeatures.chaosHeart != null) {
                 EntityChaosHeart heart = new EntityChaosHeart(event.getEntity().world, event.getEntity().posX, event.getEntity().posY, event.getEntity().posZ);
                 event.getEntity().world.spawnEntity(heart);
             }
         }
 	}
-	
+
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		EntityPlayer player = event.player;
-    	IChaosInBlood pCap = player.getCapability(ChaosInBloodProvider.PLAYER_CAP, null);
+	IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 		if (pCap != null && player.isEntityAlive()) {
 			Potion wither = Potion.getPotionFromResourceLocation("wither");
 			Potion regen = Potion.getPotionFromResourceLocation("regeneration");
@@ -133,7 +131,7 @@ public class DAEventHandler {
 			}
 		}
 	}
-	
+
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public void onPlayerRightClickEntity(PlayerInteractEvent.EntityInteract event) {
 		if (event.getItemStack().getItem() instanceof ChaosContainer) {
@@ -143,7 +141,7 @@ public class DAEventHandler {
 		}
 		float chaosDamageRatio = 10.0F;
 		EntityPlayer player = event.getEntityPlayer();
-		IChaosInBlood pCap = player.getCapability(ChaosInBloodProvider.PLAYER_CAP, null);
+		IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 		if (pCap != null && player.isEntityAlive() && pCap.getChaos() > 0 && event.getTarget() instanceof EntityLiving) {
 			EntityLiving target = (EntityLiving)event.getTarget();
 			float damageToDeal = Math.min(target.getHealth(), pCap.getChaos() * chaosDamageRatio);
@@ -154,23 +152,22 @@ public class DAEventHandler {
 			}
 		}
 	}
-	
+
     @SubscribeEvent
     public void onPlayerClone(PlayerEvent.Clone event) {
-    	if (!event.isWasDeath()) {
-	    	EntityPlayer player = event.getEntityPlayer();
-	    	IChaosInBlood newCap = player.getCapability(ChaosInBloodProvider.PLAYER_CAP, null);
-	    	IChaosInBlood oldCap = event.getOriginal().getCapability(ChaosInBloodProvider.PLAYER_CAP, null);
-	    	newCap.setChaos(oldCap.getChaos());
-    	}
+	if (!event.isWasDeath()) {
+		EntityPlayer player = event.getEntityPlayer();
+		IChaosInBlood newCap = ChaosInBloodProvider.get(player);
+		IChaosInBlood oldCap = ChaosInBloodProvider.get(event.getOriginal());
+		newCap.setChaos(oldCap.getChaos());
+	}
     }
-    
+
     @SubscribeEvent
-    public void onEntityConstructing(AttachCapabilitiesEvent<Entity> e) {
-    	Entity obj = e.getObject();
-    	if (obj instanceof EntityPlayer && !(obj instanceof FakePlayer)) {
-    		EntityPlayer player = (EntityPlayer) obj;
-    		e.addCapability(ResourceHelperDE.getResourceRAW(DraconicAdditions.MODID_PREFIX + "chaos_in_blood"), new ChaosInBloodProvider());
-    	}
+    public void onEntityConstructing(EntityEvent.EntityConstructing e) {
+	Entity obj = e.entity;
+	if (obj instanceof EntityPlayer && !(obj instanceof FakePlayer)) {
+		ChaosInBloodProvider.register((EntityPlayer) obj);
+	}
     }
 }

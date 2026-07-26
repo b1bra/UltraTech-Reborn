@@ -14,7 +14,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 
 public class OverloadBelt extends BasicBauble {
-	
+
 	final float damagePercent = 1F;
 
 	@Override

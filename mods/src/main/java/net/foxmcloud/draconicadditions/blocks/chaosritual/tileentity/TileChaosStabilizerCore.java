@@ -85,7 +85,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 					double distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
 					if (distance < 1.1 && e instanceof EntityItem) {
 						IChaosItem item = getChaosItem(((EntityItem)e).getItem().getItem());
-						if (item != null && getStackInSlot(0).isEmpty()) {
+						if (item != null && (getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0)) {
 							ItemStack stack = ((EntityItem)e).getItem();
 							setInventorySlotContents(0, stack);
 							world.removeEntity(e);
@@ -186,7 +186,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 			}
 		}
 	}
-	
+
 	private IChaosItem getChaosItem(Item item) {
 		IChaosItem cItem = null;
 		if (item instanceof IChaosItem) {
@@ -294,8 +294,8 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 		}
 		if (isMultiblock.value || player.isCreative()) {
 			ItemStack stack = player.getHeldItem(hand);
-			if (!stack.isEmpty() && stack.getCount() > 0) {
-				if (getStackInSlot(0).isEmpty()) {
+			if ((stack != null && stack.stackSize > 0) && stack.getCount() > 0) {
+				if ((getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0)) {
 					IChaosItem item = getChaosItem(stack.getItem());
 					if (item != null) {
 						if (item.isChaosStable(stack)) {
