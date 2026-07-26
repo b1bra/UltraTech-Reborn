@@ -14,7 +14,6 @@ import net.foxmcloud.draconicadditions.DAFeatures;
 import net.foxmcloud.draconicadditions.items.Hermal;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.math.BlockPos;
 import scala.Int;
 
 public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IEnergyProvider, IEnergyReceiver, IChangeListener {
@@ -132,7 +131,7 @@ public class TileCapacitorSupplier extends TileEnergyInventoryBase implements IE
 	}
 
 	@Override
-	public void onNeighborChange(BlockPos neighbor) {
+	public void onNeighborChange(int x, int y, int z) {
 		powered.value = world.isBlockPowered(pos);
 	}
 }

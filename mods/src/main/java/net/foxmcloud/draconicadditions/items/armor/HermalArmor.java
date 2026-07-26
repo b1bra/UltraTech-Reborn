@@ -22,7 +22,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import java.util.List;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.relauncher.Side;
@@ -41,7 +41,7 @@ public class HermalArmor extends ChaoticArmor {
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	public void getSubItems(CreativeTabs tab, List<ItemStack> subItems) {
 		if (RecipeManager.isEnabled(DAFeatures.hermal)) {
 			if (isInCreativeTab(tab)) {
 				ItemStack stack = new ItemStack(this);

@@ -21,8 +21,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
+import java.util.List;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
@@ -35,7 +34,7 @@ public class Hermal extends ItemEnergyBase {
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	public void getSubItems(CreativeTabs tab, List<ItemStack> subItems) {
 		if (RecipeManager.isEnabled(DAFeatures.hermal)) {
 			if (isInCreativeTab(tab)) {
 				ItemStack stack = new ItemStack(this);
@@ -127,9 +126,9 @@ public class Hermal extends ItemEnergyBase {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player) {
 		player.sendStatusMessage(new TextComponentString("This seems like a bad idea..."), true);
-		player.setActiveHand(hand);
-		return ActionResult.newResult(EnumActionResult.SUCCESS, player.getHeldItem(hand));
+		player.setItemInUse(player.getHeldItem(), getMaxItemUseDuration(player.getHeldItem()));
+		return ActionResult.newResult(EnumActionResult.SUCCESS, player.getHeldItem());
 	}
 }

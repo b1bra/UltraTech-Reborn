@@ -16,9 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
@@ -39,13 +37,13 @@ public class InfusedPotatoArmor extends ItemArmor {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player) {
 		if (ArmorStats.INFUSED_POTATO_RIGHT_CLICK) return new ActionResult<ItemStack>(EnumActionResult.FAIL, transformItem(player, hand, false));
-		else return new ActionResult<ItemStack>(EnumActionResult.PASS, player.getHeldItem(hand));
+		else return new ActionResult<ItemStack>(EnumActionResult.PASS, player.getHeldItem());
 	}
 
 	@Override
-	public EnumActionResult onItemUseFirst(EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, EnumHand hand) {
+	public EnumActionResult onItemUseFirst(EntityPlayer player, World world, int x, int y, int z, ForgeDirection side, float hitX, float hitY, float hitZ) {
 		if (ArmorStats.INFUSED_POTATO_RIGHT_CLICK) {
 			transformItem(player, hand, true);
 			return EnumActionResult.FAIL;
@@ -70,8 +68,8 @@ public class InfusedPotatoArmor extends ItemArmor {
 		else return true;
 	}
 
-	private ItemStack transformItem(EntityPlayer player, EnumHand hand, boolean replace) {
-		ItemStack itemStack = player.getHeldItem(hand);
+	private ItemStack transformItem(EntityPlayer player, boolean replace) {
+		ItemStack itemStack = player.getHeldItem();
 		return transformItem(player, itemStack, replace);
 	}
 

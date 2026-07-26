@@ -9,8 +9,6 @@ import cofh.api.energy.IEnergyReceiver;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
 
 public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyReceiver, IChangeListener {
 
@@ -36,11 +34,11 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 			if (active.value) {
 				if (charge.value >= 0 && charge.value < chargeTo.value - 1) {
 					float beamPitch = (1.5F * charge.value / maxCharge) + 0.5F;
-					world.playSound(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, DESoundHandler.beam, SoundCategory.BLOCKS, 0.2F, beamPitch, false);
+					world.playSound(x + 0.5D, y, z + 0.5D, DESoundHandler.beam, 0.2F, beamPitch, false);
 					// charge.value += 1;
 				}
 				else {
-					world.playSound(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, DESoundHandler.boom, SoundCategory.BLOCKS, 1.0F, 2.0F, false);
+					world.playSound(x + 0.5D, y, z + 0.5D, DESoundHandler.boom, 1.0F, 2.0F, false);
 					// charge.value = 0;
 				}
 			}
@@ -136,7 +134,7 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 	}
 
 	@Override
-	public void onNeighborChange(BlockPos neighbor) {
+	public void onNeighborChange(int x, int y, int z) {
 		powered.value = world.isBlockPowered(pos);
 	}
 }

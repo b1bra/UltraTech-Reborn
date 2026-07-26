@@ -13,14 +13,13 @@ import net.foxmcloud.draconicadditions.blocks.chaosritual.tileentity.TileChaosSt
 import net.foxmcloud.draconicadditions.client.render.item.RenderItemChaosStabilizerCore;
 import net.foxmcloud.draconicadditions.client.render.tile.RenderTileChaosStabilizerCore;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import cpw.mods.fml.client.registry.ClientRegistry;
@@ -42,8 +41,8 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 
 	@SuppressWarnings("deprecation")
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
-		TileEntity tile = world.getTileEntity(pos);
+	public float getBlockHardness(Block blockState, World world, int x, int y, int z) {
+		TileEntity tile = world.getTileEntity(x, y, z);
 		if (tile instanceof TileChaosStabilizerCore) {
 			return 200;
 		}
@@ -51,8 +50,8 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	}
 
 	@Override
-	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
-		TileEntity tile = world.getTileEntity(pos);
+	public float getExplosionResistance(World world, int x, int y, int z, Entity exploder, Explosion explosion) {
+		TileEntity tile = world.getTileEntity(x, y, z);
 		if (tile instanceof TileChaosStabilizerCore) {
 			return 6000000.0F;
 		}
@@ -60,7 +59,7 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	}
 
 	@Override
-	public EnumBlockRenderType getRenderType(IBlockState state) {
+	public EnumBlockRenderType getRenderType(Block state) {
 		return EnumBlockRenderType.INVISIBLE;
 	}
 
@@ -77,18 +76,18 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	}
 
 	@Override
-	public boolean isOpaqueCube(IBlockState state) {
+	public boolean isOpaqueCube(Block state) {
 		return false;
 	}
 
 	@Override
-	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos) {
+	public AxisAlignedBB getSelectedBoundingBox(Block state, World worldIn, int x, int y, int z) {
 		return FULL_AABB;
 	}
 
 	@SuppressWarnings("deprecation")
 	@Nullable
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
+	public AxisAlignedBB getCollisionBoundingBox(Block blockState, World worldIn, int x, int y, int z) {
 		TileEntity tile = worldIn.getTileEntity(pos);
 		if (tile instanceof TileChaosStabilizerCore) {
 			return FULL_AABB;
@@ -97,8 +96,8 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 	}
 
 	@Override
-	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
-		TileEntity tile = world.getTileEntity(pos);
+	public void onBlockExploded(World world, int x, int y, int z, Explosion explosion) {
+		TileEntity tile = world.getTileEntity(x, y, z);
 		if (!(tile instanceof TileChaosStabilizerCore)) {
 			super.onBlockExploded(world, pos, explosion);
 		}
@@ -106,17 +105,17 @@ public class ChaosStabilizerCore extends BlockBCore implements ITileEntityProvid
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+	public void randomDisplayTick(Block stateIn, World worldIn, int x, int y, int z, Random rand) {
 		if (worldIn.getTileEntity(pos) instanceof TileChaosStabilizerCore) {
 			TileChaosStabilizerCore tile = (TileChaosStabilizerCore) worldIn.getTileEntity(pos);
 			if (tile.isMultiblock.value) {
 				for (int i = 0; i < 10; i++) {
-					double x = pos.getX() + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double y = pos.getY() + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double z = pos.getZ() + 0.5D + ((0.5D - rand.nextDouble()) * 2);
-					double xspeed = (x - pos.getX()) / 1;
-					double yspeed = -0.5D + ((y - pos.getY()) / 1);
-					double zspeed = (z - pos.getZ()) / 1;
+					double x = x + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					double y = y + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					double z = z + 0.5D + ((0.5D - rand.nextDouble()) * 2);
+					double xspeed = (x - x) / 1;
+					double yspeed = -0.5D + ((y - y) / 1);
+					double zspeed = (z - z) / 1;
 					worldIn.spawnParticle(EnumParticleTypes.PORTAL, x, y, z, xspeed, yspeed, zspeed, new int[0]);
 				}
 			}
