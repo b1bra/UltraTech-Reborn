@@ -18,19 +18,19 @@ import net.foxmcloud.draconicadditions.network.PacketOverloadBelt;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
-import net.minecraftforge.fml.relauncher.Side;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.relauncher.Side;
 
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
-		ModFeatureParser.registerModFeatures(DraconicAdditions.MODID);
-		DraconicAdditions.network = NetworkRegistry.INSTANCE.newSimpleChannel(DraconicAdditions.networkChannelName);
-		DraconicAdditions.network.registerMessage(PacketOverloadBelt.Handler.class, PacketOverloadBelt.class, 0, Side.SERVER);
-		DraconicAdditions.network.registerMessage(PacketChaosInjection.Handler.class, PacketChaosInjection.class, 1, Side.SERVER);
+		// Forge 1.7.10 has no RegistryEvent; register mod features directly during preInit.
+		DAFeatures.registerFor1710();
+		// TODO 1.7.10 backport: audit whether BrandonsCore ModFeatureParser is still needed after direct GameRegistry registration.
+		// ModFeatureParser.registerModFeatures(DraconicAdditions.MODID);
 		MinecraftForge.EVENT_BUS.register(new DAEventHandler());
 		CapabilityManager.INSTANCE.register(IChaosInBlood.class, new ChaosInBloodStorage(), ChaosInBlood::new);
 		EntityRegistry.registerModEntity(new ResourceLocation(DraconicAdditions.MODID, "plug"), EntityPlug.class, "draconicadditions:plug", 1, DraconicAdditions.instance, 64, 5, false);
@@ -38,6 +38,9 @@ public class CommonProxy {
 	}
 
 	public void init(FMLInitializationEvent event) {
+		DraconicAdditions.network = NetworkRegistry.INSTANCE.newSimpleChannel(DraconicAdditions.networkChannelName);
+		DraconicAdditions.network.registerMessage(PacketOverloadBelt.Handler.class, PacketOverloadBelt.class, 0, Side.SERVER);
+		DraconicAdditions.network.registerMessage(PacketChaosInjection.Handler.class, PacketChaosInjection.class, 1, Side.SERVER);
 		DARecipes.addRecipes();
 		AE2Compat.init();
 	}

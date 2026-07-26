@@ -22,9 +22,10 @@ import net.foxmcloud.draconicadditions.items.baubles.*;
 import net.foxmcloud.draconicadditions.items.tools.*;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder(DraconicAdditions.MODID)
 @ModFeatures(modid = DraconicAdditions.MODID)
@@ -32,6 +33,61 @@ public class DAFeatures implements IModFeatures {
 
 	private static CreativeTabs tabDA = new DATab(DraconicAdditions.MODID, "draconicadditions", 0);
 	private CreativeTabs[] tabs = new CreativeTabs[] {tabDA};
+
+	public static void registerFor1710() {
+		registerItem(inertPotatoHelm, "inert_potato_helm");
+		registerItem(inertPotatoChest, "inert_potato_chest");
+		registerItem(inertPotatoLegs, "inert_potato_legs");
+		registerItem(inertPotatoBoots, "inert_potato_boots");
+		registerItem(chaosHeart, "chaos_heart");
+		registerItem(chaoticEnergyCore, "chaotic_energy_core");
+		registerItem(hermal, "hermal");
+		registerBlock(chaosStabilizerCore, "chaos_stabilizer_core", TileChaosStabilizerCore.class);
+		registerBlock(armorGenerator, "armor_generator", TileArmorGenerator.class);
+		registerBlock(chaoticArmorGenerator, "chaotic_armor_generator", TileChaoticArmorGenerator.class);
+		registerBlock(itemDrainer, "item_drainer", TileItemDrainer.class);
+		registerBlock(chaosLiquefier, "chaos_liquefier", TileChaosLiquefier.class);
+		registerBlock(capacitorSupplier, "capacitor_supplier", TileCapacitorSupplier.class);
+		registerItem(chaoticStaffOfPower, "chaotic_staff_of_power");
+		registerItem(chaoticBow, "chaotic_bow");
+		registerItem(chaosContainer, "chaos_container");
+		registerItem(pwc, "portable_wired_charger");
+		registerItem(pwd, "portable_wired_discharger");
+		registerItem(infusedPotatoHelm, "infused_potato_helm");
+		registerItem(infusedPotatoChest, "infused_potato_chest");
+		registerItem(infusedPotatoLegs, "infused_potato_legs");
+		registerItem(infusedPotatoBoots, "infused_potato_boots");
+		registerItem(potatoHelm, "potato_helm");
+		registerItem(potatoChest, "potato_chest");
+		registerItem(potatoLegs, "potato_legs");
+		registerItem(potatoBoots, "potato_boots");
+		registerItem(hermalHelm, "hermal_helm");
+		registerItem(hermalChest, "hermal_chest");
+		registerItem(hermalLegs, "hermal_legs");
+		registerItem(hermalBoots, "hermal_boots");
+		registerItem(chaoticHelm, "chaotic_helm");
+		registerItem(chaoticChest, "chaotic_chest");
+		registerItem(chaoticLegs, "chaotic_legs");
+		registerItem(chaoticBoots, "chaotic_boots");
+		registerItem(basicShieldNecklace, "basic_shield_necklace");
+		registerItem(wyvernShieldNecklace, "wyvern_shield_necklace");
+		registerItem(draconicShieldNecklace, "draconic_shield_necklace");
+		registerItem(overloadBelt, "overload_belt");
+		registerItem(vampiricShirt, "vampiric_shirt");
+		registerItem(inertiaCancelRing, "inertia_cancel_ring");
+		registerBlock(chaosCrystalStable, "chaos_crystal_stable", TileChaosCrystal.class);
+	}
+
+	private static void registerItem(Item item, String name) {
+		item.setUnlocalizedName(DraconicAdditions.MODID + "." + name);
+		GameRegistry.registerItem(item, name);
+	}
+
+	private static void registerBlock(Block block, String name, Class tileEntityClass) {
+		block.setBlockName(DraconicAdditions.MODID + "." + name);
+		GameRegistry.registerBlock(block, ItemBlockBCore.class, name);
+		GameRegistry.registerTileEntity(tileEntityClass, DraconicAdditions.MODID + ":" + name);
+	}
 
 	@Nullable
 	@Override

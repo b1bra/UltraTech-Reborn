@@ -5,10 +5,10 @@ import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
 import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
-import cofh.redstoneflux.api.IEnergyReceiver;
+import cofh.api.energy.IEnergyReceiver;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
@@ -121,7 +121,7 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 	}
 
 	@Override
-	public boolean canConnectEnergy(EnumFacing from) {
+	public boolean canConnectEnergy(ForgeDirection from) {
 		return true;
 	}
 

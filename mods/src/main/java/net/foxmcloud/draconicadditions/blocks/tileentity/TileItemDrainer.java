@@ -6,10 +6,10 @@ import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 import com.brandon3055.brandonscore.utils.ItemNBTHelper;
 import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
-import cofh.redstoneflux.api.IEnergyContainerItem;
-import cofh.redstoneflux.api.IEnergyProvider;
+import cofh.api.energy.IEnergyContainerItem;
+import cofh.api.energy.IEnergyProvider;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
@@ -84,7 +84,7 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 	}
 
 	@Override
-	public boolean canConnectEnergy(EnumFacing from) {
+	public boolean canConnectEnergy(ForgeDirection from) {
 		return true;
 	}
 

@@ -6,7 +6,7 @@ import net.foxmcloud.draconicadditions.DraconicAdditions;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.client.settings.KeyModifier;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.client.registry.ClientRegistry;
 
 public class KeyBindings {
 
