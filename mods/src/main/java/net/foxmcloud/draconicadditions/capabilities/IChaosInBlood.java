@@ -3,6 +3,7 @@ package net.foxmcloud.draconicadditions.capabilities;
 public interface IChaosInBlood {
 	public float getChaos();
 	public float getLastChaos();
+	public void setLastChaos(float chaos);
 	public boolean hasChaos();
 	public boolean hadChaosLastUpdate();
 	public float addChaos(float chaos);

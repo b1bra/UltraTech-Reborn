@@ -18,7 +18,7 @@ public class FusionCostMultiplier {
 	@ModConfigProperty(category = "Misc Tweaks", name = "Fusion Crafting Cost Multiplier", comment = "Allows you to adjust the multiplier on fusion crafting.  Mainly intended for modpack authors; this config is NOT automatically updated when you join another server, and you must restart Minecraft for this config to take effect.", requiresMCRestart = true, requiresSync = true)
 	@ModConfigProperty.MinMax(min = "0", max = "10")
 	public static double POWER_COST_MULTIPLIER = 1.0D;
-	
+
 	public static void postInit() {
 		if (POWER_COST_MULTIPLIER == 1.0D) {
 			DraconicAdditions.logger.log(Level.INFO, "Power costs are not modified. Skipping recipe rebalance.");
@@ -29,7 +29,7 @@ public class FusionCostMultiplier {
 		LogHelper.info("wat, i didnt sign up for thi- !!!");
 		LogHelper.info("Takeover complete. Beginning recipe rebalancing at power level " + POWER_COST_MULTIPLIER + ".");
 		for (IFusionRecipe oldRecipe : recipes) {
-			if (!oldRecipe.getRecipeCatalyst().isEmpty()) {
+			if (!(oldRecipe.getRecipeCatalyst() == null || oldRecipe.getRecipeCatalyst().stackSize <= 0)) {
 				LogHelper.dev(oldRecipe.getRecipeOutput(oldRecipe.getRecipeCatalyst()).getItem().getUnlocalizedName() + " was " + oldRecipe.getIngredientEnergyCost());
 				FusionRecipeAPI.removeRecipe(oldRecipe);
 				IFusionRecipe newRecipe = new SimpleFusionRecipe(

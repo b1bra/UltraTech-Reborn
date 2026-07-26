@@ -11,7 +11,6 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,19 +22,19 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class InfusedPotatoArmor extends ItemArmor {
 	private static ArmorMaterial potatoMaterial = EnumHelper.addArmorMaterial("infusedPotatoArmor", DraconicAdditions.MODID_PREFIX + "infused_potato_armor", -1, new int[] {1, 1, 2, 1}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 
-	public InfusedPotatoArmor(int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(potatoMaterial, renderIndexIn, equipmentSlotIn);
+	public InfusedPotatoArmor(int renderIndexIn, int armorType) {
+		super(potatoMaterial, renderIndexIn, armorType);
 		this.setMaxDamage(-1);
 	}
 
-	public InfusedPotatoArmor(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(materialIn, renderIndexIn, equipmentSlotIn);
+	public InfusedPotatoArmor(ArmorMaterial materialIn, int renderIndexIn, int armorType) {
+		super(materialIn, renderIndexIn, armorType);
 		this.setMaxDamage(-1);
 	}
 
@@ -78,12 +77,12 @@ public class InfusedPotatoArmor extends ItemArmor {
 
 	private ItemStack transformItem(EntityPlayer player, ItemStack stack, boolean replace) {
 		ItemArmor item = (ItemArmor)stack.getItem();
-		EntityEquipmentSlot slot = item.armorType;
+		int slot = item.armorType;
 		PotatoArmor armor;
-		if (slot.equals(EntityEquipmentSlot.HEAD)) armor = DAFeatures.potatoHelm;
-		else if (slot.equals(EntityEquipmentSlot.CHEST)) armor = DAFeatures.potatoChest;
-		else if (slot.equals(EntityEquipmentSlot.LEGS)) armor = DAFeatures.potatoLegs;
-		else if (slot.equals(EntityEquipmentSlot.FEET)) armor = DAFeatures.potatoBoots;
+		if (slot == 0) armor = DAFeatures.potatoHelm;
+		else if (slot == 1) armor = DAFeatures.potatoChest;
+		else if (slot == 2) armor = DAFeatures.potatoLegs;
+		else if (slot == 3) armor = DAFeatures.potatoBoots;
 		else throw new Error("Something's wrong with the G-Diffuser!  This doesn't look like a valid Potato Armor...");
 		ItemStack armorItem = new ItemStack(armor);
 		NBTTagCompound nbt = new NBTTagCompound();

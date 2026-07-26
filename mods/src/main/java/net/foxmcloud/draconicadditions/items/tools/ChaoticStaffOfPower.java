@@ -26,15 +26,15 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.model.IModelState;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ChaoticStaffOfPower extends DraconicStaffOfPower implements IChaosItem {
 
 	public ChaoticStaffOfPower() {
 		super();
 	}
-	
+
     @Override
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
         super.getSubItems(tab, subItems);
@@ -70,7 +70,7 @@ public class ChaoticStaffOfPower extends DraconicStaffOfPower implements IChaosI
 		int capacity = ToolStats.CHAOTIC_BASE_CAPACITY * 3;
 		setEnergyStats(capacity, capacity, 0);
 	}
-	
+
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {

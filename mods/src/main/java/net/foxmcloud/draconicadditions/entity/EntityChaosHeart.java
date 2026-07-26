@@ -26,28 +26,28 @@ public class EntityChaosHeart extends EntityDragonHeart {
         super(world, x, y, z);
         this.renderStack = new ItemStack(DAFeatures.chaosHeart);
     }
-    
+
     @Override
     public void onUpdate() {
-    	if (!world.isRemote) {
-    		int age = getAge();
-    		if (age == 801) {
-        		List<EntityDragonHeart> dragonHearts = world.getEntitiesWithinAABB(EntityDragonHeart.class, new AxisAlignedBB(this.posX - 1, this.posY - 1, this.posZ - 1, this.posX + 1, this.posY + 1, this.posZ + 1));
-        		if (!dragonHearts.isEmpty()) {
-        			for(int i = 0; i < dragonHearts.size(); i++) {
-        				if (!(dragonHearts.get(i) instanceof EntityChaosHeart))
-        					dragonHearts.get(i).setDead();
-        			}
-        		}
-        	}
+	if (!world.isRemote) {
+		int age = getAge();
+		if (age == 801) {
+		List<EntityDragonHeart> dragonHearts = world.getEntitiesWithinAABB(EntityDragonHeart.class, new AxisAlignedBB(this.posX - 1, this.posY - 1, this.posZ - 1, this.posX + 1, this.posY + 1, this.posZ + 1));
+		if ((dragonHearts != null && dragonHearts.stackSize > 0)) {
+			for(int i = 0; i < dragonHearts.size(); i++) {
+				if (!(dragonHearts.get(i) instanceof EntityChaosHeart))
+					dragonHearts.get(i).setDead();
+			}
+		}
+	}
             if (age == 1279) {
                 drop();
                 setAge(1281);
             }
-    	}
+	}
         super.onUpdate();
     }
-    
+
     private void drop() {
         EntityPlayer player = world.getClosestPlayerToEntity(this, 512);
 

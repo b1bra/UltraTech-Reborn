@@ -28,9 +28,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider, IRenderOverride {
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
@@ -40,7 +40,7 @@ public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider
 		super(Material.IRON);
 		this.setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(ACTIVE, false));
 	}
-	
+
 	@Override
 	public boolean uberIsBlockFullCube() {
         return false;
@@ -110,7 +110,7 @@ public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider
 			TileCapacitorSupplier tileCapacitorDischarger = world.getTileEntity(pos) instanceof TileCapacitorSupplier ? (TileCapacitorSupplier) world.getTileEntity(pos) : null;
 			if (tileCapacitorDischarger != null) {
 				ItemStack stack = player.getHeldItem(hand);
-				if (!stack.isEmpty()) {
+				if ((stack != null && stack.stackSize > 0)) {
 					stack = tileCapacitorDischarger.insertItem(stack);
 					player.setHeldItem(hand, stack);
 				}
@@ -122,13 +122,13 @@ public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider
 		}
 		return true;
 	}
-	
+
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerRenderer(Feature feature) {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileCapacitorSupplier.class, new RenderTileCapacitorSupplier());
 	}
-	
+
 	@Override
 	public boolean registerNormal(Feature feature) { return true; }
 

@@ -19,7 +19,7 @@ public class RenderTileCapacitorSupplier extends TESRBase<TileCapacitorSupplier>
     public void render(TileCapacitorSupplier te, double x, double y, double z, float partialTicks, int destroyStage, float a) {
         super.render(te, x, y, z, partialTicks, destroyStage, a);
         ItemStack stack = te.getStackInSlot(0).copy();
-        if (!stack.isEmpty()) {
+        if ((stack != null && stack.stackSize > 0)) {
         	GlStateManager.pushMatrix();
             GlStateTracker.pushState();
             GlStateManager.translate(x + 0.5, y + 0.9, z + 0.5);

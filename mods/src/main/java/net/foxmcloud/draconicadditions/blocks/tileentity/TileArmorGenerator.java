@@ -5,17 +5,16 @@ import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
 import com.brandon3055.brandonscore.lib.datamanager.ManagedDouble;
 import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 
-import cofh.redstoneflux.api.IEnergyContainerItem;
-import cofh.redstoneflux.api.IEnergyProvider;
+import cofh.api.energy.IEnergyContainerItem;
+import cofh.api.energy.IEnergyProvider;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ITickable;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.math.BlockPos;
 
-public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyProvider, ITickable, IChangeListener {
+public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyProvider, IChangeListener {
 
 	private int burnSpeed = 50;
 	private int baseRFMult = 40;
@@ -35,7 +34,7 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	}
 
 	@Override
-	public void update() {
+	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
 			return;
@@ -60,7 +59,7 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	public void refuel() {
 		if (burnTimeRemaining.value > 0 || getEnergyStored() >= getMaxEnergyStored()) return;
 		ItemStack stack = getStackInSlot(0);
-		if (!stack.isEmpty() && !(stack.getItem() instanceof IEnergyContainerItem)) {
+		if ((stack != null && stack.stackSize > 0) && !(stack.getItem() instanceof IEnergyContainerItem)) {
 			if (stack.getItem() instanceof ItemArmor) {
 				ItemArmor item = (ItemArmor) stack.getItem();
 				int itemBurnTime = item.damageReduceAmount * (item.getMaxDamage(stack) - item.getDamage(stack) + 1) * baseRFMult;
@@ -98,22 +97,22 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	}
 
 	@Override
-	public int extractEnergy(EnumFacing from, int maxExtract, boolean simulate) {
+	public int extractEnergy(ForgeDirection from, int maxExtract, boolean simulate) {
 		return super.extractEnergy(from, maxExtract, simulate);
 	}
 
 	@Override
-	public int getEnergyStored(EnumFacing from) {
+	public int getEnergyStored(ForgeDirection from) {
 		return super.getEnergyStored();
 	}
 
 	@Override
-	public int getMaxEnergyStored(EnumFacing from) {
+	public int getMaxEnergyStored(ForgeDirection from) {
 		return super.getMaxEnergyStored();
 	}
 
 	@Override
-	public boolean canConnectEnergy(EnumFacing from) {
+	public boolean canConnectEnergy(ForgeDirection from) {
 		return true;
 	}
 

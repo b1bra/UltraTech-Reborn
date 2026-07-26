@@ -12,10 +12,10 @@ import com.brandon3055.brandonscore.registry.ModConfigProperty;
 import net.minecraftforge.common.config.Config.Type;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.client.event.ConfigChangedEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.client.event.ConfigChangedEvent;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 @ModConfigContainer(modid = DraconicAdditions.MODID)
 public class DAConfig implements IModConfigHelper {
@@ -53,7 +53,7 @@ public class DAConfig implements IModConfigHelper {
 		DAFeatures.chaoticStaffOfPower.loadStatConfig();
 		DAFeatures.chaoticBow.loadStatConfig();
 	}
-	
+
 	@ModConfigProperty(category = "Misc Tweaks", name = "Hermal - RF Generation", comment = "Modifies how much RF/t Hermal provides.", autoSync = true)
 	@ModConfigProperty.MinMax(min = "0", max = "4")
 	public static int HERMAL_RF = 1000;

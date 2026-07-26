@@ -4,15 +4,14 @@ import com.brandon3055.brandonscore.lib.IChangeListener;
 import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
 import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
-import cofh.redstoneflux.api.IEnergyReceiver;
+import cofh.api.energy.IEnergyReceiver;
 import net.foxmcloud.draconicadditions.items.IChaosContainer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ITickable;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 
-public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyReceiver, ITickable, IChangeListener {
+public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyReceiver, IChangeListener {
 
 	private int chargeRate = 1000000;
 	public int maxCharge = 200;
@@ -28,7 +27,7 @@ public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyRece
 	}
 
 	@Override
-	public void update() {
+	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
 			if (active.value) {
@@ -38,7 +37,7 @@ public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyRece
 		}
 		else {
 			ItemStack stack = getStackInSlot(0);
-			if (!stack.isEmpty() && isItemValidForSlot(0, stack) && chaos.value > 0) {
+			if ((stack != null && stack.stackSize > 0) && isItemValidForSlot(0, stack) && chaos.value > 0) {
 				IChaosContainer chaosItem = (IChaosContainer)stack.getItem();
 				if (chaosItem.getMaxChaos(stack) > 0 && chaosItem.getChaos(stack) < chaosItem.getMaxChaos(stack) && energyStorage.getEnergyStored() >= chargeRate) {
 					active.value = true;
@@ -52,7 +51,7 @@ public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyRece
 	}
 
 	@Override
-	public boolean canConnectEnergy(EnumFacing from) {
+	public boolean canConnectEnergy(ForgeDirection from) {
 		return true;
 	}
 

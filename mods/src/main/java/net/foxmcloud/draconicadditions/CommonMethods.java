@@ -15,10 +15,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class CommonMethods {
-	
+
 	public static final DamageSource chaosBurst = new DamageSource("chaosBurst").setDamageBypassesArmor();
 	private static final short gracePeriod = 100;
-	
+
 	public static float subtractShielding(EntityPlayer player, float damageAmount, float entropyDamageStatic, float entropyDamageFactor) {
 		ArmorSummery summary = new ArmorSummery().getSummery(player);
 		if (summary == null || summary.protectionPoints <= 1) {
@@ -42,7 +42,7 @@ public class CommonMethods {
 		summary.saveStacks(player);
 		return totalAbsorbed;
 	}
-	
+
 	public static float subtractShielding(EntityPlayer player, float damageAmount) {
 		return subtractShielding(player, damageAmount, 1.0F, 1.0F);
 	}
@@ -58,7 +58,7 @@ public class CommonMethods {
 		ItemNBTHelper.setLong(stack, "cheatCheck", serverTime);
 		return isCheating;
 	}
-	
+
 	public static void explodeEntity(Vec3D pos, World world) {
 		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.beam, SoundCategory.MASTER, 0.25F, 0.5F, false);
 		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.fusionComplete, SoundCategory.MASTER, 1.0F, 2.0F, false);

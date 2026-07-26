@@ -67,10 +67,10 @@ public class EntityPlug extends Entity {
 		this.world.profiler.startSection("entityBaseTick");
 		if (this.player != null) {
 			ItemStack stack = this.player.getHeldItemMainhand();
-			if (stack.isEmpty() || !(stack.getItem() instanceof PortableWiredCharger)) {
+			if ((stack == null || stack.stackSize <= 0) || !(stack.getItem() instanceof PortableWiredCharger)) {
 				stack = this.player.getHeldItemOffhand();
 			}
-			if (stack.isEmpty() || !(stack.getItem() instanceof PortableWiredCharger)) {
+			if ((stack == null || stack.stackSize <= 0) || !(stack.getItem() instanceof PortableWiredCharger)) {
 				this.setDead();
 			}
 			else if (!this.firstUpdate && !ItemNBTHelper.getBoolean(stack, "pluggedIn", false)) {

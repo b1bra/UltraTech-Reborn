@@ -8,7 +8,7 @@ public class TileChaoticArmorGenerator extends TileArmorGenerator {
 	}
 
 	@Override
-	public void update() {
+	public void updateEntity() {
 		super.update();
 	}
 }

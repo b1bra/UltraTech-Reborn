@@ -1,10 +1,6 @@
 package net.foxmcloud.draconicadditions.items.armor;
 
 import static com.brandon3055.draconicevolution.api.itemconfig.IItemConfigField.EnumControlType.SLIDER;
-import static net.minecraft.inventory.EntityEquipmentSlot.CHEST;
-import static net.minecraft.inventory.EntityEquipmentSlot.FEET;
-import static net.minecraft.inventory.EntityEquipmentSlot.HEAD;
-import static net.minecraft.inventory.EntityEquipmentSlot.LEGS;
 
 import java.util.List;
 
@@ -36,7 +32,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -47,8 +42,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 
@@ -56,12 +51,12 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 
 	private static ArmorMaterial chaoticMaterial = EnumHelper.addArmorMaterial("chaoticArmor", DraconicAdditions.MODID_PREFIX + "chaotic_armor", -1, new int[] {6, 12, 16, 6}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
 
-	public ChaoticArmor(int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(chaoticMaterial, renderIndexIn, equipmentSlotIn);
+	public ChaoticArmor(int renderIndexIn, int armorType) {
+		super(chaoticMaterial, renderIndexIn, armorType);
 	}
 
-	public ChaoticArmor(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(materialIn, renderIndexIn, equipmentSlotIn);
+	public ChaoticArmor(ArmorMaterial materialIn, int renderIndexIn, int armorType) {
+		super(materialIn, renderIndexIn, armorType);
 	}
 
 	@Override
@@ -91,12 +86,12 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 
 	@Override
 	public ItemConfigFieldRegistry getFields(ItemStack stack, ItemConfigFieldRegistry registry) {
-		if (armorType == HEAD && isChaosStable(stack)) {
+		if (armorType == 0 && isChaosStable(stack)) {
 			registry.register(stack, new BooleanConfigField("armorNV", false, "config.field.armorNV.description"));
 			registry.register(stack, new BooleanConfigField("armorNVLock", false, "config.field.armorNVLock.description"));
 			registry.register(stack, new BooleanConfigField("armorAutoFeed", false, "config.field.armorAutoFeed.description"));
 		}
-		if (armorType == CHEST) {
+		if (armorType == 1) {
 			int speedLimit = MathHelper.clip(DEConfig.flightSpeedLimit != -1 ? DEConfig.flightSpeedLimit : 600, 0, 1200);
 			registry.register(stack, new IntegerConfigField("armorFSpeedModifier", 0, isChaosStable(stack) ? 0 : speedLimit, speedLimit, "config.field.armorFSpeedModifier.description", SLIDER).setPrefix("+").setExtension("%"));
 			registry.register(stack, new IntegerConfigField("armorVFSpeedModifier", 0, isChaosStable(stack) ? 0 : speedLimit, speedLimit, "config.field.armorVFSpeedModifier.description", SLIDER).setPrefix("+").setExtension("%"));
@@ -106,19 +101,19 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 				registry.register(stack, new IntegerConfigField("armorChaosInjection", 1, 1, UpgradeHelper.getUpgradeLevel(stack, ToolUpgrade.ATTACK_DAMAGE), "config.field.armorChaosInjection.description", SLIDER));
 			}
 		}
-		if (armorType == LEGS) {
+		if (armorType == 2) {
 			int u = UpgradeHelper.getUpgradeLevel(stack, ToolUpgrade.MOVE_SPEED);
 			int i = 200 + (100 * u) + (Math.max(u - 1, 0) * 100) + (Math.max(u - 2, 0) * 100);
 			registry.register(stack, new IntegerConfigField("armorSpeedModifier", 0, isChaosStable(stack) ? 0 : i, i, "config.field.armorSpeedModifier.description", SLIDER).setPrefix("+").setExtension("%"));
 			if (isChaosStable(stack)) registry.register(stack, new BooleanConfigField("armorSpeedFOVWarp", false, "config.field.armorSpeedFOVWarp.description"));
 		}
-		if (armorType == FEET) {
+		if (armorType == 3) {
 			int u = UpgradeHelper.getUpgradeLevel(stack, ToolUpgrade.JUMP_BOOST);
 			int i = 200 + (100 * u) + (Math.max(u - 1, 0) * 100) + (Math.max(u - 2, 0) * 100);
 			registry.register(stack, new IntegerConfigField("armorJumpModifier", 0, isChaosStable(stack) ? 0 : i, i, "config.field.armorSpeedModifier.description", SLIDER).setPrefix("+").setExtension("%"));
 			registry.register(stack, new BooleanConfigField("armorHillStep", true, "config.field.armorHillStep.description"));
 		}
-		if ((armorType == FEET || armorType == LEGS || armorType == CHEST) && isChaosStable(stack)) {
+		if ((armorType == 3 || armorType == 2 || armorType == 1) && isChaosStable(stack)) {
 			registry.register(stack, new BooleanConfigField("sprintBoost", false, "config.field.sprintBoost.description"));
 		}
 
@@ -143,7 +138,7 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
+	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot, ModelBiped _default) {
 		if (ToolConfigHelper.getBooleanField("hideArmor", itemStack)) {
 			if (model_invisible == null) {
 				model_invisible = new ModelBiped() {
@@ -160,17 +155,17 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 		}
 
 		if (model == null) {
-			if (armorType == EntityEquipmentSlot.HEAD) model = new ModelChaoticArmor(0.5F, true, false, false, false);
-			else if (armorType == EntityEquipmentSlot.CHEST) model = new ModelChaoticArmor(1.5F, false, true, false, false);
-			else if (armorType == EntityEquipmentSlot.LEGS) model = new ModelChaoticArmor(1.5F, false, false, true, false);
+			if (armorType == 0) model = new ModelChaoticArmor(0.5F, true, false, false, false);
+			else if (armorType == 1) model = new ModelChaoticArmor(1.5F, false, true, false, false);
+			else if (armorType == 2) model = new ModelChaoticArmor(1.5F, false, false, true, false);
 			else model = new ModelChaoticArmor(1F, false, false, false, true);
-			this.model.bipedHead.showModel = (armorType == EntityEquipmentSlot.HEAD);
-			this.model.bipedHeadwear.showModel = (armorType == EntityEquipmentSlot.HEAD);
-			this.model.bipedBody.showModel = ((armorType == EntityEquipmentSlot.CHEST) || (armorType == EntityEquipmentSlot.LEGS));
-			this.model.bipedLeftArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-			this.model.bipedRightArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-			this.model.bipedLeftLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
-			this.model.bipedRightLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
+			this.model.bipedHead.showModel = (armorType == 0);
+			this.model.bipedHeadwear.showModel = (armorType == 0);
+			this.model.bipedBody.showModel = ((armorType == 1) || (armorType == 2));
+			this.model.bipedLeftArm.showModel = (armorType == 1);
+			this.model.bipedRightArm.showModel = (armorType == 1);
+			this.model.bipedLeftLeg.showModel = (armorType == 2 || armorType == 3);
+			this.model.bipedRightLeg.showModel = (armorType == 2 || armorType == 3);
 		}
 
 		if (entityLiving == null) {
@@ -181,12 +176,12 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 		this.model.isRiding = entityLiving.isRiding();
 		this.model.isChild = entityLiving.isChild();
 
-		this.model.bipedHeadwear.showModel = (armorType == EntityEquipmentSlot.HEAD);
-		this.model.bipedBody.showModel = ((armorType == EntityEquipmentSlot.CHEST) || (armorType == EntityEquipmentSlot.LEGS));
-		this.model.bipedLeftArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-		this.model.bipedRightArm.showModel = (armorType == EntityEquipmentSlot.CHEST);
-		this.model.bipedLeftLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
-		this.model.bipedRightLeg.showModel = (armorType == EntityEquipmentSlot.LEGS || armorType == EntityEquipmentSlot.FEET);
+		this.model.bipedHeadwear.showModel = (armorType == 0);
+		this.model.bipedBody.showModel = ((armorType == 1) || (armorType == 2));
+		this.model.bipedLeftArm.showModel = (armorType == 1);
+		this.model.bipedRightArm.showModel = (armorType == 1);
+		this.model.bipedLeftLeg.showModel = (armorType == 2 || armorType == 3);
+		this.model.bipedRightLeg.showModel = (armorType == 2 || armorType == 3);
 
 		return model;
 	}
@@ -206,7 +201,7 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 	@Override
 	public List<String> getValidUpgrades(ItemStack stack) {
 		List<String> list = super.getValidUpgrades(stack);
-		if (armorType == EntityEquipmentSlot.CHEST) {
+		if (armorType == 1) {
 			list.add(ToolUpgrade.ATTACK_DAMAGE);
 		}
 		return list;
@@ -214,7 +209,7 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-		if (stack.isEmpty()) {
+		if ((stack == null || stack.stackSize <= 0)) {
 			return;
 		}
 		if (stack.getItem() == DAFeatures.chaoticHelm || stack.getItem() == DAFeatures.hermalHelm) {
@@ -234,7 +229,7 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 				if (handler != null) {
 					for (int i = 0; i < handler.getSlots(); i++) {
 						ItemStack candidate = handler.getStackInSlot(i);
-						if (!candidate.isEmpty() && candidate.getItem() instanceof ItemFood) {
+						if ((candidate != null && candidate.stackSize > 0) && candidate.getItem() instanceof ItemFood) {
 							ItemFood food = (ItemFood) candidate.getItem();
 							int amount = food.getHealAmount(candidate);
 							if (amount > 0 && food.getHealAmount(candidate) + foodStats.getFoodLevel() <= 20) {
@@ -251,14 +246,14 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 									world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_GENERIC_EAT, SoundCategory.PLAYERS, 0.5F + 0.5F * world.rand.nextInt(2), (world.rand.nextFloat() - world.rand.nextFloat()) * 0.2F + 1.0F);
 									foodStack = handler.insertItem(i, foodStack, false);
 									this.modifyEnergy(stack, -500);
-									if (!foodStack.isEmpty()) {
+									if ((foodStack != null && foodStack.stackSize > 0)) {
 										InventoryUtils.givePlayerStack(player, foodStack.copy());
 									}
 									break;
 								}
 								else {
 									foodStack = handler.insertItem(i, foodStack, false);
-									if (!foodStack.isEmpty()) {
+									if ((foodStack != null && foodStack.stackSize > 0)) {
 										InventoryUtils.givePlayerStack(player, foodStack.copy());
 									}
 								}
@@ -284,7 +279,7 @@ public class ChaoticArmor extends DraconicArmor implements IChaosItem {
 		}
 		else if (stack.getItem() == DAFeatures.chaoticChest) {
 			if (player.ticksExisted % (6 - ToolConfigHelper.getIntegerField("armorChaosInjection", stack)) == 0) {
-				IChaosInBlood pCap = player.getCapability(ChaosInBloodProvider.PLAYER_CAP, null);
+				IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 				float chaosInBlood = pCap != null ? pCap.getChaos() : 0;
 				if (ItemNBTHelper.getBoolean(stack, "injecting", false)) {
 					if (chaosInBlood > 0) {

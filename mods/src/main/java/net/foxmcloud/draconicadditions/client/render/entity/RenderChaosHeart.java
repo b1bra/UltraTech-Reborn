@@ -65,7 +65,7 @@ public class RenderChaosHeart extends Render<EntityChaosHeart> {
         buffer.pos(1, 0, 0).tex(1, 1).endVertex();
         buffer.pos(1, 1, 0).tex(1, 0).endVertex();
         tess.draw();
-        
+
         GlStateManager.disableBlend();
         GlStateManager.enableLighting();
 

@@ -23,9 +23,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ChaosCrystalStable extends ChaosCrystal implements IChaosItem {
 
@@ -33,14 +33,14 @@ public class ChaosCrystalStable extends ChaosCrystal implements IChaosItem {
 		super();
 		this.setHardness(100.0F);
 	}
-	
+
     @Override
     public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
     	ItemStack stack = new ItemStack(this);
     	setChaosStable(stack, true);
     	list.add(stack);
     }
-    
+
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
@@ -70,7 +70,7 @@ public class ChaosCrystalStable extends ChaosCrystal implements IChaosItem {
 			}
 		}
 	}
-	
+
     @SideOnly(Side.CLIENT)
     @Override
     public void registerRenderer(Feature feature) {

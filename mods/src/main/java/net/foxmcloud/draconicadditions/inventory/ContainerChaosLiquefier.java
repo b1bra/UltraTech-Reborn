@@ -45,15 +45,15 @@ public class ContainerChaosLiquefier extends ContainerBCBase<TileChaosLiquefier>
 
 			if (i >= 36) {
 				if (!mergeItemStack(stack, 0, 36, false)) {
-					return ItemStack.EMPTY;
+					return null;
 				}
 			}
 			else if (stack.getItem() == Item.getByNameOrId("draconicevolution:chaos_shard") || !mergeItemStack(stack, 36, 36 + tile.getSizeInventory(), false)) {
-				return ItemStack.EMPTY;
+				return null;
 			}
 
 			if (stack.getCount() == 0) {
-				slot.putStack(ItemStack.EMPTY);
+				slot.putStack(null);
 			}
 			else {
 				slot.onSlotChanged();
@@ -64,6 +64,6 @@ public class ContainerChaosLiquefier extends ContainerBCBase<TileChaosLiquefier>
 			return result;
 		}
 
-		return ItemStack.EMPTY;
+		return null;
 	}
 }

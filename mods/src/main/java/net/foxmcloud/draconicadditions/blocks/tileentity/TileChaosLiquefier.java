@@ -5,15 +5,14 @@ import com.brandon3055.brandonscore.lib.datamanager.ManagedBool;
 import com.brandon3055.brandonscore.lib.datamanager.ManagedInt;
 import com.brandon3055.draconicevolution.lib.DESoundHandler;
 
-import cofh.redstoneflux.api.IEnergyReceiver;
+import cofh.api.energy.IEnergyReceiver;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ITickable;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 
-public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyReceiver, ITickable, IChangeListener {
+public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyReceiver, IChangeListener {
 
 	private int chargeRate = 10000000;
 	public int maxCharge = 200;
@@ -31,7 +30,7 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 	}
 
 	@Override
-	public void update() {
+	public void updateEntity() {
 		super.update();
 		if (world.isRemote) {
 			if (active.value) {
@@ -49,7 +48,7 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 		else {
 			active.value = charge.value > 0;
 			ItemStack stack = getStackInSlot(0);
-			if (!stack.isEmpty() && isItemValidForSlot(0, stack) && chaos.value < getMaxChaos()) {
+			if ((stack != null && stack.stackSize > 0) && isItemValidForSlot(0, stack) && chaos.value < getMaxChaos()) {
 				int finalCharge = calcCharge(stack);
 				if (finalCharge != chargeTo.value) {
 					chargeTo.value = finalCharge;
@@ -79,7 +78,7 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 		}
 		stack.shrink(1);
 		if (stack.getCount() == 0) {
-			stack = ItemStack.EMPTY;
+			stack = null;
 		}
 		charge.value = 0;
 	}
@@ -121,7 +120,7 @@ public class TileChaosLiquefier extends TileChaosHolderBase implements IEnergyRe
 	}
 
 	@Override
-	public boolean canConnectEnergy(EnumFacing from) {
+	public boolean canConnectEnergy(ForgeDirection from) {
 		return true;
 	}
 

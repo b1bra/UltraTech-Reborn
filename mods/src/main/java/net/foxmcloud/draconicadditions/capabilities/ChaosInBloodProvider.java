@@ -1,36 +1,44 @@
 package net.foxmcloud.draconicadditions.capabilities;
 
-import net.minecraft.nbt.NBTBase;
-import net.minecraft.util.EnumFacing;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.CapabilityInject;
-import net.minecraftforge.common.capabilities.ICapabilitySerializable;
+import net.foxmcloud.draconicadditions.DraconicAdditions;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
+import net.minecraftforge.common.IExtendedEntityProperties;
 
-public class ChaosInBloodProvider implements ICapabilitySerializable<NBTBase> {
+public class ChaosInBloodProvider extends ChaosInBlood implements IExtendedEntityProperties {
 
-	@CapabilityInject(IChaosInBlood.class)
-	public static final Capability<IChaosInBlood> PLAYER_CAP = null;
-	
-	private IChaosInBlood instance = PLAYER_CAP.getDefaultInstance();
-	
-	@Override
-	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-		return capability == PLAYER_CAP;
+	public static final String NAME = DraconicAdditions.MODID + "_chaos_in_blood";
+
+	public static void register(EntityPlayer player) {
+		if (get(player) == null) {
+			player.registerExtendedProperties(NAME, new ChaosInBloodProvider());
+		}
+	}
+
+	public static IChaosInBlood get(EntityPlayer player) {
+		if (player == null) return null;
+		return (IChaosInBlood) player.getExtendedProperties(NAME);
 	}
 
 	@Override
-	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
-		return capability == PLAYER_CAP ? PLAYER_CAP.<T> cast(this.instance) : null;
+	public void saveNBTData(NBTTagCompound compound) {
+		NBTTagCompound tag = new NBTTagCompound();
+		tag.setFloat("Chaos", getChaos());
+		tag.setFloat("LastChaos", getLastChaos());
+		compound.setTag(NAME, tag);
 	}
 
 	@Override
-	public NBTBase serializeNBT() {
-		return PLAYER_CAP.getStorage().writeNBT(PLAYER_CAP, this.instance, null);
+	public void loadNBTData(NBTTagCompound compound) {
+		if (compound.hasKey(NAME)) {
+			NBTTagCompound tag = compound.getCompoundTag(NAME);
+			setChaos(tag.getFloat("Chaos"));
+			setLastChaos(tag.getFloat("LastChaos"));
+		}
 	}
 
 	@Override
-	public void deserializeNBT(NBTBase nbt) {
-		PLAYER_CAP.getStorage().readNBT(PLAYER_CAP, this.instance, null, nbt);
-	}
+	public void init(Entity entity, World world) {}
 }
-

@@ -31,8 +31,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class PortableWiredCharger extends ItemEnergyBase {
 
@@ -176,7 +176,7 @@ public class PortableWiredCharger extends ItemEnergyBase {
 		stacks.addAll(player.inventory.offHandInventory);
 		for (ItemStack stack : stacks) {
 			if (getEnergyStored(charger) == 0) break;
-			if (stack.isEmpty()) continue;
+			if ((stack == null || stack.stackSize <= 0)) continue;
 			if (EnergyHelper.canReceiveEnergy(stack)) {
 				int max = Math.min(getEnergyStored(charger), getMaxExtract(charger));
 				int insertedEnergy = EnergyHelper.insertEnergy(stack, Math.min(getMaxExtract(charger), max), false);
