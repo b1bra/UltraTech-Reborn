@@ -23,11 +23,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.util.ForgeDirection;
+import java.util.List;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
@@ -37,7 +34,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class PortableWiredDischarger extends PortableWiredCharger {
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	public void getSubItems(CreativeTabs tab, List<ItemStack> subItems) {
 		if (isInCreativeTab(tab)) {
 			subItems.add(new ItemStack(DAFeatures.pwd, 1, 0));
 			subItems.add(new ItemStack(DAFeatures.pwd, 1, 1));

@@ -8,8 +8,6 @@ import cofh.api.energy.IEnergyReceiver;
 import net.foxmcloud.draconicadditions.items.IChaosContainer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
 
 public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyReceiver, IChangeListener {
 
@@ -32,7 +30,7 @@ public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyRece
 		if (world.isRemote) {
 			if (active.value) {
 				float beamPitch = (float)(0.5F + (Math.random() * 0.1F));
-				world.playSound(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, DESoundHandler.beam, SoundCategory.BLOCKS, 0.2F, beamPitch, false);
+				world.playSound(x + 0.5D, y, z + 0.5D, DESoundHandler.beam, 0.2F, beamPitch, false);
 			}
 		}
 		else {
@@ -64,7 +62,7 @@ public class TileChaosInfuser extends TileChaosHolderBase implements IEnergyRece
 	}
 
 	@Override
-	public void onNeighborChange(BlockPos neighbor) {
+	public void onNeighborChange(int x, int y, int z) {
 		powered.value = world.isBlockPowered(pos);
 	}
 }

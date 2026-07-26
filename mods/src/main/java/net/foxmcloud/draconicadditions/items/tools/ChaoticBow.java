@@ -29,7 +29,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
+import java.util.List;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.model.IModelState;
@@ -43,7 +43,7 @@ public class ChaoticBow extends DraconicBow implements IChaosItem {
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	public void getSubItems(CreativeTabs tab, List<ItemStack> subItems) {
 		super.getSubItems(tab, subItems);
 		if (isInCreativeTab(tab)) {
 			ItemStack uberStack = subItems.remove(subItems.size() - 1);

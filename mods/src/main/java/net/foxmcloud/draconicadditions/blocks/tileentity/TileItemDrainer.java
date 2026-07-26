@@ -10,8 +10,6 @@ import cofh.api.energy.IEnergyContainerItem;
 import cofh.api.energy.IEnergyProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
 import scala.Int;
 
 public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvider, IChangeListener {
@@ -38,7 +36,7 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 		super.update();
 		if (world.isRemote) {
 			if (active.value && !clientPlayedSound) {
-				world.playSound(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, DESoundHandler.boom, SoundCategory.BLOCKS, 1.0F, 2.0F, false);
+				world.playSound(x + 0.5D, y, z + 0.5D, DESoundHandler.boom, 1.0F, 2.0F, false);
 				clientPlayedSound = true;
 			}
 			else if (!active.value && clientPlayedSound) {
@@ -96,7 +94,7 @@ public class TileItemDrainer extends TileChaosHolderBase implements IEnergyProvi
 	}
 
 	@Override
-	public void onNeighborChange(BlockPos neighbor) {
+	public void onNeighborChange(int x, int y, int z) {
 		powered.value = world.isBlockPowered(pos);
 	}
 }

@@ -12,7 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.util.ForgeDirection;
-import net.minecraft.util.math.BlockPos;
 
 public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyProvider, IChangeListener {
 
@@ -125,7 +124,7 @@ public class TileArmorGenerator extends TileChaosHolderBase implements IEnergyPr
 	}
 
 	@Override
-	public void onNeighborChange(BlockPos neighbor) {
+	public void onNeighborChange(int x, int y, int z) {
 		powered.value = world.isBlockPowered(pos);
 	}
 }

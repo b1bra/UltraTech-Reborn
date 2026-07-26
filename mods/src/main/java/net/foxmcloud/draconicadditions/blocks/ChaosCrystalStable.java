@@ -13,15 +13,14 @@ import com.brandon3055.draconicevolution.client.render.tile.RenderTileChaosCryst
 import codechicken.lib.model.ModelRegistryHelper;
 import net.foxmcloud.draconicadditions.client.render.item.RenderItemChaosCrystal;
 import net.foxmcloud.draconicadditions.items.IChaosItem;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.math.BlockPos;
+import java.util.List;
 import net.minecraft.world.World;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -35,7 +34,7 @@ public class ChaosCrystalStable extends ChaosCrystal implements IChaosItem {
 	}
 
     @Override
-    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
+    public void getSubBlocks(CreativeTabs tab, List<ItemStack> list) {
     	ItemStack stack = new ItemStack(this);
     	setChaosStable(stack, true);
     	list.add(stack);
@@ -49,16 +48,16 @@ public class ChaosCrystalStable extends ChaosCrystal implements IChaosItem {
     }
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
+	public float getBlockHardness(Block blockState, World world, int x, int y, int z) {
 		return 100F;
 	}
 
 	@Override
-	public void breakBlock(World world, BlockPos pos, IBlockState state) {}
+	public void breakBlock(World world, int x, int y, int z, Block state) {}
 
 	@Override
-	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		TileEntity tile = world.getTileEntity(pos);
+	public void onBlockPlacedBy(World world, int x, int y, int z, Block state, EntityLivingBase placer, ItemStack stack) {
+		TileEntity tile = world.getTileEntity(x, y, z);
 		if (!world.isRemote && tile instanceof TileChaosCrystal) {
 			TileChaosCrystal tileCrystal = (TileChaosCrystal)tile;
 			if (!isChaosStable(stack)) {

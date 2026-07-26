@@ -28,10 +28,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.util.ForgeDirection;
+import java.util.List;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
@@ -44,7 +42,7 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	public void getSubItems(CreativeTabs tab, List<ItemStack> subItems) {
 		if (isInCreativeTab(tab)) {
 			subItems.add(new ItemStack(this));
 			ItemStack stack = new ItemStack(this);
@@ -111,7 +109,7 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 			int drainedRF = extractEnergy(stack, getChaos(stack) * ToolStats.CHAOS_CONTAINER_RF_PER_CHAOS, false);
 			if (drainedRF != getChaos(stack) * ToolStats.CHAOS_CONTAINER_RF_PER_CHAOS) {
 				Vec3D pos = new Vec3D(player.posX, player.posY, player.posZ);
-				CommonMethods.explodeEntity(pos, world);
+				CommonMethods.explodeEntity(x, y, z, world);
 				player.attackEntityFrom(CommonMethods.chaosBurst, getChaos(stack));
 				player.sendStatusMessage(new TextComponentTranslation("msg.da.chaosContainer.explode"), true);
 				stack.shrink(1);
@@ -151,10 +149,10 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 	}
 
 	@Override
-	public EnumActionResult onItemUseFirst(EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ, EnumHand hand) {
-		ItemStack stack = player.getHeldItem(hand);
-		if (world.getTileEntity(pos) instanceof TileChaosHolderBase) {
-			TileChaosHolderBase tileEntity = (TileChaosHolderBase) world.getTileEntity(pos);
+	public EnumActionResult onItemUseFirst(EntityPlayer player, World world, int x, int y, int z, ForgeDirection side, float hitX, float hitY, float hitZ) {
+		ItemStack stack = player.getHeldItem();
+		if (world.getTileEntity(x, y, z) instanceof TileChaosHolderBase) {
+			TileChaosHolderBase tileEntity = (TileChaosHolderBase) world.getTileEntity(x, y, z);
 			if (((ChaosContainer) stack.getItem()).getChaos(stack) > 0 && tileEntity.chaos.value != tileEntity.getMaxChaos()) {
 				int chaosToRemove = Math.min(getMaxChaos(stack) - tileEntity.chaos.value, getChaos(stack));
 				removeChaos(stack, chaosToRemove);
@@ -170,7 +168,7 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 		else {
 			IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 			if (pCap != null && player.isEntityAlive() && pCap.getChaos() > 0) {
-				ActionResult<ItemStack> result = onItemRightClick(world, player, hand);
+				ActionResult<ItemStack> result = onItemRightClick(stack, world, player);
 				stack = result.getResult();
 				return result.getType();
 			}
@@ -179,8 +177,8 @@ public class ChaosContainer extends ItemEnergyBase implements IChaosContainer, I
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-		ItemStack stack = player.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player) {
+		ItemStack stack = player.getHeldItem();
 		IChaosInBlood pCap = ChaosInBloodProvider.get(player);
 		if (pCap != null && player.isEntityAlive() && pCap.getChaos() > 0) {
 			int chaosToAdd = (int)(Math.min(pCap.getChaos(), 2) * 4);

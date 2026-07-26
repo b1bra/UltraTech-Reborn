@@ -14,17 +14,15 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -38,7 +36,7 @@ public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider
 
 	public CapacitorSupplier() {
 		super(Material.IRON);
-		this.setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(ACTIVE, false));
+		this.setDefaultState(blockState.getBaseState().withProperty(FACING, ForgeDirection.NORTH).withProperty(ACTIVE, false));
 	}
 
 	@Override
@@ -52,44 +50,44 @@ public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider
 	}
 
 	@Override
-	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+	public Block getActualState(Block state, IBlockAccess worldIn, int x, int y, int z) {
 		TileCapacitorSupplier tileCapacitorDischarger = worldIn.getTileEntity(pos) instanceof TileCapacitorSupplier ? (TileCapacitorSupplier) worldIn.getTileEntity(pos) : null;
 		return state.withProperty(ACTIVE, tileCapacitorDischarger != null && tileCapacitorDischarger.active.value);
 	}
 
 	@Override
-	public IBlockState getStateFromMeta(int meta) {
-		EnumFacing enumfacing = EnumFacing.VALUES[MathHelper.abs(meta % EnumFacing.VALUES.length)];
+	public Block getStateFromMeta(int meta) {
+		ForgeDirection enumfacing = ForgeDirection.VALID_DIRECTIONS[MathHelper.abs(meta % ForgeDirection.VALID_DIRECTIONS.length)];
 
-		if (enumfacing.getAxis() == EnumFacing.Axis.Y) {
-			enumfacing = EnumFacing.NORTH;
+		if (enumfacing.getAxis() == ForgeDirection.Y) {
+			enumfacing = ForgeDirection.NORTH;
 		}
 
 		return this.getDefaultState().withProperty(FACING, enumfacing);
 	}
 
 	@Override
-	public int getMetaFromState(IBlockState state) {
+	public int getMetaFromState(Block state) {
 		return state.getValue(FACING).getIndex();
 	}
 
 	@Override
-	public IBlockState withRotation(IBlockState state, Rotation rot) {
+	public Block withRotation(Block state, Rotation rot) {
 		return state.withProperty(FACING, rot.rotate(state.getValue(FACING)));
 	}
 
 	@Override
-	public IBlockState withMirror(IBlockState state, Mirror mirrorIn) {
+	public Block withMirror(Block state, Mirror mirrorIn) {
 		return state.withRotation(mirrorIn.toRotation(state.getValue(FACING)));
 	}
 
 	@Override
-	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand) {
+	public Block getStateForPlacement(World world, int x, int y, int z, ForgeDirection facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
 		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World worldIn, int x, int y, int z, Block state, EntityLivingBase placer, ItemStack stack) {
 		worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
 		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
 	}
@@ -100,23 +98,23 @@ public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider
 	}
 
 	@Override
-	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+	public int getLightValue(Block state, IBlockAccess world, int x, int y, int z) {
 		return 0;
 	}
 
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(World world, int x, int y, int z, Block state, EntityPlayer player, ForgeDirection side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
-			TileCapacitorSupplier tileCapacitorDischarger = world.getTileEntity(pos) instanceof TileCapacitorSupplier ? (TileCapacitorSupplier) world.getTileEntity(pos) : null;
+			TileCapacitorSupplier tileCapacitorDischarger = world.getTileEntity(x, y, z) instanceof TileCapacitorSupplier ? (TileCapacitorSupplier) world.getTileEntity(x, y, z) : null;
 			if (tileCapacitorDischarger != null) {
-				ItemStack stack = player.getHeldItem(hand);
+				ItemStack stack = player.getHeldItem();
 				if ((stack != null && stack.stackSize > 0)) {
 					stack = tileCapacitorDischarger.insertItem(stack);
-					player.setHeldItem(hand, stack);
+					player.inventory.setInventorySlotContents(player.inventory.currentItem, stack);
 				}
 				else {
 					stack = tileCapacitorDischarger.extractItem();
-					player.setHeldItem(hand, stack);
+					player.inventory.setInventorySlotContents(player.inventory.currentItem, stack);
 				}
 			}
 		}
@@ -134,11 +132,11 @@ public class CapacitorSupplier extends BlockBCore implements ITileEntityProvider
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+	public void randomDisplayTick(Block stateIn, World worldIn, int x, int y, int z, Random rand) {
 		if (stateIn.getActualState(worldIn, pos).getValue(ACTIVE)) {
-			double dx = pos.getX() + 0.5D;
-			double dy = pos.getY() + 0.825D;
-			double dz = pos.getZ() + 0.5D;
+			double dx = x + 0.5D;
+			double dy = y + 0.825D;
+			double dz = z + 0.5D;
 			worldIn.spawnParticle(EnumParticleTypes.REDSTONE, dx, dy, dz, 0.0D, 0.1D, 0.0D, new int[0]);
 		}
 	}

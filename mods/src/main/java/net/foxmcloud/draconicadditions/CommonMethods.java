@@ -10,8 +10,6 @@ import com.brandon3055.draconicevolution.lib.DESoundHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class CommonMethods {
@@ -60,8 +58,8 @@ public class CommonMethods {
 	}
 
 	public static void explodeEntity(Vec3D pos, World world) {
-		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.beam, SoundCategory.MASTER, 0.25F, 0.5F, false);
-		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.fusionComplete, SoundCategory.MASTER, 1.0F, 2.0F, false);
+		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.beam, 0.25F, 0.5F, false);
+		world.playSound(pos.x, pos.y, pos.z, DESoundHandler.fusionComplete, 1.0F, 2.0F, false);
 		if (world.isRemote) {
 			for (int i = 0; i < 5; i++) {
 				BCEffectHandler.spawnFX(DEParticles.ARROW_SHOCKWAVE, world, pos, pos, 128D, 2);
@@ -69,7 +67,7 @@ public class CommonMethods {
 		}
 	}
 
-	public static void explodeEntity(BlockPos pos, World world) {
+	public static void explodeEntity(int x, int y, int z, World world) {
 		explodeEntity(new Vec3D(pos), world);
 	}
 }

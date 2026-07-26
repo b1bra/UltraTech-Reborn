@@ -8,7 +8,7 @@ import net.foxmcloud.draconicadditions.DAFeatures;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.NonNullList;
+import java.util.List;
 import net.minecraft.util.text.TextComponentTranslation;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;

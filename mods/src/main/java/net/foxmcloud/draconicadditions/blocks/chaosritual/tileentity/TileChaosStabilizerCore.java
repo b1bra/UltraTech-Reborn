@@ -18,7 +18,6 @@ import com.google.common.collect.Lists;
 
 import net.foxmcloud.draconicadditions.items.IChaosItem;
 import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.effect.EntityLightningBolt;
@@ -29,17 +28,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.ITickable;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.IUpdatePlayerListBox;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.common.util.FakePlayer;
 
-public class TileChaosStabilizerCore extends TileInventoryBase implements ITickable, IActivatableTile {
+public class TileChaosStabilizerCore extends TileInventoryBase implements IUpdatePlayerListBox, IActivatableTile {
 
 	public final ManagedDouble diameter = register("diameter", new ManagedDouble(1)).syncViaTile().finish();
 	public final ManagedDouble intensity = register("intensity", new ManagedDouble(0)).syncViaTile().finish();
@@ -69,7 +64,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 		if (!isRitualOngoing.value) {
 			if (isMultiblock.value) {
 				intensity.value = 0.25F;
-				List<Entity> suckEntities = this.world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(pos).grow(suckRadius));
+				List<Entity> suckEntities = this.world.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox(xCoord, yCoord, zCoord, xCoord + 1, yCoord + 1, zCoord + 1).expand(suckRadius, suckRadius, suckRadius));
 				for (Entity e : suckEntities) {
 					if (e instanceof EntityItem) {
 						IChaosItem item = getChaosItem(((EntityItem)e).getItem().getItem());
@@ -79,9 +74,9 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 							}
 						}
 					}
-					double dx = (pos.getX() + 0.5D - e.posX);
-					double dy = (pos.getY() + 0.5D - e.posY);
-					double dz = (pos.getZ() + 0.5D - e.posZ);
+					double dx = (xCoord + 0.5D - e.posX);
+					double dy = (yCoord + 0.5D - e.posY);
+					double dz = (zCoord + 0.5D - e.posZ);
 					double distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
 					if (distance < 1.1 && e instanceof EntityItem) {
 						IChaosItem item = getChaosItem(((EntityItem)e).getItem().getItem());
@@ -115,11 +110,11 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 		else {
 			if (isMultiblock.value) {
 				ritualTicks.value++;
-				List<Entity> suckEntities = this.world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(pos).grow(suckRadius * 2));
+				List<Entity> suckEntities = this.world.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox(xCoord, yCoord, zCoord, xCoord + 1, yCoord + 1, zCoord + 1).expand(suckRadius * 2, suckRadius * 2, suckRadius * 2));
 				for (Entity e : suckEntities) {
-					double dx = (pos.getX() + 0.5D - e.posX);
-					double dy = (pos.getY() + 0.5D - e.posY);
-					double dz = (pos.getZ() + 0.5D - e.posZ);
+					double dx = (xCoord + 0.5D - e.posX);
+					double dy = (yCoord + 0.5D - e.posY);
+					double dz = (zCoord + 0.5D - e.posZ);
 					double distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
 					if (distance < 3.1) {
 						if (e instanceof EntityItem) {
@@ -155,16 +150,16 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 						int i = rand.nextInt(4);
 						switch (i) {
 						case 0: // West Pillar
-							world.spawnEntity(new EntityLightningBolt(world, pos.getX() + 2, pos.getY() + 1, pos.getZ(), false));
+							world.spawnEntity(new EntityLightningBolt(world, xCoord + 2, yCoord + 1, zCoord, false));
 							break;
 						case 1: // East Pillar
-							world.spawnEntity(new EntityLightningBolt(world, pos.getX() - 2, pos.getY() + 1, pos.getZ(), false));
+							world.spawnEntity(new EntityLightningBolt(world, xCoord - 2, yCoord + 1, zCoord, false));
 							break;
 						case 2: // South Pillar
-							world.spawnEntity(new EntityLightningBolt(world, pos.getX(), pos.getY() + 1, pos.getZ() + 2, false));
+							world.spawnEntity(new EntityLightningBolt(world, xCoord, yCoord + 1, zCoord + 2, false));
 							break;
 						case 3: // North Pillar
-							world.spawnEntity(new EntityLightningBolt(world, pos.getX(), pos.getY() + 1, pos.getZ() - 2, false));
+							world.spawnEntity(new EntityLightningBolt(world, xCoord, yCoord + 1, zCoord - 2, false));
 							break;
 						}
 					}
@@ -200,44 +195,68 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 
 	private boolean checkMultiblock() {
 		isMultiblock.value = true;
-		List<BlockPos> check = new ArrayList<BlockPos>();
-		check.add(new BlockPos(pos.getX() + 2, pos.getY(), pos.getZ()));
-		check.add(new BlockPos(pos.getX() - 2, pos.getY(), pos.getZ()));
-		check.add(new BlockPos(pos.getX(), pos.getY(), pos.getZ() + 2));
-		check.add(new BlockPos(pos.getX(), pos.getY(), pos.getZ() - 2));
-		for (BlockPos checkPos : check) {
-			if (world.getBlockState(checkPos).getBlock().equals(Block.getBlockFromName("draconicevolution:draconic_block"))) continue;
+		List<IntPos> check = new ArrayList<IntPos>();
+		check.add(new IntPos(xCoord + 2, yCoord, zCoord));
+		check.add(new IntPos(xCoord - 2, yCoord, zCoord));
+		check.add(new IntPos(xCoord, yCoord, zCoord + 2));
+		check.add(new IntPos(xCoord, yCoord, zCoord - 2));
+		for (IntPos checkPos : check) {
+			if (world.getBlock(checkPos.x, checkPos.y, checkPos.z).equals(Block.getBlockFromName("draconicevolution:draconic_block"))) continue;
 			isMultiblock.value = false;
 			return false;
 		}
 		check.clear();
-		check.addAll(Lists.newArrayList(BlockPos.getAllInBox(pos.add(-1, -1, -1), pos.add(1, 1, 1))));
-		for (BlockPos checkPos : check) {
-			if (checkPos.equals(pos)) continue;
-			if (world.isAirBlock(checkPos)) continue;
+		check.addAll(Lists.newArrayList(getAllInBox(-1, -1, -1, 1, 1, 1)));
+		for (IntPos checkPos : check) {
+			if (checkPos.x == xCoord && checkPos.y == yCoord && checkPos.z == zCoord) continue;
+			if (world.isAirBlock(checkPos.x, checkPos.y, checkPos.z)) continue;
 			isMultiblock.value = false;
 			return false;
 		}
 		check.clear();
-		check.addAll(Lists.newArrayList(BlockPos.getAllInBox(pos.add(-2, -2, -2), pos.add(2, -2, 2))));
-		check.addAll(Lists.newArrayList(BlockPos.getAllInBox(pos.add(0, -2, -3), pos.add(0, 0, -3))));
-		check.addAll(Lists.newArrayList(BlockPos.getAllInBox(pos.add(0, -2, 3), pos.add(0, 0, 3))));
-		check.addAll(Lists.newArrayList(BlockPos.getAllInBox(pos.add(-3, -2, 0), pos.add(-3, 0, 0))));
-		check.addAll(Lists.newArrayList(BlockPos.getAllInBox(pos.add(3, -2, 0), pos.add(3, 0, 0))));
-		for (BlockPos checkPos : check) {
-			if (world.getBlockState(checkPos).getBlock().equals(Block.getBlockFromName("draconicevolution:infused_obsidian"))) continue;
+		check.addAll(Lists.newArrayList(getAllInBox(-2, -2, -2, 2, -2, 2)));
+		check.addAll(Lists.newArrayList(getAllInBox(0, -2, -3, 0, 0, -3)));
+		check.addAll(Lists.newArrayList(getAllInBox(0, -2, 3, 0, 0, 3)));
+		check.addAll(Lists.newArrayList(getAllInBox(-3, -2, 0, -3, 0, 0)));
+		check.addAll(Lists.newArrayList(getAllInBox(3, -2, 0, 3, 0, 0)));
+		for (IntPos checkPos : check) {
+			if (world.getBlock(checkPos.x, checkPos.y, checkPos.z).equals(Block.getBlockFromName("draconicevolution:infused_obsidian"))) continue;
 			isMultiblock.value = false;
 			return false;
 		}
 		return true;
 	}
 
-	private BlockPos getOffsetPos(Vec3I vec) {
-		return pos.subtract(vec.getPos());
+	private IntPos getOffsetPos(Vec3I vec) {
+		return new IntPos(xCoord - vec.x, yCoord - vec.y, zCoord - vec.z);
 	}
 
-	private Vec3I getOffsetVec(BlockPos offsetPos) {
-		return new Vec3I(pos.subtract(offsetPos));
+	private Vec3I getOffsetVec(IntPos offsetPos) {
+		return new Vec3I(xCoord - offsetPos.x, yCoord - offsetPos.y, zCoord - offsetPos.z);
+	}
+
+	private static class IntPos {
+		final int x;
+		final int y;
+		final int z;
+
+		IntPos(int x, int y, int z) {
+			this.x = x;
+			this.y = y;
+			this.z = z;
+		}
+	}
+
+	private List<IntPos> getAllInBox(int minX, int minY, int minZ, int maxX, int maxY, int maxZ) {
+		List<IntPos> positions = new ArrayList<IntPos>();
+		for (int x = Math.min(minX, maxX); x <= Math.max(minX, maxX); x++) {
+			for (int y = Math.min(minY, maxY); y <= Math.max(minY, maxY); y++) {
+				for (int z = Math.min(minZ, maxZ); z <= Math.max(minZ, maxZ); z++) {
+					positions.add(new IntPos(xCoord + x, yCoord + y, zCoord + z));
+				}
+			}
+		}
+		return positions;
 	}
 
 	@Override
@@ -260,7 +279,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 	}
 
 	private void playSound(SoundEvent sound, float volume, float pitch) {
-		if (!world.isRemote) DESoundHandler.playSoundFromServer(world, new Vec3D(pos), sound, SoundCategory.BLOCKS, volume, pitch, false, 128);
+		if (!world.isRemote) DESoundHandler.playSoundFromServer(world, new Vec3D(xCoord, yCoord, zCoord), sound, volume, pitch, false, 128);
 	}
 
 	public double getCoreDiameter() {
@@ -288,12 +307,12 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 	}
 
 	@Override
-	public boolean onBlockActivated(IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(net.minecraft.block.Block block, int metadata, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 		if (world.isRemote) {
 			return true;
 		}
 		if (isMultiblock.value || player.isCreative()) {
-			ItemStack stack = player.getHeldItem(hand);
+			ItemStack stack = player.getHeldItem();
 			if ((stack != null && stack.stackSize > 0) && stack.getCount() > 0) {
 				if ((getStackInSlot(0) == null || getStackInSlot(0).stackSize <= 0)) {
 					IChaosItem item = getChaosItem(stack.getItem());
@@ -306,7 +325,7 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 								ItemStack newStack = stack.splitStack(1);
 								playSound(SoundEvents.ENTITY_ENDERDRAGON_GROWL, 1.0F, 0.2F);
 								item.setChaosStable(newStack, true);
-								EntityItem chaosItem = new EntityItem(world, pos.getX(), pos.getY() + 1.01D, pos.getZ(), newStack);
+								EntityItem chaosItem = new EntityItem(world, xCoord, yCoord + 1.01D, zCoord, newStack);
 								world.spawnEntity(chaosItem);
 							}
 							else sendMessage(player, "msg.da.chaosStabilizer.canStabilize");
@@ -363,18 +382,18 @@ public class TileChaosStabilizerCore extends TileInventoryBase implements ITicka
 			if (!world.isRemote) {
 				if (complete) {
 					isMultiblock.value = false;
-					List<BlockPos> check = new ArrayList<BlockPos>();
-					check.add(new BlockPos(pos.getX() + 2, pos.getY(), pos.getZ()));
-					check.add(new BlockPos(pos.getX() - 2, pos.getY(), pos.getZ()));
-					check.add(new BlockPos(pos.getX(), pos.getY(), pos.getZ() + 2));
-					check.add(new BlockPos(pos.getX(), pos.getY(), pos.getZ() - 2));
-					for (BlockPos checkPos : check) {
-						world.setBlockToAir(checkPos);
-						world.spawnEntity(new EntityLightningBolt(world, checkPos.getX(), checkPos.getY() + 1, checkPos.getZ(), true));
+					List<IntPos> check = new ArrayList<IntPos>();
+					check.add(new IntPos(xCoord + 2, yCoord, zCoord));
+					check.add(new IntPos(xCoord - 2, yCoord, zCoord));
+					check.add(new IntPos(xCoord, yCoord, zCoord + 2));
+					check.add(new IntPos(xCoord, yCoord, zCoord - 2));
+					for (IntPos checkPos : check) {
+						world.setBlockToAir(checkPos.x, checkPos.y, checkPos.z);
+						world.spawnEntity(new EntityLightningBolt(world, checkPos.x, checkPos.y + 1, checkPos.z, true));
 					}
 					getChaosItem(invStack.getItem()).setChaosStable(invStack, true);
 				}
-				EntityItem chaosItem = new EntityItem(world, pos.getX(), pos.getY() + 1.01D, pos.getZ(), invStack);
+				EntityItem chaosItem = new EntityItem(world, xCoord, yCoord + 1.01D, zCoord, invStack);
 				world.spawnEntity(chaosItem);
 				chaosItem.motionX = 0;
 				chaosItem.motionY = 0;

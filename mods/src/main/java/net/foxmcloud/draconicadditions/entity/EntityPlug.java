@@ -8,8 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.world.World;
 
 public class EntityPlug extends Entity {
@@ -21,7 +20,7 @@ public class EntityPlug extends Entity {
 		this.init(null);
 	}
 
-	public EntityPlug(World worldIn, EntityPlayer player, double x, double y, double z, EnumFacing facing) {
+	public EntityPlug(World worldIn, EntityPlayer player, double x, double y, double z, ForgeDirection facing) {
 		super(worldIn);
 		this.init(player);
 		float yaw = 0;
@@ -48,15 +47,15 @@ public class EntityPlug extends Entity {
 			this.setPosition(x, y - 1, z);
 			break;
 		}
-		float pitch = facing == EnumFacing.UP ? 90 : facing == EnumFacing.DOWN ? -90 : 0;
+		float pitch = facing == ForgeDirection.UP ? 90 : facing == ForgeDirection.DOWN ? -90 : 0;
 		this.setRotation(yaw, pitch);
 	}
 
-	public EntityPlug(World worldIn, EntityPlayer player, BlockPos pos, EnumFacing facing) {
-		this(worldIn, player, (double) pos.getX(), (double) pos.getY(), (double) pos.getZ(), facing);
+	public EntityPlug(World worldIn, EntityPlayer player, int x, int y, int z, ForgeDirection facing) {
+		this(worldIn, player, (double) x, (double) y, (double) z, facing);
 	}
 
-	public EntityPlug(World worldIn, EntityPlayer player, Vec3D vec, EnumFacing facing) {
+	public EntityPlug(World worldIn, EntityPlayer player, Vec3D vec, ForgeDirection facing) {
 		this(worldIn, player, vec.x, vec.y, vec.z, facing);
 	}
 

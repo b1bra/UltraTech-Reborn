@@ -14,7 +14,6 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumHandSide;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -33,7 +32,7 @@ public class RenderPlug extends Render<EntityPlug> {
 			this.bindEntityTexture(entity);
 			Tessellator tessellator = Tessellator.getInstance();
 			BufferBuilder bufferbuilder = tessellator.getBuffer();
-			int k = entityplayer.getPrimaryHand() == EnumHandSide.RIGHT ? 1 : -1;
+			int k = 1;
 			ItemStack itemstack = entityplayer.getHeldItemMainhand();
 			if (!(itemstack.getItem() instanceof PortableWiredCharger)) {
 				k = -k;

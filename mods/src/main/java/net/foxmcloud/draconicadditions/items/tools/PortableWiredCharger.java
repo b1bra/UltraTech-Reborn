@@ -6,6 +6,7 @@ import java.util.List;
 import com.brandon3055.brandonscore.items.ItemEnergyBase;
 import com.brandon3055.brandonscore.lib.EnergyHelper;
 import com.brandon3055.brandonscore.lib.Vec3D;
+import com.brandon3055.brandonscore.lib.Vec3I;
 import com.brandon3055.brandonscore.utils.InfoHelper;
 import com.brandon3055.brandonscore.utils.ItemNBTHelper;
 import com.brandon3055.draconicevolution.entity.EntityPersistentItem;
@@ -23,11 +24,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
@@ -51,7 +48,7 @@ public class PortableWiredCharger extends ItemEnergyBase {
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
+	public void getSubItems(CreativeTabs tab, List<ItemStack> subItems) {
 		if (isInCreativeTab(tab)) {
 			subItems.add(new ItemStack(DAFeatures.pwc, 1, 0));
 			subItems.add(new ItemStack(DAFeatures.pwc, 1, 1));
@@ -110,22 +107,22 @@ public class PortableWiredCharger extends ItemEnergyBase {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-		ItemStack stack = player.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player) {
+		ItemStack stack = player.getHeldItem();
 		if (ItemNBTHelper.getBoolean(stack, "pluggedIn", false)) {
 			unplug(stack, player);
 			return new ActionResult<>(EnumActionResult.PASS, stack);
 		}
 		RayTraceResult trace = rayTrace(world, player, false);
-		if (trace != null && trace.typeOfHit == RayTraceResult.Type.BLOCK && isDistanceValid(trace.getBlockPos(), trace.sideHit, player)) {
-			BlockPos pos = trace.getBlockPos();
-			if (world.getBlockState(pos).getBlock().hasTileEntity(world.getBlockState(pos))) {
-				TileEntity te = world.getTileEntity(pos);
+		if (trace != null && trace.typeOfHit == RayTraceResult.Type.BLOCK && isDistanceValid(new Vec3I(trace.blockX, trace.blockY, trace.blockZ), trace.sideHit, player)) {
+			Vec3I pos = new Vec3I(trace.blockX, trace.blockY, trace.blockZ);
+			if (world.getBlock(pos.x, pos.y, pos.z).hasTileEntity(world.getBlock(pos.x, pos.y, pos.z))) {
+				TileEntity te = world.getTileEntity(pos.x, pos.y, pos.z);
 				if (EnergyHelper.isEnergyTile(te, null)) {
 					if (EnergyHelper.isEnergyTile(te, trace.sideHit)) {
-						Vec3D vec = Vec3D.getCenter(trace.getBlockPos());
+						Vec3D vec = Vec3D.getCenter(new Vec3I(trace.blockX, trace.blockY, trace.blockZ));
 						if (!world.isRemote) {
-							DASoundHandler.playSoundFromServer(world, vec, DASoundHandler.unplug, SoundCategory.BLOCKS, 0.8F, 1.5F, false, 64.0F);
+							DASoundHandler.playSoundFromServer(world, vec, DASoundHandler.unplug, 0.8F, 1.5F, false, 64.0F);
 						}
 						ItemNBTHelper.setBoolean(stack, "pluggedIn", true);
 						ItemNBTHelper.setInteger(stack, "blockX", vec.floorX());
@@ -188,7 +185,7 @@ public class PortableWiredCharger extends ItemEnergyBase {
 	public void extractEnergyFromSource(ItemStack stack, World world) {
 		if (active) {
 			TileEntity te = getTileEntity(stack, world);
-			EnumFacing extractSide = EnumFacing.byName(ItemNBTHelper.getString(stack, "blockSide", "NONE"));
+			ForgeDirection extractSide = ForgeDirection.valueOf(ItemNBTHelper.getString(stack, "blockSide", "NONE"));
 			if (te != null && EnergyHelper.canExtractEnergy(te, extractSide)) {
 				int storedEnergy = ItemNBTHelper.getInteger(stack, "Energy", 0);
 				int energyToExtract = Math.min(getCapacity(stack) - storedEnergy, EnergyHelper.getEnergyStored(te, extractSide));
@@ -202,7 +199,7 @@ public class PortableWiredCharger extends ItemEnergyBase {
 	public void sendEnergyToSource(ItemStack stack, World world) {
 		if (active) {
 			TileEntity te = getTileEntity(stack, world);
-			EnumFacing insertSide = EnumFacing.byName(ItemNBTHelper.getString(stack, "blockSide", "NONE"));
+			ForgeDirection insertSide = ForgeDirection.valueOf(ItemNBTHelper.getString(stack, "blockSide", "NONE"));
 			if (te != null && EnergyHelper.canReceiveEnergy(te, insertSide)) {
 				int storedEnergy = ItemNBTHelper.getInteger(stack, "Energy", 0);
 				if (storedEnergy > 0) {
@@ -216,15 +213,15 @@ public class PortableWiredCharger extends ItemEnergyBase {
 	public void checkDistance(ItemStack stack, World world, EntityPlayer player) {
 		TileEntity te = getTileEntity(stack, world);
 		if (te != null) {
-			EnumFacing side = EnumFacing.byName(ItemNBTHelper.getString(stack, "blockSide", "NONE"));
-			if (!isDistanceValid(te.getPos(), side, player)) {
+			ForgeDirection side = ForgeDirection.valueOf(ItemNBTHelper.getString(stack, "blockSide", "NONE"));
+			if (!isDistanceValid(new Vec3I(te.xCoord, te.yCoord, te.zCoord), side, player)) {
 				unplug(stack, player);
 			}
 		}
 	}
 
-	public boolean isDistanceValid(BlockPos pos, EnumFacing side, EntityPlayer player) {
-		BlockPos offset = pos.offset(side).subtract(player.getPosition());
+	public boolean isDistanceValid(Vec3I pos, ForgeDirection side, EntityPlayer player) {
+		Vec3I offset = new Vec3I(pos.x + side.offsetX - (int)player.posX, pos.y + side.offsetY - (int)player.posY, pos.z + side.offsetZ - (int)player.posZ);
 		if (Math.abs(offset.getX()) > maxDistance ||
 			Math.abs(offset.getY()) > maxDistance ||
 			Math.abs(offset.getZ()) > maxDistance) {
@@ -234,7 +231,7 @@ public class PortableWiredCharger extends ItemEnergyBase {
 	}
 
 	public void unplug(ItemStack stack, EntityPlayer player) {
-		if (!player.getEntityWorld().isRemote) DASoundHandler.playSoundFromServer(player.getEntityWorld(), Vec3D.getCenter(player.getPosition()), DASoundHandler.unplug, SoundCategory.BLOCKS, 0.8F, 1.0F, false, 64.0F);
+		if (!player.getEntityWorld().isRemote) DASoundHandler.playSoundFromServer(player.getEntityWorld(), new Vec3D(player.posX, player.posY, player.posZ), DASoundHandler.unplug, 0.8F, 1.0F, false, 64.0F);
 		ItemNBTHelper.setBoolean(stack, "pluggedIn", false);
 		ItemNBTHelper.setInteger(stack, "blockX", 0);
 		ItemNBTHelper.setInteger(stack, "blockY", 0);
@@ -248,7 +245,7 @@ public class PortableWiredCharger extends ItemEnergyBase {
 			int x = ItemNBTHelper.getInteger(stack, "blockX", 0);
 			int y = ItemNBTHelper.getInteger(stack, "blockY", 0);
 			int z = ItemNBTHelper.getInteger(stack, "blockZ", 0);
-			TileEntity te = world.getTileEntity(new BlockPos(x, y, z));
+			TileEntity te = world.getTileEntity(x, y, z);
 			return te;
 		}
 		return null;

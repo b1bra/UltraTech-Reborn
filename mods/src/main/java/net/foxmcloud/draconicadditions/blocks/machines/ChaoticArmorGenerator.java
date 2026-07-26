@@ -3,12 +3,10 @@ package net.foxmcloud.draconicadditions.blocks.machines;
 import net.foxmcloud.draconicadditions.DraconicAdditions;
 import net.foxmcloud.draconicadditions.GUIHandler;
 import net.foxmcloud.draconicadditions.blocks.tileentity.TileChaoticArmorGenerator;
-import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 
@@ -24,9 +22,9 @@ public class ChaoticArmorGenerator extends ArmorGenerator {
 	}
 
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(World world, int x, int y, int z, Block state, EntityPlayer player, ForgeDirection side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
-			FMLNetworkHandler.openGui(player, DraconicAdditions.instance, GUIHandler.GUIID_ARMOR_GENERATOR, world, pos.getX(), pos.getY(), pos.getZ());
+			FMLNetworkHandler.openGui(player, DraconicAdditions.instance, GUIHandler.GUIID_ARMOR_GENERATOR, world, x, y, z);
 		}
 		return true;
 	}
